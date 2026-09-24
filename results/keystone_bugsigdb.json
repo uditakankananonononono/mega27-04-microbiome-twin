@@ -1,0 +1,27 @@
+{
+ "n_signatures_in_bugsigdb": 9887,
+ "n_genera": 248,
+ "n_genera_in_bugsigdb": 236,
+ "nb_coef_kscore": 0.19691736918088498,
+ "nb_p_kscore": 0.024728905073388152,
+ "nb_coef_log_studies": 2.040044981190662,
+ "nb_p_log_studies": 1.3677331221241064e-52,
+ "spearman_kscore_vs_signatures": [
+  0.18263550550994895,
+  0.003902607283001172
+ ],
+ "fdr_keystones": [
+  [
+   "Cardiobacterium",
+   93
+  ],
+  [
+   "Eikenella",
+   52
+  ]
+ ],
+ "nb_ml_alpha": 1.1601142001869915,
+ "nb_ml_coef_kscore": 0.19699644053837453,
+ "nb_ml_p_kscore": 0.062347676175981435,
+ "median_signatures_all": 65.0
+}

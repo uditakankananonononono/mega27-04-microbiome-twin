@@ -10,3 +10,11 @@ Caveats: out-strength from a ridge model is a statistical dependence score, not 
 - 240/248 genera were resolved to a phylum through NCBI Taxonomy E-utilities, restricted to Bacteria/Archaea after 5 eukaryote homonyms (e.g. Bacillus) were caught and fixed.
 - Among the 25 lowest-p keystone genera, Thermodesulfobacteriota (sulfate reducers) are enriched: 3/3 (Desulfobulbus, Desulfovibrio, Bilophila), one-sided Fisher p = 0.001, BH q = 0.019 over 19 phyla.
 - No other phylum is enriched. Caveat: only 3 genera in this phylum, and none individually passes FDR. Exploratory. A plausible reading is hydrogen/sulfur cross-feeding hubs, but this is a hypothesis, not tested.
+
+## Literature cross-check with BugSigDB (results/keystone_bugsigdb.json, results/keystone_bugsigdb.csv)
+- Genus-level signatures: 9,887 published differential-abundance signatures (BugSigDB export 2026-09-24). 236/248 modelled genera appear at least once.
+- Negative-binomial GLM, n_signatures ~ keystone score (-log10 p) + log(studies modelled):
+  - With alpha fixed at 1: coef 0.20, p = 0.025.
+  - With alpha estimated by ML (1.16): coef 0.20, p = 0.062.
+  - Marginal Spearman rho = 0.18 (p = 0.004), but this is confounded by how widespread a genus is.
+- Verdict: weak, not robust. Keystone-consensus genera are not clearly over-represented in the disease literature once prevalence is controlled. Kept as a negative.
