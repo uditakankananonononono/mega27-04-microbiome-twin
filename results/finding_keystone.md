@@ -29,3 +29,8 @@ Species traits (14,893 species, condensed_species_NCBI.csv) aggregated to genus;
 - Smaller genomes: rho=-0.25, q=0.0008. Gram stain, motility, sporulation, GC and doubling time: not significant after BH.
 - Confound checks: rank-OLS with genome size and log(study count) keeps anaerobe (p=5.8e-4, HC3) and genome size (p=0.009); permuting anaerobe share within study-count quintiles gives p=2e-4 (5,000 permutations).
 Named candidate, not claimed: "anaerobe-keystone hypothesis" - genera with more strictly anaerobic species rank as keystones more often, independent of genome size and study count. Caveat: not controlled for biome (anaerobes dominate gut studies) or abundance. Falsifiable test: the association should hold within single-biome subsets and in an independent cohort. Until then it is a candidate.
+
+### Within-biome falsification test (scripts/keystone_traits_biome.py, results/keystone_traits_biome.json)
+- Within-study contrast (top vs non-top genera in the same study, 155 MGnify studies): anaerobe share is higher in keystones in 62% of studies, mean +0.071, sign-flip p=2e-4. This removes between-biome confounding.
+- Per biome: positive in 7 of 8 biomes (Insecta -0.026, n=7). Unadjusted p<0.05 in Digestive system (+0.065, n=41), Skin (+0.11), Birds (+0.18). None survive BH across 8 biomes (min q=0.10). Oral, Plants, Fish, Mammals, Insecta: not significant.
+Verdict: the anaerobe-keystone association survives the within-study test, so it is not only a gut-vs-environment artifact. It is not robust in any single biome after correction. It stays a named candidate. Remaining untested confound: abundance/prevalence of anaerobes within a study.
