@@ -196,6 +196,17 @@ P.p("Two genera pass FDR < 0.05: Cardiobacterium and Eikenella. Both are oral HA
     "where interaction models fit best. It is not a cross-biome keystone law. Out-strength from a ridge model is a statistical dependence score, "
     "not a causal keystone effect, and it scales with each genus's variance and prevalence. No experimental validation was done.")
 
+KP = _pd.read_csv("results/keystone_phylum_enrichment.csv"); KB = json.load(open("results/keystone_bugsigdb.json"))
+P.p("Phylogeny. Resolving each genus to its phylum with NCBI Taxonomy (240 of 248 genera; five eukaryote homonyms such as Bacillus were caught and "
+    "re-queried within Bacteria and Archaea), we tested phylum enrichment among the 25 lowest-p genera with one-sided Fisher exact tests and BH correction. "
+    f"Only {KP.iloc[0].phylum} (sulfate reducers) is enriched: {int(KP.iloc[0].top25)} of {int(KP.iloc[0]['all'])} genera (Desulfobulbus, Desulfovibrio, Bilophila), "
+    f"p = {KP.iloc[0].p:.3f}, q = {KP.iloc[0].q_bh:.3f}. With three genera, this is a hypothesis (hydrogen and sulfur cross-feeding hubs), not a result.")
+P.p(f"Literature cross-check. Across {KB['n_signatures_in_bugsigdb']:,} published genus-level differential-abundance signatures in BugSigDB, a negative-binomial "
+    "model of signature counts on keystone score, adjusting for how many studies a genus appears in, gives a positive coefficient that is not robust: "
+    f"p = {KB['nb_p_kscore']:.3f} with dispersion fixed at 1 and p = {KB['nb_ml_p_kscore']:.3f} with dispersion estimated (alpha = {KB['nb_ml_alpha']:.2f}). "
+    "Keystone-consensus genera are not clearly over-represented in the disease literature.")
+P.equation("log E[n_j] = c_0 + c_1 (-log10 p_j) + c_2 log(studies_j),   Var(n_j) = mu_j + alpha mu_j^2")
+
 P.h("5.5 What predicts where interactions help?", 2)
 P.p("Across the 160 studies we regressed the audit gain (prior error minus interaction error) on standardised study covariates: Shannon "
     "diversity and Bray-Curtis dispersion (scikit-bio), co-occurrence network density and modularity (networkx; edges where |Spearman rho| > 0.3 "
@@ -221,6 +232,7 @@ for t in [
     "The candidate 'human gut is least interaction-predictable' was rejected as confounded with assembly-derived data.",
     "Keystone consensus found only 2 of 248 genera at FDR < 0.05, both oral; there is no cross-biome keystone signal.",
     "Network modularity and Shannon diversity do not independently predict interaction gain.",
+    "Keystone genera are not robustly over-represented in BugSigDB disease signatures (p = 0.062 with estimated dispersion).",
 ]:
     P.p("- " + t)
 
