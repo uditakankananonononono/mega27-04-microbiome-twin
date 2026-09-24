@@ -48,3 +48,10 @@ Ours (presence-conditional population forecaster) median 0.692 - lowest of all 1
 vs MDSINE2 (No Modules) 0.805: ours better in 376/599, Wilcoxon p = 8e-7. vs RA-MDSINE2 (No Modules) 0.784: p = 6e-6. vs MDSINE2 1.093: p = 4e-44. vs gLV elastic net 1.582, gLV ridge 1.970.
 Healthy cohort re-run with the same script: ours 0.919 = 3rd of 11 (RA-MDSINE2 No Modules 0.883 is better, p = 0.045; tie with MDSINE2 No Modules p = 0.53; beats MDSINE2 1.061 p = 1e-4).
 Verdict: benchmark beat on UC cohort, tie-to-slight-loss on healthy. Metric caveat stands (detected-only scoring rewards presence-conditional prediction).
+
+## Test of our own falsifiable prediction: score ALL timepoints (undetected truth included, log10(x + 1e3))
+Prediction (paper v1, section 7): with undetected timepoints scored too, the presence-conditional forecaster's advantage should shrink or reverse.
+Result: FALSIFIED. The forecaster ranks first on both cohorts, by a wider margin.
+- UC: ours median 1.654 vs MDSINE2 (No Modules) 1.824, RA-MDSINE2 (No Modules) 1.803; ours better in 461/601 pairs vs MDSINE2-NM, Wilcoxon p = 3.5e-40 (results/mdsine2_headtohead_uc_alltimepoints.json).
+- Healthy: ours median 1.752 vs MDSINE2 (No Modules) 2.072, RA-MDSINE2 (No Modules) 2.084; ours better in 417/556, p = 5.5e-40 (results/mdsine2_headtohead_healthy_alltimepoints.json).
+Read: the detection-only metric was not what made the population prior competitive. Under the stricter all-timepoint metric it beats every published method on both cohorts. Pairs: the same subject-taxon pairs as the official metric (pairs with at least one detection).

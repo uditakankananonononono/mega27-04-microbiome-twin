@@ -7,7 +7,7 @@ from scipy.stats import wilcoxon
 sys.path.insert(0, "src")
 from microtwin.popforecast import forecast
 
-cohort = sys.argv[1]
+cohort = sys.argv[1]; ALL = len(sys.argv) > 2 and sys.argv[2] == "all"
 src = f"data/raw/mdsine2_sourcedata/fig3_{cohort}_absolute.csv"
 raw = "data/raw/mdsine2" if cohort == "healthy" else "data/raw/mdsine2_uc"
 LB, EPS = 1e-5, 1e3
@@ -29,7 +29,7 @@ d["day"] = [days[s][k] for s, k in zip(d.HeldoutSubjectId, d.TimePoint)]
 
 
 def err_df(df, col="Pred"):
-    df = df[df.Truth > LB]
+    df = df if ALL else df[df.Truth > LB]
     return df.groupby(["HeldoutSubjectId", "TaxonIdx"]).apply(
         lambda g: np.sqrt(np.mean((np.log10(g[col] + EPS) - np.log10(g.Truth + EPS)) ** 2)), include_groups=False)
 
@@ -44,7 +44,7 @@ for s in subs:
     for j in taxa:
         dy, tr = series[(s, j)]
         p = forecast([series[(o, j)] for o in subs if o != s], dy, tr[0], 0, EPS, True)
-        k = tr > LB
+        k = np.ones(len(tr), bool) if ALL else tr > LB
         if k.any():
             rows[(s, j)] = float(np.sqrt(np.mean((p[k] - np.log10(tr[k] + EPS)) ** 2)))
 ours = pd.Series(rows); E["PresenceConditionalPopulation (ours)"] = ours
@@ -56,4 +56,4 @@ for m, e in sorted(E.items(), key=lambda kv: kv[1].median()):
         r["ours_better_pairs"] = int((ours < e2).sum()); r["wilcoxon_p"] = float(wilcoxon(ours, e2).pvalue); dd = ours - e2; r["mean_diff_ours_minus"] = float(dd.mean()); r["median_diff_ours_minus"] = float(dd.median()); r["wilcoxon_p_ours_lower"] = float(wilcoxon(ours, e2, alternative="less").pvalue)
     summary[m] = r
     print(f"{m:40s} median {r['median']:.3f} mean {r['mean']:.3f}", {k: v for k, v in r.items() if k in ('ours_better_pairs', 'wilcoxon_p')})
-json.dump(summary, open(f"results/mdsine2_headtohead_{cohort}.json", "w"), indent=1)
+json.dump(summary, open(f"results/mdsine2_headtohead_{cohort}{'_alltimepoints' if ALL else ''}.json", "w"), indent=1)
