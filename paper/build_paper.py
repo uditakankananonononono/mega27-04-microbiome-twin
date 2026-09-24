@@ -33,6 +33,10 @@ P.p("(4) Under a stricter metric that scores every timepoint, the same forecaste
     "detection-only metric. (5) At scale the picture changes: across 160 MGnify studies in 8 biomes, an interaction model beats a calibrated "
     "presence prior in 121 studies (FDR < 0.05), so the human-data null of finding (1) does not generalise. We ship the microtwin command-line "
     "tool (audit and forecast) so anyone can run this audit on their own abundance table.")
+P.p("(6) Exploratory keystone analysis names one candidate, the anaerobe-keystone hypothesis: across 156 studies, genera made of strict anaerobes are "
+    "more often network hubs within the same study (study fixed-effect logit, p = 1.4e-4), independent of abundance and prevalence, and sulfate "
+    "reducers are enriched under both NCBI and GTDB taxonomies (q = 0.02). No single biome passes FDR and keystones come from inferred networks, "
+    "so this is a falsifiable candidate, not a discovery.")
 P.p("Caveats. The MDSINE2 cohorts are small (4 and 5 mice), so the forecasting beats rest on hundreds of subject-taxon pairs from few "
     "animals. Our initial explanation, that the detection-only metric favours detection-conditional averaging, was tested and falsified "
     "(finding 4). The beat therefore suggests that, with this little training data, a population trajectory is a stronger forecaster than "
@@ -207,6 +211,40 @@ P.p(f"Literature cross-check. Across {KB['n_signatures_in_bugsigdb']:,} publishe
     "Keystone-consensus genera are not clearly over-represented in the disease literature.")
 P.equation("log E[n_j] = c_0 + c_1 (-log10 p_j) + c_2 log(studies_j),   Var(n_j) = mu_j + alpha mu_j^2")
 
+KG = json.load(open("results/keystone_gtdb.json"))
+P.p(f"GTDB replication. Re-mapping the genera to the Genome Taxonomy Database (release v232, bac120; {KG['n_mapped']} of {KG['n_total']} genera) gives the same result: "
+    f"Desulfobacterota {KG['gtdb_phylum'][0]['top25']} of {KG['gtdb_phylum'][0]['all']}, p = {KG['gtdb_phylum'][0]['p']:.4f}, q = {KG['gtdb_phylum'][0]['q_bh']:.3f}. "
+    f"NCBI and GTDB disagree on the phylum of only {len(KG['ncbi_vs_gtdb_phylum_disagreements'])} genera, mostly renamings. No family passes FDR "
+    f"(best: {KG['gtdb_family'][0]['taxon']} and {KG['gtdb_family'][1]['taxon']}, q = {KG['gtdb_family'][0]['q_bh']:.2f}). The result does not depend on the taxonomy, but it still rests on three genera.")
+
+P.h("5.4.1 Physiological traits of keystones: the anaerobe-keystone candidate", 3)
+KT = _pd.read_csv("results/keystone_traits_tests.csv"); KCF = json.load(open("results/keystone_traits_confound.json"))
+KBI = json.load(open("results/keystone_traits_biome.json")); KAB = json.load(open("results/keystone_traits_abundance.json"))
+P.p("We joined each genus to the Madin et al. (2020) trait database (14,893 species; condensed_species_NCBI.csv), aggregating species to genus as the share of "
+    "strict anaerobes, Gram-negative, motile and sporulating species, and the median genome size, GC content and doubling time. We test each trait against "
+    "keystone frequency (Spearman, BH across traits) and top-25 membership (Mann-Whitney).")
+P.table(["trait", "genera", "Spearman rho", "q (BH)", "top-25 mean", "rest mean", "Mann-Whitney q"],
+        [[r.trait, int(r.n), round(r.spearman_rho, 3), f"{r.q_spearman:.2g}", f"{r.top25_mean:.3g}", f"{r.rest_mean:.3g}", f"{r.q_mw:.2g}"] for r in KT.itertuples()],
+        "Keystone frequency vs genus traits (results/keystone_traits_tests.csv).")
+P.p(f"Strict-anaerobe share and small genome size track keystone frequency; the other traits do not. The anaerobe effect keeps its sign and significance in a "
+    f"rank regression with genome size and log study count (p = {KCF['ols_pvalues']['r_anaerobe']:.1e}, HC3) and under permutation within study-count quintiles "
+    f"(p = {KCF['strat_perm_p']:.1e}). Because biome could confound this (anaerobes dominate gut studies), we ran two falsification tests inside studies. "
+    f"First, within each of {KBI['within_study']['n_studies']} studies we compared keystones with the other genera: keystones have the higher anaerobe share in "
+    f"{KBI['within_study']['frac_positive']*100:.0f}% of studies (mean difference {KBI['within_study']['mean_diff']:+.3f}, sign-flip p = {KBI['within_study']['signflip_p']:.1e}). "
+    "Second, we fitted a logistic model with study fixed effects and study-clustered standard errors, adding abundance and prevalence:")
+P.equation("logit P(top_js = 1) = a_s + b_1 anaerobe_j + b_2 log10(mean RA_js) + b_3 prevalence_js")
+P.p(f"On {KAB['n_rows']:,} genus-study rows from {KAB['n_studies']} studies, b_1 = {KAB['full']['coef']['anaerobe']:.2f} (p = {KAB['full']['p']['anaerobe']:.1e}), almost the same as "
+    f"without abundance terms ({KAB['no_abund']['coef']['anaerobe']:.2f}). Anaerobe share is nearly uncorrelated with abundance (r = {KAB['corr_anaerobe_lra']:.2f}). "
+    "So the association is not a biome mix or abundance artifact.")
+bb = {k.split(':', 1)[1]: v for k, v in KBI["within_study"].items() if k.startswith("biome:")}
+P.table(["biome", "studies", "mean difference (top - rest)", "p (sign-flip)", "q (BH)"],
+        [[b, v["n"], f"{v['mean_diff']:+.3f}", f"{v['p']:.3f}", f"{v['q_bh']:.2f}"] for b, v in bb.items()],
+        "Within-study anaerobe difference by biome (results/keystone_traits_biome.json).")
+P.p("It is positive in 7 of 8 biomes but no single biome passes FDR (smallest q = 0.10). We name it the anaerobe-keystone hypothesis: genera made of strict "
+    "anaerobes rank as network hubs more often, independent of biome, abundance and prevalence. It is falsified if (a) it fails in an independent cohort with "
+    "a single biome and adequate power, or (b) perturbation experiments show inferred out-strength does not predict community response. Keystone status here comes "
+    "from our own inferred networks, so this is a candidate property of interaction inference, not a proven ecological law.")
+
 P.h("5.5 What predicts where interactions help?", 2)
 P.p("Across the 160 studies we regressed the audit gain (prior error minus interaction error) on standardised study covariates: Shannon "
     "diversity and Bray-Curtis dispersion (scikit-bio), co-occurrence network density and modularity (networkx; edges where |Spearman rho| > 0.3 "
@@ -233,6 +271,9 @@ for t in [
     "Keystone consensus found only 2 of 248 genera at FDR < 0.05, both oral; there is no cross-biome keystone signal.",
     "Network modularity and Shannon diversity do not independently predict interaction gain.",
     "Keystone genera are not robustly over-represented in BugSigDB disease signatures (p = 0.062 with estimated dispersion).",
+    "No GTDB family is enriched among keystones after FDR (best q = 0.71).",
+    "Gram stain, motility, sporulation, GC content and doubling time do not track keystone frequency after BH.",
+    "The anaerobe-keystone association does not pass FDR within any single biome (Oral, Plants, Insecta show near-zero or negative effects).",
 ]:
     P.p("- " + t)
 
@@ -268,6 +309,8 @@ for r in [
     "Michel-Mata S, Wang X-W, Liu Y-Y, Angulo MT. Predicting microbiome compositions from species assemblages through deep learning. iMeta 2022. https://pmc.ncbi.nlm.nih.gov/articles/PMC9221840/",
     "Mitchell AL, et al. MGnify: the microbiome analysis resource in 2020. Nucleic Acids Res 2020.",
     "Gibson TE, Kim Y, Acharya S, et al. Learning ecosystem-scale dynamics from microbiome data with MDSINE2. Nature Microbiology 2025. https://www.nature.com/articles/s41564-025-02112-6",
+    "Madin JS, Nielsen DA, Brbic M, et al. A synthesis of bacterial and archaeal phenotypic trait data. Scientific Data 2020;7:170.",
+    "Parks DH, Chuvochina M, Rinke C, et al. GTDB: an ongoing census of bacterial and archaeal diversity through a phylogenetically consistent, rank normalized and complete genome-based taxonomy. Nucleic Acids Res 2022.",
     "Bucci V, et al. MDSINE: Microbial Dynamical Systems INference Engine. Genome Biology 2016.",
     "Stein RR, et al. Ecological modeling from time-series inference: insight into dynamics and stability of intestinal microbiota. PLoS Comput Biol 2013.",
 ]:
