@@ -16,3 +16,4 @@ scikit-bio,library,"scripts/predictors_audit.py (Shannon alpha, Bray-Curtis beta
 scikit-learn,library,"scripts/predictors_audit.py (random forest, CV, permutation importance)",True,
 networkx,library,"scripts/predictors_audit.py (co-occurrence network density, modularity)",True,
 statsmodels,library,scripts/predictors_audit.py (OLS with HC3 robust SEs),True,
+NCBI Taxonomy (E-utilities esearch/efetch),database/web API,scripts/keystone_taxonomy.py (genus -> phylum lineage),True,
