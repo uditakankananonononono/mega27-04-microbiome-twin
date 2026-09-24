@@ -71,3 +71,21 @@ def test_paired_bootstrap_sign():
     a = np.full(50, 0.1); b = np.full(50, 0.2)
     est, lo, hi = paired_bootstrap(a, b, n_boot=100)
     assert est < 0 and hi < 0
+
+
+def test_popforecast_conditional_ignores_zeros():
+    from microtwin.popforecast import forecast
+    days = np.array([0.0, 1.0, 2.0])
+    train = [(days, np.array([1e6, 0.0, 1e6])), (days, np.array([1e6, 1e6, 1e6]))]
+    p = forecast(train, days, 1e6, tau=0, eps=1e3, conditional=True)
+    assert np.allclose(p, 6.0, atol=1e-6)
+    pu = forecast(train, days, 1e6, tau=0, eps=1e3, conditional=False)
+    assert pu[1] < 6.0
+
+
+def test_popforecast_offset_decays():
+    from microtwin.popforecast import forecast
+    days = np.array([0.0, 5.0, 50.0])
+    train = [(days, np.full(3, 1e6))]
+    p = forecast(train, days, 1e8, tau=5.0, eps=0.0)
+    assert np.isclose(p[0], 8.0) and p[1] < p[0] and abs(p[2] - 6.0) < 1e-3

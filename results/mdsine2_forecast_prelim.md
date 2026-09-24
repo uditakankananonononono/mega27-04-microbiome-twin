@@ -42,3 +42,9 @@ Model (src/microtwin/popforecast.py): for each taxon and day, average log10 abun
 Published medians: MDSINE2 1.061, MDSINE2 no-modules 0.913.
 Read: a parameter-free presence-conditional average ties the best published model and beats full MDSINE2 on MDSINE2's own benchmark. Inner-LOO picks tau ~0: the held-out mouse's initial state adds nothing.
 Caveat that matters: the official metric scores only timepoints where the taxon is detected, so it rewards presence-conditional prediction; this is as much a finding about the benchmark metric as about the models. 4 variants were compared (mild multiple testing). Healthy cohort only; UC cohort next.
+
+## Replication on the UC-donor cohort (bench_mdsine2.py uc; same official metric, 599 taxon-mouse pairs)
+Ours (presence-conditional population forecaster) median 0.692 - lowest of all 12 methods.
+vs MDSINE2 (No Modules) 0.805: ours better in 376/599, Wilcoxon p = 8e-7. vs RA-MDSINE2 (No Modules) 0.784: p = 6e-6. vs MDSINE2 1.093: p = 4e-44. vs gLV elastic net 1.582, gLV ridge 1.970.
+Healthy cohort re-run with the same script: ours 0.919 = 3rd of 11 (RA-MDSINE2 No Modules 0.883 is better, p = 0.045; tie with MDSINE2 No Modules p = 0.53; beats MDSINE2 1.061 p = 1e-4).
+Verdict: benchmark beat on UC cohort, tie-to-slight-loss on healthy. Metric caveat stands (detected-only scoring rewards presence-conditional prediction).
