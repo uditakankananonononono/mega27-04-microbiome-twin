@@ -1,0 +1,2 @@
+Drosophila_Gut 24 24 {'glv': 0.0743} pub 0.066 65.1
+Soil_Vitro 48 48 {'glv': 0.0994} pub 0.079 1072.9
