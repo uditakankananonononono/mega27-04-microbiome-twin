@@ -31,9 +31,12 @@ seen = set(done)
 fh = open(man_path, "a", newline=""); w = csv.writer(fh)
 if not done: w.writerow(["study", "secondary_accession", "biome", "n_samples", "n_genera", "file", "source_url", "study_name"]); fh.flush()
 kept = sum(1 for r in done.values() if r["file"])
+PER_BIOME = int(sys.argv[2]) if len(sys.argv) > 2 else 20
+from collections import Counter
+per = Counter(r["biome"] for r in done.values() if r["file"])
 for biome in BIOMES:
     page = 1
-    while kept < TARGET:
+    while kept < TARGET and per[biome] < PER_BIOME:
         url = f"{API}/studies?biome_name={urllib.parse.quote(biome)}&page_size=50&page={page}"
         try: d = json.loads(get(url))
         except Exception as e: print("list fail", biome, e, flush=True); break
@@ -42,6 +45,7 @@ for biome in BIOMES:
             if sid in seen: continue
             seen.add(sid); a = s["attributes"]
             if (a.get("samples-count") or 0) < MIN_SAMPLES: continue
+            if (a.get("study-name") or "").lower().startswith(("metagenome assembly", "emg produced tpa metagenomics assembly")): continue
             try:
                 dl = json.loads(get(f"{API}/studies/{sid}/downloads"))["data"]
                 ssu = [x for x in dl if x["attributes"]["description"]["label"] == "Taxonomic assignments SSU"]
@@ -55,10 +59,10 @@ for biome in BIOMES:
                 if t.shape[1] < MIN_SAMPLES or t.shape[0] < 10: continue
                 f = f"{OUT}/{sid}.tsv.gz"; t.to_csv(f, sep="\t", compression="gzip")
                 w.writerow([sid, a.get("secondary-accession"), biome, t.shape[1], t.shape[0], f, src, (a.get("study-name") or "")[:120]]); fh.flush()
-                kept += 1; print(kept, sid, biome, t.shape, flush=True)
+                kept += 1; per[biome] += 1; print(kept, sid, biome, t.shape, flush=True)
             except Exception as e:
                 print("skip", sid, type(e).__name__, str(e)[:80], flush=True)
-            if kept >= TARGET: break
+            if kept >= TARGET or per[biome] >= PER_BIOME: break
         if not d["links"].get("next"): break
         page += 1
 print("kept", kept)
