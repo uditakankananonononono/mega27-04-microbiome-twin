@@ -1,14 +1,14 @@
-tool,kind,where_used
-NumPy,library,src/microtwin; run_bench.py; scripts/
-SciPy,library,src/microtwin/audit.py; scripts/ (stats; FDR inputs)
-pandas,library,scripts/; paper/build_paper.py
-PyTorch,library,src/microtwin/models.py; run_bench.py (cNODE and graph-twin models)
-Matplotlib,library,scripts/summarise_audit.py (fig_mgnify_audit.png)
-python-docx,library,paper/paperkit.py
-pytest,test framework,tests/test_microtwin.py; tests/test_audit.py
-LibreOffice (soffice headless),application,paper docx -> pdf render
-poppler pdfinfo,application,page count of rendered paper
-Git + GitHub,service,repo hosting and pushes
-EBI MGnify REST API v1,web API,scripts fetching data/raw/mgnify (manifest.csv); scripts/keystone_mgnify.py
-cNODE published benchmark data (Michel-Mata et al. 2022),public data release,data/raw/cnode/*.csv; run_bench.py
-MDSINE2 published data and Source Data (Gibson et al. 2025),public data release,data/raw/mdsine2*; mdsine2 head-to-head results
+tool,kind,where_used,counts_for_gate,note
+NumPy,library,src/microtwin; run_bench.py; scripts/,True,
+SciPy,library,src/microtwin/audit.py; scripts/ (stats; FDR inputs),True,
+pandas,library,scripts/; paper/build_paper.py,True,
+PyTorch,library,src/microtwin/models.py; run_bench.py (cNODE and graph-twin models),True,
+Matplotlib,library,scripts/summarise_audit.py (fig_mgnify_audit.png),True,
+python-docx,library,paper/paperkit.py,False,infrastructure (excluded per program convention 25 Sep 01:18)
+pytest,test framework,tests/test_microtwin.py; tests/test_audit.py,False,infrastructure (excluded per program convention 25 Sep 01:18)
+LibreOffice (soffice headless),application,paper docx -> pdf render,False,infrastructure (excluded per program convention 25 Sep 01:18)
+poppler pdfinfo,application,page count of rendered paper,False,infrastructure (excluded per program convention 25 Sep 01:18)
+Git + GitHub,service,repo hosting and pushes,False,infrastructure (excluded per program convention 25 Sep 01:18)
+EBI MGnify REST API v1,web API,scripts fetching data/raw/mgnify (manifest.csv); scripts/keystone_mgnify.py,True,
+cNODE published benchmark data (Michel-Mata et al. 2022),public data release,data/raw/cnode/*.csv; run_bench.py,True,
+MDSINE2 published data and Source Data (Gibson et al. 2025),public data release,data/raw/mdsine2*; mdsine2 head-to-head results,True,
