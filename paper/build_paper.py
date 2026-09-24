@@ -183,6 +183,33 @@ P.p("A candidate exception, the human digestive system (21 of 41), did not survi
     "(Section 5.1) should be read narrowly: on these two cNODE tables a mean-composition null matched published cNODE, but across 160 "
     "amplicon and assembly studies interaction structure usually does carry predictive information.")
 
+KC = _pd.read_csv("results/keystone_consensus.csv"); PR = json.load(open("results/predictors_audit.json"))
+P.h("5.4 Keystone consensus across studies (exploratory)", 2)
+P.p("For each MGnify study we fitted the ridge interaction model on all samples, built a directed networkx graph with edge weight |W_ij|, "
+    "and scored each genus by weighted out-strength. A genus is 'top' in a study if it is in that study's top 10%. Across studies we test "
+    "the top count against the 10% expectation with a one-sided binomial test and control the false discovery rate (Benjamini-Hochberg):")
+P.equation("s_j = sum_i |W_ij|,   p_j = P(Binom(n_j, 0.1) >= k_j),   q_(r) = min_{r' >= r} ( m p_(r') / r' )")
+P.table(["genus", "studies", "top", "fraction top", "p", "q (BH)"],
+        [[r.genus, int(r.studies), int(r.top), round(r.frac_top, 3), f"{r.p:.1e}", f"{r.q_bh:.2g}"] for r in KC.head(7).itertuples()],
+        f"Top genera by keystone consensus ({len(KC)} genera modelled in >= 20 studies; results/keystone_consensus.csv).")
+P.p("Two genera pass FDR < 0.05: Cardiobacterium and Eikenella. Both are oral HACEK genera, so the signal most likely reflects the oral studies, "
+    "where interaction models fit best. It is not a cross-biome keystone law. Out-strength from a ridge model is a statistical dependence score, "
+    "not a causal keystone effect, and it scales with each genus's variance and prevalence. No experimental validation was done.")
+
+P.h("5.5 What predicts where interactions help?", 2)
+P.p("Across the 160 studies we regressed the audit gain (prior error minus interaction error) on standardised study covariates: Shannon "
+    "diversity and Bray-Curtis dispersion (scikit-bio), co-occurrence network density and modularity (networkx; edges where |Spearman rho| > 0.3 "
+    "among genera with prevalence >= 20%), log sample and taxa counts, and assembly and human-gut flags. Inference uses heteroskedasticity-robust (HC3) standard errors:")
+P.equation("gain_s = b_0 + sum_k b_k z_sk + e_s,   Var(b) = (Z'Z)^-1 Z' diag( e_s^2 / (1 - h_ss)^2 ) Z (Z'Z)^-1")
+feats = list(PR["ols"])
+P.table(["covariate", "std. beta", "p (HC3)", "RF permutation importance", "marginal Spearman rho"],
+        [[f, round(PR["ols"][f]["beta_std"], 4), f"{PR['ols'][f]['p_hc3']:.2g}", round(PR["rf_perm_importance"][f], 3), round(PR["spearman_gain_vs"][f][0], 2)] for f in feats],
+        f"Predictors of interaction gain (OLS R^2 = {PR['ols_r2']:.2f}; random forest 5-fold CV R^2 = {PR['rf_cv_r2_mean']:.2f}; results/predictors_audit.json).")
+P.p("Network density is the strongest independent predictor, followed by beta dispersion and community size. Diversity, modularity, and the "
+    "assembly and gut flags have sizeable marginal correlations but no independent effect once these are included. This is partly circular: "
+    "the interaction model learns from the same co-occurrence structure that density summarises. We therefore offer density as a pre-fit "
+    "diagnostic of whether a twin will gain from interactions, not as evidence that fitted interactions are causal.")
+
 P.h("6. Negative results (kept by design)")
 for t in [
     "gLV replicator 'beat' of cNODE on Drosophila (0.052) and soil in vitro under 10-fold CV was RETRACTED: under LOO it scores 0.074 and 0.099, worse than published cNODE (0.066, 0.079).",
@@ -192,6 +219,8 @@ for t in [
     "Healthy cohort: RA-MDSINE2 without modules beats our forecaster under the official detected-only metric (0.883 vs 0.919, p = 0.045).",
     "Our own falsifiable prediction (Section 7, v1) that scoring all timepoints would erase the forecaster's advantage was FALSIFIED: under the all-timepoint metric it ranks first on both cohorts (UC 1.654 vs MDSINE2-NM 1.824; healthy 1.752 vs 2.072; results/mdsine2_headtohead_*_alltimepoints.json).",
     "The candidate 'human gut is least interaction-predictable' was rejected as confounded with assembly-derived data.",
+    "Keystone consensus found only 2 of 248 genera at FDR < 0.05, both oral; there is no cross-biome keystone signal.",
+    "Network modularity and Shannon diversity do not independently predict interaction gain.",
 ]:
     P.p("- " + t)
 
@@ -209,14 +238,10 @@ P.p("Limitations. Five UC mice and four healthy mice; 141-taxon selection by mea
     "cNODE comparisons rely on published point estimates; no per-timepoint MDSINE2 predictions.")
 
 P.h("8. Tools used")
-P.p("The program target of 40 external tools was not reached. Table 7 lists every tool actually used.")
-P.table(["tool", "role"], [
-    ["Python 3.10", "language"], ["NumPy", "arrays, bootstrap"], ["SciPy", "Wilcoxon, ODE integration"], ["pandas", "data loading"],
-    ["PyTorch", "cNODE, gLV, GraphTwin training"], ["matplotlib", "figures"], ["pytest", "hermetic tests"], ["python-docx", "this paper"],
-    ["cNODE repository (yixueyang/cNODE)", "data and reference protocol"],
-    ["MDSINE2_Paper repository (gerberlab)", "data and official metric notebook"], ["git / GitHub", "version control"],
-    ["MGnify REST API (EBI)", "160 study taxonomy tables"], ["statsmodels", "confounder regression"],
-], "Tools table (honest count: 13).")
+TL = _pd.read_csv("results/tools_ledger.csv"); TL["gate"] = TL.counts_for_gate.astype(str).map({"True": "counts", "False": "infra (excluded)"})
+P.p("The program target of 40 external tools was not reached. The table lists every tool actually used, from results/tools_ledger.csv.")
+P.table(["tool", "kind", "where used", "gate"], TL[["tool", "kind", "where_used", "gate"]].values.tolist(),
+        f"Tools ledger: {len(TL)} entries, {int((TL.gate == 'counts').sum())} counting toward the gate after excluding infrastructure.")
 
 P.h("9. Reproducibility")
 P.p("Repository: github.com/uditakankananonononono/mega27-04-microbiome-twin (private). Commands: python run_bench.py <dataset> "
