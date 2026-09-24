@@ -1,6 +1,6 @@
 """Build the item-4 paper (docx) from committed result files. Run from repo root."""
 import json, sys
-sys.path.insert(0, "../shared"); sys.path.insert(0, "/home/sandbox/repos/shared")
+sys.path.insert(0, "paper")
 from paperkit import Paper
 
 H = json.load(open("results/mdsine2_headtohead_healthy.json"))
