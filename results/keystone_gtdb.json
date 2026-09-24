@@ -1,0 +1,125 @@
+{
+ "n_mapped": 227,
+ "n_total": 248,
+ "gtdb_phylum": [
+  {
+   "taxon": "Desulfobacterota",
+   "top25": 3,
+   "all": 3,
+   "odds_ratio": Infinity,
+   "p": 0.0011955349369095422,
+   "q_bh": 0.020324093927462216
+  },
+  {
+   "taxon": "Campylobacterota",
+   "top25": 1,
+   "all": 3,
+   "odds_ratio": 4.166666666666667,
+   "p": 0.29650565929853295,
+   "q_bh": 1.0
+  },
+  {
+   "taxon": "Fusobacteriota",
+   "top25": 1,
+   "all": 3,
+   "odds_ratio": 4.166666666666667,
+   "p": 0.29650565929853295,
+   "q_bh": 1.0
+  },
+  {
+   "taxon": "Pseudomonadota",
+   "top25": 6,
+   "all": 49,
+   "odds_ratio": 1.167686658506732,
+   "p": 0.4633153169787117,
+   "q_bh": 1.0
+  },
+  {
+   "taxon": "Bacteroidota",
+   "top25": 3,
+   "all": 25,
+   "odds_ratio": 1.115702479338843,
+   "p": 0.5396575063766228,
+   "q_bh": 1.0
+  }
+ ],
+ "gtdb_family": [
+  {
+   "taxon": "Anaerovoracaceae",
+   "top25": 2,
+   "all": 2,
+   "odds_ratio": Infinity,
+   "p": 0.011695450469767263,
+   "q_bh": 0.713422478655803
+  },
+  {
+   "taxon": "Desulfovibrionaceae",
+   "top25": 2,
+   "all": 2,
+   "odds_ratio": Infinity,
+   "p": 0.011695450469767263,
+   "q_bh": 0.713422478655803
+  },
+  {
+   "taxon": "Neisseriaceae",
+   "top25": 2,
+   "all": 4,
+   "odds_ratio": 8.695652173913043,
+   "p": 0.060960679152952356,
+   "q_bh": 1.0
+  },
+  {
+   "taxon": "Cardiobacteriaceae",
+   "top25": 1,
+   "all": 1,
+   "odds_ratio": Infinity,
+   "p": 0.11013215859030838,
+   "q_bh": 1.0
+  },
+  {
+   "taxon": "Fastidiosipilaceae",
+   "top25": 1,
+   "all": 1,
+   "odds_ratio": Infinity,
+   "p": 0.11013215859030838,
+   "q_bh": 1.0
+  }
+ ],
+ "ncbi_vs_gtdb_phylum_disagreements": [
+  [
+   "Desulfobulbus",
+   "Thermodesulfobacteriota",
+   "Desulfobacterota"
+  ],
+  [
+   "Desulfovibrio",
+   "Thermodesulfobacteriota",
+   "Desulfobacterota"
+  ],
+  [
+   "Bilophila",
+   "Thermodesulfobacteriota",
+   "Desulfobacterota"
+  ],
+  [
+   "Anaeroplasma",
+   "Mycoplasmatota",
+   "Bacillota"
+  ],
+  [
+   "Paucibacter",
+   NaN,
+   "Pseudomonadota"
+  ],
+  [
+   "Mycoplasma",
+   "Mycoplasmatota",
+   "Bacillota"
+  ],
+  [
+   "Shuttleworthia",
+   NaN,
+   "Bacillota"
+  ]
+ ]
+}

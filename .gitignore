@@ -3,3 +3,4 @@ __pycache__/
 .pytest_cache/
 results/log_*.txt
 data/raw/mgnify/*.tsv.gz
+data/gtdb/
