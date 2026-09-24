@@ -39,3 +39,10 @@ Verdict: the anaerobe-keystone association survives the within-study test, so it
 Within-study logistic model with study fixed effects and study-clustered SE (10,599 genus-study rows, 156 studies): top ~ anaerobe + log10 mean relative abundance + prevalence.
 Anaerobe coefficient 0.40 (p=1.4e-4), almost unchanged from the model without abundance terms (0.41, p=7e-5). Anaerobe share is barely correlated with abundance (r=0.09) or prevalence (r=-0.02). Keystones are, if anything, less abundant (coef -0.29, p=8e-4) and more prevalent (0.77, p=0.017).
 Verdict: the anaerobe-keystone association is not explained by abundance or prevalence. It remains a candidate (named, falsifiable) because (a) per-biome tests are not BH-robust and (b) keystone status comes from our own inferred interaction networks, so it is a property of the inference method until validated with perturbation data.
+
+### Genomic replication with KEGG (scripts/keystone_kegg.py, results/keystone_kegg.json, results/keystone_kegg_genus.csv)
+Independent of the Madin phenotype database: marker-KO presence in 11,951 KEGG genomes (rest.kegg.jp link/genes), aggregated to genus (203/248 mapped).
+- Validation: genomic anaerobe index GAI = frac(PFOR: K00169|K03737) - frac(coxA: K02274) agrees with Madin anaerobe share (Spearman 0.84).
+- Keystone frequency: GAI rho=0.36 (p=9e-8); coxA rho=-0.40 (p=3e-9); PFOR 0.24; [FeFe]-hydrogenase 0.18 (p=0.012); DSR 0.12 (p=0.079).
+- Within-study FE logit with abundance + prevalence (13,294 rows, 159 studies, study-clustered SE): GAI coef 0.32, p=7e-8. Split: coxA -0.52 (p=6e-6) carries most of it, PFOR +0.15 (p=0.083). Complete dissimilatory sulfate reduction (dsrA+dsrB+aprA) +0.70, p=3e-5.
+Verdict: the anaerobe-keystone candidate replicates with an independent genomic data source and a larger row set; the signal is mainly "lack of aerobic respiration" plus sulfate reduction. Still a candidate: keystone status comes from inferred networks, and no perturbation validation exists.
