@@ -20,3 +20,14 @@ Per (held-out mouse, taxon) RMSE of log10 abundance over timepoints with truth >
 | gLV ridge lambda=1000 | 1.889 | 1.925 |
 | gLV ridge lambda=10 | 2.601 | 2.641 |
 Null better in 483/546 pairs, Wilcoxon p = 5e-78. Next: read MDSINE2 / cLV / gLV-elastic-net medians off the paper's Fig. 3 for the head-to-head.
+
+## CORRECTION - exact head-to-head on the paper's own source data (Nature Microbiology 2025, Source Data Fig. 3, healthy absolute)
+Official metric reproduced from paper_figures/fig3_cross_validation.ipynb (truth > 1e-5, eps = 1e3, per subject x taxon RMSE of log10). Our recomputation of MDSINE2 gives median 1.061, matching the published box plot, so the pipeline is verified.
+| method | median | mean |
+|---|---|---|
+| MDSINE2 (No Modules) | 0.913 | 1.024 |
+| MDSINE2 | 1.061 | 1.195 |
+| population-mean null (ours, training mice only) | 1.442 | 1.576 |
+| gLV elastic net | 1.446 | 1.592 |
+| gLV ridge | 1.924 | 2.098 |
+MDSINE2 beats the null (null better in only 184/556 pairs, Wilcoxon p = 2e-20). The earlier "null beats everything" reading came from flooring predictions at 1e5, a different metric, and is RETRACTED for MDSINE2. What survives: the zero-parameter null ties gLV elastic net and beats gLV ridge - classical gLV baselines in this benchmark are no better than a population average.
