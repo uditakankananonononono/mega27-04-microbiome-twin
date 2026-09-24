@@ -34,3 +34,8 @@ Named candidate, not claimed: "anaerobe-keystone hypothesis" - genera with more 
 - Within-study contrast (top vs non-top genera in the same study, 155 MGnify studies): anaerobe share is higher in keystones in 62% of studies, mean +0.071, sign-flip p=2e-4. This removes between-biome confounding.
 - Per biome: positive in 7 of 8 biomes (Insecta -0.026, n=7). Unadjusted p<0.05 in Digestive system (+0.065, n=41), Skin (+0.11), Birds (+0.18). None survive BH across 8 biomes (min q=0.10). Oral, Plants, Fish, Mammals, Insecta: not significant.
 Verdict: the anaerobe-keystone association survives the within-study test, so it is not only a gut-vs-environment artifact. It is not robust in any single biome after correction. It stays a named candidate. Remaining untested confound: abundance/prevalence of anaerobes within a study.
+
+### Abundance/prevalence confound (scripts/keystone_traits_abundance.py, results/keystone_traits_abundance.json)
+Within-study logistic model with study fixed effects and study-clustered SE (10,599 genus-study rows, 156 studies): top ~ anaerobe + log10 mean relative abundance + prevalence.
+Anaerobe coefficient 0.40 (p=1.4e-4), almost unchanged from the model without abundance terms (0.41, p=7e-5). Anaerobe share is barely correlated with abundance (r=0.09) or prevalence (r=-0.02). Keystones are, if anything, less abundant (coef -0.29, p=8e-4) and more prevalent (0.77, p=0.017).
+Verdict: the anaerobe-keystone association is not explained by abundance or prevalence. It remains a candidate (named, falsifiable) because (a) per-biome tests are not BH-robust and (b) keystone status comes from our own inferred interaction networks, so it is a property of the inference method until validated with perturbation data.

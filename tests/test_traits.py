@@ -6,3 +6,6 @@ def test_traits_outputs():
 def test_biome_within_study():
     d = json.load(open("results/keystone_traits_biome.json"))
     assert d["within_study"]["n_studies"] <= d["n_studies"] and 0 < d["within_study"]["signflip_p"] <= 1
+def test_abundance_confound():
+    d = json.load(open("results/keystone_traits_abundance.json"))
+    assert set(d["full"]["coef"]) >= {"anaerobe", "lra", "prevalence"} and d["n_studies"] <= 160
