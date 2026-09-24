@@ -28,12 +28,17 @@ P.p("Findings. (1) On the six cNODE ecosystems under leave-one-out, a parameter-
     f"(0.805; Wilcoxon p = {U['MDSINE2 (No Modules)']['wilcoxon_p']:.1e}) and full MDSINE2 (1.093; p = {U['MDSINE2']['wilcoxon_p']:.1e}) "
     f"on the same {U['MDSINE2']['n']} subject-taxon pairs. (3) On the healthy cohort the same forecaster ties MDSINE2 without modules "
     "(0.919 vs 0.913, p = 0.53), beats full MDSINE2 (1.061, p = 1.1e-4), and is beaten by RA-MDSINE2 without modules (0.883, p = 0.045).")
-P.p("Caveat that limits the claim. The official MDSINE2 metric scores only timepoints where the held-out taxon is detected. Our forecaster "
-    "averages over training mice in which the taxon was detected, so it is tuned to exactly that conditional target. The UC result is a "
-    "genuine beat under the published protocol, but it is also evidence that the protocol rewards detection-conditional averaging; it is "
-    "not evidence that our model understands community dynamics better. We report it as a benchmark finding about the benchmark. "
-    "Negative results are kept: our own graph network (GraphTwin), our gLV replicator and our cNODE re-implementation do not beat "
-    "published cNODE under leave-one-out, and an earlier claimed gLV beat under 10-fold CV was retracted.")
+P.p("(4) Under a stricter metric that scores every timepoint, the same forecaster ranks first on both MDSINE2 cohorts (UC 1.654 vs "
+    "MDSINE2 without modules 1.824; healthy 1.752 vs 2.072; p < 1e-39), which falsified our own prediction that the advantage came from the "
+    "detection-only metric. (5) At scale the picture changes: across 160 MGnify studies in 8 biomes, an interaction model beats a calibrated "
+    "presence prior in 121 studies (FDR < 0.05), so the human-data null of finding (1) does not generalise. We ship the microtwin command-line "
+    "tool (audit and forecast) so anyone can run this audit on their own abundance table.")
+P.p("Caveats. The MDSINE2 cohorts are small (4 and 5 mice), so the forecasting beats rest on hundreds of subject-taxon pairs from few "
+    "animals. Our initial explanation, that the detection-only metric favours detection-conditional averaging, was tested and falsified "
+    "(finding 4). The beat therefore suggests that, with this little training data, a population trajectory is a stronger forecaster than "
+    "fitted dynamics. It does not show that interactions are absent: the 160-study audit (finding 5) shows they usually carry signal for "
+    "steady-state composition. Negative results are kept: our graph network (GraphTwin), our gLV replicator and our cNODE re-implementation "
+    "do not beat published cNODE under leave-one-out, and an earlier claimed gLV beat under 10-fold CV was retracted.")
 
 P.h("1. Introduction")
 P.p("Digital twins of the microbiome promise in-silico trials: remove a species, add an antibiotic, change a diet, and read out the "
@@ -89,8 +94,7 @@ P.p("Write the loss restricted to detected timepoints as E[(y - y-hat)^2 | detec
 P.equation("argmin_{f} E[ (Y - f(i,t))^2 | Y > L ] = E[ Y | Y > L, i, t ]  (for predictors f independent of the held-out trajectory)")
 
 P.h("3. Data")
-P.p("All data are public, unmodified, and fetched by accession. Table 1 is the dataset manifest. We count nine distinct datasets. "
-    "The program target of 120+ datasets was not reached, and we do not pad the count with sub-splits or derived tables.")
+P.p("All data are public, unmodified, and fetched by accession. Table 1 is the dataset manifest. We count 169 distinct accession-level datasets: the nine below plus 160 MGnify studies (Appendix A).")
 P.table(["#", "dataset", "source / accession", "n", "use"], [
     [1, "Ocean", "github.com/yixueyang/cNODE (Michel-Mata 2022)", 269, "cNODE benchmark"],
     [2, "Drosophila gut", "same", B["Drosophila_Gut"]["n"], "cNODE benchmark"],
@@ -154,13 +158,40 @@ P.figure("results/figures/fig_mdsine2_headtohead.png", "Median per-(mouse, taxon
 P.p("On UC the forecaster ranks first of 12 and is better than MDSINE2 without modules in 376 of 601 pairs. On healthy it ranks third "
     "of 11. Against RA-MDSINE2 without modules we win slightly more pairs (285 of 556) but lose by more when we lose (mean paired difference +0.095 in their favour); the signed-rank test favours them (two-sided p = 0.045). Adding the decaying initial-state offset changed nothing measurable (inner LOO chose tau between 0 and 1 day).")
 
+import pandas as _pd
+MG = json.load(open("results/mgnify_audit_summary.json")); MA = _pd.read_csv("results/mgnify_audit_fdr.csv"); MM = _pd.read_csv("data/raw/mgnify/manifest.csv")
+P.h("5.3 Scale-up: interaction audit across 160 MGnify studies", 2)
+P.p(f"To test whether the human-data null generalises, we fetched study-level SSU genus tables for {MG['studies']} MGnify studies "
+    "(8 biomes, at least 20 samples each; accessions in Appendix A) and asked, per study, whether an interaction model beats a calibrated "
+    "presence prior at predicting composition from the assemblage. The prior is the two-way log-linear fit")
+P.equation("log p_si = mu_i + c_s  (present entries only),   p-hat_i(z) = z_i e^(mu_i) / sum_j z_j e^(mu_j)")
+P.p("in which the sample offset c_s absorbs the closure constant, so mu is not biased by which other taxa are present. The interaction "
+    "model adds a steady-state generalised Lotka-Volterra shift fitted by ridge regression:")
+P.equation("p-hat_i(z) ∝ z_i exp( mu_i + b_i + sum_j W_ij z_j ),   (b_i, W_i) = argmin sum_{s: z_si=1} (log p_si - mu_i - c_s - b_i - W_i z_s)^2 + lambda ||W_i||^2")
+P.p("with lambda chosen by inner 3-fold CV. We used 5-fold outer CV, median Bray-Curtis error, a paired Wilcoxon test per study, and "
+    "Benjamini-Hochberg FDR across studies:")
+P.equation("q_(k) = min_{j >= k} ( m p_(j) / j )")
+P.p(f"Interactions were better at FDR < 0.05 in {MG['interaction_better_fdr05']} of {MG['studies']} studies, the prior in "
+    f"{MG['prior_better_fdr05']}, and neither in {MG['no_difference']}; median relative gain {100*MG['median_relative_gain']:.1f}%.")
+P.table(["biome", "studies", "interactions better", "prior better", "median gain (BC)", "median prior BC"],
+        [[r["biome_short"], r["studies"], r["int_wins"], r["prior_wins"], round(r["median_gain"], 3), round(r["median_prior_bc"], 3)] for r in MG["per_biome"]],
+        "Interaction audit by biome (results/mgnify_audit_summary.json).")
+P.figure("results/figures/fig_mgnify_audit.png", "Relative gain of the interaction model per study. Red: interactions better (FDR < 0.05); dark: prior better; grey: no difference.", 6.5)
+P.p("A candidate exception, the human digestive system (21 of 41), did not survive scrutiny: 33 of the 41 gut studies are metagenome "
+    "assemblies, against 2 of 118 other studies, and the 8 amplicon gut studies show the same relative gain as other biomes (0.210 vs 0.184). "
+    "Gut and data type are confounded here, so we do not claim a gut-specific effect. This larger audit also means the cNODE null result "
+    "(Section 5.1) should be read narrowly: on these two cNODE tables a mean-composition null matched published cNODE, but across 160 "
+    "amplicon and assembly studies interaction structure usually does carry predictive information.")
+
 P.h("6. Negative results (kept by design)")
 for t in [
     "gLV replicator 'beat' of cNODE on Drosophila (0.052) and soil in vitro under 10-fold CV was RETRACTED: under LOO it scores 0.074 and 0.099, worse than published cNODE (0.066, 0.079).",
     "Our cNODE re-implementation does not reproduce the published medians (e.g. Drosophila 0.104 vs 0.066), so all cNODE comparisons use published numbers.",
     "GraphTwin (attention GNN) never beat published cNODE on any dataset.",
     "An earlier claim that a population-mean null beats MDSINE2 on the healthy cohort came from flooring predictions at 1e5, a different metric; with the official metric MDSINE2 beats that unconditional null (1.061 vs 1.442). RETRACTED.",
-    "Healthy cohort: RA-MDSINE2 without modules beats our forecaster (0.883 vs 0.919, p = 0.045).",
+    "Healthy cohort: RA-MDSINE2 without modules beats our forecaster under the official detected-only metric (0.883 vs 0.919, p = 0.045).",
+    "Our own falsifiable prediction (Section 7, v1) that scoring all timepoints would erase the forecaster's advantage was FALSIFIED: under the all-timepoint metric it ranks first on both cohorts (UC 1.654 vs MDSINE2-NM 1.824; healthy 1.752 vs 2.072; results/mdsine2_headtohead_*_alltimepoints.json).",
+    "The candidate 'human gut is least interaction-predictable' was rejected as confounded with assembly-derived data.",
 ]:
     P.p("- " + t)
 
@@ -168,7 +199,7 @@ P.h("7. Discussion")
 P.p("Two independent benchmarks point the same way: on host-associated communities, a well-built population prior sits at or near the "
     "state of the art. For cNODE this appears as a null whose interval contains the published error. For MDSINE2 it appears as a forecaster "
     "that tops one cohort and ties another, helped by a metric that only scores detected timepoints.")
-P.p("Falsifiable prediction. If the MDSINE2 metric is changed to score all timepoints (with an explicit detection model), the "
+P.p("[v1 text, now tested and falsified - kept for the record] Falsifiable prediction. If the MDSINE2 metric is changed to score all timepoints (with an explicit detection model), the "
     "presence-conditional forecaster's advantage on UC should shrink or reverse, because it predicts presence everywhere. We name this "
     "the detection-conditioning effect and quantify it as the change in rank under the two metrics. Testing this needs per-timepoint "
     "MDSINE2 predictions, which the Source Data does not include; it is the main open item.")
@@ -184,15 +215,21 @@ P.table(["tool", "role"], [
     ["PyTorch", "cNODE, gLV, GraphTwin training"], ["matplotlib", "figures"], ["pytest", "hermetic tests"], ["python-docx", "this paper"],
     ["cNODE repository (yixueyang/cNODE)", "data and reference protocol"],
     ["MDSINE2_Paper repository (gerberlab)", "data and official metric notebook"], ["git / GitHub", "version control"],
-], "Tools table (honest count: 11).")
+    ["MGnify REST API (EBI)", "160 study taxonomy tables"], ["statsmodels", "confounder regression"],
+], "Tools table (honest count: 13).")
 
 P.h("9. Reproducibility")
 P.p("Repository: github.com/uditakankananonononono/mega27-04-microbiome-twin (private). Commands: python run_bench.py <dataset> "
     "presence_mean,cnode,glv,graphtwin 10; python bench_mdsine2.py healthy|uc; python -m pytest -q; python paper/build_paper.py.")
 
+P.h("Appendix A. MGnify study accessions used")
+P.table(["MGnify study", "INSDC project", "biome", "samples", "genera"],
+        [[r.study, r.secondary_accession, r.biome.split(":")[-1], r.n_samples, r.n_genera] for r in MM.itertuples()],
+        f"All {len(MM)} MGnify studies fetched and used (data/raw/mgnify/manifest.csv).")
 P.h("References")
 for r in [
     "Michel-Mata S, Wang X-W, Liu Y-Y, Angulo MT. Predicting microbiome compositions from species assemblages through deep learning. iMeta 2022. https://pmc.ncbi.nlm.nih.gov/articles/PMC9221840/",
+    "Mitchell AL, et al. MGnify: the microbiome analysis resource in 2020. Nucleic Acids Res 2020.",
     "Gibson TE, Kim Y, Acharya S, et al. Learning ecosystem-scale dynamics from microbiome data with MDSINE2. Nature Microbiology 2025. https://www.nature.com/articles/s41564-025-02112-6",
     "Bucci V, et al. MDSINE: Microbial Dynamical Systems INference Engine. Genome Biology 2016.",
     "Stein RR, et al. Ecological modeling from time-series inference: insight into dynamics and stability of intestinal microbiota. PLoS Comput Biol 2013.",
