@@ -52,6 +52,6 @@ Verdict: benchmark beat on UC cohort, tie-to-slight-loss on healthy. Metric cave
 ## Test of our own falsifiable prediction: score ALL timepoints (undetected truth included, log10(x + 1e3))
 Prediction (paper v1, section 7): with undetected timepoints scored too, the presence-conditional forecaster's advantage should shrink or reverse.
 Result: FALSIFIED. The forecaster ranks first on both cohorts, by a wider margin.
-- UC: ours median 1.654 vs MDSINE2 (No Modules) 1.824, RA-MDSINE2 (No Modules) 1.803; ours better in 461/601 pairs vs MDSINE2-NM, Wilcoxon p = 3.5e-40 (results/mdsine2_headtohead_uc_alltimepoints.json).
-- Healthy: ours median 1.752 vs MDSINE2 (No Modules) 2.072, RA-MDSINE2 (No Modules) 2.084; ours better in 417/556, p = 5.5e-40 (results/mdsine2_headtohead_healthy_alltimepoints.json).
-Read: the detection-only metric was not what made the population prior competitive. Under the stricter all-timepoint metric it beats every published method on both cohorts. Pairs: the same subject-taxon pairs as the official metric (pairs with at least one detection).
+- UC: ours median 1.654 vs MDSINE2 (No Modules) 1.824, RA-MDSINE2 (No Modules) 1.803; ours better in 461/605 pairs vs MDSINE2-NM, Wilcoxon p = 3.5e-40 (results/mdsine2_headtohead_uc_alltimepoints.json).
+- Healthy: ours median 1.752 vs MDSINE2 (No Modules) 2.072, RA-MDSINE2 (No Modules) 2.084; ours better in 417/564, p = 5.5e-40 (results/mdsine2_headtohead_healthy_alltimepoints.json).
+Read: the detection-only metric was not what made the population prior competitive. Under the stricter all-timepoint metric it beats every published method on both cohorts. Pairs: all subject-taxon pairs (605 UC, 564 healthy), i.e. the official 601/556 plus pairs never detected in the held-out mouse.
