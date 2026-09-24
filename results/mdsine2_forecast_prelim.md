@@ -31,3 +31,14 @@ Official metric reproduced from paper_figures/fig3_cross_validation.ipynb (truth
 | gLV elastic net | 1.446 | 1.592 |
 | gLV ridge | 1.924 | 2.098 |
 MDSINE2 beats the null (null better in only 184/556 pairs, Wilcoxon p = 2e-20). The earlier "null beats everything" reading came from flooring predictions at 1e5, a different metric, and is RETRACTED for MDSINE2. What survives: the zero-parameter null ties gLV elastic net and beats gLV ridge - classical gLV baselines in this benchmark are no better than a population average.
+
+## Presence-conditional population forecaster vs MDSINE2 (same official metric, same 556 pairs)
+Model (src/microtwin/popforecast.py): for each taxon and day, average log10 abundance over training mice *where the taxon was detected*; optional decaying offset from the held-out mouse's day-1 value (tau by inner leave-one-mouse-out on training mice).
+| model | median | vs MDSINE2 (No Modules), pairs better | Wilcoxon p | vs MDSINE2 Wilcoxon p |
+|---|---|---|---|---|
+| presence-conditional population forecaster | 0.919 | 299/556 | 0.53 (tie) | 1.1e-4 (ours lower) |
+| same + initial-offset (tau inner-LOO, chose 0-1 day) | 0.920 | 298/556 | 0.48 | 1.2e-4 |
+| unconditional population mean | 1.442 | 142/556 | 4e-43 (worse) | 2e-20 (worse) |
+Published medians: MDSINE2 1.061, MDSINE2 no-modules 0.913.
+Read: a parameter-free presence-conditional average ties the best published model and beats full MDSINE2 on MDSINE2's own benchmark. Inner-LOO picks tau ~0: the held-out mouse's initial state adds nothing.
+Caveat that matters: the official metric scores only timepoints where the taxon is detected, so it rewards presence-conditional prediction; this is as much a finding about the benchmark metric as about the models. 4 variants were compared (mild multiple testing). Healthy cohort only; UC cohort next.
