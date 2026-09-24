@@ -12,3 +12,7 @@ Git + GitHub,service,repo hosting and pushes,False,infrastructure (excluded per 
 EBI MGnify REST API v1,web API,scripts fetching data/raw/mgnify (manifest.csv); scripts/keystone_mgnify.py,True,
 cNODE published benchmark data (Michel-Mata et al. 2022),public data release,data/raw/cnode/*.csv; run_bench.py,True,
 MDSINE2 published data and Source Data (Gibson et al. 2025),public data release,data/raw/mdsine2*; mdsine2 head-to-head results,True,
+scikit-bio,library,"scripts/predictors_audit.py (Shannon alpha, Bray-Curtis beta diversity)",True,
+scikit-learn,library,"scripts/predictors_audit.py (random forest, CV, permutation importance)",True,
+networkx,library,"scripts/predictors_audit.py (co-occurrence network density, modularity)",True,
+statsmodels,library,scripts/predictors_audit.py (OLS with HC3 robust SEs),True,

@@ -3,7 +3,7 @@ name = "microtwin"
 version = "0.1.0"
 description = "Microbiome digital-twin audit and population forecaster"
 requires-python = ">=3.9"
-dependencies = ["numpy", "scipy", "pandas", "torch"]
+dependencies = ["scikit-bio", "scikit-learn", "networkx", "statsmodels", "numpy", "scipy", "pandas", "torch"]
 [project.scripts]
 microtwin = "microtwin.cli:main"
 [tool.setuptools.packages.find]
