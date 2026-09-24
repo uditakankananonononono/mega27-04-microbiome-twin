@@ -53,7 +53,7 @@ for m, e in sorted(E.items(), key=lambda kv: kv[1].median()):
     e2 = e.loc[ours.index]
     r = {"median": float(e2.median()), "mean": float(e2.mean()), "n": int(len(e2))}
     if m != "PresenceConditionalPopulation (ours)":
-        r["ours_better_pairs"] = int((ours < e2).sum()); r["wilcoxon_p"] = float(wilcoxon(ours, e2).pvalue)
+        r["ours_better_pairs"] = int((ours < e2).sum()); r["wilcoxon_p"] = float(wilcoxon(ours, e2).pvalue); dd = ours - e2; r["mean_diff_ours_minus"] = float(dd.mean()); r["median_diff_ours_minus"] = float(dd.median()); r["wilcoxon_p_ours_lower"] = float(wilcoxon(ours, e2, alternative="less").pvalue)
     summary[m] = r
     print(f"{m:40s} median {r['median']:.3f} mean {r['mean']:.3f}", {k: v for k, v in r.items() if k in ('ours_better_pairs', 'wilcoxon_p')})
 json.dump(summary, open(f"results/mdsine2_headtohead_{cohort}.json", "w"), indent=1)
