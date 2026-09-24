@@ -19,3 +19,4 @@ statsmodels,library,scripts/predictors_audit.py (OLS with HC3 robust SEs),True,
 NCBI Taxonomy (E-utilities esearch/efetch),database/web API,scripts/keystone_taxonomy.py (genus -> phylum lineage),True,
 BugSigDB (genus signature export),database,data/ref/bugsigdb_signatures_genus_taxname.gmt; scripts/keystone_bugsigdb.py (literature cross-check),True,
 GTDB (release v232 bac120 taxonomy),database,scripts/keystone_gtdb.py,True,independent phylogenomic taxonomy replication of keystone phylum enrichment
+Madin et al. 2020 bacterial/archaeal trait database (condensed_species_NCBI),database,scripts/keystone_traits.py,True,keystone physiological trait association

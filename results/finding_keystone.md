@@ -22,3 +22,10 @@ Caveats: out-strength from a ridge model is a statistical dependence score, not 
 ## GTDB replication (scripts/keystone_gtdb.py, results/keystone_gtdb.json, results/keystone_gtdb_phylum_enrichment.csv)
 Re-mapped all keystone genera to GTDB release v232 (bac120 taxonomy; 227/248 genera mapped). The sulfate-reducer enrichment replicates under the independent phylogenomic taxonomy: Desulfobacterota 3/3 in top-25, one-sided Fisher p=0.0012, BH q=0.020 (NCBI: Thermodesulfobacteriota q=0.019). NCBI and GTDB disagree on phylum for only 7 genera, mostly naming (Thermodesulfobacteriota vs Desulfobacterota; Mycoplasmatota vs Bacillota). At family level nothing survives FDR (Desulfovibrionaceae 2/2, p=0.012, q=0.71).
 Caveat: the result rests on 3 genera (Desulfovibrio, Bilophila, Desulfobulbus), so it is fragile. GTDB replication shows it does not depend on the taxonomy used; it does not add statistical power.
+
+## Physiological traits of keystones: Madin et al. 2020 trait database (scripts/keystone_traits.py, results/keystone_traits_tests.csv, results/keystone_traits_confound.json)
+Species traits (14,893 species, condensed_species_NCBI.csv) aggregated to genus; 192-225 of 248 genera have each trait.
+- Anaerobe share rises with keystone frequency: Spearman rho=0.30 (p, q = 4e-06 2.8e-05). Top-25 mean anaerobe share 0.70 vs 0.41 (Mann-Whitney p=0.012, q=0.080).
+- Smaller genomes: rho=-0.25, q=0.0008. Gram stain, motility, sporulation, GC and doubling time: not significant after BH.
+- Confound checks: rank-OLS with genome size and log(study count) keeps anaerobe (p=5.8e-4, HC3) and genome size (p=0.009); permuting anaerobe share within study-count quintiles gives p=2e-4 (5,000 permutations).
+Named candidate, not claimed: "anaerobe-keystone hypothesis" - genera with more strictly anaerobic species rank as keystones more often, independent of genome size and study count. Caveat: not controlled for biome (anaerobes dominate gut studies) or abundance. Falsifiable test: the association should hold within single-biome subsets and in an independent cohort. Until then it is a candidate.
