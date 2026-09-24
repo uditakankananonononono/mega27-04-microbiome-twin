@@ -1,0 +1,74 @@
+{
+ "studies": 160,
+ "interaction_better_fdr05": 121,
+ "prior_better_fdr05": 6,
+ "no_difference": 33,
+ "median_gain": 0.052030915806039496,
+ "median_relative_gain": 0.14523948013720636,
+ "per_biome": [
+  {
+   "biome_short": "Birds",
+   "studies": 20,
+   "int_wins": 18,
+   "prior_wins": 0,
+   "median_gain": 0.1067207343915417,
+   "median_prior_bc": 0.37497127755004633
+  },
+  {
+   "biome_short": "Digestive system",
+   "studies": 41,
+   "int_wins": 21,
+   "prior_wins": 3,
+   "median_gain": 0.004331595067029,
+   "median_prior_bc": 0.1761670362911383
+  },
+  {
+   "biome_short": "Fish",
+   "studies": 15,
+   "int_wins": 12,
+   "prior_wins": 1,
+   "median_gain": 0.1133138606541648,
+   "median_prior_bc": 0.4196237621965643
+  },
+  {
+   "biome_short": "Insecta",
+   "studies": 7,
+   "int_wins": 5,
+   "prior_wins": 0,
+   "median_gain": 0.0523235745668637,
+   "median_prior_bc": 0.344717130783173
+  },
+  {
+   "biome_short": "Mammals",
+   "studies": 20,
+   "int_wins": 14,
+   "prior_wins": 2,
+   "median_gain": 0.056245112675552,
+   "median_prior_bc": 0.38628296370822535
+  },
+  {
+   "biome_short": "Oral",
+   "studies": 20,
+   "int_wins": 17,
+   "prior_wins": 0,
+   "median_gain": 0.0399997768836932,
+   "median_prior_bc": 0.3260282539484912
+  },
+  {
+   "biome_short": "Plants",
+   "studies": 20,
+   "int_wins": 18,
+   "prior_wins": 0,
+   "median_gain": 0.0807421837584348,
+   "median_prior_bc": 0.32968149665011764
+  },
+  {
+   "biome_short": "Skin",
+   "studies": 17,
+   "int_wins": 16,
+   "prior_wins": 0,
+   "median_gain": 0.075421915529195,
+   "median_prior_bc": 0.3743594421488422
+  }
+ ]
+}

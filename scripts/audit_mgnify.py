@@ -12,6 +12,7 @@ for _, r in man.iterrows():
     if r.study in done or not isinstance(r.file, str): continue
     X = pd.read_csv(r.file, sep="\t", index_col=0).T
     X = X.loc[X.sum(1) > 0]; X = X.loc[:, (X > 0).mean(0) >= 0.05]; X = X.loc[X.sum(1) > 0]
+    if X.shape[1] > 150: X = X[X.columns[np.argsort(-(X > 0).mean(0).values)[:150]]]; X = X.loc[X.sum(1) > 0]  # top-150 genera by prevalence (O(N^4) ridge cost)
     if len(X) > 400: X = X.sample(400, random_state=0)  # cap for the 2 GB sandbox; recorded in n
     try:
         a = audit(X.values, k=5, seed=0)
