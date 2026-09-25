@@ -334,6 +334,9 @@ P.h("9. Reproducibility")
 P.p("Repository: github.com/uditakankananonononono/mega27-04-microbiome-twin (private). Commands: python run_bench.py <dataset> "
     "presence_mean,cnode,glv,graphtwin 10; python bench_mdsine2.py healthy|uc; python -m pytest -q; python paper/build_paper.py.")
 
+import paper_expansion
+paper_expansion.add(P)
+
 P.h("Appendix A. MGnify study accessions used")
 P.table(["MGnify study", "INSDC project", "biome", "samples", "genera"],
         [[r.study, r.secondary_accession, r.biome.split(":")[-1], r.n_samples, r.n_genera] for r in MM.itertuples()],
