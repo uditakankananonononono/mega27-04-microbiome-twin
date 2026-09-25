@@ -1,0 +1,11 @@
+{
+ "tool": "Wikidata SPARQL (P2597 Gram staining)",
+ "n_wikidata_genera": 3117,
+ "n_matched": 234,
+ "agreement_madin": 0.9497716894977168,
+ "n_agreement": 219,
+ "G1_pass": true,
+ "spearman_rho": -0.008237839550692494,
+ "p_two_sided": 0.9002527840161165,
+ "W0_verdict": "replicated"
+}

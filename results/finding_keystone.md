@@ -95,3 +95,8 @@ Process disclosure: the gitignored MGnify tables were re-downloaded; a first fit
 - Within-study FE logit top_gl ~ GAI + log abundance + prevalence (9771 rows): GAI coef 0.079, p = 0.15 -> pre-registered H1 FAILS.
 - The two methods barely agree on who is a keystone: Cohen's kappa 0.045 on 17499 shared genus-study rows; genus-level keystone fractions rho = 0.012 (p = 0.85, 248 genera).
 Verdict: the anaerobe-keystone association is specific to the ridge gLV-form (directed out-strength) keystone definition; it does not appear under an undirected graphical-lasso definition, and the two definitions pick almost unrelated genera. This confirms the standing caveat that keystone status is a property of the inference method. The candidate is downgraded to "method-specific association"; all trait-source and phylogeny replications above test the ridge definition only.
+
+## Wikidata Gram-stain check (pre-registered 0ecdd41, QID fix 1f20b4a; scripts/keystone_wikidata.py, results/keystone_wikidata.json)
+Disclosure: the first run used a wrong Gram-positive item id (Q857525 instead of Q857288), giving a constant predictor; it was discarded and the fix committed before the valid run.
+3117 Wikidata genera with a single Gram value; 234 keystone-table genera matched; agreement with Madin 95.0% (n = 219; gate passed).
+Spearman(frac_top, Gram-negative) = -0.008, p = 0.90 -> the Madin null for Gram stain is replicated. Ridge keystones are not a Gram-negative artefact.

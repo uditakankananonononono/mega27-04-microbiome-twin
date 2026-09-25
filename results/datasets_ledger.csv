@@ -179,3 +179,4 @@ OToL synth induced subtree (161 genera; data/otol/induced.tre),Open Tree of Life
 ProTraits_binaryIntegratedPr0.95.txt,ProTraits,reference,anaerobe-keystone ProTraits check (gate failed)
 Disbiome experiment dump (10866 records),Disbiome,reference,keystone literature check
 Europe PMC TITLE_ABS hit counts for 248 genera (results/keystone_europepmc_counts.csv),Europe PMC,reference,study-bias control of keystone literature link
+Wikidata genus Gram-staining table (3117 genera; results/keystone_wikidata_gram.csv),Wikidata,reference,Gram-stain replication
