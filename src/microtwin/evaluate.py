@@ -26,6 +26,12 @@ def fit_predict(name: str, Ztr, Ptr, Zte, seed=0):
         m = CNODE2(n)
     elif name == "lgbm":
         return fit_predict_lgbm(Ztr, Ptr, Zte, seed=seed)
+    elif name == "xgb":
+        return fit_predict_xgb(Ztr, Ptr, Zte, seed=seed)
+    elif name == "catb":
+        return fit_predict_catb(Ztr, Ptr, Zte, seed=seed)
+    elif name == "ridgeclr":
+        return fit_predict_ridgeclr(Ztr, Ptr, Zte, seed=seed)
     elif name == "glv":
         m = GLVSteady(n)
     elif name == "graphtwin":
@@ -205,4 +211,59 @@ def fit_predict_lgbm(Ztr, Ptr, Zte, seed=0):
     uni = (Zte > 0) / (Zte > 0).sum(1, keepdims=True)
     ok = s.ravel() > 0
     out = np.where(ok[:, None], pred / np.maximum(s, 1e-12), uni)
+    return out
+
+
+def _long_form(Z, P=None):
+    n_taxa = Z.shape[1]; n = len(Z)
+    X = np.repeat(Z, n_taxa, axis=0)
+    X = np.column_stack([X, np.tile(np.arange(n_taxa), n)])
+    return (X, P.ravel()) if P is not None else X
+
+
+def _postprocess_tree(pred, Zte):
+    n_taxa = Zte.shape[1]
+    pred = np.clip(pred.reshape(len(Zte), n_taxa), 0, None) * (Zte > 0)
+    s = pred.sum(1, keepdims=True)
+    uni = (Zte > 0) / (Zte > 0).sum(1, keepdims=True)
+    ok = s.ravel() > 0
+    return np.where(ok[:, None], pred / np.maximum(s, 1e-12), uni)
+
+
+def fit_predict_xgb(Ztr, Ptr, Zte, seed=0):
+    """Long-form XGBoost composition arm per PREREG_arms_wave2 (A1)."""
+    from xgboost import XGBRegressor
+    Xtr, ytr = _long_form(Ztr, Ptr)
+    clf = XGBRegressor(n_estimators=300, learning_rate=0.05, random_state=seed, verbosity=0)
+    clf.fit(Xtr, ytr)
+    return _postprocess_tree(clf.predict(_long_form(Zte)), Zte)
+
+
+def fit_predict_catb(Ztr, Ptr, Zte, seed=0):
+    """Long-form CatBoost composition arm per PREREG_arms_wave2 (A2)."""
+    from catboost import CatBoostRegressor
+    n_taxa = Ztr.shape[1]
+    Xtr, ytr = _long_form(Ztr, Ptr)
+    clf = CatBoostRegressor(iterations=300, learning_rate=0.05, random_seed=seed,
+                            cat_features=[n_taxa], verbose=0)
+    clf.fit(Xtr.astype(int), ytr)
+    return _postprocess_tree(clf.predict(_long_form(Zte).astype(int)), Zte)
+
+
+def fit_predict_ridgeclr(Ztr, Ptr, Zte, seed=0):
+    """CLR-space Ridge composition arm per PREREG_arms_wave2 (A3)."""
+    from sklearn.linear_model import Ridge
+    eps = 1e-6
+    logP = np.log(np.where(Ptr > 0, Ptr, np.nan))
+    clr = logP - np.nanmean(logP, axis=1, keepdims=True)
+    clr = np.where(Ptr > 0, clr, 0.0) + eps * 0  # absent entries carry 0 in feature space
+    clr = np.nan_to_num(clr)
+    reg = Ridge(alpha=1.0, random_state=seed)
+    reg.fit(Ztr, clr)
+    logits = reg.predict(Zte)
+    out = np.zeros_like(logits)
+    for i in range(len(Zte)):
+        m = Zte[i] > 0
+        e = np.exp(logits[i, m] - logits[i, m].max())
+        out[i, m] = e / e.sum()
     return out
