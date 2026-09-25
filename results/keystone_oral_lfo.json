@@ -1,0 +1,152 @@
+{
+ "eligible_families": {
+  "Burkholderiaceae": [
+   "Lautropia",
+   "Ralstonia"
+  ],
+  "Lachnospiraceae": [
+   "Butyrivibrio",
+   "Lachnoanaerobaculum",
+   "Stomatobaculum"
+  ],
+  "Neisseriaceae": [
+   "Eikenella",
+   "Kingella",
+   "Neisseria",
+   "Simonsiella"
+  ],
+  "Pasteurellaceae": [
+   "Aggregatibacter",
+   "Haemophilus"
+  ],
+  "Veillonellaceae": [
+   "Dialister",
+   "Megasphaera",
+   "Veillonella"
+  ]
+ },
+ "baseline": {
+  "gglasso": {
+   "n_rows": 9771,
+   "n_studies": 158,
+   "n_oral_rows": 2434,
+   "coef_oral": 0.21067925765033468,
+   "p_oral": 0.02651839287874574,
+   "coef_GAI": 0.05445166508172169,
+   "p_GAI": 0.3468950182276809
+  },
+  "igraph": {
+   "n_rows": 9697,
+   "n_studies": 156,
+   "n_oral_rows": 2421,
+   "coef_oral": 0.32180479429255116,
+   "p_oral": 0.0010537739797540464,
+   "coef_GAI": 0.025997735860850815,
+   "p_GAI": 0.6964698220075798
+  }
+ },
+ "deleted": {
+  "Burkholderiaceae": {
+   "gglasso": {
+    "n_rows": 9651,
+    "n_studies": 157,
+    "n_oral_rows": 2342,
+    "coef_oral": 0.19278794670111576,
+    "p_oral": 0.04334515350920044,
+    "coef_GAI": 0.05884721814606612,
+    "p_GAI": 0.2996188799765199
+   },
+   "igraph": {
+    "n_rows": 9608,
+    "n_studies": 156,
+    "n_oral_rows": 2332,
+    "coef_oral": 0.33374965206291857,
+    "p_oral": 0.0007376459985833976,
+    "coef_GAI": 0.023562905294366682,
+    "p_GAI": 0.7231407389827961
+   }
+  },
+  "Lachnospiraceae": {
+   "gglasso": {
+    "n_rows": 9677,
+    "n_studies": 158,
+    "n_oral_rows": 2340,
+    "coef_oral": 0.2166934095825696,
+    "p_oral": 0.02126189293071835,
+    "coef_GAI": 0.05726846212753763,
+    "p_GAI": 0.3220449406028507
+   },
+   "igraph": {
+    "n_rows": 9604,
+    "n_studies": 156,
+    "n_oral_rows": 2328,
+    "coef_oral": 0.29825939349248104,
+    "p_oral": 0.0028029626187862796,
+    "coef_GAI": 0.03053595616156985,
+    "p_GAI": 0.6484963273310145
+   }
+  },
+  "Neisseriaceae": {
+   "gglasso": {
+    "n_rows": 9623,
+    "n_studies": 158,
+    "n_oral_rows": 2286,
+    "coef_oral": 0.21574869939966598,
+    "p_oral": 0.025132513036753762,
+    "coef_GAI": 0.05410816921191831,
+    "p_GAI": 0.34935071401548246
+   },
+   "igraph": {
+    "n_rows": 9549,
+    "n_studies": 156,
+    "n_oral_rows": 2273,
+    "coef_oral": 0.333881485209332,
+    "p_oral": 0.0006656705950839715,
+    "coef_GAI": 0.02486760250099539,
+    "p_GAI": 0.7095877196111664
+   }
+  },
+  "Pasteurellaceae": {
+   "gglasso": {
+    "n_rows": 9641,
+    "n_studies": 158,
+    "n_oral_rows": 2304,
+    "coef_oral": 0.22828196422990887,
+    "p_oral": 0.019710422927240696,
+    "coef_GAI": 0.04906096812463199,
+    "p_GAI": 0.4008020373858414
+   },
+   "igraph": {
+    "n_rows": 9568,
+    "n_studies": 156,
+    "n_oral_rows": 2292,
+    "coef_oral": 0.3132871815314393,
+    "p_oral": 0.0022076767940635202,
+    "coef_GAI": 0.02936443347809236,
+    "p_GAI": 0.6610608317104585
+   }
+  },
+  "Veillonellaceae": {
+   "gglasso": {
+    "n_rows": 9523,
+    "n_studies": 158,
+    "n_oral_rows": 2186,
+    "coef_oral": 0.21701226499825613,
+    "p_oral": 0.02741722987003011,
+    "coef_GAI": 0.05291514811333139,
+    "p_GAI": 0.35961692749469487
+   },
+   "igraph": {
+    "n_rows": 9451,
+    "n_studies": 156,
+    "n_oral_rows": 2175,
+    "coef_oral": 0.3645350495348165,
+    "p_oral": 0.0003364628993441994,
+    "coef_GAI": 0.04056966080608979,
+    "p_GAI": 0.5495475274054553
+   }
+  }
+ },
+ "G1_pass": true,
+ "LFO1_pass": true
+}

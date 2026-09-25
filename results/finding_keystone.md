@@ -162,3 +162,9 @@ Verdict: the HOMD oral effect is not an artefact of the clustered-SE frequentist
 Oral literature fraction OLF = articles with "<genus> AND (oral OR dental)" / articles with "<genus>", 203 genera; Spearman with HOMD oral 0.54.
 gglasso: OLF_z coef 0.033, p = 0.57; igraph: 0.082, p = 0.23 -> PT1 FAILED. Ridge arm (reported only, fit did not converge): 0.21, p = 0.00015.
 Verdict: the method-general oral effect does NOT replicate with a continuous literature-derived oral index; it depends on the curated HOMD oral list. The oral-hub candidate is weakened to "HOMD-list-specific, one of two oral definitions". Next direction: test whether the HOMD effect comes from specific oral-dominant clades (leave-one-family-out).
+
+## HOMD oral leave-one-family-out sensitivity (pre-registered a2e24b7; scripts/keystone_oral_lfo.py, results/keystone_oral_lfo.json)
+Removed all genera from each of the five HOMD families with >=2 matched oral genera, refitting the two method-general models. Oral coefficients stayed positive and significant in all ten deletion fits: gglasso p=0.0197-0.0433; igraph p=0.0003-0.0028 -> LFO1 PASS. The effect is not carried by any one of these five families. This does not fix the independent PubTator literature-index null or establish causality.
+
+## Bio.Phylo oral-tip clustering (tool 39; pre-registered a2e24b7; scripts/keystone_biophylo.py, results/keystone_biophylo.json)
+160 tree tips included, 38 HOMD oral. Mean oral-oral topological distance 27.07 edges vs permutation null mean 27.00; one-sided p=0.532 -> BP1 FAIL. Oral taxa are not unusually clustered on this Open Tree synthetic topology by this measure; the phenotype spans multiple lineages. Synthetic tree branch lengths were ignored.

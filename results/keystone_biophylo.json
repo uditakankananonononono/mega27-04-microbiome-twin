@@ -1,0 +1,10 @@
+{
+ "tool": "Biopython Bio.Phylo (synthetic-tree topology)",
+ "n_tips": 160,
+ "n_oral": 38,
+ "mean_oral_distance": 27.06543385490754,
+ "null_mean": 26.996706970128027,
+ "p_one_sided": 0.5324675324675324,
+ "G1_pass": true,
+ "BP1_pass": false
+}
