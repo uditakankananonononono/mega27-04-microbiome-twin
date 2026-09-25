@@ -1,0 +1,8 @@
+# Pre-registration: does the anaerobe-keystone association survive a different network-inference method? (gglasso graphical lasso; tool 25; committed before any network fitting on study data)
+Caveat addressed: keystone status so far comes from our ridge gLV-form interaction model; the association could be a property of that method.
+Method: for each MGnify study, identical filtering to scripts/keystone_mgnify.py (prevalence >= 5%, top-150 genera by prevalence, <= 400 samples with random_state=0). CLR transform of counts + 1 (log minus sample mean), column-standardised correlation matrix S. Graphical lasso with gglasso (Schaipp et al. 2021) at fixed lambda1 = 0.1, no latent term, no scaling. Partial correlation rho_ij = -Theta_ij / sqrt(Theta_ii Theta_jj). Keystone score = weighted degree sum_j |rho_ij|; top = score >= study 90th percentile (undirected, unlike the ridge out-strength).
+Test: within-study logistic model top_gl ~ GAI + log10(mean relative abundance) + prevalence + C(study), SE clustered by study (same design as keystone_kegg.py); GAI from results/keystone_kegg_genus.csv, abundance from results/keystone_genus_abundance.csv.gz.
+Gate G1: >= 140 studies solved (ADMM optimal).
+Pass (H1): GAI coefficient > 0 with two-sided p < 0.05. Fail -> the anaerobe-keystone association is method-specific; recorded as such.
+Reported (not gates): agreement between gglasso-top and ridge-top labels on shared genus-study rows (Cohen's kappa); rank correlation of genus-level gglasso keystone fraction with ridge frac_top.
+Script: scripts/keystone_gglasso.py (per-study results cached in results/keystone_gglasso_per_study.csv.gz); output results/keystone_gglasso.json.
