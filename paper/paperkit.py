@@ -77,3 +77,18 @@ class Paper:
 
     def save(self, path: str):
         self.doc.save(path)
+        _purge_non_tnr(path)
+
+
+def _purge_non_tnr(path: str):
+    """Replace every Calibri/Calibri Light reference in the docx (styles and
+    theme) with Times New Roman so LibreOffice cannot fall back to Carlito."""
+    import shutil, zipfile
+    tmp = path + ".tmp"
+    with zipfile.ZipFile(path) as zin, zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as zout:
+        for item in zin.infolist():
+            data = zin.read(item.filename)
+            if item.filename in ("word/styles.xml", "word/theme/theme1.xml", "word/document.xml"):
+                data = data.replace(b"Calibri Light", b"Times New Roman").replace(b"Calibri", b"Times New Roman")
+            zout.writestr(item, data)
+    shutil.move(tmp, path)
