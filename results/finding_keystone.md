@@ -130,3 +130,7 @@ Verdict: a second independent network definition fails. The anaerobe-keystone as
 ## Ensembl Genomes sequencing-effort control (pre-registered be7175d; scripts/keystone_ensembl.py, results/keystone_ensembl.json)
 Counts for all 203 GAI genera (Spearman with ENA assemblies 0.65). OLS frac_top ~ GAI + log10(1 + Ensembl genomes) + log abundance (HC3): GAI slope 0.029, p = 2.2e-07 -> S1 PASS; Ensembl genomes slope -0.008, p = 0.22.
 Verdict: the ENA result (A1) replicates with a second, curated genome archive. Free-text counts are noisy. Ridge definition only.
+
+## XGBoost out-of-sample test (pre-registered 9cf67ae; scripts/keystone_xgboost.py, results/keystone_xgboost.json)
+200 genera; 20 repeats of 5-fold CV. Adding GAI raised out-of-fold R^2 in 20/20 repeats (mean delta 0.27, sign test p = 1.9e-06) -> X1 PASS by the pre-registered criterion.
+Important negative: both models have NEGATIVE absolute out-of-fold R^2 (full -0.11, reduced -0.38), i.e. worse than predicting the mean. XGBoost with these settings overfits at n = 200; GAI makes it less wrong but gives no usable out-of-sample prediction of keystone fraction. The linear OLS associations are not a predictive model.

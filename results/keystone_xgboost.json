@@ -1,0 +1,11 @@
+{
+ "tool": "XGBoost (gradient-boosted trees)",
+ "n_genera": 200,
+ "G1_pass": true,
+ "r2_full_mean": -0.11150066727424597,
+ "r2_reduced_mean": -0.3826858015375622,
+ "delta_mean": 0.2711851342633162,
+ "n_positive": 20,
+ "sign_test_p": 1.9073486328125e-06,
+ "X1_pass": true
+}
