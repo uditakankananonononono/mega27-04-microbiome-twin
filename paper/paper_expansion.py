@@ -127,10 +127,28 @@ def add(P):
     t1f, t2f = "results/twindiscovery_t1.json", "results/twindiscovery_t2.json"
     if os.path.exists(t1f):
         T1 = json.load(open(t1f))
-        P.p("T1 result: " + T1.get("summary", "see results/twindiscovery_t1.json"))
+        P.p("T1 (model-class independence of the keystone enrichment). " + T1.get("summary", ""))
+        if os.path.exists("results/twindiscovery_t1_consensus.csv"):
+            with open("results/twindiscovery_t1_consensus.csv") as f:
+                rows = list(csv.DictReader(f))[:15]
+            P.table(["genus", "studies", "top", "fraction top", "p", "q (BH)"],
+                    [[r["genus"], r["studies"], r["top"], round(float(r["frac_top"]), 3), r["p"], r["q_bh"]] for r in rows],
+                    "Top 15 genera by GraphTwin gate out-strength consensus (results/twindiscovery_t1_consensus.csv).")
+        if os.path.exists("results/twindiscovery_t1_phylum.csv"):
+            with open("results/twindiscovery_t1_phylum.csv") as f:
+                rows = list(csv.DictReader(f))[:10]
+            P.table(["phylum", "in top 25", "genera", "p", "q (BH)"],
+                    [[r["phylum"], r["top25"], r["all"], r["p"], r["q_bh"]] for r in rows],
+                    "Phylum enrichment among the 25 lowest-p genera by twin-gate score (one-sided Fisher, BH).")
     if os.path.exists(t2f):
         T2 = json.load(open(t2f))
-        P.p("T2 result: " + T2.get("summary", "see results/twindiscovery_t2.json"))
+        P.p("T2 (twin gates vs ridge as disease-literature predictor). " + T2.get("summary", ""))
+        P.table(["model", "score coef", "p", "AIC", "ML alpha", "ML coef", "ML p", "ML AIC"],
+                [["ridge keystone score", f"{T2['ridge']['coef']:.3g}", f"{T2['ridge']['p']:.3g}", f"{T2['ridge']['aic']:.1f}",
+                  f"{T2['ridge']['ml_alpha']:.2f}", f"{T2['ridge']['ml_coef']:.3g}", f"{T2['ridge']['ml_p']:.3g}", f"{T2['ridge']['ml_aic']:.1f}"],
+                 ["twin gate frequency", f"{T2['twin']['coef']:.3g}", f"{T2['twin']['p']:.3g}", f"{T2['twin']['aic']:.1f}",
+                  f"{T2['twin']['ml_alpha']:.2f}", f"{T2['twin']['ml_coef']:.3g}", f"{T2['twin']['ml_p']:.3g}", f"{T2['twin']['ml_aic']:.1f}"]],
+                "Negative-binomial models of BugSigDB signature counts (results/twindiscovery_t2.json).")
     if not (os.path.exists(t1f) or os.path.exists(t2f)):
         P.p("Discovery runs were still in flight at build time; this section is regenerated with the final numbers.")
 
