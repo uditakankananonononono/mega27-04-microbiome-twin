@@ -32,7 +32,7 @@ gglasso (Schaipp et al. 2021 graphical lasso),library,scripts/keystone_gglasso.p
 Wikidata SPARQL endpoint (P2597 Gram staining),web API/knowledge graph,scripts/keystone_wikidata.py,True,pre-registered 0ecdd41 (+QID fix 1f20b4a); Madin Gram null replicated
 ENA portal API + ENA taxonomy REST (assembly counts),web API,scripts/keystone_ena.py,True,pre-registered sequencing-effort control 9451f14; A1 PASS
 GBIF API v1 (species/match + occurrence country facets),web API,scripts/keystone_gbif.py,True,pre-registered generalism rival 9f6cc62; B1 PASS
-UniProt REST API (uniprotkb search counts, reference proteomes),web API,scripts/keystone_uniprot.py,True,pre-registered anaerobe-index replication c9ea858; U1 PASS
+"UniProt REST API (uniprotkb search counts, reference proteomes)",web API,scripts/keystone_uniprot.py,True,pre-registered anaerobe-index replication c9ea858; U1 PASS
 Crossref REST API (works total-results),web API,scripts/keystone_crossref.py,True,pre-registered literature control 6ff904c (replaces OpenAlex 429); C1 PASS C2 PASS
 python-igraph (betweenness centrality),library,scripts/keystone_igraph.py,True,pre-registered third network definition 0962035; I1 FAIL (p=0.34)
 EBI Search REST (Ensembl Genomes genome domain),web API,scripts/keystone_ensembl.py,True,pre-registered sequencing-effort replication be7175d; S1 PASS
@@ -42,7 +42,7 @@ HOMD expanded Human Oral Microbiome Database (taxon table v4.2),database,scripts
 EBI Search REST (RNAcentral rRNA sequences),web API,scripts/keystone_rnacentral.py,True,pre-registered rRNA-effort control 9814c7a; R1 PASS
 bambi / PyMC (Bayesian hierarchical logistic),library,scripts/keystone_bambi.py,True,pre-registered Bayesian re-fit 45e3254; BY1 PASS
 NCBI PubTator3 API (search counts),web API,scripts/keystone_pubtator.py,True,pre-registered oral-index replication 45e3254 (+addendum 3d16589); PT1 FAIL
-Biopython Bio.Phylo (synthetic-tree topology),library,scripts/keystone_biophylo.py,True,pre-registered a2e24b7; BP1 FAIL oral clustering p=0.53
+"Biopython Bio.Phylo (synthetic-tree topology)",library,scripts/keystone_biophylo.py,True,pre-registered a2e24b7; BP1 FAIL oral clustering p=0.53
 LightGBM,library,scripts/keystone_boosters.py,True,pre-registered fd7a9e2; B1 PASS absolute out-of-fold R2 0.133
 CatBoost,library,scripts/keystone_boosters.py,True,pre-registered fd7a9e2; B1 PASS absolute out-of-fold R2 0.119
 SHAP TreeExplainer,library,scripts/keystone_shap.py,True,pre-registered c12838f; SH1 PASS GAI largest mean absolute attribution in full LightGBM

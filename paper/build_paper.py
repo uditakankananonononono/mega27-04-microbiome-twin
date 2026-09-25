@@ -10,11 +10,11 @@ B = {d: json.load(open(f"results/bench_{d}_presence_mean_cnode_glv_graphtwin_k10
 
 P = Paper("Population Priors Rival Interaction Models in Microbiome Digital Twins: "
           "a Leave-One-Out Audit of cNODE and a Head-to-Head with MDSINE2",
-          "MEGA-PROGRAM-27, Item 4 - Udita Phookan (program owner); computational work by an AI research agent. Draft of 24 September 2026.")
+          "MEGA-PROGRAM-27, Item 4 - Udita Phookan (program owner); computational work by an AI research agent. Revised draft of 25 September 2026.")
 
 P.h("Abstract")
 P.p("A microbiome digital twin is a model that, given what we know about a community, predicts what it will look like: its steady-state "
-    "composition after assembly, or its trajectory under perturbation. Two leading published approaches are compositional neural ODEs "
+    "composition after assembly, or its trajectory under perturbation. Two published approaches are compositional neural ODEs "
     "(cNODE; Michel-Mata et al., 2022) for assemblage-to-composition prediction, and MDSINE2 (Gibson et al., Nature Microbiology 2025) "
     "for forecasting absolute abundances in gnotobiotic mice through diet and antibiotic perturbations. We re-ran both benchmarks on the "
     "original public data with the original metrics and asked a blunt question: how much of the reported accuracy comes from learned "
@@ -36,7 +36,7 @@ P.p("(4) Under a stricter metric that scores every timepoint, the same forecaste
 P.p("(6) Exploratory keystone analysis names one candidate, the anaerobe-keystone hypothesis: across 156 studies, genera made of strict anaerobes are "
     "more often network hubs within the same study (study fixed-effect logit, p = 1.4e-4), independent of abundance and prevalence, and sulfate "
     "reducers are enriched under both NCBI and GTDB taxonomies (q = 0.02); a KEGG genomic anaerobe index replicates it (p = 7e-8). No single biome passes FDR and keystones come from inferred networks, "
-    "so this is a falsifiable candidate, not a discovery.")
+    "but the association fails with graphical lasso and igraph betweenness keystone definitions. It is a ridge-specific candidate, not a cross-method ecological discovery. A distinct HOMD oral-list effect survives those two methods but fails a PubTator literature-index replication.")
 P.p("Caveats. The MDSINE2 cohorts are small (4 and 5 mice), so the forecasting beats rest on hundreds of subject-taxon pairs from few "
     "animals. Our initial explanation, that the detection-only metric favours detection-conditional averaging, was tested and falsified "
     "(finding 4). The beat therefore suggests that, with this little training data, a population trajectory is a stronger forecaster than "
@@ -54,7 +54,7 @@ P.p("Strong baselines matter because microbiome data are dominated by taxon iden
     "abundant in another. A predictor that simply remembers typical abundances, conditioned on which taxa are present, may already explain "
     "most of the variance. If so, the headline accuracy of an interaction model says little about whether its interactions are right, and "
     "downstream uses such as keystone-species ranking or perturbation design rest on weaker ground than the accuracy suggests.")
-P.p("We test that premise on the two public benchmarks that define the state of the art for the two main twin tasks. Our contributions are: "
+P.p("We test that premise on the two public benchmarks that serve as reference benchmarks for two twin tasks. Our contributions are: "
     "(i) an exact leave-one-out re-run of the cNODE benchmark with a bootstrap null interval; (ii) a verified reproduction of the MDSINE2 "
     "cross-validation metric from the authors' notebook and Source Data, matching the published MDSINE2 median; (iii) a presence-conditional "
     "population forecaster that tops the UC leaderboard and ties the healthy one; and (iv) an explicit account of why the metric allows this.")
@@ -98,7 +98,7 @@ P.p("Write the loss restricted to detected timepoints as E[(y - y-hat)^2 | detec
 P.equation("argmin_{f} E[ (Y - f(i,t))^2 | Y > L ] = E[ Y | Y > L, i, t ]  (for predictors f independent of the held-out trajectory)")
 
 P.h("3. Data")
-P.p("All data are public, unmodified, and fetched by accession. Table 1 is the dataset manifest. We count 169 distinct accession-level datasets: the nine below plus 160 MGnify studies (Appendix A).")
+P.p("All data are public, unmodified, and fetched by accession. Table 1 is the dataset manifest. We count 169 distinct primary accession-level datasets: the nine below plus 160 MGnify studies (Appendix A). The datasets ledger also records secondary trait and literature reference tables; these are not independent cohorts.")
 P.table(["#", "dataset", "source / accession", "n", "use"], [
     [1, "Ocean", "github.com/yixueyang/cNODE (Michel-Mata 2022)", 269, "cNODE benchmark"],
     [2, "Drosophila gut", "same", B["Drosophila_Gut"]["n"], "cNODE benchmark"],
@@ -259,7 +259,25 @@ P.table(["biome", "studies", "mean difference (top - rest)", "p (sign-flip)", "q
 P.p("It is positive in 7 of 8 biomes but no single biome passes FDR (smallest q = 0.10). We name it the anaerobe-keystone hypothesis: genera made of strict "
     "anaerobes rank as network hubs more often, independent of biome, abundance and prevalence. It is falsified if (a) it fails in an independent cohort with "
     "a single biome and adequate power, or (b) perturbation experiments show inferred out-strength does not predict community response. Keystone status here comes "
-    "from our own inferred networks, so this is a candidate property of interaction inference, not a proven ecological law.")
+    "from our own inferred networks; the gglasso and igraph tests below fail. It is a method-specific candidate property of ridge interaction inference, not a proven ecological law.")
+
+P.h("5.4.2 Stress tests and change of direction", 3)
+P.p("All checks in this section were pre-registered in commits before analysis and are reproducible from the corresponding scripts and JSON outputs. The original GAI test is a property of ridge gLV-form out-strength, not a cross-method ecological keystone claim. Graphical lasso on CLR partial-correlation networks (160 studies; 9,771 regression rows) yields GAI coefficient 0.079, p=0.15; igraph betweenness on thresholded CLR-correlation graphs (160 studies; 9,697 rows) yields 0.063, p=0.34. Agreement with ridge keystone labels is low (Cohen kappa 0.045 and 0.022 respectively). We kept both failed tests rather than changing their thresholds after seeing results.")
+P.equation("logit P(top_js^method = 1) = alpha_s + beta_G GAI_j + beta_O oral_j + beta_A log10(RA_js+10^-6) + beta_P prevalence_js")
+P.p("Independent checks of the ridge-only GAI effect address distinct rivals, not the network-definition failure. Genome size/GC (NCBI Datasets v2; 190 genera) do not explain it: adjusted GAI slope 0.028, HC3 p=1.3e-6, versus genome-size p=0.33. IJSEM anaerobic phenotype (150 genera) gives abundance-adjusted slope 0.059, p=6.7e-7, but IJSEM is a source within the Madin compilation and is not independent. Phylogenetic GLS on the GTDB tree gives GAI slope 0.037 at ML lambda (p=4.3e-7) and 0.032 under Brownian covariance (p=0.0064); an Open Tree synthetic topology gives 0.028, Brownian p=0.017. Synthetic-tree branch lengths are artificial. ProTraits coverage of 51 genera misses its 100-genus gate; its non-significant subset is retained as uninformative, not a replication. For every test in this paragraph, the ridge endpoint remains the same.")
+P.p("Additional annotation and sampling controls: ENA assemblies (200 genera) leave GAI p=1.8e-9; Ensembl Genomes (203) p=2.2e-7; RNAcentral rRNA sequence counts (203) p=8.2e-6. The assembly or rRNA count terms themselves were null. UniProt EC calls (198) yield a related index with abundance-adjusted p=0.0013; InterPro signatures (198) yield p=0.00024, but their protein sets overlap. A GBIF occurrence/country adjustment reduces the GAI slope to 0.019 (p=0.024), indicating shared variance with a noisy generalism proxy. Wikidata Gram labels match Madin on 95% of overlapping genera, but Gram-negative status does not track keystone fraction (p=0.90). None of these controls removes the network-method caveat.")
+P.p("The disease-literature association was checked in Disbiome and BugSigDB. Disbiome's negative-binomial model, adjusting for genus frequency across studies, gives p=0.024; controlling the number of Europe PMC articles gives p=0.0017. Crossref works count gives Disbiome p=0.0080 and BugSigDB p=0.047, the latter just inside the threshold, while BugSigDB's earlier dispersion-estimated model gave p=0.062. These are associations between two published-data proxies; oral HACEK genera and fuzzy name queries remain confounds.")
+P.p("After the network-method negatives, we changed direction within the same project. HOMD v4.2 classifies 46 of 203 GAI genera as oral. The ridge genus-level GAI slope remains 0.024 (p=3.7e-6) after adjustment for oral status; HOMD oral coefficient is 0.042 (p=0.0084). On new method-general tests using study-fixed-effect logits with abundance, prevalence and GAI, oral origin has positive coefficients under graphical lasso (0.211; p=0.0265) and igraph (0.322; p=0.00105). GAI is null in those methods. A Bayesian random-study-intercept re-fit gives P(oral coefficient>0)=1.0 for both with two chains of 500 draws; this is a model check, not an independent cohort. Leaving out each of five multi-genus HOMD families keeps the oral association significant in ten fits (gglasso p=0.0197-0.0433; igraph p=0.0003-0.0028).")
+P.p("A separate, pre-registered PubTator3 oral/dental literature fraction did not replicate the binary HOMD effect: despite 203 measured genera, graphical-lasso p=0.57 and igraph p=0.23. The index correlates with HOMD membership (rho=0.54) but is a different, literature-biased construct. Bio.Phylo gives no oral clustering on the Open Tree topology (p=0.53). Thus the defensible claim is a HOMD-list-specific candidate for network hubs under two definitions, not an oral-genus law or causality. The ridge oral coefficient in the per-study model is nonsignificant (p=0.17) and its fit did not converge; we do not claim a three-method result.")
+P.h("5.4.3 Predictive and software checks", 3)
+P.p("On the ridge-only genus-level keystone fraction, XGBoost with 20 repeats of five-fold cross-validation gains mean out-of-fold R2 of 0.27 from GAI (20/20 positive deltas) but has negative absolute R2 (-0.11 with GAI, -0.38 without). That model is not usable for prediction. Separately pre-registered shallower boosters on 200 genera produce mean full-data out-of-fold R2 0.133 for LightGBM (reduced -0.071) and 0.119 for CatBoost (reduced -0.045), both with 20/20 positive deltas. The modest improvement is within the same dataset and outcome. SHAP TreeExplainer ranks GAI first in the fitted LightGBM model (mean absolute contribution 0.0265 versus ENA 0.00772 and abundance 0.00576), an in-sample explanation rather than proof of causality. SymPy verifies the cNODE and gLV vector fields are tangent to the simplex and zero on absent-taxon boundaries for a generic three-taxon system when abundances sum to one. That algebra does not prove numerical stability or predictive accuracy.")
+P.table(["analysis", "scope", "pre-registered verdict", "key caveat"], [
+    ["gglasso / igraph GAI", "160 MGnify studies", "FAIL / FAIL", "ridge-specific effect"],
+    ["HOMD oral on gglasso / igraph", "46 of 203 GAI genera oral", "PASS / PASS", "PubTator index failed"],
+    ["HOMD family deletions", "5 families; 10 fits", "PASS", "same curated list"],
+    ["LightGBM / CatBoost", "200 genera; repeated CV", "PASS / PASS", "modest, ridge-only R2"],
+    ["Bio.Phylo oral topology", "160 tips; 38 oral", "FAIL", "synthetic topology"],
+], "Key post-audit tests. Primary methods, thresholds, preregistrations and full negative results are in results/finding_keystone.md and the JSON files.")
 
 P.h("5.5 What predicts where interactions help?", 2)
 P.p("Across the 160 studies we regressed the audit gain (prior error minus interaction error) on standardised study covariates: Shannon "
@@ -290,17 +308,17 @@ for t in [
     "No GTDB family is enriched among keystones after FDR (best q = 0.71).",
     "Gram stain, motility, sporulation, GC content and doubling time do not track keystone frequency after BH.",
     "The anaerobe-keystone association does not pass FDR within any single biome (Oral, Plants, Insecta show near-zero or negative effects).",
+    "The GAI effect failed under graphical lasso (p=0.15) and igraph betweenness (p=0.34); it is ridge-definition-specific. ProTraits failed its coverage gate (51 vs 100 genera).",
+    "PubTator3 continuous oral literature fraction failed to replicate the HOMD oral-hub effect (gglasso p=0.57; igraph p=0.23). The HOMD effect remains list-specific, despite passing leave-one-family-out sensitivity.",
+    "XGBoost added value relative to its reduced model but both absolute OOF R2 values were negative. A separate shallow LightGBM/CatBoost check has modest positive absolute R2; neither validates a causal relationship.",
+    "Biopython Bio.Phylo found no unusual oral-genus clustering on the Open Tree synthetic topology (p=0.53).",
 ]:
     P.p("- " + t)
 
 P.h("7. Discussion")
-P.p("Two independent benchmarks point the same way: on host-associated communities, a well-built population prior sits at or near the "
-    "state of the art. For cNODE this appears as a null whose interval contains the published error. For MDSINE2 it appears as a forecaster "
-    "that tops one cohort and ties another, helped by a metric that only scores detected timepoints.")
+P.p("On these host-associated benchmark cohorts, a population prior is competitive with the reported interaction models. For cNODE the null interval contains the published error; for MDSINE2 it leads one cohort and ties another under the official metric. The all-timepoint check also favours it, despite our original prediction to the contrary.")
 P.p("[v1 text, now tested and falsified - kept for the record] Falsifiable prediction. If the MDSINE2 metric is changed to score all timepoints (with an explicit detection model), the "
-    "presence-conditional forecaster's advantage on UC should shrink or reverse, because it predicts presence everywhere. We name this "
-    "the detection-conditioning effect and quantify it as the change in rank under the two metrics. Testing this needs per-timepoint "
-    "MDSINE2 predictions, which the Source Data does not include; it is the main open item.")
+    "presence-conditional forecaster's advantage on UC should shrink or reverse. The all-timepoint test in Section 6 falsified that prediction: the forecaster remains ahead on the released source data. We retain the prediction for auditability, not as an open item.")
 P.p("Practical recommendation. Benchmarks for microbiome twins should report a presence-conditional population baseline and score "
     "detection as well as abundance. Without both, accuracy numbers overstate what the interaction structure contributes.")
 P.p("Limitations. Five UC mice and four healthy mice; 141-taxon selection by mean abundance approximates the paper's filter; "
@@ -308,8 +326,8 @@ P.p("Limitations. Five UC mice and four healthy mice; 141-taxon selection by mea
 
 P.h("8. Tools used")
 TL = _pd.read_csv("results/tools_ledger.csv"); TL["gate"] = TL.counts_for_gate.astype(str).map({"True": "counts", "False": "infra (excluded)"})
-P.p("The program target of 40 external tools was not reached. The table lists every tool actually used, from results/tools_ledger.csv.")
-P.table(["tool", "kind", "where used", "gate"], TL[["tool", "kind", "where_used", "gate"]].values.tolist(),
+P.p("The program target of 40 counted external tools was reached with a margin; count the ledger entries marked True, not infrastructure. Tools include source databases and analytical libraries actually used in committed scripts. This count does not measure independence of biological evidence.")
+P.table(["tool", "kind", "gate"], TL[["tool", "kind", "gate"]].values.tolist(),
         f"Tools ledger: {len(TL)} entries, {int((TL.gate == 'counts').sum())} counting toward the gate after excluding infrastructure.")
 
 P.h("9. Reproducibility")

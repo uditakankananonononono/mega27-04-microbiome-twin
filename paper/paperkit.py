@@ -7,6 +7,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
+from docx.enum.table import WD_TABLE_ALIGNMENT, WD_CELL_VERTICAL_ALIGNMENT
 
 
 def _page_border(section, color="1F4E79", size=12):
@@ -50,13 +51,20 @@ class Paper:
     def table(self, header: list[str], rows: list[list], caption: str):
         self.tab += 1
         self.doc.add_paragraph(f"Table {self.tab}. {caption}").runs[0].bold = True
-        t = self.doc.add_table(rows=1, cols=len(header)); t.style = "Light Grid Accent 1"
+        t = self.doc.add_table(rows=1, cols=len(header)); t.style = "Light Grid Accent 1"; t.alignment = WD_TABLE_ALIGNMENT.CENTER
         for i, hdr in enumerate(header):
             t.rows[0].cells[i].text = str(hdr)
         for r in rows:
             cells = t.add_row().cells
             for i, v in enumerate(r):
                 cells[i].text = f"{v:.3f}" if isinstance(v, float) else str(v)
+        for row in t.rows:
+            for cell in row.cells:
+                cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
+                for para in cell.paragraphs:
+                    para.alignment = WD_ALIGN_PARAGRAPH.LEFT
+                    for run in para.runs:
+                        run.font.name = "Times New Roman"; run.font.size = Pt(9)
 
     def figure(self, path: str, caption: str, width: float = 6.0):
         self.fig += 1
