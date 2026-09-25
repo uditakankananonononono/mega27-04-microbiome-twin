@@ -35,7 +35,7 @@ P.p("(4) Under a stricter metric that scores every timepoint, the same forecaste
     "tool (audit and forecast) so anyone can run this audit on their own abundance table.")
 P.p("(6) Exploratory keystone analysis names one candidate, the anaerobe-keystone hypothesis: across 156 studies, genera made of strict anaerobes are "
     "more often network hubs within the same study (study fixed-effect logit, p = 1.4e-4), independent of abundance and prevalence, and sulfate "
-    "reducers are enriched under both NCBI and GTDB taxonomies (q = 0.02). No single biome passes FDR and keystones come from inferred networks, "
+    "reducers are enriched under both NCBI and GTDB taxonomies (q = 0.02); a KEGG genomic anaerobe index replicates it (p = 7e-8). No single biome passes FDR and keystones come from inferred networks, "
     "so this is a falsifiable candidate, not a discovery.")
 P.p("Caveats. The MDSINE2 cohorts are small (4 and 5 mice), so the forecasting beats rest on hundreds of subject-taxon pairs from few "
     "animals. Our initial explanation, that the detection-only metric favours detection-conditional averaging, was tested and falsified "
@@ -237,6 +237,16 @@ P.p(f"On {KAB['n_rows']:,} genus-study rows from {KAB['n_studies']} studies, b_1
     f"without abundance terms ({KAB['no_abund']['coef']['anaerobe']:.2f}). Anaerobe share is nearly uncorrelated with abundance (r = {KAB['corr_anaerobe_lra']:.2f}). "
     "So the association is not a biome mix or abundance artifact.")
 bb = {k.split(':', 1)[1]: v for k, v in KBI["within_study"].items() if k.startswith("biome:")}
+KK = json.load(open("results/keystone_kegg.json"))
+P.p(f"Genomic replication (KEGG). To avoid relying on one phenotype database, we scored marker genes across {KK['n_kegg_genomes']:,} KEGG genomes "
+    f"({KK['n_genera_mapped']} of {KK['n_genera']} genera mapped): pyruvate:ferredoxin oxidoreductase (PFOR; K00169 or K03737), [FeFe]-hydrogenase, "
+    "complete dissimilatory sulfate reduction (dsrA, dsrB and aprA), aa3 cytochrome c oxidase (coxA, K02274), catalase and cytochrome bd. The genomic anaerobe index is")
+P.equation("GAI_j = (1/|g_j|) sum_{x in g_j} 1[PFOR in x]  -  (1/|g_j|) sum_{x in g_j} 1[coxA in x]")
+P.p(f"It agrees with the Madin anaerobe share (Spearman {KK['vs_madin_anaerobe']['GAI'][0]:.2f}) and tracks keystone frequency (rho = {KK['vs_frac_top']['GAI'][0]:.2f}, "
+    f"p = {KK['vs_frac_top']['GAI'][1]:.0e}). In the within-study fixed-effect logit with abundance and prevalence ({KK['fe_logit_GAI']['n_rows']:,} rows, "
+    f"{KK['fe_logit_GAI']['n_studies']} studies), GAI has coefficient {KK['fe_logit_GAI']['coef']['GAI']:.2f} (p = {KK['fe_logit_GAI']['p']['GAI']:.0e}). "
+    f"Most of this is the absence of aerobic respiration (coxA {KK['fe_logit_PFOR_coxA']['coef']['coxA']:.2f}, p = {KK['fe_logit_PFOR_coxA']['p']['coxA']:.0e}; "
+    f"PFOR alone p = {KK['fe_logit_PFOR_coxA']['p']['PFOR']:.2f}), plus complete sulfate reduction ({KK['fe_logit_DSR']['coef']['DSR']:+.2f}, p = {KK['fe_logit_DSR']['p']['DSR']:.0e}).")
 P.table(["biome", "studies", "mean difference (top - rest)", "p (sign-flip)", "q (BH)"],
         [[b, v["n"], f"{v['mean_diff']:+.3f}", f"{v['p']:.3f}", f"{v['q_bh']:.2f}"] for b, v in bb.items()],
         "Within-study anaerobe difference by biome (results/keystone_traits_biome.json).")
@@ -309,6 +319,7 @@ for r in [
     "Michel-Mata S, Wang X-W, Liu Y-Y, Angulo MT. Predicting microbiome compositions from species assemblages through deep learning. iMeta 2022. https://pmc.ncbi.nlm.nih.gov/articles/PMC9221840/",
     "Mitchell AL, et al. MGnify: the microbiome analysis resource in 2020. Nucleic Acids Res 2020.",
     "Gibson TE, Kim Y, Acharya S, et al. Learning ecosystem-scale dynamics from microbiome data with MDSINE2. Nature Microbiology 2025. https://www.nature.com/articles/s41564-025-02112-6",
+    "Kanehisa M, Furumichi M, Sato Y, et al. KEGG for taxonomy-based analysis of pathways and genomes. Nucleic Acids Res 2023.",
     "Madin JS, Nielsen DA, Brbic M, et al. A synthesis of bacterial and archaeal phenotypic trait data. Scientific Data 2020;7:170.",
     "Parks DH, Chuvochina M, Rinke C, et al. GTDB: an ongoing census of bacterial and archaeal diversity through a phylogenetically consistent, rank normalized and complete genome-based taxonomy. Nucleic Acids Res 2022.",
     "Bucci V, et al. MDSINE: Microbial Dynamical Systems INference Engine. Genome Biology 2016.",
