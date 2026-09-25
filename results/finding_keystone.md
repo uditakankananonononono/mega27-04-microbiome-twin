@@ -83,3 +83,8 @@ Disclosure: the dump was downloaded before the pre-registration; only field name
 10866 disease-association experiments; 203/248 keystone-table genera present. Same NB model as BugSigDB (count ~ kscore + log studies modelled).
 - ML alpha (1.60): kscore coef 0.30, p = 0.024 -> pre-registered D1 PASS. Alpha=1: p = 0.0011. Distinct publications: p = 0.018.
 Verdict: a second, independent literature database supports modest over-representation of keystone-consensus genera in disease reports, beyond how widespread they are. With BugSigDB (ML p = 0.062) the literature link is now borderline-supported rather than a clear negative; the effect is small and could reflect oral/HACEK disease literature (Cardiobacterium 13, Eikenella 15 experiments).
+
+## Study-bias control with Europe PMC (pre-registered 0358299; scripts/keystone_europepmc.py, results/keystone_europepmc.json)
+Europe PMC title/abstract hit counts for all 248 genera (the counts were fetched with the script's own hits() function in 8 parallel threads after a sequential run hit the time limit; cache: results/keystone_europepmc_counts.csv).
+Keystone score is not correlated with literature volume (Spearman -0.069, p = 0.28). NB (ML alpha 1.28) Disbiome experiments ~ kscore + log studies + log(1+hits): kscore coef 0.38, p = 0.0017; literature volume coef 0.41, p = 3.6e-13 -> pre-registered E1 PASS.
+Verdict: the Disbiome keystone-literature link is not explained by how much a genus is studied; it gets stronger once literature volume is controlled. Still correlational and possibly oral/HACEK-driven.

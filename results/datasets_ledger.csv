@@ -178,3 +178,4 @@ figshare:4272392,figshare (IJSEM phenotypic db),reference,anaerobe-keystone IJSE
 OToL synth induced subtree (161 genera; data/otol/induced.tre),Open Tree of Life,reference,anaerobe-keystone PGLS on independent phylogeny
 ProTraits_binaryIntegratedPr0.95.txt,ProTraits,reference,anaerobe-keystone ProTraits check (gate failed)
 Disbiome experiment dump (10866 records),Disbiome,reference,keystone literature check
+Europe PMC TITLE_ABS hit counts for 248 genera (results/keystone_europepmc_counts.csv),Europe PMC,reference,study-bias control of keystone literature link

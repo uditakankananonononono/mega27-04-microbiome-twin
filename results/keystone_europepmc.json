@@ -1,0 +1,18 @@
+{
+ "tool": "Europe PMC REST API (search hitCount)",
+ "n_genera": 248,
+ "n_with_hits": 248,
+ "G1_pass": true,
+ "spearman_kscore_vs_log_hits": [
+  -0.06941481881641079,
+  0.27618164325939343
+ ],
+ "nb_ml": {
+  "alpha": 1.2759529974330208,
+  "coef_kscore": 0.37769867489825665,
+  "p_kscore": 0.0017420410770646257,
+  "coef_log_epmc": 0.4143802510250204,
+  "p_log_epmc": 3.587216715337698e-13
+ },
+ "E1_pass": true
+}

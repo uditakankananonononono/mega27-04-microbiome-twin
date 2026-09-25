@@ -27,3 +27,4 @@ NCBI Datasets v2 API (genome dataset_report),database/service,scripts/keystone_g
 Open Tree of Life API v3 (TNRS match_names + induced synthetic subtree),web API,scripts/keystone_otol.py,True,independent phylogeny for anaerobe-keystone PGLS; pre-registered ce6fd94
 ProTraits (Brbic et al. 2016; protraits.irb.hr integrated Pr>=0.95),database,scripts/keystone_protraits.py,True,pre-registered oxygen check 4f748be; coverage gate FAILED (51 genera)
 Disbiome (disbiome.ugent.be experiment API),database/web API,scripts/keystone_disbiome.py,True,pre-registered literature check 899f554; D1 PASS
+Europe PMC REST API (search hitCount),web API,scripts/keystone_europepmc.py,True,pre-registered study-bias control 0358299; E1 PASS
