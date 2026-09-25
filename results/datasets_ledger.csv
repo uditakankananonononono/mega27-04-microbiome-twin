@@ -181,3 +181,4 @@ Disbiome experiment dump (10866 records),Disbiome,reference,keystone literature 
 Europe PMC TITLE_ABS hit counts for 248 genera (results/keystone_europepmc_counts.csv),Europe PMC,reference,study-bias control of keystone literature link
 Wikidata genus Gram-staining table (3117 genera; results/keystone_wikidata_gram.csv),Wikidata,reference,Gram-stain replication
 ENA public assembly counts for 200 genera (results/keystone_ena_counts.csv),ENA,reference,sequencing-effort control
+GBIF occurrence and country counts for 202 genera (results/keystone_gbif_counts.csv),GBIF,reference,generalism rival

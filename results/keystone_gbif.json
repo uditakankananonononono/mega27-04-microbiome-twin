@@ -1,0 +1,15 @@
+{
+ "tool": "GBIF API v1 (species/match + occurrence facets)",
+ "n_genera": 203,
+ "n_matched": 202,
+ "n_model": 196,
+ "G1_pass": true,
+ "slope_GAI": 0.01905016257539193,
+ "p_GAI": 0.02390320842269322,
+ "slope_log_occ": -0.03953767330308982,
+ "p_log_occ": 0.0026246196285024115,
+ "slope_log_countries": 0.04568904894164989,
+ "p_log_countries": 0.39737192383020015,
+ "B1_pass": true,
+ "rival_G_supported": false
+}

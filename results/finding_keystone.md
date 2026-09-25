@@ -105,3 +105,8 @@ Spearman(frac_top, Gram-negative) = -0.008, p = 0.90 -> the Madin null for Gram 
 200/203 genera resolved to ENA genus taxIds with public-assembly counts (ENA counts track KEGG genome counts, rho = 0.49).
 OLS frac_top ~ GAI + log assemblies + log abundance (HC3, n = 200): GAI slope 0.032, p = 1.8e-09; assemblies slope -0.008, p = 0.26 -> A1 PASS. Keystone fraction is unrelated to sequencing effort (rho = 0.03).
 Verdict: the ridge-definition GAI association is not a sequencing-effort artefact. (It remains method-specific; see gglasso.)
+
+## Generalism rival with GBIF (pre-registered 9f6cc62; scripts/keystone_gbif.py, results/keystone_gbif.json)
+202/203 genera matched exactly in the GBIF backbone; 196 in the model. OLS frac_top ~ GAI + log occurrences + log countries + log abundance (HC3):
+GAI slope 0.019, p = 0.024 -> B1 PASS. Occurrences slope -0.040 (p = 0.0026, negative: keystones are if anything less often recorded); countries p = 0.40. Rival (cosmopolitan generalists) not supported.
+Note: GAI effect is smaller here (0.019 vs 0.032 in the ENA model), so part of the signal shares variance with GBIF occurrence volume. Ridge definition only.
