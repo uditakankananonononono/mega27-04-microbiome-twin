@@ -177,3 +177,4 @@ BV-BRC oxygen_requirement facets,BV-BRC API,reference,third anaerobe source
 figshare:4272392,figshare (IJSEM phenotypic db),reference,anaerobe-keystone IJSEM check
 OToL synth induced subtree (161 genera; data/otol/induced.tre),Open Tree of Life,reference,anaerobe-keystone PGLS on independent phylogeny
 ProTraits_binaryIntegratedPr0.95.txt,ProTraits,reference,anaerobe-keystone ProTraits check (gate failed)
+Disbiome experiment dump (10866 records),Disbiome,reference,keystone literature check

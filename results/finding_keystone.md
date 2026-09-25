@@ -77,3 +77,9 @@ Verdict: the genomic anaerobe association survives a second, independently built
 ## ProTraits oxygen check (pre-registered 4f748be; scripts/keystone_protraits.py, results/keystone_protraits.json) - GATE FAILED
 Only 51 keystone-table genera have a strict-anaerobe call at ProTraits precision >= 0.95 (gate: 100), so the pre-registered test fails at the gate. On those genera: Spearman rho = 0.057 (one-sided p = 0.35); abundance-adjusted slope 0.011 (HC3 p = 0.58). ProTraits agrees with Madin on all 51 (binary) and with KEGG GAI at rho = 0.70.
 Verdict: uninformative (underpowered, gate failed) and recorded as a negative. The high-confidence ProTraits subset shows no association; we do not re-run at a lower precision threshold without a new pre-registration.
+
+## Disbiome literature check (pre-registered 899f554; scripts/keystone_disbiome.py, results/keystone_disbiome.json)
+Disclosure: the dump was downloaded before the pre-registration; only field names and record count were inspected before commit.
+10866 disease-association experiments; 203/248 keystone-table genera present. Same NB model as BugSigDB (count ~ kscore + log studies modelled).
+- ML alpha (1.60): kscore coef 0.30, p = 0.024 -> pre-registered D1 PASS. Alpha=1: p = 0.0011. Distinct publications: p = 0.018.
+Verdict: a second, independent literature database supports modest over-representation of keystone-consensus genera in disease reports, beyond how widespread they are. With BugSigDB (ML p = 0.062) the literature link is now borderline-supported rather than a clear negative; the effect is small and could reflect oral/HACEK disease literature (Cardiobacterium 13, Eikenella 15 experiments).

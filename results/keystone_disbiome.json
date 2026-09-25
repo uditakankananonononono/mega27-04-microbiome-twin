@@ -1,0 +1,31 @@
+{
+ "tool": "Disbiome (disbiome.ugent.be experiment API)",
+ "n_records": 10866,
+ "n_genera": 248,
+ "n_genera_present": 203,
+ "G1_pass": true,
+ "ml": {
+  "alpha": 1.596334420743395,
+  "coef_kscore": 0.2985796661838817,
+  "p_kscore": 0.023702711642944047
+ },
+ "alpha1": {
+  "coef_kscore": 0.2930407436175792,
+  "p_kscore": 0.0011189475635280566
+ },
+ "publications_ml": {
+  "coef_kscore": 0.30117798862323064,
+  "p_kscore": 0.018197987242660155
+ },
+ "top2_keystones": [
+  [
+   "Cardiobacterium",
+   13
+  ],
+  [
+   "Eikenella",
+   15
+  ]
+ ],
+ "D1_pass": true
+}
