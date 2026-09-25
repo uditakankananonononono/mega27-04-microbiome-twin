@@ -46,3 +46,8 @@ Independent of the Madin phenotype database: marker-KO presence in 11,951 KEGG g
 - Keystone frequency: GAI rho=0.36 (p=9e-8); coxA rho=-0.40 (p=3e-9); PFOR 0.24; [FeFe]-hydrogenase 0.18 (p=0.012); DSR 0.12 (p=0.079).
 - Within-study FE logit with abundance + prevalence (13,294 rows, 159 studies, study-clustered SE): GAI coef 0.32, p=7e-8. Split: coxA -0.52 (p=6e-6) carries most of it, PFOR +0.15 (p=0.083). Complete dissimilatory sulfate reduction (dsrA+dsrB+aprA) +0.70, p=3e-5.
 Verdict: the anaerobe-keystone candidate replicates with an independent genomic data source and a larger row set; the signal is mainly "lack of aerobic respiration" plus sulfate reduction. Still a candidate: keystone status comes from inferred networks, and no perturbation validation exists.
+
+### Third source: BV-BRC genome metadata (scripts/keystone_bvbrc.py, results/keystone_bvbrc.json)
+Oxygen-requirement annotations of 11,323 BV-BRC genomes (facet by genus; genera with >= 3 annotated genomes: 102 of the keystone genera).
+Agreement: Spearman 0.83 with Madin, 0.81 with KEGG GAI. Keystone frequency: rho=0.34 (p=5.5e-4). Within-study FE logit with abundance + prevalence (6,804 rows, 151 studies): coef 0.44, p=5.6e-4.
+The candidate replicates across three trait sources (phenotype synthesis, KEGG gene content, BV-BRC metadata). They are not fully independent (curated phenotype sources overlap), and none addresses the inference-method caveat.

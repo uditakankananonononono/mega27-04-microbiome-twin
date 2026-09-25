@@ -6,3 +6,4 @@ data/raw/mgnify/*.tsv.gz
 data/gtdb/
 data/traits/
 data/kegg/
+data/bvbrc/
