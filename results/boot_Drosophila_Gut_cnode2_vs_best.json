@@ -1,0 +1,14 @@
+{
+ "dataset": "Drosophila_Gut",
+ "arm": "cnode2",
+ "best_base": "glv",
+ "arm_median": 0.08414702902935939,
+ "base_median": 0.052031150045414074,
+ "diff": 0.032115878983945315,
+ "ci": [
+  -0.00904452639480406,
+  0.05021683184543421
+ ],
+ "verdict": "tie",
+ "published_cnode": 0.066
+}

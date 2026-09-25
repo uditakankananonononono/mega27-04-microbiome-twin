@@ -1,0 +1,14 @@
+{
+ "dataset": "Soil_Vivo",
+ "arm": "ridgeclr",
+ "best_base": "glv",
+ "arm_median": 0.1118445819646943,
+ "base_median": 0.10636358434815583,
+ "diff": 0.0054809976165384605,
+ "ci": [
+  0.001539977113524263,
+  0.010092436397462018
+ ],
+ "verdict": "LOSS",
+ "published_cnode": 0.107
+}

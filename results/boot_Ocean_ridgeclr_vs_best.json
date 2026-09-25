@@ -1,0 +1,14 @@
+{
+ "dataset": "Ocean",
+ "arm": "ridgeclr",
+ "best_base": "glv",
+ "arm_median": 0.06933144150742798,
+ "base_median": 0.07033641603306215,
+ "diff": -0.001004974525634167,
+ "ci": [
+  -0.007490428497403251,
+  0.006047909557904657
+ ],
+ "verdict": "tie",
+ "published_cnode": 0.06
+}

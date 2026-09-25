@@ -1,0 +1,14 @@
+{
+ "dataset": "Ocean",
+ "arm": "catb",
+ "best_base": "glv",
+ "arm_median": 0.7779885459761888,
+ "base_median": 0.07033641603306215,
+ "diff": 0.7076521299431267,
+ "ci": [
+  0.6881709526920976,
+  0.7203848486237985
+ ],
+ "verdict": "LOSS",
+ "published_cnode": 0.06
+}

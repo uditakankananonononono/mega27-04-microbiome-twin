@@ -1,0 +1,14 @@
+{
+ "dataset": "Soil_Vitro",
+ "arm": "catb",
+ "best_base": "glv",
+ "arm_median": 0.22573420950383613,
+ "base_median": 0.11654783988523802,
+ "diff": 0.10918636961859811,
+ "ci": [
+  0.006192204090268383,
+  0.21313791551498912
+ ],
+ "verdict": "LOSS",
+ "published_cnode": 0.079
+}

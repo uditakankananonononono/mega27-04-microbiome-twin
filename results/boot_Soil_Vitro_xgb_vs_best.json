@@ -1,0 +1,14 @@
+{
+ "dataset": "Soil_Vitro",
+ "arm": "xgb",
+ "best_base": "glv",
+ "arm_median": 0.09709002133766537,
+ "base_median": 0.11654783988523802,
+ "diff": -0.019457818547572656,
+ "ci": [
+  -0.08702217776017192,
+  0.057040349809391634
+ ],
+ "verdict": "tie",
+ "published_cnode": 0.079
+}

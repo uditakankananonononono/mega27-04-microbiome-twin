@@ -1,0 +1,14 @@
+{
+ "dataset": "Human_Gut",
+ "arm": "xgb",
+ "best_base": "glv",
+ "arm_median": 0.2784432530563532,
+ "base_median": 0.2443087602426664,
+ "diff": 0.0341344928136868,
+ "ci": [
+  -0.009550175429401168,
+  0.05271239359685934
+ ],
+ "verdict": "tie",
+ "published_cnode": 0.242
+}

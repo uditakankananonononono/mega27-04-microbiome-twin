@@ -16,5 +16,99 @@
    "glv",
    "graphtwin"
   ]
+ },
+ "Human_Oral": {
+  "weights": {
+   "presence_mean": 0.195016011595726,
+   "glv": 0.00477303983643651,
+   "graphtwin": 0.8002109527587891
+  },
+  "inner_oof_median": {
+   "presence_mean": 0.20664334220364172,
+   "cnode": 0.2783566347999915,
+   "glv": 0.21090851278497388,
+   "graphtwin": 0.20184122504794855
+  },
+  "kept_bases": [
+   "presence_mean",
+   "glv",
+   "graphtwin"
+  ]
+ },
+ "Ocean": {
+  "weights": {
+   "presence_mean": 0.0048904684372246265,
+   "glv": 0.9454048275947571,
+   "graphtwin": 0.04970472306013107
+  },
+  "inner_oof_median": {
+   "presence_mean": 0.0943096498940999,
+   "cnode": 0.45371607213180576,
+   "glv": 0.06646057138830072,
+   "graphtwin": 0.07129761535387441
+  },
+  "kept_bases": [
+   "presence_mean",
+   "glv",
+   "graphtwin"
+  ]
+ },
+ "Soil_Vitro": {
+  "weights": {
+   "cnode": 0.29285964369773865,
+   "glv": 0.005245279986411333,
+   "graphtwin": 0.29145359992980957,
+   "presence_mean": 0.41044148802757263
+  },
+  "inner_oof_median": {
+   "presence_mean": 0.20597385835378562,
+   "cnode": 0.16166624711662372,
+   "glv": 0.134926240320462,
+   "graphtwin": 0.1553078977676279
+  },
+  "kept_bases": [
+   "cnode",
+   "glv",
+   "graphtwin",
+   "presence_mean"
+  ]
+ },
+ "Soil_Vivo": {
+  "weights": {
+   "presence_mean": 0.002350172959268093,
+   "glv": 0.9958868622779846,
+   "graphtwin": 0.0017629382200539112
+  },
+  "inner_oof_median": {
+   "presence_mean": 0.12343148717571989,
+   "cnode": 0.1637496431679421,
+   "glv": 0.11096457568847778,
+   "graphtwin": 0.11940565951757942
+  },
+  "kept_bases": [
+   "presence_mean",
+   "glv",
+   "graphtwin"
+  ]
+ },
+ "Drosophila_Gut": {
+  "weights": {
+   "cnode": 0.002531867939978838,
+   "glv": 0.8144698739051819,
+   "graphtwin": 0.09772640466690063,
+   "presence_mean": 0.0852719098329544
+  },
+  "inner_oof_median": {
+   "presence_mean": 0.17543428106110223,
+   "cnode": 0.09931493745765865,
+   "glv": 0.06428933905251538,
+   "graphtwin": 0.080096168543058
+  },
+  "kept_bases": [
+   "cnode",
+   "glv",
+   "graphtwin",
+   "presence_mean"
+  ]
  }
 }

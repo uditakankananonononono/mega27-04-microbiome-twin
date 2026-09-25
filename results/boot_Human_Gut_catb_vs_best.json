@@ -1,0 +1,14 @@
+{
+ "dataset": "Human_Gut",
+ "arm": "catb",
+ "best_base": "glv",
+ "arm_median": 0.42389633496897994,
+ "base_median": 0.2443087602426664,
+ "diff": 0.17958757472631354,
+ "ci": [
+  0.12976608912135873,
+  0.20898008971665694
+ ],
+ "verdict": "LOSS",
+ "published_cnode": 0.242
+}

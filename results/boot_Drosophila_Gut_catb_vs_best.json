@@ -1,0 +1,14 @@
+{
+ "dataset": "Drosophila_Gut",
+ "arm": "catb",
+ "best_base": "glv",
+ "arm_median": 0.2576533759722787,
+ "base_median": 0.052031150045414074,
+ "diff": 0.20562222592686463,
+ "ci": [
+  0.09083177988455815,
+  0.282220850578935
+ ],
+ "verdict": "LOSS",
+ "published_cnode": 0.066
+}
