@@ -1,0 +1,14 @@
+{
+ "dataset": "Human_Oral",
+ "stacker": "graphtwin2",
+ "best_base": "graphtwin",
+ "stacker_median": 0.2024161267900599,
+ "base_median": 0.202362799710856,
+ "diff": 5.332707920391311e-05,
+ "ci": [
+  -0.002172051963766103,
+  0.008297832856150211
+ ],
+ "verdict": "tie",
+ "published_cnode": 0.211
+}
