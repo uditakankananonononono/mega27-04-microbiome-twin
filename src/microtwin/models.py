@@ -150,3 +150,40 @@ def train_torch(model: nn.Module, Z: np.ndarray, P: np.ndarray, epochs: int = 30
 def predict_torch(model: nn.Module, Z: np.ndarray) -> np.ndarray:
     with torch.no_grad():
         return model(torch.tensor(Z, dtype=torch.float32)).numpy()
+
+
+class TwinStack(nn.Module):
+    """Assemblage-conditioned convex stacking of base predictors (GraphTwin v2).
+
+    p(x) = sum_m w_m(z) * p_m(x), w(z) = softmax(MLP(phi(z))).
+    phi(z) = [richness, richness/n, presence-weighted prior entropy, mean taxon embedding].
+    The gate sees only assemblage summaries; base predictions come from frozen,
+    already-fitted base models (stacking protocol in evaluate.fit_predict).
+    """
+    name = "graphtwin2"
+    BASES = ("presence_mean", "cnode", "glv", "graphtwin")
+
+    def __init__(self, n: int, prior: np.ndarray, d_emb: int = 16, hidden: int = 16):
+        super().__init__()
+        self.emb = nn.Parameter(torch.randn(n, d_emb) * 0.1)
+        self.mlp = nn.Sequential(nn.Linear(3 + d_emb, hidden), nn.GELU(), nn.Linear(hidden, len(self.BASES)))
+        nn.init.zeros_(self.mlp[-1].weight); nn.init.zeros_(self.mlp[-1].bias)  # start uniform
+        lp = np.log(prior + 1e-6)
+        self.register_buffer("logprior", torch.tensor(lp, dtype=torch.float32))
+
+    def phi(self, z: torch.Tensor) -> torch.Tensor:
+        mask = (z > 0).float()
+        rich = mask.sum(1, keepdim=True)
+        ent = -(mask * self.logprior).sum(1, keepdim=True) / rich.clamp(min=1.0)
+        mean_emb = (mask.unsqueeze(-1) * self.emb.unsqueeze(0)).sum(1) / rich.clamp(min=1.0)
+        n = torch.tensor(float(z.shape[1]), device=z.device)
+        return torch.cat([rich, rich / n, ent, mean_emb], dim=1)
+
+    def weights(self, z: torch.Tensor) -> torch.Tensor:
+        return torch.softmax(self.mlp(self.phi(z)), dim=-1)
+
+    def combine(self, z: torch.Tensor, base_preds: torch.Tensor) -> torch.Tensor:
+        """base_preds: B x M x n (each on the simplex, absence-masked)."""
+        w = self.weights(z).unsqueeze(-1)                    # B x M x 1
+        p = (w * base_preds).sum(1)                          # B x n
+        return p / p.sum(1, keepdim=True).clamp(min=1e-12)
