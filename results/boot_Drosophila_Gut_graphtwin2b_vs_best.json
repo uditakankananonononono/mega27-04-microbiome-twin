@@ -1,0 +1,13 @@
+{
+ "dataset": "Drosophila_Gut",
+ "stacker": "graphtwin2b",
+ "best_base": "glv",
+ "stacker_median": 0.07187331037189801,
+ "base_median": 0.052031150045414074,
+ "diff": 0.019842160326483935,
+ "ci": [
+  -0.01649895749547689,
+  0.0482737948682606
+ ],
+ "verdict": "tie"
+}

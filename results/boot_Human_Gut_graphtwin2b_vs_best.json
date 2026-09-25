@@ -1,0 +1,13 @@
+{
+ "dataset": "Human_Gut",
+ "stacker": "graphtwin2b",
+ "best_base": "glv",
+ "stacker_median": 0.24803808664646226,
+ "base_median": 0.2443087602426664,
+ "diff": 0.003729326403795863,
+ "ci": [
+  -0.016936100003544712,
+  0.016289196908267772
+ ],
+ "verdict": "tie"
+}
