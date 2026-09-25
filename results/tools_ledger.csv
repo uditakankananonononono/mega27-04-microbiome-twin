@@ -43,3 +43,5 @@ EBI Search REST (RNAcentral rRNA sequences),web API,scripts/keystone_rnacentral.
 bambi / PyMC (Bayesian hierarchical logistic),library,scripts/keystone_bambi.py,True,pre-registered Bayesian re-fit 45e3254; BY1 PASS
 NCBI PubTator3 API (search counts),web API,scripts/keystone_pubtator.py,True,pre-registered oral-index replication 45e3254 (+addendum 3d16589); PT1 FAIL
 Biopython Bio.Phylo (synthetic-tree topology),library,scripts/keystone_biophylo.py,True,pre-registered a2e24b7; BP1 FAIL oral clustering p=0.53
+LightGBM,library,scripts/keystone_boosters.py,True,pre-registered fd7a9e2; B1 PASS absolute out-of-fold R2 0.133
+CatBoost,library,scripts/keystone_boosters.py,True,pre-registered fd7a9e2; B1 PASS absolute out-of-fold R2 0.119

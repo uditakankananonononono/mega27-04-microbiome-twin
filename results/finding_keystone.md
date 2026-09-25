@@ -168,3 +168,6 @@ Removed all genera from each of the five HOMD families with >=2 matched oral gen
 
 ## Bio.Phylo oral-tip clustering (tool 39; pre-registered a2e24b7; scripts/keystone_biophylo.py, results/keystone_biophylo.json)
 160 tree tips included, 38 HOMD oral. Mean oral-oral topological distance 27.07 edges vs permutation null mean 27.00; one-sided p=0.532 -> BP1 FAIL. Oral taxa are not unusually clustered on this Open Tree synthetic topology by this measure; the phenotype spans multiple lineages. Synthetic tree branch lengths were ignored.
+
+## LightGBM and CatBoost predictive check (tools 40-41; pre-registered fd7a9e2; scripts/keystone_boosters.py)
+Same 200 genera and 20 x five-fold CV as XGBoost, but shallow, regularised learners. LightGBM full mean OOF R2 0.133 vs reduced -0.071 (delta 0.204, 20/20 seeds); CatBoost full 0.119 vs reduced -0.045 (delta 0.164, 20/20). Both B1 PASS with positive absolute predictive R2, unlike the overfit XGBoost result. R2 is modest; the network outcome is inferred and method-specific, and genera are not independently sampled ecosystems. No clinical or causal prediction is implied.
