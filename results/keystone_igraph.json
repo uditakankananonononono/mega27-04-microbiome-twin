@@ -1,0 +1,19 @@
+{
+ "tool": "python-igraph betweenness (CLR correlation network)",
+ "r_threshold": 0.3,
+ "n_studies_solved": 160,
+ "G1_pass": true,
+ "n_rows": 9697,
+ "coef_GAI": 0.06260160445051915,
+ "p_GAI": 0.3427539082136408,
+ "coef_lra": 0.22204965244268776,
+ "coef_prevalence": 1.2999442449019076,
+ "kappa_vs_ridge": 0.022171514672210863,
+ "n_shared_rows": 17499,
+ "spearman_genus_frac_vs_ridge": [
+  -0.029782351130365065,
+  0.640680887602976
+ ],
+ "n_genera_ge20": 248,
+ "I1_pass": false
+}

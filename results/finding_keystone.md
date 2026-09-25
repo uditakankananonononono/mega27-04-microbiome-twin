@@ -121,3 +121,8 @@ Replaces the OpenAlex design (pre-registered 93ee1bc, not run: HTTP 429, key req
 C1 Disbiome NB with log(1 + Crossref works): kscore coef 0.35, p = 0.0080 -> PASS (Crossref covariate p = 7.9e-05).
 C2 BugSigDB NB with the same covariate: kscore coef 0.21, p = 0.047 -> PASS, marginal (near the threshold).
 Caveat: query.bibliographic is a fuzzy relevance search, so counts are a noisy literature proxy. Ridge definition only.
+
+## igraph betweenness keystone definition (pre-registered 0962035; scripts/keystone_igraph.py, results/keystone_igraph.json)
+Per-study CLR correlation networks (|r| >= 0.3), igraph betweenness, top = >= 90th percentile and > 0. 160/160 studies had edges (G1 pass); 9,697 genus-study rows in the model.
+GAI coef 0.063, clustered p = 0.34 -> I1 FAILED. Agreement with ridge labels: kappa 0.022; genus-level Spearman vs ridge frac_top -0.03 (p = 0.64, 248 genera).
+Verdict: a second independent network definition fails. The anaerobe-keystone association is specific to the ridge gLV-form out-strength definition. (Cache columns reuse the gglasso names gl_degree/top_gl; here they hold betweenness and its top label.)
