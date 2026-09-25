@@ -186,3 +186,4 @@ UniProt reference-proteome EC 7.1.1.9 / EC 1.2.7.1 / recA counts for 200 genera 
 Crossref works counts for 248 genera (results/keystone_crossref_counts.csv),Crossref,reference,independent literature-volume covariate
 Ensembl Genomes genome hit counts for 203 genera (results/keystone_ensembl_counts.csv),EBI Search / Ensembl Bacteria,reference,sequencing-effort covariate (curated archive)
 InterPro PFOR/COX1/RecA protein counts for 200 genera (results/keystone_interpro_counts.csv),InterPro,reference,signature-based replication of GAI
+HOMD taxon table v4.2 (data/ref/HOMD_taxon_table_v4.2.csv; 121 oral genera),HOMD,reference,oral-origin covariate

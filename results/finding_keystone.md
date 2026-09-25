@@ -139,3 +139,7 @@ Important negative: both models have NEGATIVE absolute out-of-fold R^2 (full -0.
 IGAI from InterPro family counts (PFOR IPR011895, COX1 IPR000883, RecA IPR013765); 198 genera with RecA. Validity gate passed: Spearman with KEGG GAI 0.89. Cache filled over five timed runs of the script itself (pre-registered mechanism).
 frac_top vs IGAI: rho 0.29 (p = 2.7e-05); OLS with log abundance: slope 0.021, HC3 p = 0.00024 -> P1 PASS.
 Verdict: replicates with signature-based annotation; protein sets overlap with UniProt (tool 29), so not independent genomes. Ridge definition only.
+
+## HOMD oral-taxon rival (pre-registered 0aa4eb0, parser addendum 5658ee6; scripts/keystone_homd.py, results/keystone_homd.json)
+46 of 203 GAI genera are oral in HOMD v4.2 (Body Site contains "oral"). OLS frac_top ~ GAI + oral + log abundance (HC3): GAI slope 0.024, p = 3.7e-06 -> M1 PASS. Oral genera do have higher keystone fraction (coef 0.042, p = 0.0084), and 6 of the top 10 ridge keystones are oral. Among the 157 non-oral genera alone, GAI slope 0.024, p = 4.7e-06.
+Verdict: oral origin is a real, separate correlate of ridge keystone status but does not explain the GAI association. Ridge definition only.

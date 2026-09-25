@@ -38,3 +38,4 @@ python-igraph (betweenness centrality),library,scripts/keystone_igraph.py,True,p
 EBI Search REST (Ensembl Genomes genome domain),web API,scripts/keystone_ensembl.py,True,pre-registered sequencing-effort replication be7175d; S1 PASS
 XGBoost (gradient-boosted trees),library,scripts/keystone_xgboost.py,True,pre-registered out-of-sample GAI test 9cf67ae; X1 PASS by criterion but absolute CV R2 negative
 InterPro API (protein counts per taxon and entry),web API,scripts/keystone_interpro.py,True,pre-registered anaerobe-index replication b327560; P1 PASS
+HOMD expanded Human Oral Microbiome Database (taxon table v4.2),database,scripts/keystone_homd.py,True,pre-registered oral-taxon rival 0aa4eb0 (+parser addendum 5658ee6); M1 PASS

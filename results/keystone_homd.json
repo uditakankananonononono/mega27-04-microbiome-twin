@@ -1,0 +1,61 @@
+{
+ "tool": "HOMD taxon table v4.2",
+ "genus_column": "Genus",
+ "site_column": "Body Site(s)",
+ "n_homd_genera": 121,
+ "n_model": 203,
+ "n_oral": 46,
+ "G1_pass": true,
+ "slope_GAI": 0.024314954486369243,
+ "p_GAI_HC3": 3.7348704105596517e-06,
+ "coef_oral": 0.041550491631639486,
+ "p_oral": 0.008445803740902705,
+ "nonoral": {
+  "n": 157,
+  "slope_GAI": 0.024149450257328647,
+  "p_HC3": 4.746566640379937e-06
+ },
+ "oral_top10_frac_top": [
+  [
+   "Cardiobacterium",
+   1
+  ],
+  [
+   "Eikenella",
+   1
+  ],
+  [
+   "Simonsiella",
+   1
+  ],
+  [
+   "Desulfobulbus",
+   1
+  ],
+  [
+   "Comamonas",
+   0
+  ],
+  [
+   "Enhydrobacter",
+   0
+  ],
+  [
+   "Cetobacterium",
+   0
+  ],
+  [
+   "Sutterella",
+   0
+  ],
+  [
+   "Solobacterium",
+   1
+  ],
+  [
+   "Bilophila",
+   0
+  ]
+ ],
+ "M1_pass": true
+}
