@@ -147,3 +147,9 @@ Verdict: oral origin is a real, separate correlate of ridge keystone status but 
 ## RNAcentral rRNA sequencing-effort control (pre-registered 9814c7a; scripts/keystone_rnacentral.py, results/keystone_rnacentral.json)
 rRNA sequence counts for all 203 GAI genera (Spearman with ENA assemblies 0.61). OLS frac_top ~ GAI + log10(1 + rRNA) + log abundance (HC3): GAI slope 0.027, p = 8.2e-06 -> R1 PASS; rRNA slope -0.010, p = 0.20.
 Verdict: marker-gene sequencing effort does not explain the association. Free-text counts are noisy. Ridge definition only.
+
+## Change of direction: method-general keystone correlate (pre-registered 2934c54; scripts/keystone_methodgeneral.py, results/keystone_methodgeneral.json)
+After the gglasso and igraph negatives, we tested whether oral origin (HOMD v4.2) predicts keystone status under all network definitions. Within-study logit top ~ oral + GAI + log abundance + prevalence + C(study), clustered SE.
+gglasso: oral coef 0.21, p = 0.027; igraph betweenness: oral coef 0.32, p = 0.0011 -> MG1 PASS (both new tests). GAI stays null under both (p = 0.35, 0.70).
+Ridge arm (reported only; the oral effect was seen there before registration): oral coef 0.14, p = 0.17; GAI 0.30, p = 5.7e-06. Note: the ridge logit hit the iteration limit without converging (statsmodels ConvergenceWarning); its numbers are indicative only. The gglasso and igraph fits converged.
+Verdict: oral-origin genera are more often network hubs under two independent network definitions, a candidate method-general correlate. It is modest, covariate-adjusted, and not causal. The anaerobe (GAI) association remains ridge-specific.
