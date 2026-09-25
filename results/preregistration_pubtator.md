@@ -5,3 +5,5 @@ Model: as scripts/keystone_methodgeneral.py but with OLF (standardised z-score) 
 Gate G1: >= 180 genera with OLF.
 Pass (PT1): OLF_z coefficient > 0, two-sided p < 0.05 under BOTH gglasso and igraph. Reported: Spearman(OLF, HOMD oral), ridge arm.
 Script: scripts/keystone_pubtator.py; output results/keystone_pubtator.json.
+
+Addendum (mechanics, before any model result): all counts were fetched (cache complete), then the model step crashed because the fit() argument named C shadowed patsy's C() in the formula. Argument renamed to CNT; no model output existed before this fix. Counts were fetched over three timed runs of the script itself.

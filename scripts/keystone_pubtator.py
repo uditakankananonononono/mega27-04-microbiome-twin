@@ -33,10 +33,10 @@ def fill(budget):
     return C
 
 
-def fit(L, C):
+def fit(L, CNT):
     A = pd.read_csv("results/keystone_genus_abundance.csv.gz")
     K = pd.read_csv("results/keystone_kegg_genus.csv")[["genus", "genus_clean", "GAI"]].dropna().drop_duplicates("genus")
-    D = L.merge(A, on=["study", "genus"]).merge(K, on="genus").merge(C[["genus_clean", "OLF_z"]], on="genus_clean").dropna(subset=["OLF_z"])
+    D = L.merge(A, on=["study", "genus"]).merge(K, on="genus").merge(CNT[["genus_clean", "OLF_z"]], on="genus_clean").dropna(subset=["OLF_z"])
     D["lra"] = np.log10(D.mean_ra + 1e-6); D = D[D.groupby("study").top.transform("sum") > 0]
     m = smf.logit("top ~ OLF_z + GAI + lra + prevalence + C(study)", D).fit(disp=0, cov_type="cluster", cov_kwds={"groups": pd.factorize(D.study)[0]}, maxiter=300)
     return {"n_rows": int(len(D)), "coef_OLF_z": float(m.params["OLF_z"]), "p_OLF_z": float(m.pvalues["OLF_z"]), "converged": bool(m.mle_retvals["converged"])}
