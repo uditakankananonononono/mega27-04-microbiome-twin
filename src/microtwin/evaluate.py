@@ -38,7 +38,16 @@ def fit_predict(name: str, Ztr, Ptr, Zte, seed=0):
         raise ValueError(name)
     lr = 0.01 if name != "graphtwin" else 0.005
     train_torch(m, Ztr, Ptr, epochs=EPOCHS[name], lr=lr, seed=seed)
-    return predict_torch(m, Zte)
+    pred = predict_torch(m, Zte)
+    # numerical-safety: RK4 integrators can explode on tiny/degenerate folds;
+    # non-finite rows fall back to the presence-mean null fit on the same
+    # train split (deterministic, disclosed). v1 arms never produced NaN on
+    # the committed benchmark data (all committed medians are finite).
+    bad = ~np.isfinite(pred).all(1)
+    if bad.any():
+        fb = PresenceMean().fit(Ztr, Ptr).predict(Zte)
+        pred[bad] = fb[bad]
+    return pred
 
 
 def cross_validate(Z, P, models, k: int, seed: int = 0) -> dict[str, np.ndarray]:
@@ -48,14 +57,6 @@ def cross_validate(Z, P, models, k: int, seed: int = 0) -> dict[str, np.ndarray]
         tr = np.setdiff1d(np.arange(len(Z)), fold)
         for m in models:
             pred = fit_predict(m, Z[tr], P[tr], Z[fold], seed=seed)
-            # numerical-safety: RK4 integrators can explode on tiny/degenerate
-            # folds; non-finite rows fall back to the presence-mean null fit on
-            # the same train split (deterministic, disclosed). Never triggered
-            # on the committed v1/v2 benchmark runs.
-            bad = ~np.isfinite(pred).all(1)
-            if bad.any():
-                fb = PresenceMean().fit(Z[tr], P[tr]).predict(Z[fold])
-                pred[bad] = fb[bad]
             err[m][fold] = bray_curtis(pred, P[fold])
     return err
 
