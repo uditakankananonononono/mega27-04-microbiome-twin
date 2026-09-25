@@ -5,7 +5,7 @@ from scipy.stats import spearmanr
 
 EP = "https://query.wikidata.org/sparql"
 Q = """SELECT ?name ?g WHERE { ?t wdt:P105 wd:Q34740 ; wdt:P2597 ?g ; wdt:P225 ?name . }"""
-NEG, POS = "Q632006", "Q857525"
+NEG, POS = "Q632006", "Q857288"
 
 
 def gram_table(bindings):

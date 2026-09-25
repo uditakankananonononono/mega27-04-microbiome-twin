@@ -4,3 +4,5 @@ Genera: results/keystone_traits.csv (ridge keystone frac_top).
 Gate G1 (annotation validity): >= 80% binary agreement with Madin gram_neg (>= 0.5) on shared genera, n >= 100.
 Hypothesis W0 (replication of the Madin null, rho = -0.018, q = 0.91): Spearman(frac_top, Wikidata gram_neg) has two-sided p >= 0.05. W0 is "replicated" if p >= 0.05, "contradicted" if p < 0.05.
 Script: scripts/keystone_wikidata.py; output results/keystone_wikidata.json.
+
+Addendum (mechanics correction, before any valid result): the Gram-positive item id was written as Q857525; the correct Wikidata item is Q857288 ("gram-positive bacteria", checked via label query). The first run therefore kept only Gram-negative genera (constant predictor, rho undefined) and is discarded. No hypothesis, gate or threshold changed.
