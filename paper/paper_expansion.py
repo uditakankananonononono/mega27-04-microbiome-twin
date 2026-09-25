@@ -80,6 +80,19 @@ def add(P):
                           "paper build time from the committed results/bench_*.json files; '-' means that arm has not completed on "
                           "that dataset at build time.")
 
+    # interpretable blend weights (the named plus point)
+    if os.path.exists("results/stack_weights.json"):
+        SW = json.load(open("results/stack_weights.json"))
+        allb = ["presence_mean", "cnode", "glv", "graphtwin"]
+        P.p("The blend is itself the finding a black-box stacker could not give: four numbers per dataset, readable "
+            "directly. Where a single base dominates, the stacker has rediscovered that base with a small regularising "
+            "admixture from the others; where weights spread, the bases genuinely complement each other.")
+        P.table(["dataset"] + [MODEL_LABEL[b] for b in allb],
+                [[d] + [round(SW[d]["weights"].get(b, 0.0), 3) if b in SW[d]["weights"] else "0 (dropped)" for b in allb]
+                 for d in DATASETS if d in SW],
+                "ConstStack blend weights fitted on each full dataset (results/stack_weights.json; inner-OOF selection, "
+                "400-step simplex fit, seed 0). '0 (dropped)' means inner-OOF selection excluded that base.")
+
     # bootstrap table: each stacker vs best base
     bases = ["presence_mean", "cnode", "glv", "graphtwin"]
     stackers = [m for m in ["graphtwin2", "graphtwin2b"] if any(m in benches[d]["errors"] for d in DATASETS)]

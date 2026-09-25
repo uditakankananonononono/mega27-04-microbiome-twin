@@ -5,7 +5,7 @@ plus the cNODE Human_Gut table: train GraphTwin with the locked v1 recipe (d=32,
 (mean over targets of sigmoid(e_target^T U e_source)), then the same top-decile / binomial /
 BH-FDR consensus and one-sided Fisher phylum enrichment (GTDB v232) as keystone_mgnify.py /
 keystone_gtdb.py. Usage: python3 scripts/twindiscovery_t1.py [epochs] [only_study]"""
-import json, sys
+import json, os, sys
 import numpy as np, pandas as pd, torch
 from scipy.stats import binomtest, fisher_exact
 sys.path.insert(0, "src")
@@ -30,19 +30,20 @@ def fit_gate_outstrength(X):
     np.fill_diagonal(gate, np.nan)
     return np.nanmean(gate, axis=0)  # out-strength per source genus
 
-PART = "results/twindiscovery_t1_partial.csv"
+SHARD = int(os.environ.get("T1_SHARD", "0")); NSHARD = int(os.environ.get("T1_NSHARD", "1"))
+PART = f"results/twindiscovery_t1_partial{'_shard' + str(SHARD) if NSHARD > 1 else ''}.csv"
 man = pd.read_csv("data/raw/mgnify/manifest.csv")
 man["amplicon"] = ~man.study_name.str.lower().str.contains("assembl")
-import os
 done = set()
 if ONLY is None and os.path.exists(PART):
     done = set(pd.read_csv(PART).study.unique())
     print(f"resuming: {len(done)} studies already done", flush=True)
 pf = open(PART, "a") if ONLY is None else None
 rows = []
-for r in man.itertuples():
-    if not r.amplicon: continue
+ELIG = [r for r in man.itertuples() if r.amplicon]
+for ei, r in enumerate(ELIG):
     if ONLY and r.study != ONLY: continue
+    if NSHARD > 1 and ei % NSHARD != SHARD: continue
     if r.study in done: continue
     if not os.path.exists(r.file):
         print(r.study, "MISSING FILE", flush=True); continue
@@ -73,7 +74,13 @@ if ONLY is not None:
     print(D.sort_values("gate_out_strength", ascending=False).head(8).to_string(index=False)); sys.exit(0)
 
 if pf is not None: pf.close()
-D = pd.read_csv(PART, names=["study", "biome", "genus", "gate_out_strength", "top"])
+import glob as _glob
+if ONLY is None:
+    open(f"results/twindiscovery_t1_shard{SHARD}.done", "w").write("done")
+if NSHARD > 1 and len(_glob.glob("results/twindiscovery_t1_shard*.done")) < NSHARD:
+    print("waiting for other shards; consensus not computed", flush=True); sys.exit(0)
+D = pd.concat([pd.read_csv(f, names=["study", "biome", "genus", "gate_out_strength", "top"])
+               for f in sorted(_glob.glob("results/twindiscovery_t1_partial*.csv"))]).drop_duplicates(["study", "genus"])
 D.to_csv("results/twindiscovery_t1_per_study.csv.gz", index=False)
 g = D.groupby("genus").agg(studies=("study", "nunique"), top=("top", "sum")).reset_index()
 g = g[g.studies >= 20]

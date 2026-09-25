@@ -1,0 +1,20 @@
+{
+ "Human_Gut": {
+  "weights": {
+   "presence_mean": 0.006894427817314863,
+   "glv": 0.7816792726516724,
+   "graphtwin": 0.21142636239528656
+  },
+  "inner_oof_median": {
+   "presence_mean": 0.2575170628532231,
+   "cnode": 0.35129628134846175,
+   "glv": 0.2551715687046351,
+   "graphtwin": 0.269920408765998
+  },
+  "kept_bases": [
+   "presence_mean",
+   "glv",
+   "graphtwin"
+  ]
+ }
+}
