@@ -126,3 +126,7 @@ Caveat: query.bibliographic is a fuzzy relevance search, so counts are a noisy l
 Per-study CLR correlation networks (|r| >= 0.3), igraph betweenness, top = >= 90th percentile and > 0. 160/160 studies had edges (G1 pass); 9,697 genus-study rows in the model.
 GAI coef 0.063, clustered p = 0.34 -> I1 FAILED. Agreement with ridge labels: kappa 0.022; genus-level Spearman vs ridge frac_top -0.03 (p = 0.64, 248 genera).
 Verdict: a second independent network definition fails. The anaerobe-keystone association is specific to the ridge gLV-form out-strength definition. (Cache columns reuse the gglasso names gl_degree/top_gl; here they hold betweenness and its top label.)
+
+## Ensembl Genomes sequencing-effort control (pre-registered be7175d; scripts/keystone_ensembl.py, results/keystone_ensembl.json)
+Counts for all 203 GAI genera (Spearman with ENA assemblies 0.65). OLS frac_top ~ GAI + log10(1 + Ensembl genomes) + log abundance (HC3): GAI slope 0.029, p = 2.2e-07 -> S1 PASS; Ensembl genomes slope -0.008, p = 0.22.
+Verdict: the ENA result (A1) replicates with a second, curated genome archive. Free-text counts are noisy. Ridge definition only.

@@ -1,0 +1,16 @@
+{
+ "tool": "EBI Search REST (Ensembl Genomes genome domain)",
+ "n_genera": 203,
+ "n_with_counts": 203,
+ "n_model": 203,
+ "G1_pass": true,
+ "slope_GAI": 0.028530822388651227,
+ "p_GAI_HC3": 2.1823801748549727e-07,
+ "slope_log_genomes": -0.008398736682385385,
+ "p_log_genomes": 0.22330987653766965,
+ "spearman_ensembl_vs_ena": [
+  0.6544973230030499,
+  7.743385469870373e-26
+ ],
+ "S1_pass": true
+}

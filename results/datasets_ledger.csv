@@ -184,3 +184,4 @@ ENA public assembly counts for 200 genera (results/keystone_ena_counts.csv),ENA,
 GBIF occurrence and country counts for 202 genera (results/keystone_gbif_counts.csv),GBIF,reference,generalism rival
 UniProt reference-proteome EC 7.1.1.9 / EC 1.2.7.1 / recA counts for 200 genera (results/keystone_uniprot_counts.csv),UniProt,reference,annotation-pipeline replication of GAI
 Crossref works counts for 248 genera (results/keystone_crossref_counts.csv),Crossref,reference,independent literature-volume covariate
+Ensembl Genomes genome hit counts for 203 genera (results/keystone_ensembl_counts.csv),EBI Search / Ensembl Bacteria,reference,sequencing-effort covariate (curated archive)

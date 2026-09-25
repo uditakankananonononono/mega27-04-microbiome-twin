@@ -35,3 +35,4 @@ GBIF API v1 (species/match + occurrence country facets),web API,scripts/keystone
 UniProt REST API (uniprotkb search counts, reference proteomes),web API,scripts/keystone_uniprot.py,True,pre-registered anaerobe-index replication c9ea858; U1 PASS
 Crossref REST API (works total-results),web API,scripts/keystone_crossref.py,True,pre-registered literature control 6ff904c (replaces OpenAlex 429); C1 PASS C2 PASS
 python-igraph (betweenness centrality),library,scripts/keystone_igraph.py,True,pre-registered third network definition 0962035; I1 FAIL (p=0.34)
+EBI Search REST (Ensembl Genomes genome domain),web API,scripts/keystone_ensembl.py,True,pre-registered sequencing-effort replication be7175d; S1 PASS
