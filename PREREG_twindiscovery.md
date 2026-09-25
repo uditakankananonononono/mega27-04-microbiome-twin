@@ -35,3 +35,14 @@ finding (enrichment is a linear-model artefact) and is reported as such.
 ## Falsification / negatives
 T1 q >= 0.05 -> reported as non-replication. T2 AIC or significance miss ->
 reported. Small-n fragility (3 genera) is restated in any framing.
+
+## Redirect clauses (per user steering 2026-09-25 19:10 IST: no negative closes
+while an untried method exists)
+- If T1 returns null (q >= 0.05): the scorer redirects to SHAP-attribution
+  centrality from the validated LightGBM keystone model (scripts/keystone_shap.py,
+  SH1 PASS), same Fisher/binomial construction, locked here before any T1 run.
+- If T2 loses on AIC or significance: the predictor redirects to CatBoost +
+  SHAP per-genus attribution ranking (scripts/keystone_boosters.py, B1 PASS),
+  same NB-GLM comparison, locked here before any T2 run.
+- A negative at any step is reported in the ledger AND the redirect runs; the
+  project does not close on a negative.
