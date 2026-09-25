@@ -1,0 +1,19 @@
+{
+ "tool": "ProTraits (protraits.irb.hr, integrated Pr>=0.95)",
+ "n_genera": 51,
+ "G1_pass": false,
+ "spearman_rho": 0.05656782368407991,
+ "p_one_sided": 0.3466886325286841,
+ "ols_adj_abundance": {
+  "n": 51,
+  "slope": 0.010834250307886664,
+  "p_two_sided_HC3": 0.5751577451765706
+ },
+ "agreement": {
+  "spearman_vs_GAI": 0.6981760741590302,
+  "n_gai": 51,
+  "frac_agree_madin_binary": 1.0,
+  "n_madin": 51
+ },
+ "H1_pass": false
+}

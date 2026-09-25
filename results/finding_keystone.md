@@ -73,3 +73,7 @@ TNRS matched 201 of 203 GAI genera to OTT genus ids; 161 are tips in the induced
 - Pagel lambda of keystone fraction: 0.45, LR vs 0 p = 0.052 (weaker signal than on GTDB).
 - PGLS frac_top ~ GAI under full Brownian: slope 0.028, p = 0.017 -> pre-registered H1 PASS. At lambda_ML = 0.3: slope 0.045, p = 9.9e-08.
 Verdict: the genomic anaerobe association survives a second, independently built phylogeny. Limits: topology only (Grafen lengths), 161 genera.
+
+## ProTraits oxygen check (pre-registered 4f748be; scripts/keystone_protraits.py, results/keystone_protraits.json) - GATE FAILED
+Only 51 keystone-table genera have a strict-anaerobe call at ProTraits precision >= 0.95 (gate: 100), so the pre-registered test fails at the gate. On those genera: Spearman rho = 0.057 (one-sided p = 0.35); abundance-adjusted slope 0.011 (HC3 p = 0.58). ProTraits agrees with Madin on all 51 (binary) and with KEGG GAI at rho = 0.70.
+Verdict: uninformative (underpowered, gate failed) and recorded as a negative. The high-confidence ProTraits subset shows no association; we do not re-run at a lower precision threshold without a new pre-registration.

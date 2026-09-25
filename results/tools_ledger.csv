@@ -25,3 +25,4 @@ BV-BRC genome API (oxygen_requirement facets),database,scripts/keystone_bvbrc.py
 "IJSEM phenotypic database (Barberan et al. 2017, figshare 4272392)",database,scripts/keystone_ijsem.py,True,oxygen preference per genus; pre-registered check 142c972; overlaps Madin sources (not independent)
 NCBI Datasets v2 API (genome dataset_report),database/service,scripts/keystone_genomesize.py,True,reference-genome size and GC per genus; pre-registered 66d7f05
 Open Tree of Life API v3 (TNRS match_names + induced synthetic subtree),web API,scripts/keystone_otol.py,True,independent phylogeny for anaerobe-keystone PGLS; pre-registered ce6fd94
+ProTraits (Brbic et al. 2016; protraits.irb.hr integrated Pr>=0.95),database,scripts/keystone_protraits.py,True,pre-registered oxygen check 4f748be; coverage gate FAILED (51 genera)
