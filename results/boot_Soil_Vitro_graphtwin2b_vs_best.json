@@ -1,0 +1,14 @@
+{
+ "dataset": "Soil_Vitro",
+ "stacker": "graphtwin2b",
+ "best_base": "glv",
+ "stacker_median": 0.1426208264979531,
+ "base_median": 0.11654783988523802,
+ "diff": 0.02607298661271508,
+ "ci": [
+  -0.03740084838358007,
+  0.07796626815274775
+ ],
+ "verdict": "tie",
+ "published_cnode": 0.079
+}
