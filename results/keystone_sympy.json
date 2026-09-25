@@ -1,0 +1,21 @@
+{
+ "tool": "SymPy symbolic algebra",
+ "cnode": {
+  "tangent_zero": true,
+  "boundary_zero": [
+   true,
+   true,
+   true
+  ]
+ },
+ "glv": {
+  "tangent_zero": true,
+  "boundary_zero": [
+   true,
+   true,
+   true
+  ]
+ },
+ "G1_pass": true,
+ "SY1_pass": true
+}

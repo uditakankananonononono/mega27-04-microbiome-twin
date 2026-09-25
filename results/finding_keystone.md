@@ -171,3 +171,9 @@ Removed all genera from each of the five HOMD families with >=2 matched oral gen
 
 ## LightGBM and CatBoost predictive check (tools 40-41; pre-registered fd7a9e2; scripts/keystone_boosters.py)
 Same 200 genera and 20 x five-fold CV as XGBoost, but shallow, regularised learners. LightGBM full mean OOF R2 0.133 vs reduced -0.071 (delta 0.204, 20/20 seeds); CatBoost full 0.119 vs reduced -0.045 (delta 0.164, 20/20). Both B1 PASS with positive absolute predictive R2, unlike the overfit XGBoost result. R2 is modest; the network outcome is inferred and method-specific, and genera are not independently sampled ecosystems. No clinical or causal prediction is implied.
+
+## SHAP model explanation (tool 42; pre-registered c12838f; scripts/keystone_shap.py)
+On the fitted full-data LightGBM model (n=200), mean absolute SHAP values: GAI 0.0265, log ENA 0.00772, log abundance 0.00576 -> SH1 PASS, GAI ranked first. The mean signed GAI attribution is -0.00133 (near zero by construction); magnitudes are in-sample model attribution, not an independent test or causal effects. The honest out-of-fold performance is tool 40.
+
+## SymPy vector-field invariants (tool 43; pre-registered c12838f; scripts/keystone_sympy.py)
+For the three-taxon generic cNODE and gLV right-hand sides, SymPy simplifies the sum of derivatives to zero under simplex sum(x)=1, and each coordinate derivative to zero on its x_i=0 boundary -> SY1 PASS. This formal check concerns the equations, not step-size stability, integrator accuracy, or biological fit.

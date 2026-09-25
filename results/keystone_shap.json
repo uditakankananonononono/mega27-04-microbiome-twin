@@ -1,0 +1,21 @@
+{
+ "tool": "SHAP TreeExplainer",
+ "n_genera": 200,
+ "G1_pass": true,
+ "mean_abs": {
+  "GAI": 0.02647869838250727,
+  "lra": 0.005763319580968686,
+  "log_ena": 0.007722947835225171
+ },
+ "mean_signed": {
+  "GAI": -0.0013287944234450365,
+  "lra": 0.0005617914739419699,
+  "log_ena": 0.000767002949503081
+ },
+ "ranked_features": [
+  "GAI",
+  "log_ena",
+  "lra"
+ ],
+ "SH1_pass": true
+}

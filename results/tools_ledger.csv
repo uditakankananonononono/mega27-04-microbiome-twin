@@ -45,3 +45,5 @@ NCBI PubTator3 API (search counts),web API,scripts/keystone_pubtator.py,True,pre
 Biopython Bio.Phylo (synthetic-tree topology),library,scripts/keystone_biophylo.py,True,pre-registered a2e24b7; BP1 FAIL oral clustering p=0.53
 LightGBM,library,scripts/keystone_boosters.py,True,pre-registered fd7a9e2; B1 PASS absolute out-of-fold R2 0.133
 CatBoost,library,scripts/keystone_boosters.py,True,pre-registered fd7a9e2; B1 PASS absolute out-of-fold R2 0.119
+SHAP TreeExplainer,library,scripts/keystone_shap.py,True,pre-registered c12838f; SH1 PASS GAI largest mean absolute attribution in full LightGBM
+SymPy symbolic algebra,library,scripts/keystone_sympy.py,True,pre-registered c12838f; SY1 PASS RHS invariants for cNODE and gLV
