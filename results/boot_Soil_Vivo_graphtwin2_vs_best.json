@@ -1,0 +1,14 @@
+{
+ "dataset": "Soil_Vivo",
+ "stacker": "graphtwin2",
+ "best_base": "glv",
+ "stacker_median": 0.10636382059606364,
+ "base_median": 0.10636358434815583,
+ "diff": 2.362479078060753e-07,
+ "ci": [
+  -1.931048004823084e-05,
+  2.0534405444638804e-05
+ ],
+ "verdict": "tie",
+ "published_cnode": 0.107
+}
