@@ -28,6 +28,8 @@ def fit_predict(name: str, Ztr, Ptr, Zte, seed=0):
         m = GraphTwin(n, prior=Ptr.mean(0))
     elif name == "graphtwin2":
         return fit_predict_twinstack(Ztr, Ptr, Zte, seed=seed)
+    elif name == "graphtwin2b":
+        return fit_predict_conststack(Ztr, Ptr, Zte, seed=seed)
     else:
         raise ValueError(name)
     lr = 0.01 if name != "graphtwin" else 0.005
@@ -57,7 +59,7 @@ def paired_bootstrap(a: np.ndarray, b: np.ndarray, n_boot: int = 5000, seed: int
     return float(np.median(a) - np.median(b)), float(np.quantile(d, 0.025)), float(np.quantile(d, 0.975))
 """Inner-CV stacking for TwinStack, added to evaluate.py."""
 import numpy as np, torch
-from .models import (CNODE, GLVSteady, GraphTwin, PresenceMean, TwinStack,
+from .models import (CNODE, ConstStack, GLVSteady, GraphTwin, PresenceMean, TwinStack,
                      bc_loss, predict_torch, train_torch)
 
 def _fit_base(name, Ztr, Ptr, seed=0, batch=32):
@@ -120,3 +122,46 @@ def fit_predict_twinstack(Ztr, Ptr, Zte, inner=5, seed=0):
     with torch.no_grad():
         return gate.combine(torch.tensor(Zte, dtype=torch.float32),
                             torch.tensor(Bte, dtype=torch.float32)).numpy()
+
+
+def fit_predict_conststack(Ztr, Ptr, Zte, inner=5, seed=0, drop_margin=0.05):
+    """graphtwin2b per PREREG_graphtwin2b: inner-OOF base selection + constant weights."""
+    from .evaluate import kfold_indices
+    from .data import bray_curtis
+    oof = {b: np.zeros((len(Ztr), Ztr.shape[1])) for b in TwinStack.BASES}
+    for fold in kfold_indices(len(Ztr), inner, seed=seed):
+        itr = np.setdiff1d(np.arange(len(Ztr)), fold)
+        for b in TwinStack.BASES:
+            m = _fit_base(b, Ztr[itr], Ptr[itr], seed=seed, batch=max(32, len(itr)))
+            oof[b][fold] = _predict_base(b, m, Ztr[fold])
+    for b in TwinStack.BASES:
+        if b == "presence_mean":
+            continue
+        bad = ~np.isfinite(oof[b]).all(1)
+        if bad.any():
+            oof[b][bad] = oof["presence_mean"][bad]
+    oof_med = {b: float(np.median(bray_curtis(oof[b], Ptr))) for b in TwinStack.BASES}
+    best = min(oof_med.values())
+    keep = [b for b in TwinStack.BASES if oof_med[b] <= best + drop_margin]
+    for must in (min(oof_med, key=oof_med.get), "presence_mean"):
+        if must not in keep:
+            keep.append(must)
+    idx = [TwinStack.BASES.index(b) for b in keep]
+    gate = ConstStack(len(keep))
+    torch.manual_seed(seed)
+    B = torch.tensor(np.stack([oof[b] for b in keep], 1), dtype=torch.float32)
+    Pt = torch.tensor(Ptr, dtype=torch.float32)
+    opt = torch.optim.Adam(gate.parameters(), lr=0.05)
+    for _ in range(400):
+        opt.zero_grad()
+        bc_loss(gate.combine(B), Pt).backward()
+        opt.step()
+    gate.eval()
+    fitted = {b: _fit_base(b, Ztr, Ptr, seed=seed) for b in keep}
+    Bte = np.stack([_predict_base(b, fitted[b], Zte) for b in keep], 1)
+    for i in range(len(keep)):
+        bad = ~np.isfinite(Bte[:, i]).all(1)
+        if bad.any():
+            Bte[bad, i] = Bte[bad, keep.index("presence_mean")]
+    with torch.no_grad():
+        return gate.combine(torch.tensor(Bte, dtype=torch.float32)).numpy()

@@ -187,3 +187,17 @@ class TwinStack(nn.Module):
         w = self.weights(z).unsqueeze(-1)                    # B x M x 1
         p = (w * base_preds).sum(1)                          # B x n
         return p / p.sum(1, keepdim=True).clamp(min=1e-12)
+
+
+class ConstStack(nn.Module):
+    """graphtwin2b: constant per-dataset simplex weights over a base subset."""
+    name = "graphtwin2b"
+
+    def __init__(self, n_bases: int):
+        super().__init__()
+        self.logits = nn.Parameter(torch.zeros(n_bases))
+
+    def combine(self, base_preds: torch.Tensor) -> torch.Tensor:
+        w = torch.softmax(self.logits, 0).unsqueeze(0).unsqueeze(-1)  # 1 x M x 1
+        p = (w * base_preds).sum(1)
+        return p / p.sum(1, keepdim=True).clamp(min=1e-12)

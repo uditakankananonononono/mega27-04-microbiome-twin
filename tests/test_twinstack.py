@@ -49,3 +49,21 @@ def test_fit_predict_smoke():
     pred = fit_predict_twinstack(Z[:16], P[:16], Z[16:], inner=2, seed=0)
     assert pred.shape == (4, 6)
     assert np.allclose(pred.sum(1), 1, atol=1e-5)
+
+
+def test_conststack_zero_init_is_mean():
+    from microtwin.models import ConstStack
+    g = ConstStack(3)
+    bases = torch.rand(5, 3, 7)
+    bases = bases / bases.sum(-1, keepdim=True)
+    p = g.combine(bases)
+    mean = bases.mean(1); mean = mean / mean.sum(-1, keepdim=True)
+    assert torch.allclose(p, mean, atol=1e-5)
+
+
+def test_conststack_smoke():
+    from microtwin.evaluate import fit_predict_conststack
+    Z, P = _toy(n=20, taxa=6)
+    pred = fit_predict_conststack(Z[:16], P[:16], Z[16:], inner=2, seed=0)
+    assert pred.shape == (4, 6)
+    assert np.allclose(pred.sum(1), 1, atol=1e-5)
