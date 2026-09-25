@@ -1,0 +1,14 @@
+{
+ "dataset": "Soil_Vivo",
+ "arm": "cnode2",
+ "best_base": "glv",
+ "arm_median": 0.10990228797607884,
+ "base_median": 0.10636358434815583,
+ "diff": 0.0035387036279230094,
+ "ci": [
+  0.00027472457523830437,
+  0.0075121446796305716
+ ],
+ "verdict": "LOSS",
+ "published_cnode": 0.107
+}
