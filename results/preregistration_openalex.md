@@ -4,3 +4,5 @@ O1 (replication of Europe PMC E1 with a different index): NB (ML alpha) Disbiome
 O2 (new): same covariate added to the BugSigDB model (n_signatures from results/keystone_bugsigdb.csv); pass if kscore coef > 0, two-sided p < 0.05. BugSigDB without the covariate was weak (ML p = 0.062).
 Gate G1: >= 240 genera with a count.
 Script: scripts/keystone_openalex.py; output results/keystone_openalex.json.
+
+Status (2026-09-25 10:28 IST): NOT RUN. The OpenAlex API returned HTTP 429 for all queries; the anonymous daily budget is exhausted and the service now asks for a (free) API key. No counts were obtained and no result exists. OpenAlex is not counted in the tools ledger.
