@@ -1,0 +1,21 @@
+{
+ "tool": "Open Tree of Life API v3 (TNRS + induced synthetic subtree)",
+ "n_input": 203,
+ "n_matched_ott": 201,
+ "n_on_tree": 161,
+ "G1_pass": true,
+ "pagel_lambda_frac_top": {
+  "lambda_ml": 0.45,
+  "LR_vs_0_p": 0.05176792993058503
+ },
+ "brownian": {
+  "slope": 0.028230542497682205,
+  "p": 0.01735044535069784
+ },
+ "lambda_ml": 0.3,
+ "ml": {
+  "slope": 0.045182378705846404,
+  "p": 9.904286790279998e-08
+ },
+ "H1_pass": true
+}

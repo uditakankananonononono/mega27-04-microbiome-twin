@@ -67,3 +67,9 @@ Caveat: IJSEM is one of the sources merged into Madin et al. 2020 (binary agreem
 NCBI Datasets v2 reference genomes (2,081 genomes, 190 genera; median size and GC per genus). GAI and log genome size correlate (Spearman -0.46).
 - Size/GC/abundance alone: R^2 0.043, log size slope -0.041, p=0.10.
 - Full model: GAI slope 0.028, HC3 p=1.3e-6; log size p=0.33; GC p=0.34 -> anaerobe association PASSES; the streamlining rival is not supported.
+
+## Independent phylogeny: Open Tree of Life (pre-registered ce6fd94; scripts/keystone_otol.py, results/keystone_otol.json)
+TNRS matched 201 of 203 GAI genera to OTT genus ids; 161 are tips in the induced synthetic subtree (the rest are collapsed into unnamed MRCA nodes and dropped). Grafen branch lengths (the synthesis tree has none).
+- Pagel lambda of keystone fraction: 0.45, LR vs 0 p = 0.052 (weaker signal than on GTDB).
+- PGLS frac_top ~ GAI under full Brownian: slope 0.028, p = 0.017 -> pre-registered H1 PASS. At lambda_ML = 0.3: slope 0.045, p = 9.9e-08.
+Verdict: the genomic anaerobe association survives a second, independently built phylogeny. Limits: topology only (Grafen lengths), 161 genera.
