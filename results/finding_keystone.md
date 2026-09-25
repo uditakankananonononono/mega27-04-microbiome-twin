@@ -115,3 +115,9 @@ Note: GAI effect is smaller here (0.019 vs 0.032 in the ENA model), so part of t
 UGAI = PFOR (EC 1.2.7.1) minus cytochrome-c oxidase (EC 7.1.1.9) entries per recA, reference proteomes only; 198 genera. Validity gate passed: Spearman with KEGG GAI 0.87. (Counts fetched in chunks with the script's own query function after a single run hit the time limit.)
 frac_top vs UGAI: rho = 0.29 (p = 3.5e-05); OLS with log abundance: slope 0.022, HC3 p = 0.0013 -> U1 PASS.
 Verdict: the ridge-definition anaerobe association replicates with a different annotation pipeline (UniRule/ARBA EC calls); genome sets overlap with KEGG, so it is not a new-genome replication.
+
+## Crossref literature-volume control (pre-registered 6ff904c; scripts/keystone_crossref.py, results/keystone_crossref.json)
+Replaces the OpenAlex design (pre-registered 93ee1bc, not run: HTTP 429, key required; not counted). Counts for all 248 genera (median 113). Mechanics: counts were fetched in chunks with the script's own query function (2-6 threads, missing calls retried) after a single run hit the time limit; disclosed here.
+C1 Disbiome NB with log(1 + Crossref works): kscore coef 0.35, p = 0.0080 -> PASS (Crossref covariate p = 7.9e-05).
+C2 BugSigDB NB with the same covariate: kscore coef 0.21, p = 0.047 -> PASS, marginal (near the threshold).
+Caveat: query.bibliographic is a fuzzy relevance search, so counts are a noisy literature proxy. Ridge definition only.

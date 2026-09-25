@@ -1,0 +1,22 @@
+{
+ "tool": "Crossref API (works count)",
+ "n_genera": 248,
+ "n_with_counts": 248,
+ "G1_pass": true,
+ "O1_disbiome": {
+  "alpha": 1.4946256709150116,
+  "coef_kscore": 0.3461410553623017,
+  "p_kscore": 0.008014320375438975,
+  "coef_log_cr": 0.16096803038279867,
+  "p_log_cr": 7.877260747250768e-05
+ },
+ "O2_bugsigdb": {
+  "alpha": 1.1559563338163037,
+  "coef_kscore": 0.21382421857848175,
+  "p_kscore": 0.04745280400042212,
+  "coef_log_cr": 0.032785563990006254,
+  "p_log_cr": 0.3121591838463955
+ },
+ "O1_pass": true,
+ "O2_pass": true
+}

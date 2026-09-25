@@ -33,3 +33,4 @@ Wikidata SPARQL endpoint (P2597 Gram staining),web API/knowledge graph,scripts/k
 ENA portal API + ENA taxonomy REST (assembly counts),web API,scripts/keystone_ena.py,True,pre-registered sequencing-effort control 9451f14; A1 PASS
 GBIF API v1 (species/match + occurrence country facets),web API,scripts/keystone_gbif.py,True,pre-registered generalism rival 9f6cc62; B1 PASS
 UniProt REST API (uniprotkb search counts, reference proteomes),web API,scripts/keystone_uniprot.py,True,pre-registered anaerobe-index replication c9ea858; U1 PASS
+Crossref REST API (works total-results),web API,scripts/keystone_crossref.py,True,pre-registered literature control 6ff904c (replaces OpenAlex 429); C1 PASS C2 PASS
