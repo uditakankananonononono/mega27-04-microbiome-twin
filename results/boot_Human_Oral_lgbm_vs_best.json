@@ -1,0 +1,14 @@
+{
+ "dataset": "Human_Oral",
+ "arm": "lgbm",
+ "best_base": "graphtwin",
+ "arm_median": 0.2064284843781409,
+ "base_median": 0.202362799710856,
+ "diff": 0.004065684667284908,
+ "ci": [
+  -0.009796730351666911,
+  0.01881367172641235
+ ],
+ "verdict": "tie",
+ "published_cnode": 0.211
+}

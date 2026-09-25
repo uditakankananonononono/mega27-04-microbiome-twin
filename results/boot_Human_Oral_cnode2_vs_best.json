@@ -1,0 +1,14 @@
+{
+ "dataset": "Human_Oral",
+ "arm": "cnode2",
+ "best_base": "graphtwin",
+ "arm_median": 0.22186239120443027,
+ "base_median": 0.202362799710856,
+ "diff": 0.019499591493574275,
+ "ci": [
+  0.01040304698107919,
+  0.03939047569479942
+ ],
+ "verdict": "LOSS",
+ "published_cnode": 0.211
+}
