@@ -62,3 +62,8 @@ Verdict: the genomic (GAI) version survives every phylogenetic model tried; the 
 ## IJSEM phenotypic database check (pre-registered 142c972; scripts/keystone_ijsem.py, results/keystone_ijsem.json)
 150 keystone-table genera matched to IJSEM oxygen preference (anaerobic=1). Spearman rho=0.35, one-sided p=4.4e-6; OLS adjusted for log abundance slope 0.059, HC3 p=6.7e-7 -> PASS.
 Caveat: IJSEM is one of the sources merged into Madin et al. 2020 (binary agreement 96.6%), so this confirms the annotation, not an independent replication.
+
+## Rival test: genome streamlining (pre-registered 66d7f05; scripts/keystone_genomesize.py, results/keystone_genomesize.json)
+NCBI Datasets v2 reference genomes (2,081 genomes, 190 genera; median size and GC per genus). GAI and log genome size correlate (Spearman -0.46).
+- Size/GC/abundance alone: R^2 0.043, log size slope -0.041, p=0.10.
+- Full model: GAI slope 0.028, HC3 p=1.3e-6; log size p=0.33; GC p=0.34 -> anaerobe association PASSES; the streamlining rival is not supported.

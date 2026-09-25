@@ -23,3 +23,4 @@ Madin et al. 2020 bacterial/archaeal trait database (condensed_species_NCBI),dat
 KEGG REST (genome list + KO-gene links),database,scripts/keystone_kegg.py,True,genomic anaerobic/aerobic marker check of keystones
 BV-BRC genome API (oxygen_requirement facets),database,scripts/keystone_bvbrc.py,True,third-source anaerobe annotation for keystone genera
 "IJSEM phenotypic database (Barberan et al. 2017, figshare 4272392)",database,scripts/keystone_ijsem.py,True,oxygen preference per genus; pre-registered check 142c972; overlaps Madin sources (not independent)
+NCBI Datasets v2 API (genome dataset_report),database/service,scripts/keystone_genomesize.py,True,reference-genome size and GC per genus; pre-registered 66d7f05
