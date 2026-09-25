@@ -1,0 +1,20 @@
+{
+ "tool": "ENA portal API + ENA taxonomy REST",
+ "n_genera": 203,
+ "n_resolved": 200,
+ "n_model": 200,
+ "G1_pass": true,
+ "slope_GAI": 0.0324559273977256,
+ "p_GAI_HC3": 1.8252645417758425e-09,
+ "slope_log_assemblies": -0.007888553300788421,
+ "p_log_assemblies": 0.25653433031193396,
+ "spearman_assemblies_vs_kegg_genomes": [
+  0.4924129044892693,
+  1.302406988036181e-13
+ ],
+ "spearman_frac_top_vs_log_assemblies": [
+  0.031674158631779054,
+  0.6561432280986416
+ ],
+ "A1_pass": true
+}

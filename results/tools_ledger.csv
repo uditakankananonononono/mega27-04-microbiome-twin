@@ -30,3 +30,4 @@ Disbiome (disbiome.ugent.be experiment API),database/web API,scripts/keystone_di
 Europe PMC REST API (search hitCount),web API,scripts/keystone_europepmc.py,True,pre-registered study-bias control 0358299; E1 PASS
 gglasso (Schaipp et al. 2021 graphical lasso),library,scripts/keystone_gglasso.py,True,alternative network inference for keystones; pre-registered 3129971; H1 FAILED
 Wikidata SPARQL endpoint (P2597 Gram staining),web API/knowledge graph,scripts/keystone_wikidata.py,True,pre-registered 0ecdd41 (+QID fix 1f20b4a); Madin Gram null replicated
+ENA portal API + ENA taxonomy REST (assembly counts),web API,scripts/keystone_ena.py,True,pre-registered sequencing-effort control 9451f14; A1 PASS

@@ -100,3 +100,8 @@ Verdict: the anaerobe-keystone association is specific to the ridge gLV-form (di
 Disclosure: the first run used a wrong Gram-positive item id (Q857525 instead of Q857288), giving a constant predictor; it was discarded and the fix committed before the valid run.
 3117 Wikidata genera with a single Gram value; 234 keystone-table genera matched; agreement with Madin 95.0% (n = 219; gate passed).
 Spearman(frac_top, Gram-negative) = -0.008, p = 0.90 -> the Madin null for Gram stain is replicated. Ridge keystones are not a Gram-negative artefact.
+
+## Sequencing-effort control with ENA (pre-registered 9451f14; scripts/keystone_ena.py, results/keystone_ena.json)
+200/203 genera resolved to ENA genus taxIds with public-assembly counts (ENA counts track KEGG genome counts, rho = 0.49).
+OLS frac_top ~ GAI + log assemblies + log abundance (HC3, n = 200): GAI slope 0.032, p = 1.8e-09; assemblies slope -0.008, p = 0.26 -> A1 PASS. Keystone fraction is unrelated to sequencing effort (rho = 0.03).
+Verdict: the ridge-definition GAI association is not a sequencing-effort artefact. (It remains method-specific; see gglasso.)
