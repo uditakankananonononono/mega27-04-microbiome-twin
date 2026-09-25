@@ -40,3 +40,5 @@ XGBoost (gradient-boosted trees),library,scripts/keystone_xgboost.py,True,pre-re
 InterPro API (protein counts per taxon and entry),web API,scripts/keystone_interpro.py,True,pre-registered anaerobe-index replication b327560; P1 PASS
 HOMD expanded Human Oral Microbiome Database (taxon table v4.2),database,scripts/keystone_homd.py,True,pre-registered oral-taxon rival 0aa4eb0 (+parser addendum 5658ee6); M1 PASS
 EBI Search REST (RNAcentral rRNA sequences),web API,scripts/keystone_rnacentral.py,True,pre-registered rRNA-effort control 9814c7a; R1 PASS
+bambi / PyMC (Bayesian hierarchical logistic),library,scripts/keystone_bambi.py,True,pre-registered Bayesian re-fit 45e3254; BY1 PASS
+NCBI PubTator3 API (search counts),web API,scripts/keystone_pubtator.py,True,pre-registered oral-index replication 45e3254 (+addendum 3d16589); PT1 FAIL

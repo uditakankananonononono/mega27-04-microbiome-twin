@@ -153,3 +153,12 @@ After the gglasso and igraph negatives, we tested whether oral origin (HOMD v4.2
 gglasso: oral coef 0.21, p = 0.027; igraph betweenness: oral coef 0.32, p = 0.0011 -> MG1 PASS (both new tests). GAI stays null under both (p = 0.35, 0.70).
 Ridge arm (reported only; the oral effect was seen there before registration): oral coef 0.14, p = 0.17; GAI 0.30, p = 5.7e-06. Note: the ridge logit hit the iteration limit without converging (statsmodels ConvergenceWarning); its numbers are indicative only. The gglasso and igraph fits converged.
 Verdict: oral-origin genera are more often network hubs under two independent network definitions, a candidate method-general correlate. It is modest, covariate-adjusted, and not causal. The anaerobe (GAI) association remains ridge-specific.
+
+## Bayesian re-fit of the oral-hub effect (bambi/PyMC; pre-registered 45e3254; results/keystone_bambi.json)
+Random study intercepts, 2 chains x 500 draws. gglasso: oral posterior mean 0.25, 95% HDI [0.12, 0.40], P(>0) = 1.00; igraph: 0.33 [0.18, 0.48], P(>0) = 1.00 -> BY1 PASS. Fixed-effect R-hat <= 1.01 (bambi warned R-hat > 1.01 for some other parameter; only 2 chains). GAI HDIs include 0 under both.
+Verdict: the HOMD oral effect is not an artefact of the clustered-SE frequentist model.
+
+## Literature oral index replication (NCBI PubTator3; pre-registered 45e3254, mechanics addendum 3d16589; results/keystone_pubtator.json)
+Oral literature fraction OLF = articles with "<genus> AND (oral OR dental)" / articles with "<genus>", 203 genera; Spearman with HOMD oral 0.54.
+gglasso: OLF_z coef 0.033, p = 0.57; igraph: 0.082, p = 0.23 -> PT1 FAILED. Ridge arm (reported only, fit did not converge): 0.21, p = 0.00015.
+Verdict: the method-general oral effect does NOT replicate with a continuous literature-derived oral index; it depends on the curated HOMD oral list. The oral-hub candidate is weakened to "HOMD-list-specific, one of two oral definitions". Next direction: test whether the HOMD effect comes from specific oral-dominant clades (leave-one-family-out).

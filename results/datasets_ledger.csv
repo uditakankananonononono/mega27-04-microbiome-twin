@@ -188,3 +188,4 @@ Ensembl Genomes genome hit counts for 203 genera (results/keystone_ensembl_count
 InterPro PFOR/COX1/RecA protein counts for 200 genera (results/keystone_interpro_counts.csv),InterPro,reference,signature-based replication of GAI
 HOMD taxon table v4.2 (data/ref/HOMD_taxon_table_v4.2.csv; 121 oral genera),HOMD,reference,oral-origin covariate
 RNAcentral rRNA sequence counts for 203 genera (results/keystone_rnacentral_counts.csv),RNAcentral,reference,marker-gene sequencing-effort covariate
+PubTator3 genus and genus+oral/dental article counts for 203 genera (results/keystone_pubtator_counts.csv),NCBI PubTator3,reference,literature oral index

@@ -1,0 +1,29 @@
+{
+ "tool": "NCBI PubTator3 API (search counts)",
+ "n_genera": 203,
+ "n_with_OLF": 203,
+ "G1_pass": true,
+ "spearman_OLF_vs_HOMD_oral": [
+  0.5433740636333713,
+  5.456702282879014e-17
+ ],
+ "gglasso": {
+  "n_rows": 9771,
+  "coef_OLF_z": 0.033426930547630844,
+  "p_OLF_z": 0.5662503303940378,
+  "converged": true
+ },
+ "igraph": {
+  "n_rows": 9697,
+  "coef_OLF_z": 0.08196711601891912,
+  "p_OLF_z": 0.22909172698256686,
+  "converged": true
+ },
+ "ridge_reported_only": {
+  "n_rows": 9654,
+  "coef_OLF_z": 0.21322279804469463,
+  "p_OLF_z": 0.00015372238738980558,
+  "converged": false
+ },
+ "PT1_pass": false
+}
