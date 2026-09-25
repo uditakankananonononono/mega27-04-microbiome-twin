@@ -51,3 +51,10 @@ Verdict: the anaerobe-keystone candidate replicates with an independent genomic 
 Oxygen-requirement annotations of 11,323 BV-BRC genomes (facet by genus; genera with >= 3 annotated genomes: 102 of the keystone genera).
 Agreement: Spearman 0.83 with Madin, 0.81 with KEGG GAI. Keystone frequency: rho=0.34 (p=5.5e-4). Within-study FE logit with abundance + prevalence (6,804 rows, 151 studies): coef 0.44, p=5.6e-4.
 The candidate replicates across three trait sources (phenotype synthesis, KEGG gene content, BV-BRC metadata). They are not fully independent (curated phenotype sources overlap), and none addresses the inference-method caveat.
+
+## Phylogenetic control (PGLS, GTDB bac120 tree) - scripts/keystone_pgls.py, results/keystone_pgls.json
+227 keystone-table genera mapped to one representative GTDB bac120 tip each (tree: 189,801 tips). Brownian covariance from root-to-LCA path lengths, Pagel's lambda by ML on a 0..1 grid.
+- Keystone fraction has phylogenetic signal: lambda = 0.4, LR test vs lambda=0 p = 0.0042. So species-level non-independence is real and must be controlled.
+- PGLS frac_top ~ Madin anaerobe (n=212): lambda_ML=0.2, slope 0.053, p=1.8e-4. Under full Brownian motion (lambda=1): slope 0.048, p=0.097 (NOT significant).
+- PGLS frac_top ~ KEGG anaerobic-gene index GAI (n=193): lambda_ML=0.2, slope 0.037, p=4.3e-7; under full Brownian: slope 0.032, p=0.0064.
+Verdict: the genomic (GAI) version survives every phylogenetic model tried; the binary Madin-anaerobe version survives at the ML lambda but not under strict Brownian motion. Limits: one tip per genus, grid-search lambda, no genus-level tree uncertainty.
