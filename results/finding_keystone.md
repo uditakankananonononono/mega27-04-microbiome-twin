@@ -143,3 +143,7 @@ Verdict: replicates with signature-based annotation; protein sets overlap with U
 ## HOMD oral-taxon rival (pre-registered 0aa4eb0, parser addendum 5658ee6; scripts/keystone_homd.py, results/keystone_homd.json)
 46 of 203 GAI genera are oral in HOMD v4.2 (Body Site contains "oral"). OLS frac_top ~ GAI + oral + log abundance (HC3): GAI slope 0.024, p = 3.7e-06 -> M1 PASS. Oral genera do have higher keystone fraction (coef 0.042, p = 0.0084), and 6 of the top 10 ridge keystones are oral. Among the 157 non-oral genera alone, GAI slope 0.024, p = 4.7e-06.
 Verdict: oral origin is a real, separate correlate of ridge keystone status but does not explain the GAI association. Ridge definition only.
+
+## RNAcentral rRNA sequencing-effort control (pre-registered 9814c7a; scripts/keystone_rnacentral.py, results/keystone_rnacentral.json)
+rRNA sequence counts for all 203 GAI genera (Spearman with ENA assemblies 0.61). OLS frac_top ~ GAI + log10(1 + rRNA) + log abundance (HC3): GAI slope 0.027, p = 8.2e-06 -> R1 PASS; rRNA slope -0.010, p = 0.20.
+Verdict: marker-gene sequencing effort does not explain the association. Free-text counts are noisy. Ridge definition only.

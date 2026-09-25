@@ -1,0 +1,16 @@
+{
+ "tool": "EBI Search REST (RNAcentral rRNA)",
+ "n_genera": 203,
+ "n_with_counts": 203,
+ "n_model": 203,
+ "G1_pass": true,
+ "slope_GAI": 0.027162924939821274,
+ "p_GAI_HC3": 8.21536538180197e-06,
+ "slope_log_rrna": -0.010095594285971383,
+ "p_log_rrna": 0.20044925166082828,
+ "spearman_rrna_vs_ena": [
+  0.6085770837257027,
+  1.1880942589007877e-21
+ ],
+ "R1_pass": true
+}
