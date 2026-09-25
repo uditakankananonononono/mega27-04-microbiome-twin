@@ -1,0 +1,16 @@
+{
+ "n_genera": 150,
+ "spearman_rho": 0.3538739654545073,
+ "p_one_sided": 4.447919099303382e-06,
+ "ols_adj_abundance": {
+  "n": 150,
+  "slope_anaerobe": 0.059226450423194146,
+  "p_two_sided_HC3": 6.710550082316153e-07,
+  "slope_log_abund": -0.018388995575288978
+ },
+ "agreement_with_madin_binary": {
+  "n": 149,
+  "frac_agree": 0.9664429530201343
+ },
+ "verdict": "PASS"
+}

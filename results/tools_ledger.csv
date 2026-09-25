@@ -22,3 +22,4 @@ GTDB (release v232 bac120 taxonomy),database,scripts/keystone_gtdb.py,True,indep
 Madin et al. 2020 bacterial/archaeal trait database (condensed_species_NCBI),database,scripts/keystone_traits.py,True,keystone physiological trait association
 KEGG REST (genome list + KO-gene links),database,scripts/keystone_kegg.py,True,genomic anaerobic/aerobic marker check of keystones
 BV-BRC genome API (oxygen_requirement facets),database,scripts/keystone_bvbrc.py,True,third-source anaerobe annotation for keystone genera
+"IJSEM phenotypic database (Barberan et al. 2017, figshare 4272392)",database,scripts/keystone_ijsem.py,True,oxygen preference per genus; pre-registered check 142c972; overlaps Madin sources (not independent)

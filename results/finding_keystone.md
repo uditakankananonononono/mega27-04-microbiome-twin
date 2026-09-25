@@ -58,3 +58,7 @@ The candidate replicates across three trait sources (phenotype synthesis, KEGG g
 - PGLS frac_top ~ Madin anaerobe (n=212): lambda_ML=0.2, slope 0.053, p=1.8e-4. Under full Brownian motion (lambda=1): slope 0.048, p=0.097 (NOT significant).
 - PGLS frac_top ~ KEGG anaerobic-gene index GAI (n=193): lambda_ML=0.2, slope 0.037, p=4.3e-7; under full Brownian: slope 0.032, p=0.0064.
 Verdict: the genomic (GAI) version survives every phylogenetic model tried; the binary Madin-anaerobe version survives at the ML lambda but not under strict Brownian motion. Limits: one tip per genus, grid-search lambda, no genus-level tree uncertainty.
+
+## IJSEM phenotypic database check (pre-registered 142c972; scripts/keystone_ijsem.py, results/keystone_ijsem.json)
+150 keystone-table genera matched to IJSEM oxygen preference (anaerobic=1). Spearman rho=0.35, one-sided p=4.4e-6; OLS adjusted for log abundance slope 0.059, HC3 p=6.7e-7 -> PASS.
+Caveat: IJSEM is one of the sources merged into Madin et al. 2020 (binary agreement 96.6%), so this confirms the annotation, not an independent replication.

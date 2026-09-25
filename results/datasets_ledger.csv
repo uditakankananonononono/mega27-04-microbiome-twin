@@ -174,3 +174,4 @@ GTDB r232 bac120 taxonomy,GTDB,reference,taxonomy replication
 Madin 2020 condensed_species_NCBI,github bacteria-archaea-traits,reference,traits
 KEGG genome list + 10 KO links,KEGG REST,reference,genomic anaerobe index
 BV-BRC oxygen_requirement facets,BV-BRC API,reference,third anaerobe source
+figshare:4272392,figshare (IJSEM phenotypic db),reference,anaerobe-keystone IJSEM check
