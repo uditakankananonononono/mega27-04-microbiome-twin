@@ -19,7 +19,7 @@ def ols(M):
 def main():
     if not os.path.exists(LOCAL):
         os.makedirs("data/ref", exist_ok=True); urllib.request.urlretrieve(URL, LOCAL)
-    T = pd.read_csv(LOCAL, sep=None, engine="python"); og, gcol, scol = oral_genera(T)
+    T = pd.read_csv(LOCAL, sep="\t", skiprows=1, dtype=str); og, gcol, scol = oral_genera(T)
     K = pd.read_csv("results/keystone_kegg_genus.csv").dropna(subset=["GAI"]).drop_duplicates("genus_clean")
     ab = pd.read_csv("results/keystone_genus_abundance.csv.gz").groupby("genus").mean_ra.mean().rename("mean_ra")
     M = K.merge(ab, left_on="genus_clean", right_index=True).dropna(subset=["mean_ra"]).copy(); M["oral"] = M.genus_clean.isin(og).astype(int)

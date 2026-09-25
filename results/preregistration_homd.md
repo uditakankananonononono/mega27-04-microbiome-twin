@@ -6,3 +6,5 @@ Gate G1: >= 20 GAI genera classed oral.
 Pass (M1): GAI slope > 0, two-sided p < 0.05 with the oral covariate. Secondary (reported, not gates): oral coefficient; GAI slope on non-oral genera only.
 Ridge keystone definition only.
 Script: scripts/keystone_homd.py; output results/keystone_homd.json.
+
+Addendum (mechanics, before any model result): the first run failed at parsing (the file starts with a one-line title and is tab-delimited). Parser changed to sep="\t", skiprows=1. No results were produced before this fix; the header line shows the genus column "Genus" and the site column "Body Site(s)".
