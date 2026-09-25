@@ -11,4 +11,5 @@ python3 -c "import csv; print('tools:', sum(1 for _ in csv.reader(open('results/
 python3 -c "import csv; print('datasets:', sum(1 for _ in csv.reader(open('results/datasets_ledger.csv'))) - 1)"
 grep -c "P.equation" paper/build_paper.py paper/paper_expansion.py
 git add paper/ results/ && git commit -m "final paper rebuild with complete arm results" || true
+git bundle create paper/mega27-04-microbiome-twin.bundle --all
 GIT_SSH_COMMAND="ssh -i ~/.ssh/id_ed25519_mega27 -o StrictHostKeyChecking=no" git push origin HEAD
