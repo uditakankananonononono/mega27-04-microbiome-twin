@@ -1,0 +1,14 @@
+{
+ "dataset": "Soil_Vitro",
+ "arm": "cnode2",
+ "best_base": "glv",
+ "arm_median": 0.11385378965111792,
+ "base_median": 0.11654783988523802,
+ "diff": -0.0026940502341201017,
+ "ci": [
+  -0.05531152865086657,
+  0.043402421738310104
+ ],
+ "verdict": "tie",
+ "published_cnode": 0.079
+}

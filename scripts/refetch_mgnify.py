@@ -12,8 +12,11 @@ def get(url, tries=3):
             time.sleep(2 * (k + 1))
     return None
 
+import sys
+SKIP = set(sys.argv[1:])  # study IDs to defer (e.g. slow-dribble downloads); retry separately
 n_ok = n_fail = 0
-for r in csv.DictReader(open("data/raw/mgnify/manifest.csv")):
+rows = [r for r in csv.DictReader(open("data/raw/mgnify/manifest.csv")) if r["study"] not in SKIP]
+for r in rows:
     if os.path.exists(r["file"]): n_ok += 1; continue
     raw = get(r["source_url"])
     if raw is None: print("FAIL", r["study"], flush=True); n_fail += 1; continue

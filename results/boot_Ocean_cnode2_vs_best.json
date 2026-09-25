@@ -1,0 +1,14 @@
+{
+ "dataset": "Ocean",
+ "arm": "cnode2",
+ "best_base": "glv",
+ "arm_median": 0.07498334301768647,
+ "base_median": 0.07033641603306215,
+ "diff": 0.004646926984624322,
+ "ci": [
+  0.00032703454002293,
+  0.011495315690171447
+ ],
+ "verdict": "LOSS",
+ "published_cnode": 0.06
+}
