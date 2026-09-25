@@ -1,0 +1,18 @@
+{
+ "tool": "UniProt REST (uniprotkb search counts, reference proteomes)",
+ "n_queried": 200,
+ "n_with_recA": 198,
+ "spearman_UGAI_vs_KEGG_GAI": 0.8684759916750718,
+ "n_validation": 198,
+ "G1_pass": true,
+ "spearman_frac_top_vs_UGAI": [
+  0.28950050540853395,
+  3.522222476839299e-05
+ ],
+ "ols": {
+  "n": 198,
+  "slope_UGAI": 0.021890617523273537,
+  "p_HC3": 0.001292930143357842
+ },
+ "U1_pass": true
+}

@@ -32,3 +32,4 @@ gglasso (Schaipp et al. 2021 graphical lasso),library,scripts/keystone_gglasso.p
 Wikidata SPARQL endpoint (P2597 Gram staining),web API/knowledge graph,scripts/keystone_wikidata.py,True,pre-registered 0ecdd41 (+QID fix 1f20b4a); Madin Gram null replicated
 ENA portal API + ENA taxonomy REST (assembly counts),web API,scripts/keystone_ena.py,True,pre-registered sequencing-effort control 9451f14; A1 PASS
 GBIF API v1 (species/match + occurrence country facets),web API,scripts/keystone_gbif.py,True,pre-registered generalism rival 9f6cc62; B1 PASS
+UniProt REST API (uniprotkb search counts, reference proteomes),web API,scripts/keystone_uniprot.py,True,pre-registered anaerobe-index replication c9ea858; U1 PASS

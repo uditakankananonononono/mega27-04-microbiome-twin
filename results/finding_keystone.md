@@ -110,3 +110,8 @@ Verdict: the ridge-definition GAI association is not a sequencing-effort artefac
 202/203 genera matched exactly in the GBIF backbone; 196 in the model. OLS frac_top ~ GAI + log occurrences + log countries + log abundance (HC3):
 GAI slope 0.019, p = 0.024 -> B1 PASS. Occurrences slope -0.040 (p = 0.0026, negative: keystones are if anything less often recorded); countries p = 0.40. Rival (cosmopolitan generalists) not supported.
 Note: GAI effect is smaller here (0.019 vs 0.032 in the ENA model), so part of the signal shares variance with GBIF occurrence volume. Ridge definition only.
+
+## UniProt annotation-pipeline replication (pre-registered c9ea858; scripts/keystone_uniprot.py, results/keystone_uniprot.json)
+UGAI = PFOR (EC 1.2.7.1) minus cytochrome-c oxidase (EC 7.1.1.9) entries per recA, reference proteomes only; 198 genera. Validity gate passed: Spearman with KEGG GAI 0.87. (Counts fetched in chunks with the script's own query function after a single run hit the time limit.)
+frac_top vs UGAI: rho = 0.29 (p = 3.5e-05); OLS with log abundance: slope 0.022, HC3 p = 0.0013 -> U1 PASS.
+Verdict: the ridge-definition anaerobe association replicates with a different annotation pipeline (UniRule/ARBA EC calls); genome sets overlap with KEGG, so it is not a new-genome replication.
