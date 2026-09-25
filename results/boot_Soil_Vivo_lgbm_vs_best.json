@@ -1,0 +1,14 @@
+{
+ "dataset": "Soil_Vivo",
+ "arm": "lgbm",
+ "best_base": "glv",
+ "arm_median": 0.10949007957381021,
+ "base_median": 0.10636358434815583,
+ "diff": 0.003126495225654377,
+ "ci": [
+  -0.0012844798412270707,
+  0.008173913905126357
+ ],
+ "verdict": "tie",
+ "published_cnode": 0.107
+}
