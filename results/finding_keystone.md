@@ -134,3 +134,8 @@ Verdict: the ENA result (A1) replicates with a second, curated genome archive. F
 ## XGBoost out-of-sample test (pre-registered 9cf67ae; scripts/keystone_xgboost.py, results/keystone_xgboost.json)
 200 genera; 20 repeats of 5-fold CV. Adding GAI raised out-of-fold R^2 in 20/20 repeats (mean delta 0.27, sign test p = 1.9e-06) -> X1 PASS by the pre-registered criterion.
 Important negative: both models have NEGATIVE absolute out-of-fold R^2 (full -0.11, reduced -0.38), i.e. worse than predicting the mean. XGBoost with these settings overfits at n = 200; GAI makes it less wrong but gives no usable out-of-sample prediction of keystone fraction. The linear OLS associations are not a predictive model.
+
+## InterPro anaerobe-index replication (pre-registered b327560; scripts/keystone_interpro.py, results/keystone_interpro.json)
+IGAI from InterPro family counts (PFOR IPR011895, COX1 IPR000883, RecA IPR013765); 198 genera with RecA. Validity gate passed: Spearman with KEGG GAI 0.89. Cache filled over five timed runs of the script itself (pre-registered mechanism).
+frac_top vs IGAI: rho 0.29 (p = 2.7e-05); OLS with log abundance: slope 0.021, HC3 p = 0.00024 -> P1 PASS.
+Verdict: replicates with signature-based annotation; protein sets overlap with UniProt (tool 29), so not independent genomes. Ridge definition only.

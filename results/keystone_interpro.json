@@ -1,0 +1,18 @@
+{
+ "tool": "InterPro API (protein counts per taxon and entry)",
+ "n_queried": 200,
+ "n_with_recA": 198,
+ "spearman_IGAI_vs_KEGG_GAI": 0.89385855488213,
+ "n_validation": 198,
+ "G1_pass": true,
+ "spearman_frac_top_vs_IGAI": [
+  0.2937718780106917,
+  2.661769098412814e-05
+ ],
+ "ols": {
+  "n": 198,
+  "slope_IGAI": 0.020827867628752106,
+  "p_HC3": 0.00023781700885623424
+ },
+ "P1_pass": true
+}

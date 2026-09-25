@@ -185,3 +185,4 @@ GBIF occurrence and country counts for 202 genera (results/keystone_gbif_counts.
 UniProt reference-proteome EC 7.1.1.9 / EC 1.2.7.1 / recA counts for 200 genera (results/keystone_uniprot_counts.csv),UniProt,reference,annotation-pipeline replication of GAI
 Crossref works counts for 248 genera (results/keystone_crossref_counts.csv),Crossref,reference,independent literature-volume covariate
 Ensembl Genomes genome hit counts for 203 genera (results/keystone_ensembl_counts.csv),EBI Search / Ensembl Bacteria,reference,sequencing-effort covariate (curated archive)
+InterPro PFOR/COX1/RecA protein counts for 200 genera (results/keystone_interpro_counts.csv),InterPro,reference,signature-based replication of GAI
