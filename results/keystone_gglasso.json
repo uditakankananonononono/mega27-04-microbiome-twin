@@ -1,0 +1,19 @@
+{
+ "tool": "gglasso graphical lasso (Schaipp et al. 2021)",
+ "lambda1": 0.1,
+ "n_studies_solved": 160,
+ "G1_pass": true,
+ "n_rows": 9771,
+ "coef_GAI": 0.07923650882713347,
+ "p_GAI": 0.15483371895556813,
+ "coef_lra": 0.32198121149241177,
+ "coef_prevalence": 0.27691559098828533,
+ "kappa_vs_ridge": 0.0446159520356126,
+ "n_shared_rows": 17499,
+ "spearman_genus_frac_vs_ridge": [
+  0.011843221519932836,
+  0.852780802438839
+ ],
+ "n_genera_ge20": 248,
+ "H1_pass": false
+}

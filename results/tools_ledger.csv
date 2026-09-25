@@ -28,3 +28,4 @@ Open Tree of Life API v3 (TNRS match_names + induced synthetic subtree),web API,
 ProTraits (Brbic et al. 2016; protraits.irb.hr integrated Pr>=0.95),database,scripts/keystone_protraits.py,True,pre-registered oxygen check 4f748be; coverage gate FAILED (51 genera)
 Disbiome (disbiome.ugent.be experiment API),database/web API,scripts/keystone_disbiome.py,True,pre-registered literature check 899f554; D1 PASS
 Europe PMC REST API (search hitCount),web API,scripts/keystone_europepmc.py,True,pre-registered study-bias control 0358299; E1 PASS
+gglasso (Schaipp et al. 2021 graphical lasso),library,scripts/keystone_gglasso.py,True,alternative network inference for keystones; pre-registered 3129971; H1 FAILED
