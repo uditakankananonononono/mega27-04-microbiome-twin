@@ -11,3 +11,5 @@ data/ijsem/
 data/ncbi_datasets/
 data/protraits/
 data/disbiome/
+
+catboost_info/
