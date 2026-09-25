@@ -247,6 +247,12 @@ P.p(f"It agrees with the Madin anaerobe share (Spearman {KK['vs_madin_anaerobe']
     f"{KK['fe_logit_GAI']['n_studies']} studies), GAI has coefficient {KK['fe_logit_GAI']['coef']['GAI']:.2f} (p = {KK['fe_logit_GAI']['p']['GAI']:.0e}). "
     f"Most of this is the absence of aerobic respiration (coxA {KK['fe_logit_PFOR_coxA']['coef']['coxA']:.2f}, p = {KK['fe_logit_PFOR_coxA']['p']['coxA']:.0e}; "
     f"PFOR alone p = {KK['fe_logit_PFOR_coxA']['p']['PFOR']:.2f}), plus complete sulfate reduction ({KK['fe_logit_DSR']['coef']['DSR']:+.2f}, p = {KK['fe_logit_DSR']['p']['DSR']:.0e}).")
+KBV = json.load(open("results/keystone_bvbrc.json"))
+P.p(f"Third source (BV-BRC). Oxygen-requirement annotations of {KBV['n_bvbrc_genomes_annotated']:,} BV-BRC genomes cover {KBV['n_genera_bvbrc']} keystone genera "
+    f"(>= 3 annotated genomes). Their anaerobe share agrees with Madin (rho = {KBV['rho_vs_madin'][0]:.2f}) and KEGG GAI (rho = {KBV['rho_vs_kegg_gai'][0]:.2f}), "
+    f"tracks keystone frequency (rho = {KBV['rho_vs_frac_top'][0]:.2f}, p = {KBV['rho_vs_frac_top'][1]:.0e}), and keeps its effect in the fixed-effect logit "
+    f"(coefficient {KBV['fe_logit']['coef']['bv_anaerobe']:.2f}, p = {KBV['fe_logit']['p']['bv_anaerobe']:.0e}; {KBV['fe_logit']['n_rows']:,} rows, {KBV['fe_logit']['n_studies']} studies). "
+    "The three trait sources overlap partly in their curated inputs, so they are not fully independent.")
 P.table(["biome", "studies", "mean difference (top - rest)", "p (sign-flip)", "q (BH)"],
         [[b, v["n"], f"{v['mean_diff']:+.3f}", f"{v['p']:.3f}", f"{v['q_bh']:.2f}"] for b, v in bb.items()],
         "Within-study anaerobe difference by biome (results/keystone_traits_biome.json).")
@@ -320,6 +326,7 @@ for r in [
     "Mitchell AL, et al. MGnify: the microbiome analysis resource in 2020. Nucleic Acids Res 2020.",
     "Gibson TE, Kim Y, Acharya S, et al. Learning ecosystem-scale dynamics from microbiome data with MDSINE2. Nature Microbiology 2025. https://www.nature.com/articles/s41564-025-02112-6",
     "Kanehisa M, Furumichi M, Sato Y, et al. KEGG for taxonomy-based analysis of pathways and genomes. Nucleic Acids Res 2023.",
+    "Olson RD, Assaf R, Brettin T, et al. Introducing the Bacterial and Viral Bioinformatics Resource Center (BV-BRC). Nucleic Acids Res 2023.",
     "Madin JS, Nielsen DA, Brbic M, et al. A synthesis of bacterial and archaeal phenotypic trait data. Scientific Data 2020;7:170.",
     "Parks DH, Chuvochina M, Rinke C, et al. GTDB: an ongoing census of bacterial and archaeal diversity through a phylogenetically consistent, rank normalized and complete genome-based taxonomy. Nucleic Acids Res 2022.",
     "Bucci V, et al. MDSINE: Microbial Dynamical Systems INference Engine. Genome Biology 2016.",
