@@ -67,3 +67,21 @@ def test_conststack_smoke():
     pred = fit_predict_conststack(Z[:16], P[:16], Z[16:], inner=2, seed=0)
     assert pred.shape == (4, 6)
     assert np.allclose(pred.sum(1), 1, atol=1e-5)
+
+
+def test_cnode2_smoke():
+    from microtwin.evaluate import fit_predict
+    Z, P = _toy(n=20, taxa=6)
+    pred = fit_predict("cnode2", Z[:16], P[:16], Z[16:], seed=0)
+    assert pred.shape == (4, 6)
+    assert np.allclose(pred.sum(1), 1, atol=1e-4)
+    assert (pred[Z[16:] == 0] == 0).all()
+
+
+def test_lgbm_smoke():
+    from microtwin.evaluate import fit_predict
+    Z, P = _toy(n=20, taxa=6)
+    pred = fit_predict("lgbm", Z[:16], P[:16], Z[16:], seed=0)
+    assert pred.shape == (4, 6)
+    assert np.allclose(pred.sum(1), 1, atol=1e-5)
+    assert (pred[Z[16:] == 0] == 0).all()

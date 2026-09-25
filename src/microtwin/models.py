@@ -201,3 +201,16 @@ class ConstStack(nn.Module):
         w = torch.softmax(self.logits, 0).unsqueeze(0).unsqueeze(-1)  # 1 x M x 1
         p = (w * base_preds).sum(1)
         return p / p.sum(1, keepdim=True).clamp(min=1e-12)
+
+
+class CNODE2(nn.Module):
+    """Two stacked cNODE1 layers trained end-to-end (Michel-Mata 2022's cNODE2)."""
+    name = "cnode2"
+
+    def __init__(self, n: int, steps: int = 20):
+        super().__init__()
+        self.l1 = CNODE(n, steps=steps)
+        self.l2 = CNODE(n, steps=steps)
+
+    def forward(self, z):
+        return self.l2(self.l1(z))
