@@ -1,0 +1,26 @@
+{
+  "status": "metadata_design_only_not_result",
+  "source_commit": "d374f5e7c09da659d407af5664604b81451c5df4",
+  "source_sha256": "c978b8469113c81ec1e54a8a99e555609d52671bc039e0f62c6ce7f8dba75224",
+  "profile_rows": 72,
+  "unique_library_ids": 72,
+  "patient_labels": 24,
+  "group_patient_labels": {
+    "Case": 13,
+    "Control": 11
+  },
+  "timepoint_rows": {
+    "PRE": 24,
+    "DURING": 24,
+    "POST": 24
+  },
+  "patient_labels_with_all_three_phases": 24,
+  "duplicate_patient_timepoints": 0,
+  "profile_columns": 681,
+  "taxonomic_hierarchy_columns": 677,
+  "source_accessions": [
+    "PRJEB41865",
+    "PRJEB41866"
+  ],
+  "note": "NUH source table metadata only. Group/patient labels are not a rights or independent-source check; taxonomic ancestors cannot be summed. No abundance outcomes or model errors examined; cohort is viewed for method development, not final untouched test."
+}

@@ -22,3 +22,6 @@ data/source_family_candidates/PERTURB/*.csv
 
 # Harris source map includes clinical/symptom fields. Keep only aggregate QC and hash.
 data/source_family_candidates/HARRIS/mapping_human_volunteer.txt
+
+# Human subject-level profile table: aggregate design screen only.
+data/source_family_candidates/RECOVERY/NUH_StoolSamples_MetaPhlAn2.txt
