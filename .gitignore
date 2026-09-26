@@ -16,3 +16,6 @@ catboost_info/
 
 # EMP full BIOM is 223MB > GitHub 100MB limit; preserve as local cache or upload external artifact.
 data/source_family_candidates/EMP/*.biom
+
+# Re-fetchable participant-related secondary metadata; aggregate screen only is versioned.
+data/source_family_candidates/PERTURB/*.csv

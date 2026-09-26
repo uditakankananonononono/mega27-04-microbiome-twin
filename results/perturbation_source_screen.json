@@ -1,0 +1,56 @@
+{
+  "status": "source_metadata_screen_only",
+  "source_commit": "39372a71a2814462b728561bdf38598299e345ac",
+  "records": [
+    {
+      "source_name": "Hagan_2019_metadata.csv",
+      "secondary_accession": "SRP168524",
+      "metadata_rows": 264,
+      "unique_runs": 264,
+      "unique_sample_accessions": 264,
+      "exact_secondary_accession_in_old_mgnify_audit": false,
+      "source_sha256": "d52985b791da5824b17905eb4bf0196ff948a0fed4c9e833d6bb8f0fde9f7757",
+      "status": "candidate_metadata_not_eligible_perturbation_validation",
+      "distinct_subject_labels": 33,
+      "distinct_timepoint_labels": 9,
+      "subject_day_duplicates": 0,
+      "treatment_subject_counts": {
+        "5 daily oral doses of Neomycin, Vancomycin, Metronidazole starting on Day -3, and TIV vaccine on Day 0": 16,
+        "Trivalent Inactivated Influenza (TIV) vaccine given on Day 0": 17
+      },
+      "note": "Original paper reports phase 1: 22 participants (11 antibiotics); phase 2: 11 (5 antibiotics). Combined 33 labels match the deposited metadata; phase identity per sample is not independently verified."
+    },
+    {
+      "source_name": "Palleja_2018_metadata.csv",
+      "secondary_accession": "ERP022986",
+      "metadata_rows": 114,
+      "unique_runs": 114,
+      "unique_sample_accessions": 57,
+      "exact_secondary_accession_in_old_mgnify_audit": false,
+      "source_sha256": "774ba99a5daa6a8a0a4ec5849f082e9a836efea5f9db80e539b5d35494e718b6",
+      "status": "candidate_metadata_not_eligible_perturbation_validation",
+      "runs_per_unique_sample": 2.0,
+      "subject_and_treatment_labels_in_this_metadata": false,
+      "note": "The curated accession table alone has no per-person or intervention day key; 114 runs are only 57 unique sample accessions."
+    },
+    {
+      "source_name": "Taur_2018_metadata.csv",
+      "secondary_accession": "SRP162022",
+      "metadata_rows": 3119,
+      "unique_runs": 3119,
+      "unique_sample_accessions": 3107,
+      "exact_secondary_accession_in_old_mgnify_audit": false,
+      "source_sha256": "459aeba1de3ced0c2cfaedc9dc9abc61e9bacdda2c15a83586b037816dc8dfdf",
+      "status": "candidate_metadata_not_eligible_perturbation_validation",
+      "nonmissing_patientID_rows": 3117,
+      "distinct_patientID_labels": 746,
+      "library_strategy_rows": {
+        "AMPLICON": 3105,
+        "WGS": 14
+      },
+      "note": "Most records have patient/day labels, but 14 WGS runs mixed with 16S, and transplant/FMT/antibiotic treatment labels require original-protocol reconciliation."
+    }
+  ],
+  "verified_independent_perturbation_datasets": 0,
+  "note": "Metadata availability and exact old-accession absence do not prove source independence, consent, cross-assay compatibility, or valid intervention predictions. No taxon outcomes read or scored."
+}
