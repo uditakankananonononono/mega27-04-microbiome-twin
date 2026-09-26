@@ -76,6 +76,18 @@ def cmd_dependence(a):
     return 0
 
 
+def cmd_inspect(a):
+    from .research_intake import inspect_local_matrix
+    try:
+        report = inspect_local_matrix(a.table, unit=a.unit, source_id=a.source_id,
+                                      processing_authorized=a.processing_authorized,
+                                      subject_map=a.subject_map)
+    except ValueError as e:
+        sys.exit(str(e))
+    print(json.dumps(report, indent=2))
+    return 0
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="microtwin")
     sp = ap.add_subparsers(dest="cmd", required=True)
@@ -91,6 +103,13 @@ def main(argv=None):
     d.add_argument("--seed", type=int, default=0)
     d.add_argument("--json")
     d.set_defaults(f=cmd_dependence)
+    i = sp.add_parser("inspect", help="local schema/QC only; no prediction or upload")
+    i.add_argument("table", help="samples x taxa TSV/CSV, sample_id first")
+    i.add_argument("--unit", choices=("counts","relative_abundance","absolute_abundance"), required=True)
+    i.add_argument("--source-id", required=True)
+    i.add_argument("--processing-authorized", action="store_true", help="researcher declaration, not proof of rights")
+    i.add_argument("--subject-map", help="CSV with sample_id,subject_id for exact grouping check")
+    i.set_defaults(f=cmd_inspect)
     a = ap.parse_args(argv); return a.f(a)
 
 
