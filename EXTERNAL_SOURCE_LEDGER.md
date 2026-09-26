@@ -33,3 +33,6 @@ Original eLife study and official source data: https://elifesciences.org/article
 
 ## CEREMI same-trial publication guard, 2026-09-26 18:08 IST
 The 2019 16S, 2022 gLV/mixed-effect and 2024 multi-omics publications are outputs of the same 22-person cefotaxime/ceftriaxone CEREMI trial. See `data/source_family_candidates/CEREMI_SOURCE_FAMILY.md` for exact observed publication and accession URLs. PRJEB28341 and PRJEB58157 are modality/accession leads, not separate independent validation cohorts. No abundance data viewed or metric run.
+
+## Anthony healthy-volunteer antibiotic cohort mirror, 2026-09-26 18:24 IST
+Original PRJNA664754 trial https://pmc.ncbi.nlm.nih.gov/articles/PMC9066705/ is linked by live MGnify API https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006765 to old-audit TPA assembly MGYS00006765 / PRJEB75578. See `data/source_family_candidates/ANTHONY_2022_MIRROR.md`. Exclude as unseen source family; no outcomes or model scores viewed.

@@ -85,3 +85,6 @@ Private GitHub repo https://github.com/uditakankananonononono/mega27-04-microbio
 
 ## 18:08 IST CEREMI publication-family overlap guard
 - The 2019 16S and 2024 multi-omics papers and a 2022 gLV/mixed-effect modeling paper all concern the same CEREMI 22-volunteer antibiotic trial. Recorded exact source URLs and PRJEB28341/PRJEB58157 accession leads in `data/source_family_candidates/CEREMI_SOURCE_FAMILY.md`. Never count these as separate independent validation cohorts or train/test split a shared person's modalities. No outcome data read. The published dynamics model may be a same-task comparator only after units/horizon/input matching. Independent final source still missing.
+
+## 18:24 IST adult cohort source-family collision
+- Anthony 2022 antibiotic longitudinal trial PRJNA664754 is the primary-source parent of old-audit MGYS00006765 / PRJEB75578 TPA assembly, per live MGnify record and pinned old manifest. It is **not** a fresh independent final source even though its primary study accession differs. Proof links and distinction between assembly samples and original participants in `data/source_family_candidates/ANTHONY_2022_MIRROR.md`. No abundance outcomes viewed. Prospectively independent external benchmark cohort remains missing.

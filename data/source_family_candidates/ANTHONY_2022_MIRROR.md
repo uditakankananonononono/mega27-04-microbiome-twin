@@ -1,0 +1,5 @@
+# Anthony adult antibiotic cohort mirror exclusion
+
+Original 2022 adult longitudinal antibiotic study: https://pmc.ncbi.nlm.nih.gov/articles/PMC9066705/ . Its deposited healthy-volunteer shotgun data are BioProject PRJNA664754 in the paper's key resources and data-availability statement; ICU comparator PRJNA703034 is a separate comparator, **not** a follow-up independent cohort from the healthy volunteers.
+
+MGnify live study https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006765 identifies MGYS00006765 / PRJEB75578 as a third-party annotation metagenome assembly derived from **PRJNA664754**. The project's old 160-study MGnify audit already includes MGYS00006765 in `data/raw/mgnify/manifest.csv`, with that exact parent accession in the study name. Therefore the original PRJNA664754 healthy-volunteer cohort and MGYS00006765 are the same biological source family, not disjoint studies or a fresh untouched validation family. Do not count its 28 MGnify assembly samples as independent from the original trial's sequenced runs; exact run/sample mapping not inspected. No abundance outcomes opened or model scored in this exclusion screen.
