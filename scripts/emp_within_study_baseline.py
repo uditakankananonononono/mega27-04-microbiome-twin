@@ -25,6 +25,9 @@ INFO=ROOT/'data/source_family_candidates/EMP/emp_2k_unambiguous_genus_info.json'
 
 def summarize():
     info=json.loads(INFO.read_text())
+    expected_metadata_sha256='0e4a9d960ec7ccebc0dd4d7de9e4e4ab98abe52aad7f117ea3746d6ab2dd0d39'
+    if hashlib.sha256(META.read_bytes()).hexdigest()!=expected_metadata_sha256:
+        raise ValueError('EMP metadata checksum mismatch')
     if hashlib.sha256(TABLE.read_bytes()).hexdigest()!=info['output_sha256']:
         raise ValueError('candidate table checksum mismatch')
     x=pd.read_csv(TABLE,sep='\t',index_col=0)
@@ -37,6 +40,8 @@ def summarize():
     old=set(pd.read_csv(ROOT/'data/raw/mgnify/manifest.csv').secondary_accession.dropna().astype(str))
     if m.ebi_accession.astype(str).isin(old).any() or m.host_subject_id.isna().any():
         raise ValueError('known old accession or missing subject ID in candidate')
+    if not (m['emp_release1'].astype(str).str.lower()=='true').all() or not (m['qc_filtered'].astype(str).str.lower()=='true').all():
+        raise ValueError('EMP release/QC flags missing in candidate')
     if (x.to_numpy()<0).any() or not np.isfinite(x.to_numpy()).all():
         raise ValueError('invalid abundance table')
     studies=[]
@@ -69,7 +74,7 @@ def summarize():
                         'status':'within_study_leave_subject_out_development_only'})
     eligible=[r for r in studies if r['status'].startswith('within_study')]
     return {'status':'viewed_emp_within_study_baseline_not_external_transfer',
-            'table_sha256':info['output_sha256'],'metadata_sha256':hashlib.sha256(META.read_bytes()).hexdigest(),
+            'table_sha256':info['output_sha256'],'metadata_sha256':expected_metadata_sha256,
             'candidate_studies':len(studies),'scored_studies':len(eligible),
             'scored_samples':sum(r['samples'] for r in eligible),
             'scored_study_subject_labels':sum(r['subjects'] for r in eligible),

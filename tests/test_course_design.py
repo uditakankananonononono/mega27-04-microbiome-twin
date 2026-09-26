@@ -37,3 +37,14 @@ def test_reject_missing_evidence_and_duplicate_samples():
         screen_courses([sample('x', 0), sample('x', 10)], [{**course('x', 2, 5), 'arm': ''}])
     with pytest.raises(ValueError, match='finite'):
         screen_courses([sample('x', 0)], [course('x', float('nan'), 5)])
+
+
+def test_duplicate_subject_time_requires_replicate_policy():
+    from microtwin.course_design import screen_courses
+    import pytest
+    samples=[{'source_family':'A','subject':'p1','sample':'s1','time':1},
+             {'source_family':'A','subject':'p1','sample':'s2','time':1},
+             {'source_family':'A','subject':'p1','sample':'s3','time':8}]
+    courses=[{'source_family':'A','subject':'p1','arm':'drug','start':2,'end':4}]
+    with pytest.raises(ValueError,match='duplicate source-subject-time'):
+        screen_courses(samples,courses)

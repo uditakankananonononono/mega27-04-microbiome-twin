@@ -25,6 +25,7 @@ def screen_courses(samples, courses, *, min_pre_days=0, min_post_days=0,
         raise ValueError('samples and courses required')
     by_subject = defaultdict(list)
     seen_samples = set()
+    seen_coordinates = set()
     for i, row in enumerate(samples):
         key = _key(row, i)
         sid = str(row.get('sample') or '').strip()
@@ -32,6 +33,10 @@ def screen_courses(samples, courses, *, min_pre_days=0, min_post_days=0,
         if not sid or sid in seen_samples:
             raise ValueError('missing or duplicate sample ID')
         seen_samples.add(sid)
+        coord=(key,t)
+        if coord in seen_coordinates:
+            raise ValueError('duplicate source-subject-time coordinate; resolve technical replicate before screening')
+        seen_coordinates.add(coord)
         by_subject[key].append(t)
     by_course = defaultdict(list)
     for i, row in enumerate(courses):
