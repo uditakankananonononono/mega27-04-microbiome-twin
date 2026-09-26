@@ -25,3 +25,7 @@ data/source_family_candidates/HARRIS/mapping_human_volunteer.txt
 
 # Human subject-level profile table: aggregate design screen only.
 data/source_family_candidates/RECOVERY/NUH_StoolSamples_MetaPhlAn2.txt
+
+# DIABIMMUNE infant longitudinal matrix and clinical supplement stay outside git.
+data/source_family_candidates/DIABIMMUNE/*.txt
+data/source_family_candidates/DIABIMMUNE/*.xlsx

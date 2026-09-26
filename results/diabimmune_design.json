@@ -1,0 +1,17 @@
+{
+  "status": "metadata_header_screen_only_no_model_outcomes",
+  "matrix_sha256": "f202686dd96f1c6c1ec9f2b6e8c70ff0f7da655cc2697e6d91998442bf7b35bc",
+  "converted_supplement_sha256": "b62f7f84633d1f07789731c14985c58fca80b81f8bb6348b49a79f15b0213da8",
+  "matrix_columns": 1101,
+  "matrix_subject_prefixes": 40,
+  "supplement_general_subjects": 39,
+  "general_matrix_overlap_subjects": 38,
+  "matrix_only_subject_prefixes": 2,
+  "general_only_subjects": 1,
+  "antibiotic_event_rows": 232,
+  "antibiotic_event_subjects": 21,
+  "antibiotic_event_subjects_with_matrix": 21,
+  "event_rows_with_any_prepost_matrix_samples": 218,
+  "subjects_with_any_prepost_event": 21,
+  "note": "Repeated antibiotic courses are not independent experimental units. Infant development confounds time changes. Source sample metadata and converted sheet require identity/rights verification. Matrix abundance values not read; viewed for design development, not untouched final test."
+}
