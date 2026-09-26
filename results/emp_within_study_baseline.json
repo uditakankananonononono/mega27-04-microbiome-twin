@@ -1,0 +1,165 @@
+{
+  "status": "viewed_emp_within_study_baseline_not_external_transfer",
+  "table_sha256": "8f99b5f2319b71ea8895ed38629b59232b2d412b671d8daebd298f4b7c647fce",
+  "metadata_sha256": "0e4a9d960ec7ccebc0dd4d7de9e4e4ab98abe52aad7f117ea3746d6ab2dd0d39",
+  "candidate_studies": 20,
+  "scored_studies": 16,
+  "scored_samples": 803,
+  "scored_study_subject_labels": 614,
+  "median_of_study_mean_subject_medians": 0.5680496583232459,
+  "study_results": [
+    {
+      "study_id": 662,
+      "samples": 46,
+      "subjects": 46,
+      "median_sample_bc": 0.5689472869182537,
+      "mean_subject_median_bc": 0.5864755309414398,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 722,
+      "samples": 78,
+      "subjects": 17,
+      "median_sample_bc": 0.7834170494112674,
+      "mean_subject_median_bc": 0.7959201066321863,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 804,
+      "samples": 78,
+      "subjects": 78,
+      "median_sample_bc": 0.6735889653423559,
+      "mean_subject_median_bc": 0.6628472033473461,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 807,
+      "samples": 35,
+      "subjects": 20,
+      "median_sample_bc": 0.29248640687868593,
+      "mean_subject_median_bc": 0.2973941723976335,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 910,
+      "samples": 56,
+      "subjects": 56,
+      "median_sample_bc": 0.34784893501358666,
+      "mean_subject_median_bc": 0.43557574336867766,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 925,
+      "samples": 28,
+      "subjects": 28,
+      "median_sample_bc": 0.4400107585687531,
+      "mean_subject_median_bc": 0.47467642440217483,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 933,
+      "samples": 64,
+      "subjects": 64,
+      "median_sample_bc": 0.5116884020192951,
+      "mean_subject_median_bc": 0.5313544088626455,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 940,
+      "samples": 23,
+      "subjects": 22,
+      "median_sample_bc": 0.6374407393640485,
+      "mean_subject_median_bc": 0.6467830214324006,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 1039,
+      "samples": 23,
+      "subjects": 23,
+      "median_sample_bc": 0.6617149715324666,
+      "mean_subject_median_bc": 0.5416058136616371,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 1453,
+      "samples": 64,
+      "subjects": 16,
+      "median_sample_bc": 0.5634560839854195,
+      "mean_subject_median_bc": 0.5709038720580455,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 1580,
+      "samples": 25,
+      "subjects": 25,
+      "median_sample_bc": 0.6552224873522989,
+      "mean_subject_median_bc": 0.648769492953113,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 1622,
+      "samples": 36,
+      "subjects": 1,
+      "status": "abstained_fewer_than_ten_subjects"
+    },
+    {
+      "study_id": 1642,
+      "samples": 74,
+      "subjects": 74,
+      "median_sample_bc": 0.2515908169978797,
+      "mean_subject_median_bc": 0.32621712743009956,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 1747,
+      "samples": 79,
+      "subjects": 31,
+      "median_sample_bc": 0.5467329014897272,
+      "mean_subject_median_bc": 0.6341084987803434,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 1748,
+      "samples": 28,
+      "subjects": 5,
+      "status": "abstained_fewer_than_ten_subjects"
+    },
+    {
+      "study_id": 1774,
+      "samples": 37,
+      "subjects": 35,
+      "median_sample_bc": 0.6171796421503585,
+      "mean_subject_median_bc": 0.6032024524463487,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 1883,
+      "samples": 106,
+      "subjects": 1,
+      "status": "abstained_fewer_than_ten_subjects"
+    },
+    {
+      "study_id": 2192,
+      "samples": 29,
+      "subjects": 15,
+      "median_sample_bc": 0.5574006162463367,
+      "mean_subject_median_bc": 0.5651954445884464,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 2229,
+      "samples": 64,
+      "subjects": 64,
+      "median_sample_bc": 0.5370574438000716,
+      "mean_subject_median_bc": 0.5426377349262137,
+      "status": "within_study_leave_subject_out_development_only"
+    },
+    {
+      "study_id": 2382,
+      "samples": 159,
+      "subjects": 6,
+      "status": "abstained_fewer_than_ten_subjects"
+    }
+  ],
+  "note": "Greengenes named-unambiguous genus subset, median 32.06% raw count mass retained (min 0.21%); development-only leave-host_subject_id-out WITHIN study, no source holdout, no top-tool comparison, no external transfer or biological discovery. Host IDs may be ecological units, not people; per-study counts are labels, not validated independent biological subjects."
+}
