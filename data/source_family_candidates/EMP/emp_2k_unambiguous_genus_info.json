@@ -1,0 +1,149 @@
+{
+  "source_biom_md5": "5a08ab0811582bbc8f87a923d5c90f73",
+  "source_url": "https://zenodo.org/records/890000/files/emp_cr_gg_13_8.release1.biom?download=1",
+  "genus_rows": 1626,
+  "sample_columns": 1132,
+  "ambiguous_genus_names_excluded": [
+    "Acinetobacter",
+    "Amycolatopsis",
+    "Anaerospora",
+    "Arthrospira",
+    "Asteroleplasma",
+    "Bacillus",
+    "Calothrix",
+    "Clostridium",
+    "Coccomyxa",
+    "Cytophaga",
+    "Enterococcus",
+    "Flexibacter",
+    "Gluconacetobacter",
+    "Gordonia",
+    "Lyngbya",
+    "Microbispora",
+    "Mycoplasma",
+    "Nitrosococcus",
+    "Pelobacter",
+    "Rhodobacter",
+    "Rhodospirillum",
+    "Ruminococcus",
+    "Scytonema",
+    "Spongiibacter",
+    "Staphylococcus",
+    "Stenotrophomonas",
+    "Synechococcus",
+    "Thiobacillus",
+    "Thiomonas",
+    "Vibrio",
+    "gut",
+    "marine"
+  ],
+  "ambiguous_genus_name_count": 32,
+  "sample_retained_mass_median": 0.3206257556979227,
+  "sample_retained_mass_minimum": 0.0021435434991499743,
+  "zero_retained_mass_samples": 0,
+  "study_retained_mass": {
+    "662": {
+      "samples": 46,
+      "retained_raw_mass_median": 0.4004365954423402,
+      "retained_raw_mass_minimum": 0.014452365969864397
+    },
+    "722": {
+      "samples": 78,
+      "retained_raw_mass_median": 0.3608164472069876,
+      "retained_raw_mass_minimum": 0.07568694685139707
+    },
+    "804": {
+      "samples": 78,
+      "retained_raw_mass_median": 0.2855549210053266,
+      "retained_raw_mass_minimum": 0.034776474005830664
+    },
+    "807": {
+      "samples": 35,
+      "retained_raw_mass_median": 0.23249627336314643,
+      "retained_raw_mass_minimum": 0.1486798008562407
+    },
+    "910": {
+      "samples": 56,
+      "retained_raw_mass_median": 0.9306214991799453,
+      "retained_raw_mass_minimum": 0.38684811705512184
+    },
+    "925": {
+      "samples": 28,
+      "retained_raw_mass_median": 0.6057793064119846,
+      "retained_raw_mass_minimum": 0.3196787148594378
+    },
+    "933": {
+      "samples": 64,
+      "retained_raw_mass_median": 0.19136373851605984,
+      "retained_raw_mass_minimum": 0.02194350725359237
+    },
+    "940": {
+      "samples": 23,
+      "retained_raw_mass_median": 0.3513676963155936,
+      "retained_raw_mass_minimum": 0.14400988060930425
+    },
+    "1039": {
+      "samples": 23,
+      "retained_raw_mass_median": 0.294874358771632,
+      "retained_raw_mass_minimum": 0.08089555671534848
+    },
+    "1453": {
+      "samples": 64,
+      "retained_raw_mass_median": 0.6141081244190834,
+      "retained_raw_mass_minimum": 0.1352616555661275
+    },
+    "1580": {
+      "samples": 25,
+      "retained_raw_mass_median": 0.23094358629952988,
+      "retained_raw_mass_minimum": 0.10319943706675849
+    },
+    "1622": {
+      "samples": 36,
+      "retained_raw_mass_median": 0.06332144014102682,
+      "retained_raw_mass_minimum": 0.02444118988739766
+    },
+    "1642": {
+      "samples": 74,
+      "retained_raw_mass_median": 0.28958593642233305,
+      "retained_raw_mass_minimum": 0.220262189714366
+    },
+    "1747": {
+      "samples": 79,
+      "retained_raw_mass_median": 0.45068623156665205,
+      "retained_raw_mass_minimum": 0.10520896122161945
+    },
+    "1748": {
+      "samples": 28,
+      "retained_raw_mass_median": 0.5008690458427332,
+      "retained_raw_mass_minimum": 0.25456594206300764
+    },
+    "1774": {
+      "samples": 37,
+      "retained_raw_mass_median": 0.8113539445628998,
+      "retained_raw_mass_minimum": 0.15425660926509824
+    },
+    "1883": {
+      "samples": 106,
+      "retained_raw_mass_median": 0.2786996645650328,
+      "retained_raw_mass_minimum": 0.11371388443017656
+    },
+    "2192": {
+      "samples": 29,
+      "retained_raw_mass_median": 0.4687728046703965,
+      "retained_raw_mass_minimum": 0.08225313791421751
+    },
+    "2229": {
+      "samples": 64,
+      "retained_raw_mass_median": 0.0560168760273311,
+      "retained_raw_mass_minimum": 0.0021435434991499743
+    },
+    "2382": {
+      "samples": 159,
+      "retained_raw_mass_median": 0.1872436963896031,
+      "retained_raw_mass_minimum": 0.016411412822199253
+    }
+  },
+  "output_sha256": "8f99b5f2319b71ea8895ed38629b59232b2d412b671d8daebd298f4b7c647fce",
+  "status": "outcome_blind_taxonomy_candidate_not_benchmark",
+  "note": "Excludes all same-name conflicting parental lineages. Also excludes unnamed genera. Does not resolve taxonomy-version synonyms or prove source independence."
+}
