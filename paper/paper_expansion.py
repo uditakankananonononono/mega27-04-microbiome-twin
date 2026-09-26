@@ -117,6 +117,13 @@ def add(P):
                     brows, "Paired bootstrap (5000 resamples) of each stacker against the best base model per dataset. "
                            "Negative differences favour the stacker. WIN/LOSS require the whole interval on one side of zero.")
 
+    P.p("One point the tables make explicit: on Human_Oral both stackers land at 0.2024, below the published cNODE median "
+        "0.211 - a point win over the published number. It sits inside the presence-null bootstrap interval (0.204 "
+        "[0.188, 0.222]), so we claim a published-point win, not a new error record. Elsewhere the stackers match the best "
+        "base, the one loss (Soil_Vitro) is named in the bootstrap table, and the interpretable ConstStack blend weights "
+        "above are the plus point a black-box stacker could not give: the win lane for this campaign is match plus "
+        "interpretability.")
+
     # ---------------- Section 5.6: keystone consensus (moved) ----------------
     import pandas as _pd
     KC = _pd.read_csv("results/keystone_consensus.csv")
