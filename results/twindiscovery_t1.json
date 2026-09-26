@@ -1,0 +1,9 @@
+{
+  "studies": 37,
+  "genera": 56,
+  "top_phylum": "Actinomycetota",
+  "top_phylum_q": 0.9057244087765735,
+  "desulfobacterota_q": null,
+  "t1_pass": false,
+  "summary": "T1: 37 studies, 56 genera. Top enrichment: Actinomycetota q=0.906. Desulfobacterota q=None. NULL - redirect to SHAP centrality per pre-reg"
+}
