@@ -48,3 +48,6 @@ Original article https://link.springer.com/article/10.1186/s12915-019-0692-y and
 
 ## AIM amoxicillin/placebo patient subset, 2026-09-26 19:48 IST
 Original microbiome paper https://pmc.ncbi.nlm.nih.gov/articles/PMC9809947/ says 20 participants, three stool periods and public human-read-removed shotgun under PRJNA894204 https://www.ncbi.nlm.nih.gov/bioproject/PRJNA894204; extra deidentified patient metadata only by study request under ethics. Exact ENA header URL/hash and mixed-library caveat in `data/source_family_candidates/AIM/README.md`. SRP404510 is the same family, not independent. No outcomes viewed.
+
+## Postbiotic antibiotic adjunct RCT, 2026-09-26 20:04 IST
+Original article https://pmc.ncbi.nlm.nih.gov/articles/PMC12797998/ and paper-linked raw reads https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1032616 . ENA metadata: 157 AMPLICON samples with blank titles, no arm/person/time mapping; exact query and checksum in `data/source_family_candidates/POSTBIOTIC_ADJUNCT/README.md`. Article says processed Table S2 in supplements but publisher warns supplemental copyrights are not ASM's and asks author contact for reuse. No supplements opened, no outcomes scored; not eligible final.
