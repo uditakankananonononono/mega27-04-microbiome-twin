@@ -7,7 +7,7 @@ def test_positive_and_negative_scores_with_grouped_interval():
     out = heldout_scores([.2, .4, .2, .4], [.1, .2, .3, .6],
                          ids=["a", "b", "c", "d"], groups=[1, 1, 2, 2], seed=3)
     assert out["sample_scores"] == pytest.approx([.5, .5, -.5, -.5])
-    assert out["ecosystem_score"] == 0
+    assert out["ecosystem_score"] == pytest.approx(0)
     assert out["ci95"] == pytest.approx([-.5, .5])
     assert out["independent_groups"] == 2
 
