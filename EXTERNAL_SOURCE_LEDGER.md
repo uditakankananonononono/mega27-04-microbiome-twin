@@ -30,3 +30,6 @@ Official V4 OTU matrix and companion antibiotic event supplement found at https:
 
 ## ARMORD adult longitudinal metagenomics, 2026-09-26 17:36 IST
 Original eLife study and official source data: https://elifesciences.org/articles/97751/ and https://cdn.elifesciences.org/articles/97751/elife-97751-data1-v1.zip ; pinned zip SHA-256 and outcome-blind metadata audit at `data/source_family_candidates/ARMORD/README.md`, `results/armord_design.json`. Publication reports 79 longitudinal transplant patients; 80 have >=2 sequenced samples, but the pinned publisher code archive has 173 model pairs from 79 unique patient IDs. One serial patient lacks a model pair for an unresolved reason. Public source is viewed for development, not untouched final; no prediction or model result. Clinical/taxon source zip remains local only.
+
+## CEREMI same-trial publication guard, 2026-09-26 18:08 IST
+The 2019 16S, 2022 gLV/mixed-effect and 2024 multi-omics publications are outputs of the same 22-person cefotaxime/ceftriaxone CEREMI trial. See `data/source_family_candidates/CEREMI_SOURCE_FAMILY.md` for exact observed publication and accession URLs. PRJEB28341 and PRJEB58157 are modality/accession leads, not separate independent validation cohorts. No abundance data viewed or metric run.
