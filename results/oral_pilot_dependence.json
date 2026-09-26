@@ -1,0 +1,50 @@
+[
+  {
+    "status": "viewed_one_study_predictive_gain_diagnostic",
+    "model": "graphtwin",
+    "source_json_sha256": "a9462275be6c6de0bd0b5f13b32721e3d480932932cec027ece20547fcd39c5f",
+    "people": 58,
+    "people_scored": 58,
+    "fractional_gain_person_median": -0.002676668561935683,
+    "independent_studies": 1,
+    "study_level_interval": null,
+    "interval_status": "insufficient_independent_groups",
+    "note": "Gain is a paired predictive error contrast, not causal interaction dependence. One viewed test study, not a source-family benchmark; no independent-study uncertainty."
+  },
+  {
+    "status": "viewed_one_study_predictive_gain_diagnostic",
+    "model": "cnode",
+    "source_json_sha256": "a9462275be6c6de0bd0b5f13b32721e3d480932932cec027ece20547fcd39c5f",
+    "people": 58,
+    "people_scored": 58,
+    "fractional_gain_person_median": -0.014075350699828012,
+    "independent_studies": 1,
+    "study_level_interval": null,
+    "interval_status": "insufficient_independent_groups",
+    "note": "Gain is a paired predictive error contrast, not causal interaction dependence. One viewed test study, not a source-family benchmark; no independent-study uncertainty."
+  },
+  {
+    "status": "viewed_one_study_predictive_gain_diagnostic",
+    "model": "glv",
+    "source_json_sha256": "a9462275be6c6de0bd0b5f13b32721e3d480932932cec027ece20547fcd39c5f",
+    "people": 58,
+    "people_scored": 58,
+    "fractional_gain_person_median": -0.03365320222515534,
+    "independent_studies": 1,
+    "study_level_interval": null,
+    "interval_status": "insufficient_independent_groups",
+    "note": "Gain is a paired predictive error contrast, not causal interaction dependence. One viewed test study, not a source-family benchmark; no independent-study uncertainty."
+  },
+  {
+    "status": "viewed_one_study_predictive_gain_diagnostic",
+    "model": "transformer",
+    "source_json_sha256": "a9462275be6c6de0bd0b5f13b32721e3d480932932cec027ece20547fcd39c5f",
+    "people": 58,
+    "people_scored": 58,
+    "fractional_gain_person_median": -0.05320835450539327,
+    "independent_studies": 1,
+    "study_level_interval": null,
+    "interval_status": "insufficient_independent_groups",
+    "note": "Gain is a paired predictive error contrast, not causal interaction dependence. One viewed test study, not a source-family benchmark; no independent-study uncertainty."
+  }
+]
