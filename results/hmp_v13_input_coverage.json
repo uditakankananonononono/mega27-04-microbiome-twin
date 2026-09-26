@@ -1,0 +1,245 @@
+{
+  "status": "input_only_coverage_diagnostic_not_external_score",
+  "train_source": "MGYS00002394",
+  "train_genera": 160,
+  "shared_unambiguous_hmp_genera_seen": 101,
+  "hmp_source_commit": "a9807c3ed97f24c94d40fc4e62329a2d83a7e673",
+  "mapped_samples": 2898,
+  "subsites": [
+    {
+      "subsite": "Anterior_nares",
+      "samples": 161,
+      "people": 134,
+      "minimum_raw_mass_in_train_vocab": 0.0,
+      "median_raw_mass_in_train_vocab": 0.7775811209439528,
+      "median_raw_mass_named_unambiguous": 0.8382393397524072,
+      "median_named_unambiguous_mass_in_train_vocab": 0.945872801082544,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Attached_Keratinized_gingiva",
+      "samples": 181,
+      "people": 139,
+      "minimum_raw_mass_in_train_vocab": 0.42109344707250873,
+      "median_raw_mass_in_train_vocab": 0.9714532871972318,
+      "median_raw_mass_named_unambiguous": 0.9814001848428835,
+      "median_named_unambiguous_mass_in_train_vocab": 0.9986235375086029,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Buccal_mucosa",
+      "samples": 183,
+      "people": 139,
+      "minimum_raw_mass_in_train_vocab": 0.8219683007740509,
+      "median_raw_mass_in_train_vocab": 0.9695461200585651,
+      "median_raw_mass_named_unambiguous": 0.975530839231547,
+      "median_named_unambiguous_mass_in_train_vocab": 0.9986033519553073,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Hard_palate",
+      "samples": 178,
+      "people": 135,
+      "minimum_raw_mass_in_train_vocab": 0.05660377358490566,
+      "median_raw_mass_in_train_vocab": 0.9525047479118057,
+      "median_raw_mass_named_unambiguous": 0.9637553081199233,
+      "median_named_unambiguous_mass_in_train_vocab": 0.9951075890419381,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Left_Antecubital_fossa",
+      "samples": 145,
+      "people": 125,
+      "minimum_raw_mass_in_train_vocab": 0.0,
+      "median_raw_mass_in_train_vocab": 0.818952802359882,
+      "median_raw_mass_named_unambiguous": 0.8852967227635076,
+      "median_named_unambiguous_mass_in_train_vocab": 0.9550741163055873,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Left_Retroauricular_crease",
+      "samples": 186,
+      "people": 154,
+      "minimum_raw_mass_in_train_vocab": 0.10529411764705883,
+      "median_raw_mass_in_train_vocab": 0.9677762225527076,
+      "median_raw_mass_named_unambiguous": 0.977865437471525,
+      "median_named_unambiguous_mass_in_train_vocab": 0.9959027457800003,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Mid_vagina",
+      "samples": 89,
+      "people": 71,
+      "minimum_raw_mass_in_train_vocab": 0.4972356599861783,
+      "median_raw_mass_in_train_vocab": 0.9783641160949869,
+      "median_raw_mass_named_unambiguous": 0.9969506726457399,
+      "median_named_unambiguous_mass_in_train_vocab": 0.9878129117259552,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Palatine_Tonsils",
+      "samples": 186,
+      "people": 140,
+      "minimum_raw_mass_in_train_vocab": 0.6770095284632299,
+      "median_raw_mass_in_train_vocab": 0.9388471255023008,
+      "median_raw_mass_named_unambiguous": 0.9428563803643177,
+      "median_named_unambiguous_mass_in_train_vocab": 0.9982478087741264,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Posterior_fornix",
+      "samples": 88,
+      "people": 70,
+      "minimum_raw_mass_in_train_vocab": 0.4475903614457831,
+      "median_raw_mass_in_train_vocab": 0.9918607585039012,
+      "median_raw_mass_named_unambiguous": 0.9984549831068188,
+      "median_named_unambiguous_mass_in_train_vocab": 0.9974188484021866,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Right_Antecubital_fossa",
+      "samples": 146,
+      "people": 130,
+      "minimum_raw_mass_in_train_vocab": 0.0,
+      "median_raw_mass_in_train_vocab": 0.8331197079157928,
+      "median_raw_mass_named_unambiguous": 0.8842677760968229,
+      "median_named_unambiguous_mass_in_train_vocab": 0.959860797689744,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Right_Retroauricular_crease",
+      "samples": 187,
+      "people": 153,
+      "minimum_raw_mass_in_train_vocab": 0.07318952234206472,
+      "median_raw_mass_in_train_vocab": 0.9639724310776943,
+      "median_raw_mass_named_unambiguous": 0.9757617728531855,
+      "median_named_unambiguous_mass_in_train_vocab": 0.995774647887324,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Saliva",
+      "samples": 162,
+      "people": 128,
+      "minimum_raw_mass_in_train_vocab": 0.22797043774872086,
+      "median_raw_mass_in_train_vocab": 0.8583838312953578,
+      "median_raw_mass_named_unambiguous": 0.8678287877237005,
+      "median_named_unambiguous_mass_in_train_vocab": 0.9964291633689633,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Stool",
+      "samples": 187,
+      "people": 144,
+      "minimum_raw_mass_in_train_vocab": 0.0015020653398422831,
+      "median_raw_mass_in_train_vocab": 0.044794188861985475,
+      "median_raw_mass_named_unambiguous": 0.28439172573412413,
+      "median_named_unambiguous_mass_in_train_vocab": 0.17286245353159851,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Subgingival_plaque",
+      "samples": 183,
+      "people": 138,
+      "minimum_raw_mass_in_train_vocab": 0.6273957158962796,
+      "median_raw_mass_in_train_vocab": 0.9091049621270676,
+      "median_raw_mass_named_unambiguous": 0.9096288327057558,
+      "median_named_unambiguous_mass_in_train_vocab": 0.9993816186132798,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Supragingival_plaque",
+      "samples": 189,
+      "people": 144,
+      "minimum_raw_mass_in_train_vocab": 0.7224706539966461,
+      "median_raw_mass_in_train_vocab": 0.9269662921348315,
+      "median_raw_mass_named_unambiguous": 0.9270411985018726,
+      "median_named_unambiguous_mass_in_train_vocab": 0.9999191984486102,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Throat",
+      "samples": 170,
+      "people": 132,
+      "minimum_raw_mass_in_train_vocab": 0.5547520661157025,
+      "median_raw_mass_in_train_vocab": 0.9137425486644746,
+      "median_raw_mass_named_unambiguous": 0.922698006680703,
+      "median_named_unambiguous_mass_in_train_vocab": 0.9975777035718261,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Tongue_dorsum",
+      "samples": 190,
+      "people": 144,
+      "minimum_raw_mass_in_train_vocab": 0.7180507210343113,
+      "median_raw_mass_in_train_vocab": 0.9544266527357748,
+      "median_raw_mass_named_unambiguous": 0.9553670475970681,
+      "median_named_unambiguous_mass_in_train_vocab": 0.9995181890733863,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    },
+    {
+      "subsite": "Vaginal_introitus",
+      "samples": 87,
+      "people": 68,
+      "minimum_raw_mass_in_train_vocab": 0.4505928853754941,
+      "median_raw_mass_in_train_vocab": 0.944206008583691,
+      "median_raw_mass_named_unambiguous": 0.9952653874906554,
+      "median_named_unambiguous_mass_in_train_vocab": 0.9663120567375887,
+      "input_vocabulary_gate": false,
+      "gate_reasons": [
+        "low_sample_vocabulary_coverage"
+      ]
+    }
+  ],
+  "note": "No model fit or test errors. Every HMP subsite was inspected for input QC, so HMP is now development diagnostic, not untouched final holdout. Even an input gate pass would not prove source independence, rights, assay compatibility or useful prediction."
+}
