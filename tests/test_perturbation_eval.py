@@ -15,3 +15,12 @@ def test_no_scored_direction_is_unavailable():
 
 def test_group_labels_required():
     with pytest.raises(ValueError):direction_accuracy([1],[1],groups=[''])
+
+
+def test_missing_and_equivalent_group_ids_do_not_inflate_experiments():
+    for bad in (None, "", "  ", float("nan"), float("inf")):
+        with pytest.raises(ValueError, match="group required"):
+            direction_accuracy([1, 1], [1, 1], groups=["valid", bad])
+    r = direction_accuracy([1, 1], [1, 1], groups=[1, "1"])
+    assert r["independent_experiment_groups"] == 1
+    assert "not proof" in r["note"]

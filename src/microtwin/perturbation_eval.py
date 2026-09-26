@@ -18,8 +18,10 @@ def direction_accuracy(predicted_change, observed_change, *, groups, threshold=0
         raise ValueError("aligned nonempty one-dimensional changes and groups required")
     if not np.isfinite(p).all() or not np.isfinite(y).all() or threshold < 0 or not np.isfinite(threshold):
         raise ValueError("finite changes and nonnegative threshold required")
-    if any(v is None or str(v).strip() == "" for v in g):
+    if any(v is None or not str(v).strip() or
+           (isinstance(v, (float, np.floating)) and not np.isfinite(v)) for v in g):
         raise ValueError("intervention experiment group required")
+    g = list(map(str, g))
     eligible = np.abs(y) > threshold
     attempted = eligible & (p != 0)
     if not attempted.any():
@@ -30,4 +32,4 @@ def direction_accuracy(predicted_change, observed_change, *, groups, threshold=0
             "accuracy": float((np.sign(p[attempted]) == np.sign(y[attempted])).mean()),
             "coverage": float(attempted.sum()/max(int(eligible.sum()),1)),
             "independent_experiment_groups": len(set(np.asarray(g,dtype=object)[attempted])),
-            "note": "Direction agreement is not proof of a causal interaction network."}
+            "note": "Group labels supplied by caller are not proof of experiment independence; direction agreement is not proof of a causal interaction network."}
