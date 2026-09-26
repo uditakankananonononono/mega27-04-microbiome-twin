@@ -40,7 +40,8 @@ def collapse_runs(table, analyses):
             runs[s["id"]].add(r["id"])
         if asm.get("id"):
             assembly_ids.add(asm["id"])
-    if any(not x for x in runs.values()):
+    all_samples = {((a.get("relationships") or {}).get("sample") or {}).get("data", {}).get("id") for a in analyses}
+    if all_samples - set(runs):
         raise ValueError("sample without a run")
     reverse = defaultdict(set)
     for sample, ids in runs.items():

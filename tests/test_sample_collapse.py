@@ -23,3 +23,9 @@ def test_unknown_column_or_shared_run_fails_closed():
         collapse_runs(t, [_a("S1", "R1")])
     with pytest.raises(ValueError, match="multiple samples"):
         collapse_runs(t[["R1"]], [_a("S1", "R1"), _a("S2", "R1")])
+
+
+def test_assembly_only_sample_fails_closed():
+    t = pd.DataFrame({"R1": [1], "Z2": [2]}, index=["A"])
+    with pytest.raises(ValueError, match="sample without a run"):
+        collapse_runs(t, [_a("S1", "R1"), _a("S2", assembly="Z2")])
