@@ -88,6 +88,23 @@ def cmd_inspect(a):
     return 0
 
 
+def cmd_predict(a):
+    from .local_predict import predict_local
+    try:
+        result, report = predict_local(a.train, a.query, unit=a.unit, source_id=a.source_id,
+                                       processing_authorized=a.processing_authorized, subject_map=a.subject_map)
+        from pathlib import Path
+        dest = Path(a.out)
+        if dest.resolve() in (Path(a.train).resolve(), Path(a.query).resolve()):
+            raise ValueError('output must not overwrite an input file')
+        result.to_csv(dest, index=False)
+    except ValueError as e:
+        sys.exit(str(e))
+    report['output_file'] = str(dest)
+    print(json.dumps(report, indent=2))
+    return 0
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="microtwin")
     sp = ap.add_subparsers(dest="cmd", required=True)
@@ -110,6 +127,15 @@ def main(argv=None):
     i.add_argument("--processing-authorized", action="store_true", help="researcher declaration, not proof of rights")
     i.add_argument("--subject-map", help="CSV with sample_id,subject_id for exact grouping check")
     i.set_defaults(f=cmd_inspect)
+    p = sp.add_parser("predict", help="local research-only presence-to-composition population baseline")
+    p.add_argument("train", help="labeled samples x taxa CSV/TSV; sample_id first")
+    p.add_argument("query", help="binary presence matrix, same taxa and order; sample_id first")
+    p.add_argument("--unit", choices=("counts","relative_abundance","absolute_abundance"), required=True)
+    p.add_argument("--source-id", required=True)
+    p.add_argument("--processing-authorized", action="store_true", help="caller declaration, not proof of data rights")
+    p.add_argument("--subject-map", help="optional exact sample_id,subject_id CSV for grouping metadata")
+    p.add_argument("--out", required=True, help="local CSV path for predicted compositions")
+    p.set_defaults(f=cmd_predict)
     a = ap.parse_args(argv); return a.f(a)
 
 
