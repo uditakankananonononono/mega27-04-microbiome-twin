@@ -94,3 +94,6 @@ Private GitHub repo https://github.com/uditakankananonononono/mega27-04-microbio
 
 ## 19:16 IST large medication study source lead, not a verified benchmark set
 - Author GitHub and Zenodo deposit report 3,469 samples/1,122 patients across 138 medication analyses, but the only archive is 4.62GB and has not been downloaded. Zenodo declares deposit open/Apache-2.0; GitHub code license metadata is blank. Do not silently use the author's aggregate as 1,122 eligible antibiotic recovery subjects. Individual-file permissions, medication/time labels, source overlap and cohort assay remain unresolved. URLs and exact published MD5 in `data/source_family_candidates/MEDICATION_UCHICAGO/README.md`. No abundance or model results read.
+
+## 19:32 IST ASARI header-only source lead
+- Public ENA PRJEB28058 has 164 unique WGS sample accessions, all titled `Human Stool Sample`, so the registry does not give person/time/center mapping. Original 2019 paper recruited 68 but analyzed 41 patients in Tübingen/Cologne prophylaxis cohorts and had no untreated control; drug is confounded with center. Exact original paper/ENA/supplement URLs and TSV hash in `data/source_family_candidates/ASARI/README.md`. No taxon outcomes scored. Source now viewed for development, not eligible untouched final. Rights, mapping, independence and comparator remain open.

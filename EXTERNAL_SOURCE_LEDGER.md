@@ -42,3 +42,6 @@ Original Frontiers 2024 paper https://www.frontiersin.org/journals/microbiomes/a
 
 ## University of Chicago medication dynamics lead, 2026-09-26 19:16 IST
 Author repository https://github.com/blekhmanlab/medication-microbiome and original Zenodo record https://zenodo.org/records/19410955 (Apache-2.0 deposit-level, 4.62GB archive, published MD5 in `data/source_family_candidates/MEDICATION_UCHICAGO/README.md`). Archive not downloaded, antibiotic-specific paired units/rights and independence unverified, no outcome examined.
+
+## ASARI two-center hematology source, 2026-09-26 19:32 IST
+Original article https://link.springer.com/article/10.1186/s12915-019-0692-y and original ENA deposit https://www.ebi.ac.uk/ena/browser/view/PRJEB28058 . Paper: 68 recruited, 41 analyzed, no untreated controls; center confounds ciprofloxacin versus cotrimoxazole. Run-header screen: 164 unique WGS samples with identical generic titles, no subject/time/arm mapping. Exact header query and checksum in `data/source_family_candidates/ASARI/README.md`; no outcomes opened. Development lead only, not a qualified final study.
