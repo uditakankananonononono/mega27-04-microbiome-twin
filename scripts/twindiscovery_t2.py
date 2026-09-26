@@ -19,7 +19,7 @@ def fit(feats):
     m = sm.NegativeBinomial(y, X).fit(disp=0)
     return g, m
 
-M["log_studies"] = np.log(M.studies); M["twin_freq"] = M.frac_top; M["log_twin_studies"] = np.log(M.twin_studies)
+M["log_studies"] = np.log(M.studies); M["twin_freq"] = M.frac_top_y; M["log_twin_studies"] = np.log(M.twin_studies)
 g_r, m_r = fit(["kscore", "log_studies"])
 g_t, m_t = fit(["twin_freq", "log_twin_studies"])
 
