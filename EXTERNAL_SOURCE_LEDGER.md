@@ -45,3 +45,6 @@ Author repository https://github.com/blekhmanlab/medication-microbiome and origi
 
 ## ASARI two-center hematology source, 2026-09-26 19:32 IST
 Original article https://link.springer.com/article/10.1186/s12915-019-0692-y and original ENA deposit https://www.ebi.ac.uk/ena/browser/view/PRJEB28058 . Paper: 68 recruited, 41 analyzed, no untreated controls; center confounds ciprofloxacin versus cotrimoxazole. Run-header screen: 164 unique WGS samples with identical generic titles, no subject/time/arm mapping. Exact header query and checksum in `data/source_family_candidates/ASARI/README.md`; no outcomes opened. Development lead only, not a qualified final study.
+
+## AIM amoxicillin/placebo patient subset, 2026-09-26 19:48 IST
+Original microbiome paper https://pmc.ncbi.nlm.nih.gov/articles/PMC9809947/ says 20 participants, three stool periods and public human-read-removed shotgun under PRJNA894204 https://www.ncbi.nlm.nih.gov/bioproject/PRJNA894204; extra deidentified patient metadata only by study request under ethics. Exact ENA header URL/hash and mixed-library caveat in `data/source_family_candidates/AIM/README.md`. SRP404510 is the same family, not independent. No outcomes viewed.

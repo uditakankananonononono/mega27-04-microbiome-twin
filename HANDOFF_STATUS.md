@@ -97,3 +97,6 @@ Private GitHub repo https://github.com/uditakankananonononono/mega27-04-microbio
 
 ## 19:32 IST ASARI header-only source lead
 - Public ENA PRJEB28058 has 164 unique WGS sample accessions, all titled `Human Stool Sample`, so the registry does not give person/time/center mapping. Original 2019 paper recruited 68 but analyzed 41 patients in Tübingen/Cologne prophylaxis cohorts and had no untreated control; drug is confounded with center. Exact original paper/ENA/supplement URLs and TSV hash in `data/source_family_candidates/ASARI/README.md`. No taxon outcomes scored. Source now viewed for development, not eligible untouched final. Rights, mapping, independence and comparator remain open.
+
+## 19:48 IST AIM randomized treatment source lead, metadata access gate
+- Original 20-participant 3-month amoxicillin/placebo microbiome study has baseline, end-treatment and 9-month sampling. Public PRJNA894204 deposit mixes shotgun and functional metagenomic libraries; its 85 run/sample records are not independent patients or validated paired windows. Original paper requires study request/ethical conditions for extra deidentified participant metadata. No arm/subject/time mapping recovered from public header, no abundance read. Exact sources and hash in `data/source_family_candidates/AIM/README.md`. Not qualified external test and no contact made.
