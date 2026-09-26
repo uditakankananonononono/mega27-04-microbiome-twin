@@ -1,0 +1,64 @@
+{
+  "status": "viewed_one_study_person_sensitivity_not_final_benchmark",
+  "source_json_sha256": "a9462275be6c6de0bd0b5f13b32721e3d480932932cec027ece20547fcd39c5f",
+  "test_people": 58,
+  "bootstrap_unit": "person",
+  "bootstrap_resamples": 10000,
+  "seed": 0,
+  "base": "presence_mean",
+  "comparisons": {
+    "cnode": {
+      "median_person_error_model": 0.576244996895327,
+      "median_person_error_prior": 0.5727253087779043,
+      "median_of_marginals_delta_model_minus_prior": 0.003519688117422759,
+      "person_resample95_median_of_marginals": [
+        -0.01611180475082974,
+        0.03500151114387451
+      ],
+      "median_paired_person_gap_model_minus_prior": 0.006739730300808794,
+      "people_model_better": 24,
+      "people_prior_better": 34,
+      "people_tied": 0
+    },
+    "glv": {
+      "median_person_error_model": 0.6159772244233394,
+      "median_person_error_prior": 0.5727253087779043,
+      "median_of_marginals_delta_model_minus_prior": 0.04325191564543507,
+      "person_resample95_median_of_marginals": [
+        0.013726550793784702,
+        0.0647547718663807
+      ],
+      "median_paired_person_gap_model_minus_prior": 0.019199380916216813,
+      "people_model_better": 16,
+      "people_prior_better": 42,
+      "people_tied": 0
+    },
+    "graphtwin": {
+      "median_person_error_model": 0.5773347487292988,
+      "median_person_error_prior": 0.5727253087779043,
+      "median_of_marginals_delta_model_minus_prior": 0.004609439951394512,
+      "person_resample95_median_of_marginals": [
+        -0.018856798007628305,
+        0.022463927339811618
+      ],
+      "median_paired_person_gap_model_minus_prior": 0.001432173625240174,
+      "people_model_better": 28,
+      "people_prior_better": 30,
+      "people_tied": 0
+    },
+    "transformer": {
+      "median_person_error_model": 0.6113597500342716,
+      "median_person_error_prior": 0.5727253087779043,
+      "median_of_marginals_delta_model_minus_prior": 0.03863444125636728,
+      "person_resample95_median_of_marginals": [
+        0.007786312774491303,
+        0.0684577582337833
+      ],
+      "median_paired_person_gap_model_minus_prior": 0.0380931713207166,
+      "people_model_better": 19,
+      "people_prior_better": 39,
+      "people_tied": 0
+    }
+  },
+  "note": "Same viewed source, 20 train sites, model family selected after earlier pilots. Person resampling cannot create new independent studies, validate taxonomy/rights or prove a top-tool win."
+}
