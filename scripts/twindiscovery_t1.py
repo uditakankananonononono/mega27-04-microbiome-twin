@@ -44,7 +44,11 @@ if ONLY is None:
 pf = open(PART, "a") if ONLY is None else None
 rows = []
 ELIG = [r for r in man.itertuples() if r.amplicon]
+import datetime as _dt
+CUTOFF = _dt.datetime(2026, 9, 26, 9, 30)  # locked: PREREG_twindiscovery_amendment.md (IST)
 for ei, r in enumerate(ELIG):
+    if ONLY is None and _dt.datetime.now() >= CUTOFF:
+        print("T1 cutoff 09:30 IST reached; stopping study loop", flush=True); break
     if ONLY and r.study != ONLY: continue
     if NSHARD > 1 and ei % NSHARD != SHARD: continue
     if r.study in done: continue
