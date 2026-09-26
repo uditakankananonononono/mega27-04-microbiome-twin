@@ -14,6 +14,7 @@
   "median_person_taxon_richness_low_or_equal_novelty": 57.5,
   "median_person_jaccard_distance_high_novelty": 0.43860592532467535,
   "median_person_jaccard_distance_low_or_equal_novelty": 0.33895490318203814,
+  "pearson_novelty_taxon_richness": -0.4768548971536087,
   "bootstrap_unit": "person within each post-hoc novelty stratum",
   "resamples": 10000,
   "seed": 2026,
@@ -25,6 +26,16 @@
       "bootstrap95_high_minus_low_gap": [
         0.0,
         0.0
+      ],
+      "linear_novelty_slope_unadjusted": 0.0,
+      "bootstrap95_linear_novelty_slope_unadjusted": [
+        0.0,
+        0.0
+      ],
+      "linear_novelty_slope_adjusted_for_taxon_richness": 0.0,
+      "bootstrap95_linear_novelty_slope_adjusted_for_taxon_richness": [
+        0.0,
+        0.0
       ]
     },
     "cnode": {
@@ -34,6 +45,16 @@
       "bootstrap95_high_minus_low_gap": [
         -0.01652429523632976,
         0.035210632716673664
+      ],
+      "linear_novelty_slope_unadjusted": 0.08761026840018972,
+      "bootstrap95_linear_novelty_slope_unadjusted": [
+        -0.12789809739805666,
+        0.29731990267945185
+      ],
+      "linear_novelty_slope_adjusted_for_taxon_richness": 0.1348250516842055,
+      "bootstrap95_linear_novelty_slope_adjusted_for_taxon_richness": [
+        -0.13194903872026564,
+        0.3724567126115071
       ]
     },
     "glv": {
@@ -43,6 +64,16 @@
       "bootstrap95_high_minus_low_gap": [
         -0.014868818759646608,
         0.02074849304791577
+      ],
+      "linear_novelty_slope_unadjusted": -0.005588831918346759,
+      "bootstrap95_linear_novelty_slope_unadjusted": [
+        -0.12010120114602077,
+        0.10510899622153624
+      ],
+      "linear_novelty_slope_adjusted_for_taxon_richness": 0.06330871700023413,
+      "bootstrap95_linear_novelty_slope_adjusted_for_taxon_richness": [
+        -0.04781041594890727,
+        0.17504256016124592
       ]
     },
     "graphtwin": {
@@ -52,6 +83,16 @@
       "bootstrap95_high_minus_low_gap": [
         -0.017344601026594405,
         -0.0015534024777858367
+      ],
+      "linear_novelty_slope_unadjusted": -0.06348037902294014,
+      "bootstrap95_linear_novelty_slope_unadjusted": [
+        -0.11946561644271698,
+        -0.011359074963203255
+      ],
+      "linear_novelty_slope_adjusted_for_taxon_richness": -0.036632055305385845,
+      "bootstrap95_linear_novelty_slope_adjusted_for_taxon_richness": [
+        -0.10187310791458891,
+        0.02227708517595469
       ]
     },
     "transformer": {
@@ -61,8 +102,18 @@
       "bootstrap95_high_minus_low_gap": [
         -0.012994058740622195,
         0.04702286700401639
+      ],
+      "linear_novelty_slope_unadjusted": 0.14321311525783675,
+      "bootstrap95_linear_novelty_slope_unadjusted": [
+        -0.06459656462180417,
+        0.32952769567814505
+      ],
+      "linear_novelty_slope_adjusted_for_taxon_richness": 0.2136934653696251,
+      "bootstrap95_linear_novelty_slope_adjusted_for_taxon_richness": [
+        -0.01169286056234591,
+        0.42521620207274763
       ]
     }
   },
-  "scope": "Post-hoc within the one already viewed oral study. Median split is selected using only query assemblages, not outcome errors, but novelty groups and species names remain one source; intervals are descriptive and model multiplicity uncorrected."
+  "scope": "Post-hoc within the one already viewed oral study. Median split is selected using only query assemblages, not outcome errors, but novelty groups and species names remain one source; intervals are descriptive and model multiplicity uncorrected. Richness adjustment is a linear sensitivity only and does not identify ecological interactions."
 }

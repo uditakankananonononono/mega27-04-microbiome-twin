@@ -51,6 +51,11 @@ def summarize(seed=2026, resamples=10000):
     rng = np.random.default_rng(seed)
     richness = b.sum(1)
     person_richness = np.array([np.median(richness[grp==g]) for g in ordered])
+    # Whole-person bootstrap of a descriptive linear sensitivity.
+    unadjusted = np.column_stack([np.ones(len(ordered)), novelty])
+    adjusted = np.column_stack([np.ones(len(ordered)), novelty, person_richness])
+    adjustment_rng = np.random.default_rng(seed)
+    draws = adjustment_rng.integers(len(ordered), size=(resamples, len(ordered)))
     out = {'status': 'viewed_one_study_posthoc_assemblage_novelty_diagnostic',
            'pilot_sha256':hashlib.sha256(PILOT.read_bytes()).hexdigest(),
            'subject_map_sha256':hashlib.sha256(SUBJECTS.read_bytes()).hexdigest(),
@@ -64,9 +69,10 @@ def summarize(seed=2026, resamples=10000):
            'median_person_taxon_richness_low_or_equal_novelty':float(np.median(person_richness[~high])),
            'median_person_jaccard_distance_high_novelty':float(np.median(novelty[high])),
            'median_person_jaccard_distance_low_or_equal_novelty':float(np.median(novelty[~high])),
+           'pearson_novelty_taxon_richness':float(np.corrcoef(novelty,person_richness)[0,1]),
            'bootstrap_unit':'person within each post-hoc novelty stratum',
            'resamples':resamples,'seed':seed,'models':{},
-           'scope':'Post-hoc within the one already viewed oral study. Median split is selected using only query assemblages, not outcome errors, but novelty groups and species names remain one source; intervals are descriptive and model multiplicity uncorrected.'}
+           'scope':'Post-hoc within the one already viewed oral study. Median split is selected using only query assemblages, not outcome errors, but novelty groups and species names remain one source; intervals are descriptive and model multiplicity uncorrected. Richness adjustment is a linear sensitivity only and does not identify ecological interactions.'}
     prior=pilot['models']['presence_mean']['person_median_errors']
     for name,r in pilot['models'].items():
         if r['status']!='ok' or set(r['person_median_errors'])!=set(ordered):
@@ -76,10 +82,18 @@ def summarize(seed=2026, resamples=10000):
         draw_lo=rng.integers(len(lo),size=(resamples,len(lo)))
         draw_hi=rng.integers(len(hi),size=(resamples,len(hi)))
         contrast=hi[draw_hi].mean(1)-lo[draw_lo].mean(1)
+        simple_slope = np.linalg.lstsq(unadjusted, dif, rcond=None)[0][1]
+        adjusted_slope = np.linalg.lstsq(adjusted, dif, rcond=None)[0][1]
+        boot_simple = np.array([np.linalg.lstsq(unadjusted[ix],dif[ix],rcond=None)[0][1] for ix in draws])
+        boot_adjusted = np.array([np.linalg.lstsq(adjusted[ix],dif[ix],rcond=None)[0][1] for ix in draws])
         out['models'][name]={'low_novelty_model_minus_prior_mean':float(lo.mean()),
                              'high_novelty_model_minus_prior_mean':float(hi.mean()),
                              'high_minus_low_model_advantage_gap':float(hi.mean()-lo.mean()),
-                             'bootstrap95_high_minus_low_gap':np.quantile(contrast,[.025,.975]).tolist()}
+                             'bootstrap95_high_minus_low_gap':np.quantile(contrast,[.025,.975]).tolist(),
+                             'linear_novelty_slope_unadjusted':float(simple_slope),
+                             'bootstrap95_linear_novelty_slope_unadjusted':np.quantile(boot_simple,[.025,.975]).tolist(),
+                             'linear_novelty_slope_adjusted_for_taxon_richness':float(adjusted_slope),
+                             'bootstrap95_linear_novelty_slope_adjusted_for_taxon_richness':np.quantile(boot_adjusted,[.025,.975]).tolist()}
     return out
 
 
