@@ -54,3 +54,5 @@ Original article https://pmc.ncbi.nlm.nih.gov/articles/PMC12797998/ and paper-li
 
 ## Meta2DB composite shotgun lead, 2026-09-27 02:40 IST
 Zenodo v1 https://zenodo.org/records/17315984 reports 13,897 samples/84 disease-control studies and downloadable metadata/profiles. The original methods https://www.biorxiv.org/content/10.1101/2024.10.03.616398v2.full-text identify composite sources including curatedMetagenomicData and iHMP. See `data/source_family_candidates/META2DB/README.md`. Nothing downloaded or scored. This is not 84 independent or eligible digital-twin datasets; biological units, mirrors, source rights, trajectory labels and comparator are unverified.
+
+Meta2DB follow-up: deposit JSON https://zenodo.org/api/records/17315984 specifies CC BY 4.0 at deposit level, not an inherited license for its originating studies. The pinned field dictionary has subject/time/antibiotic field definitions, but completeness is untested; source-unit and treatment-window gates remain open. See source README.
