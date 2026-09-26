@@ -1,0 +1,442 @@
+{
+  "samples": 87,
+  "subjects": 58,
+  "mapping": {
+    "SRS281291": {
+      "subject": "PK301",
+      "site": "H",
+      "sample_name": "PK301H"
+    },
+    "SRS281292": {
+      "subject": "PK303",
+      "site": "H",
+      "sample_name": "PK303H"
+    },
+    "SRS281293": {
+      "subject": "PK306",
+      "site": "H",
+      "sample_name": "PK306H"
+    },
+    "SRS281294": {
+      "subject": "PK307",
+      "site": "H",
+      "sample_name": "PK307H"
+    },
+    "SRS281295": {
+      "subject": "PK308",
+      "site": "H",
+      "sample_name": "PK308H"
+    },
+    "SRS281296": {
+      "subject": "PK309",
+      "site": "H",
+      "sample_name": "PK309H"
+    },
+    "SRS281297": {
+      "subject": "PK310",
+      "site": "H",
+      "sample_name": "PK310H"
+    },
+    "SRS281298": {
+      "subject": "PK311",
+      "site": "H",
+      "sample_name": "PK311H"
+    },
+    "SRS281299": {
+      "subject": "PK312",
+      "site": "H",
+      "sample_name": "PK312H"
+    },
+    "SRS281300": {
+      "subject": "PK313",
+      "site": "H",
+      "sample_name": "PK313H"
+    },
+    "SRS281301": {
+      "subject": "PK314",
+      "site": "H",
+      "sample_name": "PK314H"
+    },
+    "SRS281302": {
+      "subject": "PK315",
+      "site": "H",
+      "sample_name": "PK315H"
+    },
+    "SRS281303": {
+      "subject": "PK316",
+      "site": "H",
+      "sample_name": "PK316H"
+    },
+    "SRS281304": {
+      "subject": "PK317",
+      "site": "H",
+      "sample_name": "PK317H"
+    },
+    "SRS281305": {
+      "subject": "PK319",
+      "site": "H",
+      "sample_name": "PK319H"
+    },
+    "SRS281306": {
+      "subject": "PK320",
+      "site": "H",
+      "sample_name": "PK320H"
+    },
+    "SRS281307": {
+      "subject": "PK321",
+      "site": "H",
+      "sample_name": "PK321H"
+    },
+    "SRS281308": {
+      "subject": "PK322",
+      "site": "H",
+      "sample_name": "PK322H"
+    },
+    "SRS281309": {
+      "subject": "PK323",
+      "site": "H",
+      "sample_name": "PK323H"
+    },
+    "SRS281310": {
+      "subject": "PK324",
+      "site": "H",
+      "sample_name": "PK324H"
+    },
+    "SRS281311": {
+      "subject": "PK325",
+      "site": "H",
+      "sample_name": "PK325H"
+    },
+    "SRS281312": {
+      "subject": "PK326",
+      "site": "H",
+      "sample_name": "PK326H"
+    },
+    "SRS281313": {
+      "subject": "PK327",
+      "site": "H",
+      "sample_name": "PK327H"
+    },
+    "SRS281314": {
+      "subject": "PK329",
+      "site": "H",
+      "sample_name": "PK329H"
+    },
+    "SRS281315": {
+      "subject": "PK330",
+      "site": "H",
+      "sample_name": "PK330H"
+    },
+    "SRS281316": {
+      "subject": "PK331",
+      "site": "H",
+      "sample_name": "PK331H"
+    },
+    "SRS281317": {
+      "subject": "PK333",
+      "site": "H",
+      "sample_name": "PK333H"
+    },
+    "SRS281318": {
+      "subject": "PK334",
+      "site": "H",
+      "sample_name": "PK334H"
+    },
+    "SRS281319": {
+      "subject": "PK335",
+      "site": "H",
+      "sample_name": "PK335H"
+    },
+    "SRS281320": {
+      "subject": "PK501",
+      "site": "D",
+      "sample_name": "PK501D"
+    },
+    "SRS281321": {
+      "subject": "PK501",
+      "site": "H",
+      "sample_name": "PK501H"
+    },
+    "SRS281322": {
+      "subject": "PK502",
+      "site": "D",
+      "sample_name": "PK502D"
+    },
+    "SRS281323": {
+      "subject": "PK502",
+      "site": "H",
+      "sample_name": "PK502H"
+    },
+    "SRS281324": {
+      "subject": "PK503",
+      "site": "D",
+      "sample_name": "PK503D"
+    },
+    "SRS281325": {
+      "subject": "PK503",
+      "site": "H",
+      "sample_name": "PK503H"
+    },
+    "SRS281326": {
+      "subject": "PK504",
+      "site": "D",
+      "sample_name": "PK504D"
+    },
+    "SRS281327": {
+      "subject": "PK504",
+      "site": "H",
+      "sample_name": "PK504H"
+    },
+    "SRS281328": {
+      "subject": "PK506",
+      "site": "D",
+      "sample_name": "PK506D"
+    },
+    "SRS281329": {
+      "subject": "PK506",
+      "site": "H",
+      "sample_name": "PK506H"
+    },
+    "SRS281330": {
+      "subject": "PK507",
+      "site": "D",
+      "sample_name": "PK507D"
+    },
+    "SRS281331": {
+      "subject": "PK507",
+      "site": "H",
+      "sample_name": "PK507H"
+    },
+    "SRS281332": {
+      "subject": "PK508",
+      "site": "D",
+      "sample_name": "PK508D"
+    },
+    "SRS281333": {
+      "subject": "PK508",
+      "site": "H",
+      "sample_name": "PK508H"
+    },
+    "SRS281334": {
+      "subject": "PK509",
+      "site": "D",
+      "sample_name": "PK509D"
+    },
+    "SRS281335": {
+      "subject": "PK509",
+      "site": "H",
+      "sample_name": "PK509H"
+    },
+    "SRS281336": {
+      "subject": "PK510",
+      "site": "D",
+      "sample_name": "PK510D"
+    },
+    "SRS281337": {
+      "subject": "PK510",
+      "site": "H",
+      "sample_name": "PK510H"
+    },
+    "SRS281338": {
+      "subject": "PK511",
+      "site": "D",
+      "sample_name": "PK511D"
+    },
+    "SRS281339": {
+      "subject": "PK511",
+      "site": "H",
+      "sample_name": "PK511H"
+    },
+    "SRS281340": {
+      "subject": "PK512",
+      "site": "D",
+      "sample_name": "PK512D"
+    },
+    "SRS281341": {
+      "subject": "PK512",
+      "site": "H",
+      "sample_name": "PK512H"
+    },
+    "SRS281342": {
+      "subject": "PK513",
+      "site": "D",
+      "sample_name": "PK513D"
+    },
+    "SRS281343": {
+      "subject": "PK513",
+      "site": "H",
+      "sample_name": "PK513H"
+    },
+    "SRS281344": {
+      "subject": "PK514",
+      "site": "D",
+      "sample_name": "PK514D"
+    },
+    "SRS281345": {
+      "subject": "PK514",
+      "site": "H",
+      "sample_name": "PK514H"
+    },
+    "SRS281346": {
+      "subject": "PK515",
+      "site": "D",
+      "sample_name": "PK515D"
+    },
+    "SRS281347": {
+      "subject": "PK515",
+      "site": "H",
+      "sample_name": "PK515H"
+    },
+    "SRS281348": {
+      "subject": "PK516",
+      "site": "D",
+      "sample_name": "PK516D"
+    },
+    "SRS281349": {
+      "subject": "PK516",
+      "site": "H",
+      "sample_name": "PK516H"
+    },
+    "SRS281350": {
+      "subject": "PK517",
+      "site": "D",
+      "sample_name": "PK517D"
+    },
+    "SRS281351": {
+      "subject": "PK517",
+      "site": "H",
+      "sample_name": "PK517H"
+    },
+    "SRS281352": {
+      "subject": "PK518",
+      "site": "D",
+      "sample_name": "PK518D"
+    },
+    "SRS281353": {
+      "subject": "PK518",
+      "site": "H",
+      "sample_name": "PK518H"
+    },
+    "SRS281354": {
+      "subject": "PK519",
+      "site": "D",
+      "sample_name": "PK519D"
+    },
+    "SRS281355": {
+      "subject": "PK519",
+      "site": "H",
+      "sample_name": "PK519H"
+    },
+    "SRS281356": {
+      "subject": "PK520",
+      "site": "D",
+      "sample_name": "PK520D"
+    },
+    "SRS281357": {
+      "subject": "PK520",
+      "site": "H",
+      "sample_name": "PK520H"
+    },
+    "SRS281358": {
+      "subject": "PK521",
+      "site": "D",
+      "sample_name": "PK521D"
+    },
+    "SRS281359": {
+      "subject": "PK521",
+      "site": "H",
+      "sample_name": "PK521H"
+    },
+    "SRS281360": {
+      "subject": "PK522",
+      "site": "D",
+      "sample_name": "PK522D"
+    },
+    "SRS281361": {
+      "subject": "PK522",
+      "site": "H",
+      "sample_name": "PK522H"
+    },
+    "SRS281362": {
+      "subject": "PK523",
+      "site": "D",
+      "sample_name": "PK523D"
+    },
+    "SRS281363": {
+      "subject": "PK523",
+      "site": "H",
+      "sample_name": "PK523H"
+    },
+    "SRS281364": {
+      "subject": "PK524",
+      "site": "D",
+      "sample_name": "PK524D"
+    },
+    "SRS281365": {
+      "subject": "PK524",
+      "site": "H",
+      "sample_name": "PK524H"
+    },
+    "SRS281366": {
+      "subject": "PK525",
+      "site": "D",
+      "sample_name": "PK525D"
+    },
+    "SRS281367": {
+      "subject": "PK525",
+      "site": "H",
+      "sample_name": "PK525H"
+    },
+    "SRS281368": {
+      "subject": "PK526",
+      "site": "D",
+      "sample_name": "PK526D"
+    },
+    "SRS281369": {
+      "subject": "PK526",
+      "site": "H",
+      "sample_name": "PK526H"
+    },
+    "SRS281370": {
+      "subject": "PK527",
+      "site": "D",
+      "sample_name": "PK527D"
+    },
+    "SRS281371": {
+      "subject": "PK527",
+      "site": "H",
+      "sample_name": "PK527H"
+    },
+    "SRS281372": {
+      "subject": "PK528",
+      "site": "D",
+      "sample_name": "PK528D"
+    },
+    "SRS281373": {
+      "subject": "PK528",
+      "site": "H",
+      "sample_name": "PK528H"
+    },
+    "SRS281374": {
+      "subject": "PK529",
+      "site": "D",
+      "sample_name": "PK529D"
+    },
+    "SRS281375": {
+      "subject": "PK529",
+      "site": "H",
+      "sample_name": "PK529H"
+    },
+    "SRS281376": {
+      "subject": "PK530",
+      "site": "D",
+      "sample_name": "PK530D"
+    },
+    "SRS281377": {
+      "subject": "PK530",
+      "site": "H",
+      "sample_name": "PK530H"
+    }
+  },
+  "scope": "MGYS00002146 only, source-description-derived"
+}
