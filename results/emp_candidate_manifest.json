@@ -1,0 +1,211 @@
+{
+  "subset_rows": 2000,
+  "exact_mirror_rows_excluded": 205,
+  "missing_subject_rows_after_exact_exclusion": 127,
+  "study_candidates_min20_rows_after_subject_filter": 20,
+  "candidate_metadata_rows": 1132,
+  "independently_verified_test_datasets": 0,
+  "studies": [
+    {
+      "study_id": 2382,
+      "metadata_rows": 159,
+      "distinct_subject_ids": 6,
+      "ebi_accessions": [
+        "ERP006348"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 1883,
+      "metadata_rows": 106,
+      "distinct_subject_ids": 1,
+      "ebi_accessions": [
+        "ERP017459"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 1747,
+      "metadata_rows": 79,
+      "distinct_subject_ids": 31,
+      "ebi_accessions": [
+        "ERP016252"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 722,
+      "metadata_rows": 78,
+      "distinct_subject_ids": 17,
+      "ebi_accessions": [
+        "ERP020884"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 804,
+      "metadata_rows": 78,
+      "distinct_subject_ids": 78,
+      "ebi_accessions": [
+        "ERP016395"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 1642,
+      "metadata_rows": 74,
+      "distinct_subject_ids": 74,
+      "ebi_accessions": [
+        "ERP016900"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 933,
+      "metadata_rows": 64,
+      "distinct_subject_ids": 64,
+      "ebi_accessions": [
+        "ERP021699"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 1453,
+      "metadata_rows": 64,
+      "distinct_subject_ids": 16,
+      "ebi_accessions": [
+        "ERP016286"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 2229,
+      "metadata_rows": 64,
+      "distinct_subject_ids": 64,
+      "ebi_accessions": [
+        "ERP021895"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 910,
+      "metadata_rows": 56,
+      "distinct_subject_ids": 56,
+      "ebi_accessions": [
+        "ERP016416"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 662,
+      "metadata_rows": 46,
+      "distinct_subject_ids": 46,
+      "ebi_accessions": [
+        "ERP020507"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 1774,
+      "metadata_rows": 37,
+      "distinct_subject_ids": 35,
+      "ebi_accessions": [
+        "ERP016472"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 1622,
+      "metadata_rows": 36,
+      "distinct_subject_ids": 1,
+      "ebi_accessions": [
+        "ERP016496"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 807,
+      "metadata_rows": 35,
+      "distinct_subject_ids": 20,
+      "ebi_accessions": [
+        "ERP016468"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 2192,
+      "metadata_rows": 29,
+      "distinct_subject_ids": 15,
+      "ebi_accessions": [
+        "ERP005806"
+      ],
+      "subject_id_missing_rows_excluded": 29,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 925,
+      "metadata_rows": 28,
+      "distinct_subject_ids": 28,
+      "ebi_accessions": [
+        "ERP022167"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 1748,
+      "metadata_rows": 28,
+      "distinct_subject_ids": 5,
+      "ebi_accessions": [
+        "ERP022166"
+      ],
+      "subject_id_missing_rows_excluded": 1,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 1580,
+      "metadata_rows": 25,
+      "distinct_subject_ids": 25,
+      "ebi_accessions": [
+        "ERP016883"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 940,
+      "metadata_rows": 23,
+      "distinct_subject_ids": 22,
+      "ebi_accessions": [
+        "ERP016495"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    },
+    {
+      "study_id": 1039,
+      "metadata_rows": 23,
+      "distinct_subject_ids": 23,
+      "ebi_accessions": [
+        "ERP016734"
+      ],
+      "subject_id_missing_rows_excluded": 0,
+      "status": "metadata_and_biom_id_candidate_not_independent_test"
+    }
+  ],
+  "note": "Exact mirror exclusion and metadata only; near duplicate/assay/licensing/subject mapping not independently verified."
+}
