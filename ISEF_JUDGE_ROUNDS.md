@@ -817,9 +817,16 @@ This project is now strongest as a computational methods / systems biology Grand
 
 ### Question (verbatim)
 
-R3QEOF
-cat /tmp/judge_q3.txt >> ISEF_JUDGE_ROUNDS.md
-cat >> ISEF_JUDGE_ROUNDS.md <<'R3EOF'
+Round 3. I applied the four fixable items from your remaining list:
+
+#4 (breadth): the Introduction now carries an explicit hierarchy paragraph - primary contribution (audit framework), major findings (which benchmarks collapse to priors vs require learned structure), secondary exploration (the discovery programme).
+#5 (independent reproduction): done for real and logged in Section 9 - fresh git clone into an empty directory, single command (python3 paper/build_paper.py) regenerated the paper end to end (22 equations, 27 tables, 3 figures); the extracted full text of the two DOCX builds is byte-identical (SHA-256 48b40311c162cefd7c13650dbe7260aa).
+#6 (failure narrative): the Discussion now states the failure as the result: "digital-twin-derived ecological hypotheses require stronger validation than network inference provides."
+#3 (wording): the scale-up section now calls it an interaction-parameter model - an association model fitted on observational abundances, not a validated causal interaction network.
+
+Items #1, #2, #7, #8 you rated fundamental (need perturbation cohorts, synthetic communities, metabolomics, or are inherent to the approach).
+
+Final question: do any MATERIAL weaknesses remain that are fixable within a student project on public data - methodological, statistical, or presentational? If what remains is only the fundamental limitations you already named (wet-lab/intervention data, field-level), please state that explicitly as your final verdict, and give your final judge placement.
 
 ### Judge answer (verbatim)
 
