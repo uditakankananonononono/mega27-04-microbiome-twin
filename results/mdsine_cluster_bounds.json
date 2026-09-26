@@ -1,0 +1,80 @@
+[
+  {
+    "cohort": "healthy",
+    "metric": "detected",
+    "comparator": "MDSINE2 (No Modules)",
+    "mouse_count": 4,
+    "mouse_deltas": [
+      -0.11832290364598361,
+      -0.036304944703688835,
+      -0.06088205795995494,
+      0.07308214815707234
+    ],
+    "mean_mouse_median_gap_prior_minus_comparator": -0.03560693953813876,
+    "cluster_bootstrap95": [
+      -0.09781841391040991,
+      0.03959109662781552
+    ],
+    "bootstrap_resamples_enumerated": 256,
+    "note": "Exploratory exact mouse-resampling sensitivity of already viewed cohorts. Taxa are NOT independent units; no source-family transfer or multiplicity-adjusted win claim."
+  },
+  {
+    "cohort": "healthy",
+    "metric": "all",
+    "comparator": "MDSINE2 (No Modules)",
+    "mouse_count": 4,
+    "mouse_deltas": [
+      -0.23246401506583103,
+      -0.23476509860094907,
+      -0.2577255118638542,
+      -0.2262392333877361
+    ],
+    "mean_mouse_median_gap_prior_minus_comparator": -0.2377984647295926,
+    "cluster_bootstrap95": [
+      -0.2514101376643484,
+      -0.22837069969103935
+    ],
+    "bootstrap_resamples_enumerated": 256,
+    "note": "Exploratory exact mouse-resampling sensitivity of already viewed cohorts. Taxa are NOT independent units; no source-family transfer or multiplicity-adjusted win claim."
+  },
+  {
+    "cohort": "uc",
+    "metric": "detected",
+    "comparator": "MDSINE2 (No Modules)",
+    "mouse_count": 5,
+    "mouse_deltas": [
+      -0.11517081249960229,
+      -0.057977234034967684,
+      -0.08366666562233072,
+      -0.11477421654235087,
+      -0.15887073799740914
+    ],
+    "mean_mouse_median_gap_prior_minus_comparator": -0.10609193333933213,
+    "cluster_bootstrap95": [
+      -0.13508993842283207,
+      -0.07815593482745598
+    ],
+    "bootstrap_resamples_enumerated": 3125,
+    "note": "Exploratory exact mouse-resampling sensitivity of already viewed cohorts. Taxa are NOT independent units; no source-family transfer or multiplicity-adjusted win claim."
+  },
+  {
+    "cohort": "uc",
+    "metric": "all",
+    "comparator": "MDSINE2 (No Modules)",
+    "mouse_count": 5,
+    "mouse_deltas": [
+      -0.18130527393649976,
+      -0.18417455605409144,
+      -0.18528712151953075,
+      -0.17289614263786568,
+      -0.14327686830724384
+    ],
+    "mean_mouse_median_gap_prior_minus_comparator": -0.17338799249104628,
+    "cluster_bootstrap95": [
+      -0.18404572581674883,
+      -0.1576027738158256
+    ],
+    "bootstrap_resamples_enumerated": 3125,
+    "note": "Exploratory exact mouse-resampling sensitivity of already viewed cohorts. Taxa are NOT independent units; no source-family transfer or multiplicity-adjusted win claim."
+  }
+]

@@ -43,9 +43,9 @@ Published medians: MDSINE2 1.061, MDSINE2 no-modules 0.913.
 Read: a parameter-free presence-conditional average ties the best published model and beats full MDSINE2 on MDSINE2's own benchmark. Inner-LOO picks tau ~0: the held-out mouse's initial state adds nothing.
 Caveat that matters: the official metric scores only timepoints where the taxon is detected, so it rewards presence-conditional prediction; this is as much a finding about the benchmark metric as about the models. 4 variants were compared (mild multiple testing). Healthy cohort only; UC cohort next.
 
-## Replication on the UC-donor cohort (bench_mdsine2.py uc; same official metric, 599 taxon-mouse pairs)
+## Replication on the UC-donor cohort (bench_mdsine2.py uc; same official metric, 601 taxon-mouse pairs)
 Ours (presence-conditional population forecaster) median 0.692 - lowest of all 12 methods.
-vs MDSINE2 (No Modules) 0.805: ours better in 376/599, Wilcoxon p = 8e-7. vs RA-MDSINE2 (No Modules) 0.784: p = 6e-6. vs MDSINE2 1.093: p = 4e-44. vs gLV elastic net 1.582, gLV ridge 1.970.
+vs MDSINE2 (No Modules) 0.805: ours better in 376/601, Wilcoxon p = 8e-7. vs RA-MDSINE2 (No Modules) 0.784: p = 6e-6. vs MDSINE2 1.093: p = 4e-44. vs gLV elastic net 1.582, gLV ridge 1.970.
 Healthy cohort re-run with the same script: ours 0.919 = 3rd of 11 (RA-MDSINE2 No Modules 0.883 is better, p = 0.045; tie with MDSINE2 No Modules p = 0.53; beats MDSINE2 1.061 p = 1e-4).
 Verdict: benchmark beat on UC cohort, tie-to-slight-loss on healthy. Metric caveat stands (detected-only scoring rewards presence-conditional prediction).
 
@@ -61,3 +61,6 @@ The first archived `bench_mdsine2.py` reconstructed Figure 3 timepoint days by c
 
 ## Subject-cluster sensitivity, same published cohorts (2026-09-26)
 `scripts/mdsine_subject_aggregate.py` calculates each mouse's median paired taxon-level RMSE difference (ours minus comparator) on the same released Figure 3 arrays. Against MDSINE2 without modules, the prior's gap is negative in 3/4 healthy mice and 5/5 UC mice on the detected-only metric. On all timepoints, it is negative in 4/4 healthy and 5/5 UC mice. These signs are a useful consistency check, **not** a statistically powered source-family benchmark: the biological sample is just nine mice in two related lab cohorts, only a few possible mouse-level resamples exist, and the prior's hyperparameters and metric choices were developed on viewed data. The JSON records all nine signed gaps and taxon counts; do not turn taxon-level p-values into independent study-level significance.
+
+## Exact mouse-cluster bootstrap sensitivity (2026-09-26)
+`scripts/mdsine_cluster_bounds.py` enumerates all 4^4 or 5^5 mouse-resampling draws of the **mouse-level median paired taxon RMSE gaps** against MDSINE2 without modules, then reports a percentile interval for their average. Prior-minus-comparator gaps: healthy detected-only -0.0356, 95% cluster-resample interval [-0.0978, +0.0396] (uncertain); UC detected-only -0.1061 [-0.1351, -0.0782]; healthy all-timepoints -0.2378 [-0.2514, -0.2284]; UC all-timepoints -0.1734 [-0.1840, -0.1576]. This is a descriptive sensitivity on four and five viewed mice; even an interval below zero does **not** repair model-selection/multiplicity, identify an independent new source or prove a general benchmark beat. The revised exact detected-only UC count is 601 paired subject-taxon units, not the older text's 599. Full arithmetic is pinned in `results/mdsine_cluster_bounds.json`.
