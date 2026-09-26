@@ -1,0 +1,61 @@
+"""Outcome-blind microbiome run/assembly harmonization.
+
+MGnify SSU abundance matrices are taxa x analysis columns. Repeated runs for
+one biological sample must be pooled before model fitting or splitting.
+"""
+from __future__ import annotations
+
+from collections import defaultdict
+import numpy as np
+import pandas as pd
+
+
+def collapse_runs(table, analyses):
+    """Sum nonnegative raw abundance counts across runs of each sample.
+
+    Assembly columns are excluded. This policy is valid only for compatible
+    raw count tables for the same assay/pipeline; caller must verify those
+    facts and independence/consent outside this function. It does not turn
+    pooled sequencing runs into independent subjects.
+    """
+    if not isinstance(table, pd.DataFrame) or table.empty or not table.columns.is_unique:
+        raise ValueError("nonempty table with unique analysis columns required")
+    if not table.index.is_unique:
+        raise ValueError("taxon rows must be unique before aggregation")
+    vals = table.to_numpy()
+    if not np.issubdtype(vals.dtype, np.number) or not np.isfinite(vals).all() or (vals < 0).any():
+        raise ValueError("abundances must be finite nonnegative numeric values")
+    if not analyses:
+        raise ValueError("all analysis relationship records required")
+    runs = defaultdict(set)
+    assembly_ids = set()
+    for a in analyses:
+        rel = a.get("relationships", {})
+        s = (rel.get("sample") or {}).get("data") or {}
+        r = (rel.get("run") or {}).get("data") or {}
+        asm = (rel.get("assembly") or {}).get("data") or {}
+        if not s.get("id"):
+            raise ValueError("analysis without sample")
+        if r.get("id"):
+            runs[s["id"]].add(r["id"])
+        if asm.get("id"):
+            assembly_ids.add(asm["id"])
+    if any(not x for x in runs.values()):
+        raise ValueError("sample without a run")
+    reverse = defaultdict(set)
+    for sample, ids in runs.items():
+        for rid in ids: reverse[rid].add(sample)
+    if any(len(s) > 1 for s in reverse.values()):
+        raise ValueError("run maps to multiple samples")
+    known = set(reverse) | assembly_ids
+    extra = set(table.columns) - known
+    missing = set(reverse) - set(table.columns)
+    if extra or missing:
+        raise ValueError(f"unexplained table columns: {len(extra)}; missing run columns: {len(missing)}")
+    # Input taxonomy rows may include multiple ranks; caller handles genus
+    # selection separately. Pool counts before composition normalization.
+    out = pd.DataFrame({sample: table[list(ids)].sum(axis=1) for sample, ids in sorted(runs.items())})
+    return out, {"samples": len(runs), "run_columns": len(reverse),
+                 "excluded_assembly_columns": len(set(table.columns) & assembly_ids),
+                 "multiple_run_samples": sum(len(x) > 1 for x in runs.values()),
+                 "assumption": "sum compatible raw count runs before normalization; not independent subjects"}
