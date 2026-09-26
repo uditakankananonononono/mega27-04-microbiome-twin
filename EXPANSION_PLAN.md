@@ -38,3 +38,5 @@ Dry-run candidate transformations only (no model fitting): run pooling + termina
 A small `TransformerTwin` taxon-token attention baseline is now wired into the existing composition predictor interface and covered by simplex/masking/smoke-fit tests. This is an unbenchmarked model family, **not** the requested pretrained microbiome foundation model or a top-tool win. Its comparison belongs to the frozen external-study protocol; no new-source prediction was read.
 
 An evaluator for labeled perturbation direction is now present; it abstains on zero prediction and excludes changes below a stated effect threshold, reports coverage and experiment groups. It has only synthetic unit tests so far; **no** species-removal, antibiotic or diet stress-test dataset or scientific result is verified.
+
+A multimodal exact-sample-ID overlap check is present with synthetic tests. It cannot establish matched aliquots, subject uniqueness, compatible timepoints or sufficient paired real datasets, so the requested multimodal interaction-necessity study remains **MISSING**.
