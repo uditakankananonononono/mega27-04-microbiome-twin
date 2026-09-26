@@ -1,0 +1,1604 @@
+[
+  {
+    "analysis": "MGYA00142737",
+    "sample": "SRS281301",
+    "run": {
+      "type": "runs",
+      "id": "SRR387957"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142738",
+    "sample": "SRS281299",
+    "run": {
+      "type": "runs",
+      "id": "SRR387953"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142739",
+    "sample": "SRS281353",
+    "run": {
+      "type": "runs",
+      "id": "SRR388063"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142740",
+    "sample": "SRS281329",
+    "run": {
+      "type": "runs",
+      "id": "SRR388015"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142741",
+    "sample": "SRS281356",
+    "run": {
+      "type": "runs",
+      "id": "SRR388069"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142742",
+    "sample": "SRS281330",
+    "run": {
+      "type": "runs",
+      "id": "SRR388017"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142743",
+    "sample": "SRS281348",
+    "run": {
+      "type": "runs",
+      "id": "SRR388053"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142744",
+    "sample": "SRS281318",
+    "run": {
+      "type": "runs",
+      "id": "SRR387991"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142745",
+    "sample": "SRS281363",
+    "run": {
+      "type": "runs",
+      "id": "SRR388084"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142746",
+    "sample": "SRS281368",
+    "run": {
+      "type": "runs",
+      "id": "SRR388094"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142747",
+    "sample": "SRS281309",
+    "run": {
+      "type": "runs",
+      "id": "SRR387973"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142748",
+    "sample": "SRS281315",
+    "run": {
+      "type": "runs",
+      "id": "SRR387984"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142749",
+    "sample": "SRS281320",
+    "run": {
+      "type": "runs",
+      "id": "SRR387996"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142750",
+    "sample": "SRS281324",
+    "run": {
+      "type": "runs",
+      "id": "SRR388005"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142751",
+    "sample": "SRS281371",
+    "run": {
+      "type": "runs",
+      "id": "SRR388100"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142752",
+    "sample": "SRS281372",
+    "run": {
+      "type": "runs",
+      "id": "SRR388102"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142753",
+    "sample": "SRS281343",
+    "run": {
+      "type": "runs",
+      "id": "SRR388043"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142754",
+    "sample": "SRS281312",
+    "run": {
+      "type": "runs",
+      "id": "SRR387979"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142755",
+    "sample": "SRS281355",
+    "run": {
+      "type": "runs",
+      "id": "SRR388067"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142756",
+    "sample": "SRS281292",
+    "run": {
+      "type": "runs",
+      "id": "SRR387938"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142757",
+    "sample": "SRS281312",
+    "run": {
+      "type": "runs",
+      "id": "SRR387978"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142758",
+    "sample": "SRS281354",
+    "run": {
+      "type": "runs",
+      "id": "SRR388064"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142759",
+    "sample": "SRS281294",
+    "run": {
+      "type": "runs",
+      "id": "SRR387941"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142760",
+    "sample": "SRS281301",
+    "run": {
+      "type": "runs",
+      "id": "SRR387956"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142761",
+    "sample": "SRS281347",
+    "run": {
+      "type": "runs",
+      "id": "SRR388051"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142762",
+    "sample": "SRS281334",
+    "run": {
+      "type": "runs",
+      "id": "SRR388025"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142763",
+    "sample": "SRS281321",
+    "run": {
+      "type": "runs",
+      "id": "SRR387999"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142764",
+    "sample": "SRS281334",
+    "run": {
+      "type": "runs",
+      "id": "SRR388024"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142765",
+    "sample": "SRS281366",
+    "run": {
+      "type": "runs",
+      "id": "SRR388089"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142766",
+    "sample": "SRS281353",
+    "run": {
+      "type": "runs",
+      "id": "SRR388062"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142767",
+    "sample": "SRS281304",
+    "run": {
+      "type": "runs",
+      "id": "SRR387963"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142768",
+    "sample": "SRS281294",
+    "run": {
+      "type": "runs",
+      "id": "SRR387942"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142769",
+    "sample": "SRS281340",
+    "run": {
+      "type": "runs",
+      "id": "SRR388037"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142770",
+    "sample": "SRS281339",
+    "run": {
+      "type": "runs",
+      "id": "SRR388034"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142771",
+    "sample": "SRS281327",
+    "run": {
+      "type": "runs",
+      "id": "SRR388011"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142772",
+    "sample": "SRS281345",
+    "run": {
+      "type": "runs",
+      "id": "SRR388047"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142773",
+    "sample": "SRS281323",
+    "run": {
+      "type": "runs",
+      "id": "SRR388003"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142774",
+    "sample": "SRS281367",
+    "run": {
+      "type": "runs",
+      "id": "SRR388091"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142775",
+    "sample": "SRS281307",
+    "run": {
+      "type": "runs",
+      "id": "SRR387969"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142776",
+    "sample": "SRS281332",
+    "run": {
+      "type": "runs",
+      "id": "SRR388021"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142777",
+    "sample": "SRS281349",
+    "run": {
+      "type": "runs",
+      "id": "SRR388055"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142778",
+    "sample": "SRS281336",
+    "run": {
+      "type": "runs",
+      "id": "SRR388028"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142779",
+    "sample": "SRS281316",
+    "run": {
+      "type": "runs",
+      "id": "SRR387988"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142780",
+    "sample": "SRS281313",
+    "run": {
+      "type": "runs",
+      "id": "SRR387981"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142781",
+    "sample": "SRS281311",
+    "run": {
+      "type": "runs",
+      "id": "SRR387976"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142782",
+    "sample": "SRS281376",
+    "run": {
+      "type": "runs",
+      "id": "SRR388109"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142783",
+    "sample": "SRS281293",
+    "run": {
+      "type": "runs",
+      "id": "SRR387940"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142784",
+    "sample": "SRS281317",
+    "run": {
+      "type": "runs",
+      "id": "SRR387990"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142785",
+    "sample": "SRS281319",
+    "run": {
+      "type": "runs",
+      "id": "SRR387995"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142786",
+    "sample": "SRS281327",
+    "run": {
+      "type": "runs",
+      "id": "SRR388010"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142787",
+    "sample": "SRS281373",
+    "run": {
+      "type": "runs",
+      "id": "SRR388103"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142788",
+    "sample": "SRS281376",
+    "run": {
+      "type": "runs",
+      "id": "SRR388110"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142789",
+    "sample": "SRS281374",
+    "run": {
+      "type": "runs",
+      "id": "SRR388106"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142790",
+    "sample": "SRS281350",
+    "run": {
+      "type": "runs",
+      "id": "SRR388057"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142791",
+    "sample": "SRS281360",
+    "run": {
+      "type": "runs",
+      "id": "SRR388077"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142792",
+    "sample": "SRS281335",
+    "run": {
+      "type": "runs",
+      "id": "SRR388026"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142793",
+    "sample": "SRS281370",
+    "run": {
+      "type": "runs",
+      "id": "SRR388097"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142794",
+    "sample": "SRS281306",
+    "run": {
+      "type": "runs",
+      "id": "SRR387966"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142795",
+    "sample": "SRS281364",
+    "run": {
+      "type": "runs",
+      "id": "SRR388086"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142796",
+    "sample": "SRS281300",
+    "run": {
+      "type": "runs",
+      "id": "SRR387955"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142797",
+    "sample": "SRS281305",
+    "run": {
+      "type": "runs",
+      "id": "SRR387965"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142798",
+    "sample": "SRS281293",
+    "run": {
+      "type": "runs",
+      "id": "SRR387939"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142799",
+    "sample": "SRS281332",
+    "run": {
+      "type": "runs",
+      "id": "SRR388020"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142800",
+    "sample": "SRS281325",
+    "run": {
+      "type": "runs",
+      "id": "SRR388006"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142801",
+    "sample": "SRS281322",
+    "run": {
+      "type": "runs",
+      "id": "SRR388001"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142802",
+    "sample": "SRS281374",
+    "run": {
+      "type": "runs",
+      "id": "SRR388105"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142803",
+    "sample": "SRS281354",
+    "run": {
+      "type": "runs",
+      "id": "SRR388065"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142804",
+    "sample": "SRS281328",
+    "run": {
+      "type": "runs",
+      "id": "SRR388013"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142805",
+    "sample": "SRS281320",
+    "run": {
+      "type": "runs",
+      "id": "SRR387997"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142806",
+    "sample": "SRS281311",
+    "run": {
+      "type": "runs",
+      "id": "SRR387977"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142807",
+    "sample": "SRS281343",
+    "run": {
+      "type": "runs",
+      "id": "SRR388042"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142808",
+    "sample": "SRS281348",
+    "run": {
+      "type": "runs",
+      "id": "SRR388052"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142809",
+    "sample": "SRS281291",
+    "run": {
+      "type": "runs",
+      "id": "SRR387669"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142810",
+    "sample": "SRS281319",
+    "run": {
+      "type": "runs",
+      "id": "SRR387994"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142811",
+    "sample": "SRS281365",
+    "run": {
+      "type": "runs",
+      "id": "SRR388088"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142812",
+    "sample": "SRS281347",
+    "run": {
+      "type": "runs",
+      "id": "SRR388050"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142813",
+    "sample": "SRS281371",
+    "run": {
+      "type": "runs",
+      "id": "SRR388099"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142814",
+    "sample": "SRS281340",
+    "run": {
+      "type": "runs",
+      "id": "SRR388036"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142815",
+    "sample": "SRS281361",
+    "run": {
+      "type": "runs",
+      "id": "SRR388078"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142816",
+    "sample": "SRS281296",
+    "run": {
+      "type": "runs",
+      "id": "SRR387945"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142817",
+    "sample": "SRS281373",
+    "run": {
+      "type": "runs",
+      "id": "SRR388104"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142818",
+    "sample": "SRS281315",
+    "run": {
+      "type": "runs",
+      "id": "SRR387986"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142819",
+    "sample": "SRS281326",
+    "run": {
+      "type": "runs",
+      "id": "SRR388009"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142820",
+    "sample": "SRS281314",
+    "run": {
+      "type": "runs",
+      "id": "SRR387982"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142821",
+    "sample": "SRS281372",
+    "run": {
+      "type": "runs",
+      "id": "SRR388101"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142822",
+    "sample": "SRS281310",
+    "run": {
+      "type": "runs",
+      "id": "SRR387974"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142823",
+    "sample": "SRS281357",
+    "run": {
+      "type": "runs",
+      "id": "SRR388070"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142824",
+    "sample": "SRS281291",
+    "run": {
+      "type": "runs",
+      "id": "SRR387670"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142825",
+    "sample": "SRS281333",
+    "run": {
+      "type": "runs",
+      "id": "SRR388022"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142826",
+    "sample": "SRS281299",
+    "run": {
+      "type": "runs",
+      "id": "SRR387951"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142827",
+    "sample": "SRS281333",
+    "run": {
+      "type": "runs",
+      "id": "SRR388023"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142828",
+    "sample": "SRS281318",
+    "run": {
+      "type": "runs",
+      "id": "SRR387992"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142829",
+    "sample": "SRS281295",
+    "run": {
+      "type": "runs",
+      "id": "SRR387944"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142830",
+    "sample": "SRS281324",
+    "run": {
+      "type": "runs",
+      "id": "SRR388004"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142831",
+    "sample": "SRS281366",
+    "run": {
+      "type": "runs",
+      "id": "SRR388090"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142832",
+    "sample": "SRS281303",
+    "run": {
+      "type": "runs",
+      "id": "SRR387960"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142833",
+    "sample": "SRS281365",
+    "run": {
+      "type": "runs",
+      "id": "SRR388087"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142834",
+    "sample": "SRS281321",
+    "run": {
+      "type": "runs",
+      "id": "SRR387998"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142835",
+    "sample": "SRS281362",
+    "run": {
+      "type": "runs",
+      "id": "SRR388081"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142836",
+    "sample": "SRS281359",
+    "run": {
+      "type": "runs",
+      "id": "SRR388075"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142837",
+    "sample": "SRS281308",
+    "run": {
+      "type": "runs",
+      "id": "SRR387971"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142838",
+    "sample": "SRS281351",
+    "run": {
+      "type": "runs",
+      "id": "SRR388058"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142839",
+    "sample": "SRS281352",
+    "run": {
+      "type": "runs",
+      "id": "SRR388061"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142840",
+    "sample": "SRS281306",
+    "run": {
+      "type": "runs",
+      "id": "SRR387967"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142841",
+    "sample": "SRS281341",
+    "run": {
+      "type": "runs",
+      "id": "SRR388039"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142842",
+    "sample": "SRS281292",
+    "run": {
+      "type": "runs",
+      "id": "SRR387937"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142843",
+    "sample": "SRS281351",
+    "run": {
+      "type": "runs",
+      "id": "SRR388059"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142844",
+    "sample": "SRS281305",
+    "run": {
+      "type": "runs",
+      "id": "SRR387964"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142845",
+    "sample": "SRS281322",
+    "run": {
+      "type": "runs",
+      "id": "SRR388000"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142846",
+    "sample": "SRS281364",
+    "run": {
+      "type": "runs",
+      "id": "SRR388085"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142847",
+    "sample": "SRS281349",
+    "run": {
+      "type": "runs",
+      "id": "SRR388054"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142848",
+    "sample": "SRS281317",
+    "run": {
+      "type": "runs",
+      "id": "SRR387989"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142849",
+    "sample": "SRS281300",
+    "run": {
+      "type": "runs",
+      "id": "SRR387954"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142850",
+    "sample": "SRS281316",
+    "run": {
+      "type": "runs",
+      "id": "SRR387987"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142851",
+    "sample": "SRS281299",
+    "run": {
+      "type": "runs",
+      "id": "SRR387952"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142852",
+    "sample": "SRS281309",
+    "run": {
+      "type": "runs",
+      "id": "SRR387972"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142853",
+    "sample": "SRS281362",
+    "run": {
+      "type": "runs",
+      "id": "SRR388082"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142854",
+    "sample": "SRS281326",
+    "run": {
+      "type": "runs",
+      "id": "SRR388008"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142855",
+    "sample": "SRS281361",
+    "run": {
+      "type": "runs",
+      "id": "SRR388079"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142856",
+    "sample": "SRS281356",
+    "run": {
+      "type": "runs",
+      "id": "SRR388068"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142857",
+    "sample": "SRS281304",
+    "run": {
+      "type": "runs",
+      "id": "SRR387962"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142858",
+    "sample": "SRS281298",
+    "run": {
+      "type": "runs",
+      "id": "SRR387950"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142859",
+    "sample": "SRS281339",
+    "run": {
+      "type": "runs",
+      "id": "SRR388035"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142860",
+    "sample": "SRS281370",
+    "run": {
+      "type": "runs",
+      "id": "SRR388098"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142861",
+    "sample": "SRS281318",
+    "run": {
+      "type": "runs",
+      "id": "SRR387993"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142862",
+    "sample": "SRS281358",
+    "run": {
+      "type": "runs",
+      "id": "SRR388072"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142863",
+    "sample": "SRS281361",
+    "run": {
+      "type": "runs",
+      "id": "SRR388080"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142864",
+    "sample": "SRS281338",
+    "run": {
+      "type": "runs",
+      "id": "SRR388032"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142865",
+    "sample": "SRS281346",
+    "run": {
+      "type": "runs",
+      "id": "SRR388048"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142866",
+    "sample": "SRS281297",
+    "run": {
+      "type": "runs",
+      "id": "SRR387947"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142867",
+    "sample": "SRS281314",
+    "run": {
+      "type": "runs",
+      "id": "SRR387983"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142868",
+    "sample": "SRS281377",
+    "run": {
+      "type": "runs",
+      "id": "SRR388111"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142869",
+    "sample": "SRS281357",
+    "run": {
+      "type": "runs",
+      "id": "SRR388071"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142870",
+    "sample": "SRS281331",
+    "run": {
+      "type": "runs",
+      "id": "SRR388019"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142871",
+    "sample": "SRS281337",
+    "run": {
+      "type": "runs",
+      "id": "SRR388030"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142872",
+    "sample": "SRS281335",
+    "run": {
+      "type": "runs",
+      "id": "SRR388027"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142873",
+    "sample": "SRS281355",
+    "run": {
+      "type": "runs",
+      "id": "SRR388066"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142874",
+    "sample": "SRS281330",
+    "run": {
+      "type": "runs",
+      "id": "SRR388016"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142875",
+    "sample": "SRS281344",
+    "run": {
+      "type": "runs",
+      "id": "SRR388044"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142876",
+    "sample": "SRS281342",
+    "run": {
+      "type": "runs",
+      "id": "SRR388041"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142877",
+    "sample": "SRS281313",
+    "run": {
+      "type": "runs",
+      "id": "SRR387980"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142878",
+    "sample": "SRS281331",
+    "run": {
+      "type": "runs",
+      "id": "SRR388018"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142879",
+    "sample": "SRS281359",
+    "run": {
+      "type": "runs",
+      "id": "SRR388074"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142880",
+    "sample": "SRS281358",
+    "run": {
+      "type": "runs",
+      "id": "SRR388073"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142881",
+    "sample": "SRS281338",
+    "run": {
+      "type": "runs",
+      "id": "SRR388033"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142882",
+    "sample": "SRS281336",
+    "run": {
+      "type": "runs",
+      "id": "SRR388029"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142883",
+    "sample": "SRS281344",
+    "run": {
+      "type": "runs",
+      "id": "SRR388045"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142884",
+    "sample": "SRS281302",
+    "run": {
+      "type": "runs",
+      "id": "SRR387958"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142885",
+    "sample": "SRS281302",
+    "run": {
+      "type": "runs",
+      "id": "SRR387959"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142886",
+    "sample": "SRS281360",
+    "run": {
+      "type": "runs",
+      "id": "SRR388076"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142887",
+    "sample": "SRS281367",
+    "run": {
+      "type": "runs",
+      "id": "SRR388092"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142888",
+    "sample": "SRS281341",
+    "run": {
+      "type": "runs",
+      "id": "SRR388038"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142889",
+    "sample": "SRS281342",
+    "run": {
+      "type": "runs",
+      "id": "SRR388040"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142890",
+    "sample": "SRS281315",
+    "run": {
+      "type": "runs",
+      "id": "SRR387985"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142891",
+    "sample": "SRS281298",
+    "run": {
+      "type": "runs",
+      "id": "SRR387949"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142892",
+    "sample": "SRS281323",
+    "run": {
+      "type": "runs",
+      "id": "SRR388002"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142893",
+    "sample": "SRS281369",
+    "run": {
+      "type": "runs",
+      "id": "SRR388096"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142894",
+    "sample": "SRS281328",
+    "run": {
+      "type": "runs",
+      "id": "SRR388012"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142895",
+    "sample": "SRS281377",
+    "run": {
+      "type": "runs",
+      "id": "SRR388112"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142896",
+    "sample": "SRS281295",
+    "run": {
+      "type": "runs",
+      "id": "SRR387943"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142897",
+    "sample": "SRS281345",
+    "run": {
+      "type": "runs",
+      "id": "SRR388046"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142898",
+    "sample": "SRS281375",
+    "run": {
+      "type": "runs",
+      "id": "SRR388107"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142899",
+    "sample": "SRS281352",
+    "run": {
+      "type": "runs",
+      "id": "SRR388060"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142900",
+    "sample": "SRS281363",
+    "run": {
+      "type": "runs",
+      "id": "SRR388083"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142901",
+    "sample": "SRS281369",
+    "run": {
+      "type": "runs",
+      "id": "SRR388095"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142902",
+    "sample": "SRS281368",
+    "run": {
+      "type": "runs",
+      "id": "SRR388093"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142903",
+    "sample": "SRS281329",
+    "run": {
+      "type": "runs",
+      "id": "SRR388014"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142904",
+    "sample": "SRS281337",
+    "run": {
+      "type": "runs",
+      "id": "SRR388031"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142905",
+    "sample": "SRS281308",
+    "run": {
+      "type": "runs",
+      "id": "SRR387970"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142906",
+    "sample": "SRS281310",
+    "run": {
+      "type": "runs",
+      "id": "SRR387975"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142907",
+    "sample": "SRS281307",
+    "run": {
+      "type": "runs",
+      "id": "SRR387968"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142908",
+    "sample": "SRS281303",
+    "run": {
+      "type": "runs",
+      "id": "SRR387961"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142909",
+    "sample": "SRS281350",
+    "run": {
+      "type": "runs",
+      "id": "SRR388056"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142910",
+    "sample": "SRS281325",
+    "run": {
+      "type": "runs",
+      "id": "SRR388007"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142911",
+    "sample": "SRS281296",
+    "run": {
+      "type": "runs",
+      "id": "SRR387946"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142912",
+    "sample": "SRS281375",
+    "run": {
+      "type": "runs",
+      "id": "SRR388108"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142913",
+    "sample": "SRS281297",
+    "run": {
+      "type": "runs",
+      "id": "SRR387948"
+    },
+    "assembly": null
+  },
+  {
+    "analysis": "MGYA00142914",
+    "sample": "SRS281346",
+    "run": {
+      "type": "runs",
+      "id": "SRR388049"
+    },
+    "assembly": null
+  }
+]
