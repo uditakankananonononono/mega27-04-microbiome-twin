@@ -35,9 +35,12 @@ PART = f"results/twindiscovery_t1_partial{'_shard' + str(SHARD) if NSHARD > 1 el
 man = pd.read_csv("data/raw/mgnify/manifest.csv")
 man["amplicon"] = ~man.study_name.str.lower().str.contains("assembl")
 done = set()
-if ONLY is None and os.path.exists(PART):
-    done = set(pd.read_csv(PART).study.unique())
-    print(f"resuming: {len(done)} studies already done", flush=True)
+if ONLY is None:
+    _parts = sorted(_glob.glob("results/twindiscovery_t1_partial*.csv"))
+    for _p in _parts:
+        done |= set(pd.read_csv(_p).study.unique())
+    if done:
+        print(f"resuming: {len(done)} studies already done across {len(_parts)} partials", flush=True)
 pf = open(PART, "a") if ONLY is None else None
 rows = []
 ELIG = [r for r in man.itertuples() if r.amplicon]
