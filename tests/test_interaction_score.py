@@ -25,3 +25,17 @@ def test_invalid_or_unpaired_errors_rejected():
             heldout_scores(prior, other)
     with pytest.raises(ValueError):
         heldout_scores([.1, .2], [.1, .2], ids=["same", "same"])
+
+
+def test_dependence_cli_reads_only_paired_heldout_errors(tmp_path, capsys):
+    import json
+    import pandas as pd
+    from microtwin.cli import main
+    f = tmp_path / "paired.csv"
+    pd.DataFrame({"sample_id": ["a", "b"], "study": ["S1", "S2"],
+                  "prior_error": [.4, .2], "interaction_error": [.2, .3]}).to_csv(f, index=False)
+    assert main(["dependence", str(f), "--n-boot", "0"]) == 0
+    out = json.loads(capsys.readouterr().out)
+    assert out["status"] == "heldout_predictive_score"
+    assert out["sample_scores"] == pytest.approx([.5, -.5])
+    assert out["ci95"] is None

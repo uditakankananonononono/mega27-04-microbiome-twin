@@ -5,6 +5,8 @@
       (MGnify / QIIME style). Reports how much an interaction-aware steady-state model beats the
       presence-conditional prior, with a paired Wilcoxon test.
   microtwin forecast TRAIN_DIR --subject S
+  microtwin dependence PAIRED_CSV --group-column study
+      Score predictive interaction gain from paired outer-held-out errors; not causal.
       Presence-conditional population forecast for a held-out subject in an MDSINE2-format dataset.
 """
 from __future__ import annotations
@@ -54,6 +56,26 @@ def cmd_forecast(a):
     return 0
 
 
+def cmd_dependence(a):
+    from .interaction_score import heldout_scores
+    df = pd.read_csv(a.table)
+    required = {"sample_id", "prior_error", "interaction_error", a.group_column}
+    missing = required - set(df.columns)
+    if missing: sys.exit(f"paired loss table missing columns: {sorted(missing)}")
+    try:
+        result = heldout_scores(df.prior_error.to_numpy(), df.interaction_error.to_numpy(),
+                                ids=df.sample_id.tolist(), groups=df[a.group_column].tolist(),
+                                n_boot=a.n_boot, seed=a.seed)
+    except ValueError as e:
+        sys.exit(str(e))
+    result["input_file"] = a.table
+    result["group_column"] = a.group_column
+    print(json.dumps(result, indent=2))
+    if a.json:
+        with open(a.json, "w") as f: json.dump(result, f, indent=2)
+    return 0
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="microtwin")
     sp = ap.add_subparsers(dest="cmd", required=True)
@@ -62,6 +84,13 @@ def main(argv=None):
     a.add_argument("--seed", type=int, default=0); a.add_argument("--json"); a.set_defaults(f=cmd_audit)
     f = sp.add_parser("forecast"); f.add_argument("table", help="long CSV: subject,taxon,day,abundance"); f.add_argument("--subject", required=True)
     f.set_defaults(f=cmd_forecast)
+    d = sp.add_parser("dependence", help="predictive gain from paired outer-held-out errors")
+    d.add_argument("table", help="CSV with sample_id, prior_error, interaction_error and study/group")
+    d.add_argument("--group-column", default="study")
+    d.add_argument("--n-boot", type=int, default=2000)
+    d.add_argument("--seed", type=int, default=0)
+    d.add_argument("--json")
+    d.set_defaults(f=cmd_dependence)
     a = ap.parse_args(argv); return a.f(a)
 
 
