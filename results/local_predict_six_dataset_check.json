@@ -1,0 +1,67 @@
+{
+  "model": "presence_mean_identical_to_local_predict_formula",
+  "seed": 0,
+  "all_datasets": [
+    {
+      "dataset": "Ocean",
+      "samples_after_assemblage_dedup": 269,
+      "taxa": 73,
+      "folds": 10,
+      "median_bray_curtis": 0.09317372567372205,
+      "mean_bray_curtis": 0.1135505893861657,
+      "data_sha256": "f66bcf68eb02e316306e6c18def3b70d885843c44ca1544ec90f5dc5d408756b",
+      "scope": "internal_same_dataset_cross_validation_not_external_source_transfer"
+    },
+    {
+      "dataset": "Drosophila_Gut",
+      "samples_after_assemblage_dedup": 24,
+      "taxa": 5,
+      "folds": 10,
+      "median_bray_curtis": 0.17151863572317813,
+      "mean_bray_curtis": 0.1561044639234877,
+      "data_sha256": "50a9ae4333f65d1c97b2ac52c29acd7dc3b4a14580eb2c0ff8e00da86157324d",
+      "scope": "internal_same_dataset_cross_validation_not_external_source_transfer"
+    },
+    {
+      "dataset": "Soil_Vitro",
+      "samples_after_assemblage_dedup": 48,
+      "taxa": 8,
+      "folds": 10,
+      "median_bray_curtis": 0.20547781599595175,
+      "mean_bray_curtis": 0.1949132752003703,
+      "data_sha256": "18fe49d0169fe12c876748be959616d5dd0fda743c0ab9c64150dd9d9dd98049",
+      "scope": "internal_same_dataset_cross_validation_not_external_source_transfer"
+    },
+    {
+      "dataset": "Soil_Vivo",
+      "samples_after_assemblage_dedup": 678,
+      "taxa": 36,
+      "folds": 10,
+      "median_bray_curtis": 0.12368973781368817,
+      "mean_bray_curtis": 0.14107907844467818,
+      "data_sha256": "b6c371b42428704f9ff1f273fa2a9e1e66a7cd0c4c3417a0065d676b15195472",
+      "scope": "internal_same_dataset_cross_validation_not_external_source_transfer"
+    },
+    {
+      "dataset": "Human_Oral",
+      "samples_after_assemblage_dedup": 143,
+      "taxa": 73,
+      "folds": 10,
+      "median_bray_curtis": 0.2039180748498425,
+      "mean_bray_curtis": 0.22591254016392676,
+      "data_sha256": "c1be8050fc6dfa68a9d44c363bb17f5d6f8bc206123c846a13fe3d23020d13ff",
+      "scope": "internal_same_dataset_cross_validation_not_external_source_transfer"
+    },
+    {
+      "dataset": "Human_Gut",
+      "samples_after_assemblage_dedup": 106,
+      "taxa": 58,
+      "folds": 10,
+      "median_bray_curtis": 0.2563504981689928,
+      "mean_bray_curtis": 0.28890164060059376,
+      "data_sha256": "3ad1463abf6a39783a063fd8d1a1d4faf13dca6b69f162d1668d703669d88d44",
+      "scope": "internal_same_dataset_cross_validation_not_external_source_transfer"
+    }
+  ],
+  "note": "Same six viewed cNODE tables and same-dataset 10-fold CV. No external study or source-family held out. No model selection, interaction necessity, intervention or clinical claim."
+}
