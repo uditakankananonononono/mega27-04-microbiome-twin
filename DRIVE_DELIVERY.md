@@ -1,29 +1,31 @@
 # Drive delivery - MEGA27 item 4 (microbiome digital twin)
 
 Uploaded to Drive folder 1D-yJqoTmmIb9EvrTHN0LiVYfZIajKGeP on 26 Sep 2026.
-All files byte-verified by re-download (SHA-256 matches below).
+All files byte-verified by re-download (SHA-256 matches below). v3: final - includes the
+complete 6/6 ConstStack (graphtwin2b) matrix (Soil_Vivo landed 11:46 IST, tie vs glv).
 
 ## Current files
 
 | File | Drive ID | SHA-256 |
 |---|---|---|
-| mega27-04-microbiome-twin-paper.pdf (71 pp, final) | 184hRZZzQ3arVrq9cnmn43AfbvAmZp81g | e3bbca6fbcbdec1f9c9bccc304582eb4faa330f33b59d97f4e4f86629c1cb8ee |
-| mega27-04-microbiome-twin-paper.docx (editable) | 1sH9ejibcF0T-fclsPa3yZepMz6KUq2CA | 8623a0c6e0d7bb5793c9a0dfec55a39a70170b66580a83525afd50b3db3668c3 |
-| mega27-04-microbiome-twin.bundle.part_00 | 1C_6_rb-PjNjCYN0rRkILcrYvb6qg1sJw | e372714f38ef002ce10d74354d8af9283c9efe4f7e1b3d2577a7d87d1198b96a |
-| mega27-04-microbiome-twin.bundle.part_01 | 15dc5fnoRcU0OcIjm7bTa1x5jYWHAqYzh | 639c0a8ded6ddfd03b566aef31ed4d9a63f47c6ae8f77e10f9eb0343efdd3fe3 |
+| mega27-04-microbiome-twin-paper.pdf (71 pp, final) | 1nYCjg7J-f7FtvT6OzC-U8doXOnpUYbAi | db70a3c2d71feae54a66ce8eb60b418ae3b7907875e1aef1ed70bf926498d3b2 |
+| mega27-04-microbiome-twin-paper.docx (editable) | 1PWwLHXIBj2YvjgxR-8OT7HaTpS6MwI5T | d474a93911e5e6f88380c89a6572e156edfa3087e87ebee1f8b8c92f95f2c7b1 |
+| mega27-04-microbiome-twin.bundle.part_00 | 1ZdPzcn658CimBWE545EVp8aiav3Ei4bD | 69183df2437c9e187d4decccacd12c2a4f12269fb7e76d2dae04f67f3e902f9a |
+| mega27-04-microbiome-twin.bundle.part_01 | 1jD1svXqpZB6v4V6ysLt2f1XKiAJra_kg | 25e5da4a628aa6b033a5d8249d526974cf8a35caca9596db8f1a76a1d4884a44 |
+| mega27-04-microbiome-twin.bundle.part_02 | 14STy50gRwhgKZctKwXtj1VEuFy52emDY | ecc6d986bc7c085582892e569fbb7c8e379a1dc428cc79d277f69e7fce82091b |
 
 The git bundle exceeded the 25 MB upload limit, so it was split. Reassemble:
 
-    cat mega27-04-microbiome-twin.bundle.part_00 mega27-04-microbiome-twin.bundle.part_01 > mega27-04-microbiome-twin.bundle
-    # expected SHA-256: 8a646f3ebb76b624fcca05bdac11c26b24822bd7ea9ce9f1cccfbacf2a207d5b
+    cat mega27-04-microbiome-twin.bundle.part_00 mega27-04-microbiome-twin.bundle.part_01 mega27-04-microbiome-twin.bundle.part_02 > mega27-04-microbiome-twin.bundle
+    # expected SHA-256: 78eadd31e282e03358f0e092c6af56d25ba610d2ebd3b992389ce38aa8ce2982
     git clone mega27-04-microbiome-twin.bundle mega27-04-microbiome-twin
 
-Bundle HEAD: 099daf0 (includes all ISEF judge-loop fixes, Rounds 1-3, and the corrected
-verbatim Round 3 question record). Bundle re-verified after reassembly: git bundle verify passes.
+Bundle HEAD: cd7038c (all ISEF judge-loop fixes Rounds 1-3, corrected verbatim Round 3
+record, complete 6/6 ConstStack matrix). Reassembled bundle passes git bundle verify.
 
-## Superseded
+## Superseded (renamed with SUPERSEDED prefix in the folder)
 
-An earlier bundle pair (Drive IDs 1PVNRO_tWWfrQPQni4UufbYQF2owCbwj3, 1CMRctRdTLKogqO1T1Qcx3Zw01CKs0V1Q;
-renamed with the SUPERSEDED prefix in the folder, HEAD e8c4181) predates a record-keeping fix to
-ISEF_JUDGE_ROUNDS.md (the Round 3 question text had been dropped by a heredoc slip; the judge answer
-was always present and byte-identical). Use the current pair above.
+- v1 bundle pair (HEAD e8c4181): predated the Round 3 verbatim-question record fix.
+- v2 paper PDF/DOCX + bundle pair (HEAD 099daf0): predated the final Soil_Vivo ConstStack cell.
+  Paper content difference between v2 and v3: the stacking tables now include the sixth
+  Soil_Vivo ConstStack row (tie vs glv, diff +0.00001, CI [-0.0004, +0.0002]).
