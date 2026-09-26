@@ -19,3 +19,6 @@ data/source_family_candidates/EMP/*.biom
 
 # Re-fetchable participant-related secondary metadata; aggregate screen only is versioned.
 data/source_family_candidates/PERTURB/*.csv
+
+# Harris source map includes clinical/symptom fields. Keep only aggregate QC and hash.
+data/source_family_candidates/HARRIS/mapping_human_volunteer.txt

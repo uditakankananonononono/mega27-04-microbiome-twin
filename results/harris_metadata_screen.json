@@ -1,0 +1,23 @@
+{
+  "status": "metadata_design_only_no_outcomes",
+  "source_commit": "3f7f111550e6cdccefb258d1275aff149f6ba9f0",
+  "source_sha256": "9d3ff3a057dfec48de2b9b2dd30620929d6573d3e41f436cb66d874ded056c5c",
+  "metadata_rows": 122,
+  "distinct_sample_ids": 122,
+  "distinct_patient_labels": 57,
+  "day_rows": {
+    "7": 49,
+    "0": 39,
+    "-9": 34
+  },
+  "arm_subjects": {
+    "Broad_spectrum_antibiotics": 19,
+    "Narrow_spectrum_antibiotics": 21,
+    "No_antibiotics": 18
+  },
+  "retained_dada2_rows": 122,
+  "missing_subject_rows": 0,
+  "subject_arm_conflicts": 1,
+  "matched_subjects_day_0_7": 35,
+  "note": "Metadata counts only. Source map includes clinical fields and is not committed. No taxon table, baseline-only model, intervention direction, independence, source rights or benchmark result verified."
+}
