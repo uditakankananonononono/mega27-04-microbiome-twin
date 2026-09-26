@@ -39,3 +39,9 @@ def test_dependence_cli_reads_only_paired_heldout_errors(tmp_path, capsys):
     assert out["status"] == "heldout_predictive_score"
     assert out["sample_scores"] == pytest.approx([.5, -.5])
     assert out["ci95"] is None
+
+
+def test_single_study_does_not_get_false_interval():
+    out = heldout_scores([.2, .3], [.1, .2], groups=["one", "one"])
+    assert out["ci95"] is None
+    assert out["interval_status"] == "insufficient_independent_groups"

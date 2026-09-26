@@ -47,7 +47,7 @@ def heldout_scores(prior_error, interaction_error, *, ids=None, groups=None, n_b
     positions = [good[np.flatnonzero(labels == label)] for label in unique]
     rng = np.random.default_rng(seed)
     boot = []
-    for _ in range(n_boot):
+    for _ in range(n_boot if len(unique) >= 2 else 0):
         chosen = rng.integers(len(positions), size=len(positions))
         draw = np.concatenate([positions[i] for i in chosen])
         boot.append(float(np.median(gain[draw])))
@@ -57,4 +57,5 @@ def heldout_scores(prior_error, interaction_error, *, ids=None, groups=None, n_b
             "ecosystem_score": float(np.median(gain[good])),
             "ci95": [float(x) for x in np.percentile(boot, [2.5, 97.5])] if boot else None,
             "bootstrap_unit": "group", "independent_groups": len(unique),
+            "interval_status": "available" if boot else ("insufficient_independent_groups" if len(unique) < 2 else "disabled"),
             "interpretation": "paired outer-held-out predictive gain, not causal interaction necessity"}
