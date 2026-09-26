@@ -16,7 +16,7 @@ def test_local_population_prediction_and_cli(tmp_path, capsys):
                  '--processing-authorized','--out',str(out)]) == 0
     pred = pd.read_csv(out)
     assert pred.sample_id.tolist()==['q1','q2']
-    np.testing.assert_allclose(pred[['A','B','C']].to_numpy(),[[.6,.4,0],[0,1,0]])
+    np.testing.assert_allclose(pred[['A','B','C']].to_numpy(),[[.6,.4,0],[0,1,0]],atol=1e-8)
     report=json.loads(capsys.readouterr().out)
     assert report['uncertainty'] is None and report['external_validation'] is False
     assert report['query_min_known_taxon_fraction']==1
@@ -86,3 +86,22 @@ def test_predict_detects_subject_map_mutation(tmp_path, monkeypatch):
     monkeypatch.setattr(local_predict,'_read_table',mutate_after_query_read)
     with pytest.raises(ValueError,match='subject map changed'):
         local_predict.predict_local(train,query,unit='counts',source_id='test',processing_authorized=True,subject_map=mapping)
+
+
+def test_local_predict_matches_archived_presence_mean_exactly(tmp_path):
+    from microtwin.models import PresenceMean
+    train=tmp_path/'train.tsv';train.write_text('sample_id\tA\tB\tC\ns1\t5\t2\t0\ns2\t0\t1\t9\n')
+    query=tmp_path/'query.tsv';query.write_text('sample_id\tA\tB\tC\nq1\t1\t1\t0\nq2\t1\t0\t1\n')
+    pred,_=predict_local(train,query,unit='counts',source_id='test',processing_authorized=True)
+    x=np.array([[5.,2.,0.],[0.,1.,9.]])
+    expected=PresenceMean().fit((x>0).astype(float),x/x.sum(1,keepdims=True)).predict(
+        np.array([[1.,1.,0.],[1.,0.,1.]]))
+    np.testing.assert_array_equal(pred[['A','B','C']].to_numpy(),expected)
+
+
+def test_predict_cli_requires_csv_output(tmp_path):
+    train=tmp_path/'train.tsv';train.write_text('sample_id\tA\ns1\t2\n')
+    query=tmp_path/'query.tsv';query.write_text('sample_id\tA\nq1\t1\n')
+    with pytest.raises(SystemExit,match='end in .csv'):
+        main(['predict',str(train),str(query),'--unit','counts','--source-id','test',
+              '--processing-authorized','--out',str(tmp_path/'wrong.tsv')])

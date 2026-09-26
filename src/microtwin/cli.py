@@ -95,6 +95,8 @@ def cmd_predict(a):
                                        processing_authorized=a.processing_authorized, subject_map=a.subject_map)
         from pathlib import Path
         dest = Path(a.out)
+        if dest.suffix.lower() != '.csv':
+            raise ValueError('output path must end in .csv')
         if dest.exists():
             raise ValueError('output file already exists; choose a new path')
         if not dest.parent.is_dir():

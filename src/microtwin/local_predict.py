@@ -62,11 +62,14 @@ def predict_local(train_path, query_path, *, unit, source_id, processing_authori
     if not np.isin(z, [0, 1]).all() or (z.sum(axis=1) < 1).any():
         raise ValueError('query must be nonempty binary presence (0/1), not measured outcome abundances')
     x = x / x.sum(axis=1, keepdims=True)
-    mean = x.mean(axis=0)
+    empirical_mean = x.mean(axis=0)
     # A taxon absent in all training samples has no estimated abundance; do not
     # assign it an invented weight or renormalize a wholly uncovered query.
-    if (z[:, mean <= 0] > 0).any():
+    if (z[:, empirical_mean <= 0] > 0).any():
         raise ValueError('query contains present taxa absent from training; abstaining')
+    # Match the published local PresenceMean implementation exactly after the
+    # abstention check; smoothing never manufactures an unseen-present taxon.
+    mean = empirical_mean + 1e-9
     mass = z @ mean
     if (mass <= 0).any():
         raise ValueError('at least one query has no taxon with positive training abundance; abstaining')
@@ -83,7 +86,7 @@ def predict_local(train_path, query_path, *, unit, source_id, processing_authori
               'source_id': source_id, 'train_sha256': train_sha, 'query_sha256': query_sha,
               'train_samples': len(train_ids), 'query_samples': len(query_ids), 'taxa': len(taxa),
               'subject_groups': qc['subject_groups'],
-              'query_min_known_taxon_fraction': float(np.min(((z > 0) & (mean > 0)).sum(axis=1) / z.sum(axis=1))),
+              'query_min_known_taxon_fraction': float(np.min(((z > 0) & (empirical_mean > 0)).sum(axis=1) / z.sum(axis=1))),
               'uncertainty': None, 'external_validation': False,
               'note': 'Local assemblage-to-composition population baseline only. Same taxon labels do not prove assay compatibility. No clinical, intervention, calibration or cross-source claim.'}
     return result, report
