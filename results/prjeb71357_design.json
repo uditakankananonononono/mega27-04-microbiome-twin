@@ -1,0 +1,19 @@
+{
+  "status": "ENA_run_header_only_no_abundance_or_arm_labels",
+  "source_tsv_sha256": "348cccfc34bb2873a76445c2141c9499ea16d3e193c22ee570ba3a4fc4a82d2a",
+  "run_rows": 145,
+  "unique_sample_accessions": 145,
+  "library_strategies": {
+    "WGA": 145
+  },
+  "subject_prefixes": 50,
+  "phase_counts": {
+    "BL": 49,
+    "EP": 48,
+    "MP": 48
+  },
+  "subjects_with_all_three_phase_titles": 45,
+  "subjects_with_baseline_and_endpoint_titles": 47,
+  "subjects_missing_at_least_one_phase": 5,
+  "note": "BL/EP/MP title interpretation inferred from paper timing, not yet cross-checked with depositors. Arm mapping absent. Not certified independent final test; no taxon data read."
+}
