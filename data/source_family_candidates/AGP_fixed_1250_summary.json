@@ -1,0 +1,12 @@
+{
+  "source": "AGP fixed manuscript 1250",
+  "biom_sha256": "ddf880c3727d559bede77b5e5a64d023a72038f4ae889089622969e40460426a",
+  "metadata_sha256": "fd57acc7287c1d051b003a63b5919976ce11c2395f8af0f2212896fc2c04a03c",
+  "sample_ids_sha256": "f5053da8c0cdc03e3fbc7a0858404da8ce75718ad411a3f59d3aa0a8c18db281",
+  "n_feature_sequences": 32954,
+  "n_samples": 9511,
+  "n_unique_host_subject_ids": 9511,
+  "n_prep_ids": 44,
+  "overlap_warning": "MGnify old audit has assembly MGYS00006069 of PRJEB11419 American Gut; exact cross-mirror overlap not reconciled",
+  "status": "quarantined_source_bytes_not_external_test"
+}
