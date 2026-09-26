@@ -27,3 +27,12 @@ def test_unknown_family_fails_closed_and_separate_known_only_passes_narrow_check
     assert not y['valid_known_family_separation_only']
     with pytest.raises(ValueError, match='conflicting'):
         check_family_partitions([], {'one': ['PRJEB71357'], 'two': ['PRJEB71357']})
+
+
+def test_duplicate_alias_in_same_family_is_not_silently_accepted():
+    with pytest.raises(ValueError, match='duplicate accession'):
+        check_family_partitions([], {'same': ['PRJEB71357', 'prjeb71357']})
+    with pytest.raises(ValueError, match='requires aliases'):
+        check_family_partitions([], {'empty': []})
+    with pytest.raises(ValueError, match='mapping'):
+        check_family_partitions([], {'none': None})

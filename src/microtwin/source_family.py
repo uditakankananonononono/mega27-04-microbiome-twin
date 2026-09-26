@@ -15,17 +15,26 @@ def check_family_partitions(records, known_families):
     Records require an accession, family membership and train/validation/test
     partition. Unknown accessions are not independent by default.
     """
+    if not isinstance(known_families, dict):
+        raise ValueError('source family mapping must be a dictionary')
     alias_to_family = {}
     for family, aliases in known_families.items():
         if not isinstance(family, str) or not family.strip() or isinstance(aliases, str):
             raise ValueError('invalid source family mapping')
+        try:
+            aliases = list(aliases)
+        except TypeError as exc:
+            raise ValueError('invalid source family mapping') from exc
+        if not aliases:
+            raise ValueError('source family mapping requires aliases')
         for alias in aliases:
             if not isinstance(alias, str) or not alias.strip():
                 raise ValueError('blank source accession')
             alias = alias.strip().upper()
-            prior = alias_to_family.get(alias)
-            if prior is not None and prior != family:
-                raise ValueError('accession belongs to conflicting source families')
+            if alias in alias_to_family:
+                if alias_to_family[alias] != family:
+                    raise ValueError('accession belongs to conflicting source families')
+                raise ValueError('duplicate accession in source family mapping')
             alias_to_family[alias] = family
     errors = []
     partitions = defaultdict(set)
