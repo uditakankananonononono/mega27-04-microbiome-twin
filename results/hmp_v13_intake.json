@@ -1,0 +1,59 @@
+{
+  "status": "source_intake_only_not_external_benchmark",
+  "source_commit": "a9807c3ed97f24c94d40fc4e62329a2d83a7e673",
+  "sha256": {
+    "otu_table_psn_v13.txt.gz": "876a4a5895995e89413b08ad9e53529c496df27134dcb344882605ba854fa272",
+    "v13_map_uniquebyPSN.txt.bz2": "0659e84079cbcf900cf5b13841e460007b82e6d35bb5305f993e241d1118f805",
+    "ppAll_V13_map.txt": "0618ca1771f8990a406479300accbaf4457405082a713e576e688089819e6f6a"
+  },
+  "otu_rows": 43140,
+  "matrix_sample_columns": 2910,
+  "mapped_sample_columns": 2898,
+  "unmapped_matrix_sample_columns": 12,
+  "mapped_distinct_subjects": 179,
+  "mapped_distinct_subsites": 18,
+  "mapped_visits": {
+    "1": 1642,
+    "2": 1244,
+    "3": 12
+  },
+  "mapped_subsite_sample_counts": {
+    "Tongue_dorsum": 190,
+    "Supragingival_plaque": 189,
+    "Right_Retroauricular_crease": 187,
+    "Stool": 187,
+    "Left_Retroauricular_crease": 186,
+    "Palatine_Tonsils": 186,
+    "Subgingival_plaque": 183,
+    "Buccal_mucosa": 183,
+    "Attached_Keratinized_gingiva": 181,
+    "Hard_palate": 178,
+    "Throat": 170,
+    "Saliva": 162,
+    "Anterior_nares": 161,
+    "Right_Antecubital_fossa": 146,
+    "Left_Antecubital_fossa": 145,
+    "Mid_vagina": 89,
+    "Posterior_fornix": 88,
+    "Vaginal_introitus": 87
+  },
+  "otu_rows_unnamed_genus": 8092,
+  "genus_names_unique_after_ambiguity_exclusion": 360,
+  "ambiguous_genus_names_excluded": [
+    "Bacillus",
+    "Bacteroides",
+    "Clostridium",
+    "Eubacterium",
+    "Ruminococcus"
+  ],
+  "raw_mass_retained_named_unambiguous_median": 0.9477023224972949,
+  "raw_mass_retained_named_unambiguous_minimum": 0.0,
+  "raw_mass_retained_named_unambiguous_stool_median": 0.28439172573412413,
+  "old_mgnify_manifest_textual_matches": {
+    "SRP002395": 0,
+    "SRP002012": 0,
+    "HMP": 0,
+    "Human Microbiome Project": 0
+  },
+  "note": "One HMP V1-3 source cohort, not 18 independent datasets. Multiple body sites and visits repeat people; zero textual overlap is not proof against sample mirroring. Raw source has public restricted metadata only; license/consent and taxonomy reference crosswalk remain to be verified. No model fit or outcome scoring."
+}
