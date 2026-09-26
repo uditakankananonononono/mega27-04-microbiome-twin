@@ -42,3 +42,5 @@ An evaluator for labeled perturbation direction is now present; it abstains on z
 A multimodal exact-sample-ID overlap check is present with synthetic tests. It cannot establish matched aliquots, subject uniqueness, compatible timepoints or sufficient paired real datasets, so the requested multimodal interaction-necessity study remains **MISSING**.
 
 A prospective keystone ranking evaluator reports experiment-macro precision at k against externally measured post-perturbation effects. Only synthetic tests exist. No candidate keystone prediction under environmental change, independent perturbation dataset or discovery is yet verified.
+
+An outcome-blind vocabulary-overlap check found 124 shared genus names between an already-audited oral pilot (160 genera) and the new oral candidate (339 genera). Those names retain median 99.58% of candidate per-sample genus count mass (minimum 89.73%), but this is only input coverage, not a forecast result or a verified disjoint-subject pair. The oral candidate's person-level labels and taxonomy versions remain open. `microtwin.transfer_coverage` tests this diagnostic independently.
