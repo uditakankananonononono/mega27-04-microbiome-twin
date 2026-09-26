@@ -1,0 +1,90 @@
+{
+  "status": "same_viewed_data_independent_arithmetic_reconstruction_only",
+  "table_sha256": "8f99b5f2319b71ea8895ed38629b59232b2d412b671d8daebd298f4b7c647fce",
+  "metadata_sha256": "0e4a9d960ec7ccebc0dd4d7de9e4e4ab98abe52aad7f117ea3746d6ab2dd0d39",
+  "checked_studies": 16,
+  "max_absolute_difference": 0.0,
+  "note": "Uses a separately written PresenceMean and Bray-Curtis calculation but the same viewed EMP table, metadata and threshold; confirms arithmetic only. Does not qualify external independence, rights, full-community coverage, or a new model beat.",
+  "rows": [
+    {
+      "study_id": 662,
+      "score": 0.8068943052390586,
+      "difference_vs_report": 0.0
+    },
+    {
+      "study_id": 722,
+      "score": 0.7848419220922039,
+      "difference_vs_report": 0.0
+    },
+    {
+      "study_id": 804,
+      "score": 0.7740507521573358,
+      "difference_vs_report": 0.0
+    },
+    {
+      "study_id": 807,
+      "score": 0.6882816045782956,
+      "difference_vs_report": 0.0
+    },
+    {
+      "study_id": 910,
+      "score": 0.8479231559906495,
+      "difference_vs_report": 0.0
+    },
+    {
+      "study_id": 925,
+      "score": 0.868007645152543,
+      "difference_vs_report": 0.0
+    },
+    {
+      "study_id": 933,
+      "score": 0.7572363044842211,
+      "difference_vs_report": 0.0
+    },
+    {
+      "study_id": 940,
+      "score": 0.7449371804635725,
+      "difference_vs_report": 0.0
+    },
+    {
+      "study_id": 1039,
+      "score": 0.7864665893004722,
+      "difference_vs_report": 0.0
+    },
+    {
+      "study_id": 1453,
+      "score": 0.7689948376029534,
+      "difference_vs_report": 0.0
+    },
+    {
+      "study_id": 1580,
+      "score": 0.8757126700775557,
+      "difference_vs_report": 0.0
+    },
+    {
+      "study_id": 1642,
+      "score": 0.6823606005068356,
+      "difference_vs_report": 0.0
+    },
+    {
+      "study_id": 1747,
+      "score": 0.7524034113970802,
+      "difference_vs_report": 0.0
+    },
+    {
+      "study_id": 1774,
+      "score": 0.7462727528266822,
+      "difference_vs_report": 0.0
+    },
+    {
+      "study_id": 2192,
+      "score": 0.7497805686742995,
+      "difference_vs_report": 0.0
+    },
+    {
+      "study_id": 2229,
+      "score": 0.6961231720826419,
+      "difference_vs_report": 0.0
+    }
+  ]
+}
