@@ -1,0 +1,1356 @@
+{
+  "manifest_rows": 160,
+  "unique_study_ids": 160,
+  "metadata_candidates": 127,
+  "review_required": 33,
+  "verified_independent_datasets": 0,
+  "note": "Metadata screening only: underlying file bytes, overlap, modality, license, subject identity and external-study eligibility remain unverified.",
+  "records": [
+    {
+      "study": "MGYS00006862",
+      "secondary_accession": "ERP175206",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 84,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00005791",
+      "secondary_accession": "ERP127967",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 245,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006825",
+      "secondary_accession": "ERP160132",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 197,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006824",
+      "secondary_accession": "ERP147941",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 40,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006822",
+      "secondary_accession": "ERP148470",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 55,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006814",
+      "secondary_accession": "ERP148607",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 68,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006815",
+      "secondary_accession": "ERP147808",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 67,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006811",
+      "secondary_accession": "ERP147961",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 98,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006807",
+      "secondary_accession": "ERP170897",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 60,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006805",
+      "secondary_accession": "ERP148499",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 86,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006806",
+      "secondary_accession": "ERP136860",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 74,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006760",
+      "secondary_accession": "ERP148661",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 218,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00002338",
+      "secondary_accession": "ERP106359",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 303,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006797",
+      "secondary_accession": "ERP147940",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 175,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006551",
+      "secondary_accession": "ERP152745",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 2047,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006795",
+      "secondary_accession": "SRP162433",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 31,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006794",
+      "secondary_accession": "ERP128598",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 184,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006789",
+      "secondary_accession": "ERP148573",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 108,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006787",
+      "secondary_accession": "ERP160127",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 108,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006786",
+      "secondary_accession": "ERP147955",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 134,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006759",
+      "secondary_accession": "ERP146353",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 692,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006780",
+      "secondary_accession": "ERP160119",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 24,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006779",
+      "secondary_accession": "ERP148332",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 57,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006769",
+      "secondary_accession": "ERP147945",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 116,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006765",
+      "secondary_accession": "ERP160150",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 28,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006755",
+      "secondary_accession": "SRP097190",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 83,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005333",
+      "secondary_accession": "ERP108859",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 244,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00005230",
+      "secondary_accession": "ERP005153",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 913,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002675",
+      "secondary_accession": "ERP107102",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 24,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006069",
+      "secondary_accession": "ERP133351",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 1568,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006006",
+      "secondary_accession": "ERP133688",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 457,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002061",
+      "secondary_accession": "ERP104235",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 52,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00000633",
+      "secondary_accession": "SRP001634",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 1033,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002238",
+      "secondary_accession": "SRP097646",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 111,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006562",
+      "secondary_accession": "ERP150486",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 554,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00005154",
+      "secondary_accession": "ERP001500",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 529,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006649",
+      "secondary_accession": "ERP131993",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 20,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006641",
+      "secondary_accession": "ERP127228",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 88,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006642",
+      "secondary_accession": "ERP127229",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 57,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006364",
+      "secondary_accession": "ERP134534",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 160,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00006640",
+      "secondary_accession": "ERP150574",
+      "biome": "root:Host-associated:Human:Digestive system",
+      "manifest_samples": 61,
+      "status": "review_required",
+      "reasons": [
+        "possible_assembly_not_independent_biological_cohort"
+      ]
+    },
+    {
+      "study": "MGYS00005253",
+      "secondary_accession": "ERP108620",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 606,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006320",
+      "secondary_accession": "SRP039515",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 392,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006276",
+      "secondary_accession": "ERP128187",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 91,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006263",
+      "secondary_accession": "ERP110514",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 489,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006017",
+      "secondary_accession": "SRP330744",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 53,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005592",
+      "secondary_accession": "ERP119456",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 160,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005569",
+      "secondary_accession": "SRP256368",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 71,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005528",
+      "secondary_accession": "DRP004359",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 506,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005506",
+      "secondary_accession": "SRP115814",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 701,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005189",
+      "secondary_accession": "DRP004640",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 530,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005223",
+      "secondary_accession": "SRP126884",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 767,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005197",
+      "secondary_accession": "SRP128931",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 1319,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005143",
+      "secondary_accession": "SRP126946",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 7397,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002159",
+      "secondary_accession": "SRP110002",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 21,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00003719",
+      "secondary_accession": "SRP125475",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 21,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002395",
+      "secondary_accession": "SRP123221",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 68,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002394",
+      "secondary_accession": "SRP051741",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 20,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002272",
+      "secondary_accession": "SRP073270",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 40,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002269",
+      "secondary_accession": "SRP062274",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 147,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002229",
+      "secondary_accession": "SRP051201",
+      "biome": "root:Host-associated:Human:Digestive system:Oral",
+      "manifest_samples": 100,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006648",
+      "secondary_accession": "ERP156480",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 67,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005232",
+      "secondary_accession": "ERP005182",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 777,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005156",
+      "secondary_accession": "ERP005152",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 938,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006246",
+      "secondary_accession": "ERP149135",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 50,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005384",
+      "secondary_accession": "SRP049645",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 671,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005172",
+      "secondary_accession": "SRP113602",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 1481,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005533",
+      "secondary_accession": "ERP016280",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 584,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005212",
+      "secondary_accession": "SRP071579",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 644,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005238",
+      "secondary_accession": "SRP051059",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 487,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005101",
+      "secondary_accession": "SRP057859",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 72,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005102",
+      "secondary_accession": "ERP108413",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 179,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005135",
+      "secondary_accession": "ERP005151",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 109,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005098",
+      "secondary_accession": "SRP133226",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 101,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005037",
+      "secondary_accession": "SRP056821",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 106,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005090",
+      "secondary_accession": "ERP115944",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 120,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002184",
+      "secondary_accession": "ERP021896",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 1964,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002072",
+      "secondary_accession": "ERP019566",
+      "biome": "root:Host-associated:Human:Skin",
+      "manifest_samples": 258,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006855",
+      "secondary_accession": "ERP135226",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 116,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006799",
+      "secondary_accession": "ERP151258",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 27,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002673",
+      "secondary_accession": "ERP003782",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 93,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006747",
+      "secondary_accession": "SRP302361",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 101,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00001223",
+      "secondary_accession": "ERP010045",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 30,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00001224",
+      "secondary_accession": "ERP006247",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 66,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005267",
+      "secondary_accession": "ERP003512",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 643,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00000426",
+      "secondary_accession": "ERP006567",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 44,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005228",
+      "secondary_accession": "ERP003513",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 1594,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006537",
+      "secondary_accession": "SRP184350",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 85,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006536",
+      "secondary_accession": "ERP105396",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 65,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006538",
+      "secondary_accession": "SRP185748",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 40,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005628",
+      "secondary_accession": "ERP005534",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 869,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006450",
+      "secondary_accession": "SRP429915",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 144,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006456",
+      "secondary_accession": "SRP424905",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 24,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006446",
+      "secondary_accession": "SRP388018",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 977,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006433",
+      "secondary_accession": "ERP006689",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 25,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006430",
+      "secondary_accession": "SRP437776",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 32,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006427",
+      "secondary_accession": "SRP425311",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 85,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006424",
+      "secondary_accession": "SRP418473",
+      "biome": "root:Host-associated:Mammals",
+      "manifest_samples": 142,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006652",
+      "secondary_accession": "ERP143252",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 456,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00001412",
+      "secondary_accession": "ERP004961",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 48,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00001368",
+      "secondary_accession": "ERP013987",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 438,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00003172",
+      "secondary_accession": "SRP155989",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 45,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006578",
+      "secondary_accession": "ERP155720",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 27,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00000957",
+      "secondary_accession": "SRP043030",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 70,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00001704",
+      "secondary_accession": "ERP022327",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 383,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00000867",
+      "secondary_accession": "SRP032419",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 32,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006031",
+      "secondary_accession": "SRP361259",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 89,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006021",
+      "secondary_accession": "DRP004717",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 135,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006018",
+      "secondary_accession": "SRP109260",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 195,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00001349",
+      "secondary_accession": "ERP004417",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 108,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005260",
+      "secondary_accession": "ERP105451",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 461,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005227",
+      "secondary_accession": "ERP109898",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 628,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00000983",
+      "secondary_accession": "SRP041803",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 2469,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00001347",
+      "secondary_accession": "ERP011833",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 1250,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005740",
+      "secondary_accession": "DRP003818",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 34,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005726",
+      "secondary_accession": "SRP258603",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 58,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005169",
+      "secondary_accession": "SRP107846",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 443,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005151",
+      "secondary_accession": "ERP109315",
+      "biome": "root:Host-associated:Plants",
+      "manifest_samples": 573,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006750",
+      "secondary_accession": "ERP138390",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 340,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006533",
+      "secondary_accession": "ERP130742",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 94,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006532",
+      "secondary_accession": "ERP131898",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 40,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005766",
+      "secondary_accession": "ERP122587",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 138,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006062",
+      "secondary_accession": "ERP125074",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 220,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006042",
+      "secondary_accession": "ERP131894",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 355,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005621",
+      "secondary_accession": "SRP182090",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 60,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005611",
+      "secondary_accession": "SRP252220",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 117,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005610",
+      "secondary_accession": "ERP107730",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 251,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005609",
+      "secondary_accession": "ERP108716",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 314,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005600",
+      "secondary_accession": "SRP243794",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 286,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005593",
+      "secondary_accession": "ERP111337",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 150,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005576",
+      "secondary_accession": "ERP121417",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 34,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005187",
+      "secondary_accession": "SRP148159",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 600,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005316",
+      "secondary_accession": "SRP163135",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 733,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005317",
+      "secondary_accession": "SRP143624",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 613,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005309",
+      "secondary_accession": "ERP116454",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 72,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00004995",
+      "secondary_accession": "ERP115446",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 43,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00003706",
+      "secondary_accession": "ERP016469",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 542,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00003681",
+      "secondary_accession": "ERP016414",
+      "biome": "root:Host-associated:Birds",
+      "manifest_samples": 122,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006764",
+      "secondary_accession": "SRP507932",
+      "biome": "root:Host-associated:Fish",
+      "manifest_samples": 21,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006763",
+      "secondary_accession": "SRP482902",
+      "biome": "root:Host-associated:Fish",
+      "manifest_samples": 39,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006762",
+      "secondary_accession": "SRP482223",
+      "biome": "root:Host-associated:Fish",
+      "manifest_samples": 137,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006761",
+      "secondary_accession": "SRP482221",
+      "biome": "root:Host-associated:Fish",
+      "manifest_samples": 123,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006758",
+      "secondary_accession": "ERP158363",
+      "biome": "root:Host-associated:Fish",
+      "manifest_samples": 135,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006041",
+      "secondary_accession": "ERP125469",
+      "biome": "root:Host-associated:Fish",
+      "manifest_samples": 707,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006117",
+      "secondary_accession": "ERP144954",
+      "biome": "root:Host-associated:Fish",
+      "manifest_samples": 90,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006086",
+      "secondary_accession": "ERP136460",
+      "biome": "root:Host-associated:Fish",
+      "manifest_samples": 142,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005503",
+      "secondary_accession": "ERP113547",
+      "biome": "root:Host-associated:Fish",
+      "manifest_samples": 870,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00003166",
+      "secondary_accession": "SRP115243",
+      "biome": "root:Host-associated:Fish",
+      "manifest_samples": 70,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00004672",
+      "secondary_accession": "SRP124286",
+      "biome": "root:Host-associated:Fish",
+      "manifest_samples": 33,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002905",
+      "secondary_accession": "ERP110546",
+      "biome": "root:Host-associated:Fish",
+      "manifest_samples": 66,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002608",
+      "secondary_accession": "ERP110004",
+      "biome": "root:Host-associated:Fish",
+      "manifest_samples": 101,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002413",
+      "secondary_accession": "ERP109242",
+      "biome": "root:Host-associated:Fish",
+      "manifest_samples": 173,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00002065",
+      "secondary_accession": "ERP105249",
+      "biome": "root:Host-associated:Fish",
+      "manifest_samples": 214,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006798",
+      "secondary_accession": "SRP315825",
+      "biome": "root:Host-associated:Insecta",
+      "manifest_samples": 24,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00006019",
+      "secondary_accession": "SRP126632",
+      "biome": "root:Host-associated:Insecta",
+      "manifest_samples": 20,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005862",
+      "secondary_accession": "SRP279534",
+      "biome": "root:Host-associated:Insecta",
+      "manifest_samples": 21,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005215",
+      "secondary_accession": "SRP071118",
+      "biome": "root:Host-associated:Insecta",
+      "manifest_samples": 638,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00005163",
+      "secondary_accession": "ERP015256",
+      "biome": "root:Host-associated:Insecta",
+      "manifest_samples": 386,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00003800",
+      "secondary_accession": "ERP023686",
+      "biome": "root:Host-associated:Insecta",
+      "manifest_samples": 154,
+      "status": "metadata_candidate",
+      "reasons": []
+    },
+    {
+      "study": "MGYS00003705",
+      "secondary_accession": "ERP016607",
+      "biome": "root:Host-associated:Insecta",
+      "manifest_samples": 385,
+      "status": "metadata_candidate",
+      "reasons": []
+    }
+  ]
+}
