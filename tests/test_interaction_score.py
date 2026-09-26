@@ -45,3 +45,27 @@ def test_single_study_does_not_get_false_interval():
     out = heldout_scores([.2, .3], [.1, .2], groups=["one", "one"])
     assert out["ci95"] is None
     assert out["interval_status"] == "insufficient_independent_groups"
+
+
+def test_missing_or_normalized_duplicate_identifiers_fail_closed():
+    for group in [None, "", "  ", float("nan"), float("inf")]:
+        with pytest.raises(ValueError):
+            heldout_scores([.2], [.1], groups=[group])
+    for sample_id in [None, "", "  ", float("nan"), float("inf")]:
+        with pytest.raises(ValueError):
+            heldout_scores([.2], [.1], ids=[sample_id])
+    with pytest.raises(ValueError):
+        heldout_scores([.2, .3], [.1, .2], ids=[1, "1"])
+    out = heldout_scores([.2, .3], [.1, .2], groups=[1, "1"])
+    assert out["independent_groups"] == 1
+    assert out["ci95"] is None
+
+
+def test_cli_nan_study_label_is_not_counted_as_independent(tmp_path):
+    import pandas as pd
+    from microtwin.cli import main
+    f = tmp_path / "paired.csv"
+    pd.DataFrame({"sample_id": ["a", "b"], "study": ["S1", None],
+                  "prior_error": [.4, .2], "interaction_error": [.2, .3]}).to_csv(f, index=False)
+    with pytest.raises(SystemExit, match="group ids must be nonempty"):
+        main(["dependence", str(f)])
