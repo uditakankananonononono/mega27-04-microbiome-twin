@@ -1,0 +1,142 @@
+[[PAPER PAGE 21]]
+                                                                        403e-11            9325e-10
+                                                                        4.164943296236     1.943640204910
+ Lactobacillus       34                19              0.559
+                                                                        0486e-11           156e-10
+                                                                        7.224555155610     3.112116067032
+ Blautia             28                17              0.607
+                                                                        398e-11            171e-10
+                                                                        1.980191282012     7.392714119512
+ Atopobium           26                16              0.615
+                                                                        2747e-10           492e-10
+                                                                        1.980191282012     7.392714119512
+ Haemophilus         26                16              0.615
+                                                                        2747e-10           492e-10
+Table 17. Phylum enrichment among the 25 lowest-p genera by twin-gate score
+(one-sided Fisher, BH).
+
+ phylum                   in top 25           genera              p                     q (BH)
+                                                                  0.377453351926159     0.905724408776573
+ Actinomycetota           4                   7
+                                                                  8                     5
+                                                                  0.446428571428571     0.905724408776573
+ Campylobacterota         1                   1
+                                                                  45                    5
+                                                                  0.446428571428571     0.905724408776573
+ Spirochaetota            1                   1
+                                                                  45                    5
+                                                                  0.517556805015184     0.905724408776573
+ Pseudomonadota           4                   8
+                                                                  9                     5
+ Fusobacteriota           1                   2                   0.698051948051948     0.909292705075169
+                                                                  0.798163055615896
+ Bacillota                11                  27                                        0.909292705075169
+                                                                  7
+ Bacteroidota             2                   7                   0.909292705075169     0.909292705075169
+T2 (twin gates vs ridge as disease-literature predictor). T2: 56 genera. Twin-gate coef -
+2.28 (p=0.168), AIC 767.1 vs ridge 766.1. TWIN DOES NOT WIN - redirect to
+CatBoost+SHAP per pre-reg
+Table 18. Negative-binomial models of BugSigDB signature counts
+(results/twindiscovery_t2.json).
+
+ model           score coef    p            AIC        ML alpha     ML coef     ML p           ML AIC
+ ridge
+ keystone        -0.351        0.241        766.1      0.62         -0.351      0.152          762.0
+ score
+ twin gate
+                 -2.28         0.168        767.1      0.63         -2.28       0.0737         763.7
+ frequency
+Redirects (locked in the same pre-registration before any T1 run). R1, the scorer redirect
+to SHAP-attribution centrality from the validated LightGBM keystone model:
+Desulfobacterota 1/3 in top decile, q = 0.462; no phylum passes FDR (best q = 0.462).
+The sulfate-reducer enrichment is therefore specific to the ridge out-strength definition; it
+does not survive either model-class change. R2, the predictor redirect to CatBoost +
+SHAP per-genus attribution ranking in the same negative-binomial comparison:
+coefficient +37.07 (p = 2.6e-35), AIC 2343.9 vs ridge 2443.1 on 200 genera - the redirect
+WINS. Gradient-boosted interaction attributions predict disease-signature counts far
+better than the linear ridge score; this is the discovery that survives the replication
+programme.
+Table 19. T2 redirect: negative-binomial models of BugSigDB signature counts
+(results/keystone_redirects.json).
+
+[[PAPER PAGE 22]]
+ model                      score coef          p                       AIC
+ ridge keystone score       -0.351              0.241                   2443.1
+ CatBoost+SHAP
+                            +37.07              2.6e-35                 2343.9
+ attribution
+
+
+
+Appendix B. Full MGnify interaction audit (per study)
+Table 20. All 160 audited studies (results/mgnify_audit.csv). Gain is (prior -
+interaction) / prior; positive favours interactions.
+
+                                                prior     interaction            Wilcoxon
+ study        biome         n            taxa                           gain
+                                                median    median                 p
+              root:Host-
+              associated:
+ MGYS000                                                                         0.11749341
+              Human:Dig     84           55     0.173     0.170         0.004
+ 06862                                                                           41540573
+              estive
+              system
+              root:Host-
+              associated:                                                        4.83842657
+ MGYS000
+              Human:Dig     243          47     0.178     0.172         0.006    57998056e-
+ 05791
+              estive                                                             05
+              system
+              root:Host-
+              associated:
+ MGYS000                                                                         0.00518887
+              Human:Dig     197          57     0.174     0.168         0.006
+ 06825                                                                           44323153
+              estive
+              system
+              root:Host-
+              associated:
+ MGYS000                                                                         0.97349265
+              Human:Dig     40           66     0.175     0.180         -0.004
+ 06824                                                                           041521
+              estive
+              system
+              root:Host-
+              associated:
+ MGYS000                                                                         0.08740949
+              Human:Dig     55           58     0.192     0.189         0.003
+ 06822                                                                           52304293
+              estive
+              system
+              root:Host-
+              associated:
+ MGYS000                                                                         0.34048107
+              Human:Dig     68           70     0.177     0.175         0.002
+ 06814                                                                           44509645
+              estive
+              system
+              root:Host-
+              associated:
+ MGYS000                                                                         0.85134751
+              Human:Dig     67           46     0.167     0.167         -0.000
+ 06815                                                                           4124289
+              estive
+              system
+              root:Host-
+              associated:
+ MGYS000                                                                         0.01169370
+              Human:Dig     98           39     0.160     0.154         0.007
+ 06811                                                                           67032781
+              estive
+              system
+              root:Host-
+              associated:
+ MGYS000                                                                         0.19257348
+              Human:Dig     60           65     0.179     0.180         -0.001
+ 06807                                                                           7700825
+              estive
+              system
+ MGYS000      root:Host-    86           66     0.180     0.162         0.017    0.01598730
+

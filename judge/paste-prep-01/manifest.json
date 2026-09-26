@@ -1,0 +1,191 @@
+{
+  "paper_path": "paper/mega27-04-microbiome-twin-paper.pdf",
+  "paper_sha256": "db70a3c2d71feae54a66ce8eb60b418ae3b7907875e1aef1ed70bf926498d3b2",
+  "extraction_sha256": "1c4e2ff30a4c66950fdd9b5f11b72ab8ed69afc09b3f747ae280683fb661c385",
+  "extracted_chars": 249636,
+  "pdf_pages": 71,
+  "chunk_count": 30,
+  "status": "prepared_only_not_submitted_not_counted",
+  "chunks": [
+    {
+      "part": 1,
+      "sha256": "75c3ab47896cda259aea002f099404c6125bf6e9185c356dd9600487dbf086e4",
+      "chars": 8026,
+      "first": "[[PAPER PAGE 1]]\n   Population Priors Rival Interaction"
+    },
+    {
+      "part": 2,
+      "sha256": "526dfb654fe7162547827a545d6fbe9842ccc7e30c91b2baafa67f5b3bf5d456",
+      "chars": 9421,
+      "first": "[[PAPER PAGE 4]]\n2. Problem statements and notation\n2.1"
+    },
+    {
+      "part": 3,
+      "sha256": "ef6911d4f3fc704424fae5db83fe199b977f294464b738942492098f9908d7bf",
+      "chars": 9204,
+      "first": "[[PAPER PAGE 7]]\n                                      "
+    },
+    {
+      "part": 4,
+      "sha256": "f005ba5265b15c33ab8b251ad557e9fdea15c1f600393941de596a367b98c346",
+      "chars": 7883,
+      "first": "[[PAPER PAGE 11]]\nNetwork density is the strongest inde"
+    },
+    {
+      "part": 5,
+      "sha256": "818e3bc8f185b2f35d4a2035837bbe9dd4a342774cdb1c0cddcbea5ee52b7653",
+      "chars": 9276,
+      "first": "[[PAPER PAGE 14]]\n t\n Hu\n man                       0.2"
+    },
+    {
+      "part": 6,
+      "sha256": "f29be8cbb00953aabd2aa1cc5277feb58e9b1591ee8c095afd3c21015c723c63",
+      "chars": 9318,
+      "first": "[[PAPER PAGE 16]]\nreducers) is enriched: 3 of 3 genera "
+    },
+    {
+      "part": 7,
+      "sha256": "f33b371b1b650e9c3cf8ea842f80df90edb6458b3c16d6fdaae061c7b3a99dbc",
+      "chars": 7836,
+      "first": "[[PAPER PAGE 19]]\ncontrolling the number of Europe PMC "
+    },
+    {
+      "part": 8,
+      "sha256": "03c4c8fb4998ede8614bdf1dcb72d607cbce53a07065d2363e379fc234569ae0",
+      "chars": 8313,
+      "first": "[[PAPER PAGE 21]]\n                                     "
+    },
+    {
+      "part": 9,
+      "sha256": "59daa9b24ce45de361b88fd04d3b57679f33ba1a258134e248c341c4e2a6cd84",
+      "chars": 9695,
+      "first": "[[PAPER PAGE 23]]\n          associated:\n          Human"
+    },
+    {
+      "part": 10,
+      "sha256": "5155d2f1754c27ddbf71d888f84285b035a2c1453400333c77855bdbd2b92ad9",
+      "chars": 6556,
+      "first": "[[PAPER PAGE 26]]\n          Human:Dig\n          estive\n"
+    },
+    {
+      "part": 11,
+      "sha256": "814ef337d1f5229f55af30a952403fa0a40e17f4b4c0167b19435f1b9fd4e074",
+      "chars": 8790,
+      "first": "[[PAPER PAGE 28]]\n          Human:Ski\n                 "
+    },
+    {
+      "part": 12,
+      "sha256": "2903d43d5edbbbe9844e3a036ec289d222485ab8a746348dfd581550b53a0f57",
+      "chars": 8850,
+      "first": "[[PAPER PAGE 30]]\n          root:Host-                 "
+    },
+    {
+      "part": 13,
+      "sha256": "5661ddeb2047573defded3bd345af9faa71e9b993eaa80d152e5fdf2c72e867a",
+      "chars": 5387,
+      "first": "[[PAPER PAGE 32]]\n             root:Host-              "
+    },
+    {
+      "part": 14,
+      "sha256": "ebe8123329381f8094b60b4d5c9a95a2882ccd97acda9ddf7e03cd50db895b51",
+      "chars": 9358,
+      "first": "[[PAPER PAGE 33]]\n                                    0"
+    },
+    {
+      "part": 15,
+      "sha256": "3354cb7197ead23209558cf59c993b30afb225ece7c6db212726f1063a48aa83",
+      "chars": 8896,
+      "first": "[[PAPER PAGE 35]]\n                                    0"
+    },
+    {
+      "part": 16,
+      "sha256": "a3f05771858d47dbd8ea75fe291ffccc827859c23379a3685005f8cd15b97cc2",
+      "chars": 8681,
+      "first": "[[PAPER PAGE 37]]\n                                   0."
+    },
+    {
+      "part": 17,
+      "sha256": "ccaf72b197e1c57ce04c5b395bfef4a814bc7e98c029bd780167073ec3648e7d",
+      "chars": 8243,
+      "first": "[[PAPER PAGE 39]]\n                                   0."
+    },
+    {
+      "part": 18,
+      "sha256": "4f1012ae933e6917ccb59fe42a0869199b9fe08d0872cdbfe7804563856e0946",
+      "chars": 9864,
+      "first": "[[PAPER PAGE 41]]\n a\n Sediminibacteri\n                 "
+    },
+    {
+      "part": 19,
+      "sha256": "f3a6254c1c8172c216cfdeb4b11984353f0c2ec52a0629a270121ccbd104d0be",
+      "chars": 6539,
+      "first": "[[PAPER PAGE 43]]\n                                     "
+    },
+    {
+      "part": 20,
+      "sha256": "e153fb95ac107978da02a3685e8b1f7a590eaa17abe33bf7bb54f0c873a4d00b",
+      "chars": 6280,
+      "first": "[[PAPER PAGE 44]]\n                                     "
+    },
+    {
+      "part": 21,
+      "sha256": "d95e5239601eea710ccf82e1338142229a055504cbbaf578f3ed3d558e89232d",
+      "chars": 8970,
+      "first": "[[PAPER PAGE 45]]\n                                     "
+    },
+    {
+      "part": 22,
+      "sha256": "f47afbae5371cc2d5a19c5367565dbbff5f87064c094dcd136254c155d8ee9fb",
+      "chars": 8970,
+      "first": "[[PAPER PAGE 47]]\n                                     "
+    },
+    {
+      "part": 23,
+      "sha256": "8da7bd1e395e7ca734814137369f880ee2fe294e8b724da3aac7e8d002657908",
+      "chars": 9209,
+      "first": "[[PAPER PAGE 49]]\n                                     "
+    },
+    {
+      "part": 24,
+      "sha256": "4a10b7aa6df8b1b089eb5a29d48f62b9b3565252759c909f3e18535d75ea9592",
+      "chars": 9394,
+      "first": "[[PAPER PAGE 51]]\n                                     "
+    },
+    {
+      "part": 25,
+      "sha256": "6a57503b54f0ac338accf38fd9cbc3729ec5ff7095a58c6a374ecaf66471a98a",
+      "chars": 9082,
+      "first": "[[PAPER PAGE 54]]\n2   107   2.515   2.510   2.444   0.7"
+    },
+    {
+      "part": 26,
+      "sha256": "b8ab131b4fddba9e859c9ef75698a19a86277911fd39228bf5cf97c7d7d9c8d1",
+      "chars": 6840,
+      "first": "[[PAPER PAGE 58]]\n4   59    2.806   2.603   2.374   0.5"
+    },
+    {
+      "part": 27,
+      "sha256": "309844fd62150d541762a65bee76371ea0f10d36a023247cfb26807f26ddb0f4",
+      "chars": 7265,
+      "first": "[[PAPER PAGE 61]]\n 5            98                3.652"
+    },
+    {
+      "part": 28,
+      "sha256": "f0126eff54fbbf5145e66c044f1636c3cbc055540b1ec55e2fb8072cab56c1a2",
+      "chars": 8366,
+      "first": "[[PAPER PAGE 63]]\n Human_Ora\n              catb        "
+    },
+    {
+      "part": 29,
+      "sha256": "79246c936b6d6d5287e11c0f3d18e5989024d7acdbbc7e465474fc98b43d69b5",
+      "chars": 9744,
+      "first": "[[PAPER PAGE 66]]\npandas                              l"
+    },
+    {
+      "part": 30,
+      "sha256": "bdca2299207a441be2da29bdd3811750aae5f2ce0a9bfe35eaf9169eb7810d26",
+      "chars": 6668,
+      "first": "[[PAPER PAGE 69]]\nMGYS00005212   SRP071579   Skin      "
+    }
+  ]
+}

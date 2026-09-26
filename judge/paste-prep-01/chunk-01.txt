@@ -1,0 +1,111 @@
+[[PAPER PAGE 1]]
+   Population Priors Rival Interaction
+ Models in Microbiome Digital Twins: a
+ Leave-One-Out Audit of cNODE and a
+     Head-to-Head with MDSINE2
+ MEGA-PROGRAM-27, Item 4 - Udita Phookan (program owner); computational work
+         by an AI research agent. Revised draft of 25 September 2026.
+
+
+Abstract
+We test whether microbiome digital twins learn species interactions or mainly exploit
+ecological priors. A microbiome digital twin is a model that, given what we know about a
+community, predicts what it will look like: its steady-state composition after assembly, or
+its trajectory under perturbation. Two published approaches are compositional neural
+ODEs (cNODE; Michel-Mata et al., 2022) for assemblage-to-composition prediction, and
+MDSINE2 (Gibson et al., Nature Microbiology 2025) for forecasting absolute
+abundances in gnotobiotic mice through diet and antibiotic perturbations. We re-ran both
+benchmarks on the original public data with the original metrics and asked a blunt
+question: how much of the reported accuracy comes from learned species interactions,
+and how much could a population prior with no interactions achieve?
+Findings. (1) On the six cNODE ecosystems under leave-one-out, a presence-only null
+with no learned interaction parameters (mean training composition restricted to present
+taxa) is clearly beaten by cNODE on ocean, soil and Drosophila data, but on both human-
+associated datasets the published cNODE median Bray-Curtis error (oral 0.211, gut
+0.242) falls inside the 95% bootstrap interval of the null (0.204 [0.188, 0.222] and 0.259
+[0.236, 0.271]). (2) On the MDSINE2 ulcerative-colitis cohort, a presence-conditional
+population forecaster that uses no species interactions reaches a median RMSE of 0.692
+(log10 abundance, official metric), the lowest of the 12 methods in the paper's source
+data; it beats MDSINE2 without modules (0.805; Wilcoxon p = 8.0e-07) and full
+MDSINE2 (1.093; p = 4.3e-44) on the same 601 subject-taxon pairs. (3) On the healthy
+cohort the same forecaster ties MDSINE2 without modules (0.919 vs 0.913, p = 0.53),
+beats full MDSINE2 (1.061, p = 1.1e-4), and is beaten by RA-MDSINE2 without
+modules (0.883, p = 0.045). In absolute terms the UC gain is a 37% reduction in median
+RMSE against full MDSINE2 (1.093 to 0.692); the healthy-cohort differences are small
+in effect size whichever direction they go.
+
+[[PAPER PAGE 2]]
+(4) Under a stricter metric that scores every timepoint, the same forecaster ranks first on
+both MDSINE2 cohorts (UC 1.654 vs MDSINE2 without modules 1.824; healthy 1.752
+vs 2.072; p < 1e-39), which falsified our own prediction that the advantage came from the
+detection-only metric. (5) At scale the picture changes: across 160 MGnify studies in 8
+biomes, an interaction model beats a calibrated presence prior in 121 studies (FDR <
+0.05), so the human-data null of finding (1) does not generalise. We ship the microtwin
+command-line tool (audit and forecast) so anyone can run this audit on their own
+abundance table.
+(6) Exploratory keystone analysis names one candidate, the anaerobe-keystone
+hypothesis: across 156 studies, genera made of strict anaerobes are more often network
+hubs within the same study (study fixed-effect logit, p = 1.4e-4), independent of
+abundance and prevalence, and sulfate reducers are enriched under both NCBI and
+GTDB taxonomies (q = 0.02); a KEGG genomic anaerobe index replicates it (p = 7e-8).
+No single biome passes FDR and keystones come from inferred networks, but the
+association fails with graphical lasso and igraph betweenness keystone definitions. It is a
+ridge-specific candidate, not a cross-method ecological discovery. A distinct HOMD
+oral-list effect survives those two methods but fails a PubTator literature-index
+replication.
+(7) A pre-registered twin-driven replication programme (GraphTwin gate out-strength
+trained per MGnify study; locked 09:30 completion-order stopping rule, 37 studies)
+found that the sulfate-reducer keystone enrichment does NOT replicate under the
+nonlinear gate scorer (Desulfobacterota untestable at this coverage; best phylum q =
+0.906), and the locked SHAP-attribution-centrality redirect does not recover it either (q =
+0.462). As a disease-literature predictor the twin gates do not beat the ridge score (AIC
+767.1 vs 766.1), but the locked CatBoost+SHAP redirect does, decisively (coefficient
++37.1, p = 2.6e-35, AIC 2343.9 vs 2443.1). What survives replication is therefore not a
+keystone list but a predictor: gradient-boosted interaction attributions forecast BugSigDB
+disease-signature counts far better than linear interaction scores.
+Caveats. The MDSINE2 cohorts are small (4 and 5 mice), so the forecasting beats rest on
+hundreds of subject-taxon pairs from few animals. Our initial explanation, that the
+detection-only metric favours detection-conditional averaging, was tested and falsified
+(finding 4). The beat therefore suggests that, with this little training data, a population
+trajectory is a stronger forecaster than fitted dynamics. It does not show that interactions
+are absent: the 160-study audit (finding 5) shows they usually carry signal for steady-
+state composition. Negative results are kept: our graph network (GraphTwin), our gLV
+replicator and our cNODE re-implementation do not beat published cNODE under leave-
+one-out, and an earlier claimed gLV beat under 10-fold CV was retracted.
+
+[[PAPER PAGE 3]]
+1. Introduction
+Digital twins of the microbiome promise in-silico trials: remove a species, add an
+antibiotic, change a diet, and read out the community before touching an animal or a
+patient. The community therefore invests heavily in interaction-aware models:
+generalised Lotka-Volterra (gLV) systems, Bayesian gLV with interaction modules
+(MDSINE, MDSINE2), and neural ODEs (cNODE). Their value rests on a premise that
+is rarely tested directly: that the interaction terms carry predictive information beyond
+what a population average already provides.
+Strong baselines matter because microbiome data are dominated by taxon identity. A
+taxon that is abundant in one host is usually abundant in another. A predictor that simply
+remembers typical abundances, conditioned on which taxa are present, may already
+explain most of the variance. If so, the headline accuracy of an interaction model says
+little about whether its interactions are right, and downstream uses such as keystone-
+species ranking or perturbation design rest on weaker ground than the accuracy suggests.
+We test that premise on the two public benchmarks that serve as reference benchmarks
+for two twin tasks. Our contributions are: (i) an exact leave-one-out re-run of the cNODE
+benchmark with a bootstrap null interval; (ii) a verified reproduction of the MDSINE2
+cross-validation metric from the authors' notebook and Source Data, matching the
+published MDSINE2 median; (iii) a presence-conditional population forecaster that tops
+the UC leaderboard and ties the healthy one; and (iv) an explicit account of why the
+metric allows this.
+Three claim levels are kept separate throughout. Prediction asks whether a model
+forecasts held-out composition or trajectories. Mechanism asks whether its fitted terms
+recover causal ecology. Discovery asks whether it names a biological principle that
+survives replication. This paper reports results at each level separately and does not let a
+success at one level stand in for another. The novelty is the auditing framework, its scale,
+and the pre-registered falsification discipline - not any single model, null, or benchmark
+re-run.
+The paper's hierarchy, stated once: the primary contribution is the digital-twin audit
+framework (does a twin beat ecological priors, and when). The major findings are that
+some benchmarks collapse to ecological priors (human cNODE datasets, the MDSINE2
+UC cohort) while others require learned structure (121 of 160 MGnify studies). The
+secondary exploration is the biological-discovery programme, which mostly fails
+replication and is reported as such.
+

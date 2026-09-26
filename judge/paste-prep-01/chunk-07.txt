@@ -1,0 +1,103 @@
+[[PAPER PAGE 19]]
+controlling the number of Europe PMC articles gives p=0.0017. Crossref works count
+gives Disbiome p=0.0080 and BugSigDB p=0.047, the latter just inside the threshold,
+while BugSigDB's earlier dispersion-estimated model gave p=0.062. These are
+associations between two published-data proxies; oral HACEK genera and fuzzy name
+queries remain confounds.
+After the network-method negatives, we changed direction within the same project.
+HOMD v4.2 classifies 46 of 203 GAI genera as oral. The ridge genus-level GAI slope
+remains 0.024 (p=3.7e-6) after adjustment for oral status; HOMD oral coefficient is 0.042
+(p=0.0084). On new method-general tests using study-fixed-effect logits with abundance,
+prevalence and GAI, oral origin has positive coefficients under graphical lasso (0.211;
+p=0.0265) and igraph (0.322; p=0.00105). GAI is null in those methods. A Bayesian
+random-study-intercept re-fit gives P(oral coefficient>0)=1.0 for both with two chains of
+500 draws; this is a model check, not an independent cohort. Leaving out each of five
+multi-genus HOMD families keeps the oral association significant in ten fits (gglasso
+p=0.0197-0.0433; igraph p=0.0003-0.0028).
+A separate, pre-registered PubTator3 oral/dental literature fraction did not replicate the
+binary HOMD effect: despite 203 measured genera, graphical-lasso p=0.57 and igraph
+p=0.23. The index correlates with HOMD membership (rho=0.54) but is a different,
+literature-biased construct. Bio.Phylo gives no oral clustering on the Open Tree topology
+(p=0.53). Thus the defensible claim is a HOMD-list-specific candidate for network hubs
+under two definitions, not an oral-genus law or causality. The ridge oral coefficient in the
+per-study model is nonsignificant (p=0.17) and its fit did not converge; we do not claim a
+three-method result.
+
+5.6.3 Predictive and software checks
+On the ridge-only genus-level keystone fraction, XGBoost with 20 repeats of five-fold
+cross-validation gains mean out-of-fold R2 of 0.27 from GAI (20/20 positive deltas) but
+has negative absolute R2 (-0.11 with GAI, -0.38 without). That model is not usable for
+prediction. Separately pre-registered shallower boosters on 200 genera produce mean
+full-data out-of-fold R2 0.133 for LightGBM (reduced -0.071) and 0.119 for CatBoost
+(reduced -0.045), both with 20/20 positive deltas. The modest improvement is within the
+same dataset and outcome. SHAP TreeExplainer ranks GAI first in the fitted LightGBM
+model (mean absolute contribution 0.0265 versus ENA 0.00772 and abundance 0.00576),
+an in-sample explanation rather than proof of causality. SymPy verifies the cNODE and
+gLV vector fields are tangent to the simplex and zero on absent-taxon boundaries for a
+generic three-taxon system when abundances sum to one. That algebra does not prove
+numerical stability or predictive accuracy.
+Table 15. Key post-audit tests. Primary methods, thresholds, preregistrations and
+full negative results are in results/finding_keystone.md and the JSON files.
+
+[[PAPER PAGE 20]]
+ analysis                   scope                       pre-registered verdict    key caveat
+ gglasso / igraph GAI       160 MGnify studies          FAIL / FAIL               ridge-specific effect
+ HOMD oral on gglasso /
+                            46 of 203 GAI genera oral   PASS / PASS               PubTator index failed
+ igraph
+ HOMD family deletions      5 families; 10 fits         PASS                      same curated list
+ LightGBM / CatBoost        200 genera; repeated CV     PASS / PASS               modest, ridge-only R2
+ Bio.Phylo oral topology    160 tips; 38 oral           FAIL                      synthetic topology
+
+5.7 Pre-registered discovery arms
+Two discovery tests were pre-registered (PREREG_twindiscovery.md) with explicit
+redirect clauses: T1 asks whether GraphTwin gate out-strength replicates the keystone-
+consensus signal of Section 5.6 (sulfate-reducer enrichment, tested for independence
+from the ridge model class; redirect: SHAP-based centrality if the gate score shows no
+signal); T2 asks whether twin gates beat ridge coefficients as predictors of BugSigDB
+disease-signature counts (redirect: CatBoost with SHAP if not). Both arms are fit per
+MGnify study under the same caps as the audit. Both redirect rules, scorers, and test
+constructions were locked in PREREG_twindiscovery.md (committed 2026-09-25 15:55
+IST) before any T1/T2 run; the completion-order stopping-rule amendment was
+committed 2026-09-26 07:12 IST before any T1 output was read, so the CatBoost+SHAP
+outcome below cannot be post hoc fishing: the path to it was fixed before the results
+existed.
+T1 (model-class independence of the keystone enrichment). T1: 37 studies, 56 genera.
+Top enrichment: Actinomycetota q=0.906. Desulfobacterota q=None. NULL - redirect to
+SHAP centrality per pre-reg
+Table 16. Top 15 genera by GraphTwin gate out-strength consensus
+(results/twindiscovery_t1_consensus.csv).
+
+ genus            studies            top                fraction top      p                 q (BH)
+                                                                          2.362763227460    1.323147407377
+ Acinetobacter    32                 22                 0.688
+                                                                          5656e-15          9166e-13
+                                                                          3.436707579990    7.966283892670
+ Pseudomonas      34                 20                 0.588
+                                                                          6436e-12          575e-11
+                                                                          4.267652085359    7.966283892670
+ Staphylococcus   31                 19                 0.613
+                                                                          237e-12           575e-11
+                                                                          9.481303720000    8.849216805333
+ Abiotrophia      20                 15                 0.750
+                                                                          011e-12           343e-11
+ Peptostreptoco                                                           9.481303720000    8.849216805333
+                  20                 15                 0.750
+ ccus                                                                     011e-12           343e-11
+                                                                          9.481303720000    8.849216805333
+ Solobacterium    20                 15                 0.750
+                                                                          011e-12           343e-11
+ Bifidobacteriu                                                           1.281038079876    1.024830463901
+                  26                 17                 0.654
+ m                                                                        9867e-11          5893e-10
+                                                                          3.007995688000    1.684477585280
+ Lautropia        21                 15                 0.714
+                                                                          0025e-11          0012e-10
+                                                                          3.007995688000    1.684477585280
+ Treponema        21                 15                 0.714
+                                                                          0025e-11          0012e-10
+                                                                          3.007995688000    1.684477585280
+ Peptococcus      21                 15                 0.714
+                                                                          0025e-11          0012e-10
+ Fastidiosipila   24                 16                 0.667             3.338913051015    1.699810280516
+

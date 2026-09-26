@@ -1,0 +1,171 @@
+[[PAPER PAGE 49]]
+                                      + keystones
+                                      160-study interaction audit
+MGYS00006042   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005621   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005611   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005610   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005609   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005600   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005593   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005576   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005187   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005316   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005317   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005309   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00004995   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00003706   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00003681   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00006764   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00006763   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00006762   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00006761   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00006758   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00006041   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00006117   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00006086   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005503   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00003166   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00004672   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00002905   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00002608   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00002413   EBI MGnify   primary
+                                      + keystones
+
+[[PAPER PAGE 50]]
+                                                                 160-study interaction audit
+MGYS00002065              EBI MGnify                 primary
+                                                                 + keystones
+                                                                 160-study interaction audit
+MGYS00006798              EBI MGnify                 primary
+                                                                 + keystones
+                                                                 160-study interaction audit
+MGYS00006019              EBI MGnify                 primary
+                                                                 + keystones
+                                                                 160-study interaction audit
+MGYS00005862              EBI MGnify                 primary
+                                                                 + keystones
+                                                                 160-study interaction audit
+MGYS00005215              EBI MGnify                 primary
+                                                                 + keystones
+                                                                 160-study interaction audit
+MGYS00005163              EBI MGnify                 primary
+                                                                 + keystones
+                                                                 160-study interaction audit
+MGYS00003800              EBI MGnify                 primary
+                                                                 + keystones
+                                                                 160-study interaction audit
+MGYS00003705              EBI MGnify                 primary
+                                                                 + keystones
+                          github.com/yixueyang/
+cNODE:Ocean               cNODE (6 tables, one       primary     cNODE benchmark
+                          repository)
+                          github.com/yixueyang/
+cNODE:Drosophila_Gut      cNODE (6 tables, one       primary     cNODE benchmark
+                          repository)
+                          github.com/yixueyang/
+cNODE:Soil_Vitro          cNODE (6 tables, one       primary     cNODE benchmark
+                          repository)
+                          github.com/yixueyang/
+cNODE:Soil_Vivo           cNODE (6 tables, one       primary     cNODE benchmark
+                          repository)
+                          github.com/yixueyang/
+cNODE:Human_Oral          cNODE (6 tables, one       primary     cNODE benchmark
+                          repository)
+                          github.com/yixueyang/
+cNODE:Human_Gut           cNODE (6 tables, one       primary     cNODE benchmark
+                          repository)
+MDSINE2:gibson/           github.com/gerberlab/
+                                                     primary     forecasting
+healthy                   MDSINE2_Paper
+                          github.com/gerberlab/
+MDSINE2:gibson/uc                                    primary     forecasting
+                          MDSINE2_Paper
+41564_2025_2112_MOE       Nature Microbiology
+                                                     primary     head-to-head
+SM5_ESM                   Source Data
+NCBI Taxonomy             NCBI E-utilities           reference   phylum mapping
+BugSigDB genus
+                          BugSigDB                   reference   literature cross-check
+signatures
+GTDB r232 bac120
+                          GTDB                       reference   taxonomy replication
+taxonomy
+Madin 2020
+                          github bacteria-archaea-
+condensed_species_NCB                                reference   traits
+                          traits
+I
+KEGG genome list + 10
+                          KEGG REST                  reference   genomic anaerobe index
+KO links
+BV-BRC
+oxygen_requirement        BV-BRC API                 reference   third anaerobe source
+facets
+                          figshare (IJSEM                        anaerobe-keystone IJSEM
+figshare:4272392                                     reference
+                          phenotypic db)                         check
+OToL synth induced
+                                                                 anaerobe-keystone PGLS
+subtree (161 genera;      Open Tree of Life          reference
+                                                                 on independent phylogeny
+data/otol/induced.tre)
+ProTraits_binaryIntegra   ProTraits                  reference   anaerobe-keystone
+tedPr0.95.txt                                                    ProTraits check (gate
+

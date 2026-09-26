@@ -1,0 +1,205 @@
+[[PAPER PAGE 28]]
+          Human:Ski
+                                                             22
+          n
+          root:Host-
+                                                             4.02228790
+MGYS000   associated:
+                        400   150   0.374   0.292   0.083    63051704e-
+05212     Human:Ski
+                                                             33
+          n
+          root:Host-
+                                                             2.73551029
+MGYS000   associated:
+                        400   106   0.396   0.358   0.039    46682556e-
+05238     Human:Ski
+                                                             13
+          n
+          root:Host-
+                                                             0.00117616
+MGYS000   associated:
+                        71    91    0.367   0.292   0.075    659742371
+05101     Human:Ski
+                                                             9
+          n
+          root:Host-
+                                                             7.29891955
+MGYS000   associated:
+                        179   150   0.381   0.264   0.118    2265234e-
+05102     Human:Ski
+                                                             19
+          n
+          root:Host-
+                                                             1.42523484
+MGYS000   associated:
+                        109   150   0.470   0.420   0.050    45599325e-
+05135     Human:Ski
+                                                             07
+          n
+          root:Host-
+                                                             1.53886211
+MGYS000   associated:
+                        101   150   0.127   0.102   0.025    28648606e-
+05098     Human:Ski
+                                                             10
+          n
+          root:Host-
+                                                             6.00621525
+MGYS000   associated:
+                        106   150   0.311   0.233   0.078    8961562e-
+05037     Human:Ski
+                                                             07
+          n
+          root:Host-
+MGYS000   associated:                                        0.94987989
+                        120   7     0.082   0.077   0.005
+05090     Human:Ski                                          77422346
+          n
+          root:Host-
+                                                             2.87877565
+MGYS000   associated:
+                        400   150   0.471   0.261   0.210    5656423e-
+02184     Human:Ski
+                                                             63
+          n
+          root:Host-
+                                                             2.00589126
+MGYS000   associated:
+                        258   150   0.233   0.190   0.043    88460236e-
+02072     Human:Ski
+                                                             19
+          n
+          root:Host-                                         1.65538375
+MGYS000
+          associated:   116   150   0.293   0.232   0.061    50067384e-
+06855
+          Mammals                                            12
+          root:Host-
+MGYS000                                                      0.03189583
+          associated:   27    150   0.406   0.417   -0.011
+06799                                                        122730255
+          Mammals
+          root:Host-                                         1.15568752
+MGYS000
+          associated:   93    150   0.650   0.533   0.116    70009098e-
+02673
+          Mammals                                            13
+          root:Host-                                         4.17039903
+MGYS000
+          associated:   101   150   0.568   0.386   0.182    4793852e-
+06747
+          Mammals                                            18
+          root:Host-
+MGYS000                                                      0.08406547
+          associated:   30    98    0.194   0.173   0.021
+01223                                                        829508781
+          Mammals
+          root:Host-                                         1.66871306
+MGYS000
+          associated:   66    89    0.389   0.242   0.147    03014278e-
+01224
+          Mammals                                            09
+
+[[PAPER PAGE 29]]
+          root:Host-                                         3.26757065
+MGYS000
+          associated:   400   71    0.343   0.254   0.088    24688328e-
+05267
+          Mammals                                            52
+          root:Host-
+MGYS000                                                      0.40119774
+          associated:   44    66    0.272   0.245   0.027
+00426                                                        86671867
+          Mammals
+          root:Host-                                         2.07036600
+MGYS000
+          associated:   400   63    0.257   0.206   0.052    9312925e-
+05228
+          Mammals                                            33
+          root:Host-                                         0.00037059
+MGYS000
+          associated:   85    150   0.495   0.407   0.088    731217404
+06537
+          Mammals                                            824
+          root:Host-                                         8.46763942
+MGYS000
+          associated:   65    150   0.384   0.384   -0.000   4268034e-
+06536
+          Mammals                                            05
+          root:Host-
+MGYS000                                                      0.08415465
+          associated:   40    150   0.515   0.512   0.003
+06538                                                        162215696
+          Mammals
+          root:Host-                                         7.07353919
+MGYS000
+          associated:   400   150   0.338   0.276   0.062    3762629e-
+05628
+          Mammals                                            38
+          root:Host-                                         1.82568172
+MGYS000
+          associated:   144   81    0.444   0.310   0.134    38051636e-
+06450
+          Mammals                                            13
+          root:Host-
+MGYS000                                                      0.97573611
+          associated:   24    76    0.331   0.313   0.017
+06456                                                        9417176
+          Mammals
+          root:Host-                                         4.77927826
+MGYS000
+          associated:   400   62    0.317   0.247   0.070    1362484e-
+06446
+          Mammals                                            25
+          root:Host-                                         0.01874470
+MGYS000
+          associated:   25    150   0.557   0.537   0.020    710754394
+06433
+          Mammals                                            5
+          root:Host-                                         0.01411853
+MGYS000
+          associated:   32    150   0.397   0.299   0.099    372062440
+06430
+          Mammals                                            6
+          root:Host-
+MGYS000                                                      0.00245958
+          associated:   85    109   0.389   0.341   0.048
+06427                                                        589664498
+          Mammals
+          root:Host-                                         2.51005437
+MGYS000
+          associated:   142   150   0.280   0.252   0.027    78701536e-
+06424
+          Mammals                                            14
+          root:Host-                                         2.87195734
+MGYS000
+          associated:   400   150   0.250   0.175   0.076    82573203e-
+06652
+          Plants                                             56
+          root:Host-                                         0.00449954
+MGYS000
+          associated:   48    98    0.727   0.639   0.088    731304558
+01412
+          Plants                                             2
+          root:Host-                                         5.31521348
+MGYS000
+          associated:   400   150   0.276   0.190   0.086    0136056e-
+01368
+          Plants                                             65
+          root:Host-                                         5.68434188
+MGYS000
+          associated:   45    150   0.247   0.101   0.145    6080802e-
+03172
+          Plants                                             14
+          root:Host-
+MGYS000                                                      0.91531434
+          associated:   27    150   0.162   0.170   -0.009
+06578                                                        65518951
+          Plants
+          root:Host-                                         0.00105925
+MGYS000
+          associated:   70    61    0.381   0.351   0.030    524374496
+00957
+          Plants                                             15
+

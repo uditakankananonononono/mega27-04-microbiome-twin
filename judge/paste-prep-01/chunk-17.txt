@@ -1,0 +1,174 @@
+[[PAPER PAGE 39]]
+                                   0.901522909781
+Jeotgalicoccus    22   1   0.045                    1.0
+                                   6388
+                                   0.901522909781
+Chthoniobacter    22   1   0.045                    1.0
+                                   6388
+Acidaminococc                      0.901522909781
+                  22   1   0.045                    1.0
+us                                 6388
+Novosphingobi                      0.901522909781
+                  22   1   0.045                    1.0
+um                                 6388
+Porphyromona                       0.906805141015
+                  66   4   0.061                    1.0
+s                                  5196
+                                   0.918447882785
+Lactococcus       68   4   0.059                    1.0
+                                   011
+Erysipelatoclos                    0.918447882785
+                  68   4   0.059                    1.0
+tridium                            011
+Hyphomicrobiu                      0.919526303985
+                  40   2   0.050                    1.0
+m                                  5227
+Caldicoprobact                     0.920233556923
+                  24   1   0.042                    1.0
+er                                 1275
+                                   0.920233556923
+Leucobacter       24   1   0.042                    1.0
+                                   1275
+                                   0.928210201230
+Faecalibaculum    25   1   0.040                    1.0
+                                   8148
+                                   0.928769427736
+Oscillibacter     70   4   0.057                    1.0
+                                   8974
+Rubellimicrobi                     0.935389181107
+                  26   1   0.038                    1.0
+um                                 7333
+                                   0.938209796729
+Anaerococcus      58   3   0.052                    1.0
+                                   051
+Pedomicrobiu                       0.941850262996
+                  27   1   0.037                    1.0
+m                                  96
+                                   0.941850262996
+Gemmatimonas      27   1   0.037                    1.0
+                                   96
+                                   0.942891102579
+Lawsonella        44   2   0.045                    1.0
+                                   1791
+                                   0.947632218591
+Brevibacterium    45   2   0.044                    1.0
+                                   4736
+Desulfosporosi                     0.952898713027
+                  29   1   0.034                    1.0
+nus                                5376
+                                   0.952898713027
+Intestinibacter   29   1   0.034                    1.0
+                                   5376
+                                   0.952898713027
+Nakamurella       29   1   0.034                    1.0
+                                   5376
+                                   0.957608841724
+Iamia             30   1   0.033                    1.0
+                                   7838
+                                   0.961847957552
+Medicago          31   1   0.032                    1.0
+                                   3055
+Pajaroellobacte                    0.961847957552
+                  31   1   0.032                    1.0
+r                                  3055
+                                   0.961847957552
+Lysobacter        31   1   0.032                    1.0
+                                   3055
+                                   0.964693741518
+Mycobacterium     80   4   0.050                    1.0
+                                   8622
+Altererythroba                     0.969096845617
+                  33   1   0.030                    1.0
+cter                               3674
+                                   0.969096845617
+Marmoricola       33   1   0.030                    1.0
+                                   3674
+Ferruginibacte                     0.969096845617
+                  33   1   0.030                    1.0
+r                                  3674
+Gemella           67   3   0.045   0.969280674082   1.0
+
+[[PAPER PAGE 40]]
+                                    702
+                                    0.969280674082
+Nocardioides      67    3   0.045                    1.0
+                                    702
+Faecalibacteriu                     0.970866071584
+                  97    5   0.052                    1.0
+m                                   8146
+                                    0.971607053911
+Romboutsia        83    4   0.048                    1.0
+                                    3301
+                                    0.971705774111
+Paracoccus        52    2   0.038                    1.0
+                                    8126
+                                    0.973614419469
+Sphingomonas      84    4   0.048                    1.0
+                                    635
+                                    0.975818701642
+Paenibacillus     70    3   0.043                    1.0
+                                    8539
+                                    0.977471600455
+Oscillospira      36    1   0.028                    1.0
+                                    0609
+                                    0.979364006514
+Clostridium       102   5   0.049                    1.0
+                                    2518
+                                    0.985219117058
+Hymenobacter      40    1   0.025                    1.0
+                                    5655
+                                    0.986310426053
+Rothia            77    3   0.039                    1.0
+                                    7002
+                                    0.986697205352
+Megamonas         41    1   0.024                    1.0
+                                    7089
+                                    0.987759962986
+Lactobacillus     124   6   0.048                    1.0
+                                    0419
+                                    0.988459936203
+Veillonella       95    4   0.042                    1.0
+                                    8465
+                                    0.991272036431
+Devosia           45    1   0.022                    1.0
+                                    9123
+                                    0.992930349509
+Rhodococcus       47    1   0.021                    1.0
+                                    8489
+                                    0.994695056461
+Pseudomonas       136   6   0.044                    1.0
+                                    212
+                                    0.996208759968
+Flavobacterium    74    2   0.027                    1.0
+                                    1586
+                                    0.998208418667
+Streptococcus     135   5   0.037                    1.0
+                                    266
+                                    0.999492471213
+Prevotella        72    1   0.014                    1.0
+                                    9436
+                                    0.999888863354
+Bacteroides       111   2   0.018                    1.0
+                                    4281
+Geodermatophi
+                  22    0   0.000   1.0              1.0
+lus
+Conexibacter      26    0   0.000   1.0              1.0
+Exiguobacteriu
+                  22    0   0.000   1.0              1.0
+m
+Aerococcus        27    0   0.000   1.0              1.0
+Acidovorax        28    0   0.000   1.0              1.0
+Bdellovibrio      46    0   0.000   1.0              1.0
+Blastocatella     23    0   0.000   1.0              1.0
+Butyrivibrio      26    0   0.000   1.0              1.0
+Bryobacter        28    0   0.000   1.0              1.0
+Capnocytophag
+                  44    0   0.000   1.0              1.0
+a
+Cellvibrio        25    0   0.000   1.0              1.0
+Haliangium        39    0   0.000   1.0              1.0
+Luteolibacter     28    0   0.000   1.0              1.0
+Micrococcus       21    0   0.000   1.0              1.0
+Pseudonocardi     38    0   0.000   1.0              1.0
+

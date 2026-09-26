@@ -1,0 +1,132 @@
+[[PAPER PAGE 16]]
+reducers) is enriched: 3 of 3 genera (Desulfobulbus, Desulfovibrio, Bilophila), p = 0.001,
+q = 0.019. With three genera, this is a hypothesis (hydrogen and sulfur cross-feeding
+hubs), not a result.
+Literature cross-check. Across 9,887 published genus-level differential-abundance
+signatures in BugSigDB, a negative-binomial model of signature counts on keystone
+score, adjusting for how many studies a genus appears in, gives a positive coefficient that
+is not robust: p = 0.025 with dispersion fixed at 1 and p = 0.062 with dispersion estimated
+(alpha = 1.16). Keystone-consensus genera are not clearly over-represented in the disease
+literature.
+   log E[n_j] = c_0 + c_1 (-log10 p_j) + c_2 log(studies_j), Var(n_j) = mu_j + alpha
+                                   mu_j^2        (19)
+
+GTDB replication. Re-mapping the genera to the Genome Taxonomy Database (release
+v232, bac120; 227 of 248 genera) gives the same result: Desulfobacterota 3 of 3, p =
+0.0012, q = 0.020. NCBI and GTDB disagree on the phylum of only 7 genera, mostly
+renamings. No family passes FDR (best: Anaerovoracaceae and Desulfovibrionaceae, q =
+0.71). The result does not depend on the taxonomy, but it still rests on three genera.
+
+5.6.1 Physiological traits of keystones: the anaerobe-keystone candidate
+We joined each genus to the Madin et al. (2020) trait database (14,893 species;
+condensed_species_NCBI.csv), aggregating species to genus as the share of strict
+anaerobes, Gram-negative, motile and sporulating species, and the median genome size,
+GC content and doubling time. We test each trait against keystone frequency (Spearman,
+BH across traits) and top-25 membership (Mann-Whitney).
+Table 13. Keystone frequency vs genus traits (results/keystone_traits_tests.csv).
+
+                           Spearman                                             Mann-
+ trait         genera                    q (BH)       top-25 mean   rest mean
+                           rho                                                  Whitney q
+ anaerobe      224         0.303         2.8e-05      0.703         0.411       0.08
+ gram_neg      225         -0.018        0.91         0.654         0.505       0.22
+ motile        200         -0.104        0.2          0.443         0.337       0.65
+ spore         214         -0.137        0.081        0.0455        0.144       0.22
+ genome_size   222         -0.246        0.00077      3.04e+06      3.64e+06    0.22
+ gc_content    192         -0.153        0.08         49            50.6        0.65
+ doubling_h    57          0.008         0.96         10.6          4.36        1
+Strict-anaerobe share and small genome size track keystone frequency; the other traits do
+not. The anaerobe effect keeps its sign and significance in a rank regression with genome
+size and log study count (p = 5.8e-04, HC3) and under permutation within study-count
+quintiles (p = 2.0e-04). Because biome could confound this (anaerobes dominate gut
+studies), we ran two falsification tests inside studies. First, within each of 155 studies we
+compared keystones with the other genera: keystones have the higher anaerobe share in
+62% of studies (mean difference +0.071, sign-flip p = 2.0e-04). Second, we fitted a
+
+[[PAPER PAGE 17]]
+logistic model with study fixed effects and study-clustered standard errors, adding
+abundance and prevalence:
+         logit P(top_js = 1) = a_s + b_1 anaerobe_j + b_2 log10(mean RA_js) + b_3
+                                  prevalence_js        (20)
+
+On 10,599 genus-study rows from 156 studies, b_1 = 0.40 (p = 1.4e-04), almost the same
+as without abundance terms (0.41). Anaerobe share is nearly uncorrelated with
+abundance (r = 0.09). So the association is not a biome mix or abundance artifact.
+Genomic replication (KEGG). To avoid relying on one phenotype database, we scored
+marker genes across 11,951 KEGG genomes (203 of 248 genera mapped):
+pyruvate:ferredoxin oxidoreductase (PFOR; K00169 or K03737), [FeFe]-hydrogenase,
+complete dissimilatory sulfate reduction (dsrA, dsrB and aprA), aa3 cytochrome c
+oxidase (coxA, K02274), catalase and cytochrome bd. The genomic anaerobe index is
+ GAI_j = (1/|g_j|) sum_{x in g_j} 1[PFOR in x] - (1/|g_j|) sum_{x in g_j} 1[coxA in x]
+                                                (21)
+
+It agrees with the Madin anaerobe share (Spearman 0.84) and tracks keystone frequency
+(rho = 0.36, p = 9e-08). In the within-study fixed-effect logit with abundance and
+prevalence (13,294 rows, 159 studies), GAI has coefficient 0.32 (p = 7e-08). Most of this
+is the absence of aerobic respiration (coxA -0.52, p = 6e-06; PFOR alone p = 0.08), plus
+complete sulfate reduction (+0.70, p = 3e-05).
+Third source (BV-BRC). Oxygen-requirement annotations of 11,323 BV-BRC genomes
+cover 102 keystone genera (>= 3 annotated genomes). Their anaerobe share agrees with
+Madin (rho = 0.83) and KEGG GAI (rho = 0.81), tracks keystone frequency (rho = 0.34,
+p = 6e-04), and keeps its effect in the fixed-effect logit (coefficient 0.44, p = 6e-04; 6,804
+rows, 151 studies). The three trait sources overlap partly in their curated inputs, so they
+are not fully independent.
+Table 14. Within-study anaerobe difference by biome
+(results/keystone_traits_biome.json).
+
+                                      mean difference
+ biome              studies                              p (sign-flip)      q (BH)
+                                      (top - rest)
+ Digestive system   41                +0.065             0.038              0.10
+ Oral               19                +0.014             0.720              0.72
+ Skin               17                +0.110             0.034              0.10
+ Mammals            20                +0.056             0.174              0.28
+ Plants             18                +0.041             0.605              0.69
+ Birds              19                +0.178             0.020              0.10
+ Fish               14                +0.081             0.134              0.27
+ Insecta            7                 -0.026             0.602              0.69
+It is positive in 7 of 8 biomes but no single biome passes FDR (smallest q = 0.10). We
+name it the anaerobe-keystone hypothesis: genera made of strict anaerobes rank as
+
+[[PAPER PAGE 18]]
+network hubs more often, independent of biome, abundance and prevalence. It is falsified
+if (a) it fails in an independent cohort with a single biome and adequate power, or (b)
+perturbation experiments show inferred out-strength does not predict community
+response. Keystone status here comes from our own inferred networks; the gglasso and
+igraph tests below fail. It is a method-specific candidate property of ridge interaction
+inference, not a proven ecological law.
+
+5.6.2 Stress tests and change of direction
+All checks in this section were pre-registered in commits before analysis and are
+reproducible from the corresponding scripts and JSON outputs. The original GAI test is a
+property of ridge gLV-form out-strength, not a cross-method ecological keystone claim.
+Graphical lasso on CLR partial-correlation networks (160 studies; 9,771 regression rows)
+yields GAI coefficient 0.079, p=0.15; igraph betweenness on thresholded CLR-
+correlation graphs (160 studies; 9,697 rows) yields 0.063, p=0.34. Agreement with ridge
+keystone labels is low (Cohen kappa 0.045 and 0.022 respectively). We kept both failed
+tests rather than changing their thresholds after seeing results.
+    logit P(top_js^method = 1) = alpha_s + beta_G GAI_j + beta_O oral_j + beta_A
+              log10(RA_js+10^-6) + beta_P prevalence_js             (22)
+
+Independent checks of the ridge-only GAI effect address distinct rivals, not the network-
+definition failure. Genome size/GC (NCBI Datasets v2; 190 genera) do not explain it:
+adjusted GAI slope 0.028, HC3 p=1.3e-6, versus genome-size p=0.33. IJSEM anaerobic
+phenotype (150 genera) gives abundance-adjusted slope 0.059, p=6.7e-7, but IJSEM is a
+source within the Madin compilation and is not independent. Phylogenetic GLS on the
+GTDB tree gives GAI slope 0.037 at ML lambda (p=4.3e-7) and 0.032 under Brownian
+covariance (p=0.0064); an Open Tree synthetic topology gives 0.028, Brownian p=0.017.
+Synthetic-tree branch lengths are artificial. ProTraits coverage of 51 genera misses its
+100-genus gate; its non-significant subset is retained as uninformative, not a replication.
+For every test in this paragraph, the ridge endpoint remains the same.
+Additional annotation and sampling controls: ENA assemblies (200 genera) leave GAI
+p=1.8e-9; Ensembl Genomes (203) p=2.2e-7; RNAcentral rRNA sequence counts (203)
+p=8.2e-6. The assembly or rRNA count terms themselves were null. UniProt EC calls
+(198) yield a related index with abundance-adjusted p=0.0013; InterPro signatures (198)
+yield p=0.00024, but their protein sets overlap. A GBIF occurrence/country adjustment
+reduces the GAI slope to 0.019 (p=0.024), indicating shared variance with a noisy
+generalism proxy. Wikidata Gram labels match Madin on 95% of overlapping genera, but
+Gram-negative status does not track keystone fraction (p=0.90). None of these controls
+removes the network-method caveat.
+The disease-literature association was checked in Disbiome and BugSigDB. Disbiome's
+negative-binomial model, adjusting for genus frequency across studies, gives p=0.024;
+

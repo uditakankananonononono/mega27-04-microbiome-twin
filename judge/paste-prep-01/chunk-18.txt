@@ -1,0 +1,160 @@
+[[PAPER PAGE 41]]
+ a
+ Sediminibacteri
+                    27                    0                0.000             1.0          1.0
+ um
+ Reyranella         31                    0                0.000             1.0          1.0
+ Pseudolabrys       20                    0                0.000             1.0          1.0
+ Undibacterium      23                    0                0.000             1.0          1.0
+
+
+
+Appendix D. External tools ledger
+Table 22. 48 external tools, libraries, APIs and databases used inside this project
+(results/tools_ledger.csv).
+
+ tool                    kind                  where_used            counts_for_gate   note
+                                               src/microtwin;
+ NumPy                   library               run_bench.py;         True
+                                               scripts/
+                                               src/microtwin/
+ SciPy                   library               audit.py; scripts/    True
+                                               (stats; FDR inputs)
+                                               scripts/;
+ pandas                  library               paper/build_paper.p   True
+                                               y
+                                               src/microtwin/
+                                               models.py;
+ PyTorch                 library               run_bench.py          True
+                                               (cNODE and graph-
+                                               twin models)
+                                               scripts/
+                                               summarise_audit.py
+ Matplotlib              library                                     True
+                                               (fig_mgnify_audit.p
+                                               ng)
+                                                                                       infrastructure
+                                                                                       (excluded per
+ python-docx             library               paper/paperkit.py     False
+                                                                                       program convention
+                                                                                       25 Sep 01:18)
+                                                                                       infrastructure
+                                               tests/
+                                                                                       (excluded per
+ pytest                  test framework        test_microtwin.py;    False
+                                                                                       program convention
+                                               tests/test_audit.py
+                                                                                       25 Sep 01:18)
+                                                                                       infrastructure
+ LibreOffice (soffice                          paper docx -> pdf                       (excluded per
+                         application                                 False
+ headless)                                     render                                  program convention
+                                                                                       25 Sep 01:18)
+                                                                                       infrastructure
+                                               page count of                           (excluded per
+ poppler pdfinfo         application                                 False
+                                               rendered paper                          program convention
+                                                                                       25 Sep 01:18)
+                                                                                       infrastructure
+                                               repo hosting and                        (excluded per
+ Git + GitHub            service                                     False
+                                               pushes                                  program convention
+                                                                                       25 Sep 01:18)
+                                               scripts fetching
+                                               data/raw/mgnify
+ EBI MGnify REST
+                         web API               (manifest.csv);       True
+ API v1
+                                               scripts/keystone_mg
+                                               nify.py
+ cNODE published         public data release   data/raw/cnode/       True
+ benchmark data                                *.csv; run_bench.py
+
+[[PAPER PAGE 42]]
+(Michel-Mata et al.
+2022)
+MDSINE2
+                                             data/raw/mdsine2*;
+published data and
+                       public data release   mdsine2 head-to-        True
+Source Data
+                                             head results
+(Gibson et al. 2025)
+                                             scripts/
+                                             predictors_audit.py
+scikit-bio             library               (Shannon alpha,         True
+                                             Bray-Curtis beta
+                                             diversity)
+                                             scripts/
+                                             predictors_audit.py
+scikit-learn           library               (random forest, CV,     True
+                                             permutation
+                                             importance)
+                                             scripts/
+                                             predictors_audit.py
+networkx               library               (co-occurrence          True
+                                             network density,
+                                             modularity)
+                                             scripts/
+                                             predictors_audit.py
+statsmodels            library                                       True
+                                             (OLS with HC3
+                                             robust SEs)
+                                             scripts/
+NCBI Taxonomy
+                                             keystone_taxonomy.
+(E-utilities           database/web API                              True
+                                             py (genus -> phylum
+esearch/efetch)
+                                             lineage)
+                                             data/ref/
+                                             bugsigdb_signatures
+                                             _genus_taxname.gm
+BugSigDB (genus
+                       database              t;                      True
+signature export)
+                                             scripts/keystone_bu
+                                             gsigdb.py (literature
+                                             cross-check)
+                                                                            independent
+                                                                            phylogenomic
+GTDB (release
+                                             scripts/                       taxonomy
+v232 bac120            database                                      True
+                                             keystone_gtdb.py               replication of
+taxonomy)
+                                                                            keystone phylum
+                                                                            enrichment
+Madin et al. 2020
+bacterial/archaeal                                                          keystone
+                                             scripts/
+trait database         database                                      True   physiological trait
+                                             keystone_traits.py
+(condensed_species                                                          association
+_NCBI)
+                                                                            genomic
+KEGG REST
+                                             scripts/                       anaerobic/aerobic
+(genome list + KO-     database                                      True
+                                             keystone_kegg.py               marker check of
+gene links)
+                                                                            keystones
+BV-BRC genome
+                                                                            third-source
+API                                          scripts/
+                       database                                      True   anaerobe annotation
+(oxygen_requireme                            keystone_bvbrc.py
+                                                                            for keystone genera
+nt facets)
+                                                                            oxygen preference
+IJSEM phenotypic
+                                                                            per genus; pre-
+database
+                                             scripts/                       registered check
+(Barberan et al.       database                                      True
+                                             keystone_ijsem.py              142c972; overlaps
+2017, figshare
+                                                                            Madin sources (not
+4272392)
+                                                                            independent)
+

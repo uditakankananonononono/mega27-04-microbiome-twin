@@ -1,0 +1,87 @@
+[[PAPER PAGE 43]]
+                                                                        reference-genome
+NCBI Datasets v2                          scripts/
+                                                                        size and GC per
+API (genome           database/service    keystone_genomesiz     True
+                                                                        genus; pre-
+dataset_report)                           e.py
+                                                                        registered 66d7f05
+Open Tree of Life                                                       independent
+API v3 (TNRS                                                            phylogeny for
+                                          scripts/
+match_names +         web API                                    True   anaerobe-keystone
+                                          keystone_otol.py
+induced synthetic                                                       PGLS; pre-
+subtree)                                                                registered ce6fd94
+ProTraits (Brbic et                                                     pre-registered
+al. 2016;                                 scripts/                      oxygen check
+protraits.irb.hr      database            keystone_protraits.p   True   4f748be; coverage
+integrated                                y                             gate FAILED (51
+Pr>=0.95)                                                               genera)
+Disbiome                                  scripts/                      pre-registered
+(disbiome.ugent.be    database/web API    keystone_disbiome.     True   literature check
+experiment API)                           py                            899f554; D1 PASS
+Europe PMC                                scripts/                      pre-registered study-
+REST API (search      web API             keystone_europepm      True   bias control
+hitCount)                                 c.py                          0358299; E1 PASS
+                                                                        alternative network
+gglasso (Schaipp et                                                     inference for
+                                          scripts/
+al. 2021 graphical    library                                    True   keystones; pre-
+                                          keystone_gglasso.py
+lasso)                                                                  registered 3129971;
+                                                                        H1 FAILED
+                                                                        pre-registered
+Wikidata SPARQL                           scripts/
+                      web API/knowledge                                 0ecdd41 (+QID fix
+endpoint (P2597                           keystone_wikidata.p    True
+                      graph                                             1f20b4a); Madin
+Gram staining)                            y
+                                                                        Gram null replicated
+ENA portal API +                                                        pre-registered
+ENA taxonomy                              scripts/                      sequencing-effort
+                      web API                                    True
+REST (assembly                            keystone_ena.py               control 9451f14; A1
+counts)                                                                 PASS
+GBIF API v1
+                                                                        pre-registered
+(species/match +                          scripts/
+                      web API                                    True   generalism rival
+occurrence country                        keystone_gbif.py
+                                                                        9f6cc62; B1 PASS
+facets)
+UniProt REST API                                                        pre-registered
+(uniprotkb search                         scripts/                      anaerobe-index
+                      web API                                    True
+counts, reference                         keystone_uniprot.py           replication c9ea858;
+proteomes)                                                              U1 PASS
+                                                                        pre-registered
+Crossref REST                             scripts/                      literature control
+API (works total-     web API             keystone_crossref.p    True   6ff904c (replaces
+results)                                  y                             OpenAlex 429); C1
+                                                                        PASS C2 PASS
+                                                                        pre-registered third
+python-igraph
+                                          scripts/                      network definition
+(betweenness          library                                    True
+                                          keystone_igraph.py            0962035; I1 FAIL
+centrality)
+                                                                        (p=0.34)
+                                                                        pre-registered
+EBI Search REST                           scripts/
+                                                                        sequencing-effort
+(Ensembl Genomes      web API             keystone_ensembl.p     True
+                                                                        replication be7175d;
+genome domain)                            y
+                                                                        S1 PASS
+                                                                        pre-registered out-
+                                                                        of-sample GAI test
+XGBoost                                   scripts/
+                                                                        9cf67ae; X1 PASS
+(gradient-boosted     library             keystone_xgboost.p     True
+                                                                        by criterion but
+trees)                                    y
+                                                                        absolute CV R2
+                                                                        negative
+InterPro API          web API             scripts/               True   pre-registered
+

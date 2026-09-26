@@ -1,0 +1,127 @@
+[[PAPER PAGE 11]]
+Network density is the strongest independent predictor, followed by beta dispersion and
+community size. Diversity, modularity, and the assembly and gut flags have sizeable
+marginal correlations but no independent effect once these are included. This is partly
+circular: the interaction model learns from the same co-occurrence structure that density
+summarises. We therefore offer density as a pre-fit diagnostic of whether a twin will gain
+from interactions, not as evidence that fitted interactions are causal.
+
+5.4 cNODE benchmark: interactions help outside humans, not detectably on
+human data
+Table 7. 10-fold CV median Bray-Curtis on four cNODE datasets. Published
+cNODE uses LOO, so this table is indicative only.
+
+                                                cNODE                         GraphTwi   cNODE
+ dataset         n           taxa       null                     gLV (ours)
+                                                (ours)                        n (ours)   published
+ Drosophila
+                 24          5          0.172   0.104            0.052        0.093      0.066
+ Gut
+ Soil Vitro      48          8          0.205   0.157            0.117        0.140      0.079
+ Human
+                 143         73         0.204   0.245            0.216        0.202      0.211
+ Oral
+ Human
+                 106         58         0.256   0.275            0.244        0.287      0.242
+ Gut
+Table 8. Exact leave-one-out null vs published cNODE.
+
+                                    null LOO                         published        cNODE inside
+ dataset               n                        95% CI
+                                    median                           cNODE            null CI?
+                                                                                      no - cNODE
+ Ocean                 269          0.094       [0.089, 0.101]       0.060
+                                                                                      better
+                                                                                      no - cNODE
+ Drosophila gut        24           0.170       [0.100, 0.193]       0.066
+                                                                                      better
+                                                                                      no - cNODE
+ Soil in vitro         48           0.198       [0.085, 0.268]       0.079
+                                                                                      better
+                                                                                      no - cNODE
+ Soil in vivo          678          0.124       [0.119, 0.127]       0.107
+                                                                                      better
+ Human oral            143          0.204       [0.188, 0.222]       0.211            YES
+ Human gut             106          0.259       [0.236, 0.271]       0.242            YES
+
+[[PAPER PAGE 12]]
+Figure 3. Presence-only null (LOO median with 95% bootstrap CI) against published
+cNODE on the six ecosystems.
+
+Interpretation. On non-human systems cNODE's interactions buy a large, clear gain. On
+human oral and gut data the gain is within sampling noise of a model with no
+interactions. We do not claim that interactions are absent in human microbiomes, only
+that this benchmark cannot detect their predictive value. Our GraphTwin, a larger model,
+does no better (human gut 0.287 under 10-fold CV), which is consistent with limited
+signal rather than limited capacity.
+
+5.5 Stacking campaign: TwinStack and ConstStack
+The base models of Section 5.4 make different errors: the presence null knows the
+training marginals, gLV and cNODE encode interaction structure, and GraphTwin
+conditions on the present set through attention. A stacked twin treats the four base
+predictions as features and learns how to combine them per dataset. Both stackers below
+were pre-registered (PREREG_graphtwin2.md, PREREG_graphtwin2b.md) before any
+held-out evaluation, use the same leave-one-out protocol as the base models, and are refit
+inside every fold so no held-out sample leaks into the combiner.
+
+5.5.1 TwinStack: learned gating
+TwinStack forms, for assemblage z, the vector of base predictions over the present taxa
+and gates them with a small network conditioned on the assemblage:
+ p-hat(z) = sum_m softmax( g_phi([z; u]) )_m * p-hat^(m)(z), u = (H(z), S(z), log n(z))
+                                                (16)
+
+[[PAPER PAGE 13]]
+where p-hat^(m) are the four base predictions restricted to supp(z) and renormalised, and
+u carries assemblage-level summaries (shannon entropy, richness, log pool size). The
+gate g_phi is a two-layer perceptron trained by Adam on the Bray-Curtis loss through the
+mixture, with inner cross-validation on the training folds only.
+
+5.5.2 ConstStack: constant weights with inner-OOF selection
+ConstStack drops the learned gate in favour of a global simplex weight vector fitted on
+inner out-of-fold predictions, and adds inner-OOF base selection: bases whose inner error
+is worse than the best base by more than one standard error are zeroed out before weight
+fitting:
+  p-hat(z) = sum_{m in M*} w_m p-hat^(m)(z), w = argmin_{w in simplex} sum_{s in
+             OOF} BC( sum_m w_m p-hat^(m)(z_s), p_s )             (17)
+
+with M* the selected bases and OOF the inner leave-one-out predictions of the training
+samples. Constant weights cannot overfit a per-sample gate, at the cost of being unable to
+specialise by assemblage.
+
+5.5.3 Decision rule
+Per dataset we compare each stacker against the best base model and against the
+published cNODE number where one exists. Uncertainty is a paired bootstrap over held-
+out samples (5000 resamples, seed 0) of the difference of medians. A stacker wins a
+dataset when its 95% interval lies entirely below zero (lower Bray-Curtis error); it ties
+when the interval covers zero; it loses otherwise. Losses are reported, not hidden. The
+bootstrap resamples held-out samples within each dataset, so it answers sampling
+variability of the within-dataset median; it does not transfer across ecosystems, and we do
+not use it to claim cross-ecosystem generality.
+Table 9. Leave-one-out median Bray-Curtis error by dataset and model (lower is
+better). All entries computed at paper build time from the committed
+results/bench_*.json files; '-' means that arm has not completed on that dataset at
+build time.
+
+                                                                                                  cNO
+                            cNO
+                     pres          gLV    Gra    Twi    Con           Lig                         DE
+ data                       DE                                 cNO                  ridg
+        n     taxa   ence          (our   phT    nSta   stSt          htG    catb          xgb    publ
+ set                        (our                               DE2                  eclr
+                     null          s)     win    ck     ack           BM                          ishe
+                            s)
+                                                                                                  d
+ Oce                 0.09   0.13   0.07   0.07   0.07   0.07   0.07   0.07   0.77   0.06   0.07   0.06
+        269   73
+ an                  3      2      0      1      0      0      5      4      8      9      2      0
+ Dro
+ sop
+                     0.17   0.10   0.05   0.09   0.08   0.07   0.08   0.29   0.25   0.17   0.07   0.06
+ hila   24    5
+                     2      4      2      3      7      2      4      3      8      3      7      6
+ _Gu
+ t
+ Hu     106   58     0.25   0.27   0.24   0.28   0.24   0.24   0.25   0.27   0.42   0.25   0.27   0.24
+ man                 6      5      4      7      4      8      4      8      4      0      8      2
+ _Gu
+

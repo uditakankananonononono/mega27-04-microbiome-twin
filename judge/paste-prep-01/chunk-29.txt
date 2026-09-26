@@ -1,0 +1,195 @@
+[[PAPER PAGE 66]]
+pandas                              library                   counts
+PyTorch                             library                   counts
+Matplotlib                          library                   counts
+python-docx                         library                   infra (excluded)
+pytest                              test framework            infra (excluded)
+LibreOffice (soffice headless)      application               infra (excluded)
+poppler pdfinfo                     application               infra (excluded)
+Git + GitHub                        service                   infra (excluded)
+EBI MGnify REST API v1              web API                   counts
+cNODE published benchmark
+                                    public data release       counts
+data (Michel-Mata et al. 2022)
+MDSINE2 published data and
+                                    public data release       counts
+Source Data (Gibson et al. 2025)
+scikit-bio                          library                   counts
+scikit-learn                        library                   counts
+networkx                            library                   counts
+statsmodels                         library                   counts
+NCBI Taxonomy (E-utilities
+                                    database/web API          counts
+esearch/efetch)
+BugSigDB (genus signature
+                                    database                  counts
+export)
+GTDB (release v232 bac120
+                                    database                  counts
+taxonomy)
+Madin et al. 2020
+bacterial/archaeal trait database   database                  counts
+(condensed_species_NCBI)
+KEGG REST (genome list + KO-
+                                    database                  counts
+gene links)
+BV-BRC genome API
+                                    database                  counts
+(oxygen_requirement facets)
+IJSEM phenotypic database
+(Barberan et al. 2017, figshare     database                  counts
+4272392)
+NCBI Datasets v2 API (genome
+                                    database/service          counts
+dataset_report)
+Open Tree of Life API v3 (TNRS
+match_names + induced synthetic     web API                   counts
+subtree)
+ProTraits (Brbic et al. 2016;
+protraits.irb.hr integrated         database                  counts
+Pr>=0.95)
+Disbiome (disbiome.ugent.be
+                                    database/web API          counts
+experiment API)
+Europe PMC REST API (search
+                                    web API                   counts
+hitCount)
+gglasso (Schaipp et al. 2021
+                                    library                   counts
+graphical lasso)
+Wikidata SPARQL endpoint
+                                    web API/knowledge graph   counts
+(P2597 Gram staining)
+ENA portal API + ENA taxonomy
+                                    web API                   counts
+REST (assembly counts)
+GBIF API v1 (species/match +
+                                    web API                   counts
+occurrence country facets)
+UniProt REST API (uniprotkb
+search counts, reference            web API                   counts
+proteomes)
+Crossref REST API (works total-
+                                    web API                   counts
+results)
+python-igraph (betweenness          library                   counts
+
+[[PAPER PAGE 67]]
+ centrality)
+ EBI Search REST (Ensembl
+                                    web API                            counts
+ Genomes genome domain)
+ XGBoost (gradient-boosted trees)   library                            counts
+ InterPro API (protein counts per
+                                    web API                            counts
+ taxon and entry)
+ HOMD expanded Human Oral
+ Microbiome Database (taxon table   database                           counts
+ v4.2)
+ EBI Search REST (RNAcentral
+                                    web API                            counts
+ rRNA sequences)
+ bambi / PyMC (Bayesian
+                                    library                            counts
+ hierarchical logistic)
+ NCBI PubTator3 API (search
+                                    web API                            counts
+ counts)
+ Biopython Bio.Phylo (synthetic-
+                                    library                            counts
+ tree topology)
+ LightGBM                           library                            counts
+ CatBoost                           library                            counts
+ SHAP TreeExplainer                 library                            counts
+ SymPy symbolic algebra             library                            counts
+
+
+
+9. Reproducibility
+Blind reproduction log (2026-09-26): fresh git clone of the repository into an empty
+directory, then a single command (python3 paper/build_paper.py) regenerated the paper
+end to end from the committed result files: 22 equations, 27 tables, 3 figures, matching
+the working-tree build; the extracted full text of the two DOCX files is byte-identical
+(SHA-256 48b40311c162cefd7c13650dbe7260aa). The DOCX container bytes differ
+only by embedded timestamps.
+Repository:           github.com/uditakankananonononono/mega27-04-microbiome-twin
+(private).         Commands:            python       run_bench.py         <dataset>
+presence_mean,cnode,glv,graphtwin 10; python bench_mdsine2.py healthy|uc; python -m
+pytest -q; python paper/build_paper.py.
+
+
+Appendix A. MGnify study accessions used
+Table 27. All 160 MGnify studies fetched and used (data/raw/mgnify/manifest.csv).
+
+ MGnify study        INSDC project            biome              samples        genera
+ MGYS00006862        ERP175206                Digestive system   84             106
+ MGYS00005791        ERP127967                Digestive system   245            124
+ MGYS00006825        ERP160132                Digestive system   197            142
+ MGYS00006824        ERP147941                Digestive system   40             98
+ MGYS00006822        ERP148470                Digestive system   55             95
+ MGYS00006814        ERP148607                Digestive system   68             143
+ MGYS00006815        ERP147808                Digestive system   67             88
+ MGYS00006811        ERP147961                Digestive system   98             89
+ MGYS00006807        ERP170897                Digestive system   60             111
+ MGYS00006805        ERP148499                Digestive system   86             131
+ MGYS00006806        ERP136860                Digestive system   74             103
+
+[[PAPER PAGE 68]]
+MGYS00006760   ERP148661   Digestive system   218    159
+MGYS00002338   ERP106359   Digestive system   303    158
+MGYS00006797   ERP147940   Digestive system   175    151
+MGYS00006551   ERP152745   Digestive system   2047   458
+MGYS00006795   SRP162433   Digestive system   31     205
+MGYS00006794   ERP128598   Digestive system   184    439
+MGYS00006789   ERP148573   Digestive system   108    137
+MGYS00006787   ERP160127   Digestive system   108    125
+MGYS00006786   ERP147955   Digestive system   134    110
+MGYS00006759   ERP146353   Digestive system   692    224
+MGYS00006780   ERP160119   Digestive system   24     48
+MGYS00006779   ERP148332   Digestive system   57     109
+MGYS00006769   ERP147945   Digestive system   116    136
+MGYS00006765   ERP160150   Digestive system   28     57
+MGYS00006755   SRP097190   Digestive system   83     353
+MGYS00005333   ERP108859   Digestive system   244    146
+MGYS00005230   ERP005153   Digestive system   913    531
+MGYS00002675   ERP107102   Digestive system   24     33
+MGYS00006069   ERP133351   Digestive system   1568   263
+MGYS00006006   ERP133688   Digestive system   457    377
+MGYS00002061   ERP104235   Digestive system   52     75
+MGYS00000633   SRP001634   Digestive system   1033   475
+MGYS00002238   SRP097646   Digestive system   111    312
+MGYS00006562   ERP150486   Digestive system   554    159
+MGYS00005154   ERP001500   Digestive system   529    779
+MGYS00006649   ERP131993   Digestive system   20     44
+MGYS00006641   ERP127228   Digestive system   88     83
+MGYS00006642   ERP127229   Digestive system   57     27
+MGYS00006364   ERP134534   Digestive system   160    76
+MGYS00006640   ERP150574   Digestive system   61     82
+MGYS00005253   ERP108620   Oral               606    330
+MGYS00006320   SRP039515   Oral               392    297
+MGYS00006276   ERP128187   Oral               91     455
+MGYS00006263   ERP110514   Oral               489    291
+MGYS00006017   SRP330744   Oral               53     210
+MGYS00005592   ERP119456   Oral               160    315
+MGYS00005569   SRP256368   Oral               71     246
+MGYS00005528   DRP004359   Oral               506    169
+MGYS00005506   SRP115814   Oral               701    359
+MGYS00005189   DRP004640   Oral               530    934
+MGYS00005223   SRP126884   Oral               767    565
+MGYS00005197   SRP128931   Oral               1319   1281
+MGYS00005143   SRP126946   Oral               7397   1486
+MGYS00002159   SRP110002   Oral               21     835
+MGYS00003719   SRP125475   Oral               21     218
+MGYS00002395   SRP123221   Oral               68     467
+MGYS00002394   SRP051741   Oral               20     166
+MGYS00002272   SRP073270   Oral               40     141
+MGYS00002269   SRP062274   Oral               147    230
+MGYS00002229   SRP051201   Oral               100    154
+MGYS00006648   ERP156480   Skin               67     634
+MGYS00005232   ERP005182   Skin               777    748
+MGYS00005156   ERP005152   Skin               938    1299
+MGYS00006246   ERP149135   Skin               50     256
+MGYS00005384   SRP049645   Skin               671    903
+MGYS00005172   SRP113602   Skin               1481   1523
+MGYS00005533   ERP016280   Skin               584    1687
+

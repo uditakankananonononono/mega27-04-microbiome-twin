@@ -1,0 +1,174 @@
+[[PAPER PAGE 7]]
+                                                                       held-out mouse contributes its first
+                                    mice
+                                                                       sample as initial state
+ interaction parameters             fitted gLV + interaction modules   none
+
+4.3 Software and hermetic tests
+The microtwin CLI is a research instrument for reproducing this audit on new abundance
+tables; it is not a production package and we do not claim production engineering.
+The code is in src/microtwin (data.py, models.py, evaluate.py, dynamics.py,
+popforecast.py). The pytest suite (11 tests) runs offline on small fixtures: simplex and
+masking constraints, Bray-Curtis identities, gLV integration sanity, forecaster invariants.
+
+
+5. Results
+5.1 Scale-up: interaction audit across 160 MGnify studies
+To test whether the human-data null generalises, we fetched study-level SSU genus tables
+for 160 MGnify studies (8 biomes, at least 20 samples each; accessions in Appendix A)
+and asked, per study, whether an interaction model beats a calibrated presence prior at
+predicting composition from the assemblage. The prior is the two-way log-linear fit
+   log p_si = mu_i + c_s (present entries only), p-hat_i(z) = z_i e^(mu_i) / sum_j z_j
+                              e^(mu_j)              (12)
+
+in which the sample offset c_s absorbs the closure constant, so mu is not biased by which
+other taxa are present. The interaction model - an association model fitted on
+observational abundances, not a validated causal interaction network - adds a steady-state
+generalised Lotka-Volterra shift fitted by ridge regression:
+  p-hat_i(z) ∝ z_i exp( mu_i + b_i + sum_j W_ij z_j ), (b_i, W_i) = argmin sum_{s:
+ z_si=1} (log p_si - mu_i - c_s - b_i - W_i z_s)^2 + lambda ||W_i||^2          (13)
+
+with lambda chosen by inner 3-fold CV. We used 5-fold outer CV, median Bray-Curtis
+error, a paired Wilcoxon test per study, and Benjamini-Hochberg FDR across studies:
+                          q_(k) = min_{j >= k} ( m p_(j) / j )                 (14)
+
+Interactions were better at FDR < 0.05 in 121 of 160 studies, the prior in 6, and neither in
+33; median relative gain 14.5%.
+Table 3. Interaction audit by biome (results/mgnify_audit_summary.json).
+
+                                    interactions                       median gain         median prior
+ biome            studies                              prior better
+                                    better                             (BC)                BC
+ Birds            20                18                 0               0.107               0.375
+ Digestive
+                  41                21                 3               0.004               0.176
+ system
+ Fish             15                12                 1               0.113               0.420
+ Insecta          7                 5                  0               0.052               0.345
+
+[[PAPER PAGE 8]]
+ Mammals           20             14           2              0.056                  0.386
+ Oral              20             17           0              0.040                  0.326
+ Plants            20             18           0              0.081                  0.330
+ Skin              17             16           0              0.075                  0.374
+
+
+
+
+Figure 1. Relative gain of the interaction model per study. Red: interactions better (FDR
+< 0.05); dark: prior better; grey: no difference.
+
+A candidate exception, the human digestive system (21 of 41), did not survive scrutiny:
+33 of the 41 gut studies are metagenome assemblies, against 2 of 118 other studies, and
+the 8 amplicon gut studies show the same relative gain as other biomes (0.210 vs 0.184).
+Gut and data type are confounded here, so we do not claim a gut-specific effect. This
+larger audit also means the cNODE null result (Section 5.4) should be read narrowly: on
+these two cNODE tables a mean-composition null matched published cNODE, but across
+160 amplicon and assembly studies interaction structure usually does carry predictive
+information.
+
+5.2 MDSINE2 benchmark: UC beat, healthy tie
+Table 4. UC cohort, official MDSINE2 metric, hold-one-mouse-out.
+
+                                                                      mean diff        Wilcoxon p
+ method          median   mean         pairs        ours better
+                                                                      (ours-other)     (2-sided)
+ PresenceCon
+ ditionalPopu    0.692    0.842        601          -                 -                -
+ lation (ours)
+ RA-
+ MDSINE2
+                 0.784    0.883        601          384               -0.041           5.6e-06
+ (No
+ Modules)
+
+[[PAPER PAGE 9]]
+ MDSINE2
+ (No             0.805    0.889     601     376           -0.047         8.0e-07
+ Modules)
+ MDSINE2_s
+                 0.965    1.253     601     431           -0.411         1.0e-29
+ eed10
+ RA-
+                 1.009    1.140     601     427           -0.298         2.8e-29
+ MDSINE2
+ MDSINE2         1.093    1.417     601     471           -0.575         4.3e-44
+ gLV (elastic
+                 1.582    1.819     601     512           -0.977         4.5e-72
+ net)
+ gLV (ridge)     1.970    2.589     601     553           -1.747         4.9e-85
+ gLV-RA
+                 4.536    4.696     601     599           -3.854         4.2e-100
+ (ridge)
+ LRA             4.536    4.696     601     599           -3.854         8.7e-100
+ gLV-RA
+                 4.536    4.696     601     599           -3.854         4.2e-100
+ (elastic net)
+ cLV             4.536    4.696     601     599           -3.854         4.2e-100
+Table 5. Healthy cohort, same protocol.
+                                                          mean diff      Wilcoxon p
+ method          median   mean      pairs   ours better
+                                                          (ours-other)   (2-sided)
+ RA-
+ MDSINE2
+                 0.883    0.990     556     285           0.095          4.5e-02
+ (No
+ Modules)
+ MDSINE2
+ (No             0.913    1.024     556     299           0.061          5.3e-01
+ Modules)
+ PresenceCon
+ ditionalPopu    0.919    1.085     556     -             -              -
+ lation (ours)
+ RA-
+                 0.957    1.183     556     311           -0.098         3.6e-02
+ MDSINE2
+ MDSINE2         1.061    1.195     556     335           -0.110         1.1e-04
+ gLV (elastic
+                 1.446    1.592     556     425           -0.507         1.2e-35
+ net)
+ gLV (ridge)     1.924    2.098     556     472           -1.013         1.4e-65
+ gLV-RA
+                 4.643    4.770     556     555           -3.685         9.1e-93
+ (ridge)
+ gLV-RA
+                 4.643    4.770     556     555           -3.685         9.1e-93
+ (elastic net)
+ cLV             4.643    4.770     556     555           -3.685         9.1e-93
+ LRA             4.643    4.770     556     555           -3.685         1.3e-92
+
+[[PAPER PAGE 10]]
+Figure 2. Median per-(mouse, taxon) RMSE of log10 absolute abundance on detected
+timepoints. Red: our presence-conditional population forecaster.
+
+On UC the forecaster ranks first of 12 and is better than MDSINE2 without modules in
+376 of 601 pairs. On healthy it ranks third of 11. Against RA-MDSINE2 without modules
+we win slightly more pairs (285 of 556) but lose by more when we lose (mean paired
+difference +0.095 in their favour); the signed-rank test favours them (two-sided p =
+0.045). Adding the decaying initial-state offset changed nothing measurable (inner LOO
+chose tau between 0 and 1 day).
+
+5.3 What predicts where interactions help?
+Across the 160 studies we regressed the audit gain (prior error minus interaction error) on
+standardised study covariates: Shannon diversity and Bray-Curtis dispersion (scikit-bio),
+co-occurrence network density and modularity (networkx; edges where |Spearman rho| >
+0.3 among genera with prevalence >= 20%), log sample and taxa counts, and assembly
+and human-gut flags. Inference uses heteroskedasticity-robust (HC3) standard errors:
+gain_s = b_0 + sum_k b_k z_sk + e_s, Var(b) = (Z'Z)^-1 Z' diag( e_s^2 / (1 - h_ss)^2 )
+                            Z (Z'Z)^-1           (15)
+
+Table 6. Predictors of interaction gain (OLS R^2 = 0.47; random forest 5-fold CV
+R^2 = 0.37; results/predictors_audit.json).
+
+                                                       RF permutation     marginal
+ covariate         std. beta         p (HC3)
+                                                       importance         Spearman rho
+ shannon           -0.003            0.63              0.039              -0.350
+ beta_bc           0.014             0.0051            0.268              0.510
+ net_density       0.026             0.00076           0.600              0.610
+ net_modularity    -0.001            0.89              0.022              -0.420
+ n                 0.012             0.034             0.089              0.240
+ taxa              0.017             0.0061            0.127              0.540
+ assembly          -0.002            0.7               0.022              -0.550
+ human_gut         -0.007            0.24              0.001              -0.460
+
