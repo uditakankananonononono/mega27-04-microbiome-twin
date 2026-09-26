@@ -16,6 +16,8 @@ def screen_courses(samples, courses, *, min_pre_days=0, min_post_days=0,
     Caller must establish source rights and meaning of all times/arms separately.
     Multi-course overlap or an unknown interval is a blocker, not an estimate.
     """
+    if type(require_unambiguous_exposure) is not bool:
+        raise ValueError('require_unambiguous_exposure must be boolean')
     if not all(isinstance(x, (int, float)) and not isinstance(x, bool) and isfinite(x) and x >= 0
                for x in (min_pre_days, min_post_days)):
         raise ValueError('finite nonnegative margins required')
@@ -52,6 +54,7 @@ def screen_courses(samples, courses, *, min_pre_days=0, min_post_days=0,
     overlap_blocked = 0
     missing_samples = 0
     subject_eligible = set()
+    subject_relaxed = set()
     for key, events in by_course.items():
         ts = by_subject.get(key, [])
         for i, (start, end, arm) in enumerate(events):
@@ -67,10 +70,13 @@ def screen_courses(samples, courses, *, min_pre_days=0, min_post_days=0,
             window_end = min(later)
             contaminated = any(j != i and a <= window_end and b >= window_start
                                for j, (a, b, _) in enumerate(events))
-            if contaminated and require_unambiguous_exposure:
+            if contaminated:
                 overlap_blocked += 1
+                if not require_unambiguous_exposure:
+                    subject_relaxed.add(key)
             else:
                 subject_eligible.add(key)
+                subject_relaxed.add(key)
     return {'status': 'metadata_only_no_outcomes',
             'sample_rows': len(samples), 'course_rows': len(courses),
             'source_subject_keys': len(by_subject),
@@ -78,6 +84,8 @@ def screen_courses(samples, courses, *, min_pre_days=0, min_post_days=0,
             'courses_blocked_by_other_exposure_in_window': overlap_blocked,
             'courses_without_prepost_samples': missing_samples,
             'subjects_with_at_least_one_unambiguous_window': len(subject_eligible),
+            'subjects_with_at_least_one_selected_window': len(subject_eligible if require_unambiguous_exposure else subject_relaxed),
+            'require_unambiguous_exposure': require_unambiguous_exposure,
             'note': 'Eligibility of a window is design-only; rights, controls, taxonomy, adverse events, prognosis and causal inference remain unverified.'}
 
 

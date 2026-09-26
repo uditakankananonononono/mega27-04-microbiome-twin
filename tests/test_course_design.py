@@ -48,3 +48,15 @@ def test_duplicate_subject_time_requires_replicate_policy():
     courses=[{'source_family':'A','subject':'p1','arm':'drug','start':2,'end':4}]
     with pytest.raises(ValueError,match='duplicate source-subject-time'):
         screen_courses(samples,courses)
+
+
+def test_relaxed_exposure_cannot_mislabel_overlap_as_unambiguous():
+    r = screen_courses([sample('x', 0), sample('x', 10)],
+                       [course('x', 2, 5), course('x', 4, 7)],
+                       require_unambiguous_exposure=False)
+    assert r['courses_blocked_by_other_exposure_in_window'] == 2
+    assert r['subjects_with_at_least_one_unambiguous_window'] == 0
+    assert r['subjects_with_at_least_one_selected_window'] == 1
+    assert r['require_unambiguous_exposure'] is False
+    with pytest.raises(ValueError, match='boolean'):
+        screen_courses([sample('x', 0)], [course('x', 2, 5)], require_unambiguous_exposure='false')
