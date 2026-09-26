@@ -19,5 +19,10 @@
   "prepost_exposure_rows": 378,
   "people_with_prepost_exposure": 58,
   "duplicate_person_interval_coordinates": 3,
-  "note": "Rows are not independent courses; 80 people with serial samples differ from published 79-person longitudinal analysis. Taxon values not inspected; design-development only."
+  "note": "Rows are not independent courses. Published 79-person analysis matches pair-contributing IDs, while 80 serial subjects occur in sample/patient tables. No taxon values inspected; development-only source.",
+  "published_code_archive_sha256": "7b965b3b614d01eaa08e301c9411229ffc7556ed5803271c6ba93b409833ce38",
+  "model_input_longitudinal_patient_rows": 80,
+  "model_input_pair_rows": 173,
+  "model_input_pair_contributing_people": 79,
+  "model_pair_people_not_in_patient_map": 0
 }

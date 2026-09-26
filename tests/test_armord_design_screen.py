@@ -14,3 +14,14 @@ def test_design_screen_reads_no_taxa(tmp_path):
     assert result['prepost_exposure_rows']==2 and result['duplicate_person_interval_coordinates']==1
     assert result['unparseable_exposure_time_rows']==1 and 'SECRET' not in str(result)
     with pytest.raises(ValueError,match='checksum'):screen(archive,'0'*64)
+    code=tmp_path/'code.zip'
+    with zipfile.ZipFile(code,'w') as z:
+        base='Source Code 1/ARMORD R project/armord_data/model_data/'
+        z.writestr(base+'l_patients.csv','pid\np1\np2\n')
+        z.writestr(base+'l_pairs.csv','pid,pair_id\np1,pairA\n')
+        z.writestr(base+'l_bugRA.csv','private\nTOP_SECRET\n')
+    result=screen(archive,hashlib.sha256(archive.read_bytes()).hexdigest(),code_archive=code,expected_code_sha=hashlib.sha256(code.read_bytes()).hexdigest())
+    assert result['model_input_longitudinal_patient_rows']==2
+    assert result['model_input_pair_contributing_people']==1
+    assert 'TOP_SECRET' not in str(result)
+    with pytest.raises(ValueError,match='code archive checksum'):screen(archive,hashlib.sha256(archive.read_bytes()).hexdigest(),code_archive=code,expected_code_sha='0'*64)
