@@ -1,0 +1,55 @@
+[ARCHIVED PAPER SUBMISSION 10; original chunk 4/30; segment 1/3]
+[[PAPER PAGE 11]]
+Network density is the strongest independent predictor, followed by beta dispersion and
+community size. Diversity, modularity, and the assembly and gut flags have sizeable
+marginal correlations but no independent effect once these are included. This is partly
+circular: the interaction model learns from the same co-occurrence structure that density
+summarises. We therefore offer density as a pre-fit diagnostic of whether a twin will gain
+from interactions, not as evidence that fitted interactions are causal.
+
+5.4 cNODE benchmark: interactions help outside humans, not detectably on
+human data
+Table 7. 10-fold CV median Bray-Curtis on four cNODE datasets. Published
+cNODE uses LOO, so this table is indicative only.
+
+                                                cNODE                         GraphTwi   cNODE
+ dataset         n           taxa       null                     gLV (ours)
+                                                (ours)                        n (ours)   published
+ Drosophila
+                 24          5          0.172   0.104            0.052        0.093      0.066
+ Gut
+ Soil Vitro      48          8          0.205   0.157            0.117        0.140      0.079
+ Human
+                 143         73         0.204   0.245            0.216        0.202      0.211
+ Oral
+ Human
+                 106         58         0.256   0.275            0.244        0.287      0.242
+ Gut
+Table 8. Exact leave-one-out null vs published cNODE.
+
+                                    null LOO                         published        cNODE inside
+ dataset               n                        95% CI
+                                    median                           cNODE            null CI?
+                                                                                      no - cNODE
+ Ocean                 269          0.094       [0.089, 0.101]       0.060
+                                                                                      better
+                                                                                      no - cNODE
+ Drosophila gut        24           0.170       [0.100, 0.193]       0.066
+                                                                                      better
+                                                                                      no - cNODE
+ Soil in vitro         48           0.198       [0.085, 0.268]       0.079
+                                                                                      better
+                                                                                      no - cNODE
+ Soil in vivo          678          0.124       [0.119, 0.127]       0.107
+                                                                                      better
+ Human oral            143          0.204       [0.188, 0.222]       0.211            YES
+ Human gut             106          0.259       [0.236, 0.271]       0.242            YES
+
+[[PAPER PAGE 12]]
+Figure 3. Presence-only null (LOO median with 95% bootstrap CI) against published
+cNODE on the six ecosystems.
+
+Interpretation. On non-human systems cNODE's interactions buy a large, clear gain. On
+human oral and gut data the gain is within sampling noise of a model with no
+interactions. We do not claim 
+[END SEGMENT]

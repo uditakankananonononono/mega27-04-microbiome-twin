@@ -1,0 +1,51 @@
+[ARCHIVED PAPER SUBMISSION 43; original chunk 15/30; segment 3/3]
+                1.0
+                                    9117
+                                    0.565055679835
+Enterococcus     91    9    0.099                    1.0
+                                    745
+                                    0.568801593170
+Arthrobacter     50    5    0.100                    1.0
+                                    9377
+                                    0.573649059412
+Dorea            71    7    0.099                    1.0
+                                    7721
+                                    0.576869346906
+Intestinimonas   40    4    0.100                    1.0
+                                    9974
+                                    0.579454890524
+Massilia         61    6    0.098                    1.0
+                                    0392
+                                    0.588648760440
+Facklamia        30    3    0.100                    1.0
+                                    4943
+                                    0.608253001874
+Williamsia       20    2    0.100                    1.0
+                                    8321
+Cloacibacteriu                      0.608253001874
+                 20    2    0.100                    1.0
+m                                   8321
+Methylobacteri                      0.611140372832
+                 84    8    0.095                    1.0
+um                                  3437
+                                    0.611414382477
+Peredibacter     31    3    0.097                    1.0
+                                    1845
+Terrisporobact                      0.611414382477
+                 31    3    0.097                    1.0
+er                                  1845
+                                    0.611700417052
+Granulicatella   63    6    0.095                    1.0
+                                    0003
+                                    0.633316480919
+Halomonas        32    3    0.094                    1.0
+                                    3795
+                                    0.635270036228
+Gordonia         21    2    0.095                    1.0
+                                    2919
+                                    0.654342495423
+Acidibacter      33    3    0.091                    1.0
+                                    8868
+
+
+[END SEGMENT]

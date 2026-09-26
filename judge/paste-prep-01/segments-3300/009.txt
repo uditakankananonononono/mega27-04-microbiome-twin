@@ -1,0 +1,48 @@
+[ARCHIVED PAPER SUBMISSION 9; original chunk 3/30; segment 3/3]
+ 1.4e-65
+ gLV-RA
+                 4.643    4.770     556     555           -3.685         9.1e-93
+ (ridge)
+ gLV-RA
+                 4.643    4.770     556     555           -3.685         9.1e-93
+ (elastic net)
+ cLV             4.643    4.770     556     555           -3.685         9.1e-93
+ LRA             4.643    4.770     556     555           -3.685         1.3e-92
+
+[[PAPER PAGE 10]]
+Figure 2. Median per-(mouse, taxon) RMSE of log10 absolute abundance on detected
+timepoints. Red: our presence-conditional population forecaster.
+
+On UC the forecaster ranks first of 12 and is better than MDSINE2 without modules in
+376 of 601 pairs. On healthy it ranks third of 11. Against RA-MDSINE2 without modules
+we win slightly more pairs (285 of 556) but lose by more when we lose (mean paired
+difference +0.095 in their favour); the signed-rank test favours them (two-sided p =
+0.045). Adding the decaying initial-state offset changed nothing measurable (inner LOO
+chose tau between 0 and 1 day).
+
+5.3 What predicts where interactions help?
+Across the 160 studies we regressed the audit gain (prior error minus interaction error) on
+standardised study covariates: Shannon diversity and Bray-Curtis dispersion (scikit-bio),
+co-occurrence network density and modularity (networkx; edges where |Spearman rho| >
+0.3 among genera with prevalence >= 20%), log sample and taxa counts, and assembly
+and human-gut flags. Inference uses heteroskedasticity-robust (HC3) standard errors:
+gain_s = b_0 + sum_k b_k z_sk + e_s, Var(b) = (Z'Z)^-1 Z' diag( e_s^2 / (1 - h_ss)^2 )
+                            Z (Z'Z)^-1           (15)
+
+Table 6. Predictors of interaction gain (OLS R^2 = 0.47; random forest 5-fold CV
+R^2 = 0.37; results/predictors_audit.json).
+
+                                                       RF permutation     marginal
+ covariate         std. beta         p (HC3)
+                                                       importance         Spearman rho
+ shannon           -0.003            0.63              0.039              -0.350
+ beta_bc           0.014             0.0051            0.268              0.510
+ net_density       0.026             0.00076           0.600              0.610
+ net_modularity    -0.001            0.89              0.022              -0.420
+ n                 0.012             0.034             0.089              0.240
+ taxa              0.017             0.0061            0.127              0.540
+ assembly          -0.002            0.7               0.022              -0.550
+ human_gut         -0.007            0.24              0.001              -0.460
+
+
+[END SEGMENT]

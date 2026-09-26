@@ -1,0 +1,23 @@
+[ARCHIVED PAPER SUBMISSION 3; original chunk 1/30; segment 3/3]
+ks. Our contributions are: (i) an exact leave-one-out re-run of the cNODE
+benchmark with a bootstrap null interval; (ii) a verified reproduction of the MDSINE2
+cross-validation metric from the authors' notebook and Source Data, matching the
+published MDSINE2 median; (iii) a presence-conditional population forecaster that tops
+the UC leaderboard and ties the healthy one; and (iv) an explicit account of why the
+metric allows this.
+Three claim levels are kept separate throughout. Prediction asks whether a model
+forecasts held-out composition or trajectories. Mechanism asks whether its fitted terms
+recover causal ecology. Discovery asks whether it names a biological principle that
+survives replication. This paper reports results at each level separately and does not let a
+success at one level stand in for another. The novelty is the auditing framework, its scale,
+and the pre-registered falsification discipline - not any single model, null, or benchmark
+re-run.
+The paper's hierarchy, stated once: the primary contribution is the digital-twin audit
+framework (does a twin beat ecological priors, and when). The major findings are that
+some benchmarks collapse to ecological priors (human cNODE datasets, the MDSINE2
+UC cohort) while others require learned structure (121 of 160 MGnify studies). The
+secondary exploration is the biological-discovery programme, which mostly fails
+replication and is reported as such.
+
+
+[END SEGMENT]

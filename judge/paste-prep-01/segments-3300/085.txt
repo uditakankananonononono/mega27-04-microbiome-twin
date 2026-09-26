@@ -1,0 +1,57 @@
+[ARCHIVED PAPER SUBMISSION 85; original chunk 30/30; segment 2/3]
+        Birds           733              409
+ MGYS00005317    SRP143624        Birds           613              1772
+ MGYS00005309    ERP116454        Birds           72               302
+ MGYS00004995    ERP115446        Birds           43               303
+ MGYS00003706    ERP016469        Birds           542              1296
+ MGYS00003681    ERP016414        Birds           122              1037
+ MGYS00006764    SRP507932        Fish            21               402
+ MGYS00006763    SRP482902        Fish            39               421
+ MGYS00006762    SRP482223        Fish            137              618
+ MGYS00006761    SRP482221        Fish            123              570
+ MGYS00006758    ERP158363        Fish            135              502
+ MGYS00006041    ERP125469        Fish            707              226
+ MGYS00006117    ERP144954        Fish            90               238
+ MGYS00006086    ERP136460        Fish            142              11
+ MGYS00005503    ERP113547        Fish            870              1584
+ MGYS00003166    SRP115243        Fish            70               492
+ MGYS00004672    SRP124286        Fish            33               423
+ MGYS00002905    ERP110546        Fish            66               339
+ MGYS00002608    ERP110004        Fish            101              922
+ MGYS00002413    ERP109242        Fish            173              916
+ MGYS00002065    ERP105249        Fish            214              1313
+ MGYS00006798    SRP315825        Insecta         24               225
+ MGYS00006019    SRP126632        Insecta         20               186
+ MGYS00005862    SRP279534        Insecta         21               685
+ MGYS00005215    SRP071118        Insecta         638              850
+ MGYS00005163    ERP015256        Insecta         386              1720
+ MGYS00003800    ERP023686        Insecta         154              410
+ MGYS00003705    ERP016607        Insecta         385              523
+
+
+
+References
+Michel-Mata S, Wang X-W, Liu Y-Y, Angulo MT. Predicting microbiome compositions
+from      species    assemblages       through  deep learning.   iMeta   2022.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC9221840/
+Mitchell AL, et al. MGnify: the microbiome analysis resource in 2020. Nucleic Acids
+Res 2020.
+Gibson TE, Kim Y, Acharya S, et al. Learning ecosystem-scale dynamics from
+microbiome      data     with      MDSINE2.       Nature Microbiology 2025.
+https://www.nature.com/articles/s41564-025-02112-6
+Kanehisa M, Furumichi M, Sato Y, et al. KEGG for taxonomy-based analysis of
+pathways and genomes. Nucleic Acids Res 2023.
+
+[[PAPER PAGE 71]]
+Olson RD, Assaf R, Brettin T, et al. Introducing the Bacterial and Viral Bioinformatics
+Resource Center (BV-BRC). Nucleic Acids Res 2023.
+Madin JS, Nielsen DA, Brbic M, et al. A synthesis of bacterial and archaeal phenotypic
+trait data. Scientific Data 2020;7:170.
+Parks DH, Chuvochina M, Rinke C, et al. GTDB: an ongoing census of bacterial and
+archaeal diversity through a phylogenetically consistent, rank normalized and complete
+genome-based taxonomy. Nucleic Acids Res 2022.
+Bucci V, et al. MDSINE: Microbial Dynamical Systems INference Engine. Genome
+Biology 2016.
+Stein RR, et al. Ecological modeling from time-series inference: insight into dynamics
+and stability o
+[END SEGMENT]

@@ -1,0 +1,57 @@
+[ARCHIVED PAPER SUBMISSION 78; original chunk 28/30; segment 1/3]
+[[PAPER PAGE 63]]
+ Human_Ora
+              catb            143     0.379        0.337        0.415       0.381
+ l
+ Human_Ora
+              ridgeclr        143     0.200        0.167        0.281       0.225
+ l
+ Soil_Vitro   cNODE2          48      0.114        0.043        0.278       0.171
+ Soil_Vitro   TwinStack       48      0.177        0.098        0.309       0.211
+ Soil_Vitro   ConstStack      48      0.143        0.065        0.270       0.180
+ Soil_Vitro   LightGBM        48      0.127        0.049        0.204       0.158
+ Soil_Vitro   presence null   48      0.205        0.069        0.278       0.195
+              cNODE
+ Soil_Vitro                   48      0.157        0.091        0.239       0.179
+              (ours)
+ Soil_Vitro   gLV (ours)      48      0.117        0.036        0.288       0.179
+ Soil_Vitro   GraphTwin       48      0.140        0.057        0.322       0.189
+ Soil_Vitro   xgb             48      0.097        0.045        0.234       0.145
+ Soil_Vitro   catb            48      0.226        0.080        0.336       0.228
+ Soil_Vitro   ridgeclr        48      0.175        0.056        0.284       0.183
+ Soil_Vivo    cNODE2          678     0.110        0.083        0.154       0.128
+ Soil_Vivo    TwinStack       678     0.106        0.077        0.148       0.123
+ Soil_Vivo    ConstStack      678     0.106        0.077        0.148       0.123
+ Soil_Vivo    LightGBM        678     0.110        0.081        0.148       0.123
+ Soil_Vivo    presence null   678     0.124        0.090        0.164       0.141
+              cNODE
+ Soil_Vivo                    678     0.123        0.096        0.166       0.140
+              (ours)
+ Soil_Vivo    gLV (ours)      678     0.106        0.078        0.148       0.123
+ Soil_Vivo    GraphTwin       678     0.119        0.084        0.167       0.138
+ Soil_Vivo    xgb             678     0.111        0.081        0.147       0.124
+ Soil_Vivo    catb            678     0.333        0.301        0.380       0.342
+ Soil_Vivo    ridgeclr        678     0.112        0.083        0.158       0.130
+
+
+
+6. Negative results (kept by design)
+- gLV replicator 'beat' of cNODE on Drosophila (0.052) and soil in vitro under 10-fold
+CV was RETRACTED: under LOO it scores 0.074 and 0.099, worse than published
+cNODE (0.066, 0.079).
+- Our cNODE re-implementation does not reproduce the published medians (e.g.
+Drosophila 0.104 vs 0.066), so all cNODE comparisons use published numbers.
+- GraphTwin (attention GNN) never beat published cNODE on any dataset.
+- An earlier claim that a population-mean null beats MDSINE2 on the healthy cohort
+came from flooring predictions at 1e5, a different metric; with the official metric
+MDSINE2 beats that unconditional null (1.061 vs 1.442). RETRACTED.
+- Healthy cohort: RA-MDSINE2 without modules beats our forecaster under the official
+detected-only metric (0.883 vs 0.919, p = 0.045).
+- Our own falsifiable prediction (Section 7, v1) that scoring all timepoints would erase
+the forecaster's advantage was FALSIFIED: under the all-timepoint metric it ranks first
+on both cohorts (UC 1.654 vs MDSINE2-NM 1.824; healthy 1.752 vs 2.072;
+results/mdsine2_headtohead_*_alltimepoints.json).
+
+[[PAPER PAGE 64]]
+- The candidate 'human gut is least interaction-predictable' was reje
+[END SEGMENT]

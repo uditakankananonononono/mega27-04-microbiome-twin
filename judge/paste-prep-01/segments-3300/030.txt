@@ -1,0 +1,83 @@
+[ARCHIVED PAPER SUBMISSION 30; original chunk 11/30; segment 1/3]
+[[PAPER PAGE 28]]
+          Human:Ski
+                                                             22
+          n
+          root:Host-
+                                                             4.02228790
+MGYS000   associated:
+                        400   150   0.374   0.292   0.083    63051704e-
+05212     Human:Ski
+                                                             33
+          n
+          root:Host-
+                                                             2.73551029
+MGYS000   associated:
+                        400   106   0.396   0.358   0.039    46682556e-
+05238     Human:Ski
+                                                             13
+          n
+          root:Host-
+                                                             0.00117616
+MGYS000   associated:
+                        71    91    0.367   0.292   0.075    659742371
+05101     Human:Ski
+                                                             9
+          n
+          root:Host-
+                                                             7.29891955
+MGYS000   associated:
+                        179   150   0.381   0.264   0.118    2265234e-
+05102     Human:Ski
+                                                             19
+          n
+          root:Host-
+                                                             1.42523484
+MGYS000   associated:
+                        109   150   0.470   0.420   0.050    45599325e-
+05135     Human:Ski
+                                                             07
+          n
+          root:Host-
+                                                             1.53886211
+MGYS000   associated:
+                        101   150   0.127   0.102   0.025    28648606e-
+05098     Human:Ski
+                                                             10
+          n
+          root:Host-
+                                                             6.00621525
+MGYS000   associated:
+                        106   150   0.311   0.233   0.078    8961562e-
+05037     Human:Ski
+                                                             07
+          n
+          root:Host-
+MGYS000   associated:                                        0.94987989
+                        120   7     0.082   0.077   0.005
+05090     Human:Ski                                          77422346
+          n
+          root:Host-
+                                                             2.87877565
+MGYS000   associated:
+                        400   150   0.471   0.261   0.210    5656423e-
+02184     Human:Ski
+                                                             63
+          n
+          root:Host-
+                                                             2.00589126
+MGYS000   associated:
+                        258   150   0.233   0.190   0.043    88460236e-
+02072     Human:Ski
+                                                             19
+          n
+          root:Host-                                         1.65538375
+MGYS000
+          associated:   116   150   0.293   0.232   0.061    50067384e-
+06855
+          Mammals                                            12
+          root:Host-
+MGYS000                                                      0.03189583
+          associated:   27    150   0.406   0.417   -0.011
+06799                                
+[END SEGMENT]

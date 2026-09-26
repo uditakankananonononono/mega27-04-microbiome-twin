@@ -1,0 +1,53 @@
+[ARCHIVED PAPER SUBMISSION 79; original chunk 28/30; segment 2/3]
+cted as confounded
+with assembly-derived data.
+- Keystone consensus found only 2 of 248 genera at FDR < 0.05, both oral; there is no
+cross-biome keystone signal.
+- Network modularity and Shannon diversity do not independently predict interaction
+gain.
+- Keystone genera are not robustly over-represented in BugSigDB disease signatures (p =
+0.062 with estimated dispersion).
+- No GTDB family is enriched among keystones after FDR (best q = 0.71).
+- Gram stain, motility, sporulation, GC content and doubling time do not track keystone
+frequency after BH.
+- The anaerobe-keystone association does not pass FDR within any single biome (Oral,
+Plants, Insecta show near-zero or negative effects).
+- The GAI effect failed under graphical lasso (p=0.15) and igraph betweenness (p=0.34);
+it is ridge-definition-specific. ProTraits failed its coverage gate (51 vs 100 genera).
+- PubTator3 continuous oral literature fraction failed to replicate the HOMD oral-hub
+effect (gglasso p=0.57; igraph p=0.23). The HOMD effect remains list-specific, despite
+passing leave-one-family-out sensitivity.
+- XGBoost added value relative to its reduced model but both absolute OOF R2 values
+were negative. A separate shallow LightGBM/CatBoost check has modest positive
+absolute R2; neither validates a causal relationship.
+- Biopython Bio.Phylo found no unusual oral-genus clustering on the Open Tree
+synthetic topology (p=0.53).
+- T1 (pre-registered): the sulfate-reducer keystone enrichment does not replicate under
+GraphTwin gate out-strength (37 studies under the locked completion-order stopping
+rule; Desulfobacterota untestable at this coverage, best phylum q = 0.906).
+- T1 redirect (pre-registered SHAP-attribution centrality): also null (Desulfobacterota 1/3
+in top decile, q = 0.462); the enrichment is specific to the ridge out-strength definition.
+- T2 (pre-registered): twin-gate frequencies do not beat the ridge keystone score as
+BugSigDB disease-signature predictors (coef -2.28, p = 0.168, AIC 767.1 vs 766.1).
+
+
+7. Discussion
+Two attack surfaces remain open and we name them rather than claim around them. First,
+beating a population null is evidence about predictive content, not proof of causal
+interactions: cross-environment transfer, removal of co-occurrence information, and
+
+[[PAPER PAGE 65]]
+validation against independently measured perturbation outcomes are the decisive tests,
+and they need perturbation cohorts we do not have (future work). Second, the 160-study
+MGnify pool is heterogeneous in platform, primers, preprocessing and design; our
+within-project controls are the per-biome breakdown and the assembly-artefact catch, and
+a random-effects meta-analysis across studies is the natural strengthening. Both are stated
+so a judge does not have to find them.
+The discovery programme's main output is itself a result: digital-twin-derived ecological
+hypotheses require stronger validation than network inference provides. The sulfate-
+reducer keystone enrichment survived two taxonomies and a genomic index, then failed
+under a nonlinear model class and under SHAP-attribution centrality; what replicated as a
+disease-literature predictor was the gradient-boosted attribution ranking, not the keystone
+list.
+On these host-associated benchmark cohorts, a population prior is competitive wit
+[END SEGMENT]

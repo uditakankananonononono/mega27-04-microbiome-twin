@@ -1,0 +1,48 @@
+[ARCHIVED PAPER SUBMISSION 19; original chunk 7/30; segment 1/3]
+[[PAPER PAGE 19]]
+controlling the number of Europe PMC articles gives p=0.0017. Crossref works count
+gives Disbiome p=0.0080 and BugSigDB p=0.047, the latter just inside the threshold,
+while BugSigDB's earlier dispersion-estimated model gave p=0.062. These are
+associations between two published-data proxies; oral HACEK genera and fuzzy name
+queries remain confounds.
+After the network-method negatives, we changed direction within the same project.
+HOMD v4.2 classifies 46 of 203 GAI genera as oral. The ridge genus-level GAI slope
+remains 0.024 (p=3.7e-6) after adjustment for oral status; HOMD oral coefficient is 0.042
+(p=0.0084). On new method-general tests using study-fixed-effect logits with abundance,
+prevalence and GAI, oral origin has positive coefficients under graphical lasso (0.211;
+p=0.0265) and igraph (0.322; p=0.00105). GAI is null in those methods. A Bayesian
+random-study-intercept re-fit gives P(oral coefficient>0)=1.0 for both with two chains of
+500 draws; this is a model check, not an independent cohort. Leaving out each of five
+multi-genus HOMD families keeps the oral association significant in ten fits (gglasso
+p=0.0197-0.0433; igraph p=0.0003-0.0028).
+A separate, pre-registered PubTator3 oral/dental literature fraction did not replicate the
+binary HOMD effect: despite 203 measured genera, graphical-lasso p=0.57 and igraph
+p=0.23. The index correlates with HOMD membership (rho=0.54) but is a different,
+literature-biased construct. Bio.Phylo gives no oral clustering on the Open Tree topology
+(p=0.53). Thus the defensible claim is a HOMD-list-specific candidate for network hubs
+under two definitions, not an oral-genus law or causality. The ridge oral coefficient in the
+per-study model is nonsignificant (p=0.17) and its fit did not converge; we do not claim a
+three-method result.
+
+5.6.3 Predictive and software checks
+On the ridge-only genus-level keystone fraction, XGBoost with 20 repeats of five-fold
+cross-validation gains mean out-of-fold R2 of 0.27 from GAI (20/20 positive deltas) but
+has negative absolute R2 (-0.11 with GAI, -0.38 without). That model is not usable for
+prediction. Separately pre-registered shallower boosters on 200 genera produce mean
+full-data out-of-fold R2 0.133 for LightGBM (reduced -0.071) and 0.119 for CatBoost
+(reduced -0.045), both with 20/20 positive deltas. The modest improvement is within the
+same dataset and outcome. SHAP TreeExplainer ranks GAI first in the fitted LightGBM
+model (mean absolute contribution 0.0265 versus ENA 0.00772 and abundance 0.00576),
+an in-sample explanation rather than proof of causality. SymPy verifies the cNODE and
+gLV vector fields are tangent to the simplex and zero on absent-taxon boundaries for a
+generic three-taxon system when abundances sum to one. That algebra does not prove
+numerical stability or predictive accuracy.
+Table 15. Key post-audit tests. Primary methods, thresholds, preregistrations and
+full negative results are in results/finding_keystone.md and the JSON files.
+
+[[PAPER PAGE 20]]
+ analysis                   scope                       pre-registered verdict    key caveat
+ gglasso / igraph GAI       160 MGnify studies          FAIL / FAIL               ridge-specific effect
+ HOMD oral on gglasso /
+                            46 of 203 GAI genera oral  
+[END SEGMENT]

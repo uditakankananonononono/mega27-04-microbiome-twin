@@ -1,0 +1,55 @@
+[ARCHIVED PAPER SUBMISSION 35; original chunk 12/30; segment 3/3]
+                                             53
+          root:Host-                                        1.67090268
+MGYS000
+          associated:   72    150   0.312   0.194   0.118   14241643e-
+05309
+          Birds                                             12
+          root:Host-
+MGYS000                                                     0.10220764
+          associated:   43    150   0.256   0.223   0.033
+04995                                                       011114625
+          Birds
+          root:Host-                                        2.04612542
+MGYS000
+          associated:   400   150   0.516   0.422   0.094   36329354e-
+03706
+          Birds                                             34
+          root:Host-                                        4.10870391
+MGYS000
+          associated:   122   150   0.674   0.444   0.231   4852822e-
+03681
+          Birds                                             12
+          root:Host-                                        1.81198120
+MGYS000
+          associated:   21    150   0.262   0.181   0.081   1171875e-
+06764
+          Fish                                              05
+          root:Host-                                        2.37966596
+MGYS000
+          associated:   39    150   0.420   0.364   0.055   61456943e-
+06763
+          Fish                                              05
+          root:Host-                                        1.85140109
+MGYS000
+          associated:   137   150   0.428   0.290   0.138   8428866e-
+06762
+          Fish                                              14
+          root:Host-                                        8.88040017
+MGYS000
+          associated:   123   150   0.295   0.231   0.064   5577094e-
+06761
+          Fish                                              10
+          root:Host-                                        2.60129849
+MGYS000
+          associated:   135   143   0.522   0.312   0.209   8785815e-
+06758
+          Fish                                              10
+          root:Host-                                        6.99532350
+MGYS000
+          associated:   400   30    0.278   0.164   0.113   7416229e-
+06041
+          Fish                                              32
+
+
+[END SEGMENT]

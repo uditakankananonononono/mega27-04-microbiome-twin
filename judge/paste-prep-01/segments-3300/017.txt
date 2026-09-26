@@ -1,0 +1,52 @@
+[ARCHIVED PAPER SUBMISSION 17; original chunk 6/30; segment 2/3]
+lustered standard errors, adding
+abundance and prevalence:
+         logit P(top_js = 1) = a_s + b_1 anaerobe_j + b_2 log10(mean RA_js) + b_3
+                                  prevalence_js        (20)
+
+On 10,599 genus-study rows from 156 studies, b_1 = 0.40 (p = 1.4e-04), almost the same
+as without abundance terms (0.41). Anaerobe share is nearly uncorrelated with
+abundance (r = 0.09). So the association is not a biome mix or abundance artifact.
+Genomic replication (KEGG). To avoid relying on one phenotype database, we scored
+marker genes across 11,951 KEGG genomes (203 of 248 genera mapped):
+pyruvate:ferredoxin oxidoreductase (PFOR; K00169 or K03737), [FeFe]-hydrogenase,
+complete dissimilatory sulfate reduction (dsrA, dsrB and aprA), aa3 cytochrome c
+oxidase (coxA, K02274), catalase and cytochrome bd. The genomic anaerobe index is
+ GAI_j = (1/|g_j|) sum_{x in g_j} 1[PFOR in x] - (1/|g_j|) sum_{x in g_j} 1[coxA in x]
+                                                (21)
+
+It agrees with the Madin anaerobe share (Spearman 0.84) and tracks keystone frequency
+(rho = 0.36, p = 9e-08). In the within-study fixed-effect logit with abundance and
+prevalence (13,294 rows, 159 studies), GAI has coefficient 0.32 (p = 7e-08). Most of this
+is the absence of aerobic respiration (coxA -0.52, p = 6e-06; PFOR alone p = 0.08), plus
+complete sulfate reduction (+0.70, p = 3e-05).
+Third source (BV-BRC). Oxygen-requirement annotations of 11,323 BV-BRC genomes
+cover 102 keystone genera (>= 3 annotated genomes). Their anaerobe share agrees with
+Madin (rho = 0.83) and KEGG GAI (rho = 0.81), tracks keystone frequency (rho = 0.34,
+p = 6e-04), and keeps its effect in the fixed-effect logit (coefficient 0.44, p = 6e-04; 6,804
+rows, 151 studies). The three trait sources overlap partly in their curated inputs, so they
+are not fully independent.
+Table 14. Within-study anaerobe difference by biome
+(results/keystone_traits_biome.json).
+
+                                      mean difference
+ biome              studies                              p (sign-flip)      q (BH)
+                                      (top - rest)
+ Digestive system   41                +0.065             0.038              0.10
+ Oral               19                +0.014             0.720              0.72
+ Skin               17                +0.110             0.034              0.10
+ Mammals            20                +0.056             0.174              0.28
+ Plants             18                +0.041             0.605              0.69
+ Birds              19                +0.178             0.020              0.10
+ Fish               14                +0.081             0.134              0.27
+ Insecta            7                 -0.026             0.602              0.69
+It is positive in 7 of 8 biomes but no single biome passes FDR (smallest q = 0.10). We
+name it the anaerobe-keystone hypothesis: genera made of strict anaerobes rank as
+
+[[PAPER PAGE 18]]
+network hubs more often, independent of biome, abundance and prevalence. It is falsified
+if (a) it fails in an independent cohort with a single biome and adequate power, or (b)
+perturbation experiments show inferred out-strength does not predict community
+response. Keystone status here comes from our own inferred networks; the gglasso and
+i
+[END SEGMENT]

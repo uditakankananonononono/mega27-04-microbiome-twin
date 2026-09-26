@@ -1,0 +1,54 @@
+[ARCHIVED PAPER SUBMISSION 5; original chunk 2/30; segment 2/3]
+
+minimiser over predictors that do not see the held-out trajectory is the conditional mean
+E[y | detected, t, i], which is exactly what mu_i(t) estimates from the training subjects. A
+dynamical model trained on all timepoints, or simulating extinctions, may predict low
+abundance where the truth happens to be detected, and pays heavily for it; its errors
+where the truth is undetected are never scored. This is a structural bias of the metric in
+favour of detection-conditional averaging, which we state as:
+argmin_{f} E[ (Y - f(i,t))^2 | Y > L ] = E[ Y | Y > L, i, t ] (for predictors f independent of
+                         the held-out trajectory)                 (11)
+
+
+3. Data
+All data are public, unmodified, and fetched by accession. Table 1 is the dataset manifest.
+We count 169 distinct primary accession-level datasets: the nine below plus 160 MGnify
+studies (Appendix A). The datasets ledger also records secondary trait and literature
+reference tables; these are not independent cohorts.
+Table 1. Dataset manifest (distinct, accession-level). n = samples or subjects.
+
+ #                  dataset           source / accession   n                use
+                                      github.com/
+ 1                  Ocean             yixueyang/cNODE      269              cNODE benchmark
+                                      (Michel-Mata 2022)
+ 2                  Drosophila gut    same                 24               cNODE benchmark
+ 3                  Soil in vitro     same                 48               cNODE benchmark
+ 4                  Soil in vivo      same                 678              cNODE benchmark
+                                                                            cNODE benchmark
+ 5                  Human oral        same                 143              (de-dup: 143 vs 150
+                                                                            reported)
+ 6                  Human gut         same                 106              cNODE benchmark
+
+[[PAPER PAGE 6]]
+                                                  github.com/
+                          MDSINE2 healthy
+                                                  gerberlab/
+                          cohort (counts,
+ 7                                                MDSINE2_Paper           4 mice                   forecasting
+                          qPCR,
+                                                  datasets/gibson/healt
+                          perturbations)
+                                                  hy
+                                                  github.com/
+                          MDSINE2 UC              gerberlab/
+ 8                                                                        5 mice                   forecasting
+                          cohort                  MDSINE2_Paper
+                                                  datasets/gibson/uc
+                                                  Nature
+                          MDSINE2 Source
+                                                  Microbiology 2025,
+                          Data Fig. 3 (per-pair
+ 9                                                41564_2025_2112_        556 / 601 pairs          head-to-head
+                          errors of all
+                           
+[END SEGMENT]

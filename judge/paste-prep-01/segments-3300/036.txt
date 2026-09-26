@@ -1,0 +1,61 @@
+[ARCHIVED PAPER SUBMISSION 36; original chunk 13/30; segment 1/2]
+[[PAPER PAGE 32]]
+             root:Host-                                                               1.00430172
+ MGYS000
+             associated:    90          72    0.028          0.030       -0.002       78491953e-
+ 06117
+             Fish                                                                     06
+             root:Host-
+ MGYS000
+             associated:    135         3     0.000          0.000       0.000        1.0
+ 06086
+             Fish
+             root:Host-                                                               1.99726467
+ MGYS000
+             associated:    400         150   0.594          0.467       0.127        03767122e-
+ 05503
+             Fish                                                                     30
+             root:Host-                                                               8.97357056
+ MGYS000
+             associated:    70          150   0.417          0.352       0.065        8522901e-
+ 03166
+             Fish                                                                     07
+             root:Host-
+ MGYS000                                                                              0.05752792
+             associated:    33          150   0.422          0.372       0.050
+ 04672                                                                                255952954
+             Fish
+             root:Host-                                                               2.10786693
+ MGYS000
+             associated:    66          134   0.191          0.069       0.122        2199474e-
+ 02905
+             Fish                                                                     09
+             root:Host-                                                               4.03795190
+ MGYS000
+             associated:    101         150   0.589          0.429       0.161        0494873e-
+ 02608
+             Fish                                                                     09
+             root:Host-                                                               1.50850834
+ MGYS000
+             associated:    173         150   0.588          0.356       0.232        1940648e-
+ 02413
+             Fish                                                                     16
+             root:Host-                                                               6.02308553
+ MGYS000
+             associated:    214         150   0.499          0.363       0.136        7966328e-
+ 02065
+             Fish                                                                     20
+             root:Host-                                                               8.34465026
+ MGYS000
+             associated:I   24          150   0.567          0.174       0.393        8554688e-
+ 06798
+             nsecta                                                                   06
+             root:Host-                                                               0.00020980
+ MGYS000
+             associated:I   20          150   0.345          0.215       0.130        834960937
+ 06019
+             nsecta                                                                   5
+             root:Host-
+ MGYS000                                                                              0.05950736
+             ass
+[END SEGMENT]

@@ -1,0 +1,49 @@
+[ARCHIVED PAPER SUBMISSION 13; original chunk 5/30; segment 1/3]
+[[PAPER PAGE 14]]
+ t
+ Hu
+ man                       0.20    0.24       0.21     0.20    0.20   0.20   0.22   0.20   0.37   0.20   0.20   0.21
+           143   73
+ _Or                       4       5          6        2       2      2      2      6      9      0      5      1
+ al
+ Soil
+                           0.20    0.15       0.11     0.14    0.17   0.14   0.11   0.12   0.22   0.17   0.09   0.07
+ _Vit      48    8
+                           5       7          7        0       7      3      4      7      6      5      7      9
+ ro
+ Soil
+                           0.12    0.12       0.10     0.11    0.10   0.10   0.11   0.11   0.33   0.11   0.11   0.10
+ _Viv      678   36
+                           4       3          6        9       6      6      0      0      3      2      1      7
+ o
+The blend is itself the finding a black-box stacker could not give: four numbers per
+dataset, readable directly. Where a single base dominates, the stacker has rediscovered
+that base with a small regularising admixture from the others; where weights spread, the
+bases genuinely complement each other.
+Table 10. ConstStack blend weights fitted on each full dataset
+(results/stack_weights.json; inner-OOF selection, 400-step simplex fit, seed 0). '0
+(dropped)' means inner-OOF selection excluded that base.
+
+ dataset                   presence null               cNODE (ours)          gLV (ours)           GraphTwin
+ Ocean                     0.005                       0 (dropped)           0.945                0.050
+ Drosophila_Gut            0.085                       0.003                 0.814                0.098
+ Human_Gut                 0.007                       0 (dropped)           0.782                0.211
+ Human_Oral                0.195                       0 (dropped)           0.005                0.800
+ Soil_Vitro                0.410                       0.293                 0.005                0.291
+ Soil_Vivo                 0.002                       0 (dropped)           0.996                0.002
+Table 11. Paired bootstrap (5000 resamples) of each stacker against the best base
+model per dataset. Negative differences favour the stacker. WIN/LOSS require the
+whole interval on one side of zero.
+
+                                                     stacker      base         diff of
+ dataset         stacker          best base                                                 95% CI       verdict
+                                                     median       median       medians
+                                                                                            [-0.0000,
+ Ocean           TwinStack        gLV (ours)         0.070        0.070        +0.0000                   tie
+                                                                                            +0.0001]
+                                                                                            [-0.0006,
+ Ocean           ConstStack       gLV (ours)         0.070        0.070        +0.0000                   tie
+                                                                                            +0.0003]
+ Drosophila                                                                                 [-0.0060,
+                 TwinStack        gLV (ours)     
+[END SEGMENT]

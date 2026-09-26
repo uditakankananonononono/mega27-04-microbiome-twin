@@ -1,0 +1,53 @@
+[ARCHIVED PAPER SUBMISSION 50; original chunk 18/30; segment 1/3]
+[[PAPER PAGE 41]]
+ a
+ Sediminibacteri
+                    27                    0                0.000             1.0          1.0
+ um
+ Reyranella         31                    0                0.000             1.0          1.0
+ Pseudolabrys       20                    0                0.000             1.0          1.0
+ Undibacterium      23                    0                0.000             1.0          1.0
+
+
+
+Appendix D. External tools ledger
+Table 22. 48 external tools, libraries, APIs and databases used inside this project
+(results/tools_ledger.csv).
+
+ tool                    kind                  where_used            counts_for_gate   note
+                                               src/microtwin;
+ NumPy                   library               run_bench.py;         True
+                                               scripts/
+                                               src/microtwin/
+ SciPy                   library               audit.py; scripts/    True
+                                               (stats; FDR inputs)
+                                               scripts/;
+ pandas                  library               paper/build_paper.p   True
+                                               y
+                                               src/microtwin/
+                                               models.py;
+ PyTorch                 library               run_bench.py          True
+                                               (cNODE and graph-
+                                               twin models)
+                                               scripts/
+                                               summarise_audit.py
+ Matplotlib              library                                     True
+                                               (fig_mgnify_audit.p
+                                               ng)
+                                                                                       infrastructure
+                                                                                       (excluded per
+ python-docx             library               paper/paperkit.py     False
+                                                                                       program convention
+                                                                                       25 Sep 01:18)
+                                                                                       infrastructure
+                                               tests/
+                                                                                       (excluded per
+ pytest                  test framework        test_microtwin.py;    False
+                                                                                       program convention
+                                               tests/test_audit.py
+                                                                                       25 Sep 01:18)
+                                                                                       infrastructure
+ LibreOffice (soffice                          paper docx -> pdf                       (excluded per
+                         application                                 False
+ headless)                                     render          
+[END SEGMENT]

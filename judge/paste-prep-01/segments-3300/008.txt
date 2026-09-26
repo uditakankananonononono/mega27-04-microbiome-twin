@@ -1,0 +1,80 @@
+[ARCHIVED PAPER SUBMISSION 8; original chunk 3/30; segment 2/3]
+           0              0.075                  0.374
+
+
+
+
+Figure 1. Relative gain of the interaction model per study. Red: interactions better (FDR
+< 0.05); dark: prior better; grey: no difference.
+
+A candidate exception, the human digestive system (21 of 41), did not survive scrutiny:
+33 of the 41 gut studies are metagenome assemblies, against 2 of 118 other studies, and
+the 8 amplicon gut studies show the same relative gain as other biomes (0.210 vs 0.184).
+Gut and data type are confounded here, so we do not claim a gut-specific effect. This
+larger audit also means the cNODE null result (Section 5.4) should be read narrowly: on
+these two cNODE tables a mean-composition null matched published cNODE, but across
+160 amplicon and assembly studies interaction structure usually does carry predictive
+information.
+
+5.2 MDSINE2 benchmark: UC beat, healthy tie
+Table 4. UC cohort, official MDSINE2 metric, hold-one-mouse-out.
+
+                                                                      mean diff        Wilcoxon p
+ method          median   mean         pairs        ours better
+                                                                      (ours-other)     (2-sided)
+ PresenceCon
+ ditionalPopu    0.692    0.842        601          -                 -                -
+ lation (ours)
+ RA-
+ MDSINE2
+                 0.784    0.883        601          384               -0.041           5.6e-06
+ (No
+ Modules)
+
+[[PAPER PAGE 9]]
+ MDSINE2
+ (No             0.805    0.889     601     376           -0.047         8.0e-07
+ Modules)
+ MDSINE2_s
+                 0.965    1.253     601     431           -0.411         1.0e-29
+ eed10
+ RA-
+                 1.009    1.140     601     427           -0.298         2.8e-29
+ MDSINE2
+ MDSINE2         1.093    1.417     601     471           -0.575         4.3e-44
+ gLV (elastic
+                 1.582    1.819     601     512           -0.977         4.5e-72
+ net)
+ gLV (ridge)     1.970    2.589     601     553           -1.747         4.9e-85
+ gLV-RA
+                 4.536    4.696     601     599           -3.854         4.2e-100
+ (ridge)
+ LRA             4.536    4.696     601     599           -3.854         8.7e-100
+ gLV-RA
+                 4.536    4.696     601     599           -3.854         4.2e-100
+ (elastic net)
+ cLV             4.536    4.696     601     599           -3.854         4.2e-100
+Table 5. Healthy cohort, same protocol.
+                                                          mean diff      Wilcoxon p
+ method          median   mean      pairs   ours better
+                                                          (ours-other)   (2-sided)
+ RA-
+ MDSINE2
+                 0.883    0.990     556     285           0.095          4.5e-02
+ (No
+ Modules)
+ MDSINE2
+ (No             0.913    1.024     556     299           0.061          5.3e-01
+ Modules)
+ PresenceCon
+ ditionalPopu    0.919    1.085     556     -             -              -
+ lation (ours)
+ RA-
+                 0.957    1.183     556     311           -0.098         3.6e-02
+ MDSINE2
+ MDSINE2         1.061    1.195     556     335           -0.110         1.1e-04
+ gLV (elastic
+                 1.446    1.592     556     425           -0.507         1.2e-35
+ net)
+ gLV (ridge)     1.924    2.098     556     472           -1.013        
+[END SEGMENT]

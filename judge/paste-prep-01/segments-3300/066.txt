@@ -1,0 +1,82 @@
+[ARCHIVED PAPER SUBMISSION 66; original chunk 24/30; segment 1/3]
+[[PAPER PAGE 51]]
+                                                               failed)
+Disbiome experiment
+                            Disbiome               reference   keystone literature check
+dump (10866 records)
+Europe PMC
+TITLE_ABS hit counts
+                                                               study-bias control of
+for 248 genera              Europe PMC             reference
+                                                               keystone literature link
+(results/keystone_europe
+pmc_counts.csv)
+Wikidata genus Gram-
+staining table (3117
+genera;                     Wikidata               reference   Gram-stain replication
+results/keystone_wikidat
+a_gram.csv)
+ENA public assembly
+counts for 200 genera
+                            ENA                    reference   sequencing-effort control
+(results/keystone_ena_co
+unts.csv)
+GBIF occurrence and
+country counts for 202
+genera                      GBIF                   reference   generalism rival
+(results/keystone_gbif_co
+unts.csv)
+UniProt reference-
+proteome EC 7.1.1.9 /
+EC 1.2.7.1 / recA counts                                       annotation-pipeline
+                            UniProt                reference
+for 200 genera                                                 replication of GAI
+(results/keystone_unipro
+t_counts.csv)
+Crossref works counts
+for 248 genera                                                 independent literature-
+                            Crossref               reference
+(results/keystone_crossre                                      volume covariate
+f_counts.csv)
+Ensembl Genomes
+genome hit counts for
+                            EBI Search / Ensembl               sequencing-effort
+203 genera                                         reference
+                            Bacteria                           covariate (curated archive)
+(results/keystone_ensem
+bl_counts.csv)
+InterPro
+PFOR/COX1/RecA
+protein counts for 200                                         signature-based replication
+                            InterPro               reference
+genera                                                         of GAI
+(results/keystone_interpr
+o_counts.csv)
+HOMD taxon table v4.2
+(data/ref/HOMD_taxon_
+                            HOMD                   reference   oral-origin covariate
+table_v4.2.csv; 121 oral
+genera)
+RNAcentral rRNA
+sequence counts for 203
+                                                               marker-gene sequencing-
+genera                      RNAcentral             reference
+                                                               effort covariate
+(results/keystone_rnacen
+tral_counts.csv)
+PubTator3 genus and
+genus+oral/dental article
+counts for 203 genera       NCBI PubTator3         reference   literature oral index
+(results/keystone_pubtat
+or_counts.csv)
+
+[[PAPER PAGE 52]]
+Appendix F. MDSINE2 per-(subject, taxon) RMSE
+Table 24. Per-(subject, taxon) RMSE of log10 absolute abundance on detected
+timepoints, all fitted methods (546 pairs; pivoted from
+results/mdsine2_pertaxon_errors_141.csv).
+
+                                                                         mean_traj_LO
+ subject      taxon         glv_ridge10   glv_ridge100   glv_ridge1000
+                                                                         Dfloo
+[END SEGMENT]

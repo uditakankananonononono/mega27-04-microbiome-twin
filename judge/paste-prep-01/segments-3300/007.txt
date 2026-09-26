@@ -1,0 +1,55 @@
+[ARCHIVED PAPER SUBMISSION 7; original chunk 3/30; segment 1/3]
+[[PAPER PAGE 7]]
+                                                                       held-out mouse contributes its first
+                                    mice
+                                                                       sample as initial state
+ interaction parameters             fitted gLV + interaction modules   none
+
+4.3 Software and hermetic tests
+The microtwin CLI is a research instrument for reproducing this audit on new abundance
+tables; it is not a production package and we do not claim production engineering.
+The code is in src/microtwin (data.py, models.py, evaluate.py, dynamics.py,
+popforecast.py). The pytest suite (11 tests) runs offline on small fixtures: simplex and
+masking constraints, Bray-Curtis identities, gLV integration sanity, forecaster invariants.
+
+
+5. Results
+5.1 Scale-up: interaction audit across 160 MGnify studies
+To test whether the human-data null generalises, we fetched study-level SSU genus tables
+for 160 MGnify studies (8 biomes, at least 20 samples each; accessions in Appendix A)
+and asked, per study, whether an interaction model beats a calibrated presence prior at
+predicting composition from the assemblage. The prior is the two-way log-linear fit
+   log p_si = mu_i + c_s (present entries only), p-hat_i(z) = z_i e^(mu_i) / sum_j z_j
+                              e^(mu_j)              (12)
+
+in which the sample offset c_s absorbs the closure constant, so mu is not biased by which
+other taxa are present. The interaction model - an association model fitted on
+observational abundances, not a validated causal interaction network - adds a steady-state
+generalised Lotka-Volterra shift fitted by ridge regression:
+  p-hat_i(z) ∝ z_i exp( mu_i + b_i + sum_j W_ij z_j ), (b_i, W_i) = argmin sum_{s:
+ z_si=1} (log p_si - mu_i - c_s - b_i - W_i z_s)^2 + lambda ||W_i||^2          (13)
+
+with lambda chosen by inner 3-fold CV. We used 5-fold outer CV, median Bray-Curtis
+error, a paired Wilcoxon test per study, and Benjamini-Hochberg FDR across studies:
+                          q_(k) = min_{j >= k} ( m p_(j) / j )                 (14)
+
+Interactions were better at FDR < 0.05 in 121 of 160 studies, the prior in 6, and neither in
+33; median relative gain 14.5%.
+Table 3. Interaction audit by biome (results/mgnify_audit_summary.json).
+
+                                    interactions                       median gain         median prior
+ biome            studies                              prior better
+                                    better                             (BC)                BC
+ Birds            20                18                 0               0.107               0.375
+ Digestive
+                  41                21                 3               0.004               0.176
+ system
+ Fish             15                12                 1               0.113               0.420
+ Insecta          7                 5                  0               0.052               0.345
+
+[[PAPER PAGE 8]]
+ Mammals           20             14           2              0.056                  0.386
+ Oral              20             17           0              0.040                  0.326
+ Plants            20             18           0              0.081                  0.330
+ Skin              17             16
+[END SEGMENT]

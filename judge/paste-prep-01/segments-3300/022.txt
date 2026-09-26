@@ -1,0 +1,46 @@
+[ARCHIVED PAPER SUBMISSION 22; original chunk 8/30; segment 1/3]
+[[PAPER PAGE 21]]
+                                                                        403e-11            9325e-10
+                                                                        4.164943296236     1.943640204910
+ Lactobacillus       34                19              0.559
+                                                                        0486e-11           156e-10
+                                                                        7.224555155610     3.112116067032
+ Blautia             28                17              0.607
+                                                                        398e-11            171e-10
+                                                                        1.980191282012     7.392714119512
+ Atopobium           26                16              0.615
+                                                                        2747e-10           492e-10
+                                                                        1.980191282012     7.392714119512
+ Haemophilus         26                16              0.615
+                                                                        2747e-10           492e-10
+Table 17. Phylum enrichment among the 25 lowest-p genera by twin-gate score
+(one-sided Fisher, BH).
+
+ phylum                   in top 25           genera              p                     q (BH)
+                                                                  0.377453351926159     0.905724408776573
+ Actinomycetota           4                   7
+                                                                  8                     5
+                                                                  0.446428571428571     0.905724408776573
+ Campylobacterota         1                   1
+                                                                  45                    5
+                                                                  0.446428571428571     0.905724408776573
+ Spirochaetota            1                   1
+                                                                  45                    5
+                                                                  0.517556805015184     0.905724408776573
+ Pseudomonadota           4                   8
+                                                                  9                     5
+ Fusobacteriota           1                   2                   0.698051948051948     0.909292705075169
+                                                                  0.798163055615896
+ Bacillota                11                  27                                        0.909292705075169
+                                                                  7
+ Bacteroidota             2                   7                   0.909292705075169     0.909292705075169
+T2 (twin gates vs ridge as disease-literature predictor). T2: 56 genera. Twin-gate coef -
+2.28 (p=0.168), AIC 767.1 vs ridge 766.1. TWIN DOES NOT WIN - redirect to
+CatBoost+SHAP per pre-reg
+Table 18. Negative-binomial models of BugSigDB signature counts
+(results/twindiscovery_t2.json).
+
+ model           score coef    p            AIC        ML alpha     ML coef     ML p           ML AIC
+ ridge
+ keystone        -0.351        0.241        766.1      0.62         -0.351     
+[END SEGMENT]

@@ -1,0 +1,57 @@
+[ARCHIVED PAPER SUBMISSION 64; original chunk 23/30; segment 2/3]
+0-study interaction audit
+MGYS00006117   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00006086   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005503   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00003166   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00004672   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00002905   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00002608   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00002413   EBI MGnify   primary
+                                      + keystones
+
+[[PAPER PAGE 50]]
+                                                                 160-study interaction audit
+MGYS00002065              EBI MGnify                 primary
+                                                                 + keystones
+                                                                 160-study interaction audit
+MGYS00006798              EBI MGnify                 primary
+                                                                 + keystones
+                                                                 160-study interaction audit
+MGYS00006019              EBI MGnify                 primary
+                                                                 + keystones
+                                                                 160-study interaction audit
+MGYS00005862              EBI MGnify                 primary
+                                                                 + keystones
+                                                                 160-study interaction audit
+MGYS00005215              EBI MGnify                 primary
+                                                                 + keystones
+                                                                 160-study interaction audit
+MGYS00005163              EBI MGnify                 primary
+                                                                 + keystones
+                                                                 160-study interaction audit
+MGYS00003800              EBI MGnify                 primary
+                                                                 + keystones
+                                                                 160-study interaction audit
+MGYS00003705              EBI MGnify                 primary
+                                                                 + keystones
+                          github.com/yixueyang/
+cNODE:Ocean               cNODE (6 tables, one       primary     cNODE benchmark
+                          repository)
+                          github.com/yixueyang/
+cNODE:Drosophila_Gut      cNODE (6 tables,
+[END SEGMENT]

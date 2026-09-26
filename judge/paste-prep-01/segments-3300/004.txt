@@ -1,0 +1,60 @@
+[ARCHIVED PAPER SUBMISSION 4; original chunk 2/30; segment 1/3]
+[[PAPER PAGE 4]]
+2. Problem statements and notation
+2.1 Assemblage-to-composition (cNODE task)
+Let N be the species pool. A sample is a binary assemblage z in {0,1}^N and an observed
+steady-state composition p on the simplex with supp(p) contained in supp(z). A twin is a
+map phi: z -> p-hat. Error is Bray-Curtis dissimilarity:
+             BC(p, q) = sum_i |p_i - q_i| / sum_i (p_i + q_i)              (1)
+
+cNODE (Michel-Mata et al., 2022) defines phi(z) = x(1), with x solving the replicator-
+type ODE
+          dx/dt = x ⊙ ( f(x) - 1 x^T f(x) ), f(x) = W x, x(0) = z / |z|          (2)
+
+so that sum_i x_i is conserved and absent taxa stay at zero. Our presence-only null is
+  p-hat_i(z) = z_i m_i / sum_j z_j m_j, m_i = (1/|T|) sum_{s in T} p_{s,i}             (3)
+
+where T is the training set. It has no interaction parameters; its only parameters are the N
+training means. Our gLV replicator baseline integrates
+          dx/dt = x ⊙ ( r + A x - phi(x) 1 ), phi(x) = x^T (r + A x)             (4)
+
+to a fixed horizon, and GraphTwin applies attention message passing over present taxa:
+    m_i = sum_{j in S, j != i} alpha_ij g_ij V h_j, alpha_ij = softmax_j( q_i^T k_j /
+               sqrt(d) ), g_ij = sigma( e_i^T U e_j )                (5)
+
+followed by a residual update h_i <- LayerNorm(h_i + MLP([h_i, m_i])) and a masked
+softmax over S = supp(z) added to the log-prior log m_i.
+
+2.2 Held-out-subject forecasting (MDSINE2 task)
+For subject s, taxon i and time t, let x_{s,i}(t) be absolute abundance (relative abundance
+times total 16S qPCR load). A forecaster sees the training subjects' full trajectories, the
+perturbation schedule and the held-out subject's initial state, and predicts x-hat_{s,i}(t)
+for all t. The MDSINE2 paper's evaluation (paper_figures/fig3_cross_validation.ipynb)
+computes, per (subject, taxon),
+ RMSE_{s,i} = sqrt( (1/|D_{s,i}|) sum_{t in D_{s,i}} ( log10(x_{s,i}(t) + eps) - log10(x-
+       hat_{s,i}(t) + eps) )^2 ), D_{s,i} = { t : x_{s,i}(t) > 1e-5 }        (6)
+
+with eps = 1e3 in the notebook's units, and reports the distribution of RMSE_{s,i} over
+all pairs. Note the set D_{s,i}: only timepoints with detected truth are scored. Our
+presence-conditional population forecaster is
+mu_i(t) = mean_{o in O : x_{o,i}(t) > 0} log10 x_{o,i}(t), log10 x-hat_{s,i}(t) = mu_i(t)
+                   + w(t) [ log10 x_{s,i}(t0) - mu_i(t0) ]       (7)
+
+[[PAPER PAGE 5]]
+     w(t) = exp( -(t - t0) / tau ), tau chosen by inner leave-one-subject-out over O
+                                                   (8)
+
+with O the training subjects, trajectories linearly interpolated onto the held-out subject's
+sampling days, and a fallback to the unconditional mean when no training subject detects
+the taxon at t. Paired comparisons use the two-sided Wilcoxon signed-rank test over (s, i)
+pairs:
+       W = sum_k sgn(d_k) R_k, d_k = RMSE^ours_k - RMSE^other_k                       (9)
+
+and bootstrap intervals for the null's median use 5000 resamples of the leave-one-out
+error vector:
+CI_95 = [ Q_0.025, Q_0.975 ] of { median( e*_b ) }_{b=1..5000}, e*_b ~ resample(e)
+                                              (10)
+
+2.3 Why the detection-conditional metric favours population priors
+Write the loss restricted to detected timepoints as E[(y - y-hat)^2 | detected]. The
+[END SEGMENT]

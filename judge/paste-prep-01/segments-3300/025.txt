@@ -1,0 +1,89 @@
+[ARCHIVED PAPER SUBMISSION 25; original chunk 9/30; segment 1/3]
+[[PAPER PAGE 23]]
+          associated:
+          Human:Dig
+06805                                                       22676302
+          estive
+          system
+          root:Host-
+          associated:
+MGYS000                                                     0.00595618
+          Human:Dig     74    60   0.178   0.180   -0.002
+06806                                                       19902366
+          estive
+          system
+          root:Host-
+          associated:                                       1.18008808
+MGYS000
+          Human:Dig     218   69   0.169   0.164   0.005    41672732e-
+06760
+          estive                                            09
+          system
+          root:Host-
+          associated:
+MGYS000                                                     0.00272830
+          Human:Dig     303   44   0.154   0.148   0.006
+02338                                                       0451495
+          estive
+          system
+          root:Host-
+          associated:
+MGYS000                                                     0.02542058
+          Human:Dig     175   72   0.163   0.160   0.002
+06797                                                       01722315
+          estive
+          system
+          root:Host-
+          associated:
+MGYS000                                                     0.00011130
+          Human:Dig     400   63   0.167   0.162   0.005
+06551                                                       60975781
+          estive
+          system
+          root:Host-
+          associated:
+MGYS000                                                     0.01695206
+          Human:Dig     108   63   0.178   0.179   -0.001
+06789                                                       37921749
+          estive
+          system
+          root:Host-
+          associated:
+MGYS000                                                     0.54188612
+          Human:Dig     108   56   0.180   0.177   0.004
+06787                                                       06076111
+          estive
+          system
+          root:Host-
+          associated:
+MGYS000                                                     0.01443647
+          Human:Dig     134   52   0.173   0.169   0.004
+06786                                                       16231558
+          estive
+          system
+          root:Host-
+          associated:                                       3.96471562
+MGYS000
+          Human:Dig     400   72   0.183   0.176   0.006    3438228e-
+06759
+          estive                                            19
+          system
+          root:Host-
+          associated:
+MGYS000                                                     0.94339205
+          Human:Dig     24    27   0.129   0.130   -0.001
+06780                                                       6822656
+          estive
+          system
+          root:Host-
+          associated:
+MGYS000                                                     0.64207850
+          Human:Dig     57    63   0.185   0.185   -0.000
+06779                                                       27937037
+          estive
+          system
+MGYS000   root:Host-    116   54   0.186   0.187   -0.001   0.81699509
+06769     associated:                                       73439684
+
+[[PAPER PAGE 24
+[END SEGMENT]

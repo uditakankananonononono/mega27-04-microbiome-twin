@@ -1,0 +1,46 @@
+[ARCHIVED PAPER SUBMISSION 46; original chunk 16/30; segment 3/3]
+                                 0.851624619342
+Holdemanella      46    3   0.065                    1.0
+                                    5087
+                                    0.855785279547
+Helicobacter      33    2   0.061                    1.0
+                                    7143
+                                    0.864012259986
+Dialister         85    6   0.071                    1.0
+                                    1861
+                                    0.870161480012
+Bacillus          110   8   0.073                    1.0
+                                    168
+                                    0.877623508644
+Dietzia           35    2   0.057                    1.0
+                                    7748
+                                    0.878423345409
+Aquicella         20    1   0.050                    1.0
+                                    4308
+Photobacteriu                       0.878423345409
+                  20    1   0.050                    1.0
+m                                   4308
+                                    0.879957334677
+Kocuria           49    3   0.061                    1.0
+                                    2351
+Catenibacteriu                      0.879957334677
+                  49    3   0.061                    1.0
+m                                   2351
+Ruminiclostridi                     0.879957334677
+                  49    3   0.061                    1.0
+um                                  2351
+                                    0.887358002275
+Eisenbergiella    36    2   0.056                    1.0
+                                    304
+Solirubrobacte                      0.887358002275
+                  36    2   0.056                    1.0
+r                                   304
+                                    0.890581010868
+Flavisolibacter   21    1   0.048                    1.0
+                                    4877
+Chryseobacteri                      0.900447174813
+                  65    4   0.062                    1.0
+um                                  5983
+
+
+[END SEGMENT]

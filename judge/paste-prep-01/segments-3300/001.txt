@@ -1,0 +1,51 @@
+[ARCHIVED PAPER SUBMISSION 1; original chunk 1/30; segment 1/3]
+[[PAPER PAGE 1]]
+   Population Priors Rival Interaction
+ Models in Microbiome Digital Twins: a
+ Leave-One-Out Audit of cNODE and a
+     Head-to-Head with MDSINE2
+ MEGA-PROGRAM-27, Item 4 - Udita Phookan (program owner); computational work
+         by an AI research agent. Revised draft of 25 September 2026.
+
+
+Abstract
+We test whether microbiome digital twins learn species interactions or mainly exploit
+ecological priors. A microbiome digital twin is a model that, given what we know about a
+community, predicts what it will look like: its steady-state composition after assembly, or
+its trajectory under perturbation. Two published approaches are compositional neural
+ODEs (cNODE; Michel-Mata et al., 2022) for assemblage-to-composition prediction, and
+MDSINE2 (Gibson et al., Nature Microbiology 2025) for forecasting absolute
+abundances in gnotobiotic mice through diet and antibiotic perturbations. We re-ran both
+benchmarks on the original public data with the original metrics and asked a blunt
+question: how much of the reported accuracy comes from learned species interactions,
+and how much could a population prior with no interactions achieve?
+Findings. (1) On the six cNODE ecosystems under leave-one-out, a presence-only null
+with no learned interaction parameters (mean training composition restricted to present
+taxa) is clearly beaten by cNODE on ocean, soil and Drosophila data, but on both human-
+associated datasets the published cNODE median Bray-Curtis error (oral 0.211, gut
+0.242) falls inside the 95% bootstrap interval of the null (0.204 [0.188, 0.222] and 0.259
+[0.236, 0.271]). (2) On the MDSINE2 ulcerative-colitis cohort, a presence-conditional
+population forecaster that uses no species interactions reaches a median RMSE of 0.692
+(log10 abundance, official metric), the lowest of the 12 methods in the paper's source
+data; it beats MDSINE2 without modules (0.805; Wilcoxon p = 8.0e-07) and full
+MDSINE2 (1.093; p = 4.3e-44) on the same 601 subject-taxon pairs. (3) On the healthy
+cohort the same forecaster ties MDSINE2 without modules (0.919 vs 0.913, p = 0.53),
+beats full MDSINE2 (1.061, p = 1.1e-4), and is beaten by RA-MDSINE2 without
+modules (0.883, p = 0.045). In absolute terms the UC gain is a 37% reduction in median
+RMSE against full MDSINE2 (1.093 to 0.692); the healthy-cohort differences are small
+in effect size whichever direction they go.
+
+[[PAPER PAGE 2]]
+(4) Under a stricter metric that scores every timepoint, the same forecaster ranks first on
+both MDSINE2 cohorts (UC 1.654 vs MDSINE2 without modules 1.824; healthy 1.752
+vs 2.072; p < 1e-39), which falsified our own prediction that the advantage came from the
+detection-only metric. (5) At scale the picture changes: across 160 MGnify studies in 8
+biomes, an interaction model beats a calibrated presence prior in 121 studies (FDR <
+0.05), so the human-data null of finding (1) does not generalise. We ship the microtwin
+command-line tool (audit and forecast) so anyone can run this audit on their own
+abundance table.
+(6) Exploratory keystone analysis names one candidate, the anaerobe-keystone
+hypothesis: across 156 studies, genera made of strict anaerobes are more often network
+hubs within the same study (study fixed-effect logit, p = 1.4e-4), independent of
+abundance and prevalence, a
+[END SEGMENT]

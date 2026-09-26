@@ -1,0 +1,51 @@
+[ARCHIVED PAPER SUBMISSION 62; original chunk 22/30; segment 3/3]
+           + keystones
+                                      160-study interaction audit
+MGYS00006021   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00006018   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00001349   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005260   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005227   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00000983   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00001347   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005740   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005726   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005169   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005151   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00006750   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00006533   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00006532   EBI MGnify   primary
+                                      + keystones
+                                      160-study interaction audit
+MGYS00005766   EBI MGnify   primary
+                                      + keystones
+MGYS00006062   EBI MGnify   primary   160-study interaction audit
+
+
+[END SEGMENT]

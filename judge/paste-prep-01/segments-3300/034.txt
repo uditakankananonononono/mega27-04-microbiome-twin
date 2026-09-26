@@ -1,0 +1,80 @@
+[ARCHIVED PAPER SUBMISSION 34; original chunk 12/30; segment 2/3]
+          12
+          root:Host-                                        2.12030491
+MGYS000
+          associated:   94    150   0.404   0.322   0.081   63202955e-
+06533
+          Birds                                             09
+          root:Host-                                        5.72326825
+MGYS000
+          associated:   40    150   0.478   0.252   0.226   9316683e-
+06532
+          Birds                                             08
+          root:Host-                                        7.80655073
+MGYS000
+          associated:   138   150   0.474   0.245   0.229   5727007e-
+05766
+          Birds                                             23
+          root:Host-                                        2.16529527
+MGYS000
+          associated:   220   92    0.186   0.166   0.020   39860382e-
+06062
+          Birds                                             13
+          root:Host-                                        1.10282523
+MGYS000
+          associated:   355   96    0.284   0.124   0.160   58036625e-
+06042
+          Birds                                             43
+
+[[PAPER PAGE 31]]
+          root:Host-                                        1.01811542
+MGYS000
+          associated:   60    150   0.265   0.173   0.092   08756968e-
+05621
+          Birds                                             06
+          root:Host-
+MGYS000                                                     3.79430763
+          associated:   117   115   0.334   0.178   0.156
+05611                                                       036704e-14
+          Birds
+          root:Host-                                        1.14433573
+MGYS000
+          associated:   251   87    0.376   0.317   0.059   06387731e-
+05610
+          Birds                                             14
+          root:Host-                                        1.37853599
+MGYS000
+          associated:   314   68    0.470   0.395   0.075   22199967e-
+05609
+          Birds                                             23
+          root:Host-                                        2.85879651
+MGYS000
+          associated:   286   150   0.270   0.175   0.095   04295026e-
+05600
+          Birds                                             40
+          root:Host-                                        1.90229915
+MGYS000
+          associated:   150   129   0.589   0.361   0.228   82307127e-
+05593
+          Birds                                             20
+          root:Host-                                        3.57395038
+MGYS000
+          associated:   34    150   0.374   0.220   0.153   0086899e-
+05576
+          Birds                                             08
+          root:Host-
+MGYS000                                                     0.20038180
+          associated:   400   4     0.147   0.131   0.016
+05187                                                       242578474
+          Birds
+          root:Host-                                        1.50609541
+MGYS000
+          associated:   400   145   0.542   0.257   0.285   9477192e-
+05316
+          Birds                                             57
+          root:Host-                                        1.35229788
+MGYS000
+          associated:   400   150   0.491   0.349   0.141   10793892e-
+05317
+          Birds
+[END SEGMENT]

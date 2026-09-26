@@ -1,0 +1,79 @@
+[ARCHIVED PAPER SUBMISSION 81; original chunk 29/30; segment 1/3]
+[[PAPER PAGE 66]]
+pandas                              library                   counts
+PyTorch                             library                   counts
+Matplotlib                          library                   counts
+python-docx                         library                   infra (excluded)
+pytest                              test framework            infra (excluded)
+LibreOffice (soffice headless)      application               infra (excluded)
+poppler pdfinfo                     application               infra (excluded)
+Git + GitHub                        service                   infra (excluded)
+EBI MGnify REST API v1              web API                   counts
+cNODE published benchmark
+                                    public data release       counts
+data (Michel-Mata et al. 2022)
+MDSINE2 published data and
+                                    public data release       counts
+Source Data (Gibson et al. 2025)
+scikit-bio                          library                   counts
+scikit-learn                        library                   counts
+networkx                            library                   counts
+statsmodels                         library                   counts
+NCBI Taxonomy (E-utilities
+                                    database/web API          counts
+esearch/efetch)
+BugSigDB (genus signature
+                                    database                  counts
+export)
+GTDB (release v232 bac120
+                                    database                  counts
+taxonomy)
+Madin et al. 2020
+bacterial/archaeal trait database   database                  counts
+(condensed_species_NCBI)
+KEGG REST (genome list + KO-
+                                    database                  counts
+gene links)
+BV-BRC genome API
+                                    database                  counts
+(oxygen_requirement facets)
+IJSEM phenotypic database
+(Barberan et al. 2017, figshare     database                  counts
+4272392)
+NCBI Datasets v2 API (genome
+                                    database/service          counts
+dataset_report)
+Open Tree of Life API v3 (TNRS
+match_names + induced synthetic     web API                   counts
+subtree)
+ProTraits (Brbic et al. 2016;
+protraits.irb.hr integrated         database                  counts
+Pr>=0.95)
+Disbiome (disbiome.ugent.be
+                                    database/web API          counts
+experiment API)
+Europe PMC REST API (search
+                                    web API                   counts
+hitCount)
+gglasso (Schaipp et al. 2021
+                                    library                   counts
+graphical lasso)
+Wikidata SPARQL endpoint
+                                    web API/knowledge graph   counts
+(P2597 Gram staining)
+ENA portal API + ENA taxonomy
+                                    web API                   counts
+REST (assembly counts)
+GBIF API v1 (species/match +
+                                    web API                   counts
+occurrence country facets)
+UniProt REST API (uniprotkb
+search counts, reference            web API                   counts
+proteomes)
+Crossref REST API (works total-
+                                    web API                   counts
+results)
+python-igraph (betweenness          library                   counts
+
+[
+[END SEGMENT]

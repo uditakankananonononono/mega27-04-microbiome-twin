@@ -1,0 +1,46 @@
+[ARCHIVED PAPER SUBMISSION 56; original chunk 20/30; segment 2/2]
+                            y
+                                                                              R2 0.133
+                                                                              pre-registered
+                                          scripts/
+                                                                              fd7a9e2; B1 PASS
+ CatBoost              library            keystone_boosters.p    True
+                                                                              absolute out-of-fold
+                                          y
+                                                                              R2 0.119
+                                                                              pre-registered
+                                                                              c12838f; SH1 PASS
+ SHAP                                     scripts/
+                       library                                   True         GAI largest mean
+ TreeExplainer                            keystone_shap.py
+                                                                              absolute attribution
+                                                                              in full LightGBM
+                                                                              pre-registered
+ SymPy symbolic                           scripts/                            c12838f; SY1 PASS
+                       library                                   True
+ algebra                                  keystone_sympy.py                   RHS invariants for
+                                                                              cNODE and gLV
+
+
+
+Appendix E. Datasets ledger
+Table 23. 190 accession-level datasets used inside this project
+(results/datasets_ledger.csv).
+
+ accession                   source                  role               used_in
+                                                                        160-study interaction audit
+ MGYS00006862                EBI MGnify              primary
+                                                                        + keystones
+                                                                        160-study interaction audit
+ MGYS00005791                EBI MGnify              primary
+                                                                        + keystones
+                                                                        160-study interaction audit
+ MGYS00006825                EBI MGnify              primary
+                                                                        + keystones
+                                                                        160-study interaction audit
+ MGYS00006824                EBI MGnify              primary
+                                                                        + keystones
+ MGYS00006822                EBI MGnify              primary            160-study interaction audit
+
+
+[END SEGMENT]

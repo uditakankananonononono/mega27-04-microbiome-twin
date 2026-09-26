@@ -1,0 +1,46 @@
+[ARCHIVED PAPER SUBMISSION 2; original chunk 1/30; segment 2/3]
+nd sulfate reducers are enriched under both NCBI and
+GTDB taxonomies (q = 0.02); a KEGG genomic anaerobe index replicates it (p = 7e-8).
+No single biome passes FDR and keystones come from inferred networks, but the
+association fails with graphical lasso and igraph betweenness keystone definitions. It is a
+ridge-specific candidate, not a cross-method ecological discovery. A distinct HOMD
+oral-list effect survives those two methods but fails a PubTator literature-index
+replication.
+(7) A pre-registered twin-driven replication programme (GraphTwin gate out-strength
+trained per MGnify study; locked 09:30 completion-order stopping rule, 37 studies)
+found that the sulfate-reducer keystone enrichment does NOT replicate under the
+nonlinear gate scorer (Desulfobacterota untestable at this coverage; best phylum q =
+0.906), and the locked SHAP-attribution-centrality redirect does not recover it either (q =
+0.462). As a disease-literature predictor the twin gates do not beat the ridge score (AIC
+767.1 vs 766.1), but the locked CatBoost+SHAP redirect does, decisively (coefficient
++37.1, p = 2.6e-35, AIC 2343.9 vs 2443.1). What survives replication is therefore not a
+keystone list but a predictor: gradient-boosted interaction attributions forecast BugSigDB
+disease-signature counts far better than linear interaction scores.
+Caveats. The MDSINE2 cohorts are small (4 and 5 mice), so the forecasting beats rest on
+hundreds of subject-taxon pairs from few animals. Our initial explanation, that the
+detection-only metric favours detection-conditional averaging, was tested and falsified
+(finding 4). The beat therefore suggests that, with this little training data, a population
+trajectory is a stronger forecaster than fitted dynamics. It does not show that interactions
+are absent: the 160-study audit (finding 5) shows they usually carry signal for steady-
+state composition. Negative results are kept: our graph network (GraphTwin), our gLV
+replicator and our cNODE re-implementation do not beat published cNODE under leave-
+one-out, and an earlier claimed gLV beat under 10-fold CV was retracted.
+
+[[PAPER PAGE 3]]
+1. Introduction
+Digital twins of the microbiome promise in-silico trials: remove a species, add an
+antibiotic, change a diet, and read out the community before touching an animal or a
+patient. The community therefore invests heavily in interaction-aware models:
+generalised Lotka-Volterra (gLV) systems, Bayesian gLV with interaction modules
+(MDSINE, MDSINE2), and neural ODEs (cNODE). Their value rests on a premise that
+is rarely tested directly: that the interaction terms carry predictive information beyond
+what a population average already provides.
+Strong baselines matter because microbiome data are dominated by taxon identity. A
+taxon that is abundant in one host is usually abundant in another. A predictor that simply
+remembers typical abundances, conditioned on which taxa are present, may already
+explain most of the variance. If so, the headline accuracy of an interaction model says
+little about whether its interactions are right, and downstream uses such as keystone-
+species ranking or perturbation design rest on weaker ground than the accuracy suggests.
+We test that premise on the two public benchmarks that serve as reference benchmarks
+for two twin tas
+[END SEGMENT]

@@ -1,0 +1,77 @@
+[ARCHIVED PAPER SUBMISSION 31; original chunk 11/30; segment 2/3]
+                        122730255
+          Mammals
+          root:Host-                                         1.15568752
+MGYS000
+          associated:   93    150   0.650   0.533   0.116    70009098e-
+02673
+          Mammals                                            13
+          root:Host-                                         4.17039903
+MGYS000
+          associated:   101   150   0.568   0.386   0.182    4793852e-
+06747
+          Mammals                                            18
+          root:Host-
+MGYS000                                                      0.08406547
+          associated:   30    98    0.194   0.173   0.021
+01223                                                        829508781
+          Mammals
+          root:Host-                                         1.66871306
+MGYS000
+          associated:   66    89    0.389   0.242   0.147    03014278e-
+01224
+          Mammals                                            09
+
+[[PAPER PAGE 29]]
+          root:Host-                                         3.26757065
+MGYS000
+          associated:   400   71    0.343   0.254   0.088    24688328e-
+05267
+          Mammals                                            52
+          root:Host-
+MGYS000                                                      0.40119774
+          associated:   44    66    0.272   0.245   0.027
+00426                                                        86671867
+          Mammals
+          root:Host-                                         2.07036600
+MGYS000
+          associated:   400   63    0.257   0.206   0.052    9312925e-
+05228
+          Mammals                                            33
+          root:Host-                                         0.00037059
+MGYS000
+          associated:   85    150   0.495   0.407   0.088    731217404
+06537
+          Mammals                                            824
+          root:Host-                                         8.46763942
+MGYS000
+          associated:   65    150   0.384   0.384   -0.000   4268034e-
+06536
+          Mammals                                            05
+          root:Host-
+MGYS000                                                      0.08415465
+          associated:   40    150   0.515   0.512   0.003
+06538                                                        162215696
+          Mammals
+          root:Host-                                         7.07353919
+MGYS000
+          associated:   400   150   0.338   0.276   0.062    3762629e-
+05628
+          Mammals                                            38
+          root:Host-                                         1.82568172
+MGYS000
+          associated:   144   81    0.444   0.310   0.134    38051636e-
+06450
+          Mammals                                            13
+          root:Host-
+MGYS000                                                      0.97573611
+          associated:   24    76    0.331   0.313   0.017
+06456                                                        9417176
+          Mammals
+          root:Host-                                         4.77927826
+MGYS000
+          associated:   400   62    0.317   0.247   0.070    1362484e-
+06446
+          Mammals                                            25
+          root:Host-                                     
+[END SEGMENT]

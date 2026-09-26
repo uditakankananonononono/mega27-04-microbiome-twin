@@ -1,0 +1,54 @@
+[ARCHIVED PAPER SUBMISSION 32; original chunk 11/30; segment 3/3]
+    0.01874470
+MGYS000
+          associated:   25    150   0.557   0.537   0.020    710754394
+06433
+          Mammals                                            5
+          root:Host-                                         0.01411853
+MGYS000
+          associated:   32    150   0.397   0.299   0.099    372062440
+06430
+          Mammals                                            6
+          root:Host-
+MGYS000                                                      0.00245958
+          associated:   85    109   0.389   0.341   0.048
+06427                                                        589664498
+          Mammals
+          root:Host-                                         2.51005437
+MGYS000
+          associated:   142   150   0.280   0.252   0.027    78701536e-
+06424
+          Mammals                                            14
+          root:Host-                                         2.87195734
+MGYS000
+          associated:   400   150   0.250   0.175   0.076    82573203e-
+06652
+          Plants                                             56
+          root:Host-                                         0.00449954
+MGYS000
+          associated:   48    98    0.727   0.639   0.088    731304558
+01412
+          Plants                                             2
+          root:Host-                                         5.31521348
+MGYS000
+          associated:   400   150   0.276   0.190   0.086    0136056e-
+01368
+          Plants                                             65
+          root:Host-                                         5.68434188
+MGYS000
+          associated:   45    150   0.247   0.101   0.145    6080802e-
+03172
+          Plants                                             14
+          root:Host-
+MGYS000                                                      0.91531434
+          associated:   27    150   0.162   0.170   -0.009
+06578                                                        65518951
+          Plants
+          root:Host-                                         0.00105925
+MGYS000
+          associated:   70    61    0.381   0.351   0.030    524374496
+00957
+          Plants                                             15
+
+
+[END SEGMENT]

@@ -1,0 +1,56 @@
+[ARCHIVED PAPER SUBMISSION 11; original chunk 4/30; segment 2/3]
+that interactions are absent in human microbiomes, only
+that this benchmark cannot detect their predictive value. Our GraphTwin, a larger model,
+does no better (human gut 0.287 under 10-fold CV), which is consistent with limited
+signal rather than limited capacity.
+
+5.5 Stacking campaign: TwinStack and ConstStack
+The base models of Section 5.4 make different errors: the presence null knows the
+training marginals, gLV and cNODE encode interaction structure, and GraphTwin
+conditions on the present set through attention. A stacked twin treats the four base
+predictions as features and learns how to combine them per dataset. Both stackers below
+were pre-registered (PREREG_graphtwin2.md, PREREG_graphtwin2b.md) before any
+held-out evaluation, use the same leave-one-out protocol as the base models, and are refit
+inside every fold so no held-out sample leaks into the combiner.
+
+5.5.1 TwinStack: learned gating
+TwinStack forms, for assemblage z, the vector of base predictions over the present taxa
+and gates them with a small network conditioned on the assemblage:
+ p-hat(z) = sum_m softmax( g_phi([z; u]) )_m * p-hat^(m)(z), u = (H(z), S(z), log n(z))
+                                                (16)
+
+[[PAPER PAGE 13]]
+where p-hat^(m) are the four base predictions restricted to supp(z) and renormalised, and
+u carries assemblage-level summaries (shannon entropy, richness, log pool size). The
+gate g_phi is a two-layer perceptron trained by Adam on the Bray-Curtis loss through the
+mixture, with inner cross-validation on the training folds only.
+
+5.5.2 ConstStack: constant weights with inner-OOF selection
+ConstStack drops the learned gate in favour of a global simplex weight vector fitted on
+inner out-of-fold predictions, and adds inner-OOF base selection: bases whose inner error
+is worse than the best base by more than one standard error are zeroed out before weight
+fitting:
+  p-hat(z) = sum_{m in M*} w_m p-hat^(m)(z), w = argmin_{w in simplex} sum_{s in
+             OOF} BC( sum_m w_m p-hat^(m)(z_s), p_s )             (17)
+
+with M* the selected bases and OOF the inner leave-one-out predictions of the training
+samples. Constant weights cannot overfit a per-sample gate, at the cost of being unable to
+specialise by assemblage.
+
+5.5.3 Decision rule
+Per dataset we compare each stacker against the best base model and against the
+published cNODE number where one exists. Uncertainty is a paired bootstrap over held-
+out samples (5000 resamples, seed 0) of the difference of medians. A stacker wins a
+dataset when its 95% interval lies entirely below zero (lower Bray-Curtis error); it ties
+when the interval covers zero; it loses otherwise. Losses are reported, not hidden. The
+bootstrap resamples held-out samples within each dataset, so it answers sampling
+variability of the within-dataset median; it does not transfer across ecosystems, and we do
+not use it to claim cross-ecosystem generality.
+Table 9. Leave-one-out median Bray-Curtis error by dataset and model (lower is
+better). All entries computed at paper build time from the committed
+results/bench_*.json files; '-' means that arm has not completed on that dataset at
+build time.
+
+                                                                                                  cNO
+                            cNO
+[END SEGMENT]

@@ -1,0 +1,58 @@
+[ARCHIVED PAPER SUBMISSION 51; original chunk 18/30; segment 2/3]
+                        program convention
+                                                                                       25 Sep 01:18)
+                                                                                       infrastructure
+                                               page count of                           (excluded per
+ poppler pdfinfo         application                                 False
+                                               rendered paper                          program convention
+                                                                                       25 Sep 01:18)
+                                                                                       infrastructure
+                                               repo hosting and                        (excluded per
+ Git + GitHub            service                                     False
+                                               pushes                                  program convention
+                                                                                       25 Sep 01:18)
+                                               scripts fetching
+                                               data/raw/mgnify
+ EBI MGnify REST
+                         web API               (manifest.csv);       True
+ API v1
+                                               scripts/keystone_mg
+                                               nify.py
+ cNODE published         public data release   data/raw/cnode/       True
+ benchmark data                                *.csv; run_bench.py
+
+[[PAPER PAGE 42]]
+(Michel-Mata et al.
+2022)
+MDSINE2
+                                             data/raw/mdsine2*;
+published data and
+                       public data release   mdsine2 head-to-        True
+Source Data
+                                             head results
+(Gibson et al. 2025)
+                                             scripts/
+                                             predictors_audit.py
+scikit-bio             library               (Shannon alpha,         True
+                                             Bray-Curtis beta
+                                             diversity)
+                                             scripts/
+                                             predictors_audit.py
+scikit-learn           library               (random forest, CV,     True
+                                             permutation
+                                             importance)
+                                             scripts/
+                                             predictors_audit.py
+networkx               library               (co-occurrence          True
+                                             network density,
+                                             modularity)
+                                             scripts/
+                                             predictors_audit.py
+statsmodels            library                                       True
+                                             (OLS with HC3
+                                             robust SEs)
+                                             scripts/
+NCBI Taxonomy
+                                             keystone_taxonomy.
+(E-utilities           da
+[END SEGMENT]

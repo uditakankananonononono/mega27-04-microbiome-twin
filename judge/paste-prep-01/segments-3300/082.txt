@@ -1,0 +1,65 @@
+[ARCHIVED PAPER SUBMISSION 82; original chunk 29/30; segment 2/3]
+[PAPER PAGE 67]]
+ centrality)
+ EBI Search REST (Ensembl
+                                    web API                            counts
+ Genomes genome domain)
+ XGBoost (gradient-boosted trees)   library                            counts
+ InterPro API (protein counts per
+                                    web API                            counts
+ taxon and entry)
+ HOMD expanded Human Oral
+ Microbiome Database (taxon table   database                           counts
+ v4.2)
+ EBI Search REST (RNAcentral
+                                    web API                            counts
+ rRNA sequences)
+ bambi / PyMC (Bayesian
+                                    library                            counts
+ hierarchical logistic)
+ NCBI PubTator3 API (search
+                                    web API                            counts
+ counts)
+ Biopython Bio.Phylo (synthetic-
+                                    library                            counts
+ tree topology)
+ LightGBM                           library                            counts
+ CatBoost                           library                            counts
+ SHAP TreeExplainer                 library                            counts
+ SymPy symbolic algebra             library                            counts
+
+
+
+9. Reproducibility
+Blind reproduction log (2026-09-26): fresh git clone of the repository into an empty
+directory, then a single command (python3 paper/build_paper.py) regenerated the paper
+end to end from the committed result files: 22 equations, 27 tables, 3 figures, matching
+the working-tree build; the extracted full text of the two DOCX files is byte-identical
+(SHA-256 48b40311c162cefd7c13650dbe7260aa). The DOCX container bytes differ
+only by embedded timestamps.
+Repository:           github.com/uditakankananonononono/mega27-04-microbiome-twin
+(private).         Commands:            python       run_bench.py         <dataset>
+presence_mean,cnode,glv,graphtwin 10; python bench_mdsine2.py healthy|uc; python -m
+pytest -q; python paper/build_paper.py.
+
+
+Appendix A. MGnify study accessions used
+Table 27. All 160 MGnify studies fetched and used (data/raw/mgnify/manifest.csv).
+
+ MGnify study        INSDC project            biome              samples        genera
+ MGYS00006862        ERP175206                Digestive system   84             106
+ MGYS00005791        ERP127967                Digestive system   245            124
+ MGYS00006825        ERP160132                Digestive system   197            142
+ MGYS00006824        ERP147941                Digestive system   40             98
+ MGYS00006822        ERP148470                Digestive system   55             95
+ MGYS00006814        ERP148607                Digestive system   68             143
+ MGYS00006815        ERP147808                Digestive system   67             88
+ MGYS00006811        ERP147961                Digestive system   98             89
+ MGYS00006807        ERP170897                Digestive system   60             111
+ MGYS00006805        ERP148499                Digestive system   86             131
+ MGYS00006806        ERP136860                Digestive system   74             103
+
+[[PAPER PAGE 68]]
+MGYS00006760   ERP148661   Digestive system   218    159
+MGYS00002338   ERP106359   Digestive system  
+[END SEGMENT]

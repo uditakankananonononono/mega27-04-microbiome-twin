@@ -1,0 +1,40 @@
+[ARCHIVED PAPER SUBMISSION 18; original chunk 6/30; segment 3/3]
+graph tests below fail. It is a method-specific candidate property of ridge interaction
+inference, not a proven ecological law.
+
+5.6.2 Stress tests and change of direction
+All checks in this section were pre-registered in commits before analysis and are
+reproducible from the corresponding scripts and JSON outputs. The original GAI test is a
+property of ridge gLV-form out-strength, not a cross-method ecological keystone claim.
+Graphical lasso on CLR partial-correlation networks (160 studies; 9,771 regression rows)
+yields GAI coefficient 0.079, p=0.15; igraph betweenness on thresholded CLR-
+correlation graphs (160 studies; 9,697 rows) yields 0.063, p=0.34. Agreement with ridge
+keystone labels is low (Cohen kappa 0.045 and 0.022 respectively). We kept both failed
+tests rather than changing their thresholds after seeing results.
+    logit P(top_js^method = 1) = alpha_s + beta_G GAI_j + beta_O oral_j + beta_A
+              log10(RA_js+10^-6) + beta_P prevalence_js             (22)
+
+Independent checks of the ridge-only GAI effect address distinct rivals, not the network-
+definition failure. Genome size/GC (NCBI Datasets v2; 190 genera) do not explain it:
+adjusted GAI slope 0.028, HC3 p=1.3e-6, versus genome-size p=0.33. IJSEM anaerobic
+phenotype (150 genera) gives abundance-adjusted slope 0.059, p=6.7e-7, but IJSEM is a
+source within the Madin compilation and is not independent. Phylogenetic GLS on the
+GTDB tree gives GAI slope 0.037 at ML lambda (p=4.3e-7) and 0.032 under Brownian
+covariance (p=0.0064); an Open Tree synthetic topology gives 0.028, Brownian p=0.017.
+Synthetic-tree branch lengths are artificial. ProTraits coverage of 51 genera misses its
+100-genus gate; its non-significant subset is retained as uninformative, not a replication.
+For every test in this paragraph, the ridge endpoint remains the same.
+Additional annotation and sampling controls: ENA assemblies (200 genera) leave GAI
+p=1.8e-9; Ensembl Genomes (203) p=2.2e-7; RNAcentral rRNA sequence counts (203)
+p=8.2e-6. The assembly or rRNA count terms themselves were null. UniProt EC calls
+(198) yield a related index with abundance-adjusted p=0.0013; InterPro signatures (198)
+yield p=0.00024, but their protein sets overlap. A GBIF occurrence/country adjustment
+reduces the GAI slope to 0.019 (p=0.024), indicating shared variance with a noisy
+generalism proxy. Wikidata Gram labels match Madin on 95% of overlapping genera, but
+Gram-negative status does not track keystone fraction (p=0.90). None of these controls
+removes the network-method caveat.
+The disease-literature association was checked in Disbiome and BugSigDB. Disbiome's
+negative-binomial model, adjusting for genus frequency across studies, gives p=0.024;
+
+
+[END SEGMENT]

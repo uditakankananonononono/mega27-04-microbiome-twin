@@ -1,0 +1,47 @@
+[ARCHIVED PAPER SUBMISSION 55; original chunk 20/30; segment 1/2]
+[[PAPER PAGE 44]]
+                                                                              anaerobe-index
+ (protein counts per                      keystone_interpro.p
+                                                                              replication b327560;
+ taxon and entry)                         y
+                                                                              P1 PASS
+ HOMD expanded
+                                                                              pre-registered oral-
+ Human Oral
+                                          scripts/                            taxon rival 0aa4eb0
+ Microbiome            database                                  True
+                                          keystone_homd.py                    (+parser addendum
+ Database (taxon
+                                                                              5658ee6); M1 PASS
+ table v4.2)
+ EBI Search REST                          scripts/                            pre-registered
+ (RNAcentral rRNA      web API            keystone_rnacentral.   True         rRNA-effort control
+ sequences)                               py                                  9814c7a; R1 PASS
+ bambi / PyMC                                                                 pre-registered
+ (Bayesian                                scripts/                            Bayesian re-fit
+                       library                                   True
+ hierarchical                             keystone_bambi.py                   45e3254; BY1
+ logistic)                                                                    PASS
+                                                                              pre-registered oral-
+                                                                              index replication
+ NCBI PubTator3                           scripts/
+                                                                              45e3254
+ API (search           web API            keystone_pubtator.p    True
+                                                                              (+addendum
+ counts)                                  y
+                                                                              3d16589); PT1
+                                                                              FAIL
+ Biopython                                                                    pre-registered
+                                          scripts/
+ Bio.Phylo                                                                    a2e24b7; BP1 FAIL
+                       library            keystone_biophylo.p    True
+ (synthetic-tree                                                              oral clustering
+                                          y
+ topology)                                                                    p=0.53
+                                                                              pre-registered
+                                          scripts/
+                                                                              fd7a9e2; B1 PASS
+ LightGBM              library            keystone_boosters.p    True
+                                                                              absolute out-of-fold
+              
+[END SEGMENT]

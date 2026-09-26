@@ -1,0 +1,46 @@
+[ARCHIVED PAPER SUBMISSION 20; original chunk 7/30; segment 2/3]
+ PASS / PASS               PubTator index failed
+ igraph
+ HOMD family deletions      5 families; 10 fits         PASS                      same curated list
+ LightGBM / CatBoost        200 genera; repeated CV     PASS / PASS               modest, ridge-only R2
+ Bio.Phylo oral topology    160 tips; 38 oral           FAIL                      synthetic topology
+
+5.7 Pre-registered discovery arms
+Two discovery tests were pre-registered (PREREG_twindiscovery.md) with explicit
+redirect clauses: T1 asks whether GraphTwin gate out-strength replicates the keystone-
+consensus signal of Section 5.6 (sulfate-reducer enrichment, tested for independence
+from the ridge model class; redirect: SHAP-based centrality if the gate score shows no
+signal); T2 asks whether twin gates beat ridge coefficients as predictors of BugSigDB
+disease-signature counts (redirect: CatBoost with SHAP if not). Both arms are fit per
+MGnify study under the same caps as the audit. Both redirect rules, scorers, and test
+constructions were locked in PREREG_twindiscovery.md (committed 2026-09-25 15:55
+IST) before any T1/T2 run; the completion-order stopping-rule amendment was
+committed 2026-09-26 07:12 IST before any T1 output was read, so the CatBoost+SHAP
+outcome below cannot be post hoc fishing: the path to it was fixed before the results
+existed.
+T1 (model-class independence of the keystone enrichment). T1: 37 studies, 56 genera.
+Top enrichment: Actinomycetota q=0.906. Desulfobacterota q=None. NULL - redirect to
+SHAP centrality per pre-reg
+Table 16. Top 15 genera by GraphTwin gate out-strength consensus
+(results/twindiscovery_t1_consensus.csv).
+
+ genus            studies            top                fraction top      p                 q (BH)
+                                                                          2.362763227460    1.323147407377
+ Acinetobacter    32                 22                 0.688
+                                                                          5656e-15          9166e-13
+                                                                          3.436707579990    7.966283892670
+ Pseudomonas      34                 20                 0.588
+                                                                          6436e-12          575e-11
+                                                                          4.267652085359    7.966283892670
+ Staphylococcus   31                 19                 0.613
+                                                                          237e-12           575e-11
+                                                                          9.481303720000    8.849216805333
+ Abiotrophia      20                 15                 0.750
+                                                                          011e-12           343e-11
+ Peptostreptoco                                                           9.481303720000    8.849216805333
+                  20                 15                 0.750
+ ccus                                                                     011e-12           343e-11
+                                                                          9.481303720000    8.849216805333
+ Solobacterium    20                 15                 0.750
+                                                    
+[END SEGMENT]

@@ -1,0 +1,45 @@
+[ARCHIVED PAPER SUBMISSION 53; original chunk 19/30; segment 1/2]
+[[PAPER PAGE 43]]
+                                                                        reference-genome
+NCBI Datasets v2                          scripts/
+                                                                        size and GC per
+API (genome           database/service    keystone_genomesiz     True
+                                                                        genus; pre-
+dataset_report)                           e.py
+                                                                        registered 66d7f05
+Open Tree of Life                                                       independent
+API v3 (TNRS                                                            phylogeny for
+                                          scripts/
+match_names +         web API                                    True   anaerobe-keystone
+                                          keystone_otol.py
+induced synthetic                                                       PGLS; pre-
+subtree)                                                                registered ce6fd94
+ProTraits (Brbic et                                                     pre-registered
+al. 2016;                                 scripts/                      oxygen check
+protraits.irb.hr      database            keystone_protraits.p   True   4f748be; coverage
+integrated                                y                             gate FAILED (51
+Pr>=0.95)                                                               genera)
+Disbiome                                  scripts/                      pre-registered
+(disbiome.ugent.be    database/web API    keystone_disbiome.     True   literature check
+experiment API)                           py                            899f554; D1 PASS
+Europe PMC                                scripts/                      pre-registered study-
+REST API (search      web API             keystone_europepm      True   bias control
+hitCount)                                 c.py                          0358299; E1 PASS
+                                                                        alternative network
+gglasso (Schaipp et                                                     inference for
+                                          scripts/
+al. 2021 graphical    library                                    True   keystones; pre-
+                                          keystone_gglasso.py
+lasso)                                                                  registered 3129971;
+                                                                        H1 FAILED
+                                                                        pre-registered
+Wikidata SPARQL                           scripts/
+                      web API/knowledge                                 0ecdd41 (+QID fix
+endpoint (P2597                           keystone_wikidata.p    True
+                      graph                                             1f20b4a); Madin
+Gram staining)                            y
+                                                                        Gram null replicated
+ENA portal API +                                                        pre-registered
+ENA taxonomy                              scripts/                      sequencing-effort
+  
+[END SEGMENT]

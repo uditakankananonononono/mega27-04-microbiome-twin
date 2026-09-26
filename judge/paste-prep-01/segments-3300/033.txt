@@ -1,0 +1,78 @@
+[ARCHIVED PAPER SUBMISSION 33; original chunk 12/30; segment 1/3]
+[[PAPER PAGE 30]]
+          root:Host-                                        2.43260798
+MGYS000
+          associated:   383   150   0.252   0.164   0.088   6872169e-
+01704
+          Plants                                            55
+          root:Host-
+MGYS000                                                     0.34500763
+          associated:   32    150   0.001   0.001   0.000
+00867                                                       198357975
+          Plants
+          root:Host-                                        1.10543002
+MGYS000
+          associated:   89    150   0.477   0.402   0.075   01400448e-
+06031
+          Plants                                            07
+          root:Host-                                        0.00353824
+MGYS000
+          associated:   135   18    0.233   0.216   0.017   774085654
+06021
+          Plants                                            84
+          root:Host-                                        7.97625601
+MGYS000
+          associated:   181   150   0.452   0.287   0.166   5721753e-
+06018
+          Plants                                            13
+          root:Host-                                        9.80011598
+MGYS000
+          associated:   108   150   0.402   0.211   0.190   2359504e-
+01349
+          Plants                                            18
+          root:Host-                                        1.27453133
+MGYS000
+          associated:   400   150   0.396   0.248   0.148   76300463e-
+05260
+          Plants                                            61
+          root:Host-                                        2.47551455
+MGYS000
+          associated:   400   150   0.223   0.201   0.022   03466964e-
+05227
+          Plants                                            21
+          root:Host-                                        7.25062466
+MGYS000
+          associated:   400   150   0.178   0.141   0.036   0443202e-
+00983
+          Plants                                            39
+          root:Host-                                        6.62037148
+MGYS000
+          associated:   400   150   0.471   0.218   0.252   2312783e-
+01347
+          Plants                                            66
+          root:Host-                                        3.21888364
+MGYS000
+          associated:   34    150   0.400   0.339   0.062   85147476e-
+05740
+          Plants                                            07
+          root:Host-                                        5.09948004
+MGYS000
+          associated:   33    150   0.382   0.337   0.046   0371418e-
+05726
+          Plants                                            05
+          root:Host-                                        2.36530085
+MGYS000
+          associated:   400   150   0.311   0.171   0.140   51996965e-
+05169
+          Plants                                            59
+          root:Host-                                        6.53805605
+MGYS000
+          associated:   400   150   0.348   0.111   0.238   1035535e-
+05151
+          Plants                                            60
+          root:Host-                                        1.15568776
+MGYS000
+          associated:   340   89    0.142   0.135   0.007   32363245e-
+06750
+          Birds                                   
+[END SEGMENT]

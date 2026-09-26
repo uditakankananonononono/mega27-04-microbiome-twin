@@ -1,0 +1,42 @@
+[ARCHIVED PAPER SUBMISSION 15; original chunk 5/30; segment 3/3]
+loss (Soil_Vitro) is named in the bootstrap table, and the interpretable ConstStack
+blend weights above are the plus point a black-box stacker could not give: the win lane
+for this campaign is match plus interpretability.
+
+5.6 Keystone consensus across studies (exploratory)
+This section is a secondary chapter: it stress-tests whether the twin machinery can support
+biological discovery claims, and mostly answers no. The audit framework of Sections
+5.1-5.5 is the primary contribution.
+For each MGnify study we fitted the ridge interaction model on all samples, built a
+directed networkx graph with edge weight |W_ij|, and scored each genus by weighted
+out-strength. A genus is 'top' in a study if it is in that study's top 10%. Across studies we
+test the top count against the 10% expectation with a one-sided binomial test and control
+the false discovery rate (Benjamini-Hochberg):
+    s_j = sum_i |W_ij|, p_j = P(Binom(n_j, 0.1) >= k_j), q_(r) = min_{r' >= r} ( m
+                              p_(r') / r' )        (18)
+
+Table 12. Top genera by keystone consensus (248 genera modelled in >= 20 studies;
+results/keystone_consensus.csv).
+
+ genus            studies           top           fraction top       p                     q (BH)
+ Cardiobacteriu
+                  30                13            0.433              2.3e-06               0.00057
+ m
+ Eikenella        28                11            0.393              4.2e-05               0.0052
+ Comamonas        51                13            0.255              1.2e-03               0.099
+ Johnsonella      35                10            0.286              1.7e-03               0.099
+ Simonsiella      20                7             0.350              2.4e-03               0.099
+ Desulfobulbus    20                7             0.350              2.4e-03               0.099
+ Sutterella       56                13            0.232              3.0e-03               0.11
+Two genera pass FDR < 0.05: Cardiobacterium and Eikenella. Both are oral HACEK
+genera, so the signal most likely reflects the oral studies, where interaction models fit
+best. It is not a cross-biome keystone law. Out-strength from a ridge model is a statistical
+dependence score, not a causal keystone effect, and it scales with each genus's variance
+and prevalence. No experimental validation was done.
+Phylogeny. Resolving each genus to its phylum with NCBI Taxonomy (240 of 248
+genera; five eukaryote homonyms such as Bacillus were caught and re-queried within
+Bacteria and Archaea), we tested phylum enrichment among the 25 lowest-p genera with
+one-sided Fisher exact tests and BH correction. Only Thermodesulfobacteriota (sulfate
+
+
+[END SEGMENT]

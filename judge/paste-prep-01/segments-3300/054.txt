@@ -1,0 +1,48 @@
+[ARCHIVED PAPER SUBMISSION 54; original chunk 19/30; segment 2/2]
+                    web API                                    True
+REST (assembly                            keystone_ena.py               control 9451f14; A1
+counts)                                                                 PASS
+GBIF API v1
+                                                                        pre-registered
+(species/match +                          scripts/
+                      web API                                    True   generalism rival
+occurrence country                        keystone_gbif.py
+                                                                        9f6cc62; B1 PASS
+facets)
+UniProt REST API                                                        pre-registered
+(uniprotkb search                         scripts/                      anaerobe-index
+                      web API                                    True
+counts, reference                         keystone_uniprot.py           replication c9ea858;
+proteomes)                                                              U1 PASS
+                                                                        pre-registered
+Crossref REST                             scripts/                      literature control
+API (works total-     web API             keystone_crossref.p    True   6ff904c (replaces
+results)                                  y                             OpenAlex 429); C1
+                                                                        PASS C2 PASS
+                                                                        pre-registered third
+python-igraph
+                                          scripts/                      network definition
+(betweenness          library                                    True
+                                          keystone_igraph.py            0962035; I1 FAIL
+centrality)
+                                                                        (p=0.34)
+                                                                        pre-registered
+EBI Search REST                           scripts/
+                                                                        sequencing-effort
+(Ensembl Genomes      web API             keystone_ensembl.p     True
+                                                                        replication be7175d;
+genome domain)                            y
+                                                                        S1 PASS
+                                                                        pre-registered out-
+                                                                        of-sample GAI test
+XGBoost                                   scripts/
+                                                                        9cf67ae; X1 PASS
+(gradient-boosted     library             keystone_xgboost.p     True
+                                                                        by criterion but
+trees)                                    y
+                                                                        absolute CV R2
+                                                                        negative
+InterPro API          web API             scripts/               True   pre-registered
+
+
+[END SEGMENT]

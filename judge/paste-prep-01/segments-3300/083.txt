@@ -1,0 +1,60 @@
+[ARCHIVED PAPER SUBMISSION 83; original chunk 29/30; segment 3/3]
+ 303    158
+MGYS00006797   ERP147940   Digestive system   175    151
+MGYS00006551   ERP152745   Digestive system   2047   458
+MGYS00006795   SRP162433   Digestive system   31     205
+MGYS00006794   ERP128598   Digestive system   184    439
+MGYS00006789   ERP148573   Digestive system   108    137
+MGYS00006787   ERP160127   Digestive system   108    125
+MGYS00006786   ERP147955   Digestive system   134    110
+MGYS00006759   ERP146353   Digestive system   692    224
+MGYS00006780   ERP160119   Digestive system   24     48
+MGYS00006779   ERP148332   Digestive system   57     109
+MGYS00006769   ERP147945   Digestive system   116    136
+MGYS00006765   ERP160150   Digestive system   28     57
+MGYS00006755   SRP097190   Digestive system   83     353
+MGYS00005333   ERP108859   Digestive system   244    146
+MGYS00005230   ERP005153   Digestive system   913    531
+MGYS00002675   ERP107102   Digestive system   24     33
+MGYS00006069   ERP133351   Digestive system   1568   263
+MGYS00006006   ERP133688   Digestive system   457    377
+MGYS00002061   ERP104235   Digestive system   52     75
+MGYS00000633   SRP001634   Digestive system   1033   475
+MGYS00002238   SRP097646   Digestive system   111    312
+MGYS00006562   ERP150486   Digestive system   554    159
+MGYS00005154   ERP001500   Digestive system   529    779
+MGYS00006649   ERP131993   Digestive system   20     44
+MGYS00006641   ERP127228   Digestive system   88     83
+MGYS00006642   ERP127229   Digestive system   57     27
+MGYS00006364   ERP134534   Digestive system   160    76
+MGYS00006640   ERP150574   Digestive system   61     82
+MGYS00005253   ERP108620   Oral               606    330
+MGYS00006320   SRP039515   Oral               392    297
+MGYS00006276   ERP128187   Oral               91     455
+MGYS00006263   ERP110514   Oral               489    291
+MGYS00006017   SRP330744   Oral               53     210
+MGYS00005592   ERP119456   Oral               160    315
+MGYS00005569   SRP256368   Oral               71     246
+MGYS00005528   DRP004359   Oral               506    169
+MGYS00005506   SRP115814   Oral               701    359
+MGYS00005189   DRP004640   Oral               530    934
+MGYS00005223   SRP126884   Oral               767    565
+MGYS00005197   SRP128931   Oral               1319   1281
+MGYS00005143   SRP126946   Oral               7397   1486
+MGYS00002159   SRP110002   Oral               21     835
+MGYS00003719   SRP125475   Oral               21     218
+MGYS00002395   SRP123221   Oral               68     467
+MGYS00002394   SRP051741   Oral               20     166
+MGYS00002272   SRP073270   Oral               40     141
+MGYS00002269   SRP062274   Oral               147    230
+MGYS00002229   SRP051201   Oral               100    154
+MGYS00006648   ERP156480   Skin               67     634
+MGYS00005232   ERP005182   Skin               777    748
+MGYS00005156   ERP005152   Skin               938    1299
+MGYS00006246   ERP149135   Skin               50     256
+MGYS00005384   SRP049645   Skin               671    903
+MGYS00005172   SRP113602   Skin               1481   1523
+MGYS00005533   ERP016280   Skin               584    1687
+
+
+[END SEGMENT]

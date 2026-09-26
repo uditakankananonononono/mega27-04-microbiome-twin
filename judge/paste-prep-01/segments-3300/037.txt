@@ -1,0 +1,40 @@
+[ARCHIVED PAPER SUBMISSION 37; original chunk 13/30; segment 2/2]
+ociated:I   21          150   0.321          0.346       -0.026
+ 05862                                                                                999511719
+             nsecta
+             root:Host-                                                               6.34580929
+ MGYS000
+             associated:I   400         92    0.296          0.244       0.052        8780021e-
+ 05215
+             nsecta                                                                   27
+             root:Host-                                                               2.78972200
+ MGYS000
+             associated:I   386         150   0.548          0.467       0.081        4048674e-
+ 05163
+             nsecta                                                                   31
+             root:Host-
+ MGYS000                                                                              0.67060239
+             associated:I   154         96    0.184          0.184       0.000
+ 03800                                                                                00543987
+             nsecta
+             root:Host-                                                               2.76869781
+ MGYS000
+             associated:I   384         70    0.408          0.370       0.038        73767286e-
+ 03705
+             nsecta                                                                   09
+
+
+
+Appendix C. Keystone consensus, all genera
+Table 21. All 248 genera modelled in >= 20 studies (results/keystone_consensus.csv).
+
+ genus            studies         top         fraction top       p                q (BH)
+ Cardiobacteriu                                                  2.302322724161   0.000570976035
+                  30              13          0.433
+ m                                                               098e-06          5919523
+                                                                 4.232321631540   0.005248078823
+ Eikenella        28              11          0.393
+                                                                 403e-05          1101
+
+
+[END SEGMENT]
