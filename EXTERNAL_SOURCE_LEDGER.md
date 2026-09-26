@@ -39,3 +39,6 @@ Original PRJNA664754 trial https://pmc.ncbi.nlm.nih.gov/articles/PMC9066705/ is 
 
 ## Probiotic-adjunct antibiotic trial, 2026-09-26 18:26 IST
 Original Frontiers 2024 paper https://www.frontiersin.org/journals/microbiomes/articles/10.3389/frmbi.2024.1359580/full and paper-linked ENA PRJEB71357 https://www.ebi.ac.uk/ena/browser/view/PRJEB71357 . Outcome-blind run-title screen: 145 runs/50 F-number prefixes, 45 with three title suffixes, but MP is not the publication-defined PA abbreviation; exact endpoint URL, TSV checksum and caveats at `data/source_family_candidates/PROBIOTIC_ADJUNCT/README.md` and `results/prjeb71357_design.json`. Arm labels and qualifying source rights unavailable. This is a source lead, not a final validation cohort or result.
+
+## University of Chicago medication dynamics lead, 2026-09-26 19:16 IST
+Author repository https://github.com/blekhmanlab/medication-microbiome and original Zenodo record https://zenodo.org/records/19410955 (Apache-2.0 deposit-level, 4.62GB archive, published MD5 in `data/source_family_candidates/MEDICATION_UCHICAGO/README.md`). Archive not downloaded, antibiotic-specific paired units/rights and independence unverified, no outcome examined.
