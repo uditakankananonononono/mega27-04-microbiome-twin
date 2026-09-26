@@ -3038,3 +3038,258 @@ MGYS00006430,Mammals,Steroidobacter,0.498690,False
 MGYS00006430,Mammals,Syntrophobacter,0.495668,False
 MGYS00006430,Mammals,Sphaerochaeta,0.504957,False
 MGYS00006430,Mammals,Sporocytophaga,0.495567,False
+MGYS00006424,Mammals,Lactobacillus,0.500000,True
+MGYS00006424,Mammals,Dubosiella,0.500000,True
+MGYS00006424,Mammals,Streptococcus,0.500000,True
+MGYS00006424,Mammals,Candidatus_Actinomarina,0.500000,True
+MGYS00006424,Mammals,Helicobacter,0.500000,True
+MGYS00006424,Mammals,Akkermansia,0.500000,True
+MGYS00006424,Mammals,Alistipes,0.500000,True
+MGYS00006424,Mammals,Dorea,0.500000,True
+MGYS00006424,Mammals,Faecalibaculum,0.500000,True
+MGYS00006424,Mammals,Faecalibacterium,0.500000,True
+MGYS00006424,Mammals,Bacteroides,0.500000,True
+MGYS00006424,Mammals,Turicibacter,0.500000,True
+MGYS00006424,Mammals,Varibaculum,0.500000,True
+MGYS00006424,Mammals,Parabacteroides,0.500000,True
+MGYS00006424,Mammals,Odoribacter,0.500000,True
+MGYS00006424,Mammals,Phascolarctobacterium,0.500000,True
+MGYS00006424,Mammals,Prevotella,0.500000,True
+MGYS00006424,Mammals,Oleiphilus,0.500000,True
+MGYS00006424,Mammals,Peptoniphilus,0.500000,True
+MGYS00006424,Mammals,Enterococcus,0.500000,True
+MGYS00006424,Mammals,Gallicola,0.500000,True
+MGYS00006424,Mammals,Enterorhabdus,0.500000,True
+MGYS00006424,Mammals,Bifidobacterium,0.500000,True
+MGYS00006424,Mammals,Pseudomonas,0.500000,True
+MGYS00006424,Mammals,Mobiluncus,0.500000,True
+MGYS00006424,Mammals,Desulfovibrio,0.500000,True
+MGYS00006424,Mammals,Subdoligranulum,0.500000,True
+MGYS00006424,Mammals,Oscillibacter,0.500000,True
+MGYS00006424,Mammals,Roseburia,0.500000,True
+MGYS00006424,Mammals,Staphylococcus,0.500000,True
+MGYS00006424,Mammals,Acinetobacter,0.500000,True
+MGYS00006424,Mammals,Veillonella,0.500000,True
+MGYS00006424,Mammals,Corynebacterium,0.500000,True
+MGYS00006424,Mammals,Rikenella,0.500000,True
+MGYS00006424,Mammals,Prochlorococcus,0.500000,True
+MGYS00006424,Mammals,Blautia,0.500000,True
+MGYS00006424,Mammals,Finegoldia,0.500000,True
+MGYS00006424,Mammals,Lachnoclostridium,0.500000,True
+MGYS00006424,Mammals,Facklamia,0.500000,True
+MGYS00006424,Mammals,Vibrio,0.500000,True
+MGYS00006424,Mammals,Anaerococcus,0.500000,True
+MGYS00006424,Mammals,Anaeroplasma,0.500000,True
+MGYS00006424,Mammals,Actinomyces,0.500000,True
+MGYS00006424,Mammals,Ruminiclostridium,0.500000,True
+MGYS00006424,Mammals,Porphyromonas,0.500000,True
+MGYS00006424,Mammals,Ezakiella,0.500000,True
+MGYS00006424,Mammals,Fusicatenibacter,0.500000,True
+MGYS00006424,Mammals,Marvinbryantia,0.500000,True
+MGYS00006424,Mammals,Paucibacter,0.500000,True
+MGYS00006424,Mammals,Anaerostipes,0.500000,True
+MGYS00006424,Mammals,Treponema,0.500000,True
+MGYS00006424,Mammals,Romboutsia,0.500000,True
+MGYS00006424,Mammals,Campylobacter,0.500000,True
+MGYS00006424,Mammals,Fibrobacter,0.500000,True
+MGYS00006424,Mammals,Dialister,0.500000,True
+MGYS00006424,Mammals,Lactococcus,0.500000,True
+MGYS00006424,Mammals,Mucispirillum,0.500000,True
+MGYS00006424,Mammals,Agathobacter,0.500000,True
+MGYS00006424,Mammals,Kocuria,0.500000,True
+MGYS00006424,Mammals,Lawsonella,0.500000,True
+MGYS00006424,Mammals,Rothia,0.500000,True
+MGYS00006424,Mammals,Haemophilus,0.500000,True
+MGYS00006424,Mammals,Alloprevotella,0.500000,True
+MGYS00006424,Mammals,Acetobacter,0.500000,True
+MGYS00006424,Mammals,Parasutterella,0.500000,True
+MGYS00006424,Mammals,Collinsella,0.500000,True
+MGYS00006424,Mammals,Cutibacterium,0.500000,True
+MGYS00006424,Mammals,Shimia,0.500000,True
+MGYS00006424,Mammals,Peptococcus,0.500000,True
+MGYS00006424,Mammals,Holdemanella,0.500000,True
+MGYS00006424,Mammals,Atopobium,0.500000,True
+MGYS00006424,Mammals,Oribacterium,0.500000,True
+MGYS00006424,Mammals,Erysipelatoclostridium,0.500000,True
+MGYS00006424,Mammals,Butyricicoccus,0.500000,True
+MGYS00006424,Mammals,Muribaculum,0.500000,True
+MGYS00006424,Mammals,Clostridium,0.500000,True
+MGYS00006424,Mammals,Ruminococcus,0.500000,True
+MGYS00006424,Mammals,Caulobacter,0.500000,True
+MGYS00006424,Mammals,Elusimicrobium,0.500000,True
+MGYS00006424,Mammals,Methanobrevibacter,0.500000,True
+MGYS00006424,Mammals,Sarcina,0.500000,True
+MGYS00006424,Mammals,Bradyrhizobium,0.500000,True
+MGYS00006424,Mammals,Mogibacterium,0.500000,True
+MGYS00006424,Mammals,Catenibacterium,0.500000,True
+MGYS00006424,Mammals,Enterobacter,0.500000,True
+MGYS00006424,Mammals,Succinivibrio,0.500000,True
+MGYS00006424,Mammals,Clostridioides,0.500000,True
+MGYS00006424,Mammals,Bilophila,0.500000,True
+MGYS00006424,Mammals,Methylobacterium,0.500000,True
+MGYS00006424,Mammals,Pseudohongiella,0.500000,True
+MGYS00006424,Mammals,Candidatus_Saccharimonas,0.500000,True
+MGYS00006424,Mammals,Intestinimonas,0.500000,True
+MGYS00006424,Mammals,Pirellula,0.500000,True
+MGYS00006424,Mammals,Sphingomonas,0.500000,True
+MGYS00006424,Mammals,Fastidiosipila,0.500000,True
+MGYS00006424,Mammals,Sutterella,0.500000,True
+MGYS00006424,Mammals,Thalassolituus,0.500000,True
+MGYS00006424,Mammals,Hyphomonas,0.500000,True
+MGYS00006424,Mammals,Candidatus_Puniceispirillum,0.500000,True
+MGYS00006424,Mammals,Solobacterium,0.500000,True
+MGYS00006424,Mammals,Pseudoalteromonas,0.500000,True
+MGYS00006424,Mammals,Negativibacillus,0.500000,True
+MGYS00006424,Mammals,Chryseobacterium,0.500000,True
+MGYS00006424,Mammals,Thalassobius,0.500000,True
+MGYS00006424,Mammals,Marinoscillum,0.500000,True
+MGYS00006424,Mammals,Tyzzerella,0.500000,True
+MGYS00006424,Mammals,Megasphaera,0.500000,True
+MGYS00006424,Mammals,Bacillus,0.500000,True
+MGYS00006424,Mammals,Solirubrobacter,0.500000,True
+MGYS00006424,Mammals,Litoricola,0.500000,True
+MGYS00006424,Mammals,Anaerovibrio,0.500000,True
+MGYS00006424,Mammals,Coxiella,0.500000,True
+MGYS00006424,Mammals,Candidatus_Soleaferrea,0.500000,True
+MGYS00006424,Mammals,Anaerotruncus,0.500000,True
+MGYS00006424,Mammals,Gemella,0.500000,True
+MGYS00006424,Mammals,Acetatifactor,0.500000,True
+MGYS00006424,Mammals,Fusobacterium,0.500000,True
+MGYS00006424,Mammals,Granulicatella,0.500000,True
+MGYS00006424,Mammals,Nocardioides,0.500000,True
+MGYS00006424,Mammals,Mycobacterium,0.500000,True
+MGYS00006424,Mammals,Gaiella,0.500000,True
+MGYS00006424,Mammals,Actinobaculum,0.500000,True
+MGYS00006424,Mammals,Brevibacterium,0.500000,True
+MGYS00006424,Mammals,Fournierella,0.500000,True
+MGYS00006424,Mammals,Alteromonas,0.500000,True
+MGYS00006424,Mammals,Weissella,0.500000,True
+MGYS00006424,Mammals,Flavobacterium,0.500000,True
+MGYS00006424,Mammals,Peptostreptococcus,0.500000,True
+MGYS00006424,Mammals,Citrobacter,0.500000,True
+MGYS00006424,Mammals,Lachnospira,0.500000,True
+MGYS00006424,Mammals,Acidithiobacillus,0.500000,True
+MGYS00006424,Mammals,Rubrobacter,0.500000,True
+MGYS00006424,Mammals,Intestinibacter,0.500000,True
+MGYS00006424,Mammals,Aerococcus,0.500000,True
+MGYS00006424,Mammals,Moryella,0.500000,True
+MGYS00006424,Mammals,Pedomicrobium,0.500000,True
+MGYS00006424,Mammals,Gardnerella,0.500000,True
+MGYS00006424,Mammals,Streptomyces,0.500000,True
+MGYS00006424,Mammals,Paracoccus,0.500000,True
+MGYS00006424,Mammals,Millionella,0.500000,True
+MGYS00006424,Mammals,Brachybacterium,0.500000,True
+MGYS00006424,Mammals,Actinotignum,0.500000,True
+MGYS00006424,Mammals,Anaerosporobacter,0.500000,True
+MGYS00006424,Mammals,Rubellimicrobium,0.500000,True
+MGYS00006424,Mammals,Ureaplasma,0.500000,True
+MGYS00006424,Mammals,Haliangium,0.500000,True
+MGYS00006424,Mammals,Gemmata,0.500000,True
+MGYS00006424,Mammals,Eubacterium,0.500000,True
+MGYS00006424,Mammals,Paraprevotella,0.500000,True
+MGYS00006424,Mammals,Leptotrichia,0.500000,True
+cNODE_Human_Gut,Human:Digestive system,0.0.1,0.510230,True
+cNODE_Human_Gut,Human:Digestive system,0.0.2,0.499580,False
+cNODE_Human_Gut,Human:Digestive system,0.00021673199956653597,0.503900,False
+cNODE_Human_Gut,Human:Digestive system,0.0.3,0.490639,False
+cNODE_Human_Gut,Human:Digestive system,0.0.4,0.497293,False
+cNODE_Human_Gut,Human:Digestive system,0.00013592499999999998,0.500206,False
+cNODE_Human_Gut,Human:Digestive system,0.00014440400028880798,0.497795,False
+cNODE_Human_Gut,Human:Digestive system,0.00023657400023657397,0.504043,False
+cNODE_Human_Gut,Human:Digestive system,0.0.5,0.502154,False
+cNODE_Human_Gut,Human:Digestive system,0.0.6,0.492704,False
+cNODE_Human_Gut,Human:Digestive system,0.0.7,0.493402,False
+cNODE_Human_Gut,Human:Digestive system,0.0.8,0.489638,False
+cNODE_Human_Gut,Human:Digestive system,0.0.9,0.507087,False
+cNODE_Human_Gut,Human:Digestive system,0.0005690589704089334,0.501789,False
+cNODE_Human_Gut,Human:Digestive system,0.00026511099946977803,0.501457,False
+cNODE_Human_Gut,Human:Digestive system,0.00017780900071123602,0.497841,False
+cNODE_Human_Gut,Human:Digestive system,0.00036616604979858276,0.489301,False
+cNODE_Human_Gut,Human:Digestive system,0.0018858220037716443,0.495447,False
+cNODE_Human_Gut,Human:Digestive system,0.0.10,0.498465,False
+cNODE_Human_Gut,Human:Digestive system,0.0.11,0.481216,False
+cNODE_Human_Gut,Human:Digestive system,0.00015398800015398802,0.498038,False
+cNODE_Human_Gut,Human:Digestive system,7.34999891220016e-5,0.505084,False
+cNODE_Human_Gut,Human:Digestive system,0.0.12,0.496377,False
+cNODE_Human_Gut,Human:Digestive system,0.0.13,0.501493,False
+cNODE_Human_Gut,Human:Digestive system,0.00022388900111944502,0.499789,False
+cNODE_Human_Gut,Human:Digestive system,0.0001867529718003013,0.498358,False
+cNODE_Human_Gut,Human:Digestive system,0.0.14,0.492708,False
+cNODE_Human_Gut,Human:Digestive system,0.0.15,0.495819,False
+cNODE_Human_Gut,Human:Digestive system,0.0.16,0.502353,False
+cNODE_Human_Gut,Human:Digestive system,0.0.17,0.493768,False
+cNODE_Human_Gut,Human:Digestive system,0.0.18,0.496142,False
+cNODE_Human_Gut,Human:Digestive system,0.0.19,0.496278,False
+cNODE_Human_Gut,Human:Digestive system,0.0.20,0.504252,False
+cNODE_Human_Gut,Human:Digestive system,0.0.21,0.494990,False
+cNODE_Human_Gut,Human:Digestive system,0.0.22,0.493959,False
+cNODE_Human_Gut,Human:Digestive system,0.00040080199959919796,0.512767,True
+cNODE_Human_Gut,Human:Digestive system,0.0.23,0.506288,False
+cNODE_Human_Gut,Human:Digestive system,7.699999645800018e-5,0.496186,False
+cNODE_Human_Gut,Human:Digestive system,0.0.24,0.502355,False
+cNODE_Human_Gut,Human:Digestive system,0.0.25,0.499888,False
+cNODE_Human_Gut,Human:Digestive system,0.0.26,0.495806,False
+cNODE_Human_Gut,Human:Digestive system,0.0.27,0.501178,False
+cNODE_Human_Gut,Human:Digestive system,0.02830188702830189,0.507608,False
+cNODE_Human_Gut,Human:Digestive system,0.0.28,0.511228,True
+cNODE_Human_Gut,Human:Digestive system,0.0.29,0.499255,False
+cNODE_Human_Gut,Human:Digestive system,0.00036284499891146507,0.507718,True
+cNODE_Human_Gut,Human:Digestive system,0.00034989500034989505,0.507732,True
+cNODE_Human_Gut,Human:Digestive system,0.0.30,0.494023,False
+cNODE_Human_Gut,Human:Digestive system,0.0.31,0.509157,True
+cNODE_Human_Gut,Human:Digestive system,0.0.32,0.496143,False
+cNODE_Human_Gut,Human:Digestive system,0.0.33,0.494910,False
+cNODE_Human_Gut,Human:Digestive system,0.0.34,0.498585,False
+cNODE_Human_Gut,Human:Digestive system,0.0.35,0.506233,False
+cNODE_Human_Gut,Human:Digestive system,0.0.36,0.500688,False
+cNODE_Human_Gut,Human:Digestive system,0.0.37,0.505227,False
+cNODE_Human_Gut,Human:Digestive system,0.0.38,0.510032,True
+cNODE_Human_Gut,Human:Digestive system,0.00023068099861591398,0.499628,False
+cNODE_Human_Gut,Human:Digestive system,0.000409835999590164,0.507346,False
+cNODE_Human_Gut,Human:Digestive system,0.0.39,0.499080,False
+cNODE_Human_Gut,Human:Digestive system,0.0.40,0.503057,False
+cNODE_Human_Gut,Human:Digestive system,0.00033738200000000006,0.504412,False
+cNODE_Human_Gut,Human:Digestive system,0.0.41,0.502323,False
+cNODE_Human_Gut,Human:Digestive system,0.0.42,0.499540,False
+cNODE_Human_Gut,Human:Digestive system,0.0.43,0.500670,False
+cNODE_Human_Gut,Human:Digestive system,0.00043611,0.505545,False
+cNODE_Human_Gut,Human:Digestive system,0.0.44,0.508667,True
+cNODE_Human_Gut,Human:Digestive system,0.000464252999071494,0.506024,False
+cNODE_Human_Gut,Human:Digestive system,0.0.45,0.488793,False
+cNODE_Human_Gut,Human:Digestive system,0.0.46,0.526789,True
+cNODE_Human_Gut,Human:Digestive system,0.0.47,0.503345,False
+cNODE_Human_Gut,Human:Digestive system,0.0.48,0.496095,False
+cNODE_Human_Gut,Human:Digestive system,0.0.49,0.511771,True
+cNODE_Human_Gut,Human:Digestive system,0.0003891050000000001,0.510185,True
+cNODE_Human_Gut,Human:Digestive system,0.0.50,0.502241,False
+cNODE_Human_Gut,Human:Digestive system,0.0.51,0.498131,False
+cNODE_Human_Gut,Human:Digestive system,0.0008888890017777781,0.502121,False
+cNODE_Human_Gut,Human:Digestive system,0.0.52,0.500189,False
+cNODE_Human_Gut,Human:Digestive system,0.0.53,0.497891,False
+cNODE_Human_Gut,Human:Digestive system,0.0.54,0.500144,False
+cNODE_Human_Gut,Human:Digestive system,0.0.55,0.503648,False
+cNODE_Human_Gut,Human:Digestive system,0.0.56,0.504027,False
+cNODE_Human_Gut,Human:Digestive system,0.0.57,0.505157,False
+cNODE_Human_Gut,Human:Digestive system,0.0.58,0.500753,False
+cNODE_Human_Gut,Human:Digestive system,0.0.59,0.498275,False
+cNODE_Human_Gut,Human:Digestive system,0.0.60,0.494178,False
+cNODE_Human_Gut,Human:Digestive system,0.0.61,0.498169,False
+cNODE_Human_Gut,Human:Digestive system,0.0005141389989717221,0.506127,False
+cNODE_Human_Gut,Human:Digestive system,0.0003266480382178204,0.497172,False
+cNODE_Human_Gut,Human:Digestive system,8.140000211640005e-5,0.504568,False
+cNODE_Human_Gut,Human:Digestive system,0.0.62,0.501142,False
+cNODE_Human_Gut,Human:Digestive system,0.00024310199951379602,0.500582,False
+cNODE_Human_Gut,Human:Digestive system,0.0006291590314579515,0.488200,False
+cNODE_Human_Gut,Human:Digestive system,0.0011257039988742958,0.496651,False
+cNODE_Human_Gut,Human:Digestive system,0.0.63,0.507645,False
+cNODE_Human_Gut,Human:Digestive system,0.0009044862206946378,0.505989,False
+cNODE_Human_Gut,Human:Digestive system,0.0002554279994891439,0.496989,False
+cNODE_Human_Gut,Human:Digestive system,0.0.64,0.493756,False
+cNODE_Human_Gut,Human:Digestive system,0.0003729490011188471,0.500378,False
+cNODE_Human_Gut,Human:Digestive system,0.001323528997352942,0.488464,False
+cNODE_Human_Gut,Human:Digestive system,0.00018011500036023,0.505409,False
+cNODE_Human_Gut,Human:Digestive system,0.00011147000022294002,0.498766,False
+cNODE_Human_Gut,Human:Digestive system,0.0.65,0.498448,False
+cNODE_Human_Gut,Human:Digestive system,0.0.66,0.497850,False
+cNODE_Human_Gut,Human:Digestive system,0.0.67,0.498917,False
+cNODE_Human_Gut,Human:Digestive system,0.0013815339986184662,0.503316,False
