@@ -1,0 +1,23 @@
+{
+  "status": "metadata_only_no_taxon_outcomes",
+  "source_archive_sha256": "b57b1afcca8db8d101872d627cbdfd0d316bb64f321487c9d9318499c58d6c3b",
+  "sequenced_sample_rows": 426,
+  "sequenced_people": 225,
+  "patients_table_people": 225,
+  "people_with_two_or_more_samples": 80,
+  "people_with_three_or_more_samples": 61,
+  "serial_people_by_source_category": {
+    "Haem_allograft": 41,
+    "Haem_autograft": 39
+  },
+  "duplicate_subject_day_coordinates": 0,
+  "exposure_rows": 5959,
+  "exposure_people": 211,
+  "exposure_people_without_sample": 9,
+  "unparseable_exposure_time_rows": 24,
+  "reversed_exposure_intervals": 0,
+  "prepost_exposure_rows": 378,
+  "people_with_prepost_exposure": 58,
+  "duplicate_person_interval_coordinates": 3,
+  "note": "Rows are not independent courses; 80 people with serial samples differ from published 79-person longitudinal analysis. Taxon values not inspected; design-development only."
+}
