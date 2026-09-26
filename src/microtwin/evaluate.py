@@ -6,9 +6,9 @@ import time
 import numpy as np
 
 from .data import bray_curtis
-from .models import CNODE, CNODE2, GLVSteady, GraphTwin, PresenceMean, predict_torch, train_torch
+from .models import CNODE, CNODE2, GLVSteady, GraphTwin, PresenceMean, TransformerTwin, predict_torch, train_torch
 
-EPOCHS = {"cnode": 200, "cnode2": 200, "glv": 200, "graphtwin": 150}
+EPOCHS = {"cnode": 200, "cnode2": 200, "glv": 200, "graphtwin": 150, "transformer": 150}
 
 
 def kfold_indices(n: int, k: int, seed: int = 0) -> list[np.ndarray]:
@@ -36,6 +36,8 @@ def fit_predict(name: str, Ztr, Ptr, Zte, seed=0):
         m = GLVSteady(n)
     elif name == "graphtwin":
         m = GraphTwin(n, prior=Ptr.mean(0))
+    elif name == "transformer":
+        m = TransformerTwin(n, prior=Ptr.mean(0))
     elif name == "graphtwin2":
         return fit_predict_twinstack(Ztr, Ptr, Zte, seed=seed)
     elif name == "graphtwin2b":
@@ -87,7 +89,7 @@ def _fit_base(name, Ztr, Ptr, seed=0, batch=32):
         return PresenceMean().fit(Ztr, Ptr)
     m = {"cnode": CNODE(n), "glv": GLVSteady(n), "graphtwin": GraphTwin(n, prior=Ptr.mean(0))}[name]
     lr = 0.01 if name != "graphtwin" else 0.005
-    epochs = {"cnode": 200, "glv": 200, "graphtwin": 150}[name]
+    epochs = {"cnode": 200, "glv": 200, "graphtwin": 150, "transformer": 150}[name]
     return train_torch(m, Ztr, Ptr, epochs=epochs, lr=lr, seed=seed, batch=batch)
 
 def _predict_base(name, model, Z):

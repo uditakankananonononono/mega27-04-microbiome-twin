@@ -214,3 +214,41 @@ class CNODE2(nn.Module):
 
     def forward(self, z):
         return self.l2(self.l1(z))
+
+class TransformerTwin(nn.Module):
+    """Small taxon-token self-attention baseline for assemblage-to-composition.
+
+    This is an experimental model family, not a microbiome foundation model.
+    No pretrained weights or cross-study claims are implied.
+    """
+    name = "transformer"
+
+    def __init__(self, n: int, d: int = 32, heads: int = 4, layers: int = 2,
+                 prior: np.ndarray | None = None):
+        super().__init__()
+        if d % heads:
+            raise ValueError("embedding dimension must be divisible by attention heads")
+        self.embedding = nn.Embedding(n, d)
+        self.blocks = nn.ModuleList([
+            nn.TransformerEncoderLayer(d_model=d, nhead=heads, dim_feedforward=2*d,
+                                       dropout=0.0, batch_first=True, norm_first=True)
+            for _ in range(layers)])
+        self.readout = nn.Linear(d, 1)
+        nn.init.zeros_(self.readout.weight)
+        nn.init.zeros_(self.readout.bias)
+        p = np.asarray(prior if prior is not None else np.ones(n)/n, dtype=float)
+        if p.shape != (n,) or (p < 0).any() or not np.isfinite(p).all() or p.sum() <= 0:
+            raise ValueError("prior must be a finite nonnegative vector")
+        self.register_buffer("logprior", torch.tensor(np.log(p + 1e-6), dtype=torch.float32))
+
+    def forward(self, z):
+        present = z > 0
+        # An all-absent input is undefined; callers validate sample mass.
+        if (~present.any(1)).any():
+            raise ValueError("all-absent sample")
+        B, n = z.shape
+        tokens = self.embedding(torch.arange(n, device=z.device))[None].expand(B, n, -1)
+        for block in self.blocks:
+            tokens = block(tokens, src_key_padding_mask=~present)
+        logits = self.readout(tokens).squeeze(-1) + self.logprior
+        return masked_softmax(logits, present.float())
