@@ -1,0 +1,101 @@
+{
+ "R1": {
+  "scorer": "lgbm_shap",
+  "n_genera": 200,
+  "n_top": 22,
+  "top_genera": [
+   "Cardiobacterium",
+   "Eikenella",
+   "Simonsiella",
+   "Desulfobulbus",
+   "Cetobacterium",
+   "Stomatobaculum",
+   "Fretibacterium",
+   "Marinomonas",
+   "Finegoldia",
+   "Erysipelothrix",
+   "Ezakiella",
+   "Kingella",
+   "Marvinbryantia",
+   "Coxiella",
+   "Filifactor",
+   "Facklamia",
+   "Cloacibacterium",
+   "Terrisporobacter",
+   "Caproiciproducens",
+   "Gemmatirosa",
+   "Lawsonella",
+   "Desulfosporosinus"
+  ],
+  "desulfobacterota": [
+   {
+    "phylum": "Desulfobacterota",
+    "in_top": 1,
+    "total_phylum": 3,
+    "p": 0.2963484087102177,
+    "q_bh": 0.4623241681269037
+   }
+  ],
+  "best": {
+   "phylum": "Synergistota",
+   "in_top": 1,
+   "total_phylum": 1,
+   "p": 0.11,
+   "q_bh": 0.4623241681269037
+  },
+  "pass": false
+ },
+ "R2_enrichment": {
+  "scorer": "catboost_shap",
+  "n_genera": 200,
+  "n_top": 21,
+  "top_genera": [
+   "Cardiobacterium",
+   "Eikenella",
+   "Simonsiella",
+   "Desulfobulbus",
+   "Fastidiosipila",
+   "Stomatobaculum",
+   "Dolosigranulum",
+   "Abiotrophia",
+   "Marinomonas",
+   "Erysipelothrix",
+   "Ezakiella",
+   "Kingella",
+   "Coxiella",
+   "Parvimonas",
+   "Intestinimonas",
+   "Facklamia",
+   "Cloacibacterium",
+   "Terrisporobacter",
+   "Caproiciproducens",
+   "Gemmatirosa",
+   "Rubrobacter"
+  ],
+  "desulfobacterota": [
+   {
+    "phylum": "Desulfobacterota",
+    "in_top": 1,
+    "total_phylum": 3,
+    "p": 0.28435434749505106,
+    "q_bh": 0.4520467091247297
+   }
+  ],
+  "best": {
+   "phylum": "Bacillota",
+   "in_top": 10,
+   "total_phylum": 67,
+   "p": 0.11547973457982491,
+   "q_bh": 0.4520467091247297
+  },
+  "pass": false
+ },
+ "R2": {
+  "n_genera": 200,
+  "cb_coef": 37.066983232035376,
+  "cb_p": 2.6191130051092367e-35,
+  "cb_aic": 2343.8673664082494,
+  "ridge_aic": 2443.1346021463014,
+  "catboost_wins": true
+ }
+}
