@@ -18,3 +18,5 @@ Paper currently available: archived v3 baseline PDF, 71 total PDF pages (`paper/
 | 8 | pending | pending | pending | pending | pending | not run |
 | 9 | pending | pending | pending | pending | pending | not run |
 | 10 | pending | pending | pending | pending | pending | not run |
+
+A ChatGPT direction consultation was made at 16:15 IST, conversation https://chatgpt.com/c/6ab7a25c-dee0-83e8-8897-9804c6e25105 . The page submitted only the first paragraph of a longer prepared prompt after an input timeout. It did not receive the paper or detailed study evidence; therefore this is **not** a counted judge round. Verbatim visible prompt, answer and independent assessment are in `judge/redirection-01/`. Suggested narrow antibiotic recovery trajectory track is conditional on fresh source/design/rights/benchmark qualification; broader platform goal unchanged.
