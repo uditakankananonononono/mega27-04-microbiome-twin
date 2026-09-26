@@ -102,14 +102,17 @@ def summarize(threshold=.9):
                        'status': 'viewed_leave_study_out_development_only'})
         studies.append(record)
     scored = [r for r in studies if r['status'].startswith('viewed_leave')]
+    gaps = [r['same_rows_leave_minus_within_bc'] for r in scored]
     return {'status': 'viewed_emp_leave_study_out_development_not_external_benchmark',
             'table_sha256': info['output_sha256'], 'metadata_sha256': META_SHA,
             'threshold_on_retained_genus_subset': threshold,
             'candidate_studies': len(studies), 'scored_studies': len(scored),
             'covered_samples': sum(r['covered_samples'] for r in scored),
+            'studies_leave_study_error_higher_than_same_rows_within': sum(g > 0 for g in gaps),
+            'median_study_paired_gap_leave_minus_within': float(np.median(gaps)) if gaps else None,
             'median_of_study_mean_host_label_medians': float(np.median([r['mean_host_label_median_bc'] for r in scored])) if scored else None,
             'study_results': studies,
-            'note': 'All candidate studies have been viewed for method development, and mirror/biological-unit eligibility is incomplete. Train/test are disjoint EMP study IDs in this derivative, NOT untouched source families. Coverage is relative to an already heavily filtered genus subset (median 32.06% raw BIOM mass), not full-community coverage. Scores renormalize retained genera, include no same-task top comparator or multiplicity adjustment, and cannot establish the requested external win.'}
+            'note': 'All candidate studies have been viewed for method development, and mirror/biological-unit eligibility is incomplete. Train/test are disjoint EMP study IDs in this derivative, NOT untouched source families. The within-study comparator uses the same scored rows but a different training pool and size; this is descriptive, not a controlled source-shift effect. Coverage is relative to an already heavily filtered genus subset (median 32.06% raw BIOM mass), not full-community coverage. Scores renormalize retained genera, include no same-task top comparator or multiplicity adjustment, and cannot establish the requested external win.'}
 
 
 if __name__ == '__main__':

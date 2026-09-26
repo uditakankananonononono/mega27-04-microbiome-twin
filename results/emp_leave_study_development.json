@@ -6,6 +6,8 @@
   "candidate_studies": 20,
   "scored_studies": 16,
   "covered_samples": 779,
+  "studies_leave_study_error_higher_than_same_rows_within": 15,
+  "median_study_paired_gap_leave_minus_within": 0.20925486992126335,
   "median_of_study_mean_host_label_medians": 0.7631155710435873,
   "study_results": [
     {
@@ -257,5 +259,5 @@
       "status": "abstained_fewer_than_ten_host_labels"
     }
   ],
-  "note": "All candidate studies have been viewed for method development, and mirror/biological-unit eligibility is incomplete. Train/test are disjoint EMP study IDs in this derivative, NOT untouched source families. Coverage is relative to an already heavily filtered genus subset (median 32.06% raw BIOM mass), not full-community coverage. Scores renormalize retained genera, include no same-task top comparator or multiplicity adjustment, and cannot establish the requested external win."
+  "note": "All candidate studies have been viewed for method development, and mirror/biological-unit eligibility is incomplete. Train/test are disjoint EMP study IDs in this derivative, NOT untouched source families. The within-study comparator uses the same scored rows but a different training pool and size; this is descriptive, not a controlled source-shift effect. Coverage is relative to an already heavily filtered genus subset (median 32.06% raw BIOM mass), not full-community coverage. Scores renormalize retained genera, include no same-task top comparator or multiplicity adjustment, and cannot establish the requested external win."
 }
