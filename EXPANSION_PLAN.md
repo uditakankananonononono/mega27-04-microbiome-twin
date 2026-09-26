@@ -40,3 +40,5 @@ A small `TransformerTwin` taxon-token attention baseline is now wired into the e
 An evaluator for labeled perturbation direction is now present; it abstains on zero prediction and excludes changes below a stated effect threshold, reports coverage and experiment groups. It has only synthetic unit tests so far; **no** species-removal, antibiotic or diet stress-test dataset or scientific result is verified.
 
 A multimodal exact-sample-ID overlap check is present with synthetic tests. It cannot establish matched aliquots, subject uniqueness, compatible timepoints or sufficient paired real datasets, so the requested multimodal interaction-necessity study remains **MISSING**.
+
+A prospective keystone ranking evaluator reports experiment-macro precision at k against externally measured post-perturbation effects. Only synthetic tests exist. No candidate keystone prediction under environmental change, independent perturbation dataset or discovery is yet verified.
