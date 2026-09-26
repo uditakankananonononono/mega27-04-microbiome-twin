@@ -1,0 +1,45 @@
+{
+  "status": "outcome_blind_composite_metadata_screen_not_external_test",
+  "source": "https://zenodo.org/records/17315984",
+  "metadata_md5": "be523d58a63947765d728f1f4f89b07a",
+  "rows": 13897,
+  "columns": 171,
+  "project_name_labels": 84,
+  "project_id_labels": 197,
+  "fields_populated": {
+    "project_name": 13897,
+    "project_id": 13897,
+    "host_subject_id": 13897,
+    "run_acc": 12639,
+    "days_from_first_collection": 1246,
+    "collection_date": 2081,
+    "antibiotics": 7401,
+    "antibiotics_family": 77,
+    "health_disease_stat": 13897,
+    "seq_type": 13897
+  },
+  "antibiotics_true_rows": 472,
+  "project_subject_labels": 10569,
+  "repeated_project_subject_labels": 807,
+  "rows_in_repeated_project_subject_labels": 4135,
+  "project_names_with_repeated_subject_labels": 22,
+  "project_names_with_time_values": 9,
+  "time_populated_rows_by_project": {
+    "2017_BrooksB": 375,
+    "2015_BackhedF": 269,
+    "2017_HallAB": 236,
+    "2016_VincentC": 170,
+    "2015_Bengtsson-PalmeJ": 70,
+    "2015_ShiB": 48,
+    "2022_Bai_SARS-Cov-2": 36,
+    "2015_DavidLA": 22,
+    "2018_RosaBA": 20
+  },
+  "repeated_project_subject_labels_with_time_values": 262,
+  "agp_project_name_rows": 648,
+  "agp_project_ids": {
+    "PRJEB11419": 648
+  },
+  "admitted_independent_studies": 0,
+  "note": "Project/subject labels are not audited biological units. Metadata time and antibiotic fields do not establish aligned courses; mirrors, source-specific rights, assay and outcome eligibility remain unresolved. No abundance outcomes read."
+}
