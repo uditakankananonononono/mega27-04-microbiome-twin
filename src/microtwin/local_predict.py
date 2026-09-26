@@ -48,6 +48,10 @@ def predict_local(train_path, query_path, *, unit, source_id, processing_authori
     qc = inspect_local_matrix(train_path, unit=unit, source_id=source_id,
                               processing_authorized=processing_authorized, subject_map=subject_map)
     train_ids, taxa, x, train_sha = _read_table(train_path)
+    if unit == 'counts' and (x != np.floor(x)).any():
+        raise ValueError('counts must be integers')
+    if unit == 'relative_abundance' and not np.allclose(x.sum(axis=1), 1, atol=1e-4, rtol=1e-4):
+        raise ValueError('relative abundance rows must sum to one')
     query_ids, qtaxa, z, query_sha = _read_table(query_path)
     if train_sha != qc['sha256']:
         raise ValueError('training file changed during inspection')
@@ -67,8 +71,12 @@ def predict_local(train_path, query_path, *, unit, source_id, processing_authori
     if (mass <= 0).any():
         raise ValueError('at least one query has no taxon with positive training abundance; abstaining')
     pred = z * mean / mass[:, None]
+    if hashlib.sha256(Path(train_path).read_bytes()).hexdigest() != train_sha:
+        raise ValueError('training file changed during prediction')
     if hashlib.sha256(Path(query_path).read_bytes()).hexdigest() != query_sha:
         raise ValueError('query file changed during prediction')
+    if subject_map is not None and hashlib.sha256(Path(subject_map).read_bytes()).hexdigest() != qc['subject_map_sha256']:
+        raise ValueError('subject map changed during prediction')
     result = pd.DataFrame(pred, columns=taxa)
     result.insert(0, 'sample_id', query_ids)
     report = {'status': 'research_baseline_prediction', 'model': 'presence_conditional_population_mean',

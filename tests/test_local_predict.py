@@ -57,3 +57,32 @@ def test_predict_detects_query_mutation_between_read_and_hash(tmp_path, monkeypa
     monkeypatch.setattr(local_predict,'_read_table',mutate_after_query_read)
     with pytest.raises(ValueError,match='query file changed'):
         local_predict.predict_local(train,query,unit='counts',source_id='test',processing_authorized=True)
+
+
+def test_predict_detects_training_mutation_between_inspection_and_read(tmp_path, monkeypatch):
+    from microtwin import local_predict
+    train=tmp_path/'train.tsv';train.write_text('sample_id\tA\tB\ns1\t2\t1\n')
+    query=tmp_path/'query.tsv';query.write_text('sample_id\tA\tB\nq1\t1\t0\n')
+    original=local_predict.inspect_local_matrix
+    def mutate_after_inspection(*args,**kwargs):
+        result=original(*args,**kwargs)
+        train.write_text('sample_id\tA\tB\ns1\t1\t2\n')
+        return result
+    monkeypatch.setattr(local_predict,'inspect_local_matrix',mutate_after_inspection)
+    with pytest.raises(ValueError,match='training file changed'):
+        local_predict.predict_local(train,query,unit='counts',source_id='test',processing_authorized=True)
+
+
+def test_predict_detects_subject_map_mutation(tmp_path, monkeypatch):
+    from microtwin import local_predict
+    train=tmp_path/'train.tsv';train.write_text('sample_id\tA\tB\ns1\t2\t1\ns2\t1\t2\n')
+    query=tmp_path/'query.tsv';query.write_text('sample_id\tA\tB\nq1\t1\t0\n')
+    mapping=tmp_path/'groups.csv';mapping.write_text('sample_id,subject_id\ns1,p1\ns2,p2\n')
+    original=local_predict._read_table
+    def mutate_after_query_read(path):
+        result=original(path)
+        if str(path)==str(query):mapping.write_text('sample_id,subject_id\ns1,p1\ns2,p1\n')
+        return result
+    monkeypatch.setattr(local_predict,'_read_table',mutate_after_query_read)
+    with pytest.raises(ValueError,match='subject map changed'):
+        local_predict.predict_local(train,query,unit='counts',source_id='test',processing_authorized=True,subject_map=mapping)
