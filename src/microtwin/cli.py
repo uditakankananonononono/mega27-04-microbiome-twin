@@ -95,9 +95,14 @@ def cmd_predict(a):
                                        processing_authorized=a.processing_authorized, subject_map=a.subject_map)
         from pathlib import Path
         dest = Path(a.out)
-        if dest.resolve() in (Path(a.train).resolve(), Path(a.query).resolve()):
-            raise ValueError('output must not overwrite an input file')
-        result.to_csv(dest, index=False)
+        if dest.exists():
+            raise ValueError('output file already exists; choose a new path')
+        if not dest.parent.is_dir():
+            raise ValueError('output parent directory does not exist')
+        # Exclusive creation: a second invocation cannot silently overwrite an
+        # earlier result or an input file via a same-path race.
+        with dest.open('x', newline='') as handle:
+            result.to_csv(handle, index=False)
     except ValueError as e:
         sys.exit(str(e))
     report['output_file'] = str(dest)

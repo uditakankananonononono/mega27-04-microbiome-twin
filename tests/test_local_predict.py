@@ -33,3 +33,13 @@ def test_predict_abstains_bad_queries(tmp_path):
         q.write_text(text)
         with pytest.raises(ValueError,match=reason):predict_local(train,q,**base)
     with pytest.raises(ValueError,match='authorization'):predict_local(train,q,unit='counts',source_id='test')
+
+
+def test_predict_cli_refuses_existing_output(tmp_path, capsys):
+    train=tmp_path/'train.tsv';train.write_text('sample_id\tA\tB\ns1\t2\t1\n')
+    query=tmp_path/'query.tsv';query.write_text('sample_id\tA\tB\nq1\t1\t0\n')
+    out=tmp_path/'existing.csv';out.write_text('DO NOT CHANGE')
+    with pytest.raises(SystemExit,match='already exists'):
+        main(['predict',str(train),str(query),'--unit','counts','--source-id','test',
+              '--processing-authorized','--out',str(out)])
+    assert out.read_text()=='DO NOT CHANGE'
