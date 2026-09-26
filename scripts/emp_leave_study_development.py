@@ -80,7 +80,24 @@ def summarize(threshold=.9):
         err = bray_curtis(pred, pte)
         psub = people[eligible]
         person_medians = [np.median(err[psub == s]) for s in sorted(set(psub))]
+        # Same eligible test rows, but train only on other host labels within
+        # this study. This controls scoring rows, not training-set size or shift.
+        within = np.full(len(te), np.nan)
+        for label in sorted(set(psub)):
+            selected = (people == label) & eligible
+            training = people != label
+            if training.sum() < 2:
+                raise ValueError('insufficient within-study host-label training')
+            local = te[training] / te[training].sum(axis=1, keepdims=True)
+            local_model = PresenceMean().fit((local > 0).astype(float), local)
+            target = te[selected] / te[selected].sum(axis=1, keepdims=True)
+            within[selected] = bray_curtis(local_model.predict((target > 0).astype(float)), target)
+        if not np.isfinite(within[eligible]).all():
+            raise ValueError('within-study comparison incomplete')
+        local_medians = [np.median(within[eligible][psub == label]) for label in sorted(set(psub))]
         record.update({'mean_host_label_median_bc': float(np.mean(person_medians)),
+                       'same_rows_within_study_mean_host_label_median_bc': float(np.mean(local_medians)),
+                       'same_rows_leave_minus_within_bc': float(np.mean(person_medians) - np.mean(local_medians)),
                        'median_sample_bc': float(np.median(err)),
                        'status': 'viewed_leave_study_out_development_only'})
         studies.append(record)

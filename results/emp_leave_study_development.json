@@ -17,6 +17,8 @@
       "covered_samples": 46,
       "covered_host_labels": 46,
       "mean_host_label_median_bc": 0.8068943052390586,
+      "same_rows_within_study_mean_host_label_median_bc": 0.5864755309414398,
+      "same_rows_leave_minus_within_bc": 0.2204187742976188,
       "median_sample_bc": 0.8033712096407996,
       "status": "viewed_leave_study_out_development_only"
     },
@@ -29,6 +31,8 @@
       "covered_samples": 78,
       "covered_host_labels": 17,
       "mean_host_label_median_bc": 0.7848419220922039,
+      "same_rows_within_study_mean_host_label_median_bc": 0.7959201066321863,
+      "same_rows_leave_minus_within_bc": -0.011078184539982328,
       "median_sample_bc": 0.7877311194316363,
       "status": "viewed_leave_study_out_development_only"
     },
@@ -41,6 +45,8 @@
       "covered_samples": 77,
       "covered_host_labels": 77,
       "mean_host_label_median_bc": 0.7740507521573358,
+      "same_rows_within_study_mean_host_label_median_bc": 0.6631361214866387,
+      "same_rows_leave_minus_within_bc": 0.11091463067069707,
       "median_sample_bc": 0.7897971597534266,
       "status": "viewed_leave_study_out_development_only"
     },
@@ -53,6 +59,8 @@
       "covered_samples": 35,
       "covered_host_labels": 20,
       "mean_host_label_median_bc": 0.6882816045782956,
+      "same_rows_within_study_mean_host_label_median_bc": 0.2973941723976335,
+      "same_rows_leave_minus_within_bc": 0.3908874321806621,
       "median_sample_bc": 0.6920929018697248,
       "status": "viewed_leave_study_out_development_only"
     },
@@ -65,6 +73,8 @@
       "covered_samples": 56,
       "covered_host_labels": 56,
       "mean_host_label_median_bc": 0.8479231559906495,
+      "same_rows_within_study_mean_host_label_median_bc": 0.43557574336867766,
+      "same_rows_leave_minus_within_bc": 0.41234741262197183,
       "median_sample_bc": 0.8703957354694905,
       "status": "viewed_leave_study_out_development_only"
     },
@@ -77,6 +87,8 @@
       "covered_samples": 12,
       "covered_host_labels": 12,
       "mean_host_label_median_bc": 0.868007645152543,
+      "same_rows_within_study_mean_host_label_median_bc": 0.5099412229688344,
+      "same_rows_leave_minus_within_bc": 0.35806642218370865,
       "median_sample_bc": 0.8806010234960036,
       "status": "viewed_leave_study_out_development_only"
     },
@@ -89,6 +101,8 @@
       "covered_samples": 64,
       "covered_host_labels": 64,
       "mean_host_label_median_bc": 0.7572363044842211,
+      "same_rows_within_study_mean_host_label_median_bc": 0.5313544088626455,
+      "same_rows_leave_minus_within_bc": 0.22588189562157557,
       "median_sample_bc": 0.7595937174581541,
       "status": "viewed_leave_study_out_development_only"
     },
@@ -101,6 +115,8 @@
       "covered_samples": 23,
       "covered_host_labels": 22,
       "mean_host_label_median_bc": 0.7449371804635725,
+      "same_rows_within_study_mean_host_label_median_bc": 0.6467830214324006,
+      "same_rows_leave_minus_within_bc": 0.09815415903117186,
       "median_sample_bc": 0.7016994494412598,
       "status": "viewed_leave_study_out_development_only"
     },
@@ -113,6 +129,8 @@
       "covered_samples": 23,
       "covered_host_labels": 23,
       "mean_host_label_median_bc": 0.7864665893004722,
+      "same_rows_within_study_mean_host_label_median_bc": 0.5416058136616371,
+      "same_rows_leave_minus_within_bc": 0.24486077563883513,
       "median_sample_bc": 0.8108973203095365,
       "status": "viewed_leave_study_out_development_only"
     },
@@ -125,6 +143,8 @@
       "covered_samples": 64,
       "covered_host_labels": 16,
       "mean_host_label_median_bc": 0.7689948376029534,
+      "same_rows_within_study_mean_host_label_median_bc": 0.5709038720580455,
+      "same_rows_leave_minus_within_bc": 0.1980909655449079,
       "median_sample_bc": 0.7914412635420869,
       "status": "viewed_leave_study_out_development_only"
     },
@@ -137,6 +157,8 @@
       "covered_samples": 18,
       "covered_host_labels": 18,
       "mean_host_label_median_bc": 0.8757126700775557,
+      "same_rows_within_study_mean_host_label_median_bc": 0.6550472115149475,
+      "same_rows_leave_minus_within_bc": 0.22066545856260822,
       "median_sample_bc": 0.8896687094587716,
       "status": "viewed_leave_study_out_development_only"
     },
@@ -155,6 +177,8 @@
       "covered_samples": 74,
       "covered_host_labels": 74,
       "mean_host_label_median_bc": 0.6823606005068356,
+      "same_rows_within_study_mean_host_label_median_bc": 0.32621712743009956,
+      "same_rows_leave_minus_within_bc": 0.356143473076736,
       "median_sample_bc": 0.6563106587082812,
       "status": "viewed_leave_study_out_development_only"
     },
@@ -167,6 +191,8 @@
       "covered_samples": 79,
       "covered_host_labels": 31,
       "mean_host_label_median_bc": 0.7524034113970802,
+      "same_rows_within_study_mean_host_label_median_bc": 0.6341084987803434,
+      "same_rows_leave_minus_within_bc": 0.11829491261673686,
       "median_sample_bc": 0.7312250129272115,
       "status": "viewed_leave_study_out_development_only"
     },
@@ -185,6 +211,8 @@
       "covered_samples": 37,
       "covered_host_labels": 35,
       "mean_host_label_median_bc": 0.7462727528266822,
+      "same_rows_within_study_mean_host_label_median_bc": 0.6032024524463487,
+      "same_rows_leave_minus_within_bc": 0.14307030038033342,
       "median_sample_bc": 0.7545738966259081,
       "status": "viewed_leave_study_out_development_only"
     },
@@ -203,6 +231,8 @@
       "covered_samples": 29,
       "covered_host_labels": 15,
       "mean_host_label_median_bc": 0.7497805686742995,
+      "same_rows_within_study_mean_host_label_median_bc": 0.5651954445884464,
+      "same_rows_leave_minus_within_bc": 0.18458512408585315,
       "median_sample_bc": 0.7641176399403735,
       "status": "viewed_leave_study_out_development_only"
     },
@@ -215,6 +245,8 @@
       "covered_samples": 64,
       "covered_host_labels": 64,
       "mean_host_label_median_bc": 0.6961231720826419,
+      "same_rows_within_study_mean_host_label_median_bc": 0.5426377349262137,
+      "same_rows_leave_minus_within_bc": 0.15348543715642815,
       "median_sample_bc": 0.7073157446296723,
       "status": "viewed_leave_study_out_development_only"
     },
