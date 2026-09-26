@@ -1,0 +1,14 @@
+{
+ "dataset": "Ocean",
+ "stacker": "graphtwin2b",
+ "best_base": "glv",
+ "stacker_median": 0.07037630233496431,
+ "base_median": 0.07033641603306215,
+ "diff": 3.9886301902158916e-05,
+ "ci": [
+  -0.0005655406295190929,
+  0.00033290134606261956
+ ],
+ "verdict": "tie",
+ "published_cnode": 0.06
+}

@@ -1,0 +1,962 @@
+MGYS00006795,Digestive system,Faecalibacterium,0.500304,False
+MGYS00006795,Digestive system,Streptococcus,0.493003,False
+MGYS00006795,Digestive system,Subdoligranulum,0.499645,False
+MGYS00006795,Digestive system,Bacteroides,0.501523,False
+MGYS00006795,Digestive system,Blautia,0.499121,False
+MGYS00006795,Digestive system,Dorea,0.499613,False
+MGYS00006795,Digestive system,Lachnoclostridium,0.500925,False
+MGYS00006795,Digestive system,Bifidobacterium,0.500517,False
+MGYS00006795,Digestive system,Akkermansia,0.500292,False
+MGYS00006795,Digestive system,Agathobacter,0.499956,False
+MGYS00006795,Digestive system,Butyricicoccus,0.500186,False
+MGYS00006795,Digestive system,Parabacteroides,0.502136,False
+MGYS00006795,Digestive system,Anaerostipes,0.499371,False
+MGYS00006795,Digestive system,Alistipes,0.500156,False
+MGYS00006795,Digestive system,Fusicatenibacter,0.498841,False
+MGYS00006795,Digestive system,Oribacterium,0.499995,False
+MGYS00006795,Digestive system,Oscillibacter,0.499828,False
+MGYS00006795,Digestive system,Roseburia,0.499972,False
+MGYS00006795,Digestive system,Lachnospira,0.499196,False
+MGYS00006795,Digestive system,Collinsella,0.500697,False
+MGYS00006795,Digestive system,Prevotella,0.503027,False
+MGYS00006795,Digestive system,Odoribacter,0.499659,False
+MGYS00006795,Digestive system,Phascolarctobacterium,0.500017,False
+MGYS00006795,Digestive system,Holdemanella,0.500777,False
+MGYS00006795,Digestive system,Ruminiclostridium,0.499841,False
+MGYS00006795,Digestive system,Romboutsia,0.498574,False
+MGYS00006795,Digestive system,Butyricimonas,0.503163,False
+MGYS00006795,Digestive system,Veillonella,0.501581,False
+MGYS00006795,Digestive system,Barnesiella,0.499795,False
+MGYS00006795,Digestive system,Lactobacillus,0.500486,False
+MGYS00006795,Digestive system,Dialister,0.499251,False
+MGYS00006795,Digestive system,Intestinimonas,0.498007,False
+MGYS00006795,Digestive system,Ruminococcus,0.500208,False
+MGYS00006795,Digestive system,Enterorhabdus,0.503114,False
+MGYS00006795,Digestive system,Moryella,0.498508,False
+MGYS00006795,Digestive system,Methanobrevibacter,0.501351,False
+MGYS00006795,Digestive system,Candidatus_Soleaferrea,0.499230,False
+MGYS00006795,Digestive system,Marvinbryantia,0.497264,False
+MGYS00006795,Digestive system,Fournierella,0.499807,False
+MGYS00006795,Digestive system,Sutterella,0.498156,False
+MGYS00006795,Digestive system,Anaerofilum,0.499675,False
+MGYS00006795,Digestive system,Butyrivibrio,0.501897,False
+MGYS00006795,Digestive system,Bilophila,0.496582,False
+MGYS00006795,Digestive system,Desulfovibrio,0.497392,False
+MGYS00006795,Digestive system,Negativibacillus,0.499267,False
+MGYS00006795,Digestive system,Haemophilus,0.502337,False
+MGYS00006795,Digestive system,Anaerotruncus,0.499272,False
+MGYS00006795,Digestive system,Alloprevotella,0.500055,False
+MGYS00006795,Digestive system,Oscillospira,0.499167,False
+MGYS00006795,Digestive system,Peptococcus,0.503940,True
+MGYS00006795,Digestive system,Catenibacterium,0.499150,False
+MGYS00006795,Digestive system,Papillibacter,0.501210,False
+MGYS00006795,Digestive system,Anaerosporobacter,0.498085,False
+MGYS00006795,Digestive system,Parasutterella,0.497823,False
+MGYS00006795,Digestive system,Holdemania,0.500988,False
+MGYS00006795,Digestive system,Fibrobacter,0.495526,False
+MGYS00006795,Digestive system,Eisenbergiella,0.498499,False
+MGYS00006795,Digestive system,Erysipelatoclostridium,0.501895,False
+MGYS00006795,Digestive system,Atopobium,0.504865,True
+MGYS00006795,Digestive system,Clostridium,0.499366,False
+MGYS00006795,Digestive system,Eubacterium,0.503159,False
+MGYS00006795,Digestive system,Flavonifractor,0.496353,False
+MGYS00006795,Digestive system,Granulicatella,0.499396,False
+MGYS00006795,Digestive system,Lactococcus,0.499025,False
+MGYS00006795,Digestive system,Terrisporobacter,0.500992,False
+MGYS00006795,Digestive system,Turicibacter,0.499286,False
+MGYS00006795,Digestive system,Streptomyces,0.495261,False
+MGYS00006795,Digestive system,Shuttleworthia,0.502961,False
+MGYS00006795,Digestive system,Enterococcus,0.499178,False
+MGYS00006795,Digestive system,Olsenella,0.501143,False
+MGYS00006795,Digestive system,Slackia,0.503773,False
+MGYS00006795,Digestive system,Howardella,0.501377,False
+MGYS00006795,Digestive system,Eggerthella,0.500032,False
+MGYS00006795,Digestive system,Christensenella,0.502154,False
+MGYS00006795,Digestive system,Hydrogenoanaerobacterium,0.501508,False
+MGYS00006795,Digestive system,Coprococcus,0.498606,False
+MGYS00006795,Digestive system,Actinomyces,0.500984,False
+MGYS00006795,Digestive system,Peptoniphilus,0.493784,False
+MGYS00006795,Digestive system,Paraprevotella,0.498761,False
+MGYS00006795,Digestive system,Tyzzerella,0.493201,False
+MGYS00006795,Digestive system,Rothia,0.499527,False
+MGYS00006795,Digestive system,Porphyromonas,0.496764,False
+MGYS00006795,Digestive system,Parvimonas,0.501783,False
+MGYS00006795,Digestive system,Gemella,0.500107,False
+MGYS00006795,Digestive system,Acetanaerobacterium,0.499415,False
+MGYS00006795,Digestive system,Hungatella,0.492503,False
+MGYS00006795,Digestive system,Megamonas,0.494253,False
+MGYS00006795,Digestive system,Ezakiella,0.501975,False
+MGYS00006795,Digestive system,Acinetobacter,0.497069,False
+MGYS00006795,Digestive system,Megasphaera,0.507990,True
+MGYS00006795,Digestive system,Solobacterium,0.504301,True
+MGYS00006795,Digestive system,Dielma,0.498811,False
+MGYS00006795,Digestive system,Saccharofermentans,0.502406,False
+MGYS00006795,Digestive system,Succinivibrio,0.503435,False
+MGYS00006795,Digestive system,Coprobacter,0.499114,False
+MGYS00006795,Digestive system,Klebsiella,0.499538,False
+MGYS00006795,Digestive system,Weissella,0.501787,False
+MGYS00006795,Digestive system,Victivallis,0.504573,True
+MGYS00006795,Digestive system,Cryptobacterium,0.509251,True
+MGYS00006795,Digestive system,Caldicoprobacter,0.499327,False
+MGYS00006795,Digestive system,Phocea,0.503645,False
+MGYS00006795,Digestive system,Ammopiptanthus,0.499286,False
+MGYS00006795,Digestive system,Beduinibacterium,0.500643,False
+MGYS00006795,Digestive system,Anaerofustis,0.504362,True
+MGYS00006795,Digestive system,Libanicoccus,0.504918,True
+MGYS00006795,Digestive system,Paucibacter,0.498574,False
+MGYS00006795,Digestive system,Cetobacterium,0.504109,True
+MGYS00006795,Digestive system,Duodenibacillus,0.501004,False
+MGYS00006795,Digestive system,Fretibacterium,0.495722,False
+MGYS00006795,Digestive system,Fusobacterium,0.499004,False
+MGYS00006795,Digestive system,Gordonibacter,0.500263,False
+MGYS00006795,Digestive system,Oxalobacter,0.496421,False
+MGYS00006795,Digestive system,Colidextribacter,0.500882,False
+MGYS00006795,Digestive system,Tidjanibacter,0.501538,False
+MGYS00006795,Digestive system,Peptostreptococcus,0.497117,False
+MGYS00006795,Digestive system,Intestinibacter,0.500535,False
+MGYS00006795,Digestive system,Mitsuokella,0.501414,False
+MGYS00006795,Digestive system,Escherichia,0.498179,False
+MGYS00006795,Digestive system,Anaeromassilibacillus,0.497276,False
+MGYS00006795,Digestive system,Senegalimassilia,0.504286,True
+MGYS00006795,Digestive system,Succiniclasticum,0.499058,False
+MGYS00006795,Digestive system,Abiotrophia,0.504369,True
+MGYS00006795,Digestive system,Anaeroplasma,0.501813,False
+MGYS00006795,Digestive system,Burkholderia,0.493165,False
+MGYS00006795,Digestive system,Murdochiella,0.501956,False
+MGYS00006795,Digestive system,Herbinix,0.497911,False
+MGYS00006795,Digestive system,Acetitomaculum,0.506626,True
+MGYS00006795,Digestive system,Lutispora,0.496655,False
+MGYS00006795,Digestive system,Allisonella,0.496192,False
+MGYS00006795,Digestive system,Treponema,0.508744,True
+MGYS00006795,Digestive system,Pseudomonas,0.500830,False
+MGYS00006795,Digestive system,Sphingomonas,0.496883,False
+MGYS00006795,Digestive system,Anaerococcus,0.498739,False
+MGYS00006795,Digestive system,Caproiciproducens,0.498456,False
+MGYS00006795,Digestive system,Angelakisella,0.503379,False
+MGYS00006795,Digestive system,Leuconostoc,0.500967,False
+MGYS00006795,Digestive system,Paracoccus,0.507391,True
+MGYS00006795,Digestive system,Marseillibacter,0.502792,False
+MGYS00006795,Digestive system,Mogibacterium,0.497152,False
+MGYS00006795,Digestive system,Neisseria,0.495571,False
+MGYS00006795,Digestive system,Campylobacter,0.497063,False
+MGYS00006795,Digestive system,Coprobacillus,0.499800,False
+MGYS00006795,Digestive system,Enterobacter,0.498703,False
+MGYS00006795,Digestive system,Epulopiscium,0.503403,False
+MGYS00006795,Digestive system,Clostridioides,0.501120,False
+MGYS00006795,Digestive system,Citrobacter,0.498342,False
+MGYS00006795,Digestive system,Aerococcus,0.499663,False
+MGYS00006795,Digestive system,Asteroleplasma,0.506719,True
+MGYS00006795,Digestive system,Buttiauxella,0.498840,False
+MGYS00006795,Digestive system,Faecalitalea,0.498261,False
+MGYS00006755,Digestive system,Blautia,0.500000,True
+MGYS00006755,Digestive system,Roseburia,0.500000,True
+MGYS00006755,Digestive system,Lachnoclostridium,0.500000,True
+MGYS00006755,Digestive system,Marvinbryantia,0.500000,True
+MGYS00006755,Digestive system,Fibrobacter,0.500000,True
+MGYS00006755,Digestive system,Alloprevotella,0.500000,True
+MGYS00006755,Digestive system,Ruminiclostridium,0.500000,True
+MGYS00006755,Digestive system,Anaerovorax,0.500000,True
+MGYS00006755,Digestive system,Methanobrevibacter,0.500000,True
+MGYS00006755,Digestive system,Oscillibacter,0.500000,True
+MGYS00006755,Digestive system,Papillibacter,0.500000,True
+MGYS00006755,Digestive system,Phascolarctobacterium,0.500000,True
+MGYS00006755,Digestive system,Acetitomaculum,0.500000,True
+MGYS00006755,Digestive system,Treponema,0.500000,True
+MGYS00006755,Digestive system,Desulfovibrio,0.500000,True
+MGYS00006755,Digestive system,Enterorhabdus,0.500000,True
+MGYS00006755,Digestive system,Oribacterium,0.500000,True
+MGYS00006755,Digestive system,Lactobacillus,0.500000,True
+MGYS00006755,Digestive system,Faecalibacterium,0.500000,True
+MGYS00006755,Digestive system,Candidatus_Soleaferrea,0.500000,True
+MGYS00006755,Digestive system,Saccharofermentans,0.500000,True
+MGYS00006755,Digestive system,Mailhella,0.500000,True
+MGYS00006755,Digestive system,Anaerovibrio,0.500000,True
+MGYS00006755,Digestive system,Anaeroplasma,0.500000,True
+MGYS00006755,Digestive system,Mogibacterium,0.500000,True
+MGYS00006755,Digestive system,Elusimicrobium,0.500000,True
+MGYS00006755,Digestive system,Anaerostipes,0.500000,True
+MGYS00006755,Digestive system,Bacteroides,0.500000,True
+MGYS00006755,Digestive system,Butyrivibrio,0.500000,True
+MGYS00006755,Digestive system,Anaerosporobacter,0.500000,True
+MGYS00006755,Digestive system,Akkermansia,0.500000,True
+MGYS00006755,Digestive system,Agathobacter,0.500000,True
+MGYS00006755,Digestive system,Anaerofustis,0.500000,True
+MGYS00006755,Digestive system,Dorea,0.500000,True
+MGYS00006755,Digestive system,Pyramidobacter,0.500000,True
+MGYS00006755,Digestive system,Ruminococcus,0.500000,True
+MGYS00006755,Digestive system,Streptococcus,0.500000,True
+MGYS00006755,Digestive system,Solobacterium,0.500000,True
+MGYS00006755,Digestive system,Subdoligranulum,0.500000,True
+MGYS00006755,Digestive system,Sutterella,0.500000,True
+MGYS00006755,Digestive system,Caldicoprobacter,0.500000,True
+MGYS00006755,Digestive system,Eubacterium,0.500000,True
+MGYS00006755,Digestive system,Flexilinea,0.500000,True
+MGYS00006755,Digestive system,Oscillospira,0.500000,True
+MGYS00006755,Digestive system,Clostridium,0.500000,True
+MGYS00006755,Digestive system,Shuttleworthia,0.500000,True
+MGYS00006755,Digestive system,Campylobacter,0.500000,True
+MGYS00006755,Digestive system,Methanosphaera,0.500000,True
+MGYS00006755,Digestive system,Syntrophococcus,0.500000,True
+MGYS00006755,Digestive system,Eisenbergiella,0.500000,True
+MGYS00006755,Digestive system,Lachnospira,0.500000,True
+MGYS00006755,Digestive system,Hydrogenoanaerobacterium,0.500000,True
+MGYS00006755,Digestive system,Peptococcus,0.500000,True
+MGYS00006755,Digestive system,Succinivibrio,0.500000,True
+MGYS00006755,Digestive system,Tyzzerella,0.500000,True
+MGYS00006755,Digestive system,Alistipes,0.500000,True
+MGYS00006755,Digestive system,Bilophila,0.500000,True
+MGYS00006755,Digestive system,Succiniclasticum,0.500000,True
+MGYS00006755,Digestive system,Erysipelatoclostridium,0.500000,True
+MGYS00006755,Digestive system,Fretibacterium,0.500000,True
+MGYS00006755,Digestive system,Moryella,0.500000,True
+MGYS00006755,Digestive system,Cellulosilyticum,0.500000,True
+MGYS00006755,Digestive system,Pygmaiobacter,0.500000,True
+MGYS00006755,Digestive system,Intestinimonas,0.500000,True
+MGYS00006755,Digestive system,Romboutsia,0.500000,True
+MGYS00006755,Digestive system,Catenisphaera,0.500000,True
+MGYS00006755,Digestive system,Ruminobacter,0.500000,True
+MGYS00006755,Digestive system,Prevotella,0.500000,True
+MGYS00006755,Digestive system,Parabacteroides,0.500000,True
+MGYS00006755,Digestive system,Sarcina,0.500000,True
+MGYS00006755,Digestive system,Sediminispirochaeta,0.500000,True
+MGYS00006755,Digestive system,Methanocorpusculum,0.500000,True
+MGYS00006755,Digestive system,Mycoplasma,0.500000,True
+MGYS00006755,Digestive system,Candidatus_Methanomethylophilus,0.500000,True
+MGYS00006755,Digestive system,Turicibacter,0.500000,True
+MGYS00006755,Digestive system,Negativibacillus,0.500000,True
+MGYS00006755,Digestive system,Quinella,0.500000,True
+MGYS00006755,Digestive system,Sphaerochaeta,0.500000,True
+MGYS00006755,Digestive system,Fusicatenibacter,0.500000,True
+MGYS00006755,Digestive system,Synergistes,0.500000,True
+MGYS00006755,Digestive system,Butyricicoccus,0.500000,True
+MGYS00006755,Digestive system,Bifidobacterium,0.500000,True
+MGYS00006755,Digestive system,Candidatus_Saccharimonas,0.500000,True
+MGYS00006755,Digestive system,Paucibacter,0.500000,True
+MGYS00006755,Digestive system,Parasutterella,0.500000,True
+MGYS00006755,Digestive system,Faecalitalea,0.500000,True
+MGYS00006755,Digestive system,Brachyspira,0.500000,True
+MGYS00006755,Digestive system,Victivallis,0.500000,True
+MGYS00006755,Digestive system,Phoenicibacter,0.500000,True
+MGYS00006755,Digestive system,Atopobium,0.500000,True
+MGYS00006755,Digestive system,Robinsoniella,0.500000,True
+MGYS00006755,Digestive system,Cerasicoccus,0.500000,True
+MGYS00006755,Digestive system,Weissella,0.500000,True
+MGYS00006755,Digestive system,Veillonella,0.500000,True
+MGYS00006755,Digestive system,Olsenella,0.500000,True
+MGYS00006755,Digestive system,Megasphaera,0.500000,True
+MGYS00006755,Digestive system,Methanimicrococcus,0.500000,True
+MGYS00006755,Digestive system,Caproiciproducens,0.500000,True
+MGYS00006755,Digestive system,Breznakia,0.500000,True
+MGYS00006755,Digestive system,Mucinivorans,0.500000,True
+MGYS00006755,Digestive system,Dialister,0.500000,True
+MGYS00006755,Digestive system,Helicobacter,0.500000,True
+MGYS00006755,Digestive system,Acinetobacter,0.500000,True
+MGYS00006755,Digestive system,Holdemanella,0.500000,True
+MGYS00006755,Digestive system,Odoribacter,0.500000,True
+MGYS00006755,Digestive system,Fournierella,0.500000,True
+MGYS00006755,Digestive system,Syntrophomonas,0.500000,True
+MGYS00006755,Digestive system,Sphingomonas,0.500000,True
+MGYS00006755,Digestive system,Angelakisella,0.500000,True
+MGYS00006755,Digestive system,Terrisporobacter,0.500000,True
+MGYS00006755,Digestive system,Enterococcus,0.500000,True
+MGYS00006755,Digestive system,Catenibacterium,0.500000,True
+MGYS00006755,Digestive system,Bacillus,0.500000,True
+MGYS00006755,Digestive system,Intestinibacter,0.500000,True
+MGYS00006755,Digestive system,Acidaminococcus,0.500000,True
+MGYS00006755,Digestive system,Desulfurispora,0.500000,True
+MGYS00006755,Digestive system,Paludibacter,0.500000,True
+MGYS00006755,Digestive system,Paraprevotella,0.500000,True
+MGYS00006755,Digestive system,Butyricimonas,0.500000,True
+MGYS00006755,Digestive system,Pseudoramibacter,0.500000,True
+MGYS00006755,Digestive system,Anaerotruncus,0.500000,True
+MGYS00006755,Digestive system,Allisonella,0.500000,True
+MGYS00006755,Digestive system,Acetivibrio,0.500000,True
+MGYS00006755,Digestive system,Mitsuokella,0.500000,True
+MGYS00006755,Digestive system,Candidatus_Stoquefichus,0.500000,True
+MGYS00006755,Digestive system,Dielma,0.500000,True
+MGYS00006755,Digestive system,Enterobacter,0.500000,True
+MGYS00006755,Digestive system,Actinomyces,0.500000,True
+MGYS00006755,Digestive system,Candidatus_Methanoplasma,0.500000,True
+MGYS00006755,Digestive system,Corynebacterium,0.500000,True
+MGYS00006755,Digestive system,Desulfobulbus,0.500000,True
+MGYS00006755,Digestive system,Fusobacterium,0.500000,True
+MGYS00006755,Digestive system,Coxiella,0.500000,True
+MGYS00006755,Digestive system,Collinsella,0.500000,True
+MGYS00006755,Digestive system,Slackia,0.500000,True
+MGYS00006755,Digestive system,Selenomonas,0.500000,True
+MGYS00006755,Digestive system,Oxalobacter,0.500000,True
+MGYS00006755,Digestive system,Anaerobiospirillum,0.500000,True
+MGYS00006755,Digestive system,Tetratrichomonas,0.500000,True
+MGYS00006755,Digestive system,Holdemania,0.500000,True
+MGYS00006755,Digestive system,Howardella,0.500000,True
+MGYS00006755,Digestive system,Flavobacterium,0.500000,True
+MGYS00006755,Digestive system,Nitrosomonas,0.500000,True
+MGYS00006755,Digestive system,Hungatella,0.500000,True
+MGYS00006755,Digestive system,Paenibacillus,0.500000,True
+MGYS00006755,Digestive system,Leuconostoc,0.500000,True
+MGYS00006755,Digestive system,Clostridioides,0.500000,True
+MGYS00006755,Digestive system,Pseudomonas,0.500000,True
+MGYS00006755,Digestive system,Medicago,0.500000,True
+MGYS00006755,Digestive system,Kocuria,0.500000,True
+MGYS00006006,Digestive system,Actinomyces,0.490766,False
+MGYS00006006,Digestive system,Agathobacter,0.503100,False
+MGYS00006006,Digestive system,Akkermansia,0.496519,False
+MGYS00006006,Digestive system,Alistipes,0.500819,False
+MGYS00006006,Digestive system,Alloprevotella,0.501381,False
+MGYS00006006,Digestive system,Anaeroplasma,0.497181,False
+MGYS00006006,Digestive system,Anaerostipes,0.495916,False
+MGYS00006006,Digestive system,Anaerovibrio,0.499710,False
+MGYS00006006,Digestive system,Asteroleplasma,0.503291,False
+MGYS00006006,Digestive system,Bacteroides,0.501981,False
+MGYS00006006,Digestive system,Bifidobacterium,0.506398,True
+MGYS00006006,Digestive system,Bilophila,0.494021,False
+MGYS00006006,Digestive system,Blastocystis,0.503251,False
+MGYS00006006,Digestive system,Blautia,0.506571,True
+MGYS00006006,Digestive system,Brachyspira,0.501711,False
+MGYS00006006,Digestive system,Butyricicoccus,0.498154,False
+MGYS00006006,Digestive system,Butyricimonas,0.497673,False
+MGYS00006006,Digestive system,Butyrivibrio,0.500712,False
+MGYS00006006,Digestive system,Campylobacter,0.503166,False
+MGYS00006006,Digestive system,Candidatus_Ancillula,0.497285,False
+MGYS00006006,Digestive system,Candidatus_Methanoplasma,0.494493,False
+MGYS00006006,Digestive system,Candidatus_Soleaferrea,0.498180,False
+MGYS00006006,Digestive system,Catenibacterium,0.497450,False
+MGYS00006006,Digestive system,Clostridium,0.496793,False
+MGYS00006006,Digestive system,Collinsella,0.518313,True
+MGYS00006006,Digestive system,Cytophaga,0.498095,False
+MGYS00006006,Digestive system,Desulfosporosinus,0.497030,False
+MGYS00006006,Digestive system,Desulfovibrio,0.498727,False
+MGYS00006006,Digestive system,Dialister,0.501871,False
+MGYS00006006,Digestive system,Dientamoeba,0.497030,False
+MGYS00006006,Digestive system,Dorea,0.501232,False
+MGYS00006006,Digestive system,Duodenibacillus,0.496731,False
+MGYS00006006,Digestive system,Elusimicrobium,0.500552,False
+MGYS00006006,Digestive system,Enterococcus,0.488306,False
+MGYS00006006,Digestive system,Enterorhabdus,0.499964,False
+MGYS00006006,Digestive system,Erysipelatoclostridium,0.497545,False
+MGYS00006006,Digestive system,Eubacterium,0.503146,False
+MGYS00006006,Digestive system,Faecalibacterium,0.515173,True
+MGYS00006006,Digestive system,Faecalibaculum,0.497104,False
+MGYS00006006,Digestive system,Fastidiosipila,0.500637,False
+MGYS00006006,Digestive system,Fibrobacter,0.497711,False
+MGYS00006006,Digestive system,Fournierella,0.502501,False
+MGYS00006006,Digestive system,Fusicatenibacter,0.502836,False
+MGYS00006006,Digestive system,Fusobacterium,0.503972,False
+MGYS00006006,Digestive system,Giardia,0.495525,False
+MGYS00006006,Digestive system,Haemophilus,0.504591,True
+MGYS00006006,Digestive system,Helicobacter,0.500430,False
+MGYS00006006,Digestive system,Holdemanella,0.505360,True
+MGYS00006006,Digestive system,Howardella,0.497618,False
+MGYS00006006,Digestive system,Intestinibacter,0.493080,False
+MGYS00006006,Digestive system,Lachnoclostridium,0.499887,False
+MGYS00006006,Digestive system,Lachnospira,0.498016,False
+MGYS00006006,Digestive system,Lactobacillus,0.508378,True
+MGYS00006006,Digestive system,Lactococcus,0.493434,False
+MGYS00006006,Digestive system,Libanicoccus,0.502162,False
+MGYS00006006,Digestive system,Marseillibacter,0.499618,False
+MGYS00006006,Digestive system,Marvinbryantia,0.500941,False
+MGYS00006006,Digestive system,Massiliprevotella,0.488787,False
+MGYS00006006,Digestive system,Medicago,0.500667,False
+MGYS00006006,Digestive system,Megasphaera,0.503221,False
+MGYS00006006,Digestive system,Methanobrevibacter,0.502265,False
+MGYS00006006,Digestive system,Methanosphaera,0.490350,False
+MGYS00006006,Digestive system,Mitsuokella,0.495184,False
+MGYS00006006,Digestive system,Mogibacterium,0.495935,False
+MGYS00006006,Digestive system,Mycoplasma,0.499250,False
+MGYS00006006,Digestive system,Negativibacillus,0.495836,False
+MGYS00006006,Digestive system,Odoribacter,0.503636,False
+MGYS00006006,Digestive system,Olsenella,0.499877,False
+MGYS00006006,Digestive system,Oribacterium,0.501149,False
+MGYS00006006,Digestive system,Oscillibacter,0.494853,False
+MGYS00006006,Digestive system,Oscillospira,0.491271,False
+MGYS00006006,Digestive system,Oxalobacter,0.499200,False
+MGYS00006006,Digestive system,Parabacteroides,0.502495,False
+MGYS00006006,Digestive system,Paucibacter,0.501458,False
+MGYS00006006,Digestive system,Peptococcus,0.492027,False
+MGYS00006006,Digestive system,Phascolarctobacterium,0.505428,True
+MGYS00006006,Digestive system,Planococcus,0.493624,False
+MGYS00006006,Digestive system,Prevotella,0.495783,False
+MGYS00006006,Digestive system,Prevotellamassilia,0.495242,False
+MGYS00006006,Digestive system,Pseudomonas,0.495869,False
+MGYS00006006,Digestive system,Rikenella,0.497300,False
+MGYS00006006,Digestive system,Romboutsia,0.500082,False
+MGYS00006006,Digestive system,Roseburia,0.501508,False
+MGYS00006006,Digestive system,Rothia,0.502347,False
+MGYS00006006,Digestive system,Ruminobacter,0.497755,False
+MGYS00006006,Digestive system,Ruminococcus,0.499525,False
+MGYS00006006,Digestive system,Saccharofermentans,0.490583,False
+MGYS00006006,Digestive system,Sarcina,0.499030,False
+MGYS00006006,Digestive system,Senegalimassilia,0.502734,False
+MGYS00006006,Digestive system,Sinorhizobium,0.492252,False
+MGYS00006006,Digestive system,Slackia,0.500364,False
+MGYS00006006,Digestive system,Solobacterium,0.504581,True
+MGYS00006006,Digestive system,Sphaerochaeta,0.499131,False
+MGYS00006006,Digestive system,Streptococcus,0.506515,True
+MGYS00006006,Digestive system,Streptomyces,0.498573,False
+MGYS00006006,Digestive system,Subdoligranulum,0.503714,False
+MGYS00006006,Digestive system,Succinivibrio,0.505662,True
+MGYS00006006,Digestive system,Sutterella,0.499873,False
+MGYS00006006,Digestive system,Terrisporobacter,0.496576,False
+MGYS00006006,Digestive system,Tetratrichomonas,0.493036,False
+MGYS00006006,Digestive system,Treponema,0.501538,False
+MGYS00006006,Digestive system,Turicibacter,0.495153,False
+MGYS00006006,Digestive system,Tyzzerella,0.496487,False
+MGYS00006006,Digestive system,Veillonella,0.488721,False
+MGYS00006006,Digestive system,Victivallis,0.492165,False
+MGYS00006006,Digestive system,Weissella,0.495109,False
+MGYS00002238,Digestive system,Abiotrophia,0.500000,True
+MGYS00002238,Digestive system,Acholeplasma,0.500000,True
+MGYS00002238,Digestive system,Acinetobacter,0.500000,True
+MGYS00002238,Digestive system,Actinobacillus,0.500000,True
+MGYS00002238,Digestive system,Actinobaculum,0.500000,True
+MGYS00002238,Digestive system,Actinomyces,0.500000,True
+MGYS00002238,Digestive system,Aestuariimicrobium,0.500000,True
+MGYS00002238,Digestive system,Aggregatibacter,0.500000,True
+MGYS00002238,Digestive system,Alistipes,0.500000,True
+MGYS00002238,Digestive system,Alloprevotella,0.500000,True
+MGYS00002238,Digestive system,Alysiella,0.500000,True
+MGYS00002238,Digestive system,Ammopiptanthus,0.500000,True
+MGYS00002238,Digestive system,Anaerococcus,0.500000,True
+MGYS00002238,Digestive system,Anaeroglobus,0.500000,True
+MGYS00002238,Digestive system,Anaerostipes,0.500000,True
+MGYS00002238,Digestive system,Anoxybacillus,0.500000,True
+MGYS00002238,Digestive system,Arthrobacter,0.500000,True
+MGYS00002238,Digestive system,Atopobium,0.500000,True
+MGYS00002238,Digestive system,Bacillus,0.500000,True
+MGYS00002238,Digestive system,Bacteroides,0.500000,True
+MGYS00002238,Digestive system,Bergeyella,0.500000,True
+MGYS00002238,Digestive system,Bifidobacterium,0.500000,True
+MGYS00002238,Digestive system,Blautia,0.500000,True
+MGYS00002238,Digestive system,Bradyrhizobium,0.500000,True
+MGYS00002238,Digestive system,Bulleidia,0.500000,True
+MGYS00002238,Digestive system,Campylobacter,0.500000,True
+MGYS00002238,Digestive system,Candidatus_Saccharimonas,0.500000,True
+MGYS00002238,Digestive system,Capnocytophaga,0.500000,True
+MGYS00002238,Digestive system,Cardiobacterium,0.500000,True
+MGYS00002238,Digestive system,Carnobacterium,0.500000,True
+MGYS00002238,Digestive system,Catonella,0.500000,True
+MGYS00002238,Digestive system,Centipeda,0.500000,True
+MGYS00002238,Digestive system,Chitinophaga,0.500000,True
+MGYS00002238,Digestive system,Chlamydia,0.500000,True
+MGYS00002238,Digestive system,Chryseobacterium,0.500000,True
+MGYS00002238,Digestive system,Clostridium,0.500000,True
+MGYS00002238,Digestive system,Comamonas,0.500000,True
+MGYS00002238,Digestive system,Corynebacterium,0.500000,True
+MGYS00002238,Digestive system,Cryptobacterium,0.500000,True
+MGYS00002238,Digestive system,Cutibacterium,0.500000,True
+MGYS00002238,Digestive system,Deinococcus,0.500000,True
+MGYS00002238,Digestive system,Dialister,0.500000,True
+MGYS00002238,Digestive system,Dolosigranulum,0.500000,True
+MGYS00002238,Digestive system,Dorea,0.500000,True
+MGYS00002238,Digestive system,Eggerthia,0.500000,True
+MGYS00002238,Digestive system,Eikenella,0.500000,True
+MGYS00002238,Digestive system,Enterococcus,0.500000,True
+MGYS00002238,Digestive system,Eubacterium,0.500000,True
+MGYS00002238,Digestive system,Faecalibacterium,0.500000,True
+MGYS00002238,Digestive system,Fastidiosipila,0.500000,True
+MGYS00002238,Digestive system,Filifactor,0.500000,True
+MGYS00002238,Digestive system,Flavobacterium,0.500000,True
+MGYS00002238,Digestive system,Fretibacterium,0.500000,True
+MGYS00002238,Digestive system,Fusobacterium,0.500000,True
+MGYS00002238,Digestive system,Gemella,0.500000,True
+MGYS00002238,Digestive system,Geobacillus,0.500000,True
+MGYS00002238,Digestive system,Georgenia,0.500000,True
+MGYS00002238,Digestive system,Granulicatella,0.500000,True
+MGYS00002238,Digestive system,Haemophilus,0.500000,True
+MGYS00002238,Digestive system,Helcococcus,0.500000,True
+MGYS00002238,Digestive system,Helicobacter,0.500000,True
+MGYS00002238,Digestive system,Johnsonella,0.500000,True
+MGYS00002238,Digestive system,Kingella,0.500000,True
+MGYS00002238,Digestive system,Lachnoanaerobaculum,0.500000,True
+MGYS00002238,Digestive system,Lachnoclostridium,0.500000,True
+MGYS00002238,Digestive system,Lactobacillus,0.500000,True
+MGYS00002238,Digestive system,Lactococcus,0.500000,True
+MGYS00002238,Digestive system,Lautropia,0.500000,True
+MGYS00002238,Digestive system,Leptotrichia,0.500000,True
+MGYS00002238,Digestive system,Leuconostoc,0.500000,True
+MGYS00002238,Digestive system,Massilia,0.500000,True
+MGYS00002238,Digestive system,Medicago,0.500000,True
+MGYS00002238,Digestive system,Megasphaera,0.500000,True
+MGYS00002238,Digestive system,Methyloversatilis,0.500000,True
+MGYS00002238,Digestive system,Mogibacterium,0.500000,True
+MGYS00002238,Digestive system,Moraxella,0.500000,True
+MGYS00002238,Digestive system,Mycoplasma,0.500000,True
+MGYS00002238,Digestive system,Neisseria,0.500000,True
+MGYS00002238,Digestive system,Olsenella,0.500000,True
+MGYS00002238,Digestive system,Oribacterium,0.500000,True
+MGYS00002238,Digestive system,Oscillibacter,0.500000,True
+MGYS00002238,Digestive system,Parvimonas,0.500000,True
+MGYS00002238,Digestive system,Paucibacter,0.500000,True
+MGYS00002238,Digestive system,Peptococcus,0.500000,True
+MGYS00002238,Digestive system,Peptostreptococcus,0.500000,True
+MGYS00002238,Digestive system,Porphyromonas,0.500000,True
+MGYS00002238,Digestive system,Prevotella,0.500000,True
+MGYS00002238,Digestive system,Propionibacterium,0.500000,True
+MGYS00002238,Digestive system,Propionivibrio,0.500000,True
+MGYS00002238,Digestive system,Pseudomonas,0.500000,True
+MGYS00002238,Digestive system,Pseudopropionibacterium,0.500000,True
+MGYS00002238,Digestive system,Pseudoramibacter,0.500000,True
+MGYS00002238,Digestive system,Psychrobacter,0.500000,True
+MGYS00002238,Digestive system,Romboutsia,0.500000,True
+MGYS00002238,Digestive system,Roseburia,0.500000,True
+MGYS00002238,Digestive system,Rothia,0.500000,True
+MGYS00002238,Digestive system,Ruminiclostridium,0.500000,True
+MGYS00002238,Digestive system,Selenomonas,0.500000,True
+MGYS00002238,Digestive system,Shuttleworthia,0.500000,True
+MGYS00002238,Digestive system,Simonsiella,0.500000,True
+MGYS00002238,Digestive system,Slackia,0.500000,True
+MGYS00002238,Digestive system,Solobacterium,0.500000,True
+MGYS00002238,Digestive system,Sphingomonas,0.500000,True
+MGYS00002238,Digestive system,Staphylococcus,0.500000,True
+MGYS00002238,Digestive system,Stomatobaculum,0.500000,True
+MGYS00002238,Digestive system,Streptobacillus,0.500000,True
+MGYS00002238,Digestive system,Streptococcus,0.500000,True
+MGYS00002238,Digestive system,Streptomyces,0.500000,True
+MGYS00002238,Digestive system,Tannerella,0.500000,True
+MGYS00002238,Digestive system,Treponema,0.500000,True
+MGYS00002238,Digestive system,Veillonella,0.500000,True
+MGYS00005253,Oral,Abiotrophia,0.500000,True
+MGYS00005253,Oral,Acidibacter,0.500000,True
+MGYS00005253,Oral,Acinetobacter,0.500000,True
+MGYS00005253,Oral,Actinomyces,0.500000,True
+MGYS00005253,Oral,Aggregatibacter,0.500000,True
+MGYS00005253,Oral,Alloprevotella,0.500000,True
+MGYS00005253,Oral,Anaerococcus,0.500000,True
+MGYS00005253,Oral,Asinibacterium,0.500000,True
+MGYS00005253,Oral,Atopobium,0.500000,True
+MGYS00005253,Oral,Bacillus,0.500000,True
+MGYS00005253,Oral,Bacteroides,0.500000,True
+MGYS00005253,Oral,Bergeyella,0.500000,True
+MGYS00005253,Oral,Bifidobacterium,0.500000,True
+MGYS00005253,Oral,Bradyrhizobium,0.500000,True
+MGYS00005253,Oral,Burkholderia,0.500000,True
+MGYS00005253,Oral,Campylobacter,0.500000,True
+MGYS00005253,Oral,Candidatus_Saccharimonas,0.500000,True
+MGYS00005253,Oral,Capnocytophaga,0.500000,True
+MGYS00005253,Oral,Cardiobacterium,0.500000,True
+MGYS00005253,Oral,Catonella,0.500000,True
+MGYS00005253,Oral,Caulobacter,0.500000,True
+MGYS00005253,Oral,Chlamydia,0.500000,True
+MGYS00005253,Oral,Conchiformibius,0.500000,True
+MGYS00005253,Oral,Corynebacterium,0.500000,True
+MGYS00005253,Oral,Dialister,0.500000,True
+MGYS00005253,Oral,Dolosigranulum,0.500000,True
+MGYS00005253,Oral,Dyella,0.500000,True
+MGYS00005253,Oral,Eikenella,0.500000,True
+MGYS00005253,Oral,Enterococcus,0.500000,True
+MGYS00005253,Oral,Fastidiosipila,0.500000,True
+MGYS00005253,Oral,Filifactor,0.500000,True
+MGYS00005253,Oral,Fusobacterium,0.500000,True
+MGYS00005253,Oral,Gemella,0.500000,True
+MGYS00005253,Oral,Granulicatella,0.500000,True
+MGYS00005253,Oral,Haemophilus,0.500000,True
+MGYS00005253,Oral,Johnsonella,0.500000,True
+MGYS00005253,Oral,Kingella,0.500000,True
+MGYS00005253,Oral,Lachnoanaerobaculum,0.500000,True
+MGYS00005253,Oral,Lactobacillus,0.500000,True
+MGYS00005253,Oral,Lactococcus,0.500000,True
+MGYS00005253,Oral,Lautropia,0.500000,True
+MGYS00005253,Oral,Leptotrichia,0.500000,True
+MGYS00005253,Oral,Megasphaera,0.500000,True
+MGYS00005253,Oral,Methylobacterium,0.500000,True
+MGYS00005253,Oral,Mogibacterium,0.500000,True
+MGYS00005253,Oral,Moraxella,0.500000,True
+MGYS00005253,Oral,Mycobacterium,0.500000,True
+MGYS00005253,Oral,Mycoplasma,0.500000,True
+MGYS00005253,Oral,Neisseria,0.500000,True
+MGYS00005253,Oral,Olsenella,0.500000,True
+MGYS00005253,Oral,Oribacterium,0.500000,True
+MGYS00005253,Oral,Pajaroellobacter,0.500000,True
+MGYS00005253,Oral,Paracoccus,0.500000,True
+MGYS00005253,Oral,Parvimonas,0.500000,True
+MGYS00005253,Oral,Pasteurella,0.500000,True
+MGYS00005253,Oral,Paucibacter,0.500000,True
+MGYS00005253,Oral,Peptoniphilus,0.500000,True
+MGYS00005253,Oral,Peptostreptococcus,0.500000,True
+MGYS00005253,Oral,Porphyromonas,0.500000,True
+MGYS00005253,Oral,Prevotella,0.500000,True
+MGYS00005253,Oral,Pseudomonas,0.500000,True
+MGYS00005253,Oral,Ralstonia,0.500000,True
+MGYS00005253,Oral,Rhizobium,0.500000,True
+MGYS00005253,Oral,Rhodococcus,0.500000,True
+MGYS00005253,Oral,Rothia,0.500000,True
+MGYS00005253,Oral,Sediminibacterium,0.500000,True
+MGYS00005253,Oral,Selenomonas,0.500000,True
+MGYS00005253,Oral,Simonsiella,0.500000,True
+MGYS00005253,Oral,Slackia,0.500000,True
+MGYS00005253,Oral,Solobacterium,0.500000,True
+MGYS00005253,Oral,Sphingomonas,0.500000,True
+MGYS00005253,Oral,Staphylococcus,0.500000,True
+MGYS00005253,Oral,Stenotrophomonas,0.500000,True
+MGYS00005253,Oral,Stomatobaculum,0.500000,True
+MGYS00005253,Oral,Streptobacillus,0.500000,True
+MGYS00005253,Oral,Streptococcus,0.500000,True
+MGYS00005253,Oral,Streptomyces,0.500000,True
+MGYS00005253,Oral,Tannerella,0.500000,True
+MGYS00005253,Oral,Treponema,0.500000,True
+MGYS00005253,Oral,Turicibacter,0.500000,True
+MGYS00005253,Oral,Undibacterium,0.500000,True
+MGYS00005253,Oral,Veillonella,0.500000,True
+MGYS00005253,Oral,Vibrio,0.500000,True
+MGYS00006276,Oral,Actinomyces,0.500000,True
+MGYS00006276,Oral,Atopobium,0.500000,True
+MGYS00006276,Oral,Campylobacter,0.500000,True
+MGYS00006276,Oral,Neisseria,0.500000,True
+MGYS00006276,Oral,Haemophilus,0.500000,True
+MGYS00006276,Oral,Leptotrichia,0.500000,True
+MGYS00006276,Oral,Gemella,0.500000,True
+MGYS00006276,Oral,Granulicatella,0.500000,True
+MGYS00006276,Oral,Rothia,0.500000,True
+MGYS00006276,Oral,Selenomonas,0.500000,True
+MGYS00006276,Oral,Streptococcus,0.500000,True
+MGYS00006276,Oral,Veillonella,0.500000,True
+MGYS00006276,Oral,Prevotella,0.500000,True
+MGYS00006276,Oral,Porphyromonas,0.500000,True
+MGYS00006276,Oral,Capnocytophaga,0.500000,True
+MGYS00006276,Oral,Cardiobacterium,0.500000,True
+MGYS00006276,Oral,Fusobacterium,0.500000,True
+MGYS00006276,Oral,Eikenella,0.500000,True
+MGYS00006276,Oral,Parvimonas,0.500000,True
+MGYS00006276,Oral,Megasphaera,0.500000,True
+MGYS00006276,Oral,Lautropia,0.500000,True
+MGYS00006276,Oral,Solobacterium,0.500000,True
+MGYS00006276,Oral,Dialister,0.500000,True
+MGYS00006276,Oral,Kingella,0.500000,True
+MGYS00006276,Oral,Peptostreptococcus,0.500000,True
+MGYS00006276,Oral,Corynebacterium,0.500000,True
+MGYS00006276,Oral,Fastidiosipila,0.500000,True
+MGYS00006276,Oral,Bergeyella,0.500000,True
+MGYS00006276,Oral,Pseudopropionibacterium,0.500000,True
+MGYS00006276,Oral,Olsenella,0.500000,True
+MGYS00006276,Oral,Oribacterium,0.500000,True
+MGYS00006276,Oral,Tannerella,0.500000,True
+MGYS00006276,Oral,Fretibacterium,0.500000,True
+MGYS00006276,Oral,Stomatobaculum,0.500000,True
+MGYS00006276,Oral,Georgenia,0.500000,True
+MGYS00006276,Oral,Aggregatibacter,0.500000,True
+MGYS00006276,Oral,Catonella,0.500000,True
+MGYS00006276,Oral,Alloprevotella,0.500000,True
+MGYS00006276,Oral,Slackia,0.500000,True
+MGYS00006276,Oral,Blautia,0.500000,True
+MGYS00006276,Oral,Bifidobacterium,0.500000,True
+MGYS00006276,Oral,Anaerostipes,0.500000,True
+MGYS00006276,Oral,Lactobacillus,0.500000,True
+MGYS00006276,Oral,Johnsonella,0.500000,True
+MGYS00006276,Oral,Comamonas,0.500000,True
+MGYS00006276,Oral,Candidatus_Saccharimonas,0.500000,True
+MGYS00006276,Oral,Mogibacterium,0.500000,True
+MGYS00006276,Oral,Shuttleworthia,0.500000,True
+MGYS00006276,Oral,Lachnoanaerobaculum,0.500000,True
+MGYS00006276,Oral,Filifactor,0.500000,True
+MGYS00006276,Oral,Treponema,0.500000,True
+MGYS00006276,Oral,Abiotrophia,0.500000,True
+MGYS00006276,Oral,Bacillus,0.500000,True
+MGYS00006276,Oral,Bacteroides,0.500000,True
+MGYS00006276,Oral,Dolosigranulum,0.500000,True
+MGYS00006276,Oral,Streptomyces,0.500000,True
+MGYS00006276,Oral,Cutibacterium,0.500000,True
+MGYS00006276,Oral,Paucibacter,0.500000,True
+MGYS00006276,Oral,Enterococcus,0.500000,True
+MGYS00006276,Oral,Cryptobacterium,0.500000,True
+MGYS00006276,Oral,Eubacterium,0.500000,True
+MGYS00006276,Oral,Anaeroglobus,0.500000,True
+MGYS00006276,Oral,Propionibacterium,0.500000,True
+MGYS00006276,Oral,Desulfobulbus,0.500000,True
+MGYS00006276,Oral,Staphylococcus,0.500000,True
+MGYS00006276,Oral,Pseudomonas,0.500000,True
+MGYS00006276,Oral,Lactovum,0.500000,True
+MGYS00006276,Oral,Methylobacterium,0.500000,True
+MGYS00006276,Oral,Lactococcus,0.500000,True
+MGYS00006276,Oral,Peptococcus,0.500000,True
+MGYS00006276,Oral,Sphingomonas,0.500000,True
+MGYS00006276,Oral,Chryseobacterium,0.500000,True
+MGYS00006276,Oral,Simonsiella,0.500000,True
+MGYS00006276,Oral,Parascardovia,0.500000,True
+MGYS00006276,Oral,Ammopiptanthus,0.500000,True
+MGYS00006276,Oral,Massilia,0.500000,True
+MGYS00006276,Oral,Bulleidia,0.500000,True
+MGYS00006276,Oral,Nocardioides,0.500000,True
+MGYS00006276,Oral,Leuconostoc,0.500000,True
+MGYS00006276,Oral,Friedmanniella,0.500000,True
+MGYS00006276,Oral,Flavobacterium,0.500000,True
+MGYS00006276,Oral,Hymenobacter,0.500000,True
+MGYS00006276,Oral,Acinetobacter,0.500000,True
+MGYS00006276,Oral,Faecalibacterium,0.500000,True
+MGYS00006276,Oral,Actinobacillus,0.500000,True
+MGYS00006276,Oral,Mycobacterium,0.500000,True
+MGYS00006276,Oral,Pseudoramibacter,0.500000,True
+MGYS00006276,Oral,Pedobacter,0.500000,True
+MGYS00006276,Oral,Desulfovibrio,0.500000,True
+MGYS00006276,Oral,Propionivibrio,0.500000,True
+MGYS00006276,Oral,Alysiella,0.500000,True
+MGYS00006276,Oral,Singulisphaera,0.500000,True
+MGYS00006276,Oral,Parabacteroides,0.500000,True
+MGYS00006276,Oral,Microbacterium,0.500000,True
+MGYS00006276,Oral,Acidiphilium,0.500000,True
+MGYS00006276,Oral,Bradyrhizobium,0.500000,True
+MGYS00006276,Oral,Spirosoma,0.500000,True
+MGYS00006276,Oral,Anaerococcus,0.500000,True
+MGYS00006276,Oral,Rhodococcus,0.500000,True
+MGYS00006276,Oral,Weissella,0.500000,True
+MGYS00006276,Oral,Curtobacterium,0.500000,True
+MGYS00006276,Oral,Phocaeicola,0.500000,True
+MGYS00006276,Oral,Paenibacillus,0.500000,True
+MGYS00006276,Oral,Marmoricola,0.500000,True
+MGYS00006276,Oral,Nakamurella,0.500000,True
+MGYS00006276,Oral,Dorea,0.500000,True
+MGYS00006276,Oral,Mucilaginibacter,0.500000,True
+MGYS00006276,Oral,Dyadobacter,0.500000,True
+MGYS00006276,Oral,Scardovia,0.500000,True
+MGYS00006276,Oral,Bryocella,0.500000,True
+MGYS00006276,Oral,Medicago,0.500000,True
+MGYS00006276,Oral,Lachnoclostridium,0.500000,True
+MGYS00006276,Oral,Stenotrophomonas,0.500000,True
+MGYS00006276,Oral,Psychrobacter,0.500000,True
+MGYS00006276,Oral,Sutterella,0.500000,True
+MGYS00006276,Oral,Solirubrobacter,0.500000,True
+MGYS00006276,Oral,Brevundimonas,0.500000,True
+MGYS00006276,Oral,Ferruginibacter,0.500000,True
+MGYS00006276,Oral,Alistipes,0.500000,True
+MGYS00006276,Oral,Dysgonomonas,0.500000,True
+MGYS00006276,Oral,Mycoplasma,0.500000,True
+MGYS00006276,Oral,Actinomycetospora,0.500000,True
+MGYS00006276,Oral,Deinococcus,0.500000,True
+MGYS00006276,Oral,Bryobacter,0.500000,True
+MGYS00006276,Oral,Arthrobacter,0.500000,True
+MGYS00006276,Oral,Lawsonella,0.500000,True
+MGYS00006276,Oral,Helicobacter,0.500000,True
+MGYS00006276,Oral,Pseudoclavibacter,0.500000,True
+MGYS00006276,Oral,Brachymonas,0.500000,True
+MGYS00006276,Oral,Pseudonocardia,0.500000,True
+MGYS00006276,Oral,Segetibacter,0.500000,True
+MGYS00006276,Oral,Reyranella,0.500000,True
+MGYS00006276,Oral,Mobiluncus,0.500000,True
+MGYS00006276,Oral,Nevskia,0.500000,True
+MGYS00006276,Oral,Erysipelothrix,0.500000,True
+MGYS00006276,Oral,Akkermansia,0.500000,True
+MGYS00006276,Oral,Chitinophaga,0.500000,True
+MGYS00006276,Oral,Devosia,0.500000,True
+MGYS00006276,Oral,Candidatus_Tammella,0.500000,True
+MGYS00006276,Oral,Lachnospira,0.500000,True
+MGYS00006276,Oral,Pseudarthrobacter,0.500000,True
+MGYS00006276,Oral,Sphingobacterium,0.500000,True
+MGYS00006276,Oral,Phenylobacterium,0.500000,True
+MGYS00006276,Oral,Eggerthia,0.500000,True
+MGYS00006276,Oral,Alkanindiges,0.500000,True
+MGYS00006276,Oral,Centipeda,0.500000,True
+MGYS00006276,Oral,Caulobacter,0.500000,True
+MGYS00006276,Oral,Blastocatella,0.500000,True
+MGYS00006276,Oral,Aquitalea,0.500000,True
+MGYS00006276,Oral,Alloscardovia,0.500000,True
+MGYS00006017,Oral,Abiotrophia,0.500003,True
+MGYS00006017,Oral,Acholeplasma,0.500000,False
+MGYS00006017,Oral,Acidaminococcus,0.500000,False
+MGYS00006017,Oral,Actinobacillus,0.500000,False
+MGYS00006017,Oral,Actinomyces,0.499998,False
+MGYS00006017,Oral,Aestuariimicrobium,0.500000,False
+MGYS00006017,Oral,Agathobacter,0.500000,False
+MGYS00006017,Oral,Aggregatibacter,0.499999,False
+MGYS00006017,Oral,Akkermansia,0.500000,False
+MGYS00006017,Oral,Alistipes,0.500000,False
+MGYS00006017,Oral,Alloprevotella,0.499999,False
+MGYS00006017,Oral,Alloscardovia,0.500000,False
+MGYS00006017,Oral,Alysiella,0.500000,False
+MGYS00006017,Oral,Ammopiptanthus,0.500002,True
+MGYS00006017,Oral,Anaerococcus,0.500000,False
+MGYS00006017,Oral,Anaerofustis,0.500000,False
+MGYS00006017,Oral,Anaeroglobus,0.500000,False
+MGYS00006017,Oral,Anaerostipes,0.500000,False
+MGYS00006017,Oral,Atopobium,0.499999,False
+MGYS00006017,Oral,Bacillus,0.500000,False
+MGYS00006017,Oral,Bacteroides,0.500001,True
+MGYS00006017,Oral,Barnesiella,0.500000,False
+MGYS00006017,Oral,Bergeyella,0.500000,False
+MGYS00006017,Oral,Bifidobacterium,0.500003,True
+MGYS00006017,Oral,Bilophila,0.500000,False
+MGYS00006017,Oral,Blautia,0.500001,True
+MGYS00006017,Oral,Bradyrhizobium,0.500000,False
+MGYS00006017,Oral,Brevundimonas,0.500000,False
+MGYS00006017,Oral,Bulleidia,0.500000,False
+MGYS00006017,Oral,Butyricicoccus,0.500000,False
+MGYS00006017,Oral,Butyricimonas,0.500000,False
+MGYS00006017,Oral,Butyrivibrio,0.500000,False
+MGYS00006017,Oral,Campylobacter,0.500000,False
+MGYS00006017,Oral,Candidatus_Saccharimonas,0.499999,False
+MGYS00006017,Oral,Capnocytophaga,0.500001,False
+MGYS00006017,Oral,Cardiobacterium,0.500000,False
+MGYS00006017,Oral,Catenibacterium,0.500000,False
+MGYS00006017,Oral,Catonella,0.499999,False
+MGYS00006017,Oral,Centipeda,0.500000,False
+MGYS00006017,Oral,Chlamydia,0.500000,False
+MGYS00006017,Oral,Collinsella,0.500000,False
+MGYS00006017,Oral,Comamonas,0.500000,False
+MGYS00006017,Oral,Coprobacillus,0.500000,False
+MGYS00006017,Oral,Coprobacter,0.500000,False
+MGYS00006017,Oral,Corynebacterium,0.500000,False
+MGYS00006017,Oral,Cryptobacterium,0.500000,False
+MGYS00006017,Oral,Cutibacterium,0.500000,False
+MGYS00006017,Oral,Desulfobulbus,0.500000,False
+MGYS00006017,Oral,Desulfomicrobium,0.500000,False
+MGYS00006017,Oral,Desulfovibrio,0.500000,False
+MGYS00006017,Oral,Dialister,0.500000,False
+MGYS00006017,Oral,Dolosigranulum,0.500000,False
+MGYS00006017,Oral,Dorea,0.500000,False
+MGYS00006017,Oral,Eggerthia,0.500000,False
+MGYS00006017,Oral,Eikenella,0.500000,False
+MGYS00006017,Oral,Enterococcus,0.500006,True
+MGYS00006017,Oral,Erysipelatoclostridium,0.500000,False
+MGYS00006017,Oral,Eubacterium,0.500000,False
+MGYS00006017,Oral,Faecalibacterium,0.500001,False
+MGYS00006017,Oral,Fastidiosipila,0.500000,False
+MGYS00006017,Oral,Faucicola,0.500000,False
+MGYS00006017,Oral,Filifactor,0.500000,False
+MGYS00006017,Oral,Finegoldia,0.500000,False
+MGYS00006017,Oral,Fretibacterium,0.500000,False
+MGYS00006017,Oral,Fusicatenibacter,0.500000,False
+MGYS00006017,Oral,Fusobacterium,0.499998,False
+MGYS00006017,Oral,Gardnerella,0.500000,False
+MGYS00006017,Oral,Gemella,0.499999,False
+MGYS00006017,Oral,Georgenia,0.500000,False
+MGYS00006017,Oral,Granulicatella,0.499998,False
+MGYS00006017,Oral,Haemophilus,0.500000,False
+MGYS00006017,Oral,Holdemanella,0.500000,False
+MGYS00006017,Oral,Holdemania,0.500000,False
+MGYS00006017,Oral,Johnsonella,0.500002,True
+MGYS00006017,Oral,Kingella,0.500001,True
+MGYS00006017,Oral,Lachnoanaerobaculum,0.500000,False
+MGYS00006017,Oral,Lachnoclostridium,0.500000,False
+MGYS00006017,Oral,Lachnospira,0.500000,False
+MGYS00006017,Oral,Lactobacillus,0.500003,True
+MGYS00006017,Oral,Lactococcus,0.500000,False
+MGYS00006017,Oral,Lautropia,0.500003,True
+MGYS00006017,Oral,Lawsonella,0.500000,False
+MGYS00006017,Oral,Leptotrichia,0.499999,False
+MGYS00006017,Oral,Marvinbryantia,0.500000,False
+MGYS00006017,Oral,Megamonas,0.500000,False
+MGYS00006017,Oral,Megasphaera,0.499999,False
+MGYS00006017,Oral,Methanobrevibacter,0.500000,False
+MGYS00006017,Oral,Mobiluncus,0.500000,False
+MGYS00006017,Oral,Mogibacterium,0.499999,False
+MGYS00006017,Oral,Moryella,0.500000,False
+MGYS00006017,Oral,Murdochiella,0.500000,False
+MGYS00006017,Oral,Mycoplasma,0.500001,True
+MGYS00006017,Oral,Negativibacillus,0.500000,False
+MGYS00006017,Oral,Neisseria,0.500000,False
+MGYS00006017,Oral,Odoribacter,0.500000,False
+MGYS00006017,Oral,Olsenella,0.500001,False
+MGYS00006017,Oral,Oribacterium,0.500000,False
+MGYS00006017,Oral,Oscillibacter,0.500000,False
+MGYS00006017,Oral,Parabacteroides,0.500000,False
+MGYS00006017,Oral,Paraphelidium,0.500000,False
+MGYS00006017,Oral,Paraprevotella,0.500000,False
+MGYS00006017,Oral,Parascardovia,0.500001,True
+MGYS00006017,Oral,Parasutterella,0.500000,False
+MGYS00006017,Oral,Parvimonas,0.500000,False
+MGYS00006017,Oral,Paucibacter,0.500000,False
+MGYS00006017,Oral,Peptococcus,0.499999,False
+MGYS00006017,Oral,Peptoniphilus,0.500000,False
+MGYS00006017,Oral,Peptostreptococcus,0.499998,False
+MGYS00006017,Oral,Phascolarctobacterium,0.500000,False
+MGYS00006017,Oral,Phocaeicola,0.500000,False
+MGYS00006017,Oral,Porphyromonas,0.499999,False
+MGYS00006017,Oral,Prevotella,0.499999,False
+MGYS00006017,Oral,Propionibacterium,0.500000,False
+MGYS00006017,Oral,Propionivibrio,0.500000,False
+MGYS00006017,Oral,Pseudomonas,0.500000,False
+MGYS00006017,Oral,Pseudopropionibacterium,0.500000,False
+MGYS00006017,Oral,Pseudoramibacter,0.500000,False
+MGYS00006017,Oral,Romboutsia,0.500000,False
+MGYS00006017,Oral,Roseburia,0.500002,True
+MGYS00006017,Oral,Rothia,0.499999,False
+MGYS00006017,Oral,Ruminiclostridium,0.500000,False
+MGYS00006017,Oral,Ruminococcus,0.500000,False
+MGYS00006017,Oral,Scardovia,0.500000,False
+MGYS00006017,Oral,Selenomonas,0.500000,False
+MGYS00006017,Oral,Shuttleworthia,0.500000,False
+MGYS00006017,Oral,Simonsiella,0.500000,False
+MGYS00006017,Oral,Slackia,0.500000,False
+MGYS00006017,Oral,Solobacterium,0.500000,False
+MGYS00006017,Oral,Sphingomonas,0.500001,True
+MGYS00006017,Oral,Spirochaeta,0.500000,False
+MGYS00006017,Oral,Staphylococcus,0.500006,True
+MGYS00006017,Oral,Stomatobaculum,0.499999,False
+MGYS00006017,Oral,Streptobacillus,0.500000,False
+MGYS00006017,Oral,Streptococcus,0.499999,False
+MGYS00006017,Oral,Streptomyces,0.500000,False
+MGYS00006017,Oral,Subdoligranulum,0.500000,False
+MGYS00006017,Oral,Sutterella,0.500000,False
+MGYS00006017,Oral,Tannerella,0.500000,False
+MGYS00006017,Oral,Terrisporobacter,0.500000,False
+MGYS00006017,Oral,Treponema,0.500001,False
+MGYS00006017,Oral,Turicibacter,0.500000,False
+MGYS00006017,Oral,Veillonella,0.499998,False
+MGYS00006017,Oral,Weissella,0.500000,False
+MGYS00006017,Oral,Wolinella,0.500000,False
+MGYS00005528,Oral,Abiotrophia,0.500000,True
+MGYS00005528,Oral,Acinetobacter,0.500000,True
+MGYS00005528,Oral,Actinobacillus,0.500000,True
+MGYS00005528,Oral,Actinomyces,0.500000,True
+MGYS00005528,Oral,Aggregatibacter,0.500000,True
+MGYS00005528,Oral,Alloprevotella,0.500000,True
+MGYS00005528,Oral,Amycolatopsis,0.500000,True
+MGYS00005528,Oral,Anaeroglobus,0.500000,True
+MGYS00005528,Oral,Atopobium,0.500000,True
+MGYS00005528,Oral,Bacteroides,0.500000,True
+MGYS00005528,Oral,Bergeyella,0.500000,True
+MGYS00005528,Oral,Bifidobacterium,0.500000,True
+MGYS00005528,Oral,Bulleidia,0.500000,True
+MGYS00005528,Oral,Campylobacter,0.500000,True
+MGYS00005528,Oral,Candidatus_Saccharimonas,0.500000,True
+MGYS00005528,Oral,Capnocytophaga,0.500000,True
+MGYS00005528,Oral,Cardiobacterium,0.500000,True
+MGYS00005528,Oral,Catonella,0.500000,True
+MGYS00005528,Oral,Centipeda,0.500000,True
+MGYS00005528,Oral,Comamonas,0.500000,True
+MGYS00005528,Oral,Corynebacterium,0.500000,True
+MGYS00005528,Oral,Cryptobacterium,0.500000,True
+MGYS00005528,Oral,Desulfobulbus,0.500000,True
+MGYS00005528,Oral,Dialister,0.500000,True
+MGYS00005528,Oral,Dorea,0.500000,True
+MGYS00005528,Oral,Eggerthia,0.500000,True
+MGYS00005528,Oral,Eikenella,0.500000,True
+MGYS00005528,Oral,Eubacterium,0.500000,True
+MGYS00005528,Oral,Filifactor,0.500000,True
+MGYS00005528,Oral,Fretibacterium,0.500000,True
+MGYS00005528,Oral,Fusobacterium,0.500000,True
+MGYS00005528,Oral,Gemella,0.500000,True
+MGYS00005528,Oral,Granulicatella,0.500000,True
+MGYS00005528,Oral,Haemophilus,0.500000,True
+MGYS00005528,Oral,Johnsonella,0.500000,True
+MGYS00005528,Oral,Kingella,0.500000,True
+MGYS00005528,Oral,Lachnoanaerobaculum,0.500000,True
+MGYS00005528,Oral,Lactobacillus,0.500000,True
+MGYS00005528,Oral,Lautropia,0.500000,True
+MGYS00005528,Oral,Leptotrichia,0.500000,True
+MGYS00005528,Oral,Leucobacter,0.500000,True
+MGYS00005528,Oral,Megasphaera,0.500000,True
+MGYS00005528,Oral,Mobiluncus,0.500000,True
+MGYS00005528,Oral,Mycoplasma,0.500000,True
+MGYS00005528,Oral,Neisseria,0.500000,True
+MGYS00005528,Oral,Odoribacter,0.500000,True
+MGYS00005528,Oral,Olsenella,0.500000,True
+MGYS00005528,Oral,Oribacterium,0.500000,True
+MGYS00005528,Oral,Ottowia,0.500000,True
+MGYS00005528,Oral,Parvimonas,0.500000,True
+MGYS00005528,Oral,Peptococcus,0.500000,True
+MGYS00005528,Oral,Peptostreptococcus,0.500000,True
+MGYS00005528,Oral,Porphyromonas,0.500000,True
+MGYS00005528,Oral,Prevotella,0.500000,True
+MGYS00005528,Oral,Propionibacterium,0.500000,True
+MGYS00005528,Oral,Pseudopropionibacterium,0.500000,True
+MGYS00005528,Oral,Rothia,0.500000,True
+MGYS00005528,Oral,Scardovia,0.500000,True
+MGYS00005528,Oral,Selenomonas,0.500000,True
+MGYS00005528,Oral,Shuttleworthia,0.500000,True
+MGYS00005528,Oral,Solobacterium,0.500000,True
+MGYS00005528,Oral,Staphylococcus,0.500000,True
+MGYS00005528,Oral,Stomatobaculum,0.500000,True
+MGYS00005528,Oral,Streptococcus,0.500000,True
+MGYS00005528,Oral,Subdoligranulum,0.500000,True
+MGYS00005528,Oral,Tannerella,0.500000,True
+MGYS00005528,Oral,Treponema,0.500000,True
+MGYS00005528,Oral,Veillonella,0.500000,True
