@@ -1,0 +1,68 @@
+{
+  "status": "viewed_one_study_posthoc_assemblage_novelty_diagnostic",
+  "pilot_sha256": "a9462275be6c6de0bd0b5f13b32721e3d480932932cec027ece20547fcd39c5f",
+  "subject_map_sha256": "5cb3a41d71328cedbccb2499185b504322aab8aa532ae67cca62a7a7850d19a7",
+  "train_source_sha256": "986ec56e30f878bffc931237de13e7596ffc6beb8ea0f7f86e40e2bb0409f83d",
+  "test_source_sha256": "e2d2a985e76c3ee52cbeee20a63d6d4c1f3214169a6c75ea4f25432cc9024fa0",
+  "test_sites": 87,
+  "people": 58,
+  "nearest_train_assemblage_jaccard_person_median": 0.3970588235294118,
+  "high_novelty_cut_strict_greater_than_person_median": 0.3970588235294118,
+  "high_novelty_people": 28,
+  "low_or_equal_novelty_people": 30,
+  "median_person_taxon_richness_high_novelty": 51.0,
+  "median_person_taxon_richness_low_or_equal_novelty": 57.5,
+  "median_person_jaccard_distance_high_novelty": 0.43860592532467535,
+  "median_person_jaccard_distance_low_or_equal_novelty": 0.33895490318203814,
+  "bootstrap_unit": "person within each post-hoc novelty stratum",
+  "resamples": 10000,
+  "seed": 2026,
+  "models": {
+    "presence_mean": {
+      "low_novelty_model_minus_prior_mean": 0.0,
+      "high_novelty_model_minus_prior_mean": 0.0,
+      "high_minus_low_model_advantage_gap": 0.0,
+      "bootstrap95_high_minus_low_gap": [
+        0.0,
+        0.0
+      ]
+    },
+    "cnode": {
+      "low_novelty_model_minus_prior_mean": 0.002909345681653138,
+      "high_novelty_model_minus_prior_mean": 0.012308680620210979,
+      "high_minus_low_model_advantage_gap": 0.009399334938557841,
+      "bootstrap95_high_minus_low_gap": [
+        -0.01652429523632976,
+        0.035210632716673664
+      ]
+    },
+    "glv": {
+      "low_novelty_model_minus_prior_mean": 0.02147730156378138,
+      "high_novelty_model_minus_prior_mean": 0.024327374360875533,
+      "high_minus_low_model_advantage_gap": 0.002850072797094153,
+      "bootstrap95_high_minus_low_gap": [
+        -0.014868818759646608,
+        0.02074849304791577
+      ]
+    },
+    "graphtwin": {
+      "low_novelty_model_minus_prior_mean": 0.006242619832348425,
+      "high_novelty_model_minus_prior_mean": -0.003202094608156058,
+      "high_minus_low_model_advantage_gap": -0.009444714440504483,
+      "bootstrap95_high_minus_low_gap": [
+        -0.017344601026594405,
+        -0.0015534024777858367
+      ]
+    },
+    "transformer": {
+      "low_novelty_model_minus_prior_mean": 0.026332407378568266,
+      "high_novelty_model_minus_prior_mean": 0.04336716338645741,
+      "high_minus_low_model_advantage_gap": 0.017034756007889142,
+      "bootstrap95_high_minus_low_gap": [
+        -0.012994058740622195,
+        0.04702286700401639
+      ]
+    }
+  },
+  "scope": "Post-hoc within the one already viewed oral study. Median split is selected using only query assemblages, not outcome errors, but novelty groups and species names remain one source; intervals are descriptive and model multiplicity uncorrected."
+}
