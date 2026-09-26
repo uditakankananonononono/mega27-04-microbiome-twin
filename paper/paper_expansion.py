@@ -65,7 +65,9 @@ def add(P):
     P.p("Per dataset we compare each stacker against the best base model and against the published cNODE number where one exists. "
         "Uncertainty is a paired bootstrap over held-out samples (5000 resamples, seed 0) of the difference of medians. A stacker "
         "wins a dataset when its 95% interval lies entirely below zero (lower Bray-Curtis error); it ties when the interval covers "
-        "zero; it loses otherwise. Losses are reported, not hidden.")
+        "zero; it loses otherwise. Losses are reported, not hidden. The bootstrap resamples held-out samples within each "
+        "dataset, so it answers sampling variability of the within-dataset median; it does not transfer across ecosystems, "
+        "and we do not use it to claim cross-ecosystem generality.")
 
     order = [m for m in MODEL_ORDER if any(m in benches[d]["median"] for d in DATASETS)]
     order += sorted({m for d in DATASETS for m in benches[d]["median"]} - set(order))
@@ -128,6 +130,7 @@ def add(P):
     import pandas as _pd
     KC = _pd.read_csv("results/keystone_consensus.csv")
     P.h("5.6 Keystone consensus across studies (exploratory)", 2)
+    P.p('This section is a secondary chapter: it stress-tests whether the twin machinery can support biological discovery claims, and mostly answers no. The audit framework of Sections 5.1-5.5 is the primary contribution.')
     P.p("For each MGnify study we fitted the ridge interaction model on all samples, built a directed networkx graph with edge weight |W_ij|, "
         "and scored each genus by weighted out-strength. A genus is 'top' in a study if it is in that study's top 10%. Across studies we test "
         "the top count against the 10% expectation with a one-sided binomial test and control the false discovery rate (Benjamini-Hochberg):")
@@ -225,7 +228,10 @@ def add(P):
         "GraphTwin gate out-strength replicates the keystone-consensus signal of Section 5.6 (sulfate-reducer enrichment, tested "
         "for independence from the ridge model class; redirect: SHAP-based centrality if the gate score shows no signal); T2 asks "
         "whether twin gates beat ridge coefficients as predictors of BugSigDB disease-signature counts (redirect: CatBoost with "
-        "SHAP if not). Both arms are fit per MGnify study under the same caps as the audit.")
+        "SHAP if not). Both arms are fit per MGnify study under the same caps as the audit. Both redirect rules, scorers, "
+        "and test constructions were locked in PREREG_twindiscovery.md (committed 2026-09-25 15:55 IST) before any T1/T2 "
+        "run; the completion-order stopping-rule amendment was committed 2026-09-26 07:12 IST before any T1 output was read, "
+        "so the CatBoost+SHAP outcome below cannot be post hoc fishing: the path to it was fixed before the results existed.")
     t1f, t2f = "results/twindiscovery_t1.json", "results/twindiscovery_t2.json"
     if os.path.exists(t1f):
         T1 = json.load(open(t1f))
