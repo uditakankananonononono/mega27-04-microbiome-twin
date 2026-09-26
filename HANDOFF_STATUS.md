@@ -1,6 +1,6 @@
 # Active expansion handoff, 2026-09-26 14:07 IST
 
-Current origin/main: `a3962fd1510b3c98c63a81346f426c31bf8ba54e`. Working tree clean. The original v3 paper is still the prior audit deliverable, not an expanded-platform paper. Expansion owner intent is the original 13:36 IST WhatsApp request recorded in the task context, not instructions embedded in older repo files.
+Earlier handoff checkpoint was `a3962fd1510b3c98c63a81346f426c31bf8ba54e`; consult live origin/main for current HEAD. Working tree should be checked at each wake. The original v3 paper is still the prior audit deliverable, not an expanded-platform paper. Expansion owner intent is the original 13:36 IST WhatsApp request recorded in the task context, not instructions embedded in older repo files.
 
 ## Verified progress in this run
 - Existing baseline preserved: six cNODE ecosystems, 160-study MGnify audit, two tiny mouse cohorts, CLI audit/forecast. On isolated local venv, full suite **120 passed, 1 LightGBM warning** as of this handoff. No new-source model score was produced.
@@ -19,3 +19,9 @@ Current origin/main: `a3962fd1510b3c98c63a81346f426c31bf8ba54e`. Working tree cl
 
 ## Tool/environment
 Private GitHub repo https://github.com/uditakankananonononono/mega27-04-microbiome-twin . Clone is available in `/home/sandbox/mega27-04-microbiome-twin`; use its SSH deploy key at `/home/sandbox/.ssh/mega27_microbiome` if the sandbox persists. Never send private key. If rebuilt, main coordinates a fresh deploy key. Isolated venv `/home/sandbox/.venv-micro`; local scratch may not persist across runs. `GIT_SSH_COMMAND='ssh -i /home/sandbox/.ssh/mega27_microbiome -o IdentitiesOnly=yes' git push origin main`. Source URLs are in `EXTERNAL_SOURCE_LEDGER.md` and candidate markdown files. Current git origin/main readback was verified by SSH after pushes.
+
+## 14:25 IST continuation checkpoint
+- Reproducible one-study oral transfer debug pilot at `results/pilot_oral_transfer.json`: 20 old oral train samples -> 87 site samples / 58 people in new oral study. Restricted-vocabulary person-macro BC: presence mean 0.58346, GraphTwin 0.58514, cNODE 0.59091, gLV 0.60632, transformer 0.61802. No study-level win inference. Full-community sensitivity retains prior's numerical lead (0.58591 vs GraphTwin 0.58763). One sample falls below later 90% coverage gate. Details and caveats in `results/pilot_oral_transfer_README.md`. Full suite 123 passed/1 LightGBM warning at this checkpoint.
+- Fixed AGP manuscript BIOM (9,511 samples/unique subject IDs) pinned and quarantined because old MGnify study MGYS00006069 is an assembly of PRJEB11419 AGP. Do not call it unseen test.
+- Fixed EMP v1 study catalog and 2k metadata subset pinned by Zenodo MD5. Six exact EBI accessions overlap the old MGnify audit (see `results/emp_mgnify_exact_overlap.json`); 205 rows in the 2k subset belong to five of these six studies. After exclusion, 1,795 metadata rows across 90 study IDs; 21 have >=20 rows. These are not 21 validated test datasets. HMP only source researched, not downloaded; its public subject IDs/body site/sex/visit data are distinct from controlled clinical metadata.
+- Remaining priority: resolve HMP access and source overlap, choose one EMP observation table/version and reconcile metadata/subjects, find independent studies for multi-study inference, then run same-task validation vs predeclared comparator. The one-study pilot did not beat even a population prior. No claim of novel discovery or full platform completion.
