@@ -8,52 +8,56 @@
   "base": "presence_mean",
   "comparisons": {
     "cnode": {
-      "median_person_error_model": 0.576244996895327,
-      "median_person_error_prior": 0.5727253087779043,
-      "median_of_marginals_delta_model_minus_prior": 0.003519688117422759,
-      "person_resample95_median_of_marginals": [
-        -0.01611180475082974,
-        0.03500151114387451
+      "mean_person_site_median_model": 0.5909087808428156,
+      "mean_person_site_median_prior": 0.5834618251908241,
+      "locked_metric_delta_model_minus_prior": 0.007446955651991405,
+      "person_resample95_locked_metric": [
+        -0.005255883161409935,
+        0.020237777718710916
       ],
+      "posthoc_median_across_people_delta_model_minus_prior": 0.003519688117422759,
       "median_paired_person_gap_model_minus_prior": 0.006739730300808794,
       "people_model_better": 24,
       "people_prior_better": 34,
       "people_tied": 0
     },
     "glv": {
-      "median_person_error_model": 0.6159772244233394,
-      "median_person_error_prior": 0.5727253087779043,
-      "median_of_marginals_delta_model_minus_prior": 0.04325191564543507,
-      "person_resample95_median_of_marginals": [
-        0.013726550793784702,
-        0.0647547718663807
+      "mean_person_site_median_model": 0.6063150239669959,
+      "mean_person_site_median_prior": 0.5834618251908241,
+      "locked_metric_delta_model_minus_prior": 0.022853198776171667,
+      "person_resample95_locked_metric": [
+        0.014140096748504619,
+        0.03234795347517691
       ],
+      "posthoc_median_across_people_delta_model_minus_prior": 0.04325191564543507,
       "median_paired_person_gap_model_minus_prior": 0.019199380916216813,
       "people_model_better": 16,
       "people_prior_better": 42,
       "people_tied": 0
     },
     "graphtwin": {
-      "median_person_error_model": 0.5773347487292988,
-      "median_person_error_prior": 0.5727253087779043,
-      "median_of_marginals_delta_model_minus_prior": 0.004609439951394512,
-      "person_resample95_median_of_marginals": [
-        -0.018856798007628305,
-        0.022463927339811618
+      "mean_person_site_median_model": 0.5851449277070668,
+      "mean_person_site_median_prior": 0.5834618251908241,
+      "locked_metric_delta_model_minus_prior": 0.0016831025162428125,
+      "person_resample95_locked_metric": [
+        -0.002459557951894651,
+        0.005826855919005532
       ],
+      "posthoc_median_across_people_delta_model_minus_prior": 0.004609439951394512,
       "median_paired_person_gap_model_minus_prior": 0.001432173625240174,
       "people_model_better": 28,
       "people_prior_better": 30,
       "people_tied": 0
     },
     "transformer": {
-      "median_person_error_model": 0.6113597500342716,
-      "median_person_error_prior": 0.5727253087779043,
-      "median_of_marginals_delta_model_minus_prior": 0.03863444125636728,
-      "person_resample95_median_of_marginals": [
-        0.007786312774491303,
-        0.0684577582337833
+      "mean_person_site_median_model": 0.6180179078835457,
+      "mean_person_site_median_prior": 0.5834618251908241,
+      "locked_metric_delta_model_minus_prior": 0.034556082692721646,
+      "person_resample95_locked_metric": [
+        0.01979888206113402,
+        0.049690564582987026
       ],
+      "posthoc_median_across_people_delta_model_minus_prior": 0.03863444125636728,
       "median_paired_person_gap_model_minus_prior": 0.0380931713207166,
       "people_model_better": 19,
       "people_prior_better": 39,

@@ -41,13 +41,18 @@ def summarize(seed=0):
         if model=='presence_mean':continue
         b=np.array([v['person_median_errors'][x] for x in ids])
         diff=b-a
-        # The reported comparison is the same median-of-person-errors target as
-        # the original protocol. Also retain paired person-median gap for scale.
-        boot=np.median(b[ix],axis=1)-np.median(a[ix],axis=1)
-        out['comparisons'][model]={'median_person_error_model':float(np.median(b)),
-                                   'median_person_error_prior':float(np.median(a)),
-                                   'median_of_marginals_delta_model_minus_prior':float(np.median(b)-np.median(a)),
-                                   'person_resample95_median_of_marginals':np.quantile(boot,[.025,.975]).tolist(),
+        # The locked original protocol uses the mean across persons of their
+        # site-median errors. A median across persons is a different target.
+        boot=np.mean(b[ix]-a[ix],axis=1)
+        locked_a=float(np.mean(a))
+        locked_b=float(np.mean(b))
+        if not np.isclose(locked_a,models['presence_mean']['macro_person_median_bray_curtis']) or not np.isclose(locked_b,v['macro_person_median_bray_curtis']):
+            raise ValueError('person mean does not match locked pilot metric')
+        out['comparisons'][model]={'mean_person_site_median_model':locked_b,
+                                   'mean_person_site_median_prior':locked_a,
+                                   'locked_metric_delta_model_minus_prior':float(np.mean(diff)),
+                                   'person_resample95_locked_metric':np.quantile(boot,[.025,.975]).tolist(),
+                                   'posthoc_median_across_people_delta_model_minus_prior':float(np.median(b)-np.median(a)),
                                    'median_paired_person_gap_model_minus_prior':float(np.median(diff)),
                                    'people_model_better':int((diff<0).sum()),
                                    'people_prior_better':int((diff>0).sum()),
@@ -60,4 +65,4 @@ if __name__=='__main__':
     dest=ROOT/'results/oral_pilot_person_sensitivity.json'
     dest.write_text(json.dumps(output,indent=2)+'\n')
     for name,r in output['comparisons'].items():
-        print(name,r['median_of_marginals_delta_model_minus_prior'],r['person_resample95_median_of_marginals'])
+        print(name,r['locked_metric_delta_model_minus_prior'],r['person_resample95_locked_metric'])
