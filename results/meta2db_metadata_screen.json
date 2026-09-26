@@ -36,10 +36,70 @@
     "2018_RosaBA": 20
   },
   "repeated_project_subject_labels_with_time_values": 262,
+  "overlap_with_old_mgnify_by_embedded_original_project": [
+    {
+      "project_id": "PRJNA834801",
+      "project_name": "2022_Wallen_PD",
+      "metadata_rows": 723,
+      "old_mgnify_study_ids": [
+        "MGYS00006759"
+      ]
+    },
+    {
+      "project_id": "PRJEB11419",
+      "project_name": "2022_American_Gut_Project",
+      "metadata_rows": 648,
+      "old_mgnify_study_ids": [
+        "MGYS00006069"
+      ]
+    },
+    {
+      "project_id": "PRJNA385949",
+      "project_name": "2017_HallAB",
+      "metadata_rows": 236,
+      "old_mgnify_study_ids": [
+        "MGYS00005791"
+      ]
+    },
+    {
+      "project_id": "PRJEB47976",
+      "project_name": "2022_Laske_Alzheimers",
+      "metadata_rows": 175,
+      "old_mgnify_study_ids": [
+        "MGYS00006797"
+      ]
+    },
+    {
+      "project_id": "PRJEB21612",
+      "project_name": "2017_Yan_hypertension",
+      "metadata_rows": 116,
+      "old_mgnify_study_ids": [
+        "MGYS00006769"
+      ]
+    },
+    {
+      "project_id": "PRJNA433459",
+      "project_name": "2020_Qian_PD",
+      "metadata_rows": 80,
+      "old_mgnify_study_ids": [
+        "MGYS00006806"
+      ]
+    },
+    {
+      "project_id": "PRJNA547717",
+      "project_name": "2019_GhensiP",
+      "metadata_rows": 60,
+      "old_mgnify_study_ids": [
+        "MGYS00006641"
+      ]
+    }
+  ],
+  "overlap_project_count": 7,
+  "metadata_rows_in_overlapping_projects": 2038,
   "agp_project_name_rows": 648,
   "agp_project_ids": {
     "PRJEB11419": 648
   },
   "admitted_independent_studies": 0,
-  "note": "Project/subject labels are not audited biological units. Metadata time and antibiotic fields do not establish aligned courses; mirrors, source-specific rights, assay and outcome eligibility remain unresolved. No abundance outcomes read."
+  "note": "Project-level accession overlap does not establish exact sample identity or non-overlap of remaining projects. Project/subject labels are not audited biological units. Metadata time and antibiotic fields do not establish aligned courses; source-specific rights, assay and outcome eligibility remain unresolved. No abundance outcomes read."
 }

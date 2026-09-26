@@ -7,11 +7,13 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from pathlib import Path
 import sys
 
 import pandas as pd
 
+ROOT = Path(__file__).resolve().parents[1]
 EXPECTED_MD5 = 'be523d58a63947765d728f1f4f89b07a'
 MISSING = {'', 'not available', 'not applicable', 'na', 'nan', 'none', 'null', 'unknown', 'n/a'}
 FIELDS = ('project_name', 'project_id', 'host_subject_id', 'run_acc',
@@ -34,6 +36,16 @@ def summarize(path):
     time_groups = with_time.groupby(['project_name', 'host_subject_id'], sort=False).size()
     time_repeated = time_groups[time_groups > 1]
     by_project = (with_time.groupby('project_name').size().sort_values(ascending=False).to_dict())
+    old = pd.read_csv(ROOT / 'data/raw/mgnify/manifest.csv', dtype=str, keep_default_na=False)
+    old_projects = {}
+    for row in old.itertuples(index=False):
+        for project in re.findall(r'PRJ(?:NA|EB|DB)\d+', row.study_name, flags=re.I):
+            old_projects.setdefault(project.upper(), set()).add(row.study)
+    matched = data[data.project_id.str.upper().isin(old_projects)]
+    overlap = [{'project_id': project, 'project_name': name, 'metadata_rows': int(n),
+                'old_mgnify_study_ids': sorted(old_projects[project.upper()])}
+               for (name, project), n in matched.groupby(['project_name', 'project_id']).size().items()]
+    overlap.sort(key=lambda r: (-r['metadata_rows'], r['project_id']))
     agp = data[data.project_name == '2022_American_Gut_Project']
     return {'status': 'outcome_blind_composite_metadata_screen_not_external_test',
             'source': 'https://zenodo.org/records/17315984', 'metadata_md5': EXPECTED_MD5,
@@ -48,10 +60,13 @@ def summarize(path):
             'project_names_with_time_values': len(by_project),
             'time_populated_rows_by_project': by_project,
             'repeated_project_subject_labels_with_time_values': len(time_repeated),
+            'overlap_with_old_mgnify_by_embedded_original_project': overlap,
+            'overlap_project_count': matched.project_id.nunique(),
+            'metadata_rows_in_overlapping_projects': len(matched),
             'agp_project_name_rows': len(agp),
             'agp_project_ids': agp.project_id.value_counts().to_dict(),
             'admitted_independent_studies': 0,
-            'note': 'Project/subject labels are not audited biological units. Metadata time and antibiotic fields do not establish aligned courses; mirrors, source-specific rights, assay and outcome eligibility remain unresolved. No abundance outcomes read.'}
+            'note': 'Project-level accession overlap does not establish exact sample identity or non-overlap of remaining projects. Project/subject labels are not audited biological units. Metadata time and antibiotic fields do not establish aligned courses; source-specific rights, assay and outcome eligibility remain unresolved. No abundance outcomes read.'}
 
 
 if __name__ == '__main__':
