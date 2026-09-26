@@ -1,0 +1,83 @@
+{
+  "status": "posthoc_viewed_one_study_paired_site_diagnostic",
+  "pilot_sha256": "a9462275be6c6de0bd0b5f13b32721e3d480932932cec027ece20547fcd39c5f",
+  "subject_map_sha256": "5cb3a41d71328cedbccb2499185b504322aab8aa532ae67cca62a7a7850d19a7",
+  "paired_people": 29,
+  "total_people": 58,
+  "bootstrap_unit": "paired person",
+  "resamples": 10000,
+  "seed": 2026,
+  "models": {
+    "presence_mean": {
+      "mean_D_minus_H_error": -0.004727678535644978,
+      "median_D_minus_H_error": -0.03572854122867575,
+      "people_D_higher_error": 11,
+      "bootstrap95_mean_D_minus_H": [
+        -0.03653876170189302,
+        0.029775369902351016
+      ],
+      "interaction_contrast_D_minus_H_vs_prior": 0.0,
+      "bootstrap95_interaction_contrast": [
+        0.0,
+        0.0
+      ]
+    },
+    "cnode": {
+      "mean_D_minus_H_error": -0.025925635174588665,
+      "median_D_minus_H_error": -0.033783571512262744,
+      "people_D_higher_error": 9,
+      "bootstrap95_mean_D_minus_H": [
+        -0.051564309484949916,
+        0.001529159375068536
+      ],
+      "interaction_contrast_D_minus_H_vs_prior": -0.021197956638943687,
+      "bootstrap95_interaction_contrast": [
+        -0.047136535826272086,
+        0.00308962682604605
+      ]
+    },
+    "glv": {
+      "mean_D_minus_H_error": 0.0016110086193233876,
+      "median_D_minus_H_error": -0.02612610801880627,
+      "people_D_higher_error": 10,
+      "bootstrap95_mean_D_minus_H": [
+        -0.026806586871708046,
+        0.03276284346422402
+      ],
+      "interaction_contrast_D_minus_H_vs_prior": 0.006338687154968365,
+      "bootstrap95_interaction_contrast": [
+        -0.009890430249197795,
+        0.02335690351690236
+      ]
+    },
+    "graphtwin": {
+      "mean_D_minus_H_error": 0.00409450836989723,
+      "median_D_minus_H_error": -0.022682231692383592,
+      "people_D_higher_error": 11,
+      "bootstrap95_mean_D_minus_H": [
+        -0.03002767912144311,
+        0.041199882508809266
+      ],
+      "interaction_contrast_D_minus_H_vs_prior": 0.008822186905542208,
+      "bootstrap95_interaction_contrast": [
+        -0.000588927890258447,
+        0.018963311437605105
+      ]
+    },
+    "transformer": {
+      "mean_D_minus_H_error": -0.006300431537461015,
+      "median_D_minus_H_error": -0.025529277545694173,
+      "people_D_higher_error": 10,
+      "bootstrap95_mean_D_minus_H": [
+        -0.04524627273193275,
+        0.033405997571302505
+      ],
+      "interaction_contrast_D_minus_H_vs_prior": -0.0015727530018160372,
+      "bootstrap95_interaction_contrast": [
+        -0.03189100284588515,
+        0.029647969841031973
+      ]
+    }
+  },
+  "scope": "Same viewed oral study. D/H are paired oral sites on diseased people, not an intervention or independent source. Exploratory, no multiplicity correction."
+}
