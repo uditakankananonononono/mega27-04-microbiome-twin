@@ -8,9 +8,14 @@ def scale_status(records, *, target_min=500, target_max=1000, foundation_min=100
 
     The counts are claim gates, not a dataset search or pretraining job.
     """
-    if target_min < 1 or target_max < target_min or foundation_min < target_max:
+    targets = (target_min, target_max, foundation_min, foundation_samples)
+    if any(not isinstance(n, int) or isinstance(n, bool) for n in targets):
+        raise ValueError("scale targets must be integer counts")
+    if foundation_samples < 1 or target_min < 1 or target_max < target_min or foundation_min < target_max:
         raise ValueError("invalid scale targets")
     rows=list(records)
+    if any(not isinstance(r, dict) for r in rows):
+        raise ValueError("scale records must be mappings")
     verified=[r for r in rows if r.get('independence_verified') is True and
               r.get('license_verified') is True and r.get('input_qc_passed') is True and
               r.get('source_hash_verified') is True]
@@ -20,7 +25,8 @@ def scale_status(records, *, target_min=500, target_max=1000, foundation_min=100
     samples=[]
     for r in verified:
         n=r.get('independent_samples')
-        if not isinstance(n,int) or n<1:raise ValueError("sample count must be verified positive integer")
+        if not isinstance(n,int) or isinstance(n,bool) or n<1:
+            raise ValueError("sample count must be verified positive integer")
         samples.append(n)
     return {'manifest_rows':len(rows),'verified_datasets':len(verified),
             'verified_independent_samples':sum(samples),
