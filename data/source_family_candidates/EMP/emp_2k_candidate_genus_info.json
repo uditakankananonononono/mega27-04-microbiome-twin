@@ -1,0 +1,12 @@
+{
+  "source_biom": "emp_cr_gg_13_8.release1.biom",
+  "source_md5": "5a08ab0811582bbc8f87a923d5c90f73",
+  "rows_genus": 1658,
+  "columns_samples": 1132,
+  "studies": 20,
+  "zero_genus_mass_samples": 0,
+  "input_biom_sha256": "a5961538af06df9cb0ae1ebceaf872a0babca7f943c0d7629780c60ce13b9594",
+  "output_sha256": "742b8662672d5489811b91d4a89a5643fa64029e079cc7549a3ef1463ebfcd2e",
+  "status": "outcome_blind_candidate_table_not_external_benchmark",
+  "note": "This subset omits exact old-MGnify accessions and missing host IDs; near-duplicate sources, taxonomy compatibility and license remain unverified."
+}
