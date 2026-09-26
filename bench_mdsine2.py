@@ -6,6 +6,7 @@ import numpy as np, pandas as pd
 from scipy.stats import wilcoxon
 sys.path.insert(0, "src")
 from microtwin.popforecast import forecast
+from microtwin.mdsine_schedule import scheduled_days
 
 cohort = sys.argv[1]; ALL = len(sys.argv) > 2 and sys.argv[2] == "all"
 src = f"data/raw/mdsine2_sourcedata/fig3_{cohort}_absolute.csv"
@@ -18,13 +19,13 @@ counts = pd.read_csv(f"{raw}/counts.tsv", sep="\t", index_col=0)
 T = d[d.Method == d.Method.iloc[0]]
 days = {}
 for s, g in T.groupby("HeldoutSubjectId"):
-    th = np.log10(g.groupby("TimePoint").Truth.sum().values + 1)
+    n_timepoints = g.TimePoint.nunique()
     m = meta[meta.subject.astype(str) == str(s)]
     m = m[m.index.isin(qpcr.index) & m.index.isin(counts.columns)].sort_values("time")
-    mine = np.log10(qpcr.loc[m.index].mean(1).values)
-    best = min(range(0, len(mine) - len(th) + 1), key=lambda k: np.mean(np.abs(mine[k:k + len(th)] - th)))
-    days[s] = m.time.values[best:best + len(th)]
-    print("subject", s, "offset", best, "fit mae", round(float(np.mean(np.abs(mine[best:best + len(th)] - th))), 3))
+    # Dataset preprocessing excludes first two scheduled raw timepoints (0, 0.5).
+    # Select the public schedule mechanically, never via held-out abundance.
+    days[s] = scheduled_days(m.time.values, n_timepoints)
+    print("subject", s, "source schedule day >= 1; no truth-based offset fitting")
 d["day"] = [days[s][k] for s, k in zip(d.HeldoutSubjectId, d.TimePoint)]
 
 
