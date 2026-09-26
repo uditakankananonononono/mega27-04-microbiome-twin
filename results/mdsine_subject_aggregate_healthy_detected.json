@@ -1,0 +1,119 @@
+{
+  "cohort": "healthy",
+  "all_timepoints": false,
+  "n_subjects": 4,
+  "source": "/home/sandbox/mega27-04-microbiome-twin/data/raw/mdsine2_sourcedata/fig3_healthy_absolute.csv",
+  "comparisons": {
+    "MDSINE2 (No Modules)": {
+      "subjects_prior_lower_median_gap": 3,
+      "per_subject": [
+        {
+          "subject": 2,
+          "taxon_pairs": 140,
+          "prior_median": 0.9418855973605035,
+          "comparator_median": 0.9834634752242555,
+          "median_paired_gap_prior_minus_comparator": -0.11832290364598361,
+          "mean_paired_gap_prior_minus_comparator": -0.012347691810546329
+        },
+        {
+          "subject": 3,
+          "taxon_pairs": 139,
+          "prior_median": 0.9036062052030381,
+          "comparator_median": 0.9479356593226858,
+          "median_paired_gap_prior_minus_comparator": -0.036304944703688835,
+          "mean_paired_gap_prior_minus_comparator": -0.012194865898454425
+        },
+        {
+          "subject": 4,
+          "taxon_pairs": 139,
+          "prior_median": 0.8730511036367232,
+          "comparator_median": 0.8864001860784316,
+          "median_paired_gap_prior_minus_comparator": -0.06088205795995494,
+          "mean_paired_gap_prior_minus_comparator": 0.09016315883659588
+        },
+        {
+          "subject": 5,
+          "taxon_pairs": 138,
+          "prior_median": 0.9796932794590911,
+          "comparator_median": 0.8695353398887177,
+          "median_paired_gap_prior_minus_comparator": 0.07308214815707234,
+          "mean_paired_gap_prior_minus_comparator": 0.179513137719968
+        }
+      ]
+    },
+    "RA-MDSINE2 (No Modules)": {
+      "subjects_prior_lower_median_gap": 3,
+      "per_subject": [
+        {
+          "subject": 2,
+          "taxon_pairs": 140,
+          "prior_median": 0.9418855973605035,
+          "comparator_median": 0.9330289341960725,
+          "median_paired_gap_prior_minus_comparator": -0.05592370300766014,
+          "mean_paired_gap_prior_minus_comparator": 0.031559837818162684
+        },
+        {
+          "subject": 3,
+          "taxon_pairs": 139,
+          "prior_median": 0.9036062052030381,
+          "comparator_median": 0.911777421259267,
+          "median_paired_gap_prior_minus_comparator": -0.0030741834706407567,
+          "mean_paired_gap_prior_minus_comparator": 0.0597402153007365
+        },
+        {
+          "subject": 4,
+          "taxon_pairs": 139,
+          "prior_median": 0.8730511036367232,
+          "comparator_median": 0.8856382372653175,
+          "median_paired_gap_prior_minus_comparator": -0.05217708465208348,
+          "mean_paired_gap_prior_minus_comparator": 0.10776264892109456
+        },
+        {
+          "subject": 5,
+          "taxon_pairs": 138,
+          "prior_median": 0.9796932794590911,
+          "comparator_median": 0.8557896758748065,
+          "median_paired_gap_prior_minus_comparator": 0.028133845636172383,
+          "mean_paired_gap_prior_minus_comparator": 0.18029912840990023
+        }
+      ]
+    },
+    "MDSINE2": {
+      "subjects_prior_lower_median_gap": 4,
+      "per_subject": [
+        {
+          "subject": 2,
+          "taxon_pairs": 140,
+          "prior_median": 0.9418855973605035,
+          "comparator_median": 1.0427710524407556,
+          "median_paired_gap_prior_minus_comparator": -0.22125084001935752,
+          "mean_paired_gap_prior_minus_comparator": -0.1388271996341672
+        },
+        {
+          "subject": 3,
+          "taxon_pairs": 139,
+          "prior_median": 0.9036062052030381,
+          "comparator_median": 1.233614958779887,
+          "median_paired_gap_prior_minus_comparator": -0.3136811255884242,
+          "mean_paired_gap_prior_minus_comparator": -0.286339864362102
+        },
+        {
+          "subject": 4,
+          "taxon_pairs": 139,
+          "prior_median": 0.8730511036367232,
+          "comparator_median": 1.0493475245728088,
+          "median_paired_gap_prior_minus_comparator": -0.17507342758874178,
+          "mean_paired_gap_prior_minus_comparator": -0.0989070368428139
+        },
+        {
+          "subject": 5,
+          "taxon_pairs": 138,
+          "prior_median": 0.9796932794590911,
+          "comparator_median": 0.9615425141936523,
+          "median_paired_gap_prior_minus_comparator": -0.04567575286293468,
+          "mean_paired_gap_prior_minus_comparator": 0.086991693798706
+        }
+      ]
+    }
+  }
+}
