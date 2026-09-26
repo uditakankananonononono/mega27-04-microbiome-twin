@@ -23,3 +23,17 @@ def test_two_studies_consistent_beat():
 def test_bad_alignment_rejected():
     with pytest.raises(ValueError):
         compare_by_study([.1], [.2], [])
+
+
+def test_invalid_study_ids_fail_closed_instead_of_inflating_independent_studies():
+    for bad in (None, "", "  ", float("nan"), float("inf")):
+        with pytest.raises(ValueError, match="study ID"):
+            compare_by_study([.1, .2], [.2, .3], ["valid", bad])
+    r = compare_by_study([.1, .1], [.2, .2], [1, "1"])
+    assert r["n_studies"] == 1
+    assert r["verdict"] == "insufficient_independent_studies"
+
+
+def test_bootstrap_count_rejects_boolean():
+    with pytest.raises(ValueError, match="n_boot"):
+        compare_by_study([.1], [.2], ["one"], n_boot=True)

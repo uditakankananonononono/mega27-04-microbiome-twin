@@ -18,9 +18,11 @@ def compare_by_study(candidate, baseline, study_ids, *, n_boot=5000, seed=0):
         raise ValueError("paired nonempty sample errors and aligned study IDs required")
     if not np.isfinite(c).all() or not np.isfinite(b).all() or (c < 0).any() or (b < 0).any():
         raise ValueError("finite nonnegative errors required")
-    if any(x is None or str(x).strip() == "" for x in ids):
-        raise ValueError("each row needs a study ID")
-    if not isinstance(n_boot, int) or n_boot < 0:
+    if any(x is None or not str(x).strip() or
+           (isinstance(x, (float, np.floating)) and not np.isfinite(x)) for x in ids):
+        raise ValueError("each row needs a nonempty finite study ID")
+    ids = list(map(str, ids))
+    if not isinstance(n_boot, int) or isinstance(n_boot, bool) or n_boot < 0:
         raise ValueError("n_boot must be a nonnegative integer")
     unique = list(dict.fromkeys(ids))
     c_study = np.array([np.median(c[np.asarray(ids) == sid]) for sid in unique])
