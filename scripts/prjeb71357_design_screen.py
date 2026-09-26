@@ -32,10 +32,10 @@ def screen(path, expected_sha=EXPECTED):
             'run_rows':len(rows),'unique_sample_accessions':len({r['sample_accession'] for r in rows}),
             'library_strategies':dict(sorted(Counter(r['library_strategy'] for r in rows).items())),
             'subject_prefixes':len(by),'phase_counts':dict(sorted(phase_counts.items())),
-            'subjects_with_all_three_phase_titles':sum(len(s)==3 for s in by.values()),
+            'subjects_with_all_three_title_suffixes':sum(len(s)==3 for s in by.values()),
             'subjects_with_baseline_and_endpoint_titles':sum({'BL','EP'}<=s for s in by.values()),
-            'subjects_missing_at_least_one_phase':sum(len(s)<3 for s in by.values()),
-            'note':'BL/EP/MP title interpretation inferred from paper timing, not yet cross-checked with depositors. Arm mapping absent. Not certified independent final test; no taxon data read.'}
+            'subjects_missing_at_least_one_suffix':sum(len(s)<3 for s in by.values()),
+            'note':'Paper and corrigendum define BL=baseline and EP=endpoint, but deposited MP title suffix is not defined as the paper-defined PA=post-antibiotic. Arm mapping absent. Not a certified final study; no taxon data read.'}
 
 if __name__=='__main__':
     import argparse

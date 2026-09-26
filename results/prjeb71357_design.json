@@ -12,8 +12,8 @@
     "EP": 48,
     "MP": 48
   },
-  "subjects_with_all_three_phase_titles": 45,
+  "subjects_with_all_three_title_suffixes": 45,
   "subjects_with_baseline_and_endpoint_titles": 47,
-  "subjects_missing_at_least_one_phase": 5,
-  "note": "BL/EP/MP title interpretation inferred from paper timing, not yet cross-checked with depositors. Arm mapping absent. Not certified independent final test; no taxon data read."
+  "subjects_missing_at_least_one_suffix": 5,
+  "note": "Paper and corrigendum define BL=baseline and EP=endpoint, but deposited MP title suffix is not defined as the paper-defined PA=post-antibiotic. Arm mapping absent. Not a certified final study; no taxon data read."
 }
