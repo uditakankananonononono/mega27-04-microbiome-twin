@@ -1,0 +1,58 @@
+{
+  "emp_studies": 125,
+  "emp_release1_catalog": 97,
+  "old_mgnify_studies": 160,
+  "exact_accession_overlaps": 6,
+  "overlaps": [
+    {
+      "emp_study_id": 550,
+      "emp_release1": true,
+      "ebi_accession": "ERP021896",
+      "mgnify_study_ids": [
+        "MGYS00002184"
+      ]
+    },
+    {
+      "emp_study_id": 1056,
+      "emp_release1": true,
+      "ebi_accession": "ERP003782",
+      "mgnify_study_ids": [
+        "MGYS00002673"
+      ]
+    },
+    {
+      "emp_study_id": 1064,
+      "emp_release1": true,
+      "ebi_accession": "ERP016607",
+      "mgnify_study_ids": [
+        "MGYS00003705"
+      ]
+    },
+    {
+      "emp_study_id": 1694,
+      "emp_release1": true,
+      "ebi_accession": "ERP016469",
+      "mgnify_study_ids": [
+        "MGYS00003706"
+      ]
+    },
+    {
+      "emp_study_id": 1773,
+      "emp_release1": true,
+      "ebi_accession": "ERP016414",
+      "mgnify_study_ids": [
+        "MGYS00003681"
+      ]
+    },
+    {
+      "emp_study_id": 1799,
+      "emp_release1": true,
+      "ebi_accession": "ERP023686",
+      "mgnify_study_ids": [
+        "MGYS00003800"
+      ]
+    }
+  ],
+  "status": "exact_accession_exclusion_only",
+  "note": "No cross-BioProject/sample/sequence near-duplicate search yet; absence from this list does not prove independence."
+}
