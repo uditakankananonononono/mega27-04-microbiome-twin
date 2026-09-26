@@ -1,0 +1,3 @@
+# Staged NEW Gemini consultation, not submitted
+
+This is a separate direction consultation on already held evidence, for the free Gemini web chat only. It does not receive the complete paper and cannot count as a manuscript-aware judge round. ChatGPT's existing partial-paper conversation stays on ChatGPT; DeepSeek has its own staged fresh consultation. During the next parent-passed browser holding, use Gemini only if the free surface is accessible; if it demands sign-in or payment, record that status and move to a working free surface without spending time in a paywall. Do not acquire a browser before the explicit fleet token. Keep the per-model response and exact URL distinct; no API key or paid tier.
