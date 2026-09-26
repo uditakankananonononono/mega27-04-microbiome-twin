@@ -5,7 +5,7 @@ plus the cNODE Human_Gut table: train GraphTwin with the locked v1 recipe (d=32,
 (mean over targets of sigmoid(e_target^T U e_source)), then the same top-decile / binomial /
 BH-FDR consensus and one-sided Fisher phylum enrichment (GTDB v232) as keystone_mgnify.py /
 keystone_gtdb.py. Usage: python3 scripts/twindiscovery_t1.py [epochs] [only_study]"""
-import json, os, sys
+import json, os, sys, glob as _glob
 import numpy as np, pandas as pd, torch
 from scipy.stats import binomtest, fisher_exact
 sys.path.insert(0, "src")
@@ -38,7 +38,7 @@ done = set()
 if ONLY is None:
     _parts = sorted(_glob.glob("results/twindiscovery_t1_partial*.csv"))
     for _p in _parts:
-        done |= set(pd.read_csv(_p).study.unique())
+        done |= set(pd.read_csv(_p, names=['study','biome','genus','gate_out_strength','top']).study.unique())
     if done:
         print(f"resuming: {len(done)} studies already done across {len(_parts)} partials", flush=True)
 pf = open(PART, "a") if ONLY is None else None
@@ -81,7 +81,7 @@ if ONLY is not None:
     print(D.sort_values("gate_out_strength", ascending=False).head(8).to_string(index=False)); sys.exit(0)
 
 if pf is not None: pf.close()
-import glob as _glob
+
 if ONLY is None:
     open(f"results/twindiscovery_t1_shard{SHARD}.done", "w").write("done")
 if NSHARD > 1 and len(_glob.glob("results/twindiscovery_t1_shard*.done")) < NSHARD:
