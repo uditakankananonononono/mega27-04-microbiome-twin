@@ -19,6 +19,8 @@ from .research_intake import inspect_local_matrix
 
 def predict_with_radius(train_path, calibration_path, query_path, *, unit, source_id,
                         processing_authorized=False, subject_map=None, alpha=.1):
+    if len({Path(train_path).resolve(), Path(calibration_path).resolve(), Path(query_path).resolve()}) != 3:
+        raise ValueError('training, calibration and query paths must be distinct')
     pred, report = predict_local(train_path, query_path, unit=unit, source_id=source_id,
                                  processing_authorized=processing_authorized, subject_map=subject_map)
     qc = inspect_local_matrix(calibration_path, unit=unit, source_id=source_id,

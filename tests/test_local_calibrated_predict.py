@@ -56,3 +56,21 @@ def test_calibrated_cli_writes_once(tmp_path, capsys):
     assert pd.read_csv(out)['sample_id'].tolist()==['q1']
     with pytest.raises(SystemExit,match='already exists'):
         main(argv)
+
+
+def test_same_file_paths_rejected_even_before_fit(tmp_path):
+    tr,cal,q=_inputs(tmp_path)
+    with pytest.raises(ValueError,match='paths must be distinct'):
+        predict_with_radius(tr,tr,q,unit='counts',source_id='test',processing_authorized=True)
+
+
+def test_calibrated_input_hash_change_is_detected(tmp_path, monkeypatch):
+    from microtwin import local_calibrated_predict as module
+    tr,cal,q=_inputs(tmp_path)
+    original=module.bray_radius
+    def tamper_then_radius(errors,alpha):
+        q.write_text('sample_id\tA\tB\nq1\t0\t1\n')
+        return original(errors,alpha)
+    monkeypatch.setattr(module,'bray_radius',tamper_then_radius)
+    with pytest.raises(ValueError,match='input changed'):
+        predict_with_radius(tr,cal,q,unit='counts',source_id='test',processing_authorized=True)
