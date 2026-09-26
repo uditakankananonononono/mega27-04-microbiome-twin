@@ -67,6 +67,8 @@ def predict_local(train_path, query_path, *, unit, source_id, processing_authori
     if (mass <= 0).any():
         raise ValueError('at least one query has no taxon with positive training abundance; abstaining')
     pred = z * mean / mass[:, None]
+    if hashlib.sha256(Path(query_path).read_bytes()).hexdigest() != query_sha:
+        raise ValueError('query file changed during prediction')
     result = pd.DataFrame(pred, columns=taxa)
     result.insert(0, 'sample_id', query_ids)
     report = {'status': 'research_baseline_prediction', 'model': 'presence_conditional_population_mean',

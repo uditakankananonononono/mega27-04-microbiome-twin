@@ -43,3 +43,17 @@ def test_predict_cli_refuses_existing_output(tmp_path, capsys):
         main(['predict',str(train),str(query),'--unit','counts','--source-id','test',
               '--processing-authorized','--out',str(out)])
     assert out.read_text()=='DO NOT CHANGE'
+
+
+def test_predict_detects_query_mutation_between_read_and_hash(tmp_path, monkeypatch):
+    from microtwin import local_predict
+    train=tmp_path/'train.tsv';train.write_text('sample_id\tA\tB\ns1\t2\t1\n')
+    query=tmp_path/'query.tsv';query.write_text('sample_id\tA\tB\nq1\t1\t0\n')
+    original=local_predict._read_table
+    def mutate_after_query_read(path):
+        result=original(path)
+        if str(path)==str(query):query.write_text('sample_id\tA\tB\nq1\t0\t1\n')
+        return result
+    monkeypatch.setattr(local_predict,'_read_table',mutate_after_query_read)
+    with pytest.raises(ValueError,match='query file changed'):
+        local_predict.predict_local(train,query,unit='counts',source_id='test',processing_authorized=True)
