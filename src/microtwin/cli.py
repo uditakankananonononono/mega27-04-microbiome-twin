@@ -112,6 +112,30 @@ def cmd_predict(a):
     return 0
 
 
+def cmd_predict_calibrated(a):
+    from .local_calibrated_predict import predict_with_radius
+    try:
+        result, report = predict_with_radius(a.train, a.calibration, a.query,
+                                             unit=a.unit, source_id=a.source_id,
+                                             processing_authorized=a.processing_authorized,
+                                             alpha=a.alpha)
+        from pathlib import Path
+        dest = Path(a.out)
+        if dest.suffix.lower() != '.csv':
+            raise ValueError('output path must end in .csv')
+        if dest.exists():
+            raise ValueError('output file already exists; choose a new path')
+        if not dest.parent.is_dir():
+            raise ValueError('output parent directory does not exist')
+        with dest.open('x', newline='') as handle:
+            result.to_csv(handle, index=False)
+    except ValueError as e:
+        sys.exit(str(e))
+    report['output_file'] = str(dest)
+    print(json.dumps(report, indent=2))
+    return 0
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="microtwin")
     sp = ap.add_subparsers(dest="cmd", required=True)
@@ -143,6 +167,16 @@ def main(argv=None):
     p.add_argument("--subject-map", help="optional exact sample_id,subject_id CSV for grouping metadata")
     p.add_argument("--out", required=True, help="local CSV path for predicted compositions")
     p.set_defaults(f=cmd_predict)
+    c = sp.add_parser('predict-calibrated', help='research-only local population baseline with marginal split-calibrated error radius')
+    c.add_argument('train', help='labeled training CSV/TSV')
+    c.add_argument('calibration', help='disjoint labeled calibration CSV/TSV')
+    c.add_argument('query', help='binary assemblages, disjoint from both')
+    c.add_argument('--unit', choices=('counts','relative_abundance','absolute_abundance'), required=True)
+    c.add_argument('--source-id', required=True)
+    c.add_argument('--processing-authorized', action='store_true', help='caller declaration, not proof of data rights')
+    c.add_argument('--alpha', type=float, default=.1)
+    c.add_argument('--out', required=True, help='new local CSV path')
+    c.set_defaults(f=cmd_predict_calibrated)
     a = ap.parse_args(argv); return a.f(a)
 
 
