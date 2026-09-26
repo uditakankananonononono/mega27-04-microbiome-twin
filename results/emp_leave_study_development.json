@@ -1,0 +1,229 @@
+{
+  "status": "viewed_emp_leave_study_out_development_not_external_benchmark",
+  "table_sha256": "8f99b5f2319b71ea8895ed38629b59232b2d412b671d8daebd298f4b7c647fce",
+  "metadata_sha256": "0e4a9d960ec7ccebc0dd4d7de9e4e4ab98abe52aad7f117ea3746d6ab2dd0d39",
+  "threshold_on_retained_genus_subset": 0.9,
+  "candidate_studies": 20,
+  "scored_studies": 16,
+  "covered_samples": 779,
+  "median_of_study_mean_host_label_medians": 0.7631155710435873,
+  "study_results": [
+    {
+      "study_id": 662,
+      "samples": 46,
+      "host_labels": 46,
+      "median_retained_subset_mass_in_train_vocab": 1.0,
+      "min_retained_subset_mass_in_train_vocab": 0.9941221257804173,
+      "covered_samples": 46,
+      "covered_host_labels": 46,
+      "mean_host_label_median_bc": 0.8068943052390586,
+      "median_sample_bc": 0.8033712096407996,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 722,
+      "samples": 78,
+      "host_labels": 17,
+      "median_retained_subset_mass_in_train_vocab": 0.9999815135862751,
+      "min_retained_subset_mass_in_train_vocab": 0.9982996811902232,
+      "covered_samples": 78,
+      "covered_host_labels": 17,
+      "mean_host_label_median_bc": 0.7848419220922039,
+      "median_sample_bc": 0.7877311194316363,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 804,
+      "samples": 78,
+      "host_labels": 78,
+      "median_retained_subset_mass_in_train_vocab": 1.0,
+      "min_retained_subset_mass_in_train_vocab": 0.8288854003139717,
+      "covered_samples": 77,
+      "covered_host_labels": 77,
+      "mean_host_label_median_bc": 0.7740507521573358,
+      "median_sample_bc": 0.7897971597534266,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 807,
+      "samples": 35,
+      "host_labels": 20,
+      "median_retained_subset_mass_in_train_vocab": 1.0,
+      "min_retained_subset_mass_in_train_vocab": 0.9997351344192822,
+      "covered_samples": 35,
+      "covered_host_labels": 20,
+      "mean_host_label_median_bc": 0.6882816045782956,
+      "median_sample_bc": 0.6920929018697248,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 910,
+      "samples": 56,
+      "host_labels": 56,
+      "median_retained_subset_mass_in_train_vocab": 1.0,
+      "min_retained_subset_mass_in_train_vocab": 0.9999265246142542,
+      "covered_samples": 56,
+      "covered_host_labels": 56,
+      "mean_host_label_median_bc": 0.8479231559906495,
+      "median_sample_bc": 0.8703957354694905,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 925,
+      "samples": 28,
+      "host_labels": 28,
+      "median_retained_subset_mass_in_train_vocab": 0.8906244952676292,
+      "min_retained_subset_mass_in_train_vocab": 0.29634682431408216,
+      "covered_samples": 12,
+      "covered_host_labels": 12,
+      "mean_host_label_median_bc": 0.868007645152543,
+      "median_sample_bc": 0.8806010234960036,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 933,
+      "samples": 64,
+      "host_labels": 64,
+      "median_retained_subset_mass_in_train_vocab": 1.0,
+      "min_retained_subset_mass_in_train_vocab": 0.9997776707303516,
+      "covered_samples": 64,
+      "covered_host_labels": 64,
+      "mean_host_label_median_bc": 0.7572363044842211,
+      "median_sample_bc": 0.7595937174581541,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 940,
+      "samples": 23,
+      "host_labels": 22,
+      "median_retained_subset_mass_in_train_vocab": 1.0,
+      "min_retained_subset_mass_in_train_vocab": 0.9979924880196865,
+      "covered_samples": 23,
+      "covered_host_labels": 22,
+      "mean_host_label_median_bc": 0.7449371804635725,
+      "median_sample_bc": 0.7016994494412598,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 1039,
+      "samples": 23,
+      "host_labels": 23,
+      "median_retained_subset_mass_in_train_vocab": 0.9999867993769306,
+      "min_retained_subset_mass_in_train_vocab": 0.9994882292732856,
+      "covered_samples": 23,
+      "covered_host_labels": 23,
+      "mean_host_label_median_bc": 0.7864665893004722,
+      "median_sample_bc": 0.8108973203095365,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 1453,
+      "samples": 64,
+      "host_labels": 16,
+      "median_retained_subset_mass_in_train_vocab": 1.0,
+      "min_retained_subset_mass_in_train_vocab": 0.9987934913750938,
+      "covered_samples": 64,
+      "covered_host_labels": 16,
+      "mean_host_label_median_bc": 0.7689948376029534,
+      "median_sample_bc": 0.7914412635420869,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 1580,
+      "samples": 25,
+      "host_labels": 25,
+      "median_retained_subset_mass_in_train_vocab": 0.9932037989021522,
+      "min_retained_subset_mass_in_train_vocab": 0.8063418782650954,
+      "covered_samples": 18,
+      "covered_host_labels": 18,
+      "mean_host_label_median_bc": 0.8757126700775557,
+      "median_sample_bc": 0.8896687094587716,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 1622,
+      "samples": 36,
+      "host_labels": 1,
+      "status": "abstained_fewer_than_ten_host_labels"
+    },
+    {
+      "study_id": 1642,
+      "samples": 74,
+      "host_labels": 74,
+      "median_retained_subset_mass_in_train_vocab": 0.9998022526869179,
+      "min_retained_subset_mass_in_train_vocab": 0.994504453287853,
+      "covered_samples": 74,
+      "covered_host_labels": 74,
+      "mean_host_label_median_bc": 0.6823606005068356,
+      "median_sample_bc": 0.6563106587082812,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 1747,
+      "samples": 79,
+      "host_labels": 31,
+      "median_retained_subset_mass_in_train_vocab": 1.0,
+      "min_retained_subset_mass_in_train_vocab": 0.9948196378499121,
+      "covered_samples": 79,
+      "covered_host_labels": 31,
+      "mean_host_label_median_bc": 0.7524034113970802,
+      "median_sample_bc": 0.7312250129272115,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 1748,
+      "samples": 28,
+      "host_labels": 5,
+      "status": "abstained_fewer_than_ten_host_labels"
+    },
+    {
+      "study_id": 1774,
+      "samples": 37,
+      "host_labels": 35,
+      "median_retained_subset_mass_in_train_vocab": 1.0,
+      "min_retained_subset_mass_in_train_vocab": 0.9998297292695386,
+      "covered_samples": 37,
+      "covered_host_labels": 35,
+      "mean_host_label_median_bc": 0.7462727528266822,
+      "median_sample_bc": 0.7545738966259081,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 1883,
+      "samples": 106,
+      "host_labels": 1,
+      "status": "abstained_fewer_than_ten_host_labels"
+    },
+    {
+      "study_id": 2192,
+      "samples": 29,
+      "host_labels": 15,
+      "median_retained_subset_mass_in_train_vocab": 1.0,
+      "min_retained_subset_mass_in_train_vocab": 0.9992655699177438,
+      "covered_samples": 29,
+      "covered_host_labels": 15,
+      "mean_host_label_median_bc": 0.7497805686742995,
+      "median_sample_bc": 0.7641176399403735,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 2229,
+      "samples": 64,
+      "host_labels": 64,
+      "median_retained_subset_mass_in_train_vocab": 1.0,
+      "min_retained_subset_mass_in_train_vocab": 1.0,
+      "covered_samples": 64,
+      "covered_host_labels": 64,
+      "mean_host_label_median_bc": 0.6961231720826419,
+      "median_sample_bc": 0.7073157446296723,
+      "status": "viewed_leave_study_out_development_only"
+    },
+    {
+      "study_id": 2382,
+      "samples": 159,
+      "host_labels": 6,
+      "status": "abstained_fewer_than_ten_host_labels"
+    }
+  ],
+  "note": "All candidate studies have been viewed for method development, and mirror/biological-unit eligibility is incomplete. Train/test are disjoint EMP study IDs in this derivative, NOT untouched source families. Coverage is relative to an already heavily filtered genus subset (median 32.06% raw BIOM mass), not full-community coverage. Scores renormalize retained genera, include no same-task top comparator or multiplicity adjustment, and cannot establish the requested external win."
+}
