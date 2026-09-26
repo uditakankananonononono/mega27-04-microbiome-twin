@@ -40,7 +40,7 @@ def summarize(threshold=.9):
         raise ValueError('EMP metadata join changed')
     m = meta.set_index('#SampleID').loc[x.columns]
     old = set(pd.read_csv(ROOT / 'data/raw/mgnify/manifest.csv').secondary_accession.dropna().astype(str))
-    if m.ebi_accession.astype(str).isin(old).any() or m.host_subject_id.isna().any():
+    if m.study_id.isna().any() or m.ebi_accession.astype(str).isin(old).any() or m.host_subject_id.isna().any():
         raise ValueError('known old accession or missing subject label')
     if not (m.emp_release1.astype(str).str.lower() == 'true').all() or not (m.qc_filtered.astype(str).str.lower() == 'true').all():
         raise ValueError('candidate flags changed')
