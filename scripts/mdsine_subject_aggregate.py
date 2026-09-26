@@ -5,6 +5,7 @@ reports each mouse's median paired gap; 4/5 mice do not justify generalization.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 import sys
@@ -21,7 +22,15 @@ def summarize(cohort, all_timepoints=True):
     if cohort not in ('healthy', 'uc'):
         raise ValueError('cohort must be healthy or uc')
     base = Path(__file__).resolve().parents[1]
-    source = pd.read_csv(base/f'data/raw/mdsine2_sourcedata/fig3_{cohort}_absolute.csv')
+    source_path = base / f'data/raw/mdsine2_sourcedata/fig3_{cohort}_absolute.csv'
+    expected = {
+        'healthy': 'ca2eaa9de7a9d7f4cac68207949807c302f1d89de76595b15fc6810b3c17d242',
+        'uc': 'ad52c3c9818e55ddcd980f2904ebe6d123c51b2c4d7a910f4dcf3d2ebe7c9d3c',
+    }
+    source_hash = hashlib.sha256(source_path.read_bytes()).hexdigest()
+    if source_hash != expected[cohort]:
+        raise ValueError('MDSINE2 source data checksum mismatch')
+    source = pd.read_csv(source_path)
     raw = base/f'data/raw/mdsine2{"_uc" if cohort=="uc" else ""}'
     meta = pd.read_csv(raw/'metadata.tsv', sep='\t').set_index('sampleID')
     qpcr_ids = set(pd.read_csv(raw/'qpcr.tsv', sep='\t', index_col=0).index)
@@ -48,7 +57,7 @@ def summarize(cohort, all_timepoints=True):
         rows.append((subject,taxon,ours))
     ours=pd.DataFrame(rows,columns=['subject','taxon','ours'])
     out={'cohort':cohort,'all_timepoints':all_timepoints,'n_subjects':len(subjects),
-         'source':str(base/f'data/raw/mdsine2_sourcedata/fig3_{cohort}_absolute.csv'),
+         'source': str(source_path), 'source_sha256': source_hash,
          'comparisons':{}}
     for method in ('MDSINE2 (No Modules)','RA-MDSINE2 (No Modules)','MDSINE2'):
         official=source[source.Method==method]

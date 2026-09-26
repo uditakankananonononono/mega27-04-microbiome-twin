@@ -3,6 +3,7 @@
   "all_timepoints": false,
   "n_subjects": 5,
   "source": "/home/sandbox/mega27-04-microbiome-twin/data/raw/mdsine2_sourcedata/fig3_uc_absolute.csv",
+  "source_sha256": "ad52c3c9818e55ddcd980f2904ebe6d123c51b2c4d7a910f4dcf3d2ebe7c9d3c",
   "comparisons": {
     "MDSINE2 (No Modules)": {
       "subjects_prior_lower_median_gap": 5,
