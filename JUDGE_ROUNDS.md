@@ -1,4 +1,4 @@
-# Expanded microbiome twin: ChatGPT critique log
+# Expanded microbiome twin: model-tagged critique log
 
 Status: **0 / at least 10** substantive rounds completed as of 2026-09-26 17:15 IST. Do not count a prompt-only advisory, an upload that ChatGPT did not actually read, or a response with generic critiques as a paper-aware judge round. The user directed text-paste judging on September 26 at 20:16 IST instead of waiting for the file-upload cap. Browser lease contention can still block a round; never count text that was not actually submitted and read. The user requested both weakness-driven critique and ChatGPT help when a failed direction stalls; the EMP/HMP compatibility failures are the first candidate for a redirection question.
 
@@ -6,18 +6,18 @@ For each round preserve: exact manuscript version hash and page/text extraction 
 
 Paper currently available: archived v3 baseline PDF, 71 total PDF pages (`paper/mega27-04-microbiome-twin-paper.pdf`), not the expanded manuscript and not certified for the later 50+ **body-text-only** page rule. New-source transfer, perturbations, TRI, foundation-model and platform claims are missing. Judge should target the real state, not assume the expansion succeeded.
 
-| round | manuscript commit/hash | ChatGPT conversation URL | paper-ingestion quote checks | weakness | implemented novelty improvement | verification | status |
+| round | model | manuscript commit/hash | conversation URL | paper-ingestion quote checks | weakness | implemented novelty improvement | verification | status |
 |---|---|---|---|---|---|---|
-| 1 | pending | pending | pending | pending | pending | pending | not run |
-| 2 | pending | pending | pending | pending | pending | pending | not run |
-| 3 | pending | pending | pending | pending | pending | pending | not run |
-| 4 | pending | pending | pending | pending | pending | pending | not run |
-| 5 | pending | pending | pending | pending | pending | pending | not run |
-| 6 | pending | pending | pending | pending | pending | pending | not run |
-| 7 | pending | pending | pending | pending | pending | pending | not run |
-| 8 | pending | pending | pending | pending | pending | pending | not run |
-| 9 | pending | pending | pending | pending | pending | pending | not run |
-| 10 | pending | pending | pending | pending | pending | pending | not run |
+| 1 | pending | pending | pending | pending | pending | pending | pending | not run |
+| 2 | pending | pending | pending | pending | pending | pending | pending | not run |
+| 3 | pending | pending | pending | pending | pending | pending | pending | not run |
+| 4 | pending | pending | pending | pending | pending | pending | pending | not run |
+| 5 | pending | pending | pending | pending | pending | pending | pending | not run |
+| 6 | pending | pending | pending | pending | pending | pending | pending | not run |
+| 7 | pending | pending | pending | pending | pending | pending | pending | not run |
+| 8 | pending | pending | pending | pending | pending | pending | pending | not run |
+| 9 | pending | pending | pending | pending | pending | pending | pending | not run |
+| 10 | pending | pending | pending | pending | pending | pending | pending | not run |
 
 A ChatGPT direction consultation was made at 16:15 IST, conversation https://chatgpt.com/c/6ab7a25c-dee0-83e8-8897-9804c6e25105 . The page submitted only the first paragraph of a longer prepared prompt after an input timeout. It did not receive the paper or detailed study evidence; therefore this is **not** a counted judge round. Verbatim visible prompt, answer and independent assessment are in `judge/redirection-01/`. Suggested narrow antibiotic recovery trajectory track is conditional on fresh source/design/rights/benchmark qualification; broader platform goal unchanged.
 
@@ -29,3 +29,6 @@ With the parent's browser token, submitted an introduction plus the first 12 of 
 
 ## 21:32 IST deterministic midnight staging
 The browser fleet reported a nonretryable daily time cap through midnight. No browser acquire will be attempted before main passes this lane's resumed queue token (position #19 after the cap reset). All 86 paste segments are now committed under `judge/paste-prep-01/segments-3300/`, each with a SHA-256 in `staging_manifest.json`. `scripts/stage_judge_paste_segments.py` rechecks the PDF hash, exact extracted text hash, every original chunk hash and every original page body against its labeled envelope before staging; reruns reject a changed segment. The next **unsent** numbered segment is 013, SHA-256 `5754ee4ea8776282e9bfb4e9d47865c860fa093207e255297c2b6595cd204089`. The composer may still contain it, but its presence there is not a sent message. Upon a new token, inspect the conversation at https://chatgpt.com/c/6ab7df9a-ea6c-83e8-97f2-8fc89687b445 , confirm the highest actually sent/acknowledged segment, clear the composer if necessary, and send only the next missing one. The paper was not fully ingested and the count remains 0/10.
+
+## 23:48 IST second model surface
+The user's new direction relayed by main authorizes DeepSeek free web chat for **new** consultations, with each completed paper-aware judge round tagged by the model used. Existing ChatGPT conversation threads stay there for continuity; the partial 12/86-segment manuscript thread is not moved to DeepSeek. A distinct, staged DeepSeek **direction consultation** prompt is in `judge/deepseek-new-consult-01/PROMPT.txt` (SHA-256 60138363dc3175a524035cb273cef5c3762ea3b64ebd594a960fdf1bb2d9944b), 3,247 bytes, staged only, never submitted. It truthfully says DeepSeek has not read the full paper and cannot count as one of the ten rounds. No browser attempt during the hard daily cap; wait for main's post-midnight queue token. Free web interface only, no API keys or paid tiers.

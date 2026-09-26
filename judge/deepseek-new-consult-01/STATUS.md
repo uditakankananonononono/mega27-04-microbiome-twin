@@ -1,0 +1,3 @@
+# Staged NEW DeepSeek direction consultation, not submitted
+
+Target surface: `chat.deepseek.com` free web chat, only after the parent passes this lane's post-midnight browser token. User/parent approved DeepSeek for **new** consultations; the partial archived-paper review at https://chatgpt.com/c/6ab7df9a-ea6c-83e8-97f2-8fc89687b445 remains ChatGPT-only for continuity. This DeepSeek prompt gives an in-hand data-and-gates summary and explicitly says the paper was not supplied, so any response is a direction consult, never a counted full-paper novelty round. Do not send until a browser token is passed; the platform browser daily cap is active before midnight. No paid tier or API key.
