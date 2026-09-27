@@ -116,3 +116,19 @@ def test_subject_map_missing_extra_and_mutation(tmp_path, monkeypatch):
     monkeypatch.setattr(module,'bray_radius',mutate)
     with pytest.raises(ValueError,match='subject map changed'):
         predict_with_radius(tr,cal,q,**kwargs)
+
+
+def test_subject_map_whitespace_cannot_hide_cross_partition_person(tmp_path):
+    tr,cal,q=_inputs(tmp_path)
+    maps=_maps(tmp_path)
+    args=dict(unit='counts',source_id='test',processing_authorized=True,
+              subject_map=maps[0],calibration_subject_map=maps[1],query_subject_map=maps[2])
+    maps[2].write_text('sample_id,subject_id\nq1, p1 \n')
+    with pytest.raises(ValueError,match='surrounding whitespace'):
+        predict_with_radius(tr,cal,q,**args)
+    maps[2].write_text('sample_id,subject_id\n q1,p3\n')
+    with pytest.raises(ValueError,match='surrounding whitespace'):
+        predict_with_radius(tr,cal,q,**args)
+    maps[2].write_text('sample_id,subject_id\nq1,"p,3"\n')
+    _,report=predict_with_radius(tr,cal,q,**args)
+    assert report['subject_partition_check']['status']=='exact_submitted_labels_disjoint'

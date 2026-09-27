@@ -52,7 +52,9 @@ def predict_with_radius(train_path, calibration_path, query_path, *, unit, sourc
             if not rows or rows[0]!=['sample_id','subject_id'] or len(rows)!=len(ids)+1 or any(len(row)!=2 for row in rows[1:]):
                 raise ValueError('subject map needs exactly sample_id,subject_id and one row per sample')
             sample=[r[0] for r in rows[1:]]; subjects=[r[1] for r in rows[1:]]
-            if len(set(sample))!=len(sample) or set(sample)!=set(ids) or any(not v.strip() for v in subjects):
+            if any(not value or value!=value.strip() for value in sample+subjects):
+                raise ValueError('subject map IDs must be nonempty with no surrounding whitespace')
+            if len(set(sample))!=len(sample) or set(sample)!=set(ids):
                 raise ValueError('subject map must exactly cover partition sample IDs with nonempty subjects')
             subject_sets.append(set(subjects))
         if any(subject_sets[i]&subject_sets[j] for i,j in ((0,1),(0,2),(1,2))):

@@ -1,0 +1,3 @@
+# Calibrated local predictor subject-label normalization, 2026-09-27 23:14 IST
+
+The new three-map guard compares submitted subject IDs verbatim; leading/trailing spaces could make the same person appear disjoint (`p1` versus ` p1 `). Fail closed on surrounding whitespace in subject IDs and sample IDs, rather than silently cleaning privacy-sensitive labels. Reject duplicate header rows and blank/whitespace-only IDs. Validate CSV syntax without dropping fields; subject maps remain exact `sample_id,subject_id` with one row per partition sample. Test both whitespace-collision attempts and proper quoted CSV IDs. No real patient records or benchmark outcomes read. As before, distinct pseudonyms do not prove different people; this closes only an exact-label integrity gap.
