@@ -26,3 +26,9 @@ def test_internal_split_accounting_and_hashes():
     assert row['calibration'] == 4 and row['vacuous'] is True
     assert row['covered_test'] == row['test']
     assert len(row['source_sha256']) == 64
+
+
+@pytest.mark.parametrize('alpha', [float('nan'), float('inf'), True, '0.1', 0, 1])
+def test_invalid_alpha_fails_with_validation_error(alpha):
+    with pytest.raises(ValueError, match='alpha'):
+        bray_radius([.2, .3], alpha)

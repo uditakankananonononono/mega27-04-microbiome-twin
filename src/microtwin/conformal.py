@@ -13,7 +13,7 @@ import numpy as np
 
 
 def bray_radius(calibration_errors, alpha=0.1):
-    if not 0 < alpha < 1:
+    if not isinstance(alpha, (int, float)) or isinstance(alpha, bool) or not np.isfinite(alpha) or not 0 < alpha < 1:
         raise ValueError('alpha must be strictly between 0 and 1')
     scores = np.asarray(calibration_errors, dtype=float)
     if scores.ndim != 1 or not len(scores) or not np.isfinite(scores).all():
