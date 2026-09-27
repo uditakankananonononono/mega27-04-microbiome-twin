@@ -1,0 +1,63 @@
+{
+  "study": "MGYS00005154",
+  "study_source": {
+    "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005154",
+    "sha256": "b36cdf7043e790f749127e4d8a2cc9f153930525ce67100087089f4ba869429b",
+    "bytes": 2569
+  },
+  "sample_sources": [
+    {
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005154/samples?page_size=1000",
+      "sha256": "37c81488106be6b459e6e58bbaf1904b335e1f43f95e63be37fc9b652ccbba7a",
+      "bytes": 504336,
+      "items": 250,
+      "declared_total": 529
+    },
+    {
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005154/samples?page=2&page_size=1000",
+      "sha256": "e44a6a4df0137a95dc31f9d04c5168343f128d37a9e1b0827fa2bdce5654ce09",
+      "bytes": 504616,
+      "items": 250,
+      "declared_total": 529
+    },
+    {
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005154/samples?page=3&page_size=1000",
+      "sha256": "638fc86c9443e46e7f629be787670c2069cdb7dcb147dc0eb50b1aa1d9da61c2",
+      "bytes": 58881,
+      "items": 29,
+      "declared_total": 529
+    }
+  ],
+  "linked_publication_source": {
+    "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005154/publications",
+    "sha256": "91805b2e5e4ed74c10ff86e329fd386a1146cb32546e44da946f13fab1e51552",
+    "bytes": 1135
+  },
+  "linked_publications": [
+    {
+      "pubmed_id": 34377361,
+      "doi": "10.1016/j.csbj.2021.07.009",
+      "title": "Beyond samples: A metric revealing more connections of gut microbiota between individuals."
+    }
+  ],
+  "bioproject": "PRJEB3079",
+  "secondary_accession": "ERP001500",
+  "declared_samples": 529,
+  "retrieved_samples": 529,
+  "metadata_key_counts": {
+    "geographic location (latitude)": 529,
+    "geographic location (longitude)": 529,
+    "geographic location (country and/or sea,region)": 529,
+    "environment (feature)": 529,
+    "environment (biome)": 529,
+    "environment (material)": 529,
+    "host taxid": 529,
+    "depth": 529,
+    "altitude": 529,
+    "elevation": 529,
+    "host scientific name": 529
+  },
+  "possible_participant_or_family_key_counts": {},
+  "source_family_independence_status": "unknown",
+  "scope": "aggregate current provider metadata for viewed source only; study abstract corresponds to a 2012 paper but linked-publication endpoint lists a different 2021 paper, so publication association is not certified; absence of key names does not prove no participant IDs exist in primary data; no mirror, rights, historical assay or subject-independence certificate"
+}
