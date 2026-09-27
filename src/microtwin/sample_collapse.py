@@ -20,8 +20,10 @@ def collapse_runs(table, analyses):
     """
     if not isinstance(table, pd.DataFrame) or table.empty or not table.columns.is_unique:
         raise ValueError("nonempty table with unique analysis columns required")
-    if not table.index.is_unique:
-        raise ValueError("taxon rows must be unique before aggregation")
+    if not table.index.is_unique or any(not isinstance(v, str) or not v.strip() for v in table.index):
+        raise ValueError("taxon rows must be unique nonempty labels before aggregation")
+    if any(not isinstance(v, str) or not v.strip() for v in table.columns):
+        raise ValueError("analysis columns must be nonempty string labels")
     vals = table.to_numpy()
     if not np.issubdtype(vals.dtype, np.number) or not np.isfinite(vals).all() or (vals < 0).any():
         raise ValueError("abundances must be finite nonnegative numeric values")
@@ -30,12 +32,17 @@ def collapse_runs(table, analyses):
     runs = defaultdict(set)
     assembly_ids = set()
     for a in analyses:
-        rel = a.get("relationships", {})
+        if not isinstance(a, dict) or not isinstance(a.get("relationships"), dict):
+            raise ValueError("each analysis needs relationship records")
+        rel = a["relationships"]
         s = (rel.get("sample") or {}).get("data") or {}
         r = (rel.get("run") or {}).get("data") or {}
         asm = (rel.get("assembly") or {}).get("data") or {}
-        if not s.get("id"):
+        if not isinstance(s.get("id"), str) or not s["id"].strip():
             raise ValueError("analysis without sample")
+        if any(v.get("id") is not None and
+               (not isinstance(v["id"], str) or not v["id"].strip()) for v in (r, asm)):
+            raise ValueError("run or assembly id must be nonempty string")
         if r.get("id"):
             runs[s["id"]].add(r["id"])
         if asm.get("id"):
@@ -48,6 +55,8 @@ def collapse_runs(table, analyses):
         for rid in ids: reverse[rid].add(sample)
     if any(len(s) > 1 for s in reverse.values()):
         raise ValueError("run maps to multiple samples")
+    if set(reverse) & assembly_ids:
+        raise ValueError("run and assembly IDs collide; cannot identify raw counts")
     known = set(reverse) | assembly_ids
     extra = set(table.columns) - known
     missing = set(reverse) - set(table.columns)

@@ -29,3 +29,18 @@ def test_assembly_only_sample_fails_closed():
     t = pd.DataFrame({"R1": [1], "Z2": [2]}, index=["A"])
     with pytest.raises(ValueError, match="sample without a run"):
         collapse_runs(t, [_a("S1", "R1"), _a("S2", assembly="Z2")])
+
+
+def test_run_and_assembly_column_collision_abstains():
+    t = pd.DataFrame({'X': [1]}, index=['A'])
+    with pytest.raises(ValueError, match='collide'):
+        collapse_runs(t, [_a('S1', 'X'), _a('S1', assembly='X')])
+
+
+def test_invalid_relationship_and_taxon_labels_fail_closed():
+    t = pd.DataFrame({'R1': [1]}, index=['A'])
+    with pytest.raises(ValueError, match='relationship'):
+        collapse_runs(t, [None])
+    t.index = ['']
+    with pytest.raises(ValueError, match='taxon rows'):
+        collapse_runs(t, [_a('S1', 'R1')])
