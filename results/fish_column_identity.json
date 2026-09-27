@@ -1,0 +1,50 @@
+{
+  "study": "MGYS00006086",
+  "source": {
+    "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006086/pipelines/5.0/file/ERP136460_taxonomy_abundances_SSU_v5.0.tsv",
+    "response_sha256": "ec4b75c3eae4fcfe5adb8bc359a8d78011996c044c19f8b1d3407a262800a992",
+    "bytes": 9572
+  },
+  "api_pages": {
+    "analyses": [
+      {
+        "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006086/analyses?page_size=1000",
+        "response_sha256": "384657eb7c196c6969eaf5bc77793157120d709851d9b9c5fdd2311560ee6f29",
+        "bytes": 459765,
+        "items": 157,
+        "declared_total": 157
+      }
+    ],
+    "samples": [
+      {
+        "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006086/samples?page_size=1000",
+        "response_sha256": "de0e027547bd164c2cc4257818a40d31cc21bf61ca9e9aa0c5153ebd64ce3591",
+        "bytes": 295793,
+        "items": 157,
+        "declared_total": 157
+      }
+    ]
+  },
+  "raw_ssu_columns": 150,
+  "nonzero_ssu_columns": 142,
+  "retained_audit_columns": 135,
+  "analysis_count": 157,
+  "sample_count": 157,
+  "assembly_relationships": 157,
+  "exact_assembly_matches_raw": 150,
+  "exact_assembly_matches_positive": 142,
+  "exact_assembly_matches_retained": 135,
+  "unmatched_retained": 0,
+  "matched_retained_analysis_types": {
+    "assembly": 135
+  },
+  "linked_retained_samples": 135,
+  "unique_linked_retained_samples": 135,
+  "linked_sample_host_names": {
+    "Salmo salar": 135
+  },
+  "linked_sample_normalized_species": {
+    "missing": 135
+  },
+  "scope": "exact current MGnify assembly-to-analysis-to-sample metadata linkage for viewed fish source; historical assay method, independent biological family and rights not certified; old 160 BH unchanged"
+}

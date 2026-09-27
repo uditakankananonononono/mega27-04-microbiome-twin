@@ -196,6 +196,35 @@ P.p("The diagnostic changes interpretation, not the analysis denominator. The ro
     "results/audit_degenerate_table.json; the locked check is "
     "results/PREREG_20260927_audit_degenerate_table.md.")
 
+P.h("5.1.2b Exact source-column linkage for the fish diagnostic", 3)
+FI=json.load(open("results/fish_column_identity.json"))
+P.p("The low-information fish table also permits a narrow accession-level provenance check. We froze the match rule "
+    "before reading the current MGnify analysis and sample lists: exact identity between every source SSU column "
+    "and an analysis record's assembly-relationship identifier, followed by that analysis's sample relationship. "
+    "No string similarity or metadata-only guess is used. The source download has 150 raw columns, of which "
+    "142 carry nonzero mass after genus collapse and are the columns recorded in the old manifest; 135 remain "
+    "after the audit's 5% prevalence screen removes massless rows. Thus 150, 142 and 135 refer to distinct, "
+    "explicit processing stages, not competing counts of independent subjects.")
+P.p(f"The current MGnify API lists {FI['analysis_count']} analysis records and {FI['sample_count']} sample records, "
+    f"each endpoint fully covered in one page. Exactly {FI['exact_assembly_matches_raw']} of 150 raw SSU "
+    f"columns, {FI['exact_assembly_matches_positive']} of 142 nonzero columns and "
+    f"{FI['exact_assembly_matches_retained']} of 135 analyzed columns match unique analysis assembly IDs. "
+    f"All {FI['exact_assembly_matches_retained']} analyzed columns then link through those analysis records "
+    "to distinct current sample IDs. These matches materially strengthen the column-to-record identity "
+    "for this one viewed source, rather than relying on a study-level title or aggregate count. "
+    "Every matched current analysis has experiment type 'assembly'; every linked sample has "
+    "explicit host scientific name Salmo salar, while all normalized species fields are missing. "
+    "The explicit salmon name is a direct metadata observation, not a repair of the missing normalized field.")
+P.p("The result does not retroactively turn the source into an independent fish cohort or assay-certified "
+    "amplicon dataset. The public 5.0 SSU file's assembly IDs map to today's assembly-typed analyses, but "
+    "the run-level instrument and library methods that produced each abundance column are not settled "
+    "by an experiment-type label. Nor does distinct sample accessions demonstrate distinct individual "
+    "salmon, cages or projects, and license review remains open. The 135 columns still provide only a "
+    "within-table predictive audit with a severe one-taxon prevalence artifact. No error was recomputed "
+    "and no archived BH result was moved. The exact URLs, response hashes and match counts are recorded "
+    "in results/fish_column_identity.json under the locked "
+    "results/PREREG_20260927_fish_column_identity.md protocol.")
+
 P.h("5.1.3 Live source context for the eight unflagged digestive titles", 3)
 GS=json.load(open("results/gut_unflagged_source_screen.json"))
 P.p("To test whether the eight title-unflagged records could even be described uniformly as human-gut amplicon studies, we inspected their live MGnify study endpoints without reopening or re-scoring taxon outcomes. Each endpoint returned a public study name, project IDs and abstract; the source responses and abstract strings are hashed, while the repository retains only non-private metadata and short method phrases. The MGnify study response does not provide a decisive per-run library-strategy field, so a phrase in an abstract is source context, not an assay certificate for every archived abundance column. The manifest's digestive-system biome also requires verification against collection source and organism. This screen leaves the original eight win calls untouched.")
