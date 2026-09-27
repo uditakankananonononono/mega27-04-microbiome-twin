@@ -7,8 +7,8 @@ import numpy as np
 def compare_by_study(candidate, baseline, study_ids, *, n_boot=5000, seed=0):
     """Macro-average study median errors, then bootstrap independent studies.
 
-    Negative candidate-minus-baseline delta favors candidate. A win requires
-    a 95% interval entirely below zero and at least two independent studies.
+    Negative candidate-minus-baseline delta favors candidate. An interval
+    below zero is a statistic only, not a certified external benchmark win.
     Samples within a study remain together in each bootstrap draw.
     """
     c = np.asarray(candidate, float)
@@ -34,11 +34,15 @@ def compare_by_study(candidate, baseline, study_ids, *, n_boot=5000, seed=0):
         rng = np.random.default_rng(seed)
         ix = rng.integers(len(unique), size=(n_boot, len(unique)))
         ci = [float(v) for v in np.quantile(d[ix].mean(1), [0.025, 0.975])]
-    verdict = "insufficient_independent_studies" if len(unique) < 2 else (
+    verdict = "insufficient_studies" if len(unique) < 2 else (
         "interval_disabled" if ci is None else
-        "WIN" if ci[1] < 0 else "LOSS" if ci[0] > 0 else "tie_or_uncertain")
+        "candidate_lower_interval" if ci[1] < 0 else
+        "baseline_lower_interval" if ci[0] > 0 else "uncertain")
     return {"n_samples": len(c), "n_studies": len(unique),
             "macro_median_candidate": float(c_study.mean()),
             "macro_median_baseline": float(b_study.mean()),
             "delta_candidate_minus_baseline": macro, "ci95_study_bootstrap": ci,
-            "verdict": verdict, "study_deltas": dict(zip(map(str, unique), map(float, d)))}
+            "verdict": verdict, "external_win_certified": False,
+            "eligibility_status":"unverified",
+            "claim_gate_note":"Study IDs do not prove independent biological families. Untouched source status, matched task, training/validation comparator selection, rights and multiplicity are not checked by this statistic.",
+            "study_deltas": dict(zip(map(str, unique), map(float, d)))}
