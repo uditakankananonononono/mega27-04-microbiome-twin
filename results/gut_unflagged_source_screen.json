@@ -1,0 +1,119 @@
+{
+  "rows": [
+    {
+      "accession": "MGYS00000633",
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00000633",
+      "http_status": 200,
+      "response_sha256": "3eca54d16bfce45fcc1f61709e0849a2b2a7bbca19ffa005e709a4a31dc291f4",
+      "study_name": "Microbial composition of samples from infant gut",
+      "secondary_accession": "SRP001634",
+      "bioproject": "PRJNA63661",
+      "data_origination": "HARVESTED",
+      "description_phrases": [],
+      "assay_status": "unknown",
+      "abstract_sha256": "ed2cf15cd7374f0d6d2097a6f4e02383d6eb4bd8c7dca0f6d3482ed977684fbf"
+    },
+    {
+      "accession": "MGYS00002238",
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00002238",
+      "http_status": 200,
+      "response_sha256": "f3a55dccf88777fc771633a4717dfbb86798b853e943d97b6708935471933acd",
+      "study_name": "Oral microbial changes in ASD children",
+      "secondary_accession": "SRP097646",
+      "bioproject": "PRJNA362687",
+      "data_origination": "HARVESTED",
+      "description_phrases": [],
+      "assay_status": "unknown",
+      "abstract_sha256": "964beab83833fe8aa140c22dce6330dcdd37bc6911a6563d9b62c019156a3864"
+    },
+    {
+      "accession": "MGYS00005154",
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005154",
+      "http_status": 200,
+      "response_sha256": "20f3410ab8a0bcdec065d338a77ed1bd6070f329600d63d11d780fdb6b6aca4f",
+      "study_name": "Human gut microbiome viewed across age and geography",
+      "secondary_accession": "ERP001500",
+      "bioproject": "PRJEB3079",
+      "data_origination": "SUBMITTED",
+      "description_phrases": [],
+      "assay_status": "unknown",
+      "abstract_sha256": "ea1daba128855af118d43a6dcfb647ec165b0b00468afffe00c2b96911425893"
+    },
+    {
+      "accession": "MGYS00005230",
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005230",
+      "http_status": 200,
+      "response_sha256": "3be3fa1e1cbd5ca7f05843a829ae554167f9bdc681a36da4e83e2cdfefcee49f",
+      "study_name": "Flores_fecal_EBI",
+      "secondary_accession": "ERP005153",
+      "bioproject": "PRJEB5729",
+      "data_origination": "SUBMITTED",
+      "description_phrases": [],
+      "assay_status": "unknown",
+      "abstract_sha256": "ceefa5123c545cebd3a2a365580c135c1f1e334fad3a71de3ce846b9b1e4ed23"
+    },
+    {
+      "accession": "MGYS00006006",
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006006",
+      "http_status": 200,
+      "response_sha256": "eb20fcb78aa62911b1170b2e4672ef0029e0cdd06414912ba73b33df79e45e78",
+      "study_name": "Extensive microbial novelty in the Hadza and Nepali gut microbiome reveals how lifestyle impacts composition and function",
+      "secondary_accession": "ERP133688",
+      "bioproject": "PRJEB49206",
+      "data_origination": "SUBMITTED",
+      "description_phrases": [
+        "ultra-deep metagenomic sequencing"
+      ],
+      "assay_status": "study_description_only_not_run_verified",
+      "abstract_sha256": "9c7c3059f77285e87ff6b446f87c3d5769c5e91fdc7ecdcd25f9000e12d252f2"
+    },
+    {
+      "accession": "MGYS00006755",
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006755",
+      "http_status": 200,
+      "response_sha256": "58687c10aa15819ad331a21c33ae2427ad10807bd235abbe0323abd10eb8901f",
+      "study_name": "gut metagenome Raw sequence reads",
+      "secondary_accession": "SRP097190",
+      "bioproject": "PRJNA362214",
+      "data_origination": "HARVESTED",
+      "description_phrases": [
+        "V4 16S rRNA amplicons"
+      ],
+      "assay_status": "study_description_only_not_run_verified",
+      "abstract_sha256": "85ca143415ee84f768d39f21e56a6a5ee67531933903946c38c6262050f05549"
+    },
+    {
+      "accession": "MGYS00006794",
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006794",
+      "http_status": 200,
+      "response_sha256": "f0d249a7f3c69f2510fd07deab9233535484339e6bc018f6dda8054bc3cdb60b",
+      "study_name": "Longitudinal changes of stool and oral microbiota composition in patients with multiple sclerosis undergoing B-cell depletion",
+      "secondary_accession": "ERP128598",
+      "bioproject": "PRJEB44538",
+      "data_origination": "SUBMITTED",
+      "description_phrases": [
+        "16S rDNA sequencing"
+      ],
+      "assay_status": "study_description_only_not_run_verified",
+      "abstract_sha256": "1605afbf3accaaa499af00967b5477b70c958d57ae9a92e05bed0e3457b82b0b"
+    },
+    {
+      "accession": "MGYS00006795",
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006795",
+      "http_status": 200,
+      "response_sha256": "5d68ba11601546f08ba5875364a45932e937a04d06ca8ef07662a4f84205453f",
+      "study_name": "Impact of High altitude environment of Human oral and gut microbiota",
+      "secondary_accession": "SRP162433",
+      "bioproject": "PRJNA492714",
+      "data_origination": "HARVESTED",
+      "description_phrases": [
+        "whole genome sequencing"
+      ],
+      "assay_status": "study_description_only_not_run_verified",
+      "abstract_sha256": "58e686c4c97cda1b9e5765ad1087b12a98c7604c1797f451e0c157d4e6ac8e6a"
+    }
+  ],
+  "n_rows": 8,
+  "basis": "live MGnify study endpoint, eight frozen archive IDs; no sample/run method assertion",
+  "limits": "Study description is not a per-run assay certificate. Manifest biome and source organism/sampling context can disagree; no new independent source win."
+}
