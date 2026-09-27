@@ -1,4 +1,4 @@
-**2026-09-27 dual-endpoint edition staged locally:** A 76-page PDF adds an exploratory detection-versus-abundance output-compatibility audit. Drive remains at the prior 75-page edition until verified replacement.
+**2026-09-27 two-part score audit verified:** The 76-page PDF includes the exploratory detection/abundance compatibility diagnostic; current Drive PDF and DOCX were re-downloaded byte-identical after replacement. PDF SHA-256 `c105e4f3bd7e706e0780845baa750e836d451feba28ce8e726aa1c2bf3bb8a3c`; DOCX SHA-256 `1a50a7ec1ee6736ff9ebdfcb4da69b39465ea510d8a9bb7f53d1721482ac2584`. Previous checksums below are historical.
 
 **2026-09-27 intervention-window revision verified:** The archival PDF is 75 pages, adds a predeclared viewed-cohort MDSINE2 window diagnostic and repeats table headers on split tables. Existing Drive IDs were replaced and downloaded byte-identical: PDF SHA-256 `6e6557684c8873afa9154d65cfc20f4f5a592dafa30e4c62f8736b60fe9d4693`; DOCX SHA-256 `28c145713a214b02f2f2360a4f2966ae36068266572cd5e34a5e04d3cedce6b8`. Old checksums below are historical.
 
