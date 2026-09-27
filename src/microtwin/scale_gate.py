@@ -22,14 +22,19 @@ def scale_status(records, *, target_min=500, target_max=1000, foundation_min=100
     ids=[str(r.get('accession','')).strip().upper() for r in verified]
     if any(not x for x in ids) or len(ids)!=len(set(ids)):
         raise ValueError("verified accessions must be nonempty and unique")
+    families=[str(r.get('source_family') or '').strip().upper() for r in verified]
+    if any(not family for family in families):
+        raise ValueError('verified source_family required for each counted accession')
+    if len(families)!=len(set(families)):
+        raise ValueError('verified biological source families must be unique across accessions')
     samples=[]
     for r in verified:
         n=r.get('independent_samples')
         if not isinstance(n,int) or isinstance(n,bool) or n<1:
             raise ValueError("sample count must be verified positive integer")
         samples.append(n)
-    return {'manifest_rows':len(rows),'verified_datasets':len(verified),
+    return {'manifest_rows':len(rows),'verified_datasets':len(verified),'verified_biological_families':len(families),
             'verified_independent_samples':sum(samples),
             'leaderboard_scale_500_1000':target_min<=len(verified)<=target_max,
             'foundation_scale_target_met':len(verified)>=foundation_min and sum(samples)>=foundation_samples,
-            'note':'Scale gate alone says nothing about model fit, multimodal pairs, quality or benchmark success.'}
+            'note':'Caller-supplied source-family labels and flags do not independently prove lineage or rights. Scale gate alone says nothing about model fit, multimodal pairs, quality or benchmark success.'}
