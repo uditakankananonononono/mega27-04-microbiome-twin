@@ -575,6 +575,38 @@ P.p("The Ocean test covered 52/55 observations at radius 0.223; Human Oral cover
     "fractions are in results/internal_conformal_check.json; implementation: "+
     "scripts/internal_conformal_check.py and src/microtwin/conformal.py.")
 
+P.h("5.4.2 End-to-end predictor check after input-only abstention", 3)
+CC=json.load(open("results/local_calibrated_six_dataset_check.json"))
+P.p("The preceding radius calculation checked the frozen model directly. A separate "+
+    "already-run end-to-end check fed six previously viewed tables into the released "+
+    "local calibrated-prediction path with the same seeded candidate split. The command "+
+    "refuses a calibration or query sample with a present taxon absent from the "+
+    "training vocabulary. The check therefore removed such rows using only "+
+    "their input taxon presence, before measuring errors, then reported coverage "+
+    "on the admissible test rows. This conditional denominator differs from "+
+    "the all-candidate split in Section 5.4.1: it cannot be presented as "+
+    "unconditional 90% coverage or as successful prediction of abstained rows.")
+P.table(["ecosystem", "cal kept/candidate", "test kept/candidate", "radius", "covered/scored", "scored coverage", "vacuous"], [
+    [r['dataset'].replace('_',' '),f"{r['calibration']}/{r['calibration_candidates']}",
+     f"{r['test']}/{r['test_candidates']}",f"{r['radius']:.3f}",
+     f"{r['test_covered']}/{r['test']}",f"{r['empirical_coverage']:.1%}",
+     'yes' if r['vacuous'] else 'no'] for r in CC['datasets']
+], "Actual local calibrated prediction path on six already-viewed cNODE tables. Rows with unseen present taxa were excluded by input-only abstention before scoring; split seed zero. This is an admissible-row sensitivity, not an external validation result.")
+P.p("Ocean loses one of 53 calibration candidates and covers 51/55 scored "+
+    "tests at radius 0.193. Soil in vivo loses three calibration and two test "+
+    "candidates, then covers 120/135 at radius 0.225. Human Oral loses two "+
+    "calibration and two test rows, covering 27/28 at radius 0.407. Soil in "+
+    "vitro still covers 9/11, Human Gut 19/22, and Drosophila Gut 6/6 with the "+
+    "same vacuous radius 1.0. For every scored table, the command's predictions "+
+    "match the archived PresenceMean implementation to better than 2e-15 "+
+    "absolute maximum deviation; this is a numerical implementation check, "+
+    "not independent ecological replication. No experiment here verifies "+
+    "sample exchangeability across participants or source families, and no "+
+    "Twin Reliability Index or clinical guarantee follows. Candidate and "+
+    "scored counts, source hashes and per-table numerical deviations are in "+
+    "results/local_calibrated_six_dataset_check.json; runnable check: "+
+    "scripts/local_calibrated_six_dataset_check.py.")
+
 import paper_expansion
 paper_expansion.add(P)
 
