@@ -163,6 +163,39 @@ P.table(["study-title category", "tables", "BH interaction wins", "BH prior wins
 ], "Viewed MGnify title-flag sensitivity. 'Unflagged' means unknown assay, not verified amplicon; calls retain correction across the entire 160-study audit.")
 P.p("Among 33 assembly-indicated study titles, 13 have original-BH interaction wins and median relative gain 1.51%; among 127 unflagged titles, 108 have wins and the finite relative-gain median is 20.05%. All 33 flagged titles in this narrow rule happen to be in the digestive-system biome, so this comparison cannot separate assay from biome. The old two-other-assemblies assertion was not reproduced by this rule: it flags zero of 119 non-digestive titles. A broad substring search finds four non-digestive titles, but two use 'assemblage' or 'community assembly' rather than describing a metagenomic assembly. Neither title rule verifies all unflagged assay types. In particular, eight unflagged digestive records with eight BH wins do not establish eight independent amplicon cohorts or an untouched transfer result. A defensible comparison requires source method records and comparable source families, then a frozen re-analysis. This title flag cannot settle modality. Protocol and data: results/PREREG_20260927_mgnify_assay_descriptive.md and results/mgnify_assay_descriptive.json.")
 
+P.h("5.1.2a Zero-median table: an information-content diagnostic", 3)
+DQ=json.load(open("results/audit_degenerate_table.json"))
+A=DQ['aggregates']
+P.p("A separate diagnostic checks the fish-associated MGYS00006086 row rather than hiding its awkward zero-over-zero relative gain. "
+    "The original audit included this row among 160 BH-adjusted study tables and counted it as neither model winning, with "
+    "zero median held-out Bray-Curtis error for both. The live MGnify SSU download recorded by the manifest was opened "
+    "through its published URL and processed with the original genus collapse, positive-sample filter, 5% taxon-prevalence "
+    "filter and sample cap. The repository does not contain the archived derived TSV, so this is a reconstruction from a "
+    "current source snapshot rather than a byte-by-byte replay of the original raw artifact. Its 142-by-11 matrix "
+    "reproduces the manifest dimensions, and its 135-by-3 analyzed matrix reproduces the old audit dimensions. The "
+    "source snapshot and its hash, as well as the locked check before the download, are recorded with the diagnostic.")
+P.p(f"After prevalence filtering, {A['post_prevalence_taxa']} of {A['raw_taxa']} genera remain, and "
+    f"{A['analyzed_samples']} of {A['raw_samples']} samples retain mass on those genera. "
+    f"There are {A['unique_presence_assemblages']} unique presence assemblages and "
+    f"{A['unique_composition_vectors_rounded_12dp']} unique relative-composition vectors at twelve-decimal rounding. "
+    f"Most notably, {A['taxa_present_count_distribution']['1']} of {A['analyzed_samples']} analyzed samples contain "
+    "only one retained genus. For any such sample the true retained-vocabulary relative-composition vector is a unit "
+    "vector. Both tested predictors condition on the observed support and normalize over present genera, so they "
+    "must give the same unit vector. Thus a majority of zero errors is built into the task after filtering, not evidence "
+    "that either method learned useful ecological structure. The other samples need not have zero error, and six "
+    "presence patterns mean the table is not literally constant. The finding explains the zero medians without "
+    "claiming that all individual held-out predictions match.")
+P.p("The diagnostic changes interpretation, not the analysis denominator. The row remains in the original 160-table "
+    "BH family and in the no-difference category; its relative gain remains undefined rather than being set to zero. "
+    "No model was refit and no p-value or q-value was recalculated. A future benchmark should set its "
+    "information-content eligibility rule before viewing held-out outcomes, with minimum retained richness or "
+    "nontrivial-composition coverage measured on training data only. That rule would define a different estimand "
+    "and require its own complete screening ledger, not a post-hoc deletion of this fish table. Even a correctly "
+    "filtered within-study result would still not establish cross-source transfer or causality. "
+    "The exact MGnify endpoint and source SHA-256 are pinned in "
+    "results/audit_degenerate_table.json; the locked check is "
+    "results/PREREG_20260927_audit_degenerate_table.md.")
+
 P.h("5.1.3 Live source context for the eight unflagged digestive titles", 3)
 GS=json.load(open("results/gut_unflagged_source_screen.json"))
 P.p("To test whether the eight title-unflagged records could even be described uniformly as human-gut amplicon studies, we inspected their live MGnify study endpoints without reopening or re-scoring taxon outcomes. Each endpoint returned a public study name, project IDs and abstract; the source responses and abstract strings are hashed, while the repository retains only non-private metadata and short method phrases. The MGnify study response does not provide a decisive per-run library-strategy field, so a phrase in an abstract is source context, not an assay certificate for every archived abundance column. The manifest's digestive-system biome also requires verification against collection source and organism. This screen leaves the original eight win calls untouched.")

@@ -1,0 +1,28 @@
+{
+  "study": "MGYS00006086",
+  "source_path": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006086/pipelines/5.0/file/ERP136460_taxonomy_abundances_SSU_v5.0.tsv",
+  "source_sha256": "ec4b75c3eae4fcfe5adb8bc359a8d78011996c044c19f8b1d3407a262800a992",
+  "aggregates": {
+    "raw_samples": 142,
+    "raw_taxa": 11,
+    "nonzero_samples": 142,
+    "metadata_manifest_n_genera": 11,
+    "post_prevalence_taxa": 3,
+    "post_prevalence_samples": 135,
+    "analyzed_samples": 135,
+    "analyzed_taxa": 3,
+    "unique_presence_assemblages": 6,
+    "taxa_present_count_distribution": {
+      "1": 111,
+      "2": 23,
+      "3": 1
+    },
+    "unique_composition_vectors_rounded_12dp": 9,
+    "median_max_taxon_fraction": 1.0,
+    "all_samples_same_presence": false,
+    "single_taxon_sample_fraction": 0.8222222222222222,
+    "archived_median_prior": 0.0,
+    "archived_median_interaction": 0.0
+  },
+  "scope": "viewed source QC; no refit, p-value change, or exclusion from 160-study BH audit"
+}
