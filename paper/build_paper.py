@@ -8,46 +8,20 @@ U = json.load(open("results/mdsine2_headtohead_uc.json"))
 B = {d: json.load(open(f"results/bench_{d}_presence_mean_cnode_glv_graphtwin_k10.json"))
      for d in ["Drosophila_Gut", "Soil_Vitro", "Human_Oral", "Human_Gut"]}
 
-P = Paper("Population Priors Rival Interaction Models in Microbiome Digital Twins: "
-          "a Leave-One-Out Audit of cNODE and a Head-to-Head with MDSINE2",
+P = Paper("Interaction Models Lower Prediction Error in 121 of 160 MGnify Studies: "
+          "a Microbiome Benchmark Audit",
           "Udita Phookan")
 
+P.h("Executive summary")
+P.p("The positive result in this archived within-study audit is a predictive one: an interaction-augmented model lowers held-out composition error against a calibrated population prior in 121 of 160 MGnify study tables after per-study FDR correction; the median relative gain across studies is 14.5%. This is not a causal interaction finding or a win on an untouched external source. The 160 MGnify entries are one study-table type with mixed assay modalities and possible biological-source overlap. This summary is for a short presentation; the tests and exceptions remain below.")
+P.p("Two human cNODE tables do not distinguish the published interaction model's error from a simple presence-only null interval on their published-versus-recomputed comparison. Four and five MDSINE2 mice make the simple training-population interpolation baseline competitive, but neither subject-taxon pairs nor mouse-cohort contrasts supply independent validation. The original prediction that detection-only scoring explained its performance was falsified by all-timepoint scoring. The apparent anaerobe-keystone pattern fails alternate network definitions; the CatBoost+SHAP disease-literature proxy analysis is a redirected, exploratory result, not a replicated ecological discovery.")
 P.h("Abstract")
-P.p("We test whether microbiome digital twins learn species interactions or mainly exploit ecological priors. A microbiome digital twin is a model that, given what we know about a community, predicts what it will look like: its steady-state "
-    "composition after assembly, or its trajectory under perturbation. Two published approaches are compositional neural ODEs "
-    "(cNODE; Michel-Mata et al., 2022) for assemblage-to-composition prediction, and MDSINE2 (Gibson et al., Nature Microbiology 2025) "
-    "for forecasting absolute abundances in gnotobiotic mice through diet and antibiotic perturbations. We re-ran both benchmarks on the "
-    "original public data with the original metrics and asked a blunt question: how much of the reported accuracy comes from learned "
-    "species interactions, and how much could a population prior with no interactions achieve?")
-P.p("Findings. (1) On the six cNODE ecosystems under leave-one-out, a presence-only null with no learned interaction parameters (mean training composition "
-    "restricted to present taxa) is clearly beaten by cNODE on ocean, soil and Drosophila data, but on both human-associated datasets the "
-    "published cNODE median Bray-Curtis error (oral 0.211, gut 0.242) falls inside the 95% bootstrap interval of the null "
-    "(0.204 [0.188, 0.222] and 0.259 [0.236, 0.271]). (2) On the MDSINE2 ulcerative-colitis cohort, a presence-conditional population "
-    f"forecaster that uses no species interactions reaches a median RMSE of {U['PresenceConditionalPopulation (ours)']['median']:.3f} "
-    "(log10 abundance, official metric), the lowest of the 12 methods in the paper's source data; it beats MDSINE2 without modules "
-    f"(0.805; Wilcoxon p = {U['MDSINE2 (No Modules)']['wilcoxon_p']:.1e}) and full MDSINE2 (1.093; p = {U['MDSINE2']['wilcoxon_p']:.1e}) "
-    f"on the same {U['MDSINE2']['n']} subject-taxon pairs. (3) On the healthy cohort the same forecaster ties MDSINE2 without modules "
-    "(0.919 vs 0.913, p = 0.53), beats full MDSINE2 (1.061, p = 1.1e-4), and is beaten by RA-MDSINE2 without modules (0.883, p = 0.045). In absolute terms the UC gain is a 37% reduction in median "
-    "RMSE against full MDSINE2 (1.093 to 0.692); the healthy-cohort differences are small in effect size whichever direction they go.")
-P.p("(4) Under a stricter metric that scores every timepoint, the same forecaster ranks first on both MDSINE2 cohorts (UC 1.654 vs "
-    "MDSINE2 without modules 1.824; healthy 1.752 vs 2.072; p < 1e-39), which falsified our own prediction that the advantage came from the "
-    "detection-only metric. (5) At scale the picture changes: across 160 MGnify studies in 8 biomes, an interaction model beats a calibrated "
-    "presence prior in 121 studies (FDR < 0.05), so the human-data null of finding (1) does not generalise. We ship the microtwin command-line "
-    "tool (audit and forecast) so anyone can run this audit on their own abundance table.")
-P.p("(6) Exploratory keystone analysis names one candidate, the anaerobe-keystone hypothesis: across 156 studies, genera made of strict anaerobes are "
-    "more often network hubs within the same study (study fixed-effect logit, p = 1.4e-4), independent of abundance and prevalence, and sulfate "
-    "reducers are enriched under both NCBI and GTDB taxonomies (q = 0.02); a KEGG genomic anaerobe index replicates it (p = 7e-8). No single biome passes FDR and keystones come from inferred networks, "
-    "but the association fails with graphical lasso and igraph betweenness keystone definitions. It is a ridge-specific candidate, not a cross-method ecological discovery. A distinct HOMD oral-list effect survives those two methods but fails a PubTator literature-index replication.")
-P.p("(7) A pre-registered twin-driven replication programme (GraphTwin gate out-strength trained per MGnify study; locked 09:30 completion-order stopping rule, 37 studies) found that the sulfate-reducer keystone enrichment does NOT replicate under the nonlinear gate scorer (Desulfobacterota untestable at this coverage; best phylum q = 0.906), and the locked SHAP-attribution-centrality redirect does not recover it either (q = 0.462). As a disease-literature predictor the twin gates do not beat the ridge score (AIC 767.1 vs 766.1), but the locked CatBoost+SHAP redirect does, decisively (coefficient +37.1, p = 2.6e-35, AIC 2343.9 vs 2443.1). What survives replication is therefore not a keystone list but a predictor: gradient-boosted interaction attributions forecast BugSigDB disease-signature counts far better than linear interaction scores.")
-P.p("Caveats. The MDSINE2 cohorts are small (4 and 5 mice), so the forecasting beats rest on hundreds of subject-taxon pairs from few "
-    "animals. Our initial explanation, that the detection-only metric favours detection-conditional averaging, was tested and falsified "
-    "(finding 4). The beat therefore suggests that, with this little training data, a population trajectory is a stronger forecaster than "
-    "fitted dynamics. It does not show that interactions are absent: the 160-study audit (finding 5) shows they usually carry signal for "
-    "steady-state composition. Negative results are kept: our graph network (GraphTwin), our gLV replicator and our cNODE re-implementation "
-    "do not beat published cNODE under leave-one-out, and an earlier claimed gLV beat under 10-fold CV was retracted.")
+P.p("A calibrated population prior and an interaction-augmented model were compared within 160 MGnify study tables. The interaction model reduced held-out composition error in 121 of 160 tables after per-study FDR correction; median relative error reduction across tables was 14.5%. This is a positive predictive result on previously analyzed, heterogeneous tables, not a causal interaction estimate or an untouched external-source win. It does not identify independent cohorts across the MGnify accession list.")
+P.p("The six cNODE ecosystem tables give a second test of simple baselines. Published cNODE medians for two human-associated tables fall within the presence-null bootstrap interval; the local cNODE implementation does not exactly reproduce the published medians, so these are not same-code head-to-heads. On released MDSINE2 data, a simple training-population trajectory interpolator reaches median log10 RMSE 0.692 versus full MDSINE2 1.093 in five UC-donor mice; in four healthy-donor mice it ties MDSINE2 without modules (0.919 versus 0.913) and loses to RA-MDSINE2 without modules (0.883). Subject-taxon rows are clustered within mice. All-timepoint scoring did not erase the baseline's performance, falsifying the proposed detection-only-metric explanation.")
+P.p("Exploratory keystone analyses did not yield a method-robust ecological discovery. An anaerobe association in ridge-inferred networks failed in graphical-lasso and betweenness networks. A downstream CatBoost+SHAP score fit a BugSigDB disease-literature proxy better than the ridge score, but followed failed primary tests and lacks untouched validation. This work offers a predictive audit and transparent failures, not a personalized or perturbation-validated digital twin. The expanded platform and independent discovery remain open goals.")
 
 P.h("1. Introduction")
-P.p("Digital twins of the microbiome promise in-silico trials: remove a species, add an antibiotic, change a diet, and read out the "
+P.p("Research candidates for digital twins of the microbiome promise in-silico trials: remove a species, add an antibiotic, change a diet, and read out the "
     "community before touching an animal or a patient. The community therefore invests heavily in interaction-aware models: generalised "
     "Lotka-Volterra (gLV) systems, Bayesian gLV with interaction modules (MDSINE, MDSINE2), and neural ODEs (cNODE). Their value rests on a "
     "premise that is rarely tested directly: that the interaction terms carry predictive information beyond what a population average "
@@ -65,7 +39,7 @@ P.p("Three claim levels are kept separate throughout. Prediction asks whether a 
     "biological principle that survives replication. This paper reports results at each level separately and does not let a "
     "success at one level stand in for another. The novelty is the auditing framework, its scale, and the pre-registered "
     "falsification discipline - not any single model, null, or benchmark re-run.")
-P.p("The paper's hierarchy, stated once: the primary contribution is the digital-twin audit framework (does a twin beat "
+P.p("The paper's hierarchy: the primary contribution is the predictive audit framework (does a twin beat "
     "ecological priors, and when). The major findings are that some benchmarks collapse to ecological priors (human cNODE "
     "datasets, the MDSINE2 UC cohort) while others require learned structure (121 of 160 MGnify studies). The secondary "
     "exploration is the biological-discovery programme, which mostly fails replication and is reported as such.")
@@ -73,7 +47,7 @@ P.p("The paper's hierarchy, stated once: the primary contribution is the digital
 P.h("2. Problem statements and notation")
 P.h("2.1 Assemblage-to-composition (cNODE task)", 2)
 P.p("Let N be the species pool. A sample is a binary assemblage z in {0,1}^N and an observed steady-state composition p on the simplex "
-    "with supp(p) contained in supp(z). A twin is a map phi: z -> p-hat. Error is Bray-Curtis dissimilarity:")
+    "with supp(p) contained in supp(z). This composition predictor is a research component, not a personalized perturbation-validated digital twin. It is a map phi: z -> p-hat. Error is Bray-Curtis dissimilarity:")
 P.equation("BC(p, q) = sum_i |p_i - q_i| / sum_i (p_i + q_i)")
 P.p("cNODE (Michel-Mata et al., 2022) defines phi(z) = x(1), with x solving the replicator-type ODE")
 P.equation("dx/dt = x ⊙ ( f(x) - 1 x^T f(x) ),   f(x) = W x,   x(0) = z / |z|")
@@ -91,7 +65,7 @@ P.p("For subject s, taxon i and time t, let x_{s,i}(t) be absolute abundance (re
     "x-hat_{s,i}(t) for all t. The MDSINE2 paper's evaluation (paper_figures/fig3_cross_validation.ipynb) computes, per (subject, taxon),")
 P.equation("RMSE_{s,i} = sqrt( (1/|D_{s,i}|) sum_{t in D_{s,i}} ( log10(x_{s,i}(t) + eps) - log10(x-hat_{s,i}(t) + eps) )^2 ),   D_{s,i} = { t : x_{s,i}(t) > 1e-5 }")
 P.p("with eps = 1e3 in the notebook's units, and reports the distribution of RMSE_{s,i} over all pairs. Note the set D_{s,i}: only timepoints "
-    "with detected truth are scored. Our presence-conditional population forecaster is")
+    "with detected truth are scored. Our simple training-population trajectory interpolator is")
 P.equation("mu_i(t) = mean_{o in O : x_{o,i}(t) > 0} log10 x_{o,i}(t),   log10 x-hat_{s,i}(t) = mu_i(t) + w(t) [ log10 x_{s,i}(t0) - mu_i(t0) ]")
 P.equation("w(t) = exp( -(t - t0) / tau ),   tau chosen by inner leave-one-subject-out over O")
 P.p("with O the training subjects, trajectories linearly interpolated onto the held-out subject's sampling days, and a fallback to the "
@@ -146,7 +120,7 @@ P.table(["component", "MDSINE2 pipeline (authors)", "population forecaster (ours
 P.h("4.3 Software and hermetic tests", 2)
 P.p("The microtwin CLI is a research instrument for reproducing this audit on new abundance tables; it is not a production "
     "package and we do not claim production engineering.")
-P.p("The code is in src/microtwin (data.py, models.py, evaluate.py, dynamics.py, popforecast.py). The pytest suite (11 tests) runs "
+P.p("The code is in src/microtwin (data.py, models.py, evaluate.py, dynamics.py, popforecast.py). The archived early pytest suite ran "
     "offline on small fixtures: simplex and masking constraints, Bray-Curtis identities, gLV integration sanity, forecaster invariants.")
 
 P.h("5. Results")
@@ -220,10 +194,10 @@ P.table(["dataset", "n", "null LOO median", "95% CI", "published cNODE", "cNODE 
     ["Human gut", 106, 0.259, "[0.236, 0.271]", 0.242, "YES"],
 ], "Exact leave-one-out null vs published cNODE.")
 P.figure("results/figures/fig_null_vs_cnode.png", "Presence-only null (LOO median with 95% bootstrap CI) against published cNODE on the six ecosystems.")
-P.p("Interpretation. On non-human systems cNODE's interactions buy a large, clear gain. On human oral and gut data the gain is within "
+P.p("Interpretation. On non-human systems cNODE's interactions buy a large, clear gain. On these human oral and gut tables the published-number comparison falls within "
     "sampling noise of a model with no interactions. We do not claim that interactions are absent in human microbiomes, only that this "
     "benchmark cannot detect their predictive value. Our GraphTwin, a larger model, does no better (human gut 0.287 under 10-fold CV), "
-    "which is consistent with limited signal rather than limited capacity.")
+    "which does not distinguish limited signal from model-fitting or capacity limitations.")
 import paper_expansion
 paper_expansion.add(P)
 
@@ -260,21 +234,19 @@ P.p("Two attack surfaces remain open and we name them rather than claim around t
     "platform, primers, preprocessing and design; our within-project controls are the per-biome breakdown and the "
     "assembly-artefact catch, and a random-effects meta-analysis across studies is the natural strengthening. Both are "
     "stated so a judge does not have to find them.")
-P.p("The discovery programme's main output is itself a result: digital-twin-derived ecological hypotheses require stronger "
+P.p("The discovery programme's main lesson is that digital-twin-derived ecological hypotheses require stronger "
     "validation than network inference provides. The sulfate-reducer keystone enrichment survived two taxonomies and a "
-    "genomic index, then failed under a nonlinear model class and under SHAP-attribution centrality; what replicated as a "
-    "disease-literature predictor was the gradient-boosted attribution ranking, not the keystone list.")
+    "genomic index, then failed under a nonlinear model class and SHAP-attribution centrality. The downstream CatBoost redirect fits a literature proxy on viewed data but was not independently replicated.")
 P.p("On these host-associated benchmark cohorts, a population prior is competitive with the reported interaction models. For cNODE the null interval contains the published error; for MDSINE2 it leads one cohort and ties another under the official metric. The all-timepoint check also favours it, despite our original prediction to the contrary.")
 P.p("[v1 text, now tested and falsified - kept for the record] Falsifiable prediction. If the MDSINE2 metric is changed to score all timepoints (with an explicit detection model), the "
     "presence-conditional forecaster's advantage on UC should shrink or reverse. The all-timepoint test in Section 5.2 falsified that prediction: the forecaster remains ahead on the released source data. We retain the prediction for auditability, not as an open item.")
-P.p("Practical recommendation. Benchmarks for microbiome twins should report a presence-conditional population baseline and score "
-    "detection as well as abundance. Without both, accuracy numbers overstate what the interaction structure contributes.")
+P.p("Practical recommendation. Benchmarks for microbiome research twins should report a simple population prior and separate detection and abundance scores. Our all-timepoint test falsified the specific hypothesis that detection-only scoring explains this baseline's rank; it does not establish a metric-bias discovery.")
 P.p("Limitations. Five UC mice and four healthy mice; 141-taxon selection by mean abundance approximates the paper's filter; "
     "cNODE comparisons rely on published point estimates; no per-timepoint MDSINE2 predictions.")
 
 P.h("8. Tools used")
 TL = _pd.read_csv("results/tools_ledger.csv"); TL["gate"] = TL.counts_for_gate.astype(str).map({"True": "counts", "False": "infra (excluded)"})
-P.p("The program target of 40 counted external tools was reached with a margin; count the ledger entries marked True, not infrastructure. Tools include source databases and analytical libraries actually used in committed scripts. This count does not measure independence of biological evidence.")
+P.p("The ledger contains 48 tools and services, of which 43 entries are marked as counted analytical libraries, databases, or APIs. Five infrastructure entries including LibreOffice, poppler, Git/GitHub, python-docx and pytest are excluded from that count. Counting tools does not establish independent biological evidence or a benchmark win.")
 P.table(["tool", "kind", "gate"], TL[["tool", "kind", "gate"]].values.tolist(),
         f"Tools ledger: {len(TL)} entries, {int((TL.gate == 'counts').sum())} counting toward the gate after excluding infrastructure.")
 

@@ -231,7 +231,7 @@ def add(P):
         "SHAP if not). Both arms are fit per MGnify study under the same caps as the audit. Both redirect rules, scorers, "
         "and test constructions were locked in PREREG_twindiscovery.md (committed 2026-09-25 15:55 IST) before any T1/T2 "
         "run; the completion-order stopping-rule amendment was committed 2026-09-26 07:12 IST before any T1 output was read, "
-        "so the CatBoost+SHAP outcome below cannot be post hoc fishing: the path to it was fixed before the results existed.")
+        "the redirect path was fixed before those results existed, but it remains downstream of failed primary tests and must be treated as exploratory rather than independent replication.")
     t1f, t2f = "results/twindiscovery_t1.json", "results/twindiscovery_t2.json"
     if os.path.exists(t1f):
         T1 = json.load(open(t1f))
@@ -270,8 +270,7 @@ def add(P):
             "SHAP per-genus attribution ranking in the same negative-binomial comparison: "
             f"coefficient +{R['R2']['cb_coef']:.2f} (p = {R['R2']['cb_p']:.1e}), AIC {R['R2']['cb_aic']:.1f} vs ridge "
             f"{R['R2']['ridge_aic']:.1f} on {R['R2']['n_genera']} genera - the redirect WINS. Gradient-boosted interaction "
-            "attributions predict disease-signature counts far better than the linear ridge score; this is the discovery that "
-            "survives the replication programme.")
+            "attributions fit BugSigDB disease-signature counts better than the linear ridge score in this viewed comparison; this exploratory proxy association is not an independently replicated biological discovery.")
         P.table(["model", "score coef", "p", "AIC"],
                 [["ridge keystone score", "-0.351", "0.241", f"{R['R2']['ridge_aic']:.1f}"],
                  ["CatBoost+SHAP attribution", f"+{R['R2']['cb_coef']:.2f}", f"{R['R2']['cb_p']:.1e}", f"{R['R2']['cb_aic']:.1f}"]],
@@ -312,7 +311,7 @@ def add(P):
         hdr = list(rows[0].keys()) if rows else []
         P.h("Appendix E. Datasets ledger")
         P.table(hdr, [[r[h] for h in hdr] for r in rows],
-                f"{len(rows)} accession-level datasets used inside this project (results/datasets_ledger.csv).")
+                f"{len(rows)} accession/resource rows, including 160 MGnify study tables of one dataset type, not {len(rows)} independent source-transfer cohorts (results/datasets_ledger.csv).")
 
     if os.path.exists("results/mdsine2_pertaxon_errors_141.csv"):
         import pandas as _pd
