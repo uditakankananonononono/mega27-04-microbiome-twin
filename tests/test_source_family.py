@@ -36,3 +36,20 @@ def test_duplicate_alias_in_same_family_is_not_silently_accepted():
         check_family_partitions([], {'empty': []})
     with pytest.raises(ValueError, match='mapping'):
         check_family_partitions([], {'none': None})
+
+
+def test_mgnify_prjna715245_aliases_cannot_cross_partitions():
+    from microtwin.source_family import known_mgnify_original_project_families
+    aliases = known_mgnify_original_project_families()
+    assert len(aliases['PRJNA715245']) == 7
+    result = check_family_partitions([
+        {'accession': 'MGYS00006825', 'partition': 'train'},
+        {'accession': 'ERP175206', 'partition': 'test'}], aliases)
+    assert not result['valid_known_family_separation_only']
+    assert {'reason': 'cross_partition_family', 'family': 'PRJNA715245',
+            'partitions': ['test', 'train']} in result['errors']
+    assert check_family_partitions([
+        {'accession': 'PRJEB75554', 'partition': 'test'},
+        {'accession': 'MGYS00006862', 'partition': 'test'}], aliases)['valid_known_family_separation_only']
+    assert not check_family_partitions([
+        {'accession': 'UNKNOWN', 'partition': 'test'}], aliases)['valid_known_family_separation_only']

@@ -58,3 +58,15 @@ def check_family_partitions(records, known_families):
     return {'valid_known_family_separation_only': not errors,
             'records': len(rows), 'errors': errors,
             'note': 'Passing does not establish rights, source completeness, near-duplicate freedom or patient independence.'}
+
+
+def known_mgnify_original_project_families():
+    """Return source-confirmed aliases for an original project behind two MGnify assemblies.
+
+    This is deliberately a small positive registry, not a complete family map.
+    A caller must merge it with its own verified aliases and still fail closed
+    on unknowns; shared project provenance is not duplicate-sample evidence.
+    """
+    return {'PRJNA715245': ('PRJNA715245', 'MGYS00006825', 'ERP160132',
+                            'PRJEB75554', 'MGYS00006862', 'ERP175206',
+                            'PRJEB92327')}
