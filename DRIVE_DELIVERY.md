@@ -1,4 +1,4 @@
-**Replacement verified (2026-09-27):** The same Drive IDs now contain the 70-page byline-free PDF and corresponding DOCX, both re-downloaded and byte-verified. The old 71-page checksums in the historical table below identify the previous versions, not the current files. Current PDF SHA-256 `bfa9985d634610febefb8feb63ccc44ff78c35fab4af805f6ed0ed7713bce079`; current DOCX SHA-256 `233bbf03b84810a0f4c2172844ee79990e4cb2c25c6237317564f09ea4aa22d2`.
+**Replacement verified (2026-09-27):** The same Drive IDs now contain the 70-page PDF bearing only Udita Phookan as author and corresponding DOCX, both re-downloaded and byte-verified. The old 71-page checksums in the historical table below identify the previous versions, not the current files. Current PDF SHA-256 `ab0a16ff0772a0015c3d01be1b0d27fc073a0da246f419f61dcf5328688a8eb9`; current DOCX SHA-256 `8057a1317562fe7979e61fbe9755959eafa336debc3e7b17ec55a1fd8c66407e`.
 
 # Drive delivery - MEGA27 item 4 (microbiome digital twin)
 

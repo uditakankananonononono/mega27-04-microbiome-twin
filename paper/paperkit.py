@@ -22,7 +22,7 @@ def _page_border(section, color="1F4E79", size=12):
 
 
 class Paper:
-    def __init__(self, title: str):
+    def __init__(self, title: str, owner_name: str):
         self.doc = Document(); self.eq = 0; self.fig = 0; self.tab = 0
         st = self.doc.styles["Normal"]; st.font.name = "Times New Roman"; st.font.size = Pt(12)
         st.element.rPr.rFonts.set(qn("w:eastAsia"), "Times New Roman")
@@ -31,7 +31,8 @@ class Paper:
             self.doc.styles[s].font.color.rgb = RGBColor(0x1F, 0x4E, 0x79)
         _page_border(self.doc.sections[0])
         t = self.doc.add_paragraph(title, style="Title"); t.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        self.doc.core_properties.author = ""
+        a = self.doc.add_paragraph(owner_name); a.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        self.doc.core_properties.author = owner_name
         self.doc.core_properties.last_modified_by = ""
         self.doc.core_properties.comments = ""
 
