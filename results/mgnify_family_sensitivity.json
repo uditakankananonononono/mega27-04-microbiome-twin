@@ -1,0 +1,41 @@
+{
+  "method": "original-project token from study_name; lexical MGYS one-per-family; same 160-table BH q values",
+  "unresolved_rows": 131,
+  "single_token_rows": 29,
+  "provisional_families": 159,
+  "repeated_families": 1,
+  "rows_in_repeated_families": 2,
+  "original": {
+    "rows": 160,
+    "original_fdr_interaction_wins": 121,
+    "original_fdr_prior_wins": 6,
+    "median_relative_gain": 0.14523948013720636,
+    "median_absolute_gain": 0.052030915806039496
+  },
+  "lexical_one_per_family": {
+    "rows": 159,
+    "original_fdr_interaction_wins": 121,
+    "original_fdr_prior_wins": 6,
+    "median_relative_gain": 0.14619415119412843,
+    "median_absolute_gain": 0.0522773001384359
+  },
+  "family_median_of_member_mean_relative_gain": 0.14619415119412843,
+  "repeated_family_details": [
+    {
+      "family": "PRJNA715245",
+      "tables": [
+        "MGYS00006825",
+        "MGYS00006862"
+      ],
+      "n": 2,
+      "original_fdr_interaction_wins": 1,
+      "prior_wins": 0,
+      "relative_gains": [
+        0.03705909533311518,
+        0.021001842380248995
+      ],
+      "win_status_discordant": true
+    }
+  ],
+  "caveat": "Provisional original project IDs are not verified biological units; unresolved groups are treated as distinct, not certified independent. Viewed exploratory sensitivity."
+}
