@@ -62,6 +62,14 @@ def run(partial=None):
         row=next(r for r in out if r['study']==c['study'])
         if row['explicit_human_host_compatible'] is not True:raise ValueError('gut candidate host status changed')
         row['old_column_to_analysis_mapped']=True
+    feces=ROOT/'results/gut_material_identity.json'
+    if partial is None and feces.exists():
+        c=json.loads(feces.read_text())
+        if c['study']!='MGYS00005154' or c['exact_mapped_retained_run_columns']!=400 or c['unique_retained_linked_samples']!=400 or c['linked_retained_sample_metadata']['environment (material)']!={'ENVO:feces':400} or c['linked_retained_sample_metadata']['host scientific name']!={'Homo sapiens':400} or c['source']['sha256']!='60ac66ae7be1cce6aeae890773f72578ecd829c7c5a21816b71c3a5e93276c80':
+            raise ValueError('exact linked feces material evidence changed')
+        row=next(r for r in out if r['study']==c['study'])
+        if row['old_column_to_analysis_mapped'] is not True or row['explicit_human_host_compatible'] is not True:raise ValueError('site proof lacks other checks')
+        row['human_gut_site_compatible']=True # source metadata only; not physical tissue truth
     mixed=ROOT/'results/mixed_site_column_identity.json'
     if partial is None and mixed.exists():
         c=json.loads(mixed.read_text())
@@ -83,7 +91,7 @@ def run(partial=None):
         if oral_row['old_column_to_analysis_mapped'] is True:
             oral_row['human_gut_site_compatible']=False
     return {'rows':sorted(out,key=lambda x:x['study']),'n_studies':len(out),
-            'scope':'metadata-only partial screen plus exact current run-column mapping for MGYS00006755, MGYS00002238, MGYS00005154 and MGYS00006794; no final source eligibility or independent validation',
+            'scope':'metadata-only partial screen plus exact current run-column mapping for MGYS00006755, MGYS00002238, MGYS00005154 and MGYS00006794; feces source annotation for 400 exact-mapped MGYS00005154 columns; no specimen verification, final source eligibility or independent validation',
             'unknown_is_not_pass':True}
 if __name__=='__main__':
     d=run();(ROOT/'results/metadata_integrity_matrix.json').write_text(json.dumps(d,indent=2)+'\n')

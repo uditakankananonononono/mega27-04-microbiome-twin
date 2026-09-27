@@ -31,7 +31,7 @@
       "old_column_to_analysis_mapped": true,
       "independent_biological_family": "unknown",
       "missing_host_name_samples": 0,
-      "human_gut_site_compatible": "unknown"
+      "human_gut_site_compatible": true
     },
     {
       "study": "MGYS00005230",
@@ -90,6 +90,6 @@
     }
   ],
   "n_studies": 8,
-  "scope": "metadata-only partial screen plus exact current run-column mapping for MGYS00006755, MGYS00002238, MGYS00005154 and MGYS00006794; no final source eligibility or independent validation",
+  "scope": "metadata-only partial screen plus exact current run-column mapping for MGYS00006755, MGYS00002238, MGYS00005154 and MGYS00006794; feces source annotation for 400 exact-mapped MGYS00005154 columns; no specimen verification, final source eligibility or independent validation",
   "unknown_is_not_pass": true
 }

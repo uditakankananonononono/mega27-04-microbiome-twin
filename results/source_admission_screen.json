@@ -80,11 +80,6 @@
       "decision": "blocked",
       "reasons": [
         {
-          "field": "human_gut_site_compatible",
-          "observed": "unknown",
-          "required": true
-        },
-        {
           "field": "independent_biological_family",
           "observed": "unknown",
           "required": true

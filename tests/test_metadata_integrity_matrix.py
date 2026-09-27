@@ -15,6 +15,7 @@ def test_known_metadata_conflict_and_unknowns_fail_closed():
     assert x['MGYS00005154']['old_column_to_analysis_mapped'] is True
     assert x['MGYS00006794']['old_column_to_analysis_mapped'] is True
     assert x['MGYS00006794']['human_gut_site_compatible'] is False
+    assert x['MGYS00005154']['human_gut_site_compatible'] is True
     assert x['MGYS00002238']['human_gut_site_compatible'] is False
     assert all(r['old_column_to_analysis_mapped']=='unknown' for r in d['rows'] if r['study'] not in ('MGYS00006755','MGYS00002238','MGYS00005154','MGYS00006794'))
     assert all(r['independent_biological_family']=='unknown' for r in d['rows'])

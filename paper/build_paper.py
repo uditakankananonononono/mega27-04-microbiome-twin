@@ -306,20 +306,20 @@ P.p("The current endpoint contains 965 analyses and 529 sample records, but anal
     "sample accessions with explicit Homo sapiens host names and normalized Homo "
     "sapiens labels. This advances exact archive-column mapping in the metadata "
     "matrix, while leaving the independent-family field unknown.")
-P.p("Collection-site evidence is weaker than the word 'gut' suggests: all 400 linked "
+P.p("Collection-site evidence required a post-inspection correction: all 400 linked "
     "sample descriptions repeat the study-level phrase 'Human gut microbiome "
     "differentiation viewed across cultures, ages and families', and the current "
-    "sample metadata provide no separate explicit body-site field among these "
-    "records. The description supports a gut-oriented source, but does not independently "
+    "sample metadata provide no literal 'body site' or 'collection site' key among these "
+    "records. However, a later audit of structured sample metadata found that all 400 exact-linked records bear 'environment (material): ENVO:feces'; the other 129 current sample records carry the same material value. The prior narrow key scan omitted this field. It supports source-annotated fecal material, whereas the repeated study description alone did not suffice. Neither the submitted annotation nor the description can independently "
     "prove each collected specimen's anatomical site or wet-lab assay. Nor do 400 "
     "distinct sample accessions prove 400 unrelated people or an independent source "
     "family. Rights, participant grouping, project overlap and untouched split remain "
     "unverified. The gate therefore blocks final human-gut amplicon admission on "
-    "family independence even though five other metadata fields pass for this candidate; "
-    "passing that sixth check would still require manual validation. No score or BH "
+    "family independence even though six other amended metadata fields pass for this candidate; "
+    "passing that remaining family check would still require manual validation. No score or BH "
     "result was changed. Exact source URLs, response hashes, pipeline-version counts "
     "and aggregate sample descriptions: results/gut_candidate_column_identity.json; "
-    "locked method: results/PREREG_20260927_gut_candidate_column_identity.md.")
+    "locked method: results/PREREG_20260927_gut_candidate_column_identity.md. Post-inspection material amendment and live sample-response hashes: results/PREREG_20260927_feces_material_amendment.md and results/gut_material_identity.json.")
 
 P.h("5.1.2f Exact old-column mapping reveals a site-code contradiction", 3)
 SC=json.load(open("results/mixed_site_column_identity.json"))
@@ -348,8 +348,9 @@ P.p("This finding required a dated amendment of the admission prototype. The pri
     "GUT sample. A separate seventh `human_gut_site_compatible` field now blocks "
     "unknown or conflicting collection site. MGYS00006794's field is false from "
     "the structured-site mismatch; MGYS00002238 is false from exact linked oral "
-    "sample descriptions; the other six are unknown pending sample-specific site "
-    "evidence. These are metadata blockers, not a retrospective assay-stratified "
+    "sample descriptions. Of the other six, MGYS00005154 is source-metadata "
+    "compatible after the separately dated feces-material amendment; five remain "
+    "unknown pending sample-specific site evidence. These are metadata blockers, not a retrospective assay-stratified "
     "performance analysis, and all eight viewed records remain blocked. None of "
     "the 160 original BH-adjusted calls or old within-study scores changed. The "
     "amendment is explicitly dated after this source check, not passed off as a "
@@ -380,7 +381,7 @@ P.p("The title filter missed an assembly-derived study: MGYS00006006 has 457 of 
 
 P.h("5.1.5 An explicit metadata-integrity matrix", 3)
 MX=json.load(open("results/metadata_integrity_matrix.json"))
-P.p("A recurring error in a large research platform is to turn partial metadata into a single green eligibility check. The preceding screens make this risk concrete: an analysis-type count alone does not link a historical abundance column to an analysis; a normalized human species code need not agree with the source's host scientific name; and complete pagination does not establish an independent source family. The original matrix emitted a six-field status vector for each of the eight old title-unflagged digestive records; a seventh site field was added after the mixed-site conflict was found. It separates analysis pagination, uniform analysis type, sample pagination, explicit host compatibility, archive-column mapping, biological-family independence and the newly amended gut-site compatibility. `Unknown` is an intentional output rather than a false value that someone can accidentally average away. The uncompleted eighth source is unknown on every dimension. Four later exact run-to-sample joins have verified old-column maps: MGYS00006755 fails host compatibility; MGYS00002238 is oral saliva/plaque; MGYS00006794 has conflicting structured skin-site codes; and MGYS00005154 has a gut-oriented description without an independent-family certificate. The other four retain unknown archive-column mapping. Every source remains unknown on biological-family independence.")
+P.p("A recurring error in a large research platform is to turn partial metadata into a single green eligibility check. The preceding screens make this risk concrete: an analysis-type count alone does not link a historical abundance column to an analysis; a normalized human species code need not agree with the source's host scientific name; and complete pagination does not establish an independent source family. The original matrix emitted a six-field status vector for each of the eight old title-unflagged digestive records; a seventh site field was added after the mixed-site conflict was found. It separates analysis pagination, uniform analysis type, sample pagination, explicit host compatibility, archive-column mapping, biological-family independence and the newly amended gut-site compatibility. `Unknown` is an intentional output rather than a false value that someone can accidentally average away. The uncompleted eighth source is unknown on every dimension. Four later exact run-to-sample joins have verified old-column maps: MGYS00006755 fails host compatibility; MGYS00002238 is oral saliva/plaque; MGYS00006794 has conflicting structured skin-site codes; and MGYS00005154 has an exact-linked feces material annotation but no independent-family certificate. The other four retain unknown archive-column mapping. Every source remains unknown on biological-family independence.")
 P.table(["study", "analysis type", "sample pages", "explicit human host", "gut site", "old column map", "source family"], [
     [r['study'].replace('MGYS0000','M'),str(r['uniform_analysis_experiment_type']),'yes' if r['sample_pagination_complete'] is True else 'unknown',
      'conflict' if r['explicit_human_host_compatible'] is False else ('yes' if r['explicit_human_host_compatible'] is True else 'unknown'),
@@ -388,7 +389,7 @@ P.table(["study", "analysis type", "sample pages", "explicit human host", "gut s
      'yes' if r['old_column_to_analysis_mapped'] is True else r['old_column_to_analysis_mapped'],r['independent_biological_family']]
     for r in MX['rows']
 ], "Source metadata-integrity matrix, not an eligibility leaderboard. Study IDs shorten MGYS0000 to M (e.g., M6755 = MGYS00006755). M2238, M5154, M6755 and M6794 have exact old SSU run-column maps. M2238 is oral, M6794 has conflicting skin-site codes, M6755 has a host conflict; all eight lack an independent-family certificate.")
-P.p("The distinction between false and unknown matters. MGYS00006755 is a host-field conflict on the exact 83 audited run columns: every linked sample reports a nonhuman host scientific name while the normalized species says Homo sapiens. Its known column mapping does not repair the biological-host disagreement. MGYS00005230, MGYS00006794 and MGYS00006795 have missing explicit host names for some or all samples and are therefore unknown on the explicit-host criterion, even when normalized species labels say human. MGYS00006006 is assembly-typed at the analysis layer and also has seven samples without usable explicit host names. MGYS00002238 and MGYS00005154 have complete human names and later exact run-column maps: the former links to oral saliva/plaque; the latter has a gut-oriented repeated description without an explicit sample body-site field. MGYS00006794 has a fourth exact map, but its structured codes point to skin in conflict with its title and archive biome; explicit host names are missing. None of these four exact-mapped sources has independently verified subjects, families or rights. These statuses do not revise the 121/160 BH test or identify an assay-specific effect. They define why a future leaderboard admission procedure must check all needed evidence separately before treating any old accession row as a biological dataset. Machine-readable statuses and synthetic fail-closed tests live in results/metadata_integrity_matrix.json and tests/test_metadata_integrity_matrix.py.")
+P.p("The distinction between false and unknown matters. MGYS00006755 is a host-field conflict on the exact 83 audited run columns: every linked sample reports a nonhuman host scientific name while the normalized species says Homo sapiens. Its known column mapping does not repair the biological-host disagreement. MGYS00005230, MGYS00006794 and MGYS00006795 have missing explicit host names for some or all samples and are therefore unknown on the explicit-host criterion, even when normalized species labels say human. MGYS00006006 is assembly-typed at the analysis layer and also has seven samples without usable explicit host names. MGYS00002238 and MGYS00005154 have complete human names and later exact run-column maps: the former links to oral saliva/plaque; the latter has a repeated gut-oriented description and a later identified structured feces material annotation on all 400 exact-linked samples, though no literal body-site field. MGYS00006794 has a fourth exact map, but its structured codes point to skin in conflict with its title and archive biome; explicit host names are missing. None of these four exact-mapped sources has independently verified subjects, families or rights. These statuses do not revise the 121/160 BH test or identify an assay-specific effect. They define why a future leaderboard admission procedure must check all needed evidence separately before treating any old accession row as a biological dataset. Machine-readable statuses and synthetic fail-closed tests live in results/metadata_integrity_matrix.json and tests/test_metadata_integrity_matrix.py.")
 
 P.h("5.1.5a Fail-closed source-admission prototype", 3)
 AD=json.load(open("results/source_admission_screen.json"))
@@ -396,18 +397,18 @@ P.p("To make the integrity matrix operational rather than a decorative warning, 
     "now evaluates seven amended fields for each already-viewed digestive candidate. A human-gut "
     "amplicon metadata review requires complete analysis and sample pagination, uniform current amplicon "
     "analysis labels, exact old SSU column-to-analysis mapping, an explicit human host field without "
-    "conflict or missing names, a separate verified gut collection site, and verified biological-family "
+    "conflict or missing names, a separate source-annotated gut-compatible collection material, and verified biological-family "
     "independence. The seventh site axis was added after the skin-code discrepancy; the original "
     "six-field gate lacked it. A blank, false or unknown value blocks the review and names every "
     "failed field. A normalized Homo sapiens code cannot substitute for explicit host or site; "
-    "a title or accession count cannot prove an independent dataset. These fields are necessary "
+    "a title or accession count cannot prove an independent dataset. Even a feces material annotation is source metadata, not an independent tissue assay. These fields are necessary "
     "screening checks, not sufficient conditions for an external benchmark.")
 P.p(f"Applied to the {AD['candidate_records']} viewed title-unflagged records, the gate blocks "
     f"{AD['blocked']}; {AD['metadata_ready_for_manual_review']} reach metadata-ready manual review, "
     "and zero become independently validated external datasets. MGYS00006755 illustrates why "
     "the gate has several independent axes: its exact historical run-column map is now known and its "
     "current analyses are amplicon-labeled, yet its host fields conflict in every linked sample "
-    "and its biological-family independence remains unknown. MGYS00006006 has assembly-typed "
+    "and its biological-family independence remains unknown. MGYS00005154 now passes six amended metadata fields, including structured feces material on its exact-linked 400 samples, but remains blocked on unknown biological-family independence. MGYS00006006 has assembly-typed "
     "analyses even though the narrow title rule missed it; MGYS00000633 remains unpaged and "
     "unknown. These are explicit engineering blockers for this human-gut amplicon question, "
     "not declarations that a nonhuman or assembly source has no use for another biological question.")

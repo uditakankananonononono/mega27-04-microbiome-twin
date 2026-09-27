@@ -30,6 +30,8 @@ def test_observed_snapshot_preserves_uncertainty():
     d=json.loads(Path('results/gut_material_identity.json').read_text())
     assert d['all_source_samples']==529 and d['exact_mapped_retained_run_columns']==400
     assert d['all_source_sample_metadata']['environment (material)']=={'ENVO:feces':529}
-    assert d['sample_page_1_byte_hash_changed'] is True
+    assert d['site_metadata_compatible'] is True
+    assert d['canonical_linked_sample_fingerprint_sha256']
+    assert d['linked_retained_sample_metadata']['environment (material)']=={'ENVO:feces':400}
     # No source-family, actual specimen or external leaderboard claim follows from this snapshot.
     assert 'no independent specimen verification' in d['scope']
