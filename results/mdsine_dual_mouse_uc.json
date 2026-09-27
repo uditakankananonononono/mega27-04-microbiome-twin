@@ -1,0 +1,54 @@
+{
+  "cohort": "uc",
+  "mouse_ids": [
+    "6",
+    "7",
+    "8",
+    "9",
+    "10"
+  ],
+  "n_mice": 5,
+  "endpoints": {
+    "sensitivity": {
+      "baseline_mouse_median": 0.9734380845491957,
+      "comparator_mouse_median": 1.0,
+      "paired_difference_mouse_median": -0.02656191545080433,
+      "baseline_higher_mice": 0,
+      "baseline_lower_mice": 5,
+      "baseline_equal_mice": 0
+    },
+    "specificity": {
+      "baseline_mouse_median": 0.5780866721177432,
+      "comparator_mouse_median": 0.0,
+      "paired_difference_mouse_median": 0.5778141182883619,
+      "baseline_higher_mice": 5,
+      "baseline_lower_mice": 0,
+      "baseline_equal_mice": 0
+    },
+    "balanced_accuracy": {
+      "baseline_mouse_median": 0.7749468365319085,
+      "comparator_mouse_median": 0.5,
+      "paired_difference_mouse_median": 0.2747319143582664,
+      "baseline_higher_mice": 5,
+      "baseline_lower_mice": 0,
+      "baseline_equal_mice": 0
+    },
+    "positive_prediction_rate": {
+      "baseline_mouse_median": 0.7464820192092919,
+      "comparator_mouse_median": 1.0,
+      "paired_difference_mouse_median": -0.2534062988608443,
+      "baseline_higher_mice": 0,
+      "baseline_lower_mice": 5,
+      "baseline_equal_mice": 0
+    },
+    "pair_median_conditional_rmse": {
+      "baseline_mouse_median": 0.712116364984583,
+      "comparator_mouse_median": 0.8129026245426806,
+      "paired_difference_mouse_median": -0.13047110354873914,
+      "baseline_higher_mice": 0,
+      "baseline_lower_mice": 5,
+      "baseline_equal_mice": 0
+    }
+  },
+  "interpretation_limit": "Viewed-cohort descriptive mouse-level sensitivity, not a calibrated detection comparison, untouched test, or hypothesis test."
+}

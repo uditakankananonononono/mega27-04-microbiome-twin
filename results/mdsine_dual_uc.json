@@ -24,6 +24,73 @@
         "8": 0.712116364984583,
         "9": 0.7239789265587053,
         "10": 0.6822898021028053
+      },
+      "per_mouse": {
+        "6": {
+          "tp": 5204,
+          "tn": 2152,
+          "fp": 1577,
+          "fn": 142,
+          "n_timepoints": 9075,
+          "pair_count": 120,
+          "sensitivity": 0.9734380845491957,
+          "specificity": 0.5770984178063824,
+          "balanced_accuracy": 0.7752682511777891,
+          "positive_prediction_rate": 0.7472176308539945,
+          "pair_median_conditional_rmse": 0.6212633746693356
+        },
+        "7": {
+          "tp": 5136,
+          "tn": 2121,
+          "fp": 1548,
+          "fn": 149,
+          "n_timepoints": 8954,
+          "pair_count": 119,
+          "sensitivity": 0.9718070009460738,
+          "specificity": 0.5780866721177432,
+          "balanced_accuracy": 0.7749468365319085,
+          "positive_prediction_rate": 0.7464820192092919,
+          "pair_median_conditional_rmse": 0.7129005217071817
+        },
+        "8": {
+          "tp": 5203,
+          "tn": 2152,
+          "fp": 1510,
+          "fn": 210,
+          "n_timepoints": 9075,
+          "pair_count": 120,
+          "sensitivity": 0.9612045076667283,
+          "specificity": 0.5876570180229382,
+          "balanced_accuracy": 0.7744307628448333,
+          "positive_prediction_rate": 0.7397245179063361,
+          "pair_median_conditional_rmse": 0.712116364984583
+        },
+        "9": {
+          "tp": 5290,
+          "tn": 2152,
+          "fp": 1498,
+          "fn": 135,
+          "n_timepoints": 9075,
+          "pair_count": 121,
+          "sensitivity": 0.9751152073732718,
+          "specificity": 0.5895890410958904,
+          "balanced_accuracy": 0.7823521242345811,
+          "positive_prediction_rate": 0.7479889807162534,
+          "pair_median_conditional_rmse": 0.7239789265587053
+        },
+        "10": {
+          "tp": 4960,
+          "tn": 2137,
+          "fp": 1602,
+          "fn": 134,
+          "n_timepoints": 8833,
+          "pair_count": 121,
+          "sensitivity": 0.9736945425991362,
+          "specificity": 0.5715431933672105,
+          "balanced_accuracy": 0.7726188679831734,
+          "positive_prediction_rate": 0.7428959583380504,
+          "pair_median_conditional_rmse": 0.6822898021028053
+        }
       }
     },
     "MDSINE2 no modules": {
@@ -45,6 +112,73 @@
         "8": 0.8458555512234189,
         "9": 0.8544500301074445,
         "10": 0.8129026245426806
+      },
+      "per_mouse": {
+        "6": {
+          "tp": 5346,
+          "tn": 4,
+          "fp": 3725,
+          "fn": 0,
+          "n_timepoints": 9075,
+          "pair_count": 120,
+          "sensitivity": 1.0,
+          "specificity": 0.0010726736390453205,
+          "balanced_accuracy": 0.5005363368195227,
+          "positive_prediction_rate": 0.9995592286501377,
+          "pair_median_conditional_rmse": 0.7509496827628774
+        },
+        "7": {
+          "tp": 5285,
+          "tn": 1,
+          "fp": 3668,
+          "fn": 0,
+          "n_timepoints": 8954,
+          "pair_count": 119,
+          "sensitivity": 1.0,
+          "specificity": 0.0002725538293813028,
+          "balanced_accuracy": 0.5001362769146906,
+          "positive_prediction_rate": 0.9998883180701362,
+          "pair_median_conditional_rmse": 0.7334499047407946
+        },
+        "8": {
+          "tp": 5413,
+          "tn": 0,
+          "fp": 3662,
+          "fn": 0,
+          "n_timepoints": 9075,
+          "pair_count": 120,
+          "sensitivity": 1.0,
+          "specificity": 0.0,
+          "balanced_accuracy": 0.5,
+          "positive_prediction_rate": 1.0,
+          "pair_median_conditional_rmse": 0.8458555512234189
+        },
+        "9": {
+          "tp": 5425,
+          "tn": 0,
+          "fp": 3650,
+          "fn": 0,
+          "n_timepoints": 9075,
+          "pair_count": 121,
+          "sensitivity": 1.0,
+          "specificity": 0.0,
+          "balanced_accuracy": 0.5,
+          "positive_prediction_rate": 1.0,
+          "pair_median_conditional_rmse": 0.8544500301074445
+        },
+        "10": {
+          "tp": 5094,
+          "tn": 0,
+          "fp": 3739,
+          "fn": 0,
+          "n_timepoints": 8833,
+          "pair_count": 121,
+          "sensitivity": 1.0,
+          "specificity": 0.0,
+          "balanced_accuracy": 0.5,
+          "positive_prediction_rate": 1.0,
+          "pair_median_conditional_rmse": 0.8129026245426806
+        }
       }
     }
   },

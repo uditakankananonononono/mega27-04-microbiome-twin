@@ -23,6 +23,60 @@
         "3": 0.9036062052030381,
         "4": 0.8730511036367232,
         "5": 0.9796932794590911
+      },
+      "per_mouse": {
+        "2": {
+          "tp": 5417,
+          "tn": 3109,
+          "fp": 1776,
+          "fn": 273,
+          "n_timepoints": 10575,
+          "pair_count": 140,
+          "sensitivity": 0.9520210896309315,
+          "specificity": 0.6364380757420676,
+          "balanced_accuracy": 0.7942295826864996,
+          "positive_prediction_rate": 0.6801891252955082,
+          "pair_median_conditional_rmse": 0.9418855973605035
+        },
+        "3": {
+          "tp": 5390,
+          "tn": 3031,
+          "fp": 1584,
+          "fn": 288,
+          "n_timepoints": 10293,
+          "pair_count": 139,
+          "sensitivity": 0.9492779147587178,
+          "specificity": 0.6567713976164681,
+          "balanced_accuracy": 0.8030246561875929,
+          "positive_prediction_rate": 0.6775478480520742,
+          "pair_median_conditional_rmse": 0.9036062052030381
+        },
+        "4": {
+          "tp": 5337,
+          "tn": 3088,
+          "fp": 1725,
+          "fn": 284,
+          "n_timepoints": 10434,
+          "pair_count": 139,
+          "sensitivity": 0.9494751823518947,
+          "specificity": 0.6415956783710783,
+          "balanced_accuracy": 0.7955354303614866,
+          "positive_prediction_rate": 0.6768257619321449,
+          "pair_median_conditional_rmse": 0.8730511036367232
+        },
+        "5": {
+          "tp": 5094,
+          "tn": 3109,
+          "fp": 2113,
+          "fn": 259,
+          "n_timepoints": 10575,
+          "pair_count": 138,
+          "sensitivity": 0.951615916308612,
+          "specificity": 0.5953657602451168,
+          "balanced_accuracy": 0.7734908382768644,
+          "positive_prediction_rate": 0.6815130023640662,
+          "pair_median_conditional_rmse": 0.9796932794590911
+        }
       }
     },
     "MDSINE2 no modules": {
@@ -43,6 +97,60 @@
         "3": 0.9479356593226858,
         "4": 0.8864001860784316,
         "5": 0.8695353398887177
+      },
+      "per_mouse": {
+        "2": {
+          "tp": 5690,
+          "tn": 0,
+          "fp": 4885,
+          "fn": 0,
+          "n_timepoints": 10575,
+          "pair_count": 140,
+          "sensitivity": 1.0,
+          "specificity": 0.0,
+          "balanced_accuracy": 0.5,
+          "positive_prediction_rate": 1.0,
+          "pair_median_conditional_rmse": 0.9834634752242555
+        },
+        "3": {
+          "tp": 5678,
+          "tn": 8,
+          "fp": 4607,
+          "fn": 0,
+          "n_timepoints": 10293,
+          "pair_count": 139,
+          "sensitivity": 1.0,
+          "specificity": 0.001733477789815818,
+          "balanced_accuracy": 0.500866738894908,
+          "positive_prediction_rate": 0.9992227727581852,
+          "pair_median_conditional_rmse": 0.9479356593226858
+        },
+        "4": {
+          "tp": 5621,
+          "tn": 0,
+          "fp": 4813,
+          "fn": 0,
+          "n_timepoints": 10434,
+          "pair_count": 139,
+          "sensitivity": 1.0,
+          "specificity": 0.0,
+          "balanced_accuracy": 0.5,
+          "positive_prediction_rate": 1.0,
+          "pair_median_conditional_rmse": 0.8864001860784316
+        },
+        "5": {
+          "tp": 5353,
+          "tn": 0,
+          "fp": 5222,
+          "fn": 0,
+          "n_timepoints": 10575,
+          "pair_count": 138,
+          "sensitivity": 1.0,
+          "specificity": 0.0,
+          "balanced_accuracy": 0.5,
+          "positive_prediction_rate": 1.0,
+          "pair_median_conditional_rmse": 0.8695353398887177
+        }
       }
     }
   },

@@ -25,7 +25,7 @@ def run(cohort):
     model['day']=[schedule[s][int(k)] for s,k in zip(model.HeldoutSubjectId,model.TimePoint)]
     groups={k:g.sort_values('day') for k,g in model.groupby(['HeldoutSubjectId','TaxonIdx'])}
     subs=sorted(model.HeldoutSubjectId.unique()); taxa=sorted(model.TaxonIdx.unique())
-    stats={m:{'tp':0,'tn':0,'fp':0,'fn':0,'mouse':{},'pair_errors':[]} for m in ['population baseline','MDSINE2 no modules']}
+    stats={m:{'tp':0,'tn':0,'fp':0,'fn':0,'mouse':{},'pair_errors':[],'per_mouse_confusion':{},'per_mouse_pairs':{}} for m in ['population baseline','MDSINE2 no modules']}
     for s in subs:
         for j in taxa:
             g=groups[(s,j)];dy=g.day.to_numpy();tr=g.Truth.to_numpy()
@@ -35,10 +35,13 @@ def run(cohort):
             for name,p in pred.items():
                 seen=p>LB; v=stats[name]
                 v['tp']+=int(np.sum(seen&actual));v['tn']+=int(np.sum(~seen&~actual));v['fp']+=int(np.sum(seen&~actual));v['fn']+=int(np.sum(~seen&actual))
+                mouse_conf=v['per_mouse_confusion'].setdefault(int(s),{'tp':0,'tn':0,'fp':0,'fn':0})
+                mouse_conf['tp']+=int(np.sum(seen&actual));mouse_conf['tn']+=int(np.sum(~seen&~actual));mouse_conf['fp']+=int(np.sum(seen&~actual));mouse_conf['fn']+=int(np.sum(~seen&actual))
                 if actual.any():
                     error=float(np.sqrt(np.mean((np.log10(p[actual]+EPS)-np.log10(tr[actual]+EPS))**2)))
                     v['mouse'].setdefault(int(s),[]).append(error)
                     v['pair_errors'].append(error)
+                    v['per_mouse_pairs'].setdefault(int(s),[]).append(error)
     result={}
     for name,v in stats.items():
         n=sum(v[k] for k in ['tp','tn','fp','fn'])
@@ -51,6 +54,19 @@ def run(cohort):
             'positive_prediction_rate':(v['tp']+v['fp'])/n,'pair_median_conditional_rmse':pair_median,'pair_count':len(v['pair_errors']),
             'mean_mouse_median_conditional_rmse':float(np.mean(list(conditional.values()))),
             'mouse_median_conditional_rmse':{str(k):v for k,v in conditional.items()}})
+        per_mouse={}
+        for mouse,c in v['per_mouse_confusion'].items():
+            total=sum(c.values());positive=c['tp']+c['fn'];negative=c['tn']+c['fp']
+            per_mouse[str(mouse)]={**c,'n_timepoints':total,'pair_count':len(v['per_mouse_pairs'].get(mouse,[])),
+                'sensitivity':c['tp']/positive if positive else None,
+                'specificity':c['tn']/negative if negative else None,
+                'balanced_accuracy':0.5*(c['tp']/positive+c['tn']/negative) if positive and negative else None,
+                'positive_prediction_rate':(c['tp']+c['fp'])/total,
+                'pair_median_conditional_rmse':float(np.median(v['per_mouse_pairs'][mouse]))}
+            assert np.isclose(per_mouse[str(mouse)]['pair_median_conditional_rmse'],conditional[mouse],atol=1e-10)
+        for k in ['tp','tn','fp','fn']:
+            assert sum(c[k] for c in per_mouse.values())==result[name][k]
+        result[name]['per_mouse']=per_mouse
     # The conditional per-pair metric must reproduce the archived official medians.
     archive=json.load(open(ROOT/f'results/mdsine2_headtohead_{cohort}.json'))
     for name,key in [('population baseline','PresenceConditionalPopulation (ours)'),('MDSINE2 no modules','MDSINE2 (No Modules)')]:
