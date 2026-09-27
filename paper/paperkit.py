@@ -53,8 +53,12 @@ class Paper:
 
     def table(self, header: list[str], rows: list[list], caption: str):
         self.tab += 1
-        self.doc.add_paragraph(f"Table {self.tab}. {caption}").runs[0].bold = True
+        cap = self.doc.add_paragraph(f"Table {self.tab}. {caption}")
+        cap.runs[0].bold = True
+        cap.paragraph_format.keep_with_next = True
         t = self.doc.add_table(rows=1, cols=len(header)); t.style = "Light Grid Accent 1"; t.alignment = WD_TABLE_ALIGNMENT.CENTER
+        repeat = OxmlElement("w:tblHeader"); repeat.set(qn("w:val"), "true")
+        t.rows[0]._tr.get_or_add_trPr().append(repeat)
         for i, hdr in enumerate(header):
             t.rows[0].cells[i].text = str(hdr)
         for r in rows:

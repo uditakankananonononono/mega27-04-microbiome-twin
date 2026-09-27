@@ -1,3 +1,5 @@
+**2026-09-27 window diagnostic staged locally:** The paper now has a source-window analysis, 75 PDF pages. Drive still serves the prior 72-page edition until replacement and re-download are verified.
+
 **2026-09-27 substantive page revision verified:** The paper adds source-family identity sensitivity and mouse-unit inference, 72 PDF pages. Existing Drive IDs were replaced and downloaded byte-identical. PDF SHA-256 `7d231dc18b0c748d81f76a566800d3498470e5613d2194e9e8183d3f0cf36e8d`; DOCX SHA-256 `502fbe6938f4a49c63d8fa51d5b443190aa2a9add3f89c4ef37086f7a2f6bcf8`. Historical checksums below belong to previous versions.
 
 **2026-09-27 user-verdict revision verified:** The archival audit was revised after Udita's supplied critique; current 70-page PDF and DOCX replaced at the same Drive IDs and byte-verified by re-download. Current PDF SHA-256 `c464f6f7dd0c865a7bdfd7c59f12620894ba7067255d3c27e6f6a2d26259f105`; DOCX SHA-256 `80651262d62ff5d237f4df2a079eb131bc63aa4381193f98f8e134adcacb6741`. Historical checksums in the table below belong to the old edition.

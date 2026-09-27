@@ -1,0 +1,241 @@
+{
+  "cohort": "healthy",
+  "subjects": 4,
+  "taxa": 141,
+  "comparator": "MDSINE2 (No Modules)",
+  "full_period_reproduction": {
+    "detected": {
+      "ours": {
+        "median": 0.9189953391025993,
+        "n": 556
+      },
+      "other": {
+        "median": 0.9127263005703774,
+        "n": 556
+      }
+    },
+    "all": {
+      "ours": {
+        "median": 1.7521770835292991,
+        "n": 564
+      },
+      "other": {
+        "median": 2.0716621722138058,
+        "n": 564
+      }
+    }
+  },
+  "windows": [
+    {
+      "endpoint": "all",
+      "window": "pre",
+      "n_mice": 4,
+      "n_mouse_taxon_pairs": 564,
+      "scored_timepoints": 10716,
+      "mean_mouse_median_gap": -0.31132481729086836,
+      "negative_mouse_gaps": 4,
+      "mouse_median_gaps": [
+        -0.338623568980418,
+        -0.2739332845858363,
+        -0.35080368100036496,
+        -0.28193873459685415
+      ]
+    },
+    {
+      "endpoint": "all",
+      "window": "diet",
+      "n_mice": 4,
+      "n_mouse_taxon_pairs": 564,
+      "scored_timepoints": 4794,
+      "mean_mouse_median_gap": -0.19538020249028015,
+      "negative_mouse_gaps": 4,
+      "mouse_median_gaps": [
+        -0.22083443903211197,
+        -0.19268156810671938,
+        -0.22724355595849377,
+        -0.14076124686379554
+      ]
+    },
+    {
+      "endpoint": "all",
+      "window": "between_diet_vanco",
+      "n_mice": 4,
+      "n_mouse_taxon_pairs": 564,
+      "scored_timepoints": 5076,
+      "mean_mouse_median_gap": -0.1035906793531968,
+      "negative_mouse_gaps": 4,
+      "mouse_median_gaps": [
+        -0.09366371609743374,
+        -0.15870268609059512,
+        -0.1371132694020889,
+        -0.024883045822669425
+      ]
+    },
+    {
+      "endpoint": "all",
+      "window": "vancomycin",
+      "n_mice": 4,
+      "n_mouse_taxon_pairs": 564,
+      "scored_timepoints": 4935,
+      "mean_mouse_median_gap": -0.3090510897732576,
+      "negative_mouse_gaps": 4,
+      "mouse_median_gaps": [
+        -0.35442182200313654,
+        -0.3843480479711414,
+        -0.2693357851475316,
+        -0.228098703971221
+      ]
+    },
+    {
+      "endpoint": "all",
+      "window": "between_vanco_gent",
+      "n_mice": 4,
+      "n_mouse_taxon_pairs": 564,
+      "scored_timepoints": 5076,
+      "mean_mouse_median_gap": -0.12238025805701323,
+      "negative_mouse_gaps": 4,
+      "mouse_median_gaps": [
+        -0.2600020553202905,
+        -0.09616608107741609,
+        -0.025641364328940874,
+        -0.10771153150140543
+      ]
+    },
+    {
+      "endpoint": "all",
+      "window": "gentamicin",
+      "n_mice": 4,
+      "n_mouse_taxon_pairs": 564,
+      "scored_timepoints": 5076,
+      "mean_mouse_median_gap": -0.1626108821191708,
+      "negative_mouse_gaps": 4,
+      "mouse_median_gaps": [
+        -0.22791650104087857,
+        -0.2139647687726538,
+        -0.1071266797285606,
+        -0.10143557893459021
+      ]
+    },
+    {
+      "endpoint": "all",
+      "window": "after_gent",
+      "n_mice": 4,
+      "n_mouse_taxon_pairs": 564,
+      "scored_timepoints": 6204,
+      "mean_mouse_median_gap": -0.059290867169140185,
+      "negative_mouse_gaps": 4,
+      "mouse_median_gaps": [
+        -0.06447333068883332,
+        -0.04865033902228344,
+        -0.07058545260759558,
+        -0.053454346357848403
+      ]
+    },
+    {
+      "endpoint": "detected",
+      "window": "pre",
+      "n_mice": 4,
+      "n_mouse_taxon_pairs": 514,
+      "scored_timepoints": 5858,
+      "mean_mouse_median_gap": -0.2535586986386994,
+      "negative_mouse_gaps": 4,
+      "mouse_median_gaps": [
+        -0.35030585600673186,
+        -0.24709804020609977,
+        -0.247333986652436,
+        -0.1694969116895299
+      ]
+    },
+    {
+      "endpoint": "detected",
+      "window": "diet",
+      "n_mice": 4,
+      "n_mouse_taxon_pairs": 524,
+      "scored_timepoints": 3412,
+      "mean_mouse_median_gap": -0.0751778766691043,
+      "negative_mouse_gaps": 4,
+      "mouse_median_gaps": [
+        -0.09232048471049414,
+        -0.1095128237864672,
+        -0.05157390308380816,
+        -0.047304295095647736
+      ]
+    },
+    {
+      "endpoint": "detected",
+      "window": "between_diet_vanco",
+      "n_mice": 4,
+      "n_mouse_taxon_pairs": 486,
+      "scored_timepoints": 3329,
+      "mean_mouse_median_gap": -0.03568497831936624,
+      "negative_mouse_gaps": 3,
+      "mouse_median_gaps": [
+        -0.0509763301057905,
+        -0.09883967232397953,
+        -0.041387832165439065,
+        0.04846392131774413
+      ]
+    },
+    {
+      "endpoint": "detected",
+      "window": "vancomycin",
+      "n_mice": 4,
+      "n_mouse_taxon_pairs": 446,
+      "scored_timepoints": 2143,
+      "mean_mouse_median_gap": -0.0022106462951408147,
+      "negative_mouse_gaps": 2,
+      "mouse_median_gaps": [
+        -0.045823403598041657,
+        -0.03930850711306777,
+        0.033159149187003176,
+        0.04313017634354299
+      ]
+    },
+    {
+      "endpoint": "detected",
+      "window": "between_vanco_gent",
+      "n_mice": 4,
+      "n_mouse_taxon_pairs": 340,
+      "scored_timepoints": 1874,
+      "mean_mouse_median_gap": -0.12807657092244507,
+      "negative_mouse_gaps": 4,
+      "mouse_median_gaps": [
+        -0.14656429526397152,
+        -0.13416583219635492,
+        -0.08391337335431981,
+        -0.14766278287513396
+      ]
+    },
+    {
+      "endpoint": "detected",
+      "window": "gentamicin",
+      "n_mice": 4,
+      "n_mouse_taxon_pairs": 390,
+      "scored_timepoints": 2508,
+      "mean_mouse_median_gap": -0.11834482563271256,
+      "negative_mouse_gaps": 3,
+      "mouse_median_gaps": [
+        -0.22571232127806923,
+        -0.17184711796774954,
+        -0.10209350486853239,
+        0.026273641583500873
+      ]
+    },
+    {
+      "endpoint": "detected",
+      "window": "after_gent",
+      "n_mice": 4,
+      "n_mouse_taxon_pairs": 399,
+      "scored_timepoints": 3218,
+      "mean_mouse_median_gap": 0.024611897025209162,
+      "negative_mouse_gaps": 0,
+      "mouse_median_gaps": [
+        0.0157933919409583,
+        0.00836552605147095,
+        0.01211171454811455,
+        0.062176955560292846
+      ]
+    }
+  ],
+  "scope": "viewed cohorts; descriptive, noncausal and not external validation"
+}
