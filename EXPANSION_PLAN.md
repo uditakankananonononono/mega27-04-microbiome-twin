@@ -1,3 +1,6 @@
+## Body-text length audit, 2026-09-27 12:35 IST
+The current archival PDF has 76 total pages but only 41,530 counted prose characters/6,111 words between Introduction and Appendix A after headings, tables, captions, figures, formulas and reference material are excluded. The precommitted density estimates are 13.84-16.61 full body-text pages, not a certified visual page count. See `results/body_page_audit.json` and protocol `results/PREREG_20260927_body_page_audit.md`. The 50+ body-text-page expansion gate remains **NOT MET**. Adding tables or blank-space page breaks cannot fix it.
+
 # Microbiome twin platform expansion, started 2026-09-26
 
 ## User-provided judge verdict, 2026-09-27 11:24 IST

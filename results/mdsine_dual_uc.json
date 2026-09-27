@@ -1,0 +1,56 @@
+{
+  "cohort": "uc",
+  "mouse_count": 5,
+  "taxa_count": 121,
+  "threshold": 1e-05,
+  "epsilon": 1000.0,
+  "methods": {
+    "population baseline": {
+      "tp": 25793,
+      "tn": 10714,
+      "fp": 7735,
+      "fn": 770,
+      "n_timepoints": 45012,
+      "sensitivity": 0.9710123103565109,
+      "specificity": 0.580736083256545,
+      "balanced_accuracy": 0.7758741968065279,
+      "positive_prediction_rate": 0.7448680351906158,
+      "pair_median_conditional_rmse": 0.6924718452517249,
+      "pair_count": 601,
+      "mean_mouse_median_conditional_rmse": 0.6905097980045222,
+      "mouse_median_conditional_rmse": {
+        "6": 0.6212633746693356,
+        "7": 0.7129005217071817,
+        "8": 0.712116364984583,
+        "9": 0.7239789265587053,
+        "10": 0.6822898021028053
+      }
+    },
+    "MDSINE2 no modules": {
+      "tp": 26563,
+      "tn": 5,
+      "fp": 18444,
+      "fn": 0,
+      "n_timepoints": 45012,
+      "sensitivity": 1.0,
+      "specificity": 0.00027101739931703617,
+      "balanced_accuracy": 0.5001355086996585,
+      "positive_prediction_rate": 0.9998889185106193,
+      "pair_median_conditional_rmse": 0.8054826314149838,
+      "pair_count": 601,
+      "mean_mouse_median_conditional_rmse": 0.7995215586754433,
+      "mouse_median_conditional_rmse": {
+        "6": 0.7509496827628774,
+        "7": 0.7334499047407946,
+        "8": 0.8458555512234189,
+        "9": 0.8544500301074445,
+        "10": 0.8129026245426806
+      }
+    }
+  },
+  "archived_pair_medians": {
+    "population baseline": 0.6924718452517249,
+    "MDSINE2 no modules": 0.8054826314149838
+  },
+  "scope": "viewed-cohort exploratory metric decomposition, no external validation"
+}
