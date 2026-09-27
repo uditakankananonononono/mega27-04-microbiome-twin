@@ -1,13 +1,14 @@
 """Fail-closed metadata screening for a human-gut amplicon benchmark candidate.
 
-This gate NEVER awards final eligibility. Current MGnify experiment-type labels
+This gate NEVER awards final eligibility. Seven-field site amendment is dated
+in results/PREREG_20260927_site_gate_amendment.md. Current MGnify experiment-type labels
 are insufficient to certify the archived wet-lab method or data-use rights.
 """
 from __future__ import annotations
 
 REQUIRED = ('analysis_pagination_complete','uniform_analysis_experiment_type',
             'sample_pagination_complete','old_column_to_analysis_mapped',
-            'explicit_human_host_compatible','independent_biological_family')
+            'explicit_human_host_compatible','human_gut_site_compatible','independent_biological_family')
 
 
 def assess_source(row):

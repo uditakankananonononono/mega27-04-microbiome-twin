@@ -34,6 +34,11 @@
           "required": true
         },
         {
+          "field": "human_gut_site_compatible",
+          "observed": "unknown",
+          "required": true
+        },
+        {
           "field": "independent_biological_family",
           "observed": "unknown",
           "required": true
@@ -52,6 +57,11 @@
       "decision": "blocked",
       "reasons": [
         {
+          "field": "human_gut_site_compatible",
+          "observed": false,
+          "required": true
+        },
+        {
           "field": "independent_biological_family",
           "observed": "unknown",
           "required": true
@@ -69,6 +79,11 @@
       "study": "MGYS00005154",
       "decision": "blocked",
       "reasons": [
+        {
+          "field": "human_gut_site_compatible",
+          "observed": "unknown",
+          "required": true
+        },
         {
           "field": "independent_biological_family",
           "observed": "unknown",
@@ -94,6 +109,11 @@
         },
         {
           "field": "explicit_human_host_compatible",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "human_gut_site_compatible",
           "observed": "unknown",
           "required": true
         },
@@ -131,6 +151,11 @@
           "required": true
         },
         {
+          "field": "human_gut_site_compatible",
+          "observed": "unknown",
+          "required": true
+        },
+        {
           "field": "independent_biological_family",
           "observed": "unknown",
           "required": true
@@ -154,6 +179,11 @@
           "required": true
         },
         {
+          "field": "human_gut_site_compatible",
+          "observed": "unknown",
+          "required": true
+        },
+        {
           "field": "independent_biological_family",
           "observed": "unknown",
           "required": true
@@ -172,13 +202,13 @@
       "decision": "blocked",
       "reasons": [
         {
-          "field": "old_column_to_analysis_mapped",
+          "field": "explicit_human_host_compatible",
           "observed": "unknown",
           "required": true
         },
         {
-          "field": "explicit_human_host_compatible",
-          "observed": "unknown",
+          "field": "human_gut_site_compatible",
+          "observed": false,
           "required": true
         },
         {
@@ -206,6 +236,11 @@
         },
         {
           "field": "explicit_human_host_compatible",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "human_gut_site_compatible",
           "observed": "unknown",
           "required": true
         },

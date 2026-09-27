@@ -14,7 +14,7 @@ def test_synthetic_ready_still_not_final_and_redacts_extras(tmp_path,capsys):
     x={'study':'synthetic','analysis_pagination_complete':True,
        'uniform_analysis_experiment_type':'amplicon','sample_pagination_complete':True,
        'old_column_to_analysis_mapped':True,'explicit_human_host_compatible':True,
-       'independent_biological_family':True,
+       'human_gut_site_compatible':True,'independent_biological_family':True,
        'sample_id':'PRIVATE-FAKE-SAMPLE','abundance':[1,2,3]}
     p=tmp_path/'rows.json';p.write_text(json.dumps({'n_studies':1,'rows':[x]}))
     assert main(['screen-sources',str(p)])==0

@@ -8,7 +8,8 @@
       "explicit_human_host_compatible": "unknown",
       "old_column_to_analysis_mapped": "unknown",
       "independent_biological_family": "unknown",
-      "missing_host_name_samples": "unknown"
+      "missing_host_name_samples": "unknown",
+      "human_gut_site_compatible": "unknown"
     },
     {
       "study": "MGYS00002238",
@@ -18,7 +19,8 @@
       "explicit_human_host_compatible": true,
       "old_column_to_analysis_mapped": true,
       "independent_biological_family": "unknown",
-      "missing_host_name_samples": 0
+      "missing_host_name_samples": 0,
+      "human_gut_site_compatible": false
     },
     {
       "study": "MGYS00005154",
@@ -28,7 +30,8 @@
       "explicit_human_host_compatible": true,
       "old_column_to_analysis_mapped": true,
       "independent_biological_family": "unknown",
-      "missing_host_name_samples": 0
+      "missing_host_name_samples": 0,
+      "human_gut_site_compatible": "unknown"
     },
     {
       "study": "MGYS00005230",
@@ -38,7 +41,8 @@
       "explicit_human_host_compatible": "unknown",
       "old_column_to_analysis_mapped": "unknown",
       "independent_biological_family": "unknown",
-      "missing_host_name_samples": 53
+      "missing_host_name_samples": 53,
+      "human_gut_site_compatible": "unknown"
     },
     {
       "study": "MGYS00006006",
@@ -48,7 +52,8 @@
       "explicit_human_host_compatible": "unknown",
       "old_column_to_analysis_mapped": "unknown",
       "independent_biological_family": "unknown",
-      "missing_host_name_samples": 7
+      "missing_host_name_samples": 7,
+      "human_gut_site_compatible": "unknown"
     },
     {
       "study": "MGYS00006755",
@@ -58,7 +63,8 @@
       "explicit_human_host_compatible": false,
       "old_column_to_analysis_mapped": true,
       "independent_biological_family": "unknown",
-      "missing_host_name_samples": 0
+      "missing_host_name_samples": 0,
+      "human_gut_site_compatible": "unknown"
     },
     {
       "study": "MGYS00006794",
@@ -66,9 +72,10 @@
       "uniform_analysis_experiment_type": "amplicon",
       "sample_pagination_complete": true,
       "explicit_human_host_compatible": "unknown",
-      "old_column_to_analysis_mapped": "unknown",
+      "old_column_to_analysis_mapped": true,
       "independent_biological_family": "unknown",
-      "missing_host_name_samples": 184
+      "missing_host_name_samples": 184,
+      "human_gut_site_compatible": false
     },
     {
       "study": "MGYS00006795",
@@ -78,10 +85,11 @@
       "explicit_human_host_compatible": "unknown",
       "old_column_to_analysis_mapped": "unknown",
       "independent_biological_family": "unknown",
-      "missing_host_name_samples": 36
+      "missing_host_name_samples": 36,
+      "human_gut_site_compatible": "unknown"
     }
   ],
   "n_studies": 8,
-  "scope": "metadata-only partial screen plus exact current run-column mapping for MGYS00006755, MGYS00002238 and MGYS00005154; no final source eligibility or independent validation",
+  "scope": "metadata-only partial screen plus exact current run-column mapping for MGYS00006755, MGYS00002238, MGYS00005154 and MGYS00006794; no final source eligibility or independent validation",
   "unknown_is_not_pass": true
 }
