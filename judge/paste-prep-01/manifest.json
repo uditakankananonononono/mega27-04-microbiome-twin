@@ -5,7 +5,7 @@
   "extracted_chars": 249636,
   "pdf_pages": 71,
   "chunk_count": 30,
-  "status": "prepared_only_not_submitted_not_counted",
+  "status": "retired_superseded_by_authorless_pdf_2026-09-27",
   "chunks": [
     {
       "part": 1,
@@ -187,5 +187,6 @@
       "chars": 6668,
       "first": "[[PAPER PAGE 69]]\nMGYS00005212   SRP071579   Skin      "
     }
-  ]
+  ],
+  "retirement_note": "Historical 71-page extraction and hashes; do not submit or compare to the current 70-page authorless paper."
 }

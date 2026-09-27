@@ -1,5 +1,5 @@
 {
-  "status": "staged_not_submitted",
+  "status": "retired_superseded_by_authorless_pdf_2026-09-27",
   "pdf_sha256": "db70a3c2d71feae54a66ce8eb60b418ae3b7907875e1aef1ed70bf926498d3b2",
   "extraction_sha256": "1c4e2ff30a4c66950fdd9b5f11b72ab8ed69afc09b3f747ae280683fb661c385",
   "segment_count": 86,
@@ -693,5 +693,6 @@
       "characters": 148,
       "file": "086.txt"
     }
-  ]
+  ],
+  "retirement_note": "Historical 71-page extraction and hashes; do not submit or compare to the current 70-page authorless paper."
 }

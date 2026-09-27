@@ -9,8 +9,7 @@ B = {d: json.load(open(f"results/bench_{d}_presence_mean_cnode_glv_graphtwin_k10
      for d in ["Drosophila_Gut", "Soil_Vitro", "Human_Oral", "Human_Gut"]}
 
 P = Paper("Population Priors Rival Interaction Models in Microbiome Digital Twins: "
-          "a Leave-One-Out Audit of cNODE and a Head-to-Head with MDSINE2",
-          "MEGA-PROGRAM-27, Item 4 - Udita Phookan (program owner); computational work by an AI research agent. Revised draft of 25 September 2026.")
+          "a Leave-One-Out Audit of cNODE and a Head-to-Head with MDSINE2")
 
 P.h("Abstract")
 P.p("We test whether microbiome digital twins learn species interactions or mainly exploit ecological priors. A microbiome digital twin is a model that, given what we know about a community, predicts what it will look like: its steady-state "

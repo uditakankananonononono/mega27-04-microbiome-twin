@@ -4,8 +4,6 @@
  Models in Microbiome Digital Twins: a
  Leave-One-Out Audit of cNODE and a
      Head-to-Head with MDSINE2
- MEGA-PROGRAM-27, Item 4 - Udita Phookan (program owner); computational work
-         by an AI research agent. Revised draft of 25 September 2026.
 
 
 Abstract

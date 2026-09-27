@@ -1,3 +1,5 @@
+**Superseded notice (2026-09-27):** The Drive PDF/DOCX below are previous attributed copies. Do not circulate or use their links. The local rebuilt no-byline paper is 70 PDF pages; this table is a historical receipt until a replacement upload is verified.
+
 # Drive delivery - MEGA27 item 4 (microbiome digital twin)
 
 Uploaded to Drive folder 1D-yJqoTmmIb9EvrTHN0LiVYfZIajKGeP on 26 Sep 2026.

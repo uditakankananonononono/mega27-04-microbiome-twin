@@ -1,3 +1,5 @@
+**Retired:** the staged extraction refers to the previous 71-page edition and is not valid for further submission after the 2026-09-27 byline removal. The prior 40 sent segments cannot be recalled. Recreate a fresh version if a future review is authorized.
+
 # Archived v3 manuscript text paste preparation, not a judge round
 
 Source: `paper/mega27-04-microbiome-twin-paper.pdf`, 71 PDF pages. Each part is a complete-page-bounded segment of the same `pdftotext -layout` extraction. The manifest pins paper bytes, extracted text, each chunk and character count. This archive v3 is **not** the unwritten expanded 50+ body-text-page paper. Do not count the preparation as a ChatGPT review: parts must all be actually submitted, with answer proving that the whole text was ingested through version-unique quotes. Only an implemented/tested novelty change turns a critique into a counted round. The text includes appendices and references so a truncated body-only reading must not be called full paper ingestion. No personal patient data was added.
