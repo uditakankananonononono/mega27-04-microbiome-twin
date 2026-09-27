@@ -321,6 +321,26 @@ P.p("Collection-site evidence required a post-inspection correction: all 400 lin
     "and aggregate sample descriptions: results/gut_candidate_column_identity.json; "
     "locked method: results/PREREG_20260927_gut_candidate_column_identity.md. Post-inspection material amendment and live sample-response hashes: results/PREREG_20260927_feces_material_amendment.md and results/gut_material_identity.json.")
 
+P.h("5.1.2e.1 Family and publication identifiers remain unresolved", 3)
+P.p("A later source-family check read the MGnify study and all current 529 sample records without "+
+    "examining abundance outcomes. The study record identifies PRJEB3079 / ERP001500 and its abstract "+
+    "describes 531 people, including mono- and dizygotic twins. All 529 exposed sample-metadata records "+
+    "carry location, environment, host and depth/elevation keys, but no explicit person, family, household "+
+    "or donor-ID key. The 529 current sample records and the 531 people in the abstract are distinct reported "+
+    "counts without a verified row-level crosswalk. Neither the 400 unique exact-linked sample accessions nor "+
+    "a single BioProject prove 400 unrelated people or independence from a source mirror. The biological-family "+
+    "axis therefore remains unknown rather than false or true, and source admission remains blocked.")
+P.p("The abstract text matches the 2012 Nature article 'Human gut microbiome viewed across age and "+
+    "geography' (DOI 10.1038/nature11053), which discusses fecal samples, families and twins. Yet "+
+    "MGnify's separate study-publications endpoint links this accession to a different 2021 article "+
+    "(DOI 10.1016/j.csbj.2021.07.009). We record this publication-link conflict rather than infer "+
+    "which archived sequencing runs the 2012 publication includes. Primary specimen mapping, family IDs, "+
+    "run-level library methods, rights and mirror checks remain needed. This finding is metadata-only, "+
+    "not a reassessment of the original BH scores or an untouched external benchmark. Provider response "+
+    "URLs, hashes and aggregate key counts: results/gut_family_evidence.json; the dated diagnostic: "+
+    "results/PREREG_20260927_gut_family_evidence.md. Primary article: "+
+    "https://www.nature.com/articles/nature11053.")
+
 P.h("5.1.2f Exact old-column mapping reveals a site-code contradiction", 3)
 SC=json.load(open("results/mixed_site_column_identity.json"))
 P.p("MGYS00006794 has a title describing longitudinal stool and oral communities in "
