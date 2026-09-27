@@ -46,6 +46,20 @@ def summarize(path):
                 'old_mgnify_study_ids': sorted(old_projects[project.upper()])}
                for (name, project), n in matched.groupby(['project_name', 'project_id']).size().items()]
     overlap.sort(key=lambda r: (-r['metadata_rows'], r['project_id']))
+    time_multi = []
+    for name, part in with_time.groupby('project_name'):
+        by_subject = part.groupby('host_subject_id')
+        varying_day_subject_labels = sum(g.days_from_first_collection.nunique() > 1
+                                         for _, g in by_subject)
+        true_on_repeated_subject_labels = sum(len(g) > 1 and g.antibiotics.str.upper().eq('TRUE').any()
+                                              for _, g in by_subject)
+        changing_antibiotic_labels = sum(len(g) > 1 and g.antibiotics.str.upper().nunique() > 1
+                                         for _, g in by_subject)
+        time_multi.append({'project_name': name, 'time_populated_rows': len(part),
+                           'subject_labels': len(by_subject),
+                           'subject_labels_with_varying_day': int(varying_day_subject_labels),
+                           'repeated_subject_labels_with_any_antibiotics_true': int(true_on_repeated_subject_labels),
+                           'repeated_subject_labels_with_changing_antibiotics_flag': int(changing_antibiotic_labels)})
     agp = data[data.project_name == '2022_American_Gut_Project']
     return {'status': 'outcome_blind_composite_metadata_screen_not_external_test',
             'source': 'https://zenodo.org/records/17315984', 'metadata_md5': EXPECTED_MD5,
@@ -59,6 +73,7 @@ def summarize(path):
             'project_names_with_repeated_subject_labels': repeated.index.get_level_values(0).nunique(),
             'project_names_with_time_values': len(by_project),
             'time_populated_rows_by_project': by_project,
+            'time_field_project_design_leads': time_multi,
             'repeated_project_subject_labels_with_time_values': len(time_repeated),
             'overlap_with_old_mgnify_by_embedded_original_project': overlap,
             'overlap_project_count': matched.project_id.nunique(),

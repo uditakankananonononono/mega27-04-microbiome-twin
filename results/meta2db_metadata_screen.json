@@ -35,6 +35,80 @@
     "2015_DavidLA": 22,
     "2018_RosaBA": 20
   },
+  "time_field_project_design_leads": [
+    {
+      "project_name": "2015_BackhedF",
+      "time_populated_rows": 269,
+      "subject_labels": 92,
+      "subject_labels_with_varying_day": 91,
+      "repeated_subject_labels_with_any_antibiotics_true": 25,
+      "repeated_subject_labels_with_changing_antibiotics_flag": 23
+    },
+    {
+      "project_name": "2015_Bengtsson-PalmeJ",
+      "time_populated_rows": 70,
+      "subject_labels": 35,
+      "subject_labels_with_varying_day": 35,
+      "repeated_subject_labels_with_any_antibiotics_true": 0,
+      "repeated_subject_labels_with_changing_antibiotics_flag": 0
+    },
+    {
+      "project_name": "2015_DavidLA",
+      "time_populated_rows": 22,
+      "subject_labels": 16,
+      "subject_labels_with_varying_day": 4,
+      "repeated_subject_labels_with_any_antibiotics_true": 0,
+      "repeated_subject_labels_with_changing_antibiotics_flag": 0
+    },
+    {
+      "project_name": "2015_ShiB",
+      "time_populated_rows": 48,
+      "subject_labels": 12,
+      "subject_labels_with_varying_day": 12,
+      "repeated_subject_labels_with_any_antibiotics_true": 0,
+      "repeated_subject_labels_with_changing_antibiotics_flag": 0
+    },
+    {
+      "project_name": "2016_VincentC",
+      "time_populated_rows": 170,
+      "subject_labels": 90,
+      "subject_labels_with_varying_day": 50,
+      "repeated_subject_labels_with_any_antibiotics_true": 50,
+      "repeated_subject_labels_with_changing_antibiotics_flag": 0
+    },
+    {
+      "project_name": "2017_BrooksB",
+      "time_populated_rows": 375,
+      "subject_labels": 30,
+      "subject_labels_with_varying_day": 29,
+      "repeated_subject_labels_with_any_antibiotics_true": 0,
+      "repeated_subject_labels_with_changing_antibiotics_flag": 0
+    },
+    {
+      "project_name": "2017_HallAB",
+      "time_populated_rows": 236,
+      "subject_labels": 32,
+      "subject_labels_with_varying_day": 31,
+      "repeated_subject_labels_with_any_antibiotics_true": 0,
+      "repeated_subject_labels_with_changing_antibiotics_flag": 0
+    },
+    {
+      "project_name": "2018_RosaBA",
+      "time_populated_rows": 20,
+      "subject_labels": 10,
+      "subject_labels_with_varying_day": 10,
+      "repeated_subject_labels_with_any_antibiotics_true": 0,
+      "repeated_subject_labels_with_changing_antibiotics_flag": 0
+    },
+    {
+      "project_name": "2022_Bai_SARS-Cov-2",
+      "time_populated_rows": 36,
+      "subject_labels": 36,
+      "subject_labels_with_varying_day": 0,
+      "repeated_subject_labels_with_any_antibiotics_true": 0,
+      "repeated_subject_labels_with_changing_antibiotics_flag": 0
+    }
+  ],
   "repeated_project_subject_labels_with_time_values": 262,
   "overlap_with_old_mgnify_by_embedded_original_project": [
     {
