@@ -1,5 +1,8 @@
 # Microbiome twin platform expansion, started 2026-09-26
 
+## Current judging requirement, updated 2026-09-27 10:00 IST
+Udita's original authenticated WhatsApp message `wamid.HBgMOTE4MTM0MDk4NTcxFQIAEhgWM0VCMDJCMTZGRTVEMkQwMTFBQzc4MQA=` changed the prior ten-round target: **one ChatGPT check she provides** per project. Current microbiome count **0 of 1**. Earlier ten-round requirements further below are preserved as dated history, not active completion criteria. A partial archival-paper thread and model direction consultations are not her provided check. Preserve the evidence, assess what ChatGPT actually reviewed, implement/test a warranted novelty improvement before crediting the judging outcome, and keep all other scientific gates unchanged.
+
 Source of scope: Udita's September 26, 1:36 PM IST WhatsApp request. This document is a plan and gate ledger, not a claim that the expansion is finished. The original v3 audit paper stays an archived baseline; it is not the final expanded platform paper.
 
 ## Baseline and honest counts
