@@ -1,0 +1,94 @@
+{
+  "study": "MGYS00005154",
+  "source": {
+    "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005154/pipelines/5.0/file/ERP001500_taxonomy_abundances_SSU_v5.0.tsv",
+    "sha256": "60ac66ae7be1cce6aeae890773f72578ecd829c7c5a21816b71c3a5e93276c80",
+    "bytes": 2254557
+  },
+  "api_pages": {
+    "analyses": [
+      {
+        "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005154/analyses?page_size=1000",
+        "sha256": "52cf5237f3f9e521574af7f22886f0ce1338072ce87c63756118b2349070a3f7",
+        "bytes": 653106,
+        "items": 250,
+        "declared_total": 965
+      },
+      {
+        "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005154/analyses?page=2&page_size=1000",
+        "sha256": "cf19c1403ee7a06768984bc92fcdb8227507676a0b567244bc7502722d96572d",
+        "bytes": 653124,
+        "items": 250,
+        "declared_total": 965
+      },
+      {
+        "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005154/analyses?page=3&page_size=1000",
+        "sha256": "f6931d22eba9315283533d947f64cb4bd844cd8bdb5278603596af3a2a035f5f",
+        "bytes": 700620,
+        "items": 250,
+        "declared_total": 965
+      },
+      {
+        "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005154/analyses?page=4&page_size=1000",
+        "sha256": "ee2403d288ccad1c61272278aab0780810d9b56d33c6afef50733951d2d22213",
+        "bytes": 607976,
+        "items": 215,
+        "declared_total": 965
+      }
+    ],
+    "samples": [
+      {
+        "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005154/samples?page_size=1000",
+        "sha256": "81f3367c934353b44998ff38b3c67c0b47e18247dbbe96b1559539248d02b3ba",
+        "bytes": 504336,
+        "items": 250,
+        "declared_total": 529
+      },
+      {
+        "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005154/samples?page=2&page_size=1000",
+        "sha256": "468ef1d09dd613309f5f4c3dd1f38699167879a5ca47dcbedb8e4ef6ea5b70ec",
+        "bytes": 504616,
+        "items": 250,
+        "declared_total": 529
+      },
+      {
+        "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005154/samples?page=3&page_size=1000",
+        "sha256": "638fc86c9443e46e7f629be787670c2069cdb7dcb147dc0eb50b1aa1d9da61c2",
+        "bytes": 58881,
+        "items": 29,
+        "declared_total": 529
+      }
+    ]
+  },
+  "raw_ssu_columns": 529,
+  "nonzero_ssu_columns": 529,
+  "retained_columns": 400,
+  "retained_taxa": 150,
+  "analysis_count": 965,
+  "sample_count": 529,
+  "exact_raw_run_matches": 529,
+  "exact_retained_run_matches": 400,
+  "exact_retained_assembly_matches": 0,
+  "current_analysis_versions_per_retained_run": {
+    "2": 320,
+    "1": 80
+  },
+  "cross_version_sample_link_conflicts": 0,
+  "pipeline_5_0_selected_analysis_records": 400,
+  "selected_analysis_type_counts": {
+    "amplicon": 400
+  },
+  "linked_sample_relationships": 400,
+  "unique_linked_sample_ids": 400,
+  "linked_sample_descriptions": {
+    "Human gut microbiome differentiation viewed across cultures, ages and families": 400
+  },
+  "linked_explicit_collection_site_values": {},
+  "linked_explicit_host_names": {
+    "Homo sapiens": 400
+  },
+  "linked_normalized_species": {
+    "Homo sapiens": 400
+  },
+  "scope": "exact 5.0 run-column matching on viewed study; descriptions and host are current metadata; independent people/families, historical method and rights unverified"
+}
