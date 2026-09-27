@@ -19,6 +19,8 @@ def stage(outdir, *, max_chars=3300):
     if not isinstance(max_chars,int) or not 1000 <= max_chars <= 4000:
         raise ValueError('max_chars must be an integer in 1000..4000')
     manifest=json.loads((PREP/'manifest.json').read_text())
+    if manifest.get('status','').startswith('retired_'):
+        raise ValueError('retired manuscript staging: regenerate from current authorless edition')
     pdf=ROOT/manifest['paper_path']
     raw=pdf.read_bytes()
     if hashlib.sha256(raw).hexdigest()!=manifest['paper_sha256']:
