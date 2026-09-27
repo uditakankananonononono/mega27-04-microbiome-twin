@@ -7,7 +7,8 @@ def test_unverified_rows_do_not_count_toward_millions():
                     {'accession':'B','source_family':'family-b','independent_samples':100,'independence_verified':True,
                      'license_verified':True,'input_qc_passed':True,'source_hash_verified':True}])
     assert r['verified_datasets']==1 and r['verified_independent_samples']==100
-    assert not r['foundation_scale_target_met']
+    assert not r['caller_asserted_foundation_scale_threshold_met']
+    assert not r['foundation_scale_certified']
 
 
 def test_duplicate_verified_accession_rejected():
@@ -49,4 +50,17 @@ def test_alias_accessions_cannot_double_count_one_family():
         scale_status([{**row,'source_family':''}])
     r=scale_status([row])
     assert r['verified_datasets']==r['verified_biological_families']==1
-    assert not r['foundation_scale_target_met']
+    assert not r['caller_asserted_foundation_scale_threshold_met']
+    assert not r['foundation_scale_certified']
+
+
+
+def test_synthetic_threshold_crossing_does_not_certify_scale():
+    row={'independence_verified':True,'license_verified':True,'input_qc_passed':True,
+         'source_hash_verified':True,'independent_samples':1000}
+    records=[dict(row,accession=f'X{i:04d}',source_family=f'F{i:04d}') for i in range(1000)]
+    r=scale_status(records)
+    assert r['caller_asserted_foundation_scale_threshold_met']
+    assert r['caller_asserted_leaderboard_scale_threshold_met']
+    assert r['foundation_scale_certified'] is False
+    assert r['leaderboard_scale_certified'] is False

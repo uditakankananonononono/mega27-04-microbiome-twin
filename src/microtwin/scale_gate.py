@@ -35,6 +35,7 @@ def scale_status(records, *, target_min=500, target_max=1000, foundation_min=100
         samples.append(n)
     return {'manifest_rows':len(rows),'verified_datasets':len(verified),'verified_biological_families':len(families),
             'verified_independent_samples':sum(samples),
-            'leaderboard_scale_500_1000':target_min<=len(verified)<=target_max,
-            'foundation_scale_target_met':len(verified)>=foundation_min and sum(samples)>=foundation_samples,
-            'note':'Caller-supplied source-family labels and flags do not independently prove lineage or rights. Scale gate alone says nothing about model fit, multimodal pairs, quality or benchmark success.'}
+            'caller_asserted_leaderboard_scale_threshold_met':target_min<=len(verified)<=target_max,
+            'caller_asserted_foundation_scale_threshold_met':len(verified)>=foundation_min and sum(samples)>=foundation_samples,
+            'leaderboard_scale_certified':False,'foundation_scale_certified':False,
+            'note':'Caller-supplied source-family labels and flags do not independently prove lineage or rights. Even threshold arithmetic on these assertions is never a certified scale milestone; separate source-of-truth evidence review is required. Scale gate alone says nothing about model fit, multimodal pairs, quality or benchmark success.'}
