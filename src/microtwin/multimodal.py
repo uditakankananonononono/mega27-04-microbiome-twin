@@ -1,9 +1,6 @@
 """Check paired-sample alignment for multimodal microbiome comparisons."""
 from __future__ import annotations
 
-import hashlib
-import json
-
 
 def assess_modalities(modality_samples, *, min_paired=20):
     """Report the intersection; unrelated cohorts cannot be joined by row order."""
@@ -59,9 +56,8 @@ def assess_strict_alignment(modality_records, *, min_paired=20):
     common=set.intersection(*(set(rows) for rows in by_modality.values()))
     mismatched=[sid for sid in common if len({rows[sid] for rows in by_modality.values()})!=1]
     if mismatched:raise ValueError('cross-modality provenance conflict')
-    digest=hashlib.sha256(json.dumps(sorted(common),separators=(',',':')).encode()).hexdigest()
     return {'status':'metadata_aligned_candidate' if len(common)>=min_paired else 'insufficient_paired_samples',
             'modalities':len(by_modality),'modality_counts':{name:len(rows) for name,rows in by_modality.items()},
-            'aligned_common_samples':len(common),'common_id_set_sha256':digest,
+            'aligned_common_samples':len(common),
             'physical_aliquot_verified':False,'biological_independence_verified':False,
             'note':'Exact submitted source/subject/time/aliquot labels agree, but labels alone cannot verify specimens, people, rights, assays or source-family independence.'}

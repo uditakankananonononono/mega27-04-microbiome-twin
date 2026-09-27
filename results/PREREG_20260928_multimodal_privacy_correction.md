@@ -1,0 +1,3 @@
+# Multimodal diagnostic privacy correction, 2026-09-28 03:20 IST
+
+The new strict-alignment function emits a plain SHA-256 of sorted common sample IDs and its protocol mistakenly calls it a keyed hash. A plain digest of predictable IDs can reveal membership by dictionary guessing and is not keyed. The aggregate count already serves the diagnostic; remove the fingerprint entirely rather than imply privacy protection. Keep exact per-modality source/subject/time/aliquot comparison inside the call and output only aggregate counts/status/caveats. Correct the earlier protocol's keyed-hash wording and add a regression test that none of the input IDs or digest fields appear in the result. No real patient data, benchmark or manuscript result changes.

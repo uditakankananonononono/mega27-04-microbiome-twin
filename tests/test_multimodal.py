@@ -37,6 +37,7 @@ def test_strict_alignment_needs_two_modalities_and_agreeing_provenance():
     assert r['status']=='metadata_aligned_candidate' and r['aligned_common_samples']==1
     assert not r['physical_aliquot_verified'] and not r['biological_independence_verified']
     assert 's1' not in str(r)
+    assert 'sha256' not in str(r) and 'hash' not in str(r)
     with pytest.raises(ValueError,match='two known'):
         assess_strict_alignment({'16S':[row('s1')]},min_paired=1)
     for key in ('source_family','subject_id','collection_time','aliquot_group'):
