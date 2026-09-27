@@ -1,0 +1,58 @@
+{
+  "study": "MGYS00002238",
+  "source": {
+    "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00002238/pipelines/5.0/file/SRP097646_taxonomy_abundances_SSU_v5.0.tsv",
+    "sha256": "1e806bb39426b4e4141aa74044e299f3bbcee3f9aca6b3d348c967286a889dbb",
+    "bytes": 228553
+  },
+  "api_pages": {
+    "analyses": {
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00002238/analyses?page_size=1000",
+      "sha256": "71912e4bc68d92a146b6719e73db86bf58d34f2a9e554845479e1472fc848fff",
+      "bytes": 601601,
+      "items": 222,
+      "declared_total": 222
+    },
+    "samples": {
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00002238/samples?page_size=1000",
+      "sha256": "3a8ce5c4c3c2ee1b3cf37f879b584a2d0aabda937ceee3feba99715272829120",
+      "bytes": 171872,
+      "items": 111,
+      "declared_total": 111
+    }
+  },
+  "raw_ssu_columns": 111,
+  "nonzero_ssu_columns": 111,
+  "retained_columns": 111,
+  "retained_taxa": 111,
+  "analysis_count": 222,
+  "sample_count": 111,
+  "exact_raw_run_matches": 111,
+  "exact_retained_run_matches": 111,
+  "retained_selected_pipeline_5_0_analysis_records": 111,
+  "analysis_versions_per_retained_run": {
+    "2": 111
+  },
+  "inconsistent_sample_links_across_pipeline_versions": 0,
+  "matched_analysis_type_counts": {
+    "amplicon": 111
+  },
+  "run_ids_with_multiple_current_analyses": 111,
+  "exact_retained_assembly_matches": 0,
+  "linked_sample_relationships": 111,
+  "unique_linked_sample_ids": 111,
+  "missing_sample_links": 0,
+  "linked_sample_descriptions": {
+    "saliva from healthy controls": 27,
+    "dental plaque from healthy controls": 26,
+    "saliva from ASD patients": 32,
+    "dental plaque from ASD patients": 26
+  },
+  "linked_explicit_host_names": {
+    "Homo sapiens": 111
+  },
+  "linked_normalized_species": {
+    "Homo sapiens": 111
+  },
+  "scope": "exact old run-column to matching pipeline-5.0 analysis and sample ID mapping; pipeline-4.1 analyses are second versions of same 111 runs, not extra samples; saliva/plaque sample descriptions; no participant independence, historical wet-lab certification, rights or fresh outcome test"
+}
