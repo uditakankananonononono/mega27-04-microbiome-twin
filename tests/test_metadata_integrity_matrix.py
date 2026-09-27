@@ -11,7 +11,8 @@ def test_known_metadata_conflict_and_unknowns_fail_closed():
     assert x['MGYS00006795']['explicit_human_host_compatible']=='unknown'
     assert x['MGYS00000633']['analysis_pagination_complete']=='unknown'
     assert x['MGYS00006755']['old_column_to_analysis_mapped'] is True
-    assert all(r['old_column_to_analysis_mapped']=='unknown' for r in d['rows'] if r['study']!='MGYS00006755')
+    assert x['MGYS00002238']['old_column_to_analysis_mapped'] is True
+    assert all(r['old_column_to_analysis_mapped']=='unknown' for r in d['rows'] if r['study'] not in ('MGYS00006755','MGYS00002238'))
     assert all(r['independent_biological_family']=='unknown' for r in d['rows'])
 
 def test_missing_host_name_cannot_become_compatible(tmp_path):

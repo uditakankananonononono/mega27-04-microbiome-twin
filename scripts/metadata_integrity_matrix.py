@@ -42,8 +42,18 @@ def run(partial=None):
         row=next(r for r in out if r['study']==c['study'])
         if row['explicit_human_host_compatible'] is not False:raise ValueError('host conflict was lost')
         row['old_column_to_analysis_mapped']=True
+    oral=ROOT/'results/oral_column_identity.json'
+    if partial is None and oral.exists():
+        c=json.loads(oral.read_text())
+        if not (c['retained_columns']==c['exact_retained_run_matches']
+                ==c['retained_selected_pipeline_5_0_analysis_records']
+                ==c['linked_sample_relationships']==c['unique_linked_sample_ids']==111):
+            raise ValueError('oral run crosswalk incomplete')
+        row=next(r for r in out if r['study']==c['study'])
+        if row['explicit_human_host_compatible'] is not True:raise ValueError('oral host compatibility changed')
+        row['old_column_to_analysis_mapped']=True
     return {'rows':sorted(out,key=lambda x:x['study']),'n_studies':len(out),
-            'scope':'metadata-only partial screen plus exact current run-column mapping for MGYS00006755; no final source eligibility or independent validation',
+            'scope':'metadata-only partial screen plus exact current run-column mapping for MGYS00006755 and MGYS00002238; no final source eligibility or independent validation',
             'unknown_is_not_pass':True}
 if __name__=='__main__':
     d=run();(ROOT/'results/metadata_integrity_matrix.json').write_text(json.dumps(d,indent=2)+'\n')
