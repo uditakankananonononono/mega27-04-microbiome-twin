@@ -1,0 +1,76 @@
+{
+  "study": "MGYS00006794",
+  "source": {
+    "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006794/pipelines/5.0/file/ERP128598_taxonomy_abundances_SSU_v5.0.tsv",
+    "sha256": "662efb08639eb82e173eeb5c16882009b0027fdacb9205f1a53a6f0ecb3b1fd8",
+    "bytes": 492018
+  },
+  "api_pages": {
+    "analyses": {
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006794/analyses?page_size=1000",
+      "sha256": "2fcaa21132833ba16c1be1b86215e08a2c83f0ebb68b06ac981891b537384721",
+      "bytes": 480315,
+      "items": 184,
+      "declared_total": 184
+    },
+    "samples": {
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006794/samples?page_size=1000",
+      "sha256": "dbf8d4109833797181164595e249091c6e5437f05f660a15cff2fb90035c7ff0",
+      "bytes": 342920,
+      "items": 184,
+      "declared_total": 184
+    }
+  },
+  "ontology": {
+    "material": {
+      "url": "https://www.ebi.ac.uk/ols4/api/ontologies/uberon/terms?obo_id=UBERON:0002097",
+      "sha256": "030de9e5c99eb269e5c96de69daf3c3cbe2987f978537e19582764bcb7bba30d",
+      "bytes": 7398,
+      "obo_id": "UBERON:0002097",
+      "label": "skin of body"
+    },
+    "feature": {
+      "url": "https://www.ebi.ac.uk/ols4/api/ontologies/envo/terms?obo_id=ENVO:2100003",
+      "sha256": "00b4b2420bad9b6e1cb95e8ea093e01659faf4532d189c844d85a7caa30f4cd0",
+      "bytes": 3625,
+      "obo_id": "ENVO:2100003",
+      "label": "skin environment"
+    }
+  },
+  "raw_ssu_columns": 184,
+  "nonzero_ssu_columns": 184,
+  "retained_columns": 184,
+  "retained_taxa": 150,
+  "analysis_count": 184,
+  "sample_count": 184,
+  "exact_retained_run_matches": 184,
+  "selected_pipeline_5_0_analyses": 184,
+  "retained_run_analysis_version_multiplicity": {
+    "1": 184
+  },
+  "exact_retained_assembly_matches": 0,
+  "linked_sample_relationships": 184,
+  "unique_linked_sample_ids": 184,
+  "linked_environment_material": {
+    "UBERON:0002097": 184
+  },
+  "linked_environment_feature": {
+    "ENVO:2100003": 184
+  },
+  "linked_sample_description_counts": {
+    "Healthy controls (no MS)": 86,
+    "MS-O twelve months after treatment": 11,
+    "MS-O six months after treatment": 16,
+    "MS-O baseline": 18,
+    "MS-O two weeks after treatment": 16,
+    "MS-nO two weeks after treatment": 14,
+    "MS-nO six months after treatment": 9,
+    "MS-nO baseline": 12,
+    "MS-nO twelve months after treatment": 2
+  },
+  "linked_explicit_host_names": {},
+  "linked_normalized_species": {
+    "Homo sapiens": 184
+  },
+  "scope": "exact viewed SSU columns link to current sample records with structured skin material/feature codes despite mixed stool/oral study text and digestive archive label; specimen truth and subject independence not independently verified; old BH unchanged"
+}
