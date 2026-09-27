@@ -10,7 +10,9 @@ def test_known_metadata_conflict_and_unknowns_fail_closed():
     assert x['MGYS00006006']['uniform_analysis_experiment_type']=='assembly'
     assert x['MGYS00006795']['explicit_human_host_compatible']=='unknown'
     assert x['MGYS00000633']['analysis_pagination_complete']=='unknown'
-    assert all(r['old_column_to_analysis_mapped']=='unknown' and r['independent_biological_family']=='unknown' for r in d['rows'])
+    assert x['MGYS00006755']['old_column_to_analysis_mapped'] is True
+    assert all(r['old_column_to_analysis_mapped']=='unknown' for r in d['rows'] if r['study']!='MGYS00006755')
+    assert all(r['independent_biological_family']=='unknown' for r in d['rows'])
 
 def test_missing_host_name_cannot_become_compatible(tmp_path):
     d=json.loads(Path('results/gut_analysis_metadata_crosswalk_partial.json').read_text())

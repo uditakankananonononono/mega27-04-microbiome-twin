@@ -1,0 +1,69 @@
+{
+  "study": "MGYS00006755",
+  "source": {
+    "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006755/pipelines/5.0/file/SRP097190_taxonomy_abundances_SSU_v5.0.tsv",
+    "sha256": "fb11c7ac0ca19ee78f3378a531aed65a9da2fe468969b3244b8f93cd692b6240",
+    "bytes": 203634
+  },
+  "api_pages": {
+    "analyses": {
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006755/analyses?page_size=1000",
+      "sha256": "d87bdaaec88b88840e891d389570af012025b419554e27aba9c335d3944a47ba",
+      "bytes": 216886,
+      "count": 83,
+      "declared_total": 83
+    },
+    "samples": {
+      "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006755/samples?page_size=1000",
+      "sha256": "07cdcec5504daa699dae6afcbaeb2f65fe5204b339e79769d09d6391b3e2bd96",
+      "bytes": 137037,
+      "count": 83,
+      "declared_total": 83
+    }
+  },
+  "raw_columns": 83,
+  "nonzero_columns": 83,
+  "retained_columns": 83,
+  "retained_taxa": 150,
+  "analysis_count": 83,
+  "sample_count": 83,
+  "exact_run_matches_raw": 83,
+  "exact_run_matches_retained": 83,
+  "exact_assembly_matches_retained": 0,
+  "exact_sample_id_matches_retained": 0,
+  "matched_retained_analysis_types": {
+    "amplicon": 83
+  },
+  "linked_retained_samples": 83,
+  "unique_linked_retained_samples": 83,
+  "unlinked_retained_matches": 0,
+  "linked_retained_explicit_host_name_counts": {
+    "cow": 14,
+    "Equus caballus": 22,
+    "Sus scrofa": 4,
+    "Taxidea taxus": 2,
+    "red panda": 2,
+    "elephant": 2,
+    "guinea pig": 2,
+    "Rhinoceros": 4,
+    "Gorilla": 4,
+    "Ovis aries": 2,
+    "two-toed sloth": 2,
+    "aldabra tortoise": 2,
+    "ostrich": 2,
+    "orangutan": 3,
+    "colobus monkey": 4,
+    "Lemur catta": 2,
+    "malayan tapir": 3,
+    "Callithrix geoffroyi": 1,
+    "Tapirus bairdii": 1,
+    "Canis lupus familiaris": 1,
+    "indian crested porcupine": 2,
+    "Hydrochoerus hydrochaeris": 2
+  },
+  "linked_retained_normalized_species_counts": {
+    "Homo sapiens": 83
+  },
+  "linked_retained_explicit_nonhuman_vs_normalized_human_conflicts": 83,
+  "scope": "exact current run-to-analysis-to-sample ID mapping; metadata conflict not adjudicated; original BH unchanged; viewed source only"
+}

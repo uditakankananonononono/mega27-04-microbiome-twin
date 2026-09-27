@@ -32,8 +32,18 @@ def run(partial=None):
                 'uniform_analysis_experiment_type':UNKNOWN,'sample_pagination_complete':UNKNOWN,
                 'explicit_human_host_compatible':UNKNOWN,'old_column_to_analysis_mapped':UNKNOWN,
                 'independent_biological_family':UNKNOWN,'missing_host_name_samples':UNKNOWN})
+    # Narrow later finding: exact old SSU run-ID columns map to current analyses
+    # and onward to samples for one already-viewed source. This does not resolve host.
+    crosswalk=ROOT/'results/conflicted_host_column_identity.json'
+    if partial is None and crosswalk.exists():
+        c=json.loads(crosswalk.read_text())
+        if not (c['retained_columns']==c['exact_run_matches_retained']==c['linked_retained_samples']
+                ==c['unique_linked_retained_samples']==83):raise ValueError('exact run crosswalk incomplete')
+        row=next(r for r in out if r['study']==c['study'])
+        if row['explicit_human_host_compatible'] is not False:raise ValueError('host conflict was lost')
+        row['old_column_to_analysis_mapped']=True
     return {'rows':sorted(out,key=lambda x:x['study']),'n_studies':len(out),
-            'scope':'metadata-only partial screen; no final source eligibility or assay-certified result',
+            'scope':'metadata-only partial screen plus exact current run-column mapping for MGYS00006755; no final source eligibility or independent validation',
             'unknown_is_not_pass':True}
 if __name__=='__main__':
     d=run();(ROOT/'results/metadata_integrity_matrix.json').write_text(json.dumps(d,indent=2)+'\n')
