@@ -34,3 +34,16 @@ def test_label_leakage_and_duplicate_are_rejected():
     with pytest.raises(ValueError,match='multiple studies'):screen_paired_design(bad)
     bad=rows();bad[0]['phase']=''
     with pytest.raises(ValueError,match='labels'):screen_paired_design(bad)
+
+
+def test_nonfinite_or_boolean_design_arguments_and_ids_fail_closed():
+    for key in ('study', 'phase', 'subject', 'sample'):
+        bad = rows()
+        bad[0][key] = float('nan')
+        with pytest.raises(ValueError, match='labels'):
+            screen_paired_design(bad)
+    for val in (True, float('nan'), '0'):
+        with pytest.raises(ValueError, match='windows'):
+            screen_paired_design(rows(), baseline_end=val)
+    with pytest.raises(ValueError, match='minimum subjects'):
+        screen_paired_design(rows(), minimum_subjects_per_arm=True)

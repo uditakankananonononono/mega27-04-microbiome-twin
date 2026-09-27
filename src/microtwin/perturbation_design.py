@@ -17,9 +17,10 @@ def screen_paired_design(records, *, baseline_end=0, followup_start=1,
     part of the subject key to avoid treating phases as independent datasets.
     Control and intervention arms must each have paired subjects in a phase.
     """
-    if not math.isfinite(baseline_end) or not math.isfinite(followup_start) or baseline_end >= followup_start:
+    if (any(isinstance(t, bool) or not isinstance(t, (int, float)) or not math.isfinite(t)
+            for t in (baseline_end, followup_start)) or baseline_end >= followup_start):
         raise ValueError('separated finite baseline/follow-up windows required')
-    if not isinstance(minimum_subjects_per_arm,int) or minimum_subjects_per_arm < 2:
+    if not isinstance(minimum_subjects_per_arm,int) or isinstance(minimum_subjects_per_arm,bool) or minimum_subjects_per_arm < 2:
         raise ValueError('minimum subjects per arm must be at least two')
     rows = list(records)
     if not rows:
@@ -31,8 +32,10 @@ def screen_paired_design(records, *, baseline_end=0, followup_start=1,
     for i,row in enumerate(rows):
         if not isinstance(row,dict) or any(k not in row for k in required):
             raise ValueError(f'row {i}: missing design field')
-        labels=[str(row[k]).strip() if row[k] is not None else '' for k in required[:-1]]
-        if any(not v for v in labels) or labels[4] not in ('intervention','control'):
+        labels=[str(row[k]).strip() if row[k] is not None and
+                not (isinstance(row[k], float) and not math.isfinite(row[k])) else ''
+                for k in required[:-1]]
+        if any(not v or v.lower() in ('nan', 'none', 'null') for v in labels) or labels[4] not in ('intervention','control'):
             raise ValueError(f'row {i}: invalid or missing labels')
         t=row['time']
         if isinstance(t,bool) or not isinstance(t,(int,float)) or not math.isfinite(t):
