@@ -1,16 +1,16 @@
 {
   "method": "normal-style prose from Introduction through before Appendix A; excludes headings/captions/equations/tables/figures/abstract/references",
-  "prose_paragraphs": 110,
-  "prose_characters": 49100,
-  "prose_words": 7148,
+  "prose_paragraphs": 112,
+  "prose_characters": 51351,
+  "prose_words": 7480,
   "omitted_paragraphs": {
-    "heading": 40,
+    "heading": 41,
     "non_normal": 0,
-    "caption_or_equation": 58
+    "caption_or_equation": 59
   },
-  "estimated_body_text_pages_at_2500_chars": 19.64,
-  "estimated_body_text_pages_at_3000_chars": 16.37,
-  "total_pdf_pages": 79,
+  "estimated_body_text_pages_at_2500_chars": 20.54,
+  "estimated_body_text_pages_at_3000_chars": 17.12,
+  "total_pdf_pages": 81,
   "certified_50_body_pages": false,
   "caveat": "Character-density estimates are not visual page counts. No 50-page certification follows from total PDF pages."
 }
