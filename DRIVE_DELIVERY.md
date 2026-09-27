@@ -1,4 +1,4 @@
-**2026-09-27 window diagnostic staged locally:** The paper now has a source-window analysis, 75 PDF pages. Drive still serves the prior 72-page edition until replacement and re-download are verified.
+**2026-09-27 intervention-window revision verified:** The archival PDF is 75 pages, adds a predeclared viewed-cohort MDSINE2 window diagnostic and repeats table headers on split tables. Existing Drive IDs were replaced and downloaded byte-identical: PDF SHA-256 `6e6557684c8873afa9154d65cfc20f4f5a592dafa30e4c62f8736b60fe9d4693`; DOCX SHA-256 `28c145713a214b02f2f2360a4f2966ae36068266572cd5e34a5e04d3cedce6b8`. Old checksums below are historical.
 
 **2026-09-27 substantive page revision verified:** The paper adds source-family identity sensitivity and mouse-unit inference, 72 PDF pages. Existing Drive IDs were replaced and downloaded byte-identical. PDF SHA-256 `7d231dc18b0c748d81f76a566800d3498470e5613d2194e9e8183d3f0cf36e8d`; DOCX SHA-256 `502fbe6938f4a49c63d8fa51d5b443190aa2a9add3f89c4ef37086f7a2f6bcf8`. Historical checksums below belong to previous versions.
 
