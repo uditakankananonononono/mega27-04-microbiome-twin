@@ -1,0 +1,63 @@
+{
+  "rows": [
+    {
+      "study": "MGYS00006755",
+      "analysis_count": 83,
+      "sample_count": 83,
+      "experiment_type_analysis_counts": {
+        "amplicon": 83
+      },
+      "normalized_sample_species_counts": {
+        "Homo sapiens": 83
+      },
+      "normalized_sample_host_tax_id_counts": {
+        "9606": 83
+      },
+      "sample_metadata_host_scientific_name_counts": {
+        "Callithrix geoffroyi": 1,
+        "Canis lupus familiaris": 1,
+        "Equus caballus": 22,
+        "Gorilla": 4,
+        "Hydrochoerus hydrochaeris": 2,
+        "Lemur catta": 2,
+        "Ovis aries": 2,
+        "Rhinoceros": 4,
+        "Sus scrofa": 4,
+        "Tapirus bairdii": 1,
+        "Taxidea taxus": 2,
+        "aldabra tortoise": 2,
+        "colobus monkey": 4,
+        "cow": 14,
+        "elephant": 2,
+        "guinea pig": 2,
+        "indian crested porcupine": 2,
+        "malayan tapir": 3,
+        "orangutan": 3,
+        "ostrich": 2,
+        "red panda": 2,
+        "two-toed sloth": 2
+      },
+      "human_normalized_vs_nonhuman_host_name_conflict_samples": 83,
+      "analysis_pages": [
+        {
+          "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006755/analyses?page_size=1000",
+          "http_status": 200,
+          "items": 83,
+          "response_sha256": "ae177d26c3596c380f6b4efd8ff4ab00329a160407e60d63d2765ff5866d7cf5",
+          "declared_total": 83
+        }
+      ],
+      "sample_pages": [
+        {
+          "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006755/samples?page_size=1000",
+          "http_status": 200,
+          "items": 83,
+          "response_sha256": "1ea3fe31383322d4453dba1c0aea933bcb4373004c2ac94451b54d24b2e9d015",
+          "declared_total": 83
+        }
+      ]
+    }
+  ],
+  "scope": "public MGnify aggregate metadata for eight viewed audit records, no per-sample IDs or outcomes",
+  "limits": "MGnify analysis types not yet mapped to exact original audit table columns; species and host-name conflicts unresolved. No independent validation."
+}

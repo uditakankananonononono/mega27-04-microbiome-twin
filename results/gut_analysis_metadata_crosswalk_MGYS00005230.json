@@ -1,0 +1,106 @@
+{
+  "rows": [
+    {
+      "study": "MGYS00005230",
+      "analysis_count": 1644,
+      "sample_count": 915,
+      "experiment_type_analysis_counts": {
+        "amplicon": 1644
+      },
+      "normalized_sample_species_counts": {
+        "Homo sapiens": 915
+      },
+      "normalized_sample_host_tax_id_counts": {
+        "9606": 915
+      },
+      "sample_metadata_host_scientific_name_counts": {
+        "Homo sapiens": 862
+      },
+      "human_normalized_vs_nonhuman_host_name_conflict_samples": 0,
+      "samples_without_usable_host_name": 53,
+      "analysis_pages": [
+        {
+          "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005230/analyses?page_size=1000",
+          "http_status": 200,
+          "items": 250,
+          "response_sha256": "800e709dbb147d71b479462c05bc162b61547c9669e60ff28708311cd2996a90",
+          "declared_total": 1644
+        },
+        {
+          "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005230/analyses?page=2&page_size=1000",
+          "http_status": 200,
+          "items": 250,
+          "response_sha256": "5e0aa9867cafdacda8221f803d2b29b8fa45af0c7a821f2d81d103e81f41bbe6",
+          "declared_total": 1644
+        },
+        {
+          "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005230/analyses?page=3&page_size=1000",
+          "http_status": 200,
+          "items": 250,
+          "response_sha256": "2a2514ee21dba7da0c2b0e12709425e058630a722daaf7a94e00c0b54450f256",
+          "declared_total": 1644
+        },
+        {
+          "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005230/analyses?page=4&page_size=1000",
+          "http_status": 200,
+          "items": 250,
+          "response_sha256": "0dd23d9570d3bb55a3caf8b3408ee43ae1e477a965d3d33516b46587f0f56548",
+          "declared_total": 1644
+        },
+        {
+          "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005230/analyses?page=5&page_size=1000",
+          "http_status": 200,
+          "items": 250,
+          "response_sha256": "ed91c479ef8fbc935170d82b19e6d8f64a82d6fe0390fd92efbe0aaacc4ce9e5",
+          "declared_total": 1644
+        },
+        {
+          "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005230/analyses?page=6&page_size=1000",
+          "http_status": 200,
+          "items": 250,
+          "response_sha256": "d810ae29ed6916b4ac7c9d55680412fe3415bc7d4fcf9b6878c2ffc63edc1a8a",
+          "declared_total": 1644
+        },
+        {
+          "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005230/analyses?page=7&page_size=1000",
+          "http_status": 200,
+          "items": 144,
+          "response_sha256": "722dfe733fa692adfa04836241e7dee9a32d0a18c6180af3c7e30dd5e8acb230",
+          "declared_total": 1644
+        }
+      ],
+      "sample_pages": [
+        {
+          "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005230/samples?page_size=1000",
+          "http_status": 200,
+          "items": 250,
+          "response_sha256": "e62d6f8b05360cf75c9a59852a0b3d1fb42aeb12922f8eee5e4febaf875a83b5",
+          "declared_total": 915
+        },
+        {
+          "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005230/samples?page=2&page_size=1000",
+          "http_status": 200,
+          "items": 250,
+          "response_sha256": "5776ae4bd8db9341cdf511be876f6dc9b572d1fb0ff7d8afe21a11a9304a146a",
+          "declared_total": 915
+        },
+        {
+          "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005230/samples?page=3&page_size=1000",
+          "http_status": 200,
+          "items": 250,
+          "response_sha256": "29d3c2be084132bbe0154e989bbc81555b740c2916a78683d152747b66553691",
+          "declared_total": 915
+        },
+        {
+          "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00005230/samples?page=4&page_size=1000",
+          "http_status": 200,
+          "items": 165,
+          "response_sha256": "0ad92eab41652bfa3ed636335eeb60b6d766738dd1484e7600bab3aca4ecf80d",
+          "declared_total": 915
+        }
+      ]
+    }
+  ],
+  "scope": "public MGnify aggregate metadata for eight viewed audit records, no per-sample IDs or outcomes",
+  "limits": "MGnify analysis types not yet mapped to exact original audit table columns; species and host-name conflicts unresolved. No independent validation."
+}

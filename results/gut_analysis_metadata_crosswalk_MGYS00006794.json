@@ -1,0 +1,40 @@
+{
+  "rows": [
+    {
+      "study": "MGYS00006794",
+      "analysis_count": 184,
+      "sample_count": 184,
+      "experiment_type_analysis_counts": {
+        "amplicon": 184
+      },
+      "normalized_sample_species_counts": {
+        "Homo sapiens": 184
+      },
+      "normalized_sample_host_tax_id_counts": {
+        "9606": 184
+      },
+      "sample_metadata_host_scientific_name_counts": {},
+      "human_normalized_vs_nonhuman_host_name_conflict_samples": 0,
+      "analysis_pages": [
+        {
+          "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006794/analyses?page_size=1000",
+          "http_status": 200,
+          "items": 184,
+          "response_sha256": "2fcaa21132833ba16c1be1b86215e08a2c83f0ebb68b06ac981891b537384721",
+          "declared_total": 184
+        }
+      ],
+      "sample_pages": [
+        {
+          "url": "https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006794/samples?page_size=1000",
+          "http_status": 200,
+          "items": 184,
+          "response_sha256": "dbf8d4109833797181164595e249091c6e5437f05f660a15cff2fb90035c7ff0",
+          "declared_total": 184
+        }
+      ]
+    }
+  ],
+  "scope": "public MGnify aggregate metadata for eight viewed audit records, no per-sample IDs or outcomes",
+  "limits": "MGnify analysis types not yet mapped to exact original audit table columns; species and host-name conflicts unresolved. No independent validation."
+}
