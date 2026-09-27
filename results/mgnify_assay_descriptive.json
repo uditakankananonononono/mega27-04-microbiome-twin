@@ -1,0 +1,134 @@
+{
+  "basis": "160 previously viewed MGnify study tables; study-name assembly indication only; original 160-table BH q-values",
+  "all": {
+    "tables": 160,
+    "original_160_BH_interaction_wins": 121,
+    "original_160_BH_prior_wins": 6,
+    "neither": 33,
+    "median_relative_gain": 0.14523948013720642,
+    "undefined_relative_gain_tables": 1,
+    "median_absolute_gain": 0.052030915806039496
+  },
+  "strata": {
+    "unflagged_unknown_assay": {
+      "tables": 127,
+      "original_160_BH_interaction_wins": 108,
+      "original_160_BH_prior_wins": 3,
+      "neither": 16,
+      "median_relative_gain": 0.20050626099665791,
+      "undefined_relative_gain_tables": 1,
+      "median_absolute_gain": 0.0754375836729927
+    },
+    "assembly_indicated": {
+      "tables": 33,
+      "original_160_BH_interaction_wins": 13,
+      "original_160_BH_prior_wins": 3,
+      "neither": 17,
+      "median_relative_gain": 0.015130124395567124,
+      "undefined_relative_gain_tables": 0,
+      "median_absolute_gain": 0.0024025593591552
+    }
+  },
+  "by_biome": [
+    {
+      "biome": "Birds",
+      "assay_label": "unflagged_unknown_assay",
+      "tables": 20,
+      "original_160_BH_interaction_wins": 18,
+      "original_160_BH_prior_wins": 0,
+      "neither": 2,
+      "median_relative_gain": 0.34514951932267834,
+      "undefined_relative_gain_tables": 0,
+      "median_absolute_gain": 0.1067207343915417
+    },
+    {
+      "biome": "Digestive system",
+      "assay_label": "unflagged_unknown_assay",
+      "tables": 8,
+      "original_160_BH_interaction_wins": 8,
+      "original_160_BH_prior_wins": 0,
+      "neither": 0,
+      "median_relative_gain": 0.2101825369138492,
+      "undefined_relative_gain_tables": 0,
+      "median_absolute_gain": 0.09276940864145365
+    },
+    {
+      "biome": "Digestive system",
+      "assay_label": "assembly_indicated",
+      "tables": 33,
+      "original_160_BH_interaction_wins": 13,
+      "original_160_BH_prior_wins": 3,
+      "neither": 17,
+      "median_relative_gain": 0.015130124395567124,
+      "undefined_relative_gain_tables": 0,
+      "median_absolute_gain": 0.0024025593591552
+    },
+    {
+      "biome": "Fish",
+      "assay_label": "unflagged_unknown_assay",
+      "tables": 15,
+      "original_160_BH_interaction_wins": 12,
+      "original_160_BH_prior_wins": 1,
+      "neither": 2,
+      "median_relative_gain": 0.27223773024188,
+      "undefined_relative_gain_tables": 1,
+      "median_absolute_gain": 0.1133138606541648
+    },
+    {
+      "biome": "Insecta",
+      "assay_label": "unflagged_unknown_assay",
+      "tables": 7,
+      "original_160_BH_interaction_wins": 5,
+      "original_160_BH_prior_wins": 0,
+      "neither": 2,
+      "median_relative_gain": 0.14714882225105053,
+      "undefined_relative_gain_tables": 0,
+      "median_absolute_gain": 0.0523235745668637
+    },
+    {
+      "biome": "Mammals",
+      "assay_label": "unflagged_unknown_assay",
+      "tables": 20,
+      "original_160_BH_interaction_wins": 14,
+      "original_160_BH_prior_wins": 2,
+      "neither": 4,
+      "median_relative_gain": 0.17840970386886962,
+      "undefined_relative_gain_tables": 0,
+      "median_absolute_gain": 0.056245112675552
+    },
+    {
+      "biome": "Oral",
+      "assay_label": "unflagged_unknown_assay",
+      "tables": 20,
+      "original_160_BH_interaction_wins": 17,
+      "original_160_BH_prior_wins": 0,
+      "neither": 3,
+      "median_relative_gain": 0.13006700694543877,
+      "undefined_relative_gain_tables": 0,
+      "median_absolute_gain": 0.0399997768836932
+    },
+    {
+      "biome": "Plants",
+      "assay_label": "unflagged_unknown_assay",
+      "tables": 20,
+      "original_160_BH_interaction_wins": 18,
+      "original_160_BH_prior_wins": 0,
+      "neither": 2,
+      "median_relative_gain": 0.2533857857368639,
+      "undefined_relative_gain_tables": 0,
+      "median_absolute_gain": 0.0807421837584348
+    },
+    {
+      "biome": "Skin",
+      "assay_label": "unflagged_unknown_assay",
+      "tables": 17,
+      "original_160_BH_interaction_wins": 16,
+      "original_160_BH_prior_wins": 0,
+      "neither": 1,
+      "median_relative_gain": 0.20545650147622393,
+      "undefined_relative_gain_tables": 0,
+      "median_absolute_gain": 0.075421915529195
+    }
+  ],
+  "limits": "Unflagged is not certified amplicon; no new BH tests, inferential assay effect, independent source-family count or untouched external benchmark."
+}
