@@ -13,3 +13,13 @@ def test_retained_count_mass_not_just_name_overlap():
 def test_no_outcome_from_zero_mass():
     with pytest.raises(ValueError,match='zero-mass'):
         vocabulary_coverage(['x'],pd.DataFrame({'s':[0]},index=['x']))
+
+
+def test_duplicate_and_missing_taxon_names_cannot_inflate_overlap():
+    t = pd.DataFrame({'s1': [1, 1]}, index=['shared', 'other'])
+    for names in (['shared', 'shared'], ['shared', ''], ['shared', None]):
+        with pytest.raises(ValueError, match='train genus names'):
+            vocabulary_coverage(names, t)
+    t.index = ['shared', '']
+    with pytest.raises(ValueError, match='test genus'):
+        vocabulary_coverage(['shared'], t)

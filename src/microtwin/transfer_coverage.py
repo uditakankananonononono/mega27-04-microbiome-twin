@@ -11,11 +11,17 @@ def vocabulary_coverage(train_genus, test_counts):
     Reports whether a fixed vocabulary can be used, not whether it predicts.
     Study-level selection and taxonomy synonym mapping remain separate.
     """
-    names = set(train_genus)
-    if not names or not isinstance(test_counts, pd.DataFrame) or test_counts.empty:
+    training = list(train_genus)
+    if (not training or any(not isinstance(v, str) or not v.strip() for v in training)
+            or len(training) != len(set(training))):
+        raise ValueError("train genus names must be unique nonempty strings")
+    names = set(training)
+    if not isinstance(test_counts, pd.DataFrame) or test_counts.empty:
         raise ValueError("nonempty train vocabulary and test count matrix required")
-    if not test_counts.index.is_unique or not test_counts.columns.is_unique:
-        raise ValueError("test genus and sample IDs must be unique")
+    if (not test_counts.index.is_unique or not test_counts.columns.is_unique or
+            any(not isinstance(v, str) or not v.strip() for v in test_counts.index) or
+            any(not isinstance(v, str) or not v.strip() for v in test_counts.columns)):
+        raise ValueError("test genus and sample IDs must be unique nonempty strings")
     x = test_counts.to_numpy()
     if not np.issubdtype(x.dtype,np.number) or not np.isfinite(x).all() or (x<0).any():
         raise ValueError("finite nonnegative test counts required")
