@@ -26,7 +26,7 @@
       "uniform_analysis_experiment_type": "amplicon",
       "sample_pagination_complete": true,
       "explicit_human_host_compatible": true,
-      "old_column_to_analysis_mapped": "unknown",
+      "old_column_to_analysis_mapped": true,
       "independent_biological_family": "unknown",
       "missing_host_name_samples": 0
     },
@@ -82,6 +82,6 @@
     }
   ],
   "n_studies": 8,
-  "scope": "metadata-only partial screen plus exact current run-column mapping for MGYS00006755 and MGYS00002238; no final source eligibility or independent validation",
+  "scope": "metadata-only partial screen plus exact current run-column mapping for MGYS00006755, MGYS00002238 and MGYS00005154; no final source eligibility or independent validation",
   "unknown_is_not_pass": true
 }

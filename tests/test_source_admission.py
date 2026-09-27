@@ -33,6 +33,7 @@ def test_real_viewed_records_remain_unadmitted():
     assert {'explicit_human_host_compatible','independent_biological_family'} <= {v['field'] for v in x['MGYS00006755']['reasons']}
     assert 'old_column_to_analysis_mapped' not in {v['field'] for v in x['MGYS00006755']['reasons']}
     assert {v['field'] for v in x['MGYS00002238']['reasons']}=={'independent_biological_family'}
+    assert {v['field'] for v in x['MGYS00005154']['reasons']}=={'independent_biological_family'}
 
 def test_duplicate_identity_rejected():
     with pytest.raises(ValueError,match='duplicate'):assess_many([complete(),complete()])

@@ -70,11 +70,6 @@
       "decision": "blocked",
       "reasons": [
         {
-          "field": "old_column_to_analysis_mapped",
-          "observed": "unknown",
-          "required": true
-        },
-        {
           "field": "independent_biological_family",
           "observed": "unknown",
           "required": true
