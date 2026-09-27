@@ -300,18 +300,18 @@ P.p("Two attack surfaces remain open and we name them rather than claim around t
     "evidence about predictive content, not proof of causal interactions: cross-environment transfer, removal of "
     "co-occurrence information, and validation against independently measured perturbation outcomes are the decisive tests, "
     "and they need perturbation cohorts we do not have (future work). Second, the 160-study MGnify pool is heterogeneous in "
-    "platform, primers, preprocessing and design; our within-project controls are the per-biome breakdown and the "
+    "platform, primers, preprocessing and design; our descriptive checks include the per-biome breakdown and the "
     "exploratory name-based assembly indication, not a validated assay classification; source-lineage audit and independent modality verification are necessary before a study-level meta-analysis. These limitations are "
     "stated so a judge does not have to find them.")
 P.p("The discovery programme's main lesson is that digital-twin-derived ecological hypotheses require stronger "
     "validation than network inference provides. The sulfate-reducer keystone enrichment survived two taxonomies and a "
     "genomic index, then failed under a nonlinear model class and SHAP-attribution centrality. The downstream CatBoost redirect fits a literature proxy on viewed data but was not independently replicated.")
 P.p("On these host-associated benchmark cohorts, a population prior is competitive with the reported interaction models. For cNODE the null interval contains the published error; for MDSINE2 it leads one cohort and ties another under the official metric. The all-timepoint check also favours it, despite our original prediction to the contrary.")
-P.p("[v1 text, now tested and falsified - kept for the record] Falsifiable prediction. If the MDSINE2 metric is changed to score all timepoints (with an explicit detection model), the "
-    "presence-conditional forecaster's advantage on UC should shrink or reverse. The all-timepoint test in Section 5.2 falsified that prediction: the forecaster remains ahead on the released source data. We retain the prediction for auditability, not as an open item.")
+P.p("[v1 text, now tested and falsified - kept for the record] Falsifiable prediction. If the MDSINE2 metric is changed to score all timepoints, the "
+    "presence-conditional forecaster's advantage on UC should shrink or reverse. The all-timepoint test in Section 5.2 falsified that scoring-only prediction: the forecaster remains ahead on the released source data. This did not test a newly fitted explicit detection model. We retain the prediction for auditability, not as an open item.")
 P.p("Practical recommendation. Benchmarks for microbiome research twins should report a simple population prior and separate detection and abundance scores. Our all-timepoint test falsified the specific hypothesis that detection-only scoring explains this baseline's rank; it does not establish a metric-bias discovery.")
 P.p("Limitations. Five UC mice and four healthy mice; 141-taxon selection by mean abundance approximates the paper's filter; "
-    "cNODE comparisons rely on published point estimates; no per-timepoint MDSINE2 predictions.")
+    "cNODE published-point comparisons are not same-code reproductions; MDSINE2 Figure 3 per-timepoint forecasts are available and underlie the viewed window and two-part diagnostics, but do not supply a new independent source.")
 
 P.h("8. Tools used")
 TL = _pd.read_csv("results/tools_ledger.csv"); TL["gate"] = TL.counts_for_gate.astype(str).map({"True": "counts", "False": "infra (excluded)"})
