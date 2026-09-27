@@ -8,10 +8,12 @@ def validate_external_accessions(candidate_records, old_accessions):
     This does not detect study renames, republished samples or sequence overlap;
     no candidate passes final independence from this function alone.
     """
-    old={str(x).strip() for x in old_accessions if str(x).strip()}
+    old={str(x).strip().upper() for x in old_accessions if x is not None and str(x).strip()}
     out=[]
     for row in candidate_records:
-        accession=str(row.get('ebi_accession') or '').strip()
+        if not isinstance(row, dict):
+            raise ValueError('candidate accession record must be a mapping')
+        accession=str(row.get('ebi_accession') or '').strip().upper()
         sid=str(row.get('study_id') or '').strip()
         if not accession or not sid:
             status='unverifiable_missing_accession_or_study'

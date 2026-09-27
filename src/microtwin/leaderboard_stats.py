@@ -21,7 +21,7 @@ def compare_by_study(candidate, baseline, study_ids, *, n_boot=5000, seed=0):
     if any(x is None or not str(x).strip() or
            (isinstance(x, (float, np.floating)) and not np.isfinite(x)) for x in ids):
         raise ValueError("each row needs a nonempty finite study ID")
-    ids = list(map(str, ids))
+    ids = [str(x).strip() for x in ids]
     if not isinstance(n_boot, int) or isinstance(n_boot, bool) or n_boot < 0:
         raise ValueError("n_boot must be a nonnegative integer")
     unique = list(dict.fromkeys(ids))

@@ -19,7 +19,7 @@ def scale_status(records, *, target_min=500, target_max=1000, foundation_min=100
     verified=[r for r in rows if r.get('independence_verified') is True and
               r.get('license_verified') is True and r.get('input_qc_passed') is True and
               r.get('source_hash_verified') is True]
-    ids=[str(r.get('accession','')).strip() for r in verified]
+    ids=[str(r.get('accession','')).strip().upper() for r in verified]
     if any(not x for x in ids) or len(ids)!=len(set(ids)):
         raise ValueError("verified accessions must be nonempty and unique")
     samples=[]

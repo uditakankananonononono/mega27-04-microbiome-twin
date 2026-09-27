@@ -30,3 +30,10 @@ def test_boolean_samples_and_targets_cannot_count_as_measurements():
 def test_malformed_record_fails_closed():
     with pytest.raises(ValueError, match="mappings"):
         scale_status([None])
+
+
+def test_case_variant_verified_accessions_are_one_source():
+    row={'accession':'PRJEB11419','independent_samples':10,'independence_verified':True,
+         'license_verified':True,'input_qc_passed':True,'source_hash_verified':True}
+    with pytest.raises(ValueError, match='unique'):
+        scale_status([row, {**row,'accession':'prjeb11419'}])
