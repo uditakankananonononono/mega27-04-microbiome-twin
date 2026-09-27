@@ -10,3 +10,12 @@ def test_only_exact_pairing_counts():
 
 def test_duplicate_sample_ids_fail():
     with pytest.raises(ValueError):assess_modalities({'16S':['a','a']})
+
+
+def test_normalized_ids_do_not_create_false_pairing_or_duplicates():
+    r=assess_modalities({'16S':['  a  '], 'metabolomics':['a']}, min_paired=1)
+    assert r['paired_sample_ids']==['a']
+    with pytest.raises(ValueError, match='unique'):
+        assess_modalities({'16S':['a', ' a ']})
+    with pytest.raises(ValueError, match='positive integer'):
+        assess_modalities({'16S':['a']}, min_paired=True)

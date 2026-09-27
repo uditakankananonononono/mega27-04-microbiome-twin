@@ -7,14 +7,17 @@ def assess_modalities(modality_samples, *, min_paired=20):
     allowed = {"16S", "metagenomics", "metabolomics", "functional_pathways"}
     if not isinstance(modality_samples, dict) or set(modality_samples) - allowed:
         raise ValueError("unknown modality")
-    if not isinstance(min_paired, int) or min_paired < 1:
+    if not isinstance(min_paired, int) or isinstance(min_paired, bool) or min_paired < 1:
         raise ValueError("min_paired must be positive integer")
     sets = {}
     for modality, ids in modality_samples.items():
         sample_ids = list(ids)
-        if any(i is None or str(i).strip() == "" for i in sample_ids) or len(set(sample_ids)) != len(sample_ids):
+        if any(i is None or not str(i).strip() for i in sample_ids):
             raise ValueError("sample IDs must be nonblank and unique within each modality")
-        sets[modality] = set(sample_ids)
+        normalized = [str(i).strip() for i in sample_ids]
+        if len(set(normalized)) != len(normalized):
+            raise ValueError("sample IDs must be nonblank and unique within each modality")
+        sets[modality] = set(normalized)
     if not sets:
         return {"status": "unavailable_no_modalities", "paired_samples": 0,
                 "paired_sample_ids": [], "modality_counts": {}}

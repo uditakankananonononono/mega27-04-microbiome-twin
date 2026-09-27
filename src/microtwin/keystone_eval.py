@@ -15,9 +15,11 @@ def prospective_precision_at_k(scores, measured_effect, groups, *, k=5, effect_c
         raise ValueError("aligned nonempty arrays required")
     if not np.isfinite(s).all() or not np.isfinite(y).all() or not np.isfinite(effect_cutoff) or effect_cutoff<0:
         raise ValueError("finite scores/effects and nonnegative cutoff required")
-    if any(x is None or str(x).strip()=="" for x in g):
+    if any(x is None or not str(x).strip() or
+           (isinstance(x, (float, np.floating)) and not np.isfinite(x)) for x in g):
         raise ValueError("independent experiment group required")
-    if not isinstance(k,int) or k<1:raise ValueError("k must be positive integer")
+    g=[str(x).strip() for x in g]
+    if not isinstance(k,int) or isinstance(k,bool) or k<1:raise ValueError("k must be positive integer")
     out={}
     for group in dict.fromkeys(g):
         idx=np.flatnonzero(np.asarray(g,dtype=object)==group)
@@ -27,4 +29,4 @@ def prospective_precision_at_k(scores, measured_effect, groups, *, k=5, effect_c
     return {"status":"measured_perturbation_labels_required", "per_experiment":out,
             "macro_precision_at_k":float(np.mean([v['precision_at_k'] for v in out.values()])),
             "n_experiments":len(out),
-            "note":"Positive label is externally measured change beyond locked cutoff; not inferred graph centrality."}
+            "note":"Caller-supplied group labels are not proof of experiment independence. Positive label is externally measured change beyond locked cutoff; not inferred graph centrality."}

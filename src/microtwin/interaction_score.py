@@ -38,13 +38,13 @@ def heldout_scores(prior_error, interaction_error, *, ids=None, groups=None, n_b
     ids = [str(i) for i in range(n)] if ids is None else list(ids)
     if len(ids) != n or any(_missing_label(x) for x in ids):
         raise ValueError("sample ids must be nonempty and aligned with errors")
-    ids = list(map(str, ids))
+    ids = [str(x).strip() for x in ids]
     if len(set(ids)) != n:
         raise ValueError("sample ids must be unique after string normalization")
     groups = ids if groups is None else list(groups)
     if len(groups) != n or any(_missing_label(x) for x in groups):
         raise ValueError("group ids must be nonempty and aligned with errors")
-    groups = list(map(str, groups))
+    groups = [str(x).strip() for x in groups]
     # The fraction is undefined for a zero-error prior. Report no numerical score,
     # rather than hiding a potentially huge denominator behind epsilon.
     valid = prior > eps

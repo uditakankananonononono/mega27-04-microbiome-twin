@@ -69,3 +69,11 @@ def test_cli_nan_study_label_is_not_counted_as_independent(tmp_path):
                   "prior_error": [.4, .2], "interaction_error": [.2, .3]}).to_csv(f, index=False)
     with pytest.raises(SystemExit, match="group ids must be nonempty"):
         main(["dependence", str(f)])
+
+
+def test_whitespace_variant_group_is_one_independent_unit():
+    with pytest.raises(ValueError, match='unique'):
+        heldout_scores([.2,.2], [.1,.1], ids=['a',' a '])
+    r=heldout_scores([.2,.2], [.1,.1], groups=['study',' study '])
+    assert r['independent_groups']==1
+    assert r['ci95'] is None
