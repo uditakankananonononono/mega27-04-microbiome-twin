@@ -1,0 +1,5 @@
+# Known original-project alias guard, locked 2026-09-27 12:38 IST
+
+This is an engineering mutation based on the verified live MGnify study records, not a newly validated biological result. `MGYS00006825` (`ERP160132`, its derived BioProject `PRJEB75554`) and `MGYS00006862` (`ERP175206`, derived `PRJEB92327`) both explicitly name the original data project `PRJNA715245`. Their MGnify sample endpoints have 197 and 84 distinct SRS IDs and zero exact SRS overlap; this means shared project family, not duplicate individual samples or subjects. Add a canonical alias set for these five accessions to the known-family partition guard, with a unit test that a train/test split between the two MGYS records fails. Unknown sources must still fail closed; a pass on this alias guard alone never certifies other source rights, taxonomy, participant identity or eligibility. No existing benchmark split is silently retroactively changed.
+
+Live source records: https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006825 and https://www.ebi.ac.uk/metagenomics/api/v1/studies/MGYS00006862 .
