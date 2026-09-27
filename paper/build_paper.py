@@ -546,6 +546,35 @@ P.p("Interpretation. On non-human systems cNODE's interactions buy a large, clea
     "sampling noise of a model with no interactions. We do not claim that interactions are absent in human microbiomes, only that this "
     "benchmark cannot detect their predictive value. Our GraphTwin, a larger model, does no better (human gut 0.287 under 10-fold CV), "
     "which does not distinguish limited signal from model-fitting or capacity limitations.")
+P.h("5.4.1 Internal split-calibrated error radii, not a reliability index", 3)
+CR=json.load(open("results/internal_conformal_check.json"))
+P.p("A local research predictor can state what its uncertainty check actually measured without "+
+    "turning it into a clinical or cross-source promise. We fitted the same PresenceMean composition "+
+    "prior separately on 60% of each of six previously viewed cNODE ecosystem tables, calibrated "+
+    "on floor 20%, and checked the remaining samples after assemblage deduplication under one seed. "+
+    "For each labeled calibration sample we computed Bray-Curtis error between the fixed predictor "+
+    "and observed composition. At target miscoverage alpha=0.1, the radius is the "+
+    "ceil((n_cal+1)(1-alpha))-th sorted calibration error; if that rank exceeds n_cal, it "+
+    "returns the vacuous Bray-Curtis maximum 1. This is an error-radius check for a "+
+    "composition predictor, not a set of intervals for individual taxa.")
+P.table(["ecosystem", "train", "cal", "test", "radius", "covered", "empirical coverage", "vacuous"], [
+    [r['dataset'].replace('_',' '),r['train'],r['calibration'],r['test'],
+     f"{r['radius']:.3f}",f"{r['covered_test']}/{r['test']}",f"{r['empirical_coverage']:.1%}",
+     'yes' if r['vacuous'] else 'no'] for r in CR['rows']
+], "One 60/20/20 within-table split for the PresenceMean baseline, seed zero. Empirical test coverage is descriptive; nominal 90% marginal coverage requires exchangeability and does not hold deterministically in each finite test set.")
+P.p("The Ocean test covered 52/55 observations at radius 0.223; Human Oral covered "+
+    "29/30 at radius 0.407. Soil in vitro covered 9/11, Soil in vivo 122/137 and "+
+    "Human Gut 19/22, all below 90% as realized proportions. Drosophila Gut covered "+
+    "6/6 only because four calibration samples forced the vacuous radius 1.0; it "+
+    "provides no useful discrimination. Small finite test proportions are not direct "+
+    "proof of a failure of marginal conformal theory, and a radius calibrated on one "+
+    "table need not transfer to a new biome, assay, participant or perturbation. "+
+    "The source tables were already viewed and their split is within-dataset, "+
+    "not a held-out biological source. No Twin Reliability Index is calibrated or "+
+    "reported. Source SHA-256 values, splits, quantile ranks and exact result "+
+    "fractions are in results/internal_conformal_check.json; implementation: "+
+    "scripts/internal_conformal_check.py and src/microtwin/conformal.py.")
+
 import paper_expansion
 paper_expansion.add(P)
 
