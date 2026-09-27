@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import math
+from numbers import Real
 
 COMPONENTS = ("prediction_accuracy", "interaction_dependence", "uncertainty_calibration",
               "transferability", "robustness")
@@ -16,6 +17,8 @@ def reliability_report(components, *, calibration_registry=None, domain=None):
     """
     if not isinstance(components, dict) or set(components) - set(COMPONENTS):
         raise ValueError("unknown reliability components")
+    if domain is not None and (not isinstance(domain, str) or not domain.strip()):
+        raise ValueError("domain must be a nonempty string or None")
     report = {}
     for name in COMPONENTS:
         item = components.get(name)
@@ -25,12 +28,12 @@ def reliability_report(components, *, calibration_registry=None, domain=None):
         if not isinstance(item, dict) or "value" not in item or "source" not in item:
             raise ValueError(f"{name}: value and source evidence required")
         value = item["value"]
-        if not isinstance(value, (int, float)) or not math.isfinite(value):
+        if isinstance(value, bool) or not isinstance(value, Real) or not math.isfinite(value):
             raise ValueError(f"{name}: value must be finite")
-        if not str(item["source"]).strip():
+        if not isinstance(item["source"], str) or not item["source"].strip():
             raise ValueError(f"{name}: evidence source required")
         report[name] = {"status": "reported_unvalidated", "value": float(value),
-                        "source": str(item["source"])}
+                        "source": item["source"]}
     ready = all(x["status"] == "reported_unvalidated" for x in report.values())
     # No calibrated registry implementation is shipped: even complete
     # components remain a transparent vector, not a falsely precise index.
