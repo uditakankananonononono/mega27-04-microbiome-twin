@@ -1,0 +1,238 @@
+{
+  "candidate_records": 8,
+  "blocked": 8,
+  "metadata_ready_for_manual_review": 0,
+  "independent_external_benchmark_datasets": 0,
+  "records": [
+    {
+      "study": "MGYS00000633",
+      "decision": "blocked",
+      "reasons": [
+        {
+          "field": "analysis_pagination_complete",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "uniform_analysis_experiment_type",
+          "observed": "unknown",
+          "required": "amplicon"
+        },
+        {
+          "field": "sample_pagination_complete",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "old_column_to_analysis_mapped",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "explicit_human_host_compatible",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "independent_biological_family",
+          "observed": "unknown",
+          "required": true
+        }
+      ],
+      "final_external_benchmark_eligible": false,
+      "remaining_even_if_metadata_ready": [
+        "historical_library_method",
+        "source_specific_rights",
+        "participant_and_family_lineage",
+        "frozen_holdout_and_same_task_benchmark"
+      ]
+    },
+    {
+      "study": "MGYS00002238",
+      "decision": "blocked",
+      "reasons": [
+        {
+          "field": "old_column_to_analysis_mapped",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "independent_biological_family",
+          "observed": "unknown",
+          "required": true
+        }
+      ],
+      "final_external_benchmark_eligible": false,
+      "remaining_even_if_metadata_ready": [
+        "historical_library_method",
+        "source_specific_rights",
+        "participant_and_family_lineage",
+        "frozen_holdout_and_same_task_benchmark"
+      ]
+    },
+    {
+      "study": "MGYS00005154",
+      "decision": "blocked",
+      "reasons": [
+        {
+          "field": "old_column_to_analysis_mapped",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "independent_biological_family",
+          "observed": "unknown",
+          "required": true
+        }
+      ],
+      "final_external_benchmark_eligible": false,
+      "remaining_even_if_metadata_ready": [
+        "historical_library_method",
+        "source_specific_rights",
+        "participant_and_family_lineage",
+        "frozen_holdout_and_same_task_benchmark"
+      ]
+    },
+    {
+      "study": "MGYS00005230",
+      "decision": "blocked",
+      "reasons": [
+        {
+          "field": "old_column_to_analysis_mapped",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "explicit_human_host_compatible",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "independent_biological_family",
+          "observed": "unknown",
+          "required": true
+        }
+      ],
+      "final_external_benchmark_eligible": false,
+      "remaining_even_if_metadata_ready": [
+        "historical_library_method",
+        "source_specific_rights",
+        "participant_and_family_lineage",
+        "frozen_holdout_and_same_task_benchmark"
+      ]
+    },
+    {
+      "study": "MGYS00006006",
+      "decision": "blocked",
+      "reasons": [
+        {
+          "field": "uniform_analysis_experiment_type",
+          "observed": "assembly",
+          "required": "amplicon"
+        },
+        {
+          "field": "old_column_to_analysis_mapped",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "explicit_human_host_compatible",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "independent_biological_family",
+          "observed": "unknown",
+          "required": true
+        }
+      ],
+      "final_external_benchmark_eligible": false,
+      "remaining_even_if_metadata_ready": [
+        "historical_library_method",
+        "source_specific_rights",
+        "participant_and_family_lineage",
+        "frozen_holdout_and_same_task_benchmark"
+      ]
+    },
+    {
+      "study": "MGYS00006755",
+      "decision": "blocked",
+      "reasons": [
+        {
+          "field": "explicit_human_host_compatible",
+          "observed": false,
+          "required": true
+        },
+        {
+          "field": "independent_biological_family",
+          "observed": "unknown",
+          "required": true
+        }
+      ],
+      "final_external_benchmark_eligible": false,
+      "remaining_even_if_metadata_ready": [
+        "historical_library_method",
+        "source_specific_rights",
+        "participant_and_family_lineage",
+        "frozen_holdout_and_same_task_benchmark"
+      ]
+    },
+    {
+      "study": "MGYS00006794",
+      "decision": "blocked",
+      "reasons": [
+        {
+          "field": "old_column_to_analysis_mapped",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "explicit_human_host_compatible",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "independent_biological_family",
+          "observed": "unknown",
+          "required": true
+        }
+      ],
+      "final_external_benchmark_eligible": false,
+      "remaining_even_if_metadata_ready": [
+        "historical_library_method",
+        "source_specific_rights",
+        "participant_and_family_lineage",
+        "frozen_holdout_and_same_task_benchmark"
+      ]
+    },
+    {
+      "study": "MGYS00006795",
+      "decision": "blocked",
+      "reasons": [
+        {
+          "field": "old_column_to_analysis_mapped",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "explicit_human_host_compatible",
+          "observed": "unknown",
+          "required": true
+        },
+        {
+          "field": "independent_biological_family",
+          "observed": "unknown",
+          "required": true
+        }
+      ],
+      "final_external_benchmark_eligible": false,
+      "remaining_even_if_metadata_ready": [
+        "historical_library_method",
+        "source_specific_rights",
+        "participant_and_family_lineage",
+        "frozen_holdout_and_same_task_benchmark"
+      ]
+    }
+  ],
+  "scope": "metadata contract only; no biological source family or assay certification; no outcome scores"
+}

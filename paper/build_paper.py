@@ -287,6 +287,36 @@ P.table(["study", "analysis type", "sample pages", "explicit human host", "old c
 ], "Source metadata-integrity matrix, not an eligibility leaderboard. Study IDs shorten MGYS0000 to M (e.g., M6755 = MGYS00006755). Only M6755 has an exact old SSU run-column map; it still has a host-field conflict. All eight lack an independent-family certificate; missing host details stay unknown.")
 P.p("The distinction between false and unknown matters. MGYS00006755 is a host-field conflict on the exact 83 audited run columns: every linked sample reports a nonhuman host scientific name while the normalized species says Homo sapiens. Its known column mapping does not repair the biological-host disagreement. MGYS00005230, MGYS00006794 and MGYS00006795 have missing explicit host names for some or all samples and are therefore unknown on the explicit-host criterion, even when normalized species labels say human. MGYS00006006 is assembly-typed at the analysis layer and also has seven samples without usable explicit host names. Only MGYS00002238 and MGYS00005154 currently have complete human names in these aggregate fields, but neither has an audit-column-to-analysis crosswalk, independently verified subject units, source-family independence or rights review in this screen. These statuses do not revise the 121/160 BH test or identify an assay-specific effect. They define why a future leaderboard admission procedure must check all needed evidence separately before treating any old accession row as a biological dataset. Machine-readable statuses and synthetic fail-closed tests live in results/metadata_integrity_matrix.json and tests/test_metadata_integrity_matrix.py.")
 
+P.h("5.1.5a Fail-closed source-admission prototype", 3)
+AD=json.load(open("results/source_admission_screen.json"))
+P.p("To make the integrity matrix operational rather than a decorative warning, a local admission function "
+    "now evaluates six fields for each already-viewed digestive candidate. A human-gut amplicon "
+    "metadata review requires complete analysis and sample pagination, uniform current amplicon "
+    "analysis labels, exact old SSU column-to-analysis mapping, an explicit human host field without "
+    "conflict or missing names, and verified biological-family independence. A blank, false or unknown "
+    "value blocks the review and names every failed field. The function does not accept a normalized "
+    "Homo sapiens code as a substitute for an explicit host, nor interpret a title or an accession "
+    "count as proof of an independent dataset. The six fields are necessary screening checks, not "
+    "sufficient conditions for an external benchmark.")
+P.p(f"Applied to the {AD['candidate_records']} viewed title-unflagged records, the gate blocks "
+    f"{AD['blocked']}; {AD['metadata_ready_for_manual_review']} reach metadata-ready manual review, "
+    "and zero become independently validated external datasets. MGYS00006755 illustrates why "
+    "the gate has several independent axes: its exact historical run-column map is now known and its "
+    "current analyses are amplicon-labeled, yet its host fields conflict in every linked sample "
+    "and its biological-family independence remains unknown. MGYS00006006 has assembly-typed "
+    "analyses even though the narrow title rule missed it; MGYS00000633 remains unpaged and "
+    "unknown. These are explicit engineering blockers for this human-gut amplicon question, "
+    "not declarations that a nonhuman or assembly source has no use for another biological question.")
+P.p("Even a synthetic record passing all six fields returns only 'metadata ready for manual review'. "
+    "Historical library methods, source-specific rights, participant lineage, a frozen holdout "
+    "and a same-task comparator must still be checked before any dataset could be admitted to "
+    "an external leaderboard. Unit tests assert that each field independently blocks on an "
+    "unverified value, that duplicate study identities fail, and that all eight real records "
+    "remain blocked. No performance score is read by this gate, and the 160-study BH calls "
+    "remain as archived. Protocol and exact reason-coded output: "
+    "results/PREREG_20260927_source_admission_gate.md and results/source_admission_screen.json; "
+    "implementation: src/microtwin/source_admission.py.")
+
 P.h("5.1.6 A conservative source-lineage guard", 3)
 P.p("The original-project sensitivity motivates an explicit partition rule for later cross-source evaluation. A study accession, its sequencing-project accession, and a derived assembly project may be different handles for related biological material. If a researcher randomises those handles independently into training and test sets, the nominal number of held-out studies can increase while the number of underlying source projects does not. Source-family registration therefore precedes split generation: each verified alias maps to one canonical family, and every registered alias in that family must be assigned to the same partition. An accession missing from the registry is not presumed independent; it remains ineligible for the known-family separation certificate until lineage is checked. The check is deliberately asymmetric: a failed split proves that known source-family separation was violated, whereas a passing split proves only that no collision in the registered aliases was found.")
 P.p("For the one currently confirmed MGnify lineage pair, two assembly records carry separate MGYS identifiers, separate ERP secondary accessions, and separate derived PRJEB BioProject identifiers, but both study titles identify PRJNA715245 as their original data project. The source-lineage guard registers those seven identifiers under PRJNA715245 and rejects a train/test split spanning MGYS00006825 and the ERP identifier of MGYS00006862. A same-partition assignment passes this narrow mechanical check; an unknown accession fails. This engineering test does not retrospectively split the old within-study audit, change its 160-table BH procedure, or imply that the pair has duplicate sample accessions: the live MGnify lists have no exact SRS intersection. Conversely, zero exact SRS overlap cannot exclude donor overlap, reuse of underlying reads under changed accession labels, or laboratory and analysis-pipeline correlations. The appropriate unit for a future external benchmark must be justified by its biological question and provenance, not selected to preserve a favorable win count.")
