@@ -3,6 +3,10 @@ Microbiome digital twin: predict community composition from species assemblage, 
 Models on identical folds: presence-mean null, cNODE re-implementation, gLV replicator, GraphTwin (attention GNN over present taxa with learned interaction gates).
 Run tests: `python -m pytest -q`. Run benchmark: `python run_bench.py Drosophila_Gut presence_mean,cnode,glv,graphtwin 10`.
 
+## Viewed-source metadata admission screen (research only)
+
+`microtwin screen-sources results/metadata_integrity_matrix.json` runs the local six-field human-gut amplicon metadata screen without network access, table uploads or outcome scoring. It prints a reason for every missing or conflicting field and exits 2 if no record is metadata-ready; the eight currently viewed title-unflagged MGnify records all block. The synthetic test verifies that even a record with all six metadata fields complete reaches only *manual review*, never final benchmark eligibility. Current analysis type is not proof of historical wet-lab assay; explicit human host, source-family independence, rights, participant lineage and a frozen fair comparator remain separate checks. The command caps input at 1 MB / 1000 records, rejects duplicate studies and omits extra sample-level fields from output. No archived 160-table BH result changes. See `results/PREREG_20260927_admission_cli.md` and `results/source_admission_screen.json`.
+
 ## GraphTwin v2 (TwinStack) and v2b (ConstStack)
 TwinStack (`graphtwin2`): per-sample convex combination of the four base predictors,
 weights from a small MLP gate over assemblage summaries, trained on inner out-of-fold

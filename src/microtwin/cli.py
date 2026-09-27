@@ -136,6 +136,28 @@ def cmd_predict_calibrated(a):
     return 0
 
 
+def cmd_screen_sources(a):
+    """Local bounded metadata screen, never a cohort or rights certificate."""
+    from pathlib import Path
+    from .source_admission import assess_many
+    path = Path(a.matrix)
+    try:
+        if not path.is_file() or path.stat().st_size > 1_000_000:
+            raise ValueError('missing or oversized JSON input (1 MB maximum)')
+        with path.open() as f:
+            obj=json.load(f)
+        if not isinstance(obj,dict) or not isinstance(obj.get('rows'),list) or len(obj['rows'])>1000:
+            raise ValueError('JSON needs a rows list of at most 1000 records')
+        if type(obj.get('n_studies')) is not int or obj['n_studies'] != len(obj['rows']):
+            raise ValueError('n_studies must equal rows length')
+        report=assess_many(obj['rows'])
+    except (OSError,ValueError,TypeError,json.JSONDecodeError) as e:
+        print(f'cannot screen source metadata: {e}',file=sys.stderr)
+        return 2
+    print(json.dumps(report,indent=2))
+    return 0 if report['metadata_ready_for_manual_review'] else 2
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="microtwin")
     sp = ap.add_subparsers(dest="cmd", required=True)
@@ -177,6 +199,9 @@ def main(argv=None):
     c.add_argument('--alpha', type=float, default=.1)
     c.add_argument('--out', required=True, help='new local CSV path')
     c.set_defaults(f=cmd_predict_calibrated)
+    sc = sp.add_parser('screen-sources', help='local metadata-only admission screen; never final benchmark eligibility')
+    sc.add_argument('matrix', help='JSON object with n_studies and rows, at most 1 MB/1000 records')
+    sc.set_defaults(f=cmd_screen_sources)
     a = ap.parse_args(argv); return a.f(a)
 
 
