@@ -118,7 +118,8 @@ def cmd_predict_calibrated(a):
         result, report = predict_with_radius(a.train, a.calibration, a.query,
                                              unit=a.unit, source_id=a.source_id,
                                              processing_authorized=a.processing_authorized,
-                                             alpha=a.alpha)
+                                             subject_map=a.subject_map, calibration_subject_map=a.calibration_subject_map,
+                                             query_subject_map=a.query_subject_map, alpha=a.alpha)
         from pathlib import Path
         dest = Path(a.out)
         if dest.suffix.lower() != '.csv':
@@ -196,6 +197,9 @@ def main(argv=None):
     c.add_argument('--unit', choices=('counts','relative_abundance','absolute_abundance'), required=True)
     c.add_argument('--source-id', required=True)
     c.add_argument('--processing-authorized', action='store_true', help='caller declaration, not proof of data rights')
+    c.add_argument('--subject-map', help='exact train sample_id,subject_id CSV; requires other two maps')
+    c.add_argument('--calibration-subject-map', help='exact calibration subject map CSV')
+    c.add_argument('--query-subject-map', help='exact query subject map CSV')
     c.add_argument('--alpha', type=float, default=.1)
     c.add_argument('--out', required=True, help='new local CSV path')
     c.set_defaults(f=cmd_predict_calibrated)

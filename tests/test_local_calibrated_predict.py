@@ -74,3 +74,45 @@ def test_calibrated_input_hash_change_is_detected(tmp_path, monkeypatch):
     monkeypatch.setattr(module,'bray_radius',tamper_then_radius)
     with pytest.raises(ValueError,match='input changed'):
         predict_with_radius(tr,cal,q,unit='counts',source_id='test',processing_authorized=True)
+
+
+def _maps(tmp_path, overlap=False):
+    files=[tmp_path/'train-map.csv',tmp_path/'cal-map.csv',tmp_path/'query-map.csv']
+    files[0].write_text('sample_id,subject_id\ns1,p1\ns2,p1\n')
+    files[1].write_text('sample_id,subject_id\n'+''.join(f'c{i},p2\n' for i in range(20)))
+    files[2].write_text('sample_id,subject_id\nq1,'+('p2' if overlap else 'p3')+'\n')
+    return files
+
+
+def test_calibrated_subject_guard_pass_and_overlap(tmp_path):
+    tr,cal,q=_inputs(tmp_path)
+    maps=_maps(tmp_path)
+    kwargs=dict(unit='counts',source_id='test',processing_authorized=True,
+                subject_map=maps[0],calibration_subject_map=maps[1],query_subject_map=maps[2])
+    _,report=predict_with_radius(tr,cal,q,**kwargs)
+    assert report['subject_partition_check']['status']=='exact_submitted_labels_disjoint'
+    assert len(report['subject_partition_check']['subject_map_sha256'])==3
+    _maps(tmp_path,overlap=True)
+    with pytest.raises(ValueError,match='crosses'):
+        predict_with_radius(tr,cal,q,**kwargs)
+    with pytest.raises(ValueError,match='supplied together'):
+        predict_with_radius(tr,cal,q,unit='counts',source_id='test',processing_authorized=True,subject_map=maps[0])
+
+
+def test_subject_map_missing_extra_and_mutation(tmp_path, monkeypatch):
+    from microtwin import local_calibrated_predict as module
+    tr,cal,q=_inputs(tmp_path)
+    maps=_maps(tmp_path)
+    kwargs=dict(unit='counts',source_id='test',processing_authorized=True,
+                subject_map=maps[0],calibration_subject_map=maps[1],query_subject_map=maps[2])
+    maps[2].write_text('sample_id,subject_id\nwrong,p3\n')
+    with pytest.raises(ValueError,match='exactly cover'):
+        predict_with_radius(tr,cal,q,**kwargs)
+    _maps(tmp_path)
+    original=module.bray_radius
+    def mutate(errors,alpha):
+        maps[2].write_text('sample_id,subject_id\nq1,p4\n')
+        return original(errors,alpha)
+    monkeypatch.setattr(module,'bray_radius',mutate)
+    with pytest.raises(ValueError,match='subject map changed'):
+        predict_with_radius(tr,cal,q,**kwargs)
