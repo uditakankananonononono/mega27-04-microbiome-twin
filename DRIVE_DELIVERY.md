@@ -1,3 +1,5 @@
+**2026-09-27 substantive page revision staged locally:** The paper adds project-identity sensitivity and mouse-unit inference tables, taking the PDF to 72 pages. The Drive link remains the earlier 70-page version until replacement is verified.
+
 **2026-09-27 user-verdict revision verified:** The archival audit was revised after Udita's supplied critique; current 70-page PDF and DOCX replaced at the same Drive IDs and byte-verified by re-download. Current PDF SHA-256 `c464f6f7dd0c865a7bdfd7c59f12620894ba7067255d3c27e6f6a2d26259f105`; DOCX SHA-256 `80651262d62ff5d237f4df2a079eb131bc63aa4381193f98f8e134adcacb6741`. Historical checksums in the table below belong to the old edition.
 
 **Replacement verified (2026-09-27):** The same Drive IDs now contain the 70-page PDF bearing only Udita Phookan as author and corresponding DOCX, both re-downloaded and byte-verified. The old 71-page checksums in the historical table below identify the previous versions, not the current files. Current PDF SHA-256 `ab0a16ff0772a0015c3d01be1b0d27fc073a0da246f419f61dcf5328688a8eb9`; current DOCX SHA-256 `8057a1317562fe7979e61fbe9755959eafa336debc3e7b17ec55a1fd8c66407e`.

@@ -14,3 +14,5 @@ This checklist is a deliverable prompted by Udita's 2026-09-27 verdict. It does 
 10. Archive analysis decisions before tests, distinguish preplanned from post-failure redirection, preserve falsified predictions, and state explicitly whether an external source, discovery, reliability calibration and clinical claim were actually validated.
 
 The present audit only satisfies parts of this list. In particular, 160 MGnify tables are heterogeneous previously viewed within-study results, while the expanded platform's untouched external transfer and intervention outcomes are missing.
+
+Owner scope update: 2026-09-27 12:02:56 IST cancelled ISEF/presentation deliverables and prioritized substantive paper pages. This methodological checklist remains a paper-adjacent research audit, not a slide/storyboard task.
