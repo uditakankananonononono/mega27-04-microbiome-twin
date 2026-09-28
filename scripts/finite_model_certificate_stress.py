@@ -22,8 +22,16 @@ def run():
         panel.append((expected,[model(c1,a01,a10),model(c2,a01,a10)]))
     order=rng.permutation(40)
     rows=[]
+    strict_detected=0;strict_abstained=0
     for i in order:
         expected,c=panel[int(i)];d=certify_finite_candidates(c,[1,1,1])
+        strict=certify_finite_candidates(c,[1,1,1],require_global_reachability=True)
+        assert strict['valid_count']==2 and strict['rejected_count']==0
+        strict_detected+=int(expected and strict['status']=='opposite_sign_witness')
+        strict_abstained+=int(not expected and strict['status']!='opposite_sign_witness')
+        for w in strict['witnesses']:
+            a=np.asarray(w['interaction_matrix'])
+            assert np.linalg.eigvalsh((a[:2,:2]+a[:2,:2].T)/2).max()<-1e-7
         rows.append({'case_index':int(i),'constructed_opposition':expected,'witness':d['status']=='opposite_sign_witness',
                      'valid_count':d['valid_count'],'rejected_count':d['rejected_count'],
                      'target_changes':[float(-m['A'][0][2]/(1-m['A'][0][1]*m['A'][1][0])) for m in c]})
@@ -47,6 +55,7 @@ def run():
             'opposing_detected':sum(r['witness'] for r in rows if r['constructed_opposition']),
             'one_sided_abstained':sum(not r['witness'] for r in rows if not r['constructed_opposition']),
             'weak_any_distinct_A_flagged':40,'invalid_injected_rejected':rejected['rejected_count'],
+            'lyapunov_opposing_detected':strict_detected,'lyapunov_one_sided_abstained':strict_abstained,
             'cases':rows}
 
 if __name__=='__main__':

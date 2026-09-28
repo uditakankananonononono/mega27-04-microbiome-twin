@@ -7,6 +7,8 @@
   "one_sided_abstained": 20,
   "weak_any_distinct_A_flagged": 40,
   "invalid_injected_rejected": 3,
+  "lyapunov_opposing_detected": 20,
+  "lyapunov_one_sided_abstained": 20,
   "cases": [
     {
       "case_index": 16,
