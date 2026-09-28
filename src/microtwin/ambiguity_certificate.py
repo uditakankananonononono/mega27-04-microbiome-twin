@@ -48,4 +48,4 @@ def certify_three_species_removal(lower,upper):
                                      'upper_target_change':u['target_change'],
                                      'lower_max_baseline_jacobian_real_eigenvalue':l['max_baseline_jacobian_real_eigenvalue'],
                                      'upper_max_baseline_jacobian_real_eigenvalue':u['max_baseline_jacobian_real_eigenvalue']},
-            'scope':'exact analytical existence in constrained synthetic three-species absolute-abundance gLV only; no inference of real parameters, no clinical or intervention forecast'}
+            'scope':'exact analytical existence in constrained synthetic three-species absolute-abundance gLV only; no inference of real parameters, no tested basin reachability, clinical or intervention forecast'}

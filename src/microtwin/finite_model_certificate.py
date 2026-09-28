@@ -51,4 +51,4 @@ def certify_finite_candidates(candidates, baseline):
             'rejected_count':rejected,'positive_count':len(positives),
             'negative_count':len(negatives),'near_zero_count':zeros,
             'witnesses':witness,
-            'scope':'existence among submitted finite models only; abstention does not prove continuous-family sign certainty; constructed systems are not biological evidence'}
+            'scope':'existence among submitted finite models only; abstention does not prove continuous-family sign certainty; constructed systems are not biological evidence; basin reachability after removal is not checked'}
