@@ -20,13 +20,14 @@ def prospective_precision_at_k(scores, measured_effect, groups, *, k=5, effect_c
         raise ValueError("independent experiment group required")
     g=[str(x).strip() for x in g]
     if not isinstance(k,int) or isinstance(k,bool) or k<1:raise ValueError("k must be positive integer")
-    out={}
+    out=[]
     for group in dict.fromkeys(g):
         idx=np.flatnonzero(np.asarray(g,dtype=object)==group)
         top=idx[np.argsort(-s[idx],kind="stable")[:min(k,len(idx))]]
-        out[str(group)]={"n_taxa":len(idx),"k":len(top),
-                         "precision_at_k":float((np.abs(y[top])>effect_cutoff).mean())}
-    return {"status":"measured_perturbation_labels_required", "per_experiment":out,
-            "macro_precision_at_k":float(np.mean([v['precision_at_k'] for v in out.values()])),
-            "n_experiments":len(out),
-            "note":"Caller-supplied group labels are not proof of experiment independence. Positive label is externally measured change beyond locked cutoff; not inferred graph centrality."}
+        out.append({"n_taxa":len(idx),"k":len(top),
+                    "precision_at_k":float((np.abs(y[top])>effect_cutoff).mean())})
+    return {"status":"submitted_perturbation_labels_only", "group_summaries":out,
+            "macro_precision_at_k":float(np.mean([v['precision_at_k'] for v in out])),
+            "submitted_groups":len(out),"experiment_independence_verified":False,
+            "keystone_discovery_certified":False,
+            "note":"Caller-supplied group labels and measured-effect claims are not externally verified. A positive label is a submitted change beyond cutoff, not inferred graph centrality or certified keystone discovery."}
