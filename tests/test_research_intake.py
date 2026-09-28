@@ -15,10 +15,13 @@ def test_local_intake_requires_declaration_and_maps_exact_subjects(tmp_path, cap
         inspect_local_matrix(matrix,unit='counts',source_id='demo')
     result = inspect_local_matrix(matrix,unit='counts',source_id='demo',processing_authorized=True,subject_map=mapping)
     assert result['subject_groups']==1 and result['grouped_split_ready'] is False
+    assert 'subject_map_sha256' not in result
     assert 's1' not in json.dumps(result) and 'p1' not in json.dumps(result)
     assert result['prediction'] is None and not result['external_validation']
     assert main(['inspect',str(matrix),'--unit','counts','--source-id','demo','--processing-authorized','--subject-map',str(mapping)])==0
-    assert json.loads(capsys.readouterr().out)['status']=='schema_validated_only'
+    cli_result=json.loads(capsys.readouterr().out)
+    assert cli_result['status']=='schema_validated_only'
+    assert 'subject_map_sha256' not in cli_result
 
 
 def test_local_intake_fails_on_bad_columns_missing_data_and_fractional_counts(tmp_path):

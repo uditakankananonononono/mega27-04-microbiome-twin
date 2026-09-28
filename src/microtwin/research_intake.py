@@ -73,7 +73,6 @@ def inspect_local_matrix(path, *, unit, source_id, processing_authorized=False, 
             raise ValueError('subject map must have exactly one nonempty subject for each sample')
         grouped = int(mapper.subject_id.nunique())
     result = {**base, 'sha256': hashlib.sha256(file.read_bytes()).hexdigest(),
-              'subject_map_sha256': hashlib.sha256(Path(subject_map).read_bytes()).hexdigest() if subject_map else None,
               'subject_groups': grouped, 'grouped_split_ready': grouped is not None and grouped > 1,
               'min_nonzero_taxa_per_sample': int((numeric > 0).sum(1).min()),
               'max_nonzero_taxa_per_sample': int((numeric > 0).sum(1).max()),

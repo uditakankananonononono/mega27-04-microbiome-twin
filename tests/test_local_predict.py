@@ -105,3 +105,19 @@ def test_predict_cli_requires_csv_output(tmp_path):
     with pytest.raises(SystemExit,match='end in .csv'):
         main(['predict',str(train),str(query),'--unit','counts','--source-id','test',
               '--processing-authorized','--out',str(tmp_path/'wrong.tsv')])
+
+
+def test_predict_detects_subject_map_change_during_inspection(tmp_path, monkeypatch):
+    from microtwin import local_predict
+    train=tmp_path/"train.tsv";train.write_text("sample_id\tA\ntr1\t2\n")
+    query=tmp_path/"query.tsv";query.write_text("sample_id\tA\nq1\t1\n")
+    mapping=tmp_path/"groups.csv";mapping.write_text("sample_id,subject_id\ntr1,p1\n")
+    original=local_predict.inspect_local_matrix
+    def mutate_after(*args,**kwargs):
+        result=original(*args,**kwargs)
+        mapping.write_text("sample_id,subject_id\ntr1,p2\n")
+        return result
+    monkeypatch.setattr(local_predict,"inspect_local_matrix",mutate_after)
+    with pytest.raises(ValueError,match="subject map changed during inspection"):
+        local_predict.predict_local(train,query,unit="counts",source_id="test",
+                                    processing_authorized=True,subject_map=mapping)

@@ -45,8 +45,11 @@ def predict_local(train_path, query_path, *, unit, source_id, processing_authori
     assemblages. Exact taxon-name alignment and known training vocabulary are
     required; a different assay or taxonomy needs separate validation.
     """
+    map_hash = hashlib.sha256(Path(subject_map).read_bytes()).hexdigest() if subject_map is not None else None
     qc = inspect_local_matrix(train_path, unit=unit, source_id=source_id,
                               processing_authorized=processing_authorized, subject_map=subject_map)
+    if subject_map is not None and hashlib.sha256(Path(subject_map).read_bytes()).hexdigest()!=map_hash:
+        raise ValueError('subject map changed during inspection')
     train_ids, taxa, x, train_sha = _read_table(train_path)
     if unit == 'counts' and (x != np.floor(x)).any():
         raise ValueError('counts must be integers')
@@ -78,7 +81,7 @@ def predict_local(train_path, query_path, *, unit, source_id, processing_authori
         raise ValueError('training file changed during prediction')
     if hashlib.sha256(Path(query_path).read_bytes()).hexdigest() != query_sha:
         raise ValueError('query file changed during prediction')
-    if subject_map is not None and hashlib.sha256(Path(subject_map).read_bytes()).hexdigest() != qc['subject_map_sha256']:
+    if subject_map is not None and hashlib.sha256(Path(subject_map).read_bytes()).hexdigest() != map_hash:
         raise ValueError('subject map changed during prediction')
     result = pd.DataFrame(pred, columns=taxa)
     result.insert(0, 'sample_id', query_ids)
