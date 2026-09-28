@@ -91,7 +91,9 @@ def test_calibrated_subject_guard_pass_and_overlap(tmp_path):
                 subject_map=maps[0],calibration_subject_map=maps[1],query_subject_map=maps[2])
     _,report=predict_with_radius(tr,cal,q,**kwargs)
     assert report['subject_partition_check']['status']=='exact_submitted_labels_disjoint'
-    assert len(report['subject_partition_check']['subject_map_sha256'])==3
+    assert report['subject_partition_check']['maps_supplied'] is True
+    assert 'subject_map_sha256' not in str(report)
+    assert 'p1' not in str(report) and 'p2' not in str(report) and 'p3' not in str(report)
     _maps(tmp_path,overlap=True)
     with pytest.raises(ValueError,match='crosses'):
         predict_with_radius(tr,cal,q,**kwargs)

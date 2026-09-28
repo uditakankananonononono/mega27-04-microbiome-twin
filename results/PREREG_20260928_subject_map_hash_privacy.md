@@ -1,0 +1,3 @@
+# Subject-map report privacy correction, 2026-09-28 06:57 IST
+
+The calibrated predictor's JSON report currently publishes SHA-256 digests of three subject-map files. Although the raw IDs stay local, short or predictable ID maps can be guessed against those plain digests. Keep the internal before/after byte comparison, but omit the map digests from the returned JSON. Report only whether all three submitted labels were exactly disjoint and whether maps were supplied. Add tests that common subject IDs and digest fields are absent from a report, and that a mid-run map modification still fails. This is a privacy and integrity correction, not new calibration evidence or a clinical claim. No real participant data or external sources are read.

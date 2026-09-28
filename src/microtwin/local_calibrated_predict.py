@@ -94,7 +94,7 @@ def predict_with_radius(train_path, calibration_path, query_path, *, unit, sourc
         if current!=expected:
             raise ValueError('subject map changed during calibrated prediction')
     report['subject_partition_check']={'status':'exact_submitted_labels_disjoint' if subject_hashes else 'unverified_no_maps',
-                                       'subject_map_sha256':dict(zip(('train','calibration','query'),subject_hashes)),
+                                       'maps_supplied':bool(subject_hashes),
                                        'limitation':'Exact supplied pseudonyms cannot prove distinct people or cross-source exchangeability.'}
     report['calibration_sha256']=cal_hash
     report['calibration_samples']=len(cal_ids)
