@@ -1,0 +1,174 @@
+{
+  "protocol": "results/PREREG_20260928_counterfactual_ambiguity_certificate.md",
+  "panel": [
+    {
+      "case": "straddling",
+      "status": "opposite_sign_witness",
+      "interaction_parameter_interval": [
+        -0.4,
+        0.4
+      ],
+      "generic_free_parameter_flag": true,
+      "witnesses": [
+        {
+          "c": -0.4,
+          "interaction_matrix": [
+            [
+              -1.0,
+              0.0,
+              -0.4
+            ],
+            [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0
+            ]
+          ],
+          "intrinsic_rates": [
+            1.4,
+            1.0,
+            1.0
+          ],
+          "observed_equilibrium": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "post_removal_equilibrium": [
+            1.4,
+            1.0,
+            0.0
+          ],
+          "target_change": 0.3999999999999999,
+          "max_abs_baseline_residual": 0.0,
+          "max_abs_post_removal_residual": 0.0,
+          "max_baseline_jacobian_real_eigenvalue": -1.0,
+          "max_post_removal_jacobian_real_eigenvalue": -1.0
+        },
+        {
+          "c": 0.4,
+          "interaction_matrix": [
+            [
+              -1.0,
+              0.0,
+              0.4
+            ],
+            [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0
+            ]
+          ],
+          "intrinsic_rates": [
+            0.6,
+            1.0,
+            1.0
+          ],
+          "observed_equilibrium": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "post_removal_equilibrium": [
+            0.6,
+            1.0,
+            0.0
+          ],
+          "target_change": -0.4,
+          "max_abs_baseline_residual": 0.0,
+          "max_abs_post_removal_residual": 0.0,
+          "max_baseline_jacobian_real_eigenvalue": -1.0,
+          "max_post_removal_jacobian_real_eigenvalue": -0.6
+        }
+      ],
+      "endpoint_verification": {
+        "lower_target_change": 0.3999999999999999,
+        "upper_target_change": -0.4,
+        "lower_max_baseline_jacobian_real_eigenvalue": -1.0,
+        "upper_max_baseline_jacobian_real_eigenvalue": -1.0
+      },
+      "scope": "exact analytical existence in constrained synthetic three-species absolute-abundance gLV only; no inference of real parameters, no clinical or intervention forecast"
+    },
+    {
+      "case": "positive",
+      "status": "no_opposite_sign_witness_in_toy_family",
+      "interaction_parameter_interval": [
+        0.1,
+        0.4
+      ],
+      "generic_free_parameter_flag": true,
+      "witnesses": [],
+      "endpoint_verification": {
+        "lower_target_change": -0.09999999999999998,
+        "upper_target_change": -0.4,
+        "lower_max_baseline_jacobian_real_eigenvalue": -1.0,
+        "upper_max_baseline_jacobian_real_eigenvalue": -1.0
+      },
+      "scope": "exact analytical existence in constrained synthetic three-species absolute-abundance gLV only; no inference of real parameters, no clinical or intervention forecast"
+    },
+    {
+      "case": "negative",
+      "status": "no_opposite_sign_witness_in_toy_family",
+      "interaction_parameter_interval": [
+        -0.4,
+        -0.1
+      ],
+      "generic_free_parameter_flag": true,
+      "witnesses": [],
+      "endpoint_verification": {
+        "lower_target_change": 0.3999999999999999,
+        "upper_target_change": 0.10000000000000009,
+        "lower_max_baseline_jacobian_real_eigenvalue": -1.0,
+        "upper_max_baseline_jacobian_real_eigenvalue": -1.0
+      },
+      "scope": "exact analytical existence in constrained synthetic three-species absolute-abundance gLV only; no inference of real parameters, no clinical or intervention forecast"
+    },
+    {
+      "case": "zero_bound",
+      "status": "no_opposite_sign_witness_in_toy_family",
+      "interaction_parameter_interval": [
+        0.0,
+        0.4
+      ],
+      "generic_free_parameter_flag": true,
+      "witnesses": [],
+      "endpoint_verification": {
+        "lower_target_change": 0.0,
+        "upper_target_change": -0.4,
+        "lower_max_baseline_jacobian_real_eigenvalue": -1.0,
+        "upper_max_baseline_jacobian_real_eigenvalue": -1.0
+      },
+      "scope": "exact analytical existence in constrained synthetic three-species absolute-abundance gLV only; no inference of real parameters, no clinical or intervention forecast"
+    },
+    {
+      "case": "point_zero",
+      "status": "no_opposite_sign_witness_in_toy_family",
+      "interaction_parameter_interval": [
+        0.0,
+        0.0
+      ],
+      "generic_free_parameter_flag": false,
+      "witnesses": [],
+      "endpoint_verification": {
+        "lower_target_change": 0.0,
+        "upper_target_change": 0.0,
+        "lower_max_baseline_jacobian_real_eigenvalue": -1.0,
+        "upper_max_baseline_jacobian_real_eigenvalue": -1.0
+      },
+      "scope": "exact analytical existence in constrained synthetic three-species absolute-abundance gLV only; no inference of real parameters, no clinical or intervention forecast"
+    }
+  ],
+  "certificate_positive": 1,
+  "generic_free_parameter_flag_positive": 4,
+  "note": "Five deliberately chosen analytic toy intervals; counts do not estimate real-world detection accuracy."
+}
