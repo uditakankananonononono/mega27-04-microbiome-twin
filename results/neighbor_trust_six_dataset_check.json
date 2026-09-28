@@ -1,0 +1,151 @@
+{
+  "protocol": "results/PREREG_20260928_neighbor_trust_twin.md",
+  "scope": "six previously viewed cNODE datasets; internal 10-fold, no family/source independence, no algorithmic-priority or top-tool claim",
+  "dataset_median_wins_vs_prior": 4,
+  "rows": [
+    {
+      "dataset": "Ocean",
+      "samples": 269,
+      "taxa": 73,
+      "covered": 265,
+      "abstentions": 4,
+      "input_sha256": "f66bcf68eb02e316306e6c18def3b70d885843c44ca1544ec90f5dc5d408756b",
+      "median_bray_curtis": {
+        "prior": 0.09314298546391768,
+        "local": 0.09278048504292913,
+        "trust": 0.09411418650280769
+      },
+      "mean_bray_curtis": {
+        "prior": 0.11203081159188594,
+        "local": 0.10958442721753348,
+        "trust": 0.11000326039968768
+      },
+      "trust_minus_prior_median_sample_error": -0.0005718010311165228,
+      "trust_minus_prior_difference_of_medians": 0.0009712010388900072,
+      "alpha_median": 0.8426728996710816,
+      "alpha_min": 0.020554733418125117,
+      "alpha_max": 0.94373690200003,
+      "fallbacks": 0
+    },
+    {
+      "dataset": "Drosophila_Gut",
+      "samples": 24,
+      "taxa": 5,
+      "covered": 24,
+      "abstentions": 0,
+      "input_sha256": "50a9ae4333f65d1c97b2ac52c29acd7dc3b4a14580eb2c0ff8e00da86157324d",
+      "median_bray_curtis": {
+        "prior": 0.17151863523543515,
+        "local": 0.1030135243781827,
+        "trust": 0.15326967446903977
+      },
+      "mean_bray_curtis": {
+        "prior": 0.15610446352634066,
+        "local": 0.1168517863125808,
+        "trust": 0.13936626614633663
+      },
+      "trust_minus_prior_median_sample_error": -0.01559912414816507,
+      "trust_minus_prior_difference_of_medians": -0.018248960766395372,
+      "alpha_median": 0.3361523461529978,
+      "alpha_min": 0.13097101403465614,
+      "alpha_max": 0.4302914398971013,
+      "fallbacks": 0
+    },
+    {
+      "dataset": "Soil_Vitro",
+      "samples": 48,
+      "taxa": 8,
+      "covered": 48,
+      "abstentions": 0,
+      "input_sha256": "18fe49d0169fe12c876748be959616d5dd0fda743c0ab9c64150dd9d9dd98049",
+      "median_bray_curtis": {
+        "prior": 0.2054778167558094,
+        "local": 0.1146252067538064,
+        "trust": 0.17703298159851588
+      },
+      "mean_bray_curtis": {
+        "prior": 0.19491327535585143,
+        "local": 0.15705281456413703,
+        "trust": 0.17984522442541503
+      },
+      "trust_minus_prior_median_sample_error": -0.008365181373427844,
+      "trust_minus_prior_difference_of_medians": -0.028444835157293513,
+      "alpha_median": 0.23332202945349909,
+      "alpha_min": 0.1413064834631518,
+      "alpha_max": 0.33322287725377014,
+      "fallbacks": 0
+    },
+    {
+      "dataset": "Soil_Vivo",
+      "samples": 678,
+      "taxa": 36,
+      "covered": 675,
+      "abstentions": 3,
+      "input_sha256": "b6c371b42428704f9ff1f273fa2a9e1e66a7cd0c4c3417a0065d676b15195472",
+      "median_bray_curtis": {
+        "prior": 0.12371467589074286,
+        "local": 0.12019151155243583,
+        "trust": 0.12042495865341912
+      },
+      "mean_bray_curtis": {
+        "prior": 0.14123354972193802,
+        "local": 0.13580159601042532,
+        "trust": 0.1365673411924913
+      },
+      "trust_minus_prior_median_sample_error": -0.004445900524617352,
+      "trust_minus_prior_difference_of_medians": -0.0032897172373237415,
+      "alpha_median": 0.86244874197588,
+      "alpha_min": 0.6336499691719832,
+      "alpha_max": 0.9011842549066484,
+      "fallbacks": 0
+    },
+    {
+      "dataset": "Human_Oral",
+      "samples": 143,
+      "taxa": 73,
+      "covered": 133,
+      "abstentions": 10,
+      "input_sha256": "c1be8050fc6dfa68a9d44c363bb17f5d6f8bc206123c846a13fe3d23020d13ff",
+      "median_bray_curtis": {
+        "prior": 0.2039180704027396,
+        "local": 0.20777316429294054,
+        "trust": 0.20699242557050931
+      },
+      "mean_bray_curtis": {
+        "prior": 0.22659192819032492,
+        "local": 0.22598829106831972,
+        "trust": 0.22484656004196638
+      },
+      "trust_minus_prior_median_sample_error": -0.0019331918167213302,
+      "trust_minus_prior_difference_of_medians": 0.0030743551677697156,
+      "alpha_median": 0.7886039681316686,
+      "alpha_min": 0.11562447754958435,
+      "alpha_max": 0.8798089501440469,
+      "fallbacks": 0
+    },
+    {
+      "dataset": "Human_Gut",
+      "samples": 106,
+      "taxa": 58,
+      "covered": 106,
+      "abstentions": 0,
+      "input_sha256": "3ad1463abf6a39783a063fd8d1a1d4faf13dca6b69f162d1668d703669d88d44",
+      "median_bray_curtis": {
+        "prior": 0.25635050749188737,
+        "local": 0.257521865738517,
+        "trust": 0.2563444378855587
+      },
+      "mean_bray_curtis": {
+        "prior": 0.2889016405705197,
+        "local": 0.2835312651091798,
+        "trust": 0.2851158060453041
+      },
+      "trust_minus_prior_median_sample_error": -0.003449292436989715,
+      "trust_minus_prior_difference_of_medians": -6.069606328651389e-06,
+      "alpha_median": 0.5231062206895805,
+      "alpha_min": 0.11368180739409435,
+      "alpha_max": 0.6707982496684616,
+      "fallbacks": 0
+    }
+  ]
+}
