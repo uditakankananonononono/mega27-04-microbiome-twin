@@ -1,0 +1,3 @@
+# Perturbation direction group-label claim correction, 2026-09-28 09:51 IST
+
+The direction evaluator's output still calls caller-supplied group count `independent_experiment_groups`, even though its own note says labels do not prove independence. Change it to `submitted_groups`, hard-set `experiment_independence_verified: false` and `intervention_validated: false` on both scored and no-attempt paths. Retain pooled and macro direction accuracy, coverage and group bootstrap arithmetic unchanged. Confirm synthetic tests cover the zero-attempt path and high-accuracy path without promoting an intervention-validation claim. No real intervention data, environmental change discovery or original audit result is affected.

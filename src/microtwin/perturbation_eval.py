@@ -30,7 +30,8 @@ def direction_accuracy(predicted_change, observed_change, *, groups, threshold=0
         return {"status": "unavailable_no_scored_directions", "eligible": int(eligible.sum()),
                 "attempted": 0, "accuracy": None, "coverage": 0.0,
                 "group_macro_accuracy": None, "group_bootstrap_95ci": None,
-                "attempted_group_summaries": [], "independent_experiment_groups": 0}
+                "attempted_group_summaries": [], "submitted_groups": 0,
+                "experiment_independence_verified":False,"intervention_validated":False}
     group_summaries=[]
     for label in sorted(set(g)):
         member=np.asarray([v==label for v in g],bool)
@@ -51,7 +52,8 @@ def direction_accuracy(predicted_change, observed_change, *, groups, threshold=0
             "attempted": int(attempted.sum()),
             "accuracy": float((np.sign(p[attempted]) == np.sign(y[attempted])).mean()),
             "coverage": float(attempted.sum()/max(int(eligible.sum()),1)),
-            "independent_experiment_groups": len(scores),
+            "submitted_groups": len(scores),"experiment_independence_verified":False,
+            "intervention_validated":False,
             "group_macro_accuracy":macro,"group_bootstrap_95ci":ci,
             "attempted_group_summaries":group_summaries,"group_bootstrap_seed":seed,"group_bootstrap_replicates":n_boot,
-            "note": "Group labels supplied by caller are not proof of experiment independence; the bootstrap interval reflects only resampling submitted group labels and cannot establish causal or cross-source validity."}
+            "note": "Group labels and measured-effect claims are submitted, not independently verified; interval resamples only these labels and cannot establish intervention, causal or cross-source validity."}
