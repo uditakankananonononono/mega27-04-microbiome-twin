@@ -80,7 +80,6 @@ def run():
             'all_source_samples':len(samples),'sample_page_1_byte_hash_changed':sp[0]['sha256']!=previous['api_pages']['samples'][0]['sha256'],
             'exact_mapped_retained_run_columns':len(retained),'unique_retained_linked_samples':len({s['id'] for s in linked}),
             'linked_retained_sample_metadata':fields,'all_source_sample_metadata':all_fields,
-            'canonical_linked_sample_fingerprint_sha256':hashlib.sha256('\n'.join(sorted(s['id'] for s in linked)).encode()).hexdigest(),
             'site_metadata_compatible':True,
             'scope':'post-inspection source-annotation feces compatibility on current exact 400 linked run samples; no independent specimen verification, person/family lineage, historical assay, rights or untouched benchmark'}
 if __name__=='__main__':

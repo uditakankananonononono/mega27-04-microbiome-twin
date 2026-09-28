@@ -93,7 +93,6 @@
       "Homo sapiens": 529
     }
   },
-  "canonical_linked_sample_fingerprint_sha256": "3d4c95af0e37156fdcf8be9bb8d73dcea4232835e030e32cbfdcfb67f08409d1",
   "site_metadata_compatible": true,
   "scope": "post-inspection source-annotation feces compatibility on current exact 400 linked run samples; no independent specimen verification, person/family lineage, historical assay, rights or untouched benchmark"
 }
