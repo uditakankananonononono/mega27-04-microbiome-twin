@@ -20,9 +20,9 @@ def _missing_label(label):
 def heldout_scores(prior_error, interaction_error, *, ids=None, groups=None, n_boot=2000, seed=0, eps=1e-12):
     """Return signed fractional improvement and a grouped-bootstrap ecosystem interval.
 
-    A group represents an independent study or subject; when groups are absent,
-    samples are assumed independent. The interval describes the median on the
-    provided held-out set, not source-transfer validity or model calibration.
+    A caller-supplied group can represent a study or subject but is not proof of
+    independence. Without groups, report the median without an interval. The
+    interval describes this held-out set, not source transfer or calibration.
     """
     prior = np.asarray(prior_error, dtype=float)
     interaction = np.asarray(interaction_error, dtype=float)
@@ -41,6 +41,7 @@ def heldout_scores(prior_error, interaction_error, *, ids=None, groups=None, n_b
     ids = [str(x).strip() for x in ids]
     if len(set(ids)) != n:
         raise ValueError("sample ids must be unique after string normalization")
+    groups_supplied = groups is not None
     groups = ids if groups is None else list(groups)
     if len(groups) != n or any(_missing_label(x) for x in groups):
         raise ValueError("group ids must be nonempty and aligned with errors")
@@ -54,13 +55,14 @@ def heldout_scores(prior_error, interaction_error, *, ids=None, groups=None, n_b
     if not len(good):
         return {"status": "unavailable_no_positive_prior_error", "n": n, "n_scored": 0,
                 "n_zero_prior_error": n, "sample_scores": [None] * n, "sample_ids": ids,
-                "ecosystem_score": None, "ci95": None, "bootstrap_unit": "group"}
+                "ecosystem_score": None, "ci95": None, "bootstrap_unit": "submitted_group_only",
+                "submitted_groups": 0, "interval_status": "unavailable_no_positive_prior_error"}
     labels = np.asarray(groups, dtype=object)[good]
     unique = list(dict.fromkeys(labels.tolist()))
     positions = [good[np.flatnonzero(labels == label)] for label in unique]
     rng = np.random.default_rng(seed)
     boot = []
-    for _ in range(n_boot if len(unique) >= 2 else 0):
+    for _ in range(n_boot if groups_supplied and len(unique) >= 2 else 0):
         chosen = rng.integers(len(positions), size=len(positions))
         draw = np.concatenate([positions[i] for i in chosen])
         boot.append(float(np.median(gain[draw])))
@@ -69,6 +71,7 @@ def heldout_scores(prior_error, interaction_error, *, ids=None, groups=None, n_b
             "sample_scores": [float(x) if np.isfinite(x) else None for x in gain],
             "ecosystem_score": float(np.median(gain[good])),
             "ci95": [float(x) for x in np.percentile(boot, [2.5, 97.5])] if boot else None,
-            "bootstrap_unit": "group", "independent_groups": len(unique),
-            "interval_status": "available" if boot else ("insufficient_independent_groups" if len(unique) < 2 else "disabled"),
-            "interpretation": "paired outer-held-out predictive gain, not causal interaction necessity"}
+            "bootstrap_unit": "submitted_group_only", "submitted_groups": len(unique) if groups_supplied else 0,
+            "group_independence_verified": False,
+            "interval_status": "available_for_submitted_groups" if boot else ("unavailable_no_groups" if not groups_supplied else "insufficient_submitted_groups" if len(unique) < 2 else "disabled"),
+            "interpretation": "Paired outer-held-out predictive gain. Submitted group labels are not proof of independence; no causal interaction necessity or external-source validity."}

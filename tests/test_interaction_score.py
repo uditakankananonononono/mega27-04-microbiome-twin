@@ -9,7 +9,7 @@ def test_positive_and_negative_scores_with_grouped_interval():
     assert out["sample_scores"] == pytest.approx([.5, .5, -.5, -.5])
     assert out["ecosystem_score"] == pytest.approx(0)
     assert out["ci95"] == pytest.approx([-.5, .5])
-    assert out["independent_groups"] == 2
+    assert out["submitted_groups"] == 2
 
 
 def test_zero_prior_cannot_be_sold_as_interaction_gain():
@@ -44,7 +44,7 @@ def test_dependence_cli_reads_only_paired_heldout_errors(tmp_path, capsys):
 def test_single_study_does_not_get_false_interval():
     out = heldout_scores([.2, .3], [.1, .2], groups=["one", "one"])
     assert out["ci95"] is None
-    assert out["interval_status"] == "insufficient_independent_groups"
+    assert out["interval_status"] == "insufficient_submitted_groups"
 
 
 def test_missing_or_normalized_duplicate_identifiers_fail_closed():
@@ -57,7 +57,7 @@ def test_missing_or_normalized_duplicate_identifiers_fail_closed():
     with pytest.raises(ValueError):
         heldout_scores([.2, .3], [.1, .2], ids=[1, "1"])
     out = heldout_scores([.2, .3], [.1, .2], groups=[1, "1"])
-    assert out["independent_groups"] == 1
+    assert out["submitted_groups"] == 1
     assert out["ci95"] is None
 
 
@@ -75,5 +75,12 @@ def test_whitespace_variant_group_is_one_independent_unit():
     with pytest.raises(ValueError, match='unique'):
         heldout_scores([.2,.2], [.1,.1], ids=['a',' a '])
     r=heldout_scores([.2,.2], [.1,.1], groups=['study',' study '])
-    assert r['independent_groups']==1
+    assert r['submitted_groups']==1
     assert r['ci95'] is None
+
+
+def test_ungrouped_multiple_samples_do_not_get_independence_interval():
+    r=heldout_scores([.2,.3],[.1,.2],ids=["a","b"])
+    assert r["ecosystem_score"] is not None
+    assert r["ci95"] is None and r["interval_status"]=="unavailable_no_groups"
+    assert r["submitted_groups"]==0 and not r["group_independence_verified"]

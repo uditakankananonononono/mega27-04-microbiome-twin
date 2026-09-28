@@ -6,9 +6,10 @@
     "people": 58,
     "people_scored": 58,
     "fractional_gain_person_median": -0.002676668561935683,
-    "independent_studies": 1,
+    "submitted_study_groups": 1,
+    "independent_studies_verified": false,
     "study_level_interval": null,
-    "interval_status": "insufficient_independent_groups",
+    "interval_status": "insufficient_submitted_groups",
     "note": "Gain is a paired predictive error contrast, not causal interaction dependence. One viewed test study, not a source-family benchmark; no independent-study uncertainty."
   },
   {
@@ -18,9 +19,10 @@
     "people": 58,
     "people_scored": 58,
     "fractional_gain_person_median": -0.014075350699828012,
-    "independent_studies": 1,
+    "submitted_study_groups": 1,
+    "independent_studies_verified": false,
     "study_level_interval": null,
-    "interval_status": "insufficient_independent_groups",
+    "interval_status": "insufficient_submitted_groups",
     "note": "Gain is a paired predictive error contrast, not causal interaction dependence. One viewed test study, not a source-family benchmark; no independent-study uncertainty."
   },
   {
@@ -30,9 +32,10 @@
     "people": 58,
     "people_scored": 58,
     "fractional_gain_person_median": -0.03365320222515534,
-    "independent_studies": 1,
+    "submitted_study_groups": 1,
+    "independent_studies_verified": false,
     "study_level_interval": null,
-    "interval_status": "insufficient_independent_groups",
+    "interval_status": "insufficient_submitted_groups",
     "note": "Gain is a paired predictive error contrast, not causal interaction dependence. One viewed test study, not a source-family benchmark; no independent-study uncertainty."
   },
   {
@@ -42,9 +45,10 @@
     "people": 58,
     "people_scored": 58,
     "fractional_gain_person_median": -0.05320835450539327,
-    "independent_studies": 1,
+    "submitted_study_groups": 1,
+    "independent_studies_verified": false,
     "study_level_interval": null,
-    "interval_status": "insufficient_independent_groups",
+    "interval_status": "insufficient_submitted_groups",
     "note": "Gain is a paired predictive error contrast, not causal interaction dependence. One viewed test study, not a source-family benchmark; no independent-study uncertainty."
   }
 ]

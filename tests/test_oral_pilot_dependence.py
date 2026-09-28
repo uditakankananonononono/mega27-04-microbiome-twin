@@ -8,6 +8,6 @@ def test_oral_predictive_gain_uses_one_study_not_58_independent_studies():
     from oral_pilot_dependence import summarize
     r=summarize('graphtwin')
     assert r['people']==58 and r['people_scored']==58
-    assert r['independent_studies']==1
+    assert r['submitted_study_groups']==1 and r['independent_studies_verified'] is False
     assert r['study_level_interval'] is None
-    assert r['interval_status']=='insufficient_independent_groups'
+    assert r['interval_status']=='insufficient_submitted_groups'

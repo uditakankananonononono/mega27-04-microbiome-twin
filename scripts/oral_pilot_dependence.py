@@ -35,7 +35,8 @@ def summarize(model='graphtwin'):
             'model':model,'source_json_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),
             'people':score['n'],'people_scored':score['n_scored'],
             'fractional_gain_person_median':score['ecosystem_score'],
-            'independent_studies':score.get('independent_groups',1),
+            'submitted_study_groups':score['submitted_groups'],
+            'independent_studies_verified':False,
             'study_level_interval':score['ci95'],
             'interval_status':score.get('interval_status','unavailable'),
             'note':'Gain is a paired predictive error contrast, not causal interaction dependence. One viewed test study, not a source-family benchmark; no independent-study uncertainty.'}
