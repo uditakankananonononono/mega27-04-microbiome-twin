@@ -1,0 +1,36 @@
+{
+  "as_of": "2026-09-29 07:27 Asia/Kolkata",
+  "stage": "metadata_and_file_registry_only_no_outcome_values",
+  "sources": [
+    {
+      "accession": "OSD-417",
+      "payload": "RR-5",
+      "source_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-417",
+      "file_registry_url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-417/files/",
+      "listed_samples_not_independent_mice": 260,
+      "listed_files": 1157,
+      "amplicon_taxonomy_and_counts_tables": 2,
+      "processed_metaphlan_taxonomy_tables": 1,
+      "shared_per_mouse_host_endpoint_with_rr8": "unknown"
+    },
+    {
+      "accession": "OSD-742",
+      "payload": "RRRM-1/RR-8",
+      "source_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-742",
+      "file_registry_url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-742/files/",
+      "mission_mice_reported": 160,
+      "fecal_animals_reported": 145,
+      "listed_assays": 145,
+      "listed_files": 293,
+      "fastq_gz_files": 290,
+      "processed_species_abundance_table_listed": false,
+      "shared_per_mouse_host_endpoint_with_rr5": "unknown"
+    }
+  ],
+  "source_family_independence": "mission_labels_differ_but_row_level_identity_and_aliases_unchecked",
+  "outcome_table_opened": false,
+  "go_for": "bounded_metadata_and_owning_source_research",
+  "no_go_for": "host_phenotype_prediction_or_new_discovery_claim",
+  "blockers": ["shared_per_mouse_host_endpoint_unverified", "rr8_processed_abundance_unlisted", "mouse_cage_specimen_join_unchecked", "published_comparator_not_frozen"],
+  "protocol": "results/PREREG_20260929_nasa_crossmission_feasibility.md"
+}
