@@ -1,0 +1,54 @@
+[
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_YNG_GI6",
+    "age_weeks": "10 to 12",
+    "condition": "Ground Control",
+    "duration_days": 23,
+    "compressed_bytes": 3175342379,
+    "read_pairs": 12379291,
+    "estimated_host_contamination_percent": 65.48,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI6_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI6_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_YNG_FI1",
+    "age_weeks": "10 to 12",
+    "condition": "Space Flight",
+    "duration_days": 23,
+    "compressed_bytes": 2838854002,
+    "read_pairs": 11477366,
+    "estimated_host_contamination_percent": 84.85,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI1_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI1_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_OLD_GI20",
+    "age_weeks": "32",
+    "condition": "Ground Control",
+    "duration_days": 23,
+    "compressed_bytes": 3074321719,
+    "read_pairs": 11641965,
+    "estimated_host_contamination_percent": 50.72,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI20_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI20_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_OLD_FI11",
+    "age_weeks": "32",
+    "condition": "Space Flight",
+    "duration_days": 23,
+    "compressed_bytes": 2922767289,
+    "read_pairs": 11372165,
+    "estimated_host_contamination_percent": 98.45,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI11_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI11_R2_HRremoved_raw.fastq.gz"
+    ]
+  }
+]

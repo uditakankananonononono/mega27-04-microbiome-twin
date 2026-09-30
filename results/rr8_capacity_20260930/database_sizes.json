@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/mpa_vJan25_CHOCOPhlAnSGB_202503.tar",
+    "bytes": "5118914560"
+  },
+  {
+    "url": "https://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/bowtie2_indexes/mpa_vJan25_CHOCOPhlAnSGB_202503_bt2.tar",
+    "bytes": "35057633280"
+  }
+]

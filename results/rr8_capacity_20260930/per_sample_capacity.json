@@ -1,0 +1,1307 @@
+[
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_OLD_BI1",
+    "compressed_bytes": 2553598597,
+    "read_pairs": 9999022,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI1_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI1_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_OLD_BI2",
+    "compressed_bytes": 2924409259,
+    "read_pairs": 11262163,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI2_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI2_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_OLD_BI3",
+    "compressed_bytes": 2336500536,
+    "read_pairs": 8973225,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI3_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI3_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_OLD_BI4",
+    "compressed_bytes": 3856388142,
+    "read_pairs": 14936956,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI4_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI4_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_OLD_BI5",
+    "compressed_bytes": 4019261506,
+    "read_pairs": 15427475,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI5_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI5_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_OLD_BI6",
+    "compressed_bytes": 3940493294,
+    "read_pairs": 15200511,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI6_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI6_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_OLD_BI7",
+    "compressed_bytes": 2720719238,
+    "read_pairs": 10533381,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI7_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI7_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_OLD_BI8",
+    "compressed_bytes": 3166718748,
+    "read_pairs": 12035597,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI8_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI8_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_OLD_BI9",
+    "compressed_bytes": 4359384805,
+    "read_pairs": 16729951,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI9_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI9_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_OLD_BI10",
+    "compressed_bytes": 2858063872,
+    "read_pairs": 10771419,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI10_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_OLD_BI10_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_YNG_BI11",
+    "compressed_bytes": 2291023099,
+    "read_pairs": 9077981,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI11_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI11_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_YNG_BI12",
+    "compressed_bytes": 3076907356,
+    "read_pairs": 12015353,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI12_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI12_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_YNG_BI13",
+    "compressed_bytes": 2448535880,
+    "read_pairs": 9635171,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI13_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI13_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_YNG_BI14",
+    "compressed_bytes": 3299728330,
+    "read_pairs": 13257268,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI14_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI14_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_YNG_BI15",
+    "compressed_bytes": 3072657498,
+    "read_pairs": 12084213,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI15_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI15_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_YNG_BI16",
+    "compressed_bytes": 2445533281,
+    "read_pairs": 9792538,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI16_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI16_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_YNG_BI17",
+    "compressed_bytes": 2620336756,
+    "read_pairs": 10195987,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI17_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI17_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_YNG_BI18",
+    "compressed_bytes": 3068426461,
+    "read_pairs": 11832325,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI18_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI18_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_YNG_BI19",
+    "compressed_bytes": 2425028658,
+    "read_pairs": 9587990,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI19_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI19_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_ISS-T_YNG_BI20",
+    "compressed_bytes": 3362256659,
+    "read_pairs": 12880658,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI20_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_ISS-T_YNG_BI20_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_YNG_BL1",
+    "compressed_bytes": 2713697535,
+    "read_pairs": 10701669,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL1_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL1_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_YNG_BL2",
+    "compressed_bytes": 3183981058,
+    "read_pairs": 12194011,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL2_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL2_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_YNG_BL3",
+    "compressed_bytes": 2478638195,
+    "read_pairs": 9840818,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL3_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL3_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_YNG_BL4",
+    "compressed_bytes": 3191307750,
+    "read_pairs": 12272354,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL4_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL4_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_YNG_BL5",
+    "compressed_bytes": 3732074807,
+    "read_pairs": 14192395,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL5_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL5_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_YNG_BL6",
+    "compressed_bytes": 3506609444,
+    "read_pairs": 13377124,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL6_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL6_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_YNG_BL7",
+    "compressed_bytes": 3939235585,
+    "read_pairs": 15124162,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL7_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL7_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_YNG_BL8",
+    "compressed_bytes": 3068264708,
+    "read_pairs": 11835619,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL8_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_YNG_BL8_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_OLD_BL12",
+    "compressed_bytes": 3283274394,
+    "read_pairs": 12084884,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL12_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL12_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_OLD_BL13",
+    "compressed_bytes": 3130804978,
+    "read_pairs": 12322285,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL13_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL13_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_OLD_BL14",
+    "compressed_bytes": 4064870091,
+    "read_pairs": 15952987,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL14_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL14_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_OLD_BL15",
+    "compressed_bytes": 3252058773,
+    "read_pairs": 12332614,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL15_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL15_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_OLD_BL17",
+    "compressed_bytes": 3119384835,
+    "read_pairs": 11969383,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL17_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL17_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_OLD_BL18",
+    "compressed_bytes": 3769687184,
+    "read_pairs": 14484810,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL18_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL18_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_OLD_BL19",
+    "compressed_bytes": 3131743603,
+    "read_pairs": 12617074,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL19_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL19_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_BSL_LAR_OLD_BL20",
+    "compressed_bytes": 3161488588,
+    "read_pairs": 12313576,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL20_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_BSL_LAR_OLD_BL20_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_YNG_FI1",
+    "compressed_bytes": 2838854002,
+    "read_pairs": 11477366,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI1_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI1_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_YNG_FI2",
+    "compressed_bytes": 3057865545,
+    "read_pairs": 11901058,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI2_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI2_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_YNG_FI3",
+    "compressed_bytes": 3043515903,
+    "read_pairs": 11829467,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI3_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI3_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_YNG_FI4",
+    "compressed_bytes": 2979326606,
+    "read_pairs": 11710193,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI4_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI4_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_YNG_FI5",
+    "compressed_bytes": 2617602458,
+    "read_pairs": 10329345,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI5_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI5_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_YNG_FI6",
+    "compressed_bytes": 3076744367,
+    "read_pairs": 12001354,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI6_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI6_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_YNG_FI7",
+    "compressed_bytes": 2189568619,
+    "read_pairs": 8625495,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI7_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI7_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_YNG_FI8",
+    "compressed_bytes": 2557812917,
+    "read_pairs": 9524002,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI8_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI8_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_YNG_FI9",
+    "compressed_bytes": 2398216553,
+    "read_pairs": 9521823,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI9_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI9_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_YNG_FI10",
+    "compressed_bytes": 2968710196,
+    "read_pairs": 11950930,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI10_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_YNG_FI10_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_OLD_FI11",
+    "compressed_bytes": 2922767289,
+    "read_pairs": 11372165,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI11_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI11_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_OLD_FI12",
+    "compressed_bytes": 3049941143,
+    "read_pairs": 11783571,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI12_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI12_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_OLD_FI13",
+    "compressed_bytes": 3413212519,
+    "read_pairs": 13088698,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI13_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI13_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_OLD_FI14",
+    "compressed_bytes": 3002233307,
+    "read_pairs": 11628645,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI14_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI14_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_OLD_FI15",
+    "compressed_bytes": 2394109029,
+    "read_pairs": 9256314,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI15_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI15_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_OLD_FI16",
+    "compressed_bytes": 2433360307,
+    "read_pairs": 9473086,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI16_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI16_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_OLD_FI17",
+    "compressed_bytes": 3643820217,
+    "read_pairs": 14069608,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI17_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI17_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_OLD_FI18",
+    "compressed_bytes": 2782891518,
+    "read_pairs": 10822530,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI18_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI18_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_OLD_FI19",
+    "compressed_bytes": 3069400498,
+    "read_pairs": 11962493,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI19_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI19_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_ISS-T_OLD_FI20",
+    "compressed_bytes": 2668117919,
+    "read_pairs": 10339435,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI20_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_ISS-T_OLD_FI20_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_YNG_FL1",
+    "compressed_bytes": 2723510895,
+    "read_pairs": 10325977,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL1_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL1_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_YNG_FL2",
+    "compressed_bytes": 3615977897,
+    "read_pairs": 13702080,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL2_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL2_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_OLD_FL3",
+    "compressed_bytes": 3008984736,
+    "read_pairs": 11618530,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL3_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL3_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_OLD_FL4",
+    "compressed_bytes": 3584591679,
+    "read_pairs": 14368413,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL4_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL4_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_YNG_FL5",
+    "compressed_bytes": 2398738955,
+    "read_pairs": 9251949,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL5_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL5_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_YNG_FL6",
+    "compressed_bytes": 3479174269,
+    "read_pairs": 13780863,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL6_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL6_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_OLD_FL7",
+    "compressed_bytes": 3783748693,
+    "read_pairs": 14448818,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL7_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL7_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_OLD_FL8",
+    "compressed_bytes": 2767483627,
+    "read_pairs": 10606995,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL8_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL8_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_OLD_FL11",
+    "compressed_bytes": 3150729734,
+    "read_pairs": 11959053,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL11_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL11_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_OLD_FL12",
+    "compressed_bytes": 3507382691,
+    "read_pairs": 13608690,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL12_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL12_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_YNG_FL13",
+    "compressed_bytes": 3355804824,
+    "read_pairs": 13587260,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL13_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL13_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_YNG_FL14",
+    "compressed_bytes": 4926554028,
+    "read_pairs": 19358559,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL14_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL14_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_OLD_FL15",
+    "compressed_bytes": 4186602759,
+    "read_pairs": 16705412,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL15_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL15_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_OLD_FL16",
+    "compressed_bytes": 3419392048,
+    "read_pairs": 13274574,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL16_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_OLD_FL16_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_YNG_FL17",
+    "compressed_bytes": 3043072655,
+    "read_pairs": 11575561,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL17_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL17_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_FLT_LAR_YNG_FL18",
+    "compressed_bytes": 3288597383,
+    "read_pairs": 12386814,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL18_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_FLT_LAR_YNG_FL18_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_YNG_GI1",
+    "compressed_bytes": 3597816858,
+    "read_pairs": 13847534,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI1_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI1_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_YNG_GI2",
+    "compressed_bytes": 3602930324,
+    "read_pairs": 13829987,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI2_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI2_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_YNG_GI3",
+    "compressed_bytes": 2621165549,
+    "read_pairs": 10407567,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI3_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI3_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_YNG_GI4",
+    "compressed_bytes": 2722413554,
+    "read_pairs": 10949936,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI4_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI4_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_YNG_GI5",
+    "compressed_bytes": 3290771746,
+    "read_pairs": 12902498,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI5_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI5_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_YNG_GI6",
+    "compressed_bytes": 3175342379,
+    "read_pairs": 12379291,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI6_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI6_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_YNG_GI7",
+    "compressed_bytes": 3475013746,
+    "read_pairs": 13386828,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI7_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI7_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_YNG_GI8",
+    "compressed_bytes": 2860975936,
+    "read_pairs": 11049066,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI8_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI8_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_YNG_GI9",
+    "compressed_bytes": 2518167924,
+    "read_pairs": 9695035,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI9_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI9_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_YNG_GI10",
+    "compressed_bytes": 2729281728,
+    "read_pairs": 10886669,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI10_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_YNG_GI10_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_OLD_GI12",
+    "compressed_bytes": 3196836021,
+    "read_pairs": 12348493,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI12_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI12_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_OLD_GI13",
+    "compressed_bytes": 2751187526,
+    "read_pairs": 10612314,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI13_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI13_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_OLD_GI14",
+    "compressed_bytes": 3053977486,
+    "read_pairs": 11699062,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI14_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI14_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_OLD_GI15",
+    "compressed_bytes": 3641874052,
+    "read_pairs": 14022122,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI15_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI15_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_OLD_GI16",
+    "compressed_bytes": 2617842900,
+    "read_pairs": 10235358,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI16_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI16_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_OLD_GI17",
+    "compressed_bytes": 3168636901,
+    "read_pairs": 12257707,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI17_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI17_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_OLD_GI18",
+    "compressed_bytes": 2440082009,
+    "read_pairs": 9637970,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI18_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI18_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_OLD_GI19",
+    "compressed_bytes": 2640426117,
+    "read_pairs": 10192044,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI19_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI19_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_ISS-T_OLD_GI20",
+    "compressed_bytes": 3074321719,
+    "read_pairs": 11641965,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI20_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_ISS-T_OLD_GI20_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_YNG_GL1",
+    "compressed_bytes": 2975908107,
+    "read_pairs": 11621818,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL1_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL1_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_YNG_GL2",
+    "compressed_bytes": 3332700219,
+    "read_pairs": 12687453,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL2_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL2_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_OLD_GL3",
+    "compressed_bytes": 3523861059,
+    "read_pairs": 13356541,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL3_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL3_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_OLD_GL4",
+    "compressed_bytes": 3678816981,
+    "read_pairs": 13445539,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL4_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL4_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_YNG_GL5",
+    "compressed_bytes": 3360897184,
+    "read_pairs": 13073047,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL5_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL5_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_YNG_GL6",
+    "compressed_bytes": 3577240819,
+    "read_pairs": 14177266,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL6_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL6_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_OLD_GL7",
+    "compressed_bytes": 4336520025,
+    "read_pairs": 16902700,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL7_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL7_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_OLD_GL8",
+    "compressed_bytes": 3559094863,
+    "read_pairs": 14450433,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL8_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL8_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_OLD_GL11",
+    "compressed_bytes": 3347972084,
+    "read_pairs": 12834842,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL11_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL11_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_OLD_GL12",
+    "compressed_bytes": 2824682493,
+    "read_pairs": 10989402,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL12_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL12_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_YNG_GL13",
+    "compressed_bytes": 2924609640,
+    "read_pairs": 11394408,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL13_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL13_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_YNG_GL14",
+    "compressed_bytes": 3373146395,
+    "read_pairs": 13145092,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL14_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL14_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_OLD_GL15",
+    "compressed_bytes": 3457320607,
+    "read_pairs": 13735564,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL15_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL15_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_OLD_GL16",
+    "compressed_bytes": 2124535908,
+    "read_pairs": 8710485,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL16_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_OLD_GL16_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_YNG_GL17",
+    "compressed_bytes": 3867615764,
+    "read_pairs": 15515523,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL17_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL17_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_GC_LAR_YNG_GL18",
+    "compressed_bytes": 3860884140,
+    "read_pairs": 15005613,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL18_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_GC_LAR_YNG_GL18_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_YNG_VI2",
+    "compressed_bytes": 3640011440,
+    "read_pairs": 14187299,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI2_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI2_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_YNG_VI3",
+    "compressed_bytes": 2691843129,
+    "read_pairs": 10734052,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI3_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI3_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_YNG_VI4",
+    "compressed_bytes": 2682585088,
+    "read_pairs": 10271983,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI4_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI4_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_YNG_VI5",
+    "compressed_bytes": 2350715138,
+    "read_pairs": 8886111,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI5_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI5_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_YNG_VI6",
+    "compressed_bytes": 2279145925,
+    "read_pairs": 8989584,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI6_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI6_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_YNG_VI7",
+    "compressed_bytes": 2643836965,
+    "read_pairs": 10546937,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI7_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI7_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_YNG_VI8",
+    "compressed_bytes": 3145456137,
+    "read_pairs": 12284532,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI8_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI8_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_YNG_VI9",
+    "compressed_bytes": 2881447056,
+    "read_pairs": 11191704,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI9_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI9_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_YNG_VI10",
+    "compressed_bytes": 3836638782,
+    "read_pairs": 14589701,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI10_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_YNG_VI10_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_OLD_VI11",
+    "compressed_bytes": 2452501741,
+    "read_pairs": 10009250,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI11_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI11_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_OLD_VI12",
+    "compressed_bytes": 2921921622,
+    "read_pairs": 11507318,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI12_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI12_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_OLD_VI13",
+    "compressed_bytes": 2460789205,
+    "read_pairs": 9523802,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI13_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI13_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_OLD_VI14",
+    "compressed_bytes": 2606548707,
+    "read_pairs": 10342064,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI14_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI14_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_OLD_VI16",
+    "compressed_bytes": 2304845323,
+    "read_pairs": 9119957,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI16_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI16_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_OLD_VI17",
+    "compressed_bytes": 2585224382,
+    "read_pairs": 9922014,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI17_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI17_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_OLD_VI18",
+    "compressed_bytes": 2660047816,
+    "read_pairs": 10190999,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI18_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI18_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_OLD_VI19",
+    "compressed_bytes": 3127444532,
+    "read_pairs": 12046857,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI19_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI19_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_ISS-T_OLD_VI20",
+    "compressed_bytes": 2448988718,
+    "read_pairs": 9421406,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI20_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_ISS-T_OLD_VI20_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_YNG_VL1",
+    "compressed_bytes": 3930253921,
+    "read_pairs": 15618793,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL1_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL1_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_YNG_VL2",
+    "compressed_bytes": 3573542637,
+    "read_pairs": 13742588,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL2_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL2_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_OLD_VL3",
+    "compressed_bytes": 3263600018,
+    "read_pairs": 12559161,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL3_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL3_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_OLD_VL4",
+    "compressed_bytes": 3329920731,
+    "read_pairs": 12789310,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL4_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL4_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_YNG_VL5",
+    "compressed_bytes": 3034541303,
+    "read_pairs": 11471143,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL5_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL5_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_YNG_VL6",
+    "compressed_bytes": 3715566479,
+    "read_pairs": 14300949,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL6_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL6_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_OLD_VL7",
+    "compressed_bytes": 3533236825,
+    "read_pairs": 13747068,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL7_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL7_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_OLD_VL8",
+    "compressed_bytes": 3042638936,
+    "read_pairs": 12082873,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL8_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL8_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_YNG_VL9",
+    "compressed_bytes": 4163453770,
+    "read_pairs": 16368885,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL9_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL9_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_YNG_VL10",
+    "compressed_bytes": 3467525867,
+    "read_pairs": 13621489,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL10_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL10_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_OLD_VL11",
+    "compressed_bytes": 3458644314,
+    "read_pairs": 13989491,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL11_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL11_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_OLD_VL12",
+    "compressed_bytes": 3285803920,
+    "read_pairs": 12847913,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL12_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL12_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_YNG_VL13",
+    "compressed_bytes": 3587654423,
+    "read_pairs": 13748012,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL13_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL13_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_YNG_VL14",
+    "compressed_bytes": 3665488626,
+    "read_pairs": 14023481,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL14_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL14_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_OLD_VL15",
+    "compressed_bytes": 3415190967,
+    "read_pairs": 13324328,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL15_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL15_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_OLD_VL16",
+    "compressed_bytes": 4993643509,
+    "read_pairs": 18998075,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL16_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL16_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_YNG_VL17",
+    "compressed_bytes": 3784970107,
+    "read_pairs": 14641842,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL17_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL17_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_YNG_VL18",
+    "compressed_bytes": 4446565277,
+    "read_pairs": 16036324,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL18_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_YNG_VL18_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_OLD_VL19",
+    "compressed_bytes": 3829463941,
+    "read_pairs": 15106257,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL19_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL19_R2_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "sample": "RRRM1_FCS_VIV_LAR_OLD_VL20",
+    "compressed_bytes": 2877033099,
+    "read_pairs": 11398968,
+    "files": [
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL20_R1_HRremoved_raw.fastq.gz",
+      "GLDS-659_metagenomics_RRRM1_FCS_VIV_LAR_OLD_VL20_R2_HRremoved_raw.fastq.gz"
+    ]
+  }
+]
