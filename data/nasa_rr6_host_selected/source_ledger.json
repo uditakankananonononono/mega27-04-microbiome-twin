@@ -1,0 +1,30 @@
+{
+  "accessed": "2026-09-30",
+  "selected_gene_rows_only": true,
+  "files": {
+    "OSD-247_metadata_OSD-247-ISA.zip": {
+      "registry": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-247/files/",
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-247/download?source=datamanager&file=OSD-247_metadata_OSD-247-ISA.zip",
+      "full_source_bytes": 280565,
+      "full_source_sha256": "8122160fca74fcfcdd2c90fa4087beb9426fc1d7f2ab42cd4120278b11312870"
+    },
+    "GLDS-247_rna_seq_Normalized_Counts_rRNArm_GLbulkRNAseq.csv": {
+      "registry": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-247/files/",
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-247/download?source=datamanager&file=GLDS-247_rna_seq_Normalized_Counts_rRNArm_GLbulkRNAseq.csv",
+      "full_source_bytes": 25194836,
+      "full_source_sha256": "89153d4e558f9aefef72521bf253c168ff51c45b294d8e4dc8fec7283ca646f5"
+    },
+    "OSD-245_metadata_OSD-245-ISA.zip": {
+      "registry": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-245/files/",
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-245/download?source=datamanager&file=OSD-245_metadata_OSD-245-ISA.zip",
+      "full_source_bytes": 282833,
+      "full_source_sha256": "553d83fb6ded1da75fa44ed48d0213884d2fd2a662334047138a120245715c3f"
+    },
+    "GLDS-245_rna_seq_Normalized_Counts_rRNArm_GLbulkRNAseq.csv": {
+      "registry": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-245/files/",
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-245/download?source=datamanager&file=GLDS-245_rna_seq_Normalized_Counts_rRNArm_GLbulkRNAseq.csv",
+      "full_source_bytes": 23701853,
+      "full_source_sha256": "c7ca4daa335e0d89323948bc807c54c1fc4f8d4fc62e4567bb45190ab26bb9e8"
+    }
+  }
+}

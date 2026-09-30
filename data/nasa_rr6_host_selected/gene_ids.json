@@ -1,0 +1,95 @@
+{
+  "Muc2": {
+    "url": "https://mygene.info/v3/query?q=symbol%3AMuc2&species=mouse&fields=symbol%2Censembl.gene&size=3",
+    "result": {
+      "took": 2,
+      "total": 1,
+      "max_score": 15.527513,
+      "hits": [
+        {
+          "_id": "17831",
+          "_score": 15.527513,
+          "ensembl": {
+            "gene": "ENSMUSG00000025515"
+          },
+          "symbol": "Muc2"
+        }
+      ]
+    }
+  },
+  "Ffar2": {
+    "url": "https://mygene.info/v3/query?q=symbol%3AFfar2&species=mouse&fields=symbol%2Censembl.gene&size=3",
+    "result": {
+      "took": 1,
+      "total": 1,
+      "max_score": 16.527529,
+      "hits": [
+        {
+          "_id": "233079",
+          "_score": 16.527529,
+          "ensembl": [
+            {
+              "gene": "ENSNVIG00000018396"
+            },
+            {
+              "gene": "ENSMUSG00000051314"
+            },
+            {
+              "gene": "ENSMSIG00000011857"
+            }
+          ],
+          "symbol": "Ffar2"
+        }
+      ]
+    }
+  },
+  "Cyp7a1": {
+    "url": "https://mygene.info/v3/query?q=symbol%3ACyp7a1&species=mouse&fields=symbol%2Censembl.gene&size=3",
+    "result": {
+      "took": 8,
+      "total": 1,
+      "max_score": 15.573946,
+      "hits": [
+        {
+          "_id": "13122",
+          "_score": 15.573946,
+          "ensembl": [
+            {
+              "gene": "ENSMSIG00000023757"
+            },
+            {
+              "gene": "ENSMUSG00000028240"
+            }
+          ],
+          "symbol": "Cyp7a1"
+        }
+      ]
+    }
+  },
+  "Nr1h4": {
+    "url": "https://mygene.info/v3/query?q=symbol%3ANr1h4&species=mouse&fields=symbol%2Censembl.gene&size=3",
+    "result": {
+      "took": 2,
+      "total": 1,
+      "max_score": 14.705943,
+      "hits": [
+        {
+          "_id": "20186",
+          "_score": 14.705943,
+          "ensembl": [
+            {
+              "gene": "ENSNVIG00000009191"
+            },
+            {
+              "gene": "ENSMUSG00000047638"
+            },
+            {
+              "gene": "ENSMSIG00000017294"
+            }
+          ],
+          "symbol": "Nr1h4"
+        }
+      ]
+    }
+  }
+}

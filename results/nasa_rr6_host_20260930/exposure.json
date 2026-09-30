@@ -1,0 +1,13 @@
+{
+  "opened": "normalized rRNA-removed colon/liver tables downloaded; four selected expression rows inspected",
+  "genes": [
+    "Muc2",
+    "Ffar2",
+    "Cyp7a1",
+    "Nr1h4"
+  ],
+  "microbes": "already exposed OSD-249 profiles",
+  "untouched_holdout": false,
+  "tests": 4,
+  "replicated_discovery": false
+}
