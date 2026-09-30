@@ -1,0 +1,29 @@
+{
+  "all": {
+    "n": 20,
+    "v4_median_pct": 2.1728342201113873,
+    "shotgun_median_pct": 0.10455658378579545,
+    "v4_exceeds_shotgun_pairs": 20,
+    "assigned_only_v4_median_pct": 3.0306077816623915,
+    "assigned_only_shotgun_median_pct": 0.12144499950300477,
+    "assigned_only_direction_count": 20
+  },
+  "ground": {
+    "n": 10,
+    "v4_median_pct": 2.6024472484656265,
+    "shotgun_median_pct": 0.10992930258339015,
+    "v4_exceeds_shotgun_pairs": 10,
+    "assigned_only_v4_median_pct": 3.0778818797607754,
+    "assigned_only_shotgun_median_pct": 0.1173449876070024,
+    "assigned_only_direction_count": 10
+  },
+  "flight": {
+    "n": 10,
+    "v4_median_pct": 1.9386622330441108,
+    "shotgun_median_pct": 0.10455658378579545,
+    "v4_exceeds_shotgun_pairs": 10,
+    "assigned_only_v4_median_pct": 3.0290228016294622,
+    "assigned_only_shotgun_median_pct": 0.12840502568100506,
+    "assigned_only_direction_count": 10
+  }
+}

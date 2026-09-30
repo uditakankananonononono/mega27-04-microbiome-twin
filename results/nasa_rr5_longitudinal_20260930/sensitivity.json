@@ -1,0 +1,38 @@
+[
+  {
+    "variant": "genus_assigned_only",
+    "group": "Ground Control",
+    "n": 10,
+    "farther_at_9": 7,
+    "median_distance_45": 0.15609020179338692,
+    "median_distance_9": 0.272518096607098,
+    "median_paired_delta": 0.10875445298070051
+  },
+  {
+    "variant": "genus_assigned_only",
+    "group": "Space Flight",
+    "n": 10,
+    "farther_at_9": 8,
+    "median_distance_45": 0.2001811598595022,
+    "median_distance_9": 0.47040177006309436,
+    "median_paired_delta": 0.2650081825643437
+  },
+  {
+    "variant": "exclude_Parabacteroides",
+    "group": "Ground Control",
+    "n": 10,
+    "farther_at_9": 5,
+    "median_distance_45": 0.4010207932952592,
+    "median_distance_9": 0.5312441645801037,
+    "median_paired_delta": 0.19565592703507573
+  },
+  {
+    "variant": "exclude_Parabacteroides",
+    "group": "Space Flight",
+    "n": 10,
+    "farther_at_9": 9,
+    "median_distance_45": 0.4469123207278496,
+    "median_distance_9": 0.7954481587403799,
+    "median_paired_delta": 0.35819037934559506
+  }
+]

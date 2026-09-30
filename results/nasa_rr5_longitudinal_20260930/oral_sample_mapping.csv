@@ -1,0 +1,61 @@
+col,rfid,group,cage,time,sample
+Pre0B59_S4_L001,0B59,Ground Control,215,Launch plus 0,0B59_Pre-flight_Week 0_Oral Swab
+Pre0646_S1_L001,0646,Ground Control,215,Launch plus 0,0646_Pre-flight_Week 0_Oral Swab
+Pre7262_S6_L001,7262,Ground Control,215,Launch plus 0,7262_Pre-flight_Week 0_Oral Swab
+Pre406C_S3_L001,406C,Ground Control,215,Launch plus 0,406C_Pre-flight_Week 0_Oral Swab
+Pre340E_S8_L001,340E,Ground Control,215,Launch plus 0,340E_Pre-flight_Week 0_Oral Swab
+Pre0302_S10_L001,0302,Ground Control,215,Launch plus 0,0302_Pre-flight_Week 0_Oral Swab
+Pre6E50_S5_L001,6E50,Ground Control,215,Launch plus 0,6E50_Pre-flight_Week 0_Oral Swab
+Pre471D_S9_L001,471D,Ground Control,215,Launch plus 0,471D_Pre-flight_Week 0_Oral Swab
+Pre0B2B_S7_L001,0B2B,Ground Control,215,Launch plus 0,0B2B_Pre-flight_Week 0_Oral Swab
+Pre591C_S2_L001,591C,Ground Control,215,Launch plus 0,591C_Pre-flight_Week 0_Oral Swab
+Pre4D34_S11_L001,4D34,Space Flight,216,Launch plus 0,4D34_Pre-flight_Week 0_Oral Swab
+Pre5D52_S15_L001,5D52,Space Flight,216,Launch plus 0,5D52_Pre-flight_Week 0_Oral Swab
+Pre7C29_S20_L001,7C29,Space Flight,216,Launch plus 0,7C29_Pre-flight_Week 0_Oral Swab
+Pre7D1C_S19_L001,7D1C,Space Flight,216,Launch plus 0,7D1C_Pre-flight_Week 0_Oral Swab
+Pre0023_S18_L001,0023,Space Flight,216,Launch plus 0,0023_Pre-flight_Week 0_Oral Swab
+Pre167D_S17_L001,167D,Space Flight,216,Launch plus 0,167D_Pre-flight_Week 0_Oral Swab
+Pre737F_S16_L001,737F,Space Flight,216,Launch plus 0,737F_Pre-flight_Week 0_Oral Swab
+Pre2D17_S12_L001,2D17,Space Flight,216,Launch plus 0,2D17_Pre-flight_Week 0_Oral Swab
+Pre671C_S14_L001,671C,Space Flight,216,Launch plus 0,671C_Pre-flight_Week 0_Oral Swab
+Pre6807_S13_L001,6807,Space Flight,216,Launch plus 0,6807_Pre-flight_Week 0_Oral Swab
+t10B59_S44_L001,0B59,Ground Control,215,Launch plus 4.5,0B59_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t10646_S41_L001,0646,Ground Control,215,Launch plus 4.5,0646_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t17262_S46_L001,7262,Ground Control,215,Launch plus 4.5,7262_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t1406C_S43_L001,406C,Ground Control,215,Launch plus 4.5,406C_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t1340E_S48_L001,340E,Ground Control,215,Launch plus 4.5,340E_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t10302_S50_L001,0302,Ground Control,215,Launch plus 4.5,0302_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t16E50_S45_L001,6E50,Ground Control,215,Launch plus 4.5,6E50_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t1471D_S49_L001,471D,Ground Control,215,Launch plus 4.5,471D_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t10B2B_S47_L001,0B2B,Ground Control,215,Launch plus 4.5,0B2B_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t1591C_S42_L001,591C,Ground Control,215,Launch plus 4.5,591C_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t14D34_S51_L001,4D34,Space Flight,216,Launch plus 4.5,4D34_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t15D52_S55_L001,5D52,Space Flight,216,Launch plus 4.5,5D52_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t17C29_S60_L001,7C29,Space Flight,216,Launch plus 4.5,7C29_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t17D1C_S59_L001,7D1C,Space Flight,216,Launch plus 4.5,7D1C_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t10023_S58_L001,0023,Space Flight,216,Launch plus 4.5,0023_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t1167D_S57_L001,167D,Space Flight,216,Launch plus 4.5,167D_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t1737F_S56_L001,737F,Space Flight,216,Launch plus 4.5,737F_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t12D17_S52_L001,2D17,Space Flight,216,Launch plus 4.5,2D17_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t1671C_S54_L001,671C,Space Flight,216,Launch plus 4.5,671C_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t16807_S53_L001,6807,Space Flight,216,Launch plus 4.5,6807_Live Animal Return to Earth_4.5 weeks_Oral Swab
+t20B59_S64_L001,0B59,Ground Control,216,Launch plus 9,0B59_Termination_Week 9_Oral Swab
+t20646_S61_L001,0646,Ground Control,216,Launch plus 9,0646_Termination_Week 9_Oral Swab
+t27262_S66_L001,7262,Ground Control,215,Launch plus 9,7262_Termination_Week 9_Oral Swab
+t2406C_S63_L001,406C,Ground Control,215,Launch plus 9,406C_Termination_Week 9_Oral Swab
+t2340E_S68_L001,340E,Ground Control,215,Launch plus 9,340E_Termination_Week 9_Oral Swab
+t20302_S70_L001,0302,Ground Control,215,Launch plus 9,0302_Termination_Week 9_Oral Swab
+t26E50_S65_L001,6E50,Ground Control,215,Launch plus 9,6E50_Termination_Week 9_Oral Swab
+t2471D_S69_L001,471D,Ground Control,215,Launch plus 9,471D_Termination_Week 9_Oral Swab
+t20B2B_S67_L001,0B2B,Ground Control,215,Launch plus 9,0B2B_Termination_Week 9_Oral Swab
+t2591C_S62_L001,591C,Ground Control,215,Launch plus 9,591C_Termination_Week 9_Oral Swab
+t24D34_S71_L001,4D34,Space Flight,216,Launch plus 9,4D34_Termination_Week 9_Oral Swab
+t25D52_S75_L001,5D52,Space Flight,216,Launch plus 9,5D52_Termination_Week 9_Oral Swab
+t27C29_S80_L001,7C29,Space Flight,216,Launch plus 9,7C29_Termination_Week 9_Oral Swab
+t27D1C_S79_L001,7D1C,Space Flight,216,Launch plus 9,7D1C_Termination_Week 9_Oral Swab
+t20023_S78_L001,0023,Space Flight,216,Launch plus 9,0023_Termination_Week 9_Oral Swab
+t2167D_S77_L001,167D,Space Flight,216,Launch plus 9,167D_Termination_Week 9_Oral Swab
+t2737F_S76_L001,737F,Space Flight,216,Launch plus 9,737F_Termination_Week 9_Oral Swab
+t22D17_S72_L001,2D17,Space Flight,216,Launch plus 9,2D17_Termination_Week 9_Oral Swab
+t2671C_S74_L001,671C,Space Flight,216,Launch plus 9,671C_Termination_Week 9_Oral Swab
+t26807_S73_L001,6807,Space Flight,216,Launch plus 9,6807_Termination_Week 9_Oral Swab

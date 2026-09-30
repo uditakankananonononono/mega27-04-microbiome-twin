@@ -1,0 +1,26 @@
+{
+  "accessed": "2026-09-30 Asia/Kolkata",
+  "registry_url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-417/files/",
+  "files": {
+    "GLDS-417_GAmplicon_V4-taxonomy-and-counts.tsv": {
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-417/download?source=datamanager&file=GLDS-417_GAmplicon_V4-taxonomy-and-counts.tsv",
+      "bytes": 168829,
+      "sha256": "c0ffd58213c7eefe702f3af48367f67664de7a4da61bf6c6a421d9e751f9a23b"
+    },
+    "GLDS-417_GAmplicon_V1V3-taxonomy-and-counts.tsv": {
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-417/download?source=datamanager&file=GLDS-417_GAmplicon_V1V3-taxonomy-and-counts.tsv",
+      "bytes": 262838,
+      "sha256": "50f0cadc8510f61d963292dc188f8848239bc4ea32daf189416c98b7869f51bf"
+    },
+    "GLDS-417_GMetagenomics_Metaphlan-taxonomy_GLmetagenomics.tsv": {
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-417/download?source=datamanager&file=GLDS-417_GMetagenomics_Metaphlan-taxonomy_GLmetagenomics.tsv",
+      "bytes": 178808,
+      "sha256": "65cc81be2861e8753900e33bd5404f9db5ace1fce3ab4bbdfa959a47c16a3093"
+    },
+    "OSD-417_metadata_OSD-417-ISA.zip": {
+      "url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-417/download?source=datamanager&file=OSD-417_metadata_OSD-417-ISA.zip",
+      "bytes": 637738,
+      "sha256": "82cc4d00d67d0c91361186a44eb5ba94196868d325fb13b41aac9741761f2703"
+    }
+  }
+}

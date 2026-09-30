@@ -1,0 +1,23 @@
+{
+  "n_matched_mice": 20,
+  "cages": [
+    214,
+    217
+  ],
+  "groups": {
+    "Ground Control": 10,
+    "Space Flight": 10
+  },
+  "shared_genera": 16,
+  "tested_genera": 16,
+  "q_lt_005": 11,
+  "median_bray_curtis": 0.5300958137723701,
+  "v4_unassigned_median_pct": 25.74269005921955,
+  "shotgun_unclassified_median_pct": 11.205795,
+  "result_type": "exploratory measurement concordance, not independent biological replication",
+  "input_sha256": {
+    "GLDS-417_GMetagenomics_Metaphlan-taxonomy_GLmetagenomics.tsv": "65cc81be2861e8753900e33bd5404f9db5ace1fce3ab4bbdfa959a47c16a3093",
+    "GLDS-417_GAmplicon_V4-taxonomy-and-counts.tsv": "c0ffd58213c7eefe702f3af48367f67664de7a4da61bf6c6a421d9e751f9a23b",
+    "GLDS-417_GAmplicon_V1V3-taxonomy-and-counts.tsv": "50f0cadc8510f61d963292dc188f8848239bc4ea32daf189416c98b7869f51bf"
+  }
+}

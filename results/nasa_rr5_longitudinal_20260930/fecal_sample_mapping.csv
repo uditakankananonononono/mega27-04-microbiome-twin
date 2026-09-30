@@ -1,0 +1,61 @@
+col,rfid,group,cage,time,sample
+215-340E-pre,340E,Ground Control,215,Launch plus 0,340E_Pre-flight_Week 0_Fresh Fecal Pellet
+215-0646-pre,0646,Ground Control,215,Launch plus 0,0646_Pre-flight_Week 0_Fresh Fecal Pellet
+215-0B2B-pre,0B2B,Ground Control,215,Launch plus 0,0B2B_Pre-flight_Week 0_Fresh Fecal Pellet
+215-471D-pre,471D,Ground Control,215,Launch plus 0,471D_Pre-flight_Week 0_Fresh Fecal Pellet
+215-406C-pre,406C,Ground Control,215,Launch plus 0,406C_Pre-flight_Week 0_Fresh Fecal Pellet
+215-0302-pre,0302,Ground Control,215,Launch plus 0,0302_Pre-flight_Week 0_Fresh Fecal Pellet
+215-7262-pre,7262,Ground Control,215,Launch plus 0,7262_Pre-flight_Week 0_Fresh Fecal Pellet
+215-591C-pre,591C,Ground Control,215,Launch plus 0,591C_Pre-flight_Week 0_Fresh Fecal Pellet
+215-0B59-pre,0B59,Ground Control,215,Launch plus 0,0B59_Pre-flight_Week 0_Fresh Fecal Pellet
+215-6E50-pre,6E50,Ground Control,215,Launch plus 0,6E50_Pre-flight_Week 0_Fresh Fecal Pellet
+216-4D34-pre,4D34,Space Flight,216,Launch plus 0,4D34_Pre-flight_Week 0_Fresh Fecal Pellet
+216-5D52-pre,5D52,Space Flight,216,Launch plus 0,5D52_Pre-flight_Week 0_Fresh Fecal Pellet
+216-7C29-pre,7C29,Space Flight,216,Launch plus 0,7C29_Pre-flight_Week 0_Fresh Fecal Pellet
+216-7D1C-pre,7D1C,Space Flight,216,Launch plus 0,7D1C_Pre-flight_Week 0_Fresh Fecal Pellet
+216-0023-pre,0023,Space Flight,216,Launch plus 0,0023_Pre-flight_Week 0_Fresh Fecal Pellet
+216-167D-pre,167D,Space Flight,216,Launch plus 0,167D_Pre-flight_Week 0_Fresh Fecal Pellet
+216-737F-pre,737F,Space Flight,216,Launch plus 0,737F_Pre-flight_Week 0_Fresh Fecal Pellet
+216-2D17-pre,2D17,Space Flight,216,Launch plus 0,2D17_Pre-flight_Week 0_Fresh Fecal Pellet
+216-671C-pre,671C,Space Flight,216,Launch plus 0,671C_Pre-flight_Week 0_Fresh Fecal Pellet
+216-6807-pre,6807,Space Flight,216,Launch plus 0,6807_Pre-flight_Week 0_Fresh Fecal Pellet
+215-0B59-t-1,0B59,Ground Control,215,Launch plus 4.5,0B59_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+215-0646-t-1,0646,Ground Control,215,Launch plus 4.5,0646_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+215-7262-t-1,7262,Ground Control,215,Launch plus 4.5,7262_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+215-406C-t-1,406C,Ground Control,215,Launch plus 4.5,406C_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+215-340E-t-1,340E,Ground Control,215,Launch plus 4.5,340E_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+215-0302-t-1,0302,Ground Control,215,Launch plus 4.5,0302_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+215-6E50-t-1,6E50,Ground Control,215,Launch plus 4.5,6E50_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+215-471D-t-1,471D,Ground Control,215,Launch plus 4.5,471D_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+215-0B2B-t-1,0B2B,Ground Control,215,Launch plus 4.5,0B2B_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+215-591C-t-1,591C,Ground Control,215,Launch plus 4.5,591C_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+216-4D34-t-1,4D34,Space Flight,216,Launch plus 4.5,4D34_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+216-5D52-t-1,5D52,Space Flight,216,Launch plus 4.5,5D52_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+216-7C29-t-1,7C29,Space Flight,216,Launch plus 4.5,7C29_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+216-7D1C-t-1,7D1C,Space Flight,216,Launch plus 4.5,7D1C_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+216-0023-t-1,0023,Space Flight,216,Launch plus 4.5,0023_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+216-167D-t-1,167D,Space Flight,216,Launch plus 4.5,167D_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+216-737F-t-1,737F,Space Flight,216,Launch plus 4.5,737F_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+216-2D17-t-1,2D17,Space Flight,216,Launch plus 4.5,2D17_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+216-671C-t-1,671C,Space Flight,216,Launch plus 4.5,671C_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+216-6807-t-1,6807,Space Flight,216,Launch plus 4.5,6807_Live Animal Return to Earth_4.5 weeks_Fresh Fecal Pellet
+215-0B59-t-2,0B59,Ground Control,215,Launch plus 9,0B59_Termination_Week 9_Fresh Fecal Pellet
+215-0646-t-2,0646,Ground Control,215,Launch plus 9,0646_Termination_Week 9_Fresh Fecal Pellet
+215-7262-t-2,7262,Ground Control,215,Launch plus 9,7262_Termination_Week 9_Fresh Fecal Pellet
+215-406C-t-2,406C,Ground Control,215,Launch plus 9,406C_Termination_Week 9_Fresh Fecal Pellet
+215-340E-t-2,340E,Ground Control,215,Launch plus 9,340E_Termination_Week 9_Fresh Fecal Pellet
+215-0302-t-2,0302,Ground Control,215,Launch plus 9,0302_Termination_Week 9_Fresh Fecal Pellet
+215-6E50-t-2,6E50,Ground Control,215,Launch plus 9,6E50_Termination_Week 9_Fresh Fecal Pellet
+215-471D-t-2,471D,Ground Control,215,Launch plus 9,471D_Termination_Week 9_Fresh Fecal Pellet
+215-0B2B-t-2,0B2B,Ground Control,215,Launch plus 9,0B2B_Termination_Week 9_Fresh Fecal Pellet
+215-591C-t-2,591C,Ground Control,215,Launch plus 9,591C_Termination_Week 9_Fresh Fecal Pellet
+216-4D34-t-2,4D34,Space Flight,216,Launch plus 9,4D34_Termination_Week 9_Fresh Fecal Pellet
+216-5D52-t-2,5D52,Space Flight,216,Launch plus 9,5D52_Termination_Week 9_Fresh Fecal Pellet
+216-7C29-t-2,7C29,Space Flight,216,Launch plus 9,7C29_Termination_Week 9_Fresh Fecal Pellet
+216-7D1C-t-2,7D1C,Space Flight,216,Launch plus 9,7D1C_Termination_Week 9_Fresh Fecal Pellet
+216-0023-t-2,0023,Space Flight,216,Launch plus 9,0023_Termination_Week 9_Fresh Fecal Pellet
+216-167D-t-2,167D,Space Flight,216,Launch plus 9,167D_Termination_Week 9_Fresh Fecal Pellet
+216-737F-t-2,737F,Space Flight,216,Launch plus 9,737F_Termination_Week 9_Fresh Fecal Pellet
+216-2D17-t-2,2D17,Space Flight,216,Launch plus 9,2D17_Termination_Week 9_Fresh Fecal Pellet
+216-671C-t-2,671C,Space Flight,216,Launch plus 9,671C_Termination_Week 9_Fresh Fecal Pellet
+216-6807-t-2,6807,Space Flight,216,Launch plus 9,6807_Termination_Week 9_Fresh Fecal Pellet

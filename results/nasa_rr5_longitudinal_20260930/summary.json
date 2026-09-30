@@ -1,0 +1,50 @@
+[
+  {
+    "assay": "fecal",
+    "group": "Ground Control",
+    "n_mice": 10,
+    "cages": [
+      215
+    ],
+    "median_distance_45": 0.14143294414385055,
+    "median_distance_9": 0.28737769655429124,
+    "median_recovery_difference": 0.1263917511131724,
+    "closer_to_baseline_at_9": 2
+  },
+  {
+    "assay": "fecal",
+    "group": "Space Flight",
+    "n_mice": 10,
+    "cages": [
+      216
+    ],
+    "median_distance_45": 0.20205226164215911,
+    "median_distance_9": 0.4564373554069391,
+    "median_recovery_difference": 0.2309615851139655,
+    "closer_to_baseline_at_9": 1
+  },
+  {
+    "assay": "oral",
+    "group": "Ground Control",
+    "n_mice": 10,
+    "cages": [
+      215
+    ],
+    "median_distance_45": 0.3130569197811395,
+    "median_distance_9": 0.4028341779865849,
+    "median_recovery_difference": 0.16512069301717783,
+    "closer_to_baseline_at_9": 3
+  },
+  {
+    "assay": "oral",
+    "group": "Space Flight",
+    "n_mice": 10,
+    "cages": [
+      216
+    ],
+    "median_distance_45": 0.41909187256165215,
+    "median_distance_9": 0.49409846633097065,
+    "median_recovery_difference": -0.013164700735806816,
+    "closer_to_baseline_at_9": 5
+  }
+]
