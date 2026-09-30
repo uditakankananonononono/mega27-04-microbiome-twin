@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-30",
+  "opened": "full normalized rRNA-removed colon/liver expression matrices for global analysis",
+  "role": "exploratory full-panel RV tests",
+  "primary_tests": 2,
+  "sensitivities": 4,
+  "permutations_per_test": 9999,
+  "holdout": false,
+  "discovery_gate": false
+}
