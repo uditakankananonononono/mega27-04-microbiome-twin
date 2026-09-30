@@ -1,0 +1,9 @@
+{
+  "source": "OSD-249/RR-6",
+  "date": "2026-09-30",
+  "opened": "three MetaPhlAn tables, FluidAA processed table and ISA metadata",
+  "role": "exploratory cross-mission assay discrepancy and shotgun library sensitivity",
+  "untouched_holdout": false,
+  "independent_biology_replication": false,
+  "known_identity_duplicate": "ALSDA source 3E6E"
+}

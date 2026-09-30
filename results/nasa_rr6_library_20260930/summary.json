@@ -1,0 +1,30 @@
+{
+  "n_matched_samples": 48,
+  "biospecimen_subject_id_values_not_individual_count": 6,
+  "sample_identity_caveat": "48 distinct sample/source labels; alternate ALSDA source IDs contain duplicate 3E6E and Biospecimen Subject ID is cohort-level",
+  "same_extract_per_sample": true,
+  "nxtaflex_unknown_median_pct": 37.15499,
+  "swift_unknown_median_pct": 34.55307,
+  "swift_lower_unknown_pairs": 43,
+  "median_paired_unknown_difference_pp": -3.451265000000006,
+  "assigned_bray_curtis_median": 0.023317900338464932,
+  "Blautia": {
+    "NxtaFlex": {
+      "amplicon_median_pct": 0.5560106221399265,
+      "shotgun_median_pct": 0.027162993784690802,
+      "amplicon_higher_pairs": 43,
+      "assigned_only_amplicon_median_pct": 0.7725677004163422,
+      "assigned_only_shotgun_median_pct": 0.055794994420500524,
+      "assigned_only_amplicon_higher_pairs": 44
+    },
+    "Swift1S": {
+      "amplicon_median_pct": 0.5560106221399265,
+      "shotgun_median_pct": 0.0309924151732732,
+      "amplicon_higher_pairs": 43,
+      "assigned_only_amplicon_median_pct": 0.7725677004163422,
+      "assigned_only_shotgun_median_pct": 0.05635499999999993,
+      "assigned_only_amplicon_higher_pairs": 44
+    }
+  },
+  "status": "exploratory library-preparation sensitivity, not biological flight effect"
+}
