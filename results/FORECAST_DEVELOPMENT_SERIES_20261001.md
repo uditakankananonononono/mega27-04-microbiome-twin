@@ -1,0 +1,17 @@
+# Closed development series: four frozen measurement units
+2026-10-01. NUH forecast-model iteration is closed. No new NUH forecast fits planned. The larger-cohort validation route stays parked behind the source requirements in the transition-ridge plan.
+
+These units do not share a single leaderboard: PLOS differs in cohort/assay; the first NUH diagnostic scores unprojected deltas, whereas later units use projected composition forecasts. NUH was exposed development throughout. Public published findings had already been read before PLOS abundance scoring. Local protocol commits are not independently registered timestamps.
+
+| Unit | Frozen protocol | Primary measurements | Honest outcome |
+|---|---|---|---|
+| NUH stage-transition donor diagnostic | PREREG_20261001_nuh_stage_transition.md | Conditional direction median 62.43%, nearest3 58.64%; coverage 54.38%/61.44%; paired difference -3.79 points, CI -9.92,+2.24 | No supported gain; useful-win=False (no predefined useful-win gate in this first unit). Post-primary common-scored sensitivity labelled separately |
+| PLOS 2008 cipro OTU directions | PREREG_20261001_plos_cipro_direction.md, commit 28e6cba | Zero-wrong macro median 55.32%, nearest donor 56.30%, decline-only 66.95% | Both donor methods lose to decline-only; useful-win=False; n=3, no inferential generalization |
+| Shipped NUH interaction-score forecast | PREREG_20261001_nuh_interaction_forecast.md, commit 92c9873 | Mean BC interaction .6693, matched prior .6846, persistence .5351, group donor .5316, nearest3 .5643 | Matched-prior gain -.01534 (CI -.02478,-.00656) but loses to useful references; useful-win=False |
+| NUH baseline-conditioned transition ridge | PREREG_20261001_nuh_transition_ridge_PLAN.md, commit 6557531 | Mean BC .6435 vs .5351/.5316/.5643 references; zero-wrong direction 63.07% vs group donor 61.63% and decline-only 55.88% | Secondary direction criterion passes, all frozen BC criteria fail; useful-win=False explicitly in JSON |
+
+The four units do not establish that all learned forecasts fail universally, or that sample size alone explains failure. One early unit is a donor-only diagnostic and one is a different n=3 cohort. Direct NUH model comparisons show the two tested learned composition forecasts lose to persistence/projected donor references under their frozen settings. They justify stopping this development loop, not declaring a biological impossibility.
+
+Limits retained: NUH drug/course and Case/Control semantics unresolved; submitted subject labels not certified independent biology; no POST/recovery labels in predictors. PLOS has 3 subjects, no untreated controls, OTU-level not validated species, same source family as PNAS. No causal antibiotic-response, clinical prediction, strongest-tool benchmark beat, independently replicated discovery or perturbation-validation gate is credited. The ridge has a single transition type, stage conditioning is task selection only. Bootstrap intervals are descriptive submitted-subject resampling on repeatedly viewed development data.
+
+Result files: nuh_stage_transition_20261001.json; plos_cipro_direction_20261001.json; nuh_interaction_forecast_20261001.json; nuh_transition_ridge_20261001.json. Corresponding README files retain detailed denominators, coverage, failed comparisons and sources. Archived historical 160-study results remain unchanged. Paper/Drive binaries unchanged.
