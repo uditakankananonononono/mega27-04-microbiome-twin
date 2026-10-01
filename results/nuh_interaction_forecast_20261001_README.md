@@ -1,0 +1,11 @@
+# Shipped interaction-score stage forecast: development result
+
+Locally frozen protocol 92c9873, 24 submitted NUH subject labels, 255 species, lambda=100, one CPU/BLAS thread. Actual computation took 2.45 seconds (120-second cap). This runs microtwin.audit.fit_interaction, not GraphTwin. It fits other subjects' DURING compositions and queries held-out PRE presence, not held-out DURING assemblage. No future POST/recovery labels. Full input table and earlier development results were already exposed.
+
+Mean Bray-Curtis error (lower better): interaction 0.6693; matched no-interaction log-prior 0.6846; persistence 0.5351; projected same-group median donor 0.5316; projected nearest-three donor 0.5643. Interaction beats its matched prior in 19/24 subjects, paired mean difference -0.01534, subject-bootstrap 95% interval [-0.02478,-0.00656]. Yet it loses to persistence by +0.13421, interval [0.05491,0.21052], and loses to both donor forecasts. The limited matched-prior gain does not establish useful transition forecasting or causal interactions. Same-group donor projections differ from earlier unprojected-change baselines, as frozen in this test.
+
+Secondary zero-wrong direction accuracy: interaction 53.92%, matched prior 53.39%, group median 61.63%, nearest-three 56.95%, decline-only 55.88%; persistence abstains on all directions. Interaction coverage is 92.16%. Zero-change forecasts are not rewarded. Subject bootstrap intervals describe resampling submitted labels, not proof of independence or external validity.
+
+Model limitation: training a composition-from-assemblage interaction model on DURING examples does not turn it into a drug/time-conditioned dynamical model. PRE presence gives no path to taxa absent at PRE; failures on newly observed taxa remain in the error. Drug, dose, timing and Case/Control semantics remain unverified. No antibiotic effect, clinical or untouched-validation claim; no benchmark/discovery/perturbation gate credited. Further development must first beat persistence and comparable donor forecasts before an external-win story is considered.
+
+Source: https://raw.githubusercontent.com/CSB5/Recovery_Determinants_Study/d374f5e7c09da659d407af5664604b81451c5df4/Data/NUH_StoolSamples_MetaPhlAn2.txt
