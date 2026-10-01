@@ -31,3 +31,16 @@ def test_cli_measurement_mismatch_returns_failure(tmp_path,capsys):
 def test_cli_bad_shape_returns_failure(tmp_path,capsys):
  from microtwin.cli import main
  p=tmp_path/'contracts.json';p.write_text('[]');assert main(['check-assays',str(p)])==2
+
+@pytest.mark.parametrize('change,ok',[(None,True),('assay',False),('source_family',False),('unit',False)])
+def test_checked_prediction_enforces_contract(tmp_path,capsys,change,ok):
+ import json
+ from microtwin.cli import main
+ t=tmp_path/'t.csv';t.write_text('sample_id,A,B\ns1,2,0\ns2,0,2\n');q=tmp_path/'q.csv';q.write_text('sample_id,A,B\nx1,1,1\n')
+ b=base();b['unit']='counts';c=b.copy()
+ if change:c[change]='different' if change!='unit' else 'relative_abundance'
+ f=tmp_path/'contract.json';f.write_text(json.dumps({'train':b,'query':c}));out=tmp_path/'o.csv'
+ code=main(['predict-checked',str(t),str(q),'--contracts',str(f),'--unit','counts','--source-id','RR5','--processing-authorized','--out',str(out)])
+ assert code==(0 if ok else 2) and out.exists()==ok
+ if ok:
+  report=json.loads(capsys.readouterr().out);assert report['contract_sha256'] and not report['external_validation']

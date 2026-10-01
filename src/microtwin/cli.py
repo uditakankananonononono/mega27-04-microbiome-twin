@@ -159,6 +159,43 @@ def cmd_screen_sources(a):
     return 0 if report['metadata_ready_for_manual_review'] else 2
 
 
+def cmd_predict_checked(a):
+    from pathlib import Path
+    import hashlib
+    from .assay_contract import assess_measurement_contract
+    try:
+        path=Path(a.contracts)
+        if not path.is_file() or path.stat().st_size>1_000_000:
+            raise ValueError('missing or oversized contract JSON')
+        raw=path.read_bytes();obj=json.loads(raw)
+        if not isinstance(obj,dict) or set(obj)!={'train','query'}:
+            raise ValueError('contract JSON requires exactly train and query')
+        check=assess_measurement_contract(obj['train'],obj['query'])
+        if not check['measurement_fields_match']:
+            raise ValueError('measurement mismatch: '+', '.join(check['mismatched_fields']))
+        if obj['train']['source_family']!=obj['query']['source_family']:
+            raise ValueError('cross-source prediction lacks an independently validated bridge; abstaining')
+        if obj['train']['unit']!=a.unit or obj['train']['source_family']!=a.source_id:
+            raise ValueError('contract unit/source must match prediction request')
+        from .local_predict import predict_local
+        result,report=predict_local(a.train,a.query,unit=a.unit,source_id=a.source_id,
+                                   processing_authorized=a.processing_authorized,subject_map=a.subject_map)
+        if path.read_bytes()!=raw:
+            raise ValueError('measurement contract changed during prediction')
+        dest=Path(a.out)
+        if dest.suffix.lower()!='.csv' or dest.exists() or not dest.parent.is_dir():
+            raise ValueError('output must be a new CSV in an existing directory')
+        report['measurement_contract']=check
+        report['contract_sha256']=hashlib.sha256(raw).hexdigest()
+        report['output_file']=str(dest)
+        with dest.open('x',newline='') as handle:result.to_csv(handle,index=False)
+    except (OSError,ValueError,TypeError) as e:
+        print(f'checked prediction abstained: {e}',file=sys.stderr)
+        return 2
+    print(json.dumps(report,indent=2))
+    return 0
+
+
 def cmd_check_assays(a):
     from pathlib import Path
     from .assay_contract import assess_measurement_contract
@@ -227,6 +264,11 @@ def main(argv=None):
     mc=sp.add_parser('check-assays',help='local measurement-contract gate; never certifies source transfer')
     mc.add_argument('contracts',help='JSON with train/query source, material, assay, taxonomy, pipeline and unit')
     mc.set_defaults(f=cmd_check_assays)
+    pc=sp.add_parser('predict-checked',help='same-source research baseline with required measurement contract')
+    pc.add_argument('train');pc.add_argument('query');pc.add_argument('--contracts',required=True)
+    pc.add_argument('--unit',choices=('counts','relative_abundance','absolute_abundance'),required=True)
+    pc.add_argument('--source-id',required=True);pc.add_argument('--processing-authorized',action='store_true')
+    pc.add_argument('--subject-map');pc.add_argument('--out',required=True);pc.set_defaults(f=cmd_predict_checked)
     a = ap.parse_args(argv); return a.f(a)
 
 
