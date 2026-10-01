@@ -1,0 +1,42 @@
+{
+  "task": "noncausal PRE-to-DURING stage-transition development diagnostic",
+  "subjects": 24,
+  "species_features": 255,
+  "groups": {
+    "Case": 13,
+    "Control": 11
+  },
+  "methods": {
+    "group_median": {
+      "subject_macro_accuracy": 0.6242730782597774,
+      "subject_macro_coverage": 0.5438046899303779,
+      "subjects_no_scored_taxa": 0,
+      "total_eligible_taxon_changes": 913,
+      "total_scored_taxon_changes": 489
+    },
+    "nearest3": {
+      "subject_macro_accuracy": 0.586363094746798,
+      "subject_macro_coverage": 0.6143556255569581,
+      "subjects_no_scored_taxa": 0,
+      "total_eligible_taxon_changes": 913,
+      "total_scored_taxon_changes": 566
+    }
+  },
+  "paired_subjects": 24,
+  "nearest3_minus_group_median_accuracy": -0.03790998351297923,
+  "paired_subject_bootstrap_ci95": [
+    -0.09920155307019868,
+    0.02238906321666195
+  ],
+  "source_sha256": "c978b8469113c81ec1e54a8a99e555609d52671bc039e0f62c6ce7f8dba75224",
+  "external_win_certified": false,
+  "antibiotic_effect_claim": false,
+  "common_scored_taxa_sensitivity": {
+    "subjects": 24,
+    "nearest3_minus_group_median_accuracy": -0.02218661622972432,
+    "ci95": [
+      -0.07452220186295684,
+      0.029528192300276288
+    ]
+  }
+}
