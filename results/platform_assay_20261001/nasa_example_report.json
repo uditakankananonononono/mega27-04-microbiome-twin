@@ -1,0 +1,13 @@
+{
+  "measurement_fields_match": false,
+  "mismatched_fields": [
+    "assay",
+    "taxonomy_version",
+    "processing_pipeline"
+  ],
+  "independent_source_family_claimed": false,
+  "transfer_eligible": false,
+  "individual_twin_eligible": false,
+  "status": "abstain_measurement_mismatch",
+  "note": "Matching labels do not verify identities, rights, independence or external calibration. Different assays require a validated bridge; equal genus names do not establish equal measurements."
+}

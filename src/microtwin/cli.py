@@ -159,6 +159,24 @@ def cmd_screen_sources(a):
     return 0 if report['metadata_ready_for_manual_review'] else 2
 
 
+def cmd_check_assays(a):
+    from pathlib import Path
+    from .assay_contract import assess_measurement_contract
+    try:
+        path=Path(a.contracts)
+        if not path.is_file() or path.stat().st_size>1_000_000:
+            raise ValueError('missing or oversized contract JSON (1 MB maximum)')
+        obj=json.loads(path.read_text())
+        if not isinstance(obj,dict) or set(obj)!={'train','query'}:
+            raise ValueError('contract JSON requires exactly train and query objects')
+        report=assess_measurement_contract(obj['train'],obj['query'])
+    except (OSError,ValueError,TypeError) as e:
+        print(f'cannot check measurement contracts: {e}',file=sys.stderr)
+        return 2
+    print(json.dumps(report,indent=2))
+    return 0 if report['measurement_fields_match'] else 2
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="microtwin")
     sp = ap.add_subparsers(dest="cmd", required=True)
@@ -206,6 +224,9 @@ def main(argv=None):
     sc = sp.add_parser('screen-sources', help='local metadata-only admission screen; never final benchmark eligibility')
     sc.add_argument('matrix', help='JSON object with n_studies and rows, at most 1 MB/1000 records')
     sc.set_defaults(f=cmd_screen_sources)
+    mc=sp.add_parser('check-assays',help='local measurement-contract gate; never certifies source transfer')
+    mc.add_argument('contracts',help='JSON with train/query source, material, assay, taxonomy, pipeline and unit')
+    mc.set_defaults(f=cmd_check_assays)
     a = ap.parse_args(argv); return a.f(a)
 
 
