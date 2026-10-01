@@ -1,5 +1,5 @@
 # Frozen NUH stage-transition development diagnostic
-Frozen 2026-10-01 13:15 IST before any direction metric. Abundance tables have been schema-parsed; this is exposed development, not untouched final validation.
+Written 2026-10-01 in the same sequential shell unit before the first direction computation (unit completed at 13:14:54 IST). No independent timestamped preregistration service was used. Abundance tables have been schema-parsed; this is exposed development, not untouched final validation.
 
 Non-causal task: predict relative species change from author-labelled PRE to DURING within submitted Case/Control strata. Treatment identities unverified; never call this an antibiotic effect. Use all 24 subjects with exactly one PRE and one DURING. Select only species-terminal MetaPhlAn rows, exclude higher ranks and strain children, normalize species mass to one. No future POST or recovery label in predictors.
 
