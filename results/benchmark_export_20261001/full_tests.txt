@@ -1,0 +1,13 @@
+........................................................................ [ 21%]
+........................................................................ [ 43%]
+.........................................................s.............. [ 65%]
+........................................................................ [ 87%]
+........................................                                 [100%]
+=============================== warnings summary ===============================
+tests/test_twinstack.py::test_lgbm_smoke
+  /home/sandbox/.venv-micro/lib/python3.10/site-packages/lightgbm/basic.py:2120: UserWarning: categorical_feature keyword has been found in `params` and will be ignored.
+  Please use categorical_feature argument of the Dataset constructor to pass this parameter.
+    _log_warning(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+327 passed, 1 skipped, 1 warning in 50.18s

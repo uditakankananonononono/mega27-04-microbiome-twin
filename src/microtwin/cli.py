@@ -214,6 +214,17 @@ def cmd_check_assays(a):
     return 0 if report['measurement_fields_match'] else 2
 
 
+def cmd_export_benchmark(a):
+    from .benchmark_export import export_paired_report
+    try:
+        report=export_paired_report(a.losses,a.partitions,n_boot=a.n_boot,seed=a.seed)
+    except (OSError,ValueError,TypeError) as e:
+        print(f'benchmark report refused: {e}',file=sys.stderr)
+        return 2
+    print(json.dumps(report,indent=2))
+    return 0
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="microtwin")
     sp = ap.add_subparsers(dest="cmd", required=True)
@@ -269,6 +280,8 @@ def main(argv=None):
     pc.add_argument('--unit',choices=('counts','relative_abundance','absolute_abundance'),required=True)
     pc.add_argument('--source-id',required=True);pc.add_argument('--processing-authorized',action='store_true')
     pc.add_argument('--subject-map');pc.add_argument('--out',required=True);pc.set_defaults(f=cmd_predict_checked)
+    be=sp.add_parser('export-benchmark',help='subject-checked submitted loss report; no fit or certified win')
+    be.add_argument('losses');be.add_argument('partitions');be.add_argument('--n-boot',type=int,default=2000);be.add_argument('--seed',type=int,default=0);be.set_defaults(f=cmd_export_benchmark)
     a = ap.parse_args(argv); return a.f(a)
 
 

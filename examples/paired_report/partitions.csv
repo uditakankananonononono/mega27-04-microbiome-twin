@@ -1,0 +1,5 @@
+sample_id,subject_id,fold,partition
+a,A,1,test
+b,B,1,train
+a,A,2,train
+b,B,2,test

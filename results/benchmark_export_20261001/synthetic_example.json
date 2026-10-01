@@ -1,0 +1,69 @@
+{
+  "status": "submitted_loss_report_not_a_model_run",
+  "n_samples": 2,
+  "n_subject_labels": 2,
+  "n_folds": 2,
+  "subject_partition_check": "exact_submitted_labels_passed",
+  "source_independence_verified": false,
+  "external_win_certified": false,
+  "input_sha256": [
+    "16acf86076722aa0b977730a25442f687397611f13019c7cfd16ee9e606f8145",
+    "76201ce180a4ddc2b3f3594a6df71233f6e6703216a397cf2987d705c112098d"
+  ],
+  "predictive_dependence": {
+    "status": "heldout_predictive_score",
+    "n": 2,
+    "n_scored": 2,
+    "n_zero_prior_error": 0,
+    "sample_ids": [
+      "a",
+      "b"
+    ],
+    "sample_scores": [
+      0.5,
+      0.19999999999999996
+    ],
+    "ecosystem_score": 0.35,
+    "ci95": [
+      0.19999999999999996,
+      0.5
+    ],
+    "bootstrap_unit": "submitted_group_only",
+    "submitted_groups": 2,
+    "group_independence_verified": false,
+    "interval_status": "available_for_submitted_groups",
+    "interpretation": "Paired outer-held-out predictive gain. Submitted group labels are not proof of independence; no causal interaction necessity or external-source validity."
+  },
+  "reliability": {
+    "components": {
+      "prediction_accuracy": {
+        "status": "missing"
+      },
+      "interaction_dependence": {
+        "status": "reported_unvalidated",
+        "value": 0.35,
+        "source": "submitted paired outer-test losses"
+      },
+      "uncertainty_calibration": {
+        "status": "missing"
+      },
+      "transferability": {
+        "status": "missing"
+      },
+      "robustness": {
+        "status": "missing"
+      }
+    },
+    "twin_reliability_index": null,
+    "index_status": "unavailable_no_independently_validated_calibrator",
+    "all_components_present": false,
+    "calibration_registry_provided": false,
+    "domain": null,
+    "note": "This is a research evidence ledger, not a clinical risk score."
+  },
+  "limitations": [
+    "Submitted errors and subject labels are not independently verified.",
+    "No model fitting, assay audit, source-family certification or clinical prediction.",
+    "Other reliability components stay missing; no composite index is invented."
+  ]
+}
