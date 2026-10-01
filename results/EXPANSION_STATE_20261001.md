@@ -34,3 +34,6 @@ Checked baseline predictions accept paired train/query subject maps and fail bef
 
 ## 13:38 local multimodal metadata CLI
 `check-multimodal` exposes strict submitted source/subject/time/aliquot alignment with bounded input and no participant IDs in output. Common rows and submitted source+subject groups are counted separately; repeated timepoints do not inflate subject count. Success is only a metadata candidate, not a physical-specimen/assay/rights/independent-biology certificate. Fresh suite: 363 passed, 1 skipped, one existing LightGBM warning, 48.90 seconds. Paired biological validation/discovery gate remains open.
+
+## 13:38 lane gated on external inputs
+Active state: gated on external inputs. Larger-scale source admission waits for a cohort meeting the frozen source requirements; no active cohort hunt. RR-8 pilot remains parked pending the user's decision, with no spending, provisioning, download or reminder initiated. NUH forecast iteration remains closed. Until a gate changes, only low-cadence real bug fixes/test hardening; no further upgrade completion implied by CLI wrappers. Scientific target gates and paper body-length gate remain open.
