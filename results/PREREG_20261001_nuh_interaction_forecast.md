@@ -1,0 +1,14 @@
+# Frozen shipped interaction-score NUH development forecast
+2026-10-01, locally committed before this model computation. Abundance tables/results already exposed development; not an untouched holdout. Exact drug, course and Case/Control exposure definitions remain unknown; PRE/DURING stage labels only. Non-causal prospective-computation stage forecast, not antibiotic-response validation.
+
+Use original NUH table's 255 species-terminal MetaPhlAn rows, no higher ranks/strain children; normalize species mass. Exactly one PRE and DURING per 24 subject labels. No POST or recovery annotations used. Full vocabulary already exposed, no outcome-dependent feature selection. Leave one entire subject out; fit shipped microtwin.audit.fit_interaction on other 23 subjects' DURING composition, fixed lambda=100, default min_n=5. Its input is assemblage presence, not drug/time or baseline abundance. Predict held-out DURING from PRE presence only, never held-out DURING presence. Same-fit log-linear no-interaction prior is the matched comparator. All training groups pooled for interaction/prior, with no assumed Case/Control drug meaning. Zero abundance on taxa absent at PRE is a model limitation and remains in errors.
+
+References: persistence (PRE unchanged), decline-only (direction reference only), other same-submitted-group median delta, nearest-three PRE same-group donor median delta using Bray-Curtis distance and deterministic subject-label ties. For donor composition forecasts clip PRE+delta nonnegative and normalize; fail if total zero. Donor direction uses the final clipped/normalized forecast minus PRE, not the earlier unprojected delta test; no comparison of mismatched definitions.
+
+Primary endpoint: subject-mean Bray-Curtis DURING error, interaction versus matched prior and persistence, report per-subject paired difference and 2000-subject-bootstrap 95% interval, seed 20261001. No correction-free significance or causal/generalization claim. Secondary: direction accuracy on observed absolute changes >=0.001, zero predictions (abs <=1e-12) count wrong, subject macro plus nonzero coverage, and decline-only reference. Baseline forecasts and model fits must be finite/simplex. Freeze no tuning, 24 fits, 255 species, single BLAS/CPU thread, 120-second cap, no GPU/download/paid resource. Record timing and held-out-outcome invariance check.
+
+Any gain remains development evidence only. This is the shipped interaction-score path, not GraphTwin and not proof that learned coefficients identify causal ecological interactions. No current benchmark, discovery or intervention gate credited.
+
+Sources:
+- https://raw.githubusercontent.com/CSB5/Recovery_Determinants_Study/d374f5e7c09da659d407af5664604b81451c5df4/Data/NUH_StoolSamples_MetaPhlAn2.txt
+- https://www.nature.com/articles/s41559-020-1236-0
