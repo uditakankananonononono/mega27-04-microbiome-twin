@@ -28,3 +28,6 @@ Strict `predict-checked --manifest` can write a new private local JSON receipt b
 
 ## 13:35 strict submitted-subject partitions
 Checked baseline predictions accept paired train/query subject maps and fail before output if subjects overlap despite different sample IDs, or maps have missing/duplicate/whitespace labels. Query map requires train map. Train-only/no maps remain explicitly unverified for query subjects. Optional receipts bind both maps. This checks exact submitted pseudonyms, not biological independence. Fresh suite: 341 passed, 1 skipped, one existing LightGBM warning, 46.14 seconds. No scientific gate closed.
+
+## 13:36 checked marginal-calibration route
+`predict-calibrated-checked` requires train/calibration/query measurement contracts and refuses mismatched source, assay, material, taxonomy, pipeline or unit. Legacy calibration remains reproducible but explicitly unverified without contracts. Existing exact submitted-subject partition guard and marginal exchangeability-only radius remain intact. Matching labels do not certify assay identities, rights, independent people or external coverage. Fresh suite: 356 passed, 1 skipped, one existing LightGBM warning, 46.59 seconds. No additional model training or scientific gate closed.

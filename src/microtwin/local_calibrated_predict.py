@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import hashlib
 import csv
+import json
 from pathlib import Path
 
 import numpy as np
@@ -20,7 +21,17 @@ from .research_intake import inspect_local_matrix
 
 def predict_with_radius(train_path, calibration_path, query_path, *, unit, source_id,
                         processing_authorized=False, subject_map=None, calibration_subject_map=None,
-                        query_subject_map=None, alpha=.1):
+                        query_subject_map=None, alpha=.1, contracts=None):
+    contract_raw=None;checks=None
+    if contracts is not None:
+        path=Path(contracts)
+        if not path.is_file() or path.stat().st_size>1_000_000:raise ValueError('missing or oversized contracts')
+        contract_raw=path.read_bytes();obj=json.loads(contract_raw)
+        if not isinstance(obj,dict) or set(obj)!={'train','calibration','query'}:raise ValueError('exact train/calibration/query contracts required')
+        from .assay_contract import assess_measurement_contract
+        checks={role:assess_measurement_contract(obj['train'],obj[role]) for role in ('calibration','query')}
+        if any(not check['measurement_fields_match'] for check in checks.values()):raise ValueError('calibrated measurement mismatch')
+        if any(obj[role]['source_family']!=source_id or obj[role]['unit']!=unit for role in obj):raise ValueError('same-source/unit contracts required; no validated cross-source bridge')
     maps=(subject_map,calibration_subject_map,query_subject_map)
     if any(path is not None for path in maps) and not all(path is not None for path in maps):
         raise ValueError('train, calibration and query subject maps must be supplied together')
@@ -96,6 +107,11 @@ def predict_with_radius(train_path, calibration_path, query_path, *, unit, sourc
     report['subject_partition_check']={'status':'exact_submitted_labels_disjoint' if subject_hashes else 'unverified_no_maps',
                                        'maps_supplied':bool(subject_hashes),
                                        'limitation':'Exact supplied pseudonyms cannot prove distinct people or cross-source exchangeability.'}
+    if contract_raw is not None:
+        if Path(contracts).read_bytes()!=contract_raw:raise ValueError('contracts changed during calibrated prediction')
+        report['measurement_contract_checks']=checks
+        report['contract_sha256']=hashlib.sha256(contract_raw).hexdigest()
+    report['measurement_contract_status']='matched_submitted_labels_only' if contracts is not None else 'unverified_legacy_no_contract'
     report['calibration_sha256']=cal_hash
     report['calibration_samples']=len(cal_ids)
     report['uncertainty']={'metric':'Bray-Curtis error radius','radius':bound['radius'],

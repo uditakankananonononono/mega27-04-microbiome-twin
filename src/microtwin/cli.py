@@ -119,7 +119,7 @@ def cmd_predict_calibrated(a):
                                              unit=a.unit, source_id=a.source_id,
                                              processing_authorized=a.processing_authorized,
                                              subject_map=a.subject_map, calibration_subject_map=a.calibration_subject_map,
-                                             query_subject_map=a.query_subject_map, alpha=a.alpha)
+                                             query_subject_map=a.query_subject_map, alpha=a.alpha, contracts=a.contracts)
         from pathlib import Path
         dest = Path(a.out)
         if dest.suffix.lower() != '.csv':
@@ -130,7 +130,7 @@ def cmd_predict_calibrated(a):
             raise ValueError('output parent directory does not exist')
         with dest.open('x', newline='') as handle:
             result.to_csv(handle, index=False)
-    except ValueError as e:
+    except (ValueError,OSError,TypeError) as e:
         sys.exit(str(e))
     report['output_file'] = str(dest)
     print(json.dumps(report, indent=2))
@@ -314,7 +314,13 @@ def main(argv=None):
     c.add_argument('--query-subject-map', help='exact query subject map CSV')
     c.add_argument('--alpha', type=float, default=.1)
     c.add_argument('--out', required=True, help='new local CSV path')
+    c.add_argument('--contracts',help='optional JSON train/calibration/query measurement labels')
     c.set_defaults(f=cmd_predict_calibrated)
+    cc=sp.add_parser('predict-calibrated-checked',help='same-source marginal-calibrated research baseline with required measurement contracts')
+    cc.add_argument('train');cc.add_argument('calibration');cc.add_argument('query');cc.add_argument('--contracts',required=True)
+    cc.add_argument('--unit',choices=('counts','relative_abundance','absolute_abundance'),required=True);cc.add_argument('--source-id',required=True)
+    cc.add_argument('--processing-authorized',action='store_true');cc.add_argument('--subject-map');cc.add_argument('--calibration-subject-map');cc.add_argument('--query-subject-map')
+    cc.add_argument('--alpha',type=float,default=.1);cc.add_argument('--out',required=True);cc.set_defaults(f=cmd_predict_calibrated)
     sc = sp.add_parser('screen-sources', help='local metadata-only admission screen; never final benchmark eligibility')
     sc.add_argument('matrix', help='JSON object with n_studies and rows, at most 1 MB/1000 records')
     sc.set_defaults(f=cmd_screen_sources)
