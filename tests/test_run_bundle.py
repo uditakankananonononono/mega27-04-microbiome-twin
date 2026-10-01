@@ -41,3 +41,16 @@ def test_subject_map_receipt(tmp_path):
  assert main(verify)==2
  assert main(verify+['--subject-map',str(s)])==0
  s.write_text(s.read_text()+'\n');assert main(verify+['--subject-map',str(s)])==2
+
+@pytest.mark.parametrize('label,passes',[('c',True),('a',False),('',False),(' c',False)])
+def test_two_subject_maps(tmp_path,label,passes):
+ args,t,q,c,o,m=run(tmp_path);s=tmp_path/'subjects.csv';s.write_text('sample_id,subject_id\ns1,a\ns2,b\n');qs=tmp_path/'query_subjects.csv';qs.write_text('sample_id,subject_id\nx1,'+label+'\n')
+ assert main(args+['--subject-map',str(s),'--query-subject-map',str(qs)])==(0 if passes else 2)
+ if passes:
+  verify=['verify-bundle',str(m),'--train',str(t),'--query',str(q),'--contracts',str(c),'--prediction',str(o),'--subject-map',str(s)]
+  assert main(verify)==2 and main(verify+['--query-subject-map',str(qs)])==0
+ else:assert not o.exists() and not m.exists()
+
+def test_query_map_without_train(tmp_path):
+ args,t,q,c,o,m=run(tmp_path);s=tmp_path/'qs.csv';s.write_text('sample_id,subject_id\nx1,c\n')
+ assert main(args+['--query-subject-map',str(s)])==2 and not o.exists()
