@@ -59,5 +59,8 @@ def assess_strict_alignment(modality_records, *, min_paired=20):
     return {'status':'metadata_aligned_candidate' if len(common)>=min_paired else 'insufficient_paired_samples',
             'modalities':len(by_modality),'modality_counts':{name:len(rows) for name,rows in by_modality.items()},
             'aligned_common_samples':len(common),
+            'submitted_subject_groups':len({next(iter(by_modality.values()))[sid][:2] for sid in common}),
+            'submitted_source_families':len({next(iter(by_modality.values()))[sid][0] for sid in common}),
+            'submitted_collection_times':len({next(iter(by_modality.values()))[sid][2] for sid in common}),
             'physical_aliquot_verified':False,'biological_independence_verified':False,
             'note':'Exact submitted source/subject/time/aliquot labels agree, but labels alone cannot verify specimens, people, rights, assays or source-family independence.'}

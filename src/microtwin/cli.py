@@ -242,6 +242,22 @@ def cmd_verify_bundle(a):
     return 0
 
 
+def cmd_check_multimodal(a):
+    from pathlib import Path
+    from .multimodal import assess_strict_alignment
+    try:
+        path=Path(a.records)
+        if not path.is_file() or path.stat().st_size>1_000_000:raise ValueError('missing or oversized JSON (1 MB maximum)')
+        obj=json.loads(path.read_text())
+        if not isinstance(obj,dict) or any(not isinstance(v,list) or len(v)>10000 for v in obj.values()):raise ValueError('modality record arrays required, at most 10000 each')
+        report=assess_strict_alignment(obj,min_paired=a.min_paired)
+    except (OSError,ValueError,TypeError) as e:
+        print(f'multimodal preflight failed: {e}',file=sys.stderr)
+        return 2
+    print(json.dumps(report,indent=2))
+    return 0 if report['status']=='metadata_aligned_candidate' else 2
+
+
 def cmd_check_assays(a):
     from pathlib import Path
     from .assay_contract import assess_measurement_contract
@@ -337,6 +353,8 @@ def main(argv=None):
     vb=sp.add_parser('verify-bundle',help='verify local artifact hashes; no authenticity/scientific certificate')
     vb.add_argument('manifest');vb.add_argument('--train',required=True);vb.add_argument('--query',required=True)
     vb.add_argument('--subject-map');vb.add_argument('--query-subject-map');vb.add_argument('--contracts',required=True);vb.add_argument('--prediction',required=True);vb.set_defaults(f=cmd_verify_bundle)
+    mm=sp.add_parser('check-multimodal',help='exact submitted metadata alignment; not independent specimens or biology')
+    mm.add_argument('records');mm.add_argument('--min-paired',type=int,default=20);mm.set_defaults(f=cmd_check_multimodal)
     a = ap.parse_args(argv); return a.f(a)
 
 

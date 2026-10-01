@@ -31,3 +31,6 @@ Checked baseline predictions accept paired train/query subject maps and fail bef
 
 ## 13:36 checked marginal-calibration route
 `predict-calibrated-checked` requires train/calibration/query measurement contracts and refuses mismatched source, assay, material, taxonomy, pipeline or unit. Legacy calibration remains reproducible but explicitly unverified without contracts. Existing exact submitted-subject partition guard and marginal exchangeability-only radius remain intact. Matching labels do not certify assay identities, rights, independent people or external coverage. Fresh suite: 356 passed, 1 skipped, one existing LightGBM warning, 46.59 seconds. No additional model training or scientific gate closed.
+
+## 13:38 local multimodal metadata CLI
+`check-multimodal` exposes strict submitted source/subject/time/aliquot alignment with bounded input and no participant IDs in output. Common rows and submitted source+subject groups are counted separately; repeated timepoints do not inflate subject count. Success is only a metadata candidate, not a physical-specimen/assay/rights/independent-biology certificate. Fresh suite: 363 passed, 1 skipped, one existing LightGBM warning, 48.90 seconds. Paired biological validation/discovery gate remains open.
