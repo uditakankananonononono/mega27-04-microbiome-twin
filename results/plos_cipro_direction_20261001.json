@@ -1,0 +1,93 @@
+{
+  "question": "small-n day -1 to +5 ciprofloxacin OTU direction check",
+  "n_subjects": 3,
+  "otus": 5670,
+  "source_sha256": "4fbe0c8ffb0c121851ca791bdce5ee7da8977920315908e70e6014d3990273cc",
+  "per_subject": [
+    {
+      "subject": "A",
+      "eligible_otus": 75,
+      "nearest_donor": "C",
+      "methods": {
+        "median_other2": {
+          "accuracy_zero_wrong": 0.7066666666666667,
+          "coverage": 1.0,
+          "conditional_nonzero_accuracy": 0.7066666666666667,
+          "correct": 53
+        },
+        "nearest_pre_donor": {
+          "accuracy_zero_wrong": 0.8,
+          "coverage": 1.0,
+          "conditional_nonzero_accuracy": 0.8,
+          "correct": 60
+        },
+        "decline_only": {
+          "accuracy_zero_wrong": 0.7466666666666667,
+          "coverage": 1.0,
+          "conditional_nonzero_accuracy": 0.7466666666666667,
+          "correct": 56
+        }
+      }
+    },
+    {
+      "subject": "B",
+      "eligible_otus": 74,
+      "nearest_donor": "C",
+      "methods": {
+        "median_other2": {
+          "accuracy_zero_wrong": 0.3783783783783784,
+          "coverage": 0.7027027027027027,
+          "conditional_nonzero_accuracy": 0.5384615384615384,
+          "correct": 28
+        },
+        "nearest_pre_donor": {
+          "accuracy_zero_wrong": 0.3783783783783784,
+          "coverage": 0.6756756756756757,
+          "conditional_nonzero_accuracy": 0.56,
+          "correct": 28
+        },
+        "decline_only": {
+          "accuracy_zero_wrong": 0.581081081081081,
+          "coverage": 1.0,
+          "conditional_nonzero_accuracy": 0.581081081081081,
+          "correct": 43
+        }
+      }
+    },
+    {
+      "subject": "C",
+      "eligible_otus": 94,
+      "nearest_donor": "A",
+      "methods": {
+        "median_other2": {
+          "accuracy_zero_wrong": 0.574468085106383,
+          "coverage": 0.8829787234042553,
+          "conditional_nonzero_accuracy": 0.6506024096385542,
+          "correct": 54
+        },
+        "nearest_pre_donor": {
+          "accuracy_zero_wrong": 0.5106382978723404,
+          "coverage": 0.7340425531914894,
+          "conditional_nonzero_accuracy": 0.6956521739130435,
+          "correct": 48
+        },
+        "decline_only": {
+          "accuracy_zero_wrong": 0.6808510638297872,
+          "coverage": 1.0,
+          "conditional_nonzero_accuracy": 0.6808510638297872,
+          "correct": 64
+        }
+      }
+    }
+  ],
+  "macro_accuracy_zero_wrong": {
+    "median_other2": 0.5531710433838094,
+    "nearest_pre_donor": 0.5630055587502395,
+    "decline_only": 0.6695329371925117
+  },
+  "nearest_minus_median": 0.009834515366430097,
+  "held_out_outcome_invariance_test": "PASS",
+  "causal_effect_claim": false,
+  "generalization_claim": false,
+  "benchmark_win_certified": false
+}
