@@ -60,3 +60,12 @@ Use `microtwin predict-checked TRAIN QUERY --contracts CONTRACTS.json --unit cou
 ### Subject-checked benchmark report export
 
 `microtwin export-benchmark examples/paired_report/losses.csv examples/paired_report/partitions.csv --n-boot 100` links submitted paired outer-test losses to an exact sample/subject/fold manifest. It refuses within-fold subject leakage, duplicate outer-test samples and mismatched loss rows. It exports predictive gain with submitted-subject bootstrap plus the transparent reliability ledger; missing accuracy/calibration/transfer/robustness components stay missing. This imports errors, not models, and cannot verify that supplied losses were really held out or that identities are independent. The included two-sample example is synthetic software evidence only, never a scientific win. It does not fit or orchestrate model training.
+
+### Local integrity receipt for checked predictions
+Add `--manifest receipt.json` to `predict-checked` to write a new local receipt binding the train/query/measurement-contract bytes and predicted CSV. If subject grouping is supplied, its map is bound too. The receipt does not copy input tables. Keep it private: the run report can contain local paths and source labels.
+
+Verify a saved run against explicit local files:
+```
+microtwin verify-bundle receipt.json --train train.csv --query query.csv --contracts contracts.json --prediction predicted.csv
+```
+Add `--subject-map subjects.csv` if used for that run. Existing receipt/output paths are not overwritten. Verification detects accidental byte changes relative to the receipt, not an attacker replacing both files and receipt. This is not a signature, rights/identity check, independent validation or a clinical certificate. No upload, hosted service or model training occurs.

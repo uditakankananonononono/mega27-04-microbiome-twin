@@ -178,6 +178,7 @@ def cmd_predict_checked(a):
         if obj['train']['unit']!=a.unit or obj['train']['source_family']!=a.source_id:
             raise ValueError('contract unit/source must match prediction request')
         from .local_predict import predict_local
+        map_raw=Path(a.subject_map).read_bytes() if a.subject_map else None
         result,report=predict_local(a.train,a.query,unit=a.unit,source_id=a.source_id,
                                    processing_authorized=a.processing_authorized,subject_map=a.subject_map)
         if path.read_bytes()!=raw:
@@ -187,12 +188,41 @@ def cmd_predict_checked(a):
             raise ValueError('output must be a new CSV in an existing directory')
         report['measurement_contract']=check
         report['contract_sha256']=hashlib.sha256(raw).hexdigest()
+        if map_raw is not None:
+            if Path(a.subject_map).read_bytes()!=map_raw:raise ValueError('subject map changed during checked prediction')
+            if a.manifest:report['subject_map_sha256']=hashlib.sha256(map_raw).hexdigest()
         report['output_file']=str(dest)
+        manifest=Path(a.manifest) if a.manifest else None
+        if manifest is not None and (manifest==dest or manifest.exists() or not manifest.parent.is_dir() or manifest.suffix.lower()!='.json'):
+            raise ValueError('manifest must be a new JSON path distinct from output')
         with dest.open('x',newline='') as handle:result.to_csv(handle,index=False)
+        if manifest is not None:
+            try:
+                from .run_bundle import receipt
+                files={'train':a.train,'query':a.query,'contracts':a.contracts,'prediction':dest}
+                if a.subject_map:files['subject_map']=a.subject_map
+                bundle=receipt(files,report)
+                with manifest.open('x') as handle:json.dump(bundle,handle,indent=2)
+            except Exception:
+                dest.unlink(missing_ok=True)
+                raise
     except (OSError,ValueError,TypeError) as e:
         print(f'checked prediction abstained: {e}',file=sys.stderr)
         return 2
     print(json.dumps(report,indent=2))
+    return 0
+
+
+def cmd_verify_bundle(a):
+    from .run_bundle import verify
+    try:
+        files=dict(train=a.train,query=a.query,contracts=a.contracts,prediction=a.prediction)
+        if a.subject_map:files['subject_map']=a.subject_map
+        result=verify(a.manifest,files)
+    except (OSError,ValueError,TypeError) as e:
+        print(f'bundle verification failed: {e}',file=sys.stderr)
+        return 2
+    print(json.dumps(result,indent=2))
     return 0
 
 
@@ -279,9 +309,12 @@ def main(argv=None):
     pc.add_argument('train');pc.add_argument('query');pc.add_argument('--contracts',required=True)
     pc.add_argument('--unit',choices=('counts','relative_abundance','absolute_abundance'),required=True)
     pc.add_argument('--source-id',required=True);pc.add_argument('--processing-authorized',action='store_true')
-    pc.add_argument('--subject-map');pc.add_argument('--out',required=True);pc.set_defaults(f=cmd_predict_checked)
+    pc.add_argument('--subject-map');pc.add_argument('--manifest',help='optional new local JSON integrity receipt, no tables embedded');pc.add_argument('--out',required=True);pc.set_defaults(f=cmd_predict_checked)
     be=sp.add_parser('export-benchmark',help='subject-checked submitted loss report; no fit or certified win')
     be.add_argument('losses');be.add_argument('partitions');be.add_argument('--n-boot',type=int,default=2000);be.add_argument('--seed',type=int,default=0);be.set_defaults(f=cmd_export_benchmark)
+    vb=sp.add_parser('verify-bundle',help='verify local artifact hashes; no authenticity/scientific certificate')
+    vb.add_argument('manifest');vb.add_argument('--train',required=True);vb.add_argument('--query',required=True)
+    vb.add_argument('--subject-map');vb.add_argument('--contracts',required=True);vb.add_argument('--prediction',required=True);vb.set_defaults(f=cmd_verify_bundle)
     a = ap.parse_args(argv); return a.f(a)
 
 
