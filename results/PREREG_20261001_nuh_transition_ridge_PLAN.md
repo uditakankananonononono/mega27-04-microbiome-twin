@@ -1,0 +1,26 @@
+# Frozen planned baseline-abundance transition development test
+2026-10-01. Planning only; no training launch authorized by this document. NUH data and prior results already exposed development. Never call this untouched validation or a causal antibiotic model. Treatment identity/dose, arm meanings and independence of submitted subject labels remain unverified.
+
+## Model and task
+Use the exact previously checked 24 PRE/DURING pairs and 255 species-terminal features, species-mass normalization, no POST or recovery annotations. Explicit task contract is PRE-to-DURING only. Stage is a fixed transition selector, not a learned varying covariate: this dataset supplies one transition type, so it cannot identify stage-specific effects. Reject other stages at inference. Do not invent drug encoding.
+
+Predict delta in relative abundance from baseline abundance. Feature vector is log1p(1000 * PRE proportion), plus one submitted Case/Control indicator used only as an author group label, not antibiotic exposure. In each outer held-subject fold, standardize features using training-fold mean/SD; constant columns have scale 1. Multi-output sklearn Ridge(alpha=10, fit_intercept=True, solver='svd') fits DURING minus PRE across the other 23 subjects. All preprocessing and centering are training-only. No tuning, interactions, hidden architecture search, inner CV or outcome-driven feature selection. Fixed alpha and transform are engineering choices made after viewing other models' development errors, not independent discoveries.
+
+At inference add predicted delta to held-out PRE; clip negative entries to zero and normalize. If total mass is zero or outputs are nonfinite, fail and report rather than substitute persistence. This new model can assign mass to taxa absent at PRE, unlike the assemblage-completion path. Predicted delta is final projected forecast minus PRE. Held-out DURING is scoring only. Training array/preprocessing outcome replacement invariance and test-row subject exclusion are mandatory checks.
+
+## Frozen comparisons
+Exact baselines it must beat: persistence; projected same-submitted-group median donor delta; projected nearest-three same-group PRE donor median delta (Bray-Curtis, deterministic subject-label tie break). Compute all on identical outer folds and features. Donors exclude held subject; forecasts clip and normalize identically to model. Also retain shipped fixed-lambda=100 interaction score and matched log-prior as prior measured context, not the winning criterion. If their existing identical-fold predictions cannot be reused, do not add model fits without capacity approval. Decline-only is a direction reference, not a composition forecast.
+
+Primary score: mean subject Bray-Curtis error, with paired model-minus-reference subject-bootstrap intervals (2000 draws, seed 20261001), report all 24 folds and group summaries. Secondary score: direction accuracy for observed absolute delta >=0.001, zero predictions <=1e-12 count wrong, macro accuracy and coverage; decline-only reference. Persistence direction abstains.
+
+A useful development win requires all of: mean BC at least 0.02 lower than EACH of persistence and both projected donor baselines; each corresponding paired bootstrap interval upper bound <0; zero-wrong macro direction accuracy >= same-group donor AND decline-only; finite normalized outputs in all 24 folds; no leakage/invariance failure. Report weaker/mixed outcomes as such, without changing threshold/alpha/feature transform. Bootstrap is descriptive, not a correction-free generalization guarantee; repeated development comparisons have already informed this plan. No more adjustments to this test after scoring. Any next model variant requires a new labelled plan.
+
+## Capacity request
+24 multivariate Ridge fits, each 23 training rows x 256 input features x 255 outputs; no GPU, download or paid service. One CPU/BLAS thread (OPENBLAS/OMP/MKL=1). Honest runtime unmeasured; estimated 1-30 seconds based on small matrix sizes, hard wall cap 120 seconds for the full evaluation. Bootstrap is 2000 x24 resamples per comparison, cheap. A deterministic repeat doubles to 48 fits only if separately included in capacity approval; default request is single execution. No full test-suite or graph-network training included.
+
+## If it wins
+A later untouched validation source needs independently identified participants from a different recruitment/source family, paired measured baseline/target stages, exact drug/dose/course/sample-day semantics from open primary methods, compatible stool material and taxonomy with independently checked assay contract, processed abundance and source rights, enough independent subjects for declared precision, and no earlier outcome/table exposure or selection using its results. Hold whole subjects out, freeze model/preprocessing/baselines before opening its outcomes. A different population/assay demands its own validation rather than silent label matching. NUH cannot become that source again. Even a transition forecasting win is not a counterfactual antibiotic-effect proof without a suitable controlled intervention estimand.
+
+Sources:
+- https://raw.githubusercontent.com/CSB5/Recovery_Determinants_Study/d374f5e7c09da659d407af5664604b81451c5df4/Data/NUH_StoolSamples_MetaPhlAn2.txt
+- https://www.nature.com/articles/s41559-020-1236-0
