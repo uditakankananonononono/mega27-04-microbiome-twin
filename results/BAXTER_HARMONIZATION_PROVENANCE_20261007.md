@@ -19,3 +19,6 @@ The official Figshare descriptor lists CC0 and one archive, Data_submission.tar.
 - Tool-returned public deposit URL https://springernature.figshare.com/articles/dataset/Curated_and_harmonized_gut_microbiome_16S_rRNA_amplicon_sequences_metadata_and_OTU_tables_from_dietary_fiber_intervention_studies_in_humans/21295352
 
 Next source-level choices: keep this cohort pending and seek a directly downloadable measured-panel source; or separately authorize a bounded targeted archive/header investigation to learn whether small metadata can be extracted without transferring 18.7 GB. Neither choice permits a model fit now. A range request to a compressed archive is not assumed to provide random access, and no such request is issued under this unit.
+
+## Routing decision, 7 October 2026 23:02 IST
+Parent accepted the recommendation to park Baxter and seek an alternate directly downloadable measured panel using free/public, metadata-only research. No budget is assigned to the 18.7 GB archive or a header/range investigation. The source is pending admission, not rejected as scientifically unusable, and the 175/174/143 distinction remains recorded. Do not rerun this source's census or fit it under the alternate-source task.
