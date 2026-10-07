@@ -1,0 +1,91 @@
+{
+  "source": "https://ndownloader.figshare.com/files/28907155",
+  "workbook_bytes": 46217,
+  "subsets": [
+    {
+      "subset": 1,
+      "sample_ID_rows": 142,
+      "unique_IDs": 142,
+      "duplicate_IDs": 0,
+      "donor_labels": 5,
+      "unparsed_IDs": 24,
+      "condition_counts": {
+        "Ctrl": 30,
+        "Cell": 30,
+        "Inul": 29,
+        "Pect": 29
+      },
+      "time_code_counts": {
+        "00": 38,
+        "02": 40,
+        "04": 40
+      },
+      "replicate_suffix_counts": {
+        "a": 60,
+        "b": 58
+      },
+      "donor_condition_groups": 20,
+      "complete_3time_donor_condition_groups": 20,
+      "groups_with_two_wells_each_time": 18,
+      "unexpected_time_codes": []
+    },
+    {
+      "subset": 2,
+      "sample_ID_rows": 666,
+      "unique_IDs": 666,
+      "duplicate_IDs": 0,
+      "donor_labels": 37,
+      "unparsed_IDs": 0,
+      "condition_counts": {
+        "Ctrl": 222,
+        "Cell": 148,
+        "Inul": 148,
+        "Pect": 148
+      },
+      "time_code_counts": {
+        "00": 74,
+        "01": 296,
+        "02": 296
+      },
+      "replicate_suffix_counts": {
+        "a": 333,
+        "b": 333
+      },
+      "donor_condition_groups": 148,
+      "complete_3time_donor_condition_groups": 37,
+      "groups_with_two_wells_each_time": 37,
+      "unexpected_time_codes": []
+    }
+  ],
+  "shared_donor_labels_between_subsets": 0,
+  "distinct_labels_union_not_verified_people": 42,
+  "chip_sheet_excluded": true,
+  "numeric_chemical_values_parsed": false,
+  "role": "ex_vivo_descriptive_development_only",
+  "declared_sheet_units": "mM",
+  "empty_cell_note": "no acid detected; threshold unprovided; not imputed",
+  "biological_identity_between_subsets_verified": false,
+  "subset1_revised_metadata_pattern": {
+    "donor_labels": 5,
+    "unparsed_IDs": 0,
+    "condition_counts": {
+      "Ctrl": 36,
+      "Cell": 36,
+      "Inul": 35,
+      "Pect": 35
+    },
+    "time_code_counts": {
+      "00": 38,
+      "02": 52,
+      "04": 52
+    },
+    "replicate_suffix_counts": {
+      "a": 60,
+      "b": 58,
+      "c": 24
+    },
+    "third_suffix_groups": 24,
+    "initial_unparsed_count_retained": 24,
+    "interpretation": "suffix c conflicts with primary two-well description; no independent donor added"
+  }
+}
