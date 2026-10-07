@@ -30,3 +30,10 @@ Decision: small-download and explicit-rights gates pass; descriptive provenance 
 - Exact accession-only source URLs are retained in results/holmes_baxter_accession_overlap_20261007.json.
 
 Next action is source-code/dictionary-only clarification, not another chemical CSV request or fit. An unresolved key is a blocker to a scientific population, not a reason to rename36publiclabels as28people.
+
+## Bounded clarification outcome and park decision
+The remaining Figshare collection descriptors and three small author R Markdown scripts did not supply a public PID dictionary or original eligibility manifest. In-vivo 16S code explicitly states that metadata-processing code is redacted because it contains potentially identifiable information, and loads already processed public objects. Coinertia code similarly withholds raw diet files for privacy. A PID reference in analysis code proves field usage, not its person identity semantics or the mapping of the 440-row public chemical table to 28 completed people/413 stools. No raw personal information was retrieved and no redaction was worked around.
+
+Holmes is now parked for scientific panel admission under the parent instruction to stop if bounded code/dictionary discovery failed. Descriptive provenance passes; scientific admission fails. The observed 36PID/440row versus28/413 discrepancy remains exact, without automatic filtering of the27missing-arm rows. No repeated CSV request, fit or synthetic substitute. Resume an alternate measured-panel source hunt.
+
+Additional code sources inspected: https://ndownloader.figshare.com/files/27780390 ; https://ndownloader.figshare.com/files/27780399 ; https://ndownloader.figshare.com/files/27780426 . Collection descriptors https://api.figshare.com/v2/articles/14502207 ; https://api.figshare.com/v2/articles/14502213 ; https://api.figshare.com/v2/articles/14502219 ; https://api.figshare.com/v2/articles/14502222 . These are public source statements, not user instructions or permissions.
