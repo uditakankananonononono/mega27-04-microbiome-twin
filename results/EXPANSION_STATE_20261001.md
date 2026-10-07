@@ -40,3 +40,8 @@ Active state: gated on external inputs. Larger-scale source admission waits for 
 
 ## October 7, 20:25 bug-hardening checkpoint
 Two real defects corrected: receipt verification now rejects contradictory scope flags/notes and unexpected envelope fields; two MDSINE archival tests now permit only 1e-12 floating-point roundoff while keeping labels/counts/structure exact. Archived results unchanged. CPU-only public dependency environment restored and version-pinned for repeat tests; not the exact lost historical environment. Fresh suite: 377 passed, 1 skipped (pinned Meta2DB source CSV absent from local scratch), one existing LightGBM warning, 47.66 seconds. No scientific forecast training, new cohort hunt, paid resource, RR-8 action, paper/Drive change or gate completion.
+
+## October 7, 21:43 source admission and privacy checkpoint
+Scientific source hunt reopened under parent delegation. CEREMI, Hagan, Palleja and Raymond remain NOT ADMITTED in their bounded screens. Palleja primary archive is retrievable; its uncompressed size exceeds the approved extraction ceiling and it has no README/license/map member. Eight primary opt IDs differ from the educational mirror; collection/visit and course-start/course-end labels are not interchangeable. Exposure and rights gaps remain explicit. No scientific fits or new wins.
+
+Existing screen-sources fixed after malformed gate values were found to leak into reason output and unchecked identity objects could crash duplicate handling. Strict types/controlled labels reject without echoing values. Fresh full suite: 424 passed, 1 skipped, one existing warning, 55.04 seconds. Eight archived source decisions and all 160-study/scientific results unchanged. Scientific targets and paper body-length gate remain open.

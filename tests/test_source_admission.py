@@ -38,3 +38,31 @@ def test_real_viewed_records_remain_unadmitted():
 
 def test_duplicate_identity_rejected():
     with pytest.raises(ValueError,match='duplicate'):assess_many([complete(),complete()])
+
+@pytest.mark.parametrize('study', [[], {}, True, 17, ' synthetic', 'synthetic ', ''])
+def test_invalid_identity_has_fixed_non_echoing_error(study):
+    row = complete(); row['study'] = study
+    with pytest.raises(ValueError, match='study identifier must be a nonempty trimmed string'):
+        assess_source(row)
+    with pytest.raises(ValueError):
+        assess_many([row])
+
+@pytest.mark.parametrize('field', [f for f in complete() if f not in ('study', 'uniform_analysis_experiment_type')])
+@pytest.mark.parametrize('value', [1, 0, 'True', {'subject': 'PRIVATE-FAKE'}, ['PRIVATE-FAKE']])
+def test_bad_known_boolean_shape_rejected_without_contents(field, value):
+    row = complete(); row[field] = value
+    with pytest.raises(ValueError) as exc:
+        assess_source(row)
+    assert 'PRIVATE-FAKE' not in str(exc.value)
+
+@pytest.mark.parametrize('value', [[], {}, True, 1, 'PRIVATE-FAKE'])
+def test_bad_assay_value_rejected_without_contents(value):
+    row = complete(); row['uniform_analysis_experiment_type'] = value
+    with pytest.raises(ValueError) as exc:
+        assess_source(row)
+    assert 'PRIVATE-FAKE' not in str(exc.value)
+
+@pytest.mark.parametrize('row', [None, [], 'PRIVATE-FAKE', 1])
+def test_bad_record_shape_is_valueerror(row):
+    with pytest.raises(ValueError):
+        assess_many([row])

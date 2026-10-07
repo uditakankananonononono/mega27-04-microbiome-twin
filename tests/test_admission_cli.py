@@ -34,3 +34,11 @@ def test_size_bound(tmp_path,capsys):
     p=tmp_path/'large.json';p.write_text(' '*1_000_001)
     assert main(['screen-sources',str(p)])==2
     assert 'oversized' in capsys.readouterr().err
+
+def test_nested_known_fields_never_echo_private_content(tmp_path,capsys):
+    for row in ({'study': ['PRIVATE-FAKE']}, {'study':'x', 'analysis_pagination_complete': {'subject':'PRIVATE-FAKE'}}, {'study':'x', 'uniform_analysis_experiment_type': 'PRIVATE-FAKE'}):
+        p=tmp_path/'bad-shape.json';p.write_text(json.dumps({'n_studies':1,'rows':[row]}))
+        assert main(['screen-sources',str(p)])==2
+        out=capsys.readouterr()
+        assert not out.out and 'PRIVATE-FAKE' not in out.err
+        assert 'cannot screen source metadata' in out.err

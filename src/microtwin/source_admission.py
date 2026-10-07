@@ -11,9 +11,27 @@ REQUIRED = ('analysis_pagination_complete','uniform_analysis_experiment_type',
             'explicit_human_host_compatible','human_gut_site_compatible','independent_biological_family')
 
 
+def _validate_record(row):
+    if not isinstance(row, dict):
+        raise ValueError('source record must be an object')
+    study = row.get('study')
+    if not isinstance(study, str) or not study or study != study.strip():
+        raise ValueError('study identifier must be a nonempty trimmed string')
+    for field in REQUIRED:
+        value = row.get(field, 'unknown')
+        if field == 'uniform_analysis_experiment_type':
+            valid = isinstance(value, str) and value in ('amplicon', 'assembly', 'metagenomic', 'unknown')
+        else:
+            valid = value is None or type(value) is bool or (isinstance(value, str) and value == 'unknown')
+        if not valid:
+            # Never echo caller values: known fields can accidentally contain
+            # participant-level objects, strings, or numeric outcomes.
+            raise ValueError(f'invalid value type or label for field {field}')
+    return study
+
+
 def assess_source(row):
-    if not isinstance(row,dict) or not str(row.get('study') or '').strip():
-        raise ValueError('source record requires study identifier')
+    study = _validate_record(row)
     reasons=[]
     for field in REQUIRED:
         value=row.get(field,'unknown')
@@ -21,7 +39,7 @@ def assess_source(row):
         if value != expected or (expected is True and value is not True):
             reasons.append({'field':field,'observed':value if value is not None else 'unknown',
                             'required':expected})
-    return {'study':str(row['study']),'decision':'blocked' if reasons else 'metadata_ready_for_manual_review',
+    return {'study':study,'decision':'blocked' if reasons else 'metadata_ready_for_manual_review',
             'reasons':reasons,
             'final_external_benchmark_eligible':False,
             'remaining_even_if_metadata_ready':['historical_library_method','source_specific_rights',
@@ -30,7 +48,7 @@ def assess_source(row):
 
 def assess_many(rows):
     rows=list(rows)
-    ids=[r.get('study') if isinstance(r,dict) else None for r in rows]
+    ids=[_validate_record(r) for r in rows]
     if len(ids)!=len(set(ids)):
         raise ValueError('duplicate study identifiers')
     decisions=[assess_source(r) for r in rows]
