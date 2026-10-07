@@ -8,7 +8,7 @@ U = json.load(open("results/mdsine2_headtohead_uc.json"))
 B = {d: json.load(open(f"results/bench_{d}_presence_mean_cnode_glv_graphtwin_k10.json"))
      for d in ["Drosophila_Gut", "Soil_Vitro", "Human_Oral", "Human_Gut"]}
 
-P = Paper("Interaction Models Lower Prediction Error in 121 of 160 MGnify Studies: "
+P = Paper("DRAFT: Interaction Models Lower Prediction Error in 121 of 160 MGnify Study Tables: "
           "a Microbiome Benchmark Audit",
           "Udita Phookan")
 
@@ -19,6 +19,8 @@ P.h("Abstract")
 P.p("A calibrated population prior and an interaction-augmented model were compared within 160 MGnify study tables. The interaction model reduced held-out composition error in 121 of 160 tables with per-study paired Wilcoxon tests and BH adjustment across all 160 study tables; median relative error reduction across tables was 14.5%. This is a positive predictive result on previously analyzed, heterogeneous tables, not a causal interaction estimate or an untouched external-source win. It does not identify independent cohorts across the MGnify accession list.")
 P.p("The six cNODE ecosystem tables give a second test of simple baselines. Published cNODE medians for two human-associated tables fall within the presence-null bootstrap interval; the local cNODE implementation does not exactly reproduce the published medians, so these are not same-code head-to-heads. On released MDSINE2 data, a simple training-population trajectory interpolator reaches median log10 RMSE 0.692 versus full MDSINE2 1.093 in five UC-donor mice; in four healthy-donor mice it ties MDSINE2 without modules (0.919 versus 0.913) and loses to RA-MDSINE2 without modules (0.883). Subject-taxon rows are clustered within mice. All-timepoint scoring did not erase the baseline's performance, falsifying the proposed detection-only-metric explanation.")
 P.p("Exploratory keystone analyses did not yield a method-robust ecological discovery. An anaerobe association in ridge-inferred networks failed in graphical-lasso and betweenness networks. A downstream CatBoost+SHAP score fit a BugSigDB disease-literature proxy better than the ridge score, but followed failed primary tests and lacks untouched validation. This work offers a predictive audit and transparent failures, not a personalized or perturbation-validated digital twin. The expanded platform and independent discovery remain open goals.")
+
+P.p("The measured extension is a first-period forecast of eight stool SCFA concentrations from a CC BY 4.0 yogurt/oats deposit, evaluated within one study on 84 eligible held-out submitted subjects. A fixed ridge model has standardized log error 0.702517 versus persistence 0.798983, same-arm mean change 0.806896 and nearest-three donors 0.775684. Improvements are 12.07%, 12.94% and 9.43%; useful_win=False because the nearest-three gain misses the frozen 10% threshold. This is a development result, not independent replication, taxonomic twin validation, a causal diet effect or a leading-tool comparison. The local research workflow and admission gates are executable, but the hosted platform, external benchmark, calibrated reliability composite and replicated discovery remain unfinished. This document is a draft; its physical page count does not certify fifty substantive body pages.")
 
 P.h("1. Introduction")
 P.p("Research candidates for digital twins of the microbiome promise in-silico trials: remove a species, add an antibiotic, change a diet, and read out the "
@@ -33,12 +35,11 @@ P.p("Strong baselines matter because microbiome data are dominated by taxon iden
 P.p("We test that premise on the two public benchmarks that serve as reference benchmarks for two twin tasks. Our contributions are: "
     "(i) an exact leave-one-out re-run of the cNODE benchmark with a bootstrap null interval; (ii) a verified reproduction of the MDSINE2 "
     "cross-validation metric from the authors' notebook and Source Data, matching the published MDSINE2 median; (iii) a presence-conditional "
-    "population forecaster that tops the UC leaderboard and ties the healthy one; and (iv) an explicit account of why the metric allows this.")
+    "population forecaster that tops the UC leaderboard and ties the healthy one; and (iv) a conditional-loss analysis plus diagnostics that falsify the proposed scoring-only explanation.")
 P.p("Three claim levels are kept separate throughout. Prediction asks whether a model forecasts held-out composition or "
     "trajectories. Mechanism asks whether its fitted terms recover causal ecology. Discovery asks whether it names a "
     "biological principle that survives replication. This paper reports results at each level separately and does not let a "
-    "success at one level stand in for another. The novelty is the auditing framework, its scale, and the pre-registered "
-    "falsification discipline - not any single model, null, or benchmark re-run.")
+    "success at one level stand in for another. The proposed contribution is the auditing framework and its documented falsification discipline; literature priority is not established here. Neither a single model nor a benchmark re-run is presented as a new biological discovery.")
 P.p("The paper's hierarchy: the primary contribution is the predictive audit framework (does a twin beat "
     "ecological priors, and when). The major findings are that some benchmarks collapse to ecological priors (human cNODE "
     "datasets, the MDSINE2 UC cohort) while the archived within-table procedure detects predictive interaction-model gains in 121 of 160 MGnify tables. Those tables have not been certified as independent external biological studies, and the gains do not identify causal interactions. The secondary "
@@ -706,12 +707,12 @@ for r in [
 ]:
     P.p(r)
 for reference in [
-    "Thriene K, Stanislas V, et al. Impact of Yogurt and Rolled Oats Consumption on the Gut Microbiome: A Randomized Crossover Study Displaying Individual Responses and General Resilience. Journal of Nutrition 2026. https://pmc.ncbi.nlm.nih.gov/articles/PMC13084677/",
+    "Thriene K, Stanislas V, et al. Impact of Yogurt and Rolled Oats Consumption on the Gut Microbiome: A Randomized Crossover Study Displaying Individual Responses and General Resilience. Journal of Nutrition 2026;156(4):101408. doi:10.1016/j.tjnut.2026.101408. https://pmc.ncbi.nlm.nih.gov/articles/PMC13084677/",
     "SCFA data and analytical report, yogurt and rolled oats intervention. Zenodo record 15363886, CC BY 4.0. https://zenodo.org/records/15363886",
     "Hagan T, et al. Antibiotics-driven gut microbiome perturbation alters immunity to vaccines in humans. Cell 2019. https://pmc.ncbi.nlm.nih.gov/articles/PMC6750738/",
     "Palleja A, et al. Recovery of gut microbiota of healthy adults following antibiotic exposure. Nature Microbiology 2018. https://www.nature.com/articles/s41564-018-0257-9",
-    "Raymond F, et al. The initial state of the human gut microbiome determines its reshaping by antibiotics. ISME Journal 2016. https://pmc.ncbi.nlm.nih.gov/articles/PMC4817689/",
-    "Zaura E, et al. Same Exposure but Two Radically Different Responses to Antibiotics: Resilience of the Salivary Microbiome versus Long-Term Microbial Shifts in Feces. mBio 2015. https://pmc.ncbi.nlm.nih.gov/articles/PMC4659469/",
+    "Raymond F, et al. The initial state of the human gut microbiome determines its reshaping by antibiotics. ISME Journal 2016;10(3):707-720 (online September 11, 2015). doi:10.1038/ismej.2015.148. https://pmc.ncbi.nlm.nih.gov/articles/PMC4817689/",
+    "Zaura E, et al. Same Exposure but Two Radically Different Responses to Antibiotics: Resilience of the Salivary Microbiome versus Long-Term Microbial Shifts in Feces. mBio 2015;6(6):e01693-15. doi:10.1128/mBio.01693-15. https://pmc.ncbi.nlm.nih.gov/articles/PMC4659469/",
     "Guthrie L, et al. Impact of a 7-day homogeneous diet on interpersonal variation in human gut microbiomes and metabolomes. Cell Host and Microbe 2022. https://www.cell.com/cell-host-microbe/fulltext/S1931-3128(22)00263-3",
 ]:
     P.p(reference)
