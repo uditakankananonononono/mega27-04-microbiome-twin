@@ -1,0 +1,17 @@
+{
+  "sources": {
+    "PRJNA428736": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJNA428736&result=read_run&fields=sample_accession&format=json",
+    "PRJNA834995": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJNA834995&result=read_run&fields=sample_accession&format=json"
+  },
+  "response_bytes": {
+    "PRJNA428736": 80737,
+    "PRJNA834995": 29514
+  },
+  "distinct_samples": {
+    "PRJNA428736": 1201,
+    "PRJNA834995": 434
+  },
+  "exact_sample_accession_overlap": 0,
+  "person_identity_disjointness_verified": false,
+  "descriptive_provenance_check_only": true
+}

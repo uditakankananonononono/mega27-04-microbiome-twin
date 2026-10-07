@@ -1,0 +1,116 @@
+{
+  "source": "https://ndownloader.figshare.com/files/27780411",
+  "response_bytes": 74700,
+  "headers": [
+    "",
+    "X",
+    "ID",
+    "Weekday",
+    "Week",
+    "Arm",
+    "Prebiotic",
+    "batch",
+    "acetate",
+    "propionate",
+    "isobutyrate",
+    "butyrate",
+    "isovalerate",
+    "valerate",
+    "Day",
+    "Total",
+    "Branched",
+    "ButOverTotal",
+    "Treatment",
+    "PID"
+  ],
+  "row_count": 440,
+  "distinct_ID": 1,
+  "distinct_PID": 36,
+  "IDs_mapping_to_multiple_PID": 1,
+  "missing_metadata": {
+    "Prebiotic": 231,
+    "Arm": 27,
+    "Treatment": 27
+  },
+  "metadata_label_counts": {
+    "Week": {
+      "3": 73,
+      "1": 77,
+      "2": 77,
+      "4": 77,
+      "6": 67,
+      "5": 69
+    },
+    "Weekday": {
+      "W": 134,
+      "R": 144,
+      "F": 162
+    },
+    "Day": {
+      "17": 24,
+      "4": 24,
+      "10": 25,
+      "24": 24,
+      "39": 24,
+      "38": 20,
+      "18": 23,
+      "3": 22,
+      "32": 24,
+      "31": 19,
+      "11": 24,
+      "25": 25,
+      "5": 31,
+      "12": 28,
+      "19": 26,
+      "26": 28,
+      "33": 26,
+      "40": 23
+    },
+    "Arm": {
+      "2": 83,
+      "6": 98,
+      "4": 48,
+      "1": 61,
+      "3": 41,
+      "5": 82,
+      "NA": 27
+    },
+    "Prebiotic": {
+      "NA": 231,
+      "GOS": 70,
+      "Wheat_dextrin": 73,
+      "Inulin": 66
+    },
+    "Treatment": {
+      "GOS_baseline": 67,
+      "GOS": 70,
+      "Wheat_dextrin": 73,
+      "Inulin": 66,
+      "Dextrin_baseline": 67,
+      "Inulin_baseline": 70,
+      "NA": 27
+    },
+    "batch": {
+      "7": 123,
+      "8": 122,
+      "1": 24,
+      "2": 48,
+      "3": 48,
+      "4": 18,
+      "5": 35,
+      "6": 22
+    }
+  },
+  "chemical_nonempty_counts_only": {
+    "acetate": 440,
+    "propionate": 440,
+    "isobutyrate": 440,
+    "butyrate": 440,
+    "isovalerate": 440,
+    "valerate": 440
+  },
+  "role": "descriptive_source_admission_only",
+  "outcome_values_retained": false,
+  "numeric_outcomes_parsed": false,
+  "person_identity_disjointness_verified": false
+}
