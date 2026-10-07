@@ -82,3 +82,6 @@ Palleja amended retry succeeded at 107,788,693 compressed bytes via server-confi
 
 ## Raymond cefprozil admission, 2026-10-07
 Frozen c5e2bd0; primary methods and supplement/repository/SPIRE inventory checked. Exact dose and end-relative final-time label verified, but no processed taxonomic table and unit/time/arm join retrieved. Author GPLv3 is code-only; third-party abundance file missing and license null. No raw/reprocessed sequencing download or values/models. NOT ADMITTED; see `results/RAYMOND_SOURCE_ADMISSION_NOTE_20261007.md`.
+
+## Zaura follow-up, 2026-10-07
+Primary/supplement inventory rechecked under 4d8a859. No full subject-level processed OTU matrix identified; small methods route yields HTML. Primary 18-shotgun subset deliberately selected most changed pairs, not unbiased multimodal validation. Dose/table/rights/mirror gates remain unverified, no raw profiling or fits. NOT ADMITTED; see admission note.
