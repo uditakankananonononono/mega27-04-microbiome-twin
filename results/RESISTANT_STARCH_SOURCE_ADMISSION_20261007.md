@@ -30,3 +30,6 @@ A complete metadata census must check stable subject keys, unique sample/run map
 - Venkataraman sampled metadata: https://www.ebi.ac.uk/ena/browser/api/xml/SAMN04370085 ; https://www.ebi.ac.uk/ena/browser/api/xml/SAMN04370163 ; https://www.ebi.ac.uk/ena/browser/api/xml/SAMN04370241
 
 The associated JSON contains only schema names and selected non-outcome labels. Useful predictive win: not evaluated. Source admission: pending full census. Independent validation: false.
+
+## Approved census attempt: blocked by wrong export record type
+The single bounded request to the project XML browser endpoint with a dataType=SAMPLE parameter returned a 1,968-byte project record in 0.577 seconds, not linked SAMPLE elements. This is an endpoint-selection error. No retry or alternate request was made. Zero sample elements cannot be interpreted as an empty cohort or absence of metadata; the earlier accession inventory still contains 1,201 samples. Full metadata admission remains pending. The census result intentionally omits false zero-valued cohort metrics. Need verified export mechanics and a separately authorized request before another attempt.

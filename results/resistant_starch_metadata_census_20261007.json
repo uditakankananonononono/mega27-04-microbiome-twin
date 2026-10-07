@@ -1,0 +1,12 @@
+{
+  "source": "https://www.ebi.ac.uk/ena/browser/api/xml/PRJNA428736?download=false&includeLinks=false&dataType=SAMPLE",
+  "byte_count": 1968,
+  "seconds": 0.577,
+  "status": "BLOCKED_WRONG_RECORD_TYPE",
+  "sample_elements_received": 0,
+  "known_inventory_samples": 1201,
+  "census_complete": false,
+  "outcomes_retained": false,
+  "retry_attempted": false,
+  "diagnosis": "Project endpoint returned project record, not sample export. Zero sample elements are not evidence of zero cohort samples."
+}
