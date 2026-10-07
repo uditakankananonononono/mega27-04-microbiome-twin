@@ -616,6 +616,8 @@ import paper_scfa_checkpoint
 paper_scfa_checkpoint.add(P)
 import paper_operational_contract
 paper_operational_contract.add(P)
+import paper_biological_units
+paper_biological_units.add(P)
 
 import paper_expansion
 paper_expansion.add(P)
