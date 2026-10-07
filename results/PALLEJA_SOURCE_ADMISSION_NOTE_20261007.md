@@ -26,3 +26,6 @@ Specific data-use terms; author-table identity and opt-suffix meaning; exact col
 - https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41564-018-0257-9/MediaObjects/41564_2018_257_MOESM4_ESM.xlsx
 - https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0142352
 - https://www.nature.com/articles/s41522-019-0103-8 (same-source reanalysis, not independent replication)
+
+## Amended retry addendum
+Parent approved one 120-MB/300-second retry with ranged transfer, same extraction limits and stop-on-larger-size/unclear-rights rule. Exact 107,788,693-byte archive retrieved; command-time interruption at 97,517,568 bytes was continued using server-confirmed HTTP 206 range resume. Paths-only listing found 24 members totaling 1,083,383,045 uncompressed bytes, above the 250-MB local ceiling. Inventory has abundance/function tables but no README, license or sample-map file. Stop rule applied: no extraction or matrix header inspection, archive deleted. Aggregate path/size/hash receipt is `results/palleja_author_archive_inventory_20261007.json`. Processed data retrievability is now PASS; rights, opt-suffix identity and exact collection-day binding remain UNVERIFIED. Overall NOT ADMITTED unchanged. First timed-out transfer remains historical truth, not current download status.

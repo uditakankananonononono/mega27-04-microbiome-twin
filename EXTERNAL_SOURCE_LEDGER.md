@@ -77,3 +77,5 @@ Frozen admission commit 8b5d283; see `results/HAGAN_SOURCE_ADMISSION_NOTE_202610
 
 ## Palleja processed-mirror admission, 2026-10-07
 Frozen protocol a1c4560; see `results/PALLEJA_SOURCE_ADMISSION_NOTE_20261007.md`. Primary Table S2 has 57 samples/12 donors and educational mirror 57 headers, but eight primary opt suffixes are missing from the mirror. Clinical predecessor says stool precedes named visit by one day and records an additional doxycycline course for one participant. Author 103-MB processed archive download hit approved 90-second cap; no extraction, partial deleted. Data terms, provenance and exact time/course join remain open. NOT ADMITTED; source-family publication and practical examples exposed, never untouched.
+
+Palleja amended retry succeeded at 107,788,693 compressed bytes via server-confirmed range continuation. Paths total 1,083,383,045 uncompressed bytes with no README/license/sample map. Approved stop rule applied, no extraction/header inspection, archive deleted; see aggregate inventory receipt. Processed retrievability now verified, but rights/provenance/time gates and NOT ADMITTED verdict remain open.

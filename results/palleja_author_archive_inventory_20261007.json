@@ -1,0 +1,117 @@
+{
+  "compressed_bytes": 107788693,
+  "uncompressed_bytes": 1083383045,
+  "members": [
+    {
+      "path": "Supplementary_data",
+      "bytes": 0
+    },
+    {
+      "path": "Supplementary_data/annotated.mOTU.rel_abund.HMP.tsv",
+      "bytes": 461262
+    },
+    {
+      "path": "Supplementary_data/annotated.mOTU.rel_abund.rarefied.tsv",
+      "bytes": 166059
+    },
+    {
+      "path": "Supplementary_data/annotated.mOTU.rel_abund.tsv",
+      "bytes": 193270
+    },
+    {
+      "path": "Supplementary_data/annotated.mOTU.rel_abund.Voigt.tsv",
+      "bytes": 237977
+    },
+    {
+      "path": "Supplementary_data/._intervention.sample2KEGG_module_rel_abund.r",
+      "bytes": 213
+    },
+    {
+      "path": "Supplementary_data/intervention.sample2KEGG_module_rel_abund.r",
+      "bytes": 1803277
+    },
+    {
+      "path": "Supplementary_data/._intervention.sample2KEGG_pathway_rel_abund.r",
+      "bytes": 213
+    },
+    {
+      "path": "Supplementary_data/intervention.sample2KEGG_pathway_rel_abund.r",
+      "bytes": 1074658
+    },
+    {
+      "path": "Supplementary_data/._intervention_samples_drug_abundance_rarefied.r",
+      "bytes": 213
+    },
+    {
+      "path": "Supplementary_data/intervention_samples_drug_abundance_rarefied.r",
+      "bytes": 953071
+    },
+    {
+      "path": "Supplementary_data/._intervention_samples_drug_abundance_relative.r",
+      "bytes": 213
+    },
+    {
+      "path": "Supplementary_data/intervention_samples_drug_abundance_relative.r",
+      "bytes": 993415
+    },
+    {
+      "path": "Supplementary_data/._intervention_samples_virulence_factors_abundance_rarefied.r",
+      "bytes": 213
+    },
+    {
+      "path": "Supplementary_data/intervention_samples_virulence_factors_abundance_rarefied.r",
+      "bytes": 205071
+    },
+    {
+      "path": "Supplementary_data/._intervention_samples_virulence_factors_abundance_relative.r",
+      "bytes": 213
+    },
+    {
+      "path": "Supplementary_data/intervention_samples_virulence_factors_abundance_relative.r",
+      "bytes": 213851
+    },
+    {
+      "path": "Supplementary_data/._MGS_rel_abund.r",
+      "bytes": 213
+    },
+    {
+      "path": "Supplementary_data/MGS_rel_abund.r",
+      "bytes": 321993731
+    },
+    {
+      "path": "Supplementary_data/._sample_mgs_arg_presence_aminoglycoside.r",
+      "bytes": 213
+    },
+    {
+      "path": "Supplementary_data/sample_mgs_arg_presence_aminoglycoside.r",
+      "bytes": 188771265
+    },
+    {
+      "path": "Supplementary_data/._sample_mgs_arg_presence_beta-lactam.r",
+      "bytes": 213
+    },
+    {
+      "path": "Supplementary_data/sample_mgs_arg_presence_beta-lactam.r",
+      "bytes": 188771265
+    },
+    {
+      "path": "Supplementary_data/._sample_mgs_arg_presence_glycopeptide.r",
+      "bytes": 213
+    },
+    {
+      "path": "Supplementary_data/sample_mgs_arg_presence_glycopeptide.r",
+      "bytes": 188771265
+    },
+    {
+      "path": "Supplementary_data/._sample_mgs_arg_presence_pumps.r",
+      "bytes": 213
+    },
+    {
+      "path": "Supplementary_data/sample_mgs_arg_presence_pumps.r",
+      "bytes": 188771265
+    }
+  ],
+  "extracted_files": 0,
+  "outcomes_inspected": false,
+  "sha256": "6505e0dbdbf9a018c00e27aa77ebe0f88a36f79e338161c717dfa94913f87f96"
+}
