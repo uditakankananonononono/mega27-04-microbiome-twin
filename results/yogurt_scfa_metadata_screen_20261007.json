@@ -1,0 +1,39 @@
+{
+  "rows": 462,
+  "subjects": 110,
+  "main_rows": 440,
+  "duplicate_qc_rows": 22,
+  "unique_sample_names": 462,
+  "main_unique_subject_time": 440,
+  "time_counts": {
+    "T4": 110,
+    "T3": 110,
+    "T2": 110,
+    "T1": 110
+  },
+  "interval_days": {
+    "T1_T2": {
+      "n": 110,
+      "min": 24,
+      "max": 138,
+      "nonpositive": 0
+    },
+    "T2_T3": {
+      "n": 109,
+      "min": -330,
+      "max": 66,
+      "nonpositive": 2
+    },
+    "T3_T4": {
+      "n": 109,
+      "min": 28,
+      "max": 33,
+      "nonpositive": 0
+    }
+  },
+  "unparsed_pair_dates": 2,
+  "license": "cc-by-4.0 (Zenodo deposit only)",
+  "concentrations_opened": false,
+  "input_sha256": "5395f5bb54d50cd64459f2cb77ef40af0b4edfd51ba4a804e8bf09fa14897942",
+  "iteration_column_type": "string; explicitly compare to 1 string"
+}

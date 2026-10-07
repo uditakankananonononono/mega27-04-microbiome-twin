@@ -1,0 +1,22 @@
+{
+  "input_sha256": "58456d90b7cc301bd61373c7a6267c0dcbf880e12f334092c116ce4228abef75",
+  "rows": 440,
+  "subjects": 110,
+  "unique_samples": 440,
+  "duplicate_subject_time": 0,
+  "missing_required_fields": 0,
+  "time_counts": {
+    "T4": 110,
+    "T3": 110,
+    "T2": 110,
+    "T1": 110
+  },
+  "groups_subject_counts": {
+    "A": 53,
+    "B": 57
+  },
+  "biological_values_inspected": false,
+  "rights_verified": false,
+  "xlsx_declared_dimension": "A1:A1",
+  "schema_method": "read-only reset_dimensions; actual XML cells"
+}

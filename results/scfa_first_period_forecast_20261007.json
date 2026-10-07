@@ -1,0 +1,131 @@
+{
+  "screen": {
+    "candidate_subjects": 110,
+    "eligible_subjects": 84,
+    "eligible_arm_counts": {
+      "B": 42,
+      "A": 42
+    },
+    "exclusions": {
+      "assay_complete_case_failure": 25,
+      "outside_21_35_day_window": 1
+    },
+    "evaluable": true
+  },
+  "source": "https://zenodo.org/records/15363886",
+  "license": "CC BY 4.0 (this deposit only)",
+  "metadata_sha256": "5395f5bb54d50cd64459f2cb77ef40af0b4edfd51ba4a804e8bf09fa14897942",
+  "assay_md5": "0198c9ca3134d8829ee7de71a9b0a3c0",
+  "protocol_sha256": "202d2551dad8223baef55f4dca7e7460873ca8a80f9a54c86c8f32bf481d0fe8",
+  "outcome": "evaluated",
+  "evaluation": {
+    "subjects_scored": 84,
+    "fold_sizes": {
+      "1": 18,
+      "0": 18,
+      "2": 16,
+      "4": 16,
+      "3": 16
+    },
+    "analytes": [
+      "2-Methylbutyric acid",
+      "Acetic acid",
+      "Butyric acid",
+      "Hexanoic acid",
+      "Isobutyric acid",
+      "Isovaleric acid",
+      "Propionic acid",
+      "Valeric acid"
+    ],
+    "models": {
+      "ridge": {
+        "primary_mean_error": 0.70251747492781,
+        "unscaled_mean_absolute_log_error": 0.4465659561642384,
+        "per_analyte_mean_absolute_log_error": [
+          0.47648938222263404,
+          0.37189365548707826,
+          0.4771036492477306,
+          0.6905082338063684,
+          0.39081157445377507,
+          0.4669439188503278,
+          0.344102727088763,
+          0.3546745081572297
+        ]
+      },
+      "persistence": {
+        "primary_mean_error": 0.798983159155399,
+        "unscaled_mean_absolute_log_error": 0.49462330633549234,
+        "per_analyte_mean_absolute_log_error": [
+          0.5714922775417837,
+          0.3977422736933664,
+          0.570480340410408,
+          0.6012588978857955,
+          0.46538606815328826,
+          0.5521079331685105,
+          0.3928064826048127,
+          0.4057121772259742
+        ]
+      },
+      "arm_mean": {
+        "primary_mean_error": 0.8068961016634055,
+        "unscaled_mean_absolute_log_error": 0.5020860942729839,
+        "per_analyte_mean_absolute_log_error": [
+          0.5693993524467528,
+          0.39715810509900623,
+          0.5733461193590629,
+          0.6378396455898306,
+          0.4663074300115207,
+          0.5548007038661366,
+          0.40200700861299243,
+          0.41583038919856935
+        ]
+      },
+      "nearest_three": {
+        "primary_mean_error": 0.7756841343844492,
+        "unscaled_mean_absolute_log_error": 0.49701470330803654,
+        "per_analyte_mean_absolute_log_error": [
+          0.5131462163802956,
+          0.4224945898381118,
+          0.5399447854762761,
+          0.8138600030139456,
+          0.4363482452726841,
+          0.4997260852558294,
+          0.39053502164172726,
+          0.3600626795854232
+        ]
+      }
+    },
+    "comparisons": {
+      "persistence": {
+        "paired_mean_difference": -0.09646568422758886,
+        "bootstrap_95_percent_interval": [
+          -0.16942599839027894,
+          -0.022469044887049514
+        ],
+        "relative_error_reduction": 0.12073556635356664
+      },
+      "arm_mean": {
+        "paired_mean_difference": -0.10437862673559534,
+        "bootstrap_95_percent_interval": [
+          -0.17209900271561596,
+          -0.03469282558039548
+        ],
+        "relative_error_reduction": 0.1293581993027607
+      },
+      "nearest_three": {
+        "paired_mean_difference": -0.07316665945663908,
+        "bootstrap_95_percent_interval": [
+          -0.12391014209030544,
+          -0.020608130095774186
+        ],
+        "relative_error_reduction": 0.09432532678356398
+      }
+    },
+    "useful_win": false,
+    "target_replacement_invariance": true,
+    "all_predictions_finite": true,
+    "scope": "same-study first-period SCFA development forecast; no causal, clinical, independent-source or calibration certificate"
+  },
+  "elapsed_seconds": 0.287,
+  "participant_rows_published": false
+}

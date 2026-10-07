@@ -1,0 +1,27 @@
+{
+  "rows": 3696,
+  "unique_client_samples": 462,
+  "matches_all_metadata_names": true,
+  "analytes": [
+    "2-Methylbutyric acid",
+    "Acetic acid",
+    "Butyric acid",
+    "Hexanoic acid",
+    "Isobutyric acid",
+    "Isovaleric acid",
+    "Propionic acid",
+    "Valeric acid"
+  ],
+  "units": [
+    "\u00b5g/g"
+  ],
+  "matrices": [
+    "Feces"
+  ],
+  "rows_per_sample_counts": {
+    "8": 462
+  },
+  "unique_sample_analyte_pairs": 3696,
+  "concentrations_and_limits_inspected": false,
+  "input_md5": "0198c9ca3134d8829ee7de71a9b0a3c0"
+}
