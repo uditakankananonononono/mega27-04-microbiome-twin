@@ -29,3 +29,6 @@ The Human participants section specifies14female and19male healthy participants,
 Primary supplement descriptions S1-S9 do not provide an exact donor-visit dictionary or clarify the pilot suffixc and concentration normalization. A search surfaced thomasgurry/data_analysis, but no verified primary-paper binding to this repository was found; it is not used as a source of eligibility or units. No external code was executed, no new chemical cells were opened and no person-label equivalence was inferred.
 
 Status at this checkpoint: descriptive ex-vivo source inventory completed; quantitative design blocked by donor-visit lineage, replicate provenance and unit interpretation. Keep this source pending rather than fit a convenient subset. No inference about biological efficacy or absence of effect follows from these metadata failures.
+
+## Park decision, 7 October 2026 23:26 IST
+Parent accepted parking Gurry on donor-visit dictionary and unit normalization, descriptive inventory only, and returning to the alternate in-vivo measured-panel hunt. No further workbook parsing, author contact or fit under this candidate. Candidate ledger records it separately from six failed in-vivo admissions.
