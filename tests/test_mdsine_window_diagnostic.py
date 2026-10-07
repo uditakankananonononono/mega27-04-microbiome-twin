@@ -1,6 +1,7 @@
 from pathlib import Path
 import json
 import sys
+from archive_compare import assert_archive_equal
 
 
 def test_window_mapping_boundaries():
@@ -25,7 +26,7 @@ def test_window_result_uses_mouse_units_and_reproduces_archives():
     for cohort,n in [('healthy',4),('uc',5)]:
         result=run(cohort)
         stored=json.loads((root/f'results/mdsine_window_{cohort}.json').read_text())
-        assert result==stored
+        assert_archive_equal(result,stored)
         assert result['subjects']==n
         assert len(result['windows'])==14
         assert all(r['n_mice']==n for r in result['windows'])

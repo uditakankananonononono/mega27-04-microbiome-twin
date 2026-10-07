@@ -28,6 +28,11 @@ def verify(manifest,files):
     if not p.is_file() or p.is_symlink() or p.stat().st_size>1_000_000:raise ValueError('missing or oversized receipt')
     obj=json.loads(p.read_text())
     if not isinstance(obj,dict) or obj.get('schema')!='microtwin.local-integrity.v1':raise ValueError('unsupported receipt schema')
+    if set(obj)!={'schema','files','run_report','clinical_use','external_validation','note'}:
+        raise ValueError('receipt envelope fields must match schema exactly')
+    if obj['clinical_use'] is not False or obj['external_validation'] is not False:
+        raise ValueError('receipt cannot assert clinical use or external validation')
     rebuilt=receipt(files,obj.get('run_report',{}))
+    if obj['note']!=rebuilt['note']:raise ValueError('receipt scope note mismatch')
     if obj.get('files')!=rebuilt['files']:raise ValueError('artifact integrity mismatch')
     return {'status':'local_artifact_hashes_match','schema':obj['schema'],'clinical_use':False,'external_validation':False,'note':rebuilt['note']}

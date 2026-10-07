@@ -37,3 +37,6 @@ Checked baseline predictions accept paired train/query subject maps and fail bef
 
 ## 13:38 lane gated on external inputs
 Active state: gated on external inputs. Larger-scale source admission waits for a cohort meeting the frozen source requirements; no active cohort hunt. RR-8 pilot remains parked pending the user's decision, with no spending, provisioning, download or reminder initiated. NUH forecast iteration remains closed. Until a gate changes, only low-cadence real bug fixes/test hardening; no further upgrade completion implied by CLI wrappers. Scientific target gates and paper body-length gate remain open.
+
+## October 7, 20:25 bug-hardening checkpoint
+Two real defects corrected: receipt verification now rejects contradictory scope flags/notes and unexpected envelope fields; two MDSINE archival tests now permit only 1e-12 floating-point roundoff while keeping labels/counts/structure exact. Archived results unchanged. CPU-only public dependency environment restored and version-pinned for repeat tests; not the exact lost historical environment. Fresh suite: 377 passed, 1 skipped (pinned Meta2DB source CSV absent from local scratch), one existing LightGBM warning, 47.66 seconds. No scientific forecast training, new cohort hunt, paid resource, RR-8 action, paper/Drive change or gate completion.

@@ -54,3 +54,14 @@ def test_two_subject_maps(tmp_path,label,passes):
 def test_query_map_without_train(tmp_path):
  args,t,q,c,o,m=run(tmp_path);s=tmp_path/'qs.csv';s.write_text('sample_id,subject_id\nx1,c\n')
  assert main(args+['--query-subject-map',str(s)])==2 and not o.exists()
+
+@pytest.mark.parametrize('field,value',[('clinical_use',True),('clinical_use',0),('external_validation',True),('external_validation',None),('note','certified')])
+def test_receipt_envelope_contradictions(tmp_path,field,value):
+ args,t,q,c,o,m=run(tmp_path);assert main(args)==0
+ obj=json.loads(m.read_text());obj[field]=value;m.write_text(json.dumps(obj))
+ assert main(['verify-bundle',str(m),'--train',str(t),'--query',str(q),'--contracts',str(c),'--prediction',str(o)])==2
+
+def test_receipt_unknown_field(tmp_path):
+ args,t,q,c,o,m=run(tmp_path);assert main(args)==0
+ obj=json.loads(m.read_text());obj['certificate']='yes';m.write_text(json.dumps(obj))
+ assert main(['verify-bundle',str(m),'--train',str(t),'--query',str(q),'--contracts',str(c),'--prediction',str(o)])==2
