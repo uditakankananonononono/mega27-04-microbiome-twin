@@ -612,6 +612,9 @@ P.p("Ocean loses one of 53 calibration candidates and covers 51/55 scored "+
     "results/local_calibrated_six_dataset_check.json; runnable check: "+
     "scripts/local_calibrated_six_dataset_check.py.")
 
+import paper_scfa_checkpoint
+paper_scfa_checkpoint.add(P)
+
 import paper_expansion
 paper_expansion.add(P)
 
@@ -697,5 +700,15 @@ for r in [
     "Stein RR, et al. Ecological modeling from time-series inference: insight into dynamics and stability of intestinal microbiota. PLoS Comput Biol 2013.",
 ]:
     P.p(r)
+for reference in [
+    "Thriene K, Stanislas V, et al. Impact of Yogurt and Rolled Oats Consumption on the Gut Microbiome: A Randomized Crossover Study Displaying Individual Responses and General Resilience. Journal of Nutrition 2026. https://pmc.ncbi.nlm.nih.gov/articles/PMC13084677/",
+    "SCFA data and analytical report, yogurt and rolled oats intervention. Zenodo record 15363886, CC BY 4.0. https://zenodo.org/records/15363886",
+    "Hagan T, et al. Antibiotics-driven gut microbiome perturbation alters immunity to vaccines in humans. Cell 2019. https://pmc.ncbi.nlm.nih.gov/articles/PMC6750738/",
+    "Palleja A, et al. Recovery of gut microbiota of healthy adults following antibiotic exposure. Nature Microbiology 2018. https://www.nature.com/articles/s41564-018-0257-9",
+    "Raymond F, et al. The initial state of the human gut microbiome determines its reshaping by antibiotics. ISME Journal 2016. https://pmc.ncbi.nlm.nih.gov/articles/PMC4817689/",
+    "Zaura E, et al. Same Exposure but Two Radically Different Responses to Antibiotics: Resilience of the Salivary Microbiome versus Long-Term Microbial Shifts in Feces. mBio 2015. https://pmc.ncbi.nlm.nih.gov/articles/PMC4659469/",
+    "Guthrie L, et al. Impact of a 7-day homogeneous diet on interpersonal variation in human gut microbiomes and metabolomes. Cell Host and Microbe 2022. https://www.cell.com/cell-host-microbe/fulltext/S1931-3128(22)00263-3",
+]:
+    P.p(reference)
 P.save("paper/mega27-04-microbiome-twin-paper.docx")
 print("ok", P.eq, "equations", P.tab, "tables", P.fig, "figures")
