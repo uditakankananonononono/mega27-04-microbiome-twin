@@ -1,0 +1,612 @@
+{
+  "scope": "independent normal equal-repeat subject means only; oracle knows variance; no biology or new method",
+  "seed": 20261008,
+  "bootstrap_draws": 199,
+  "cells": [
+    {
+      "subjects": 4,
+      "repeats": 1,
+      "rho": 0.0,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.8,
+        "positive_exclusion_rate": 0.108,
+        "mean_width": 1.502463833872311,
+        "coverage_mc_se": 0.017888543819998316
+      },
+      "student_t": {
+        "coverage": 0.944,
+        "positive_exclusion_rate": 0.028,
+        "mean_width": 2.923913352986037,
+        "coverage_mc_se": 0.010282412168358165
+      },
+      "known_variance_oracle": {
+        "coverage": 0.936,
+        "positive_exclusion_rate": 0.032,
+        "mean_width": 1.9599639845400534,
+        "coverage_mc_se": 0.01094568408095172
+      }
+    },
+    {
+      "subjects": 4,
+      "repeats": 1,
+      "rho": 0.5,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.788,
+        "positive_exclusion_rate": 0.102,
+        "mean_width": 1.4900275178524145,
+        "coverage_mc_se": 0.018278730809331373
+      },
+      "student_t": {
+        "coverage": 0.962,
+        "positive_exclusion_rate": 0.01,
+        "mean_width": 2.905310092997994,
+        "coverage_mc_se": 0.008550555537507495
+      },
+      "known_variance_oracle": {
+        "coverage": 0.96,
+        "positive_exclusion_rate": 0.02,
+        "mean_width": 1.9599639845400536,
+        "coverage_mc_se": 0.008763560920082661
+      }
+    },
+    {
+      "subjects": 4,
+      "repeats": 1,
+      "rho": 0.9,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.796,
+        "positive_exclusion_rate": 0.112,
+        "mean_width": 1.5234953430921985,
+        "coverage_mc_se": 0.018021320706318945
+      },
+      "student_t": {
+        "coverage": 0.94,
+        "positive_exclusion_rate": 0.026,
+        "mean_width": 2.9719967714986395,
+        "coverage_mc_se": 0.010620734437881408
+      },
+      "known_variance_oracle": {
+        "coverage": 0.962,
+        "positive_exclusion_rate": 0.018,
+        "mean_width": 1.9599639845400536,
+        "coverage_mc_se": 0.008550555537507495
+      }
+    },
+    {
+      "subjects": 4,
+      "repeats": 25,
+      "rho": 0.0,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.782,
+        "positive_exclusion_rate": 0.108,
+        "mean_width": 0.3004422795731376,
+        "coverage_mc_se": 0.018464885594013304
+      },
+      "student_t": {
+        "coverage": 0.968,
+        "positive_exclusion_rate": 0.018,
+        "mean_width": 0.5821050814968567,
+        "coverage_mc_se": 0.007870959280799264
+      },
+      "known_variance_oracle": {
+        "coverage": 0.944,
+        "positive_exclusion_rate": 0.026,
+        "mean_width": 0.3919927969080108,
+        "coverage_mc_se": 0.010282412168358165
+      }
+    },
+    {
+      "subjects": 4,
+      "repeats": 25,
+      "rho": 0.5,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.81,
+        "positive_exclusion_rate": 0.1,
+        "mean_width": 1.0953352281194253,
+        "coverage_mc_se": 0.01754422982065613
+      },
+      "student_t": {
+        "coverage": 0.942,
+        "positive_exclusion_rate": 0.036,
+        "mean_width": 2.1288590308147084,
+        "coverage_mc_se": 0.010453324829928518
+      },
+      "known_variance_oracle": {
+        "coverage": 0.94,
+        "positive_exclusion_rate": 0.034,
+        "mean_width": 1.413350128864375,
+        "coverage_mc_se": 0.010620734437881408
+      }
+    },
+    {
+      "subjects": 4,
+      "repeats": 25,
+      "rho": 0.9,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.774,
+        "positive_exclusion_rate": 0.108,
+        "mean_width": 1.452369967485508,
+        "coverage_mc_se": 0.01870422412183943
+      },
+      "student_t": {
+        "coverage": 0.952,
+        "positive_exclusion_rate": 0.02,
+        "mean_width": 2.8184138461897437,
+        "coverage_mc_se": 0.009559916317625384
+      },
+      "known_variance_oracle": {
+        "coverage": 0.948,
+        "positive_exclusion_rate": 0.028,
+        "mean_width": 1.863512482895537,
+        "coverage_mc_se": 0.009929350431926557
+      }
+    },
+    {
+      "subjects": 5,
+      "repeats": 1,
+      "rho": 0.0,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.834,
+        "positive_exclusion_rate": 0.108,
+        "mean_width": 1.4404387038027857,
+        "coverage_mc_se": 0.016639951923007473
+      },
+      "student_t": {
+        "coverage": 0.946,
+        "positive_exclusion_rate": 0.034,
+        "mean_width": 2.3737093487467735,
+        "coverage_mc_se": 0.010107818755794947
+      },
+      "known_variance_oracle": {
+        "coverage": 0.944,
+        "positive_exclusion_rate": 0.03,
+        "mean_width": 1.7530450811531633,
+        "coverage_mc_se": 0.010282412168358165
+      }
+    },
+    {
+      "subjects": 5,
+      "repeats": 1,
+      "rho": 0.5,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.858,
+        "positive_exclusion_rate": 0.068,
+        "mean_width": 1.4371525949847634,
+        "coverage_mc_se": 0.01560999679692472
+      },
+      "student_t": {
+        "coverage": 0.95,
+        "positive_exclusion_rate": 0.016,
+        "mean_width": 2.362065551979281,
+        "coverage_mc_se": 0.00974679434480897
+      },
+      "known_variance_oracle": {
+        "coverage": 0.95,
+        "positive_exclusion_rate": 0.026,
+        "mean_width": 1.7530450811531633,
+        "coverage_mc_se": 0.00974679434480897
+      }
+    },
+    {
+      "subjects": 5,
+      "repeats": 1,
+      "rho": 0.9,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.832,
+        "positive_exclusion_rate": 0.09,
+        "mean_width": 1.4299574670925554,
+        "coverage_mc_se": 0.01671980861134481
+      },
+      "student_t": {
+        "coverage": 0.95,
+        "positive_exclusion_rate": 0.022,
+        "mean_width": 2.3625348075223,
+        "coverage_mc_se": 0.00974679434480897
+      },
+      "known_variance_oracle": {
+        "coverage": 0.954,
+        "positive_exclusion_rate": 0.018,
+        "mean_width": 1.7530450811531633,
+        "coverage_mc_se": 0.009368457717255283
+      }
+    },
+    {
+      "subjects": 5,
+      "repeats": 25,
+      "rho": 0.0,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.826,
+        "positive_exclusion_rate": 0.08,
+        "mean_width": 0.2763739915822044,
+        "coverage_mc_se": 0.016954291492126707
+      },
+      "student_t": {
+        "coverage": 0.948,
+        "positive_exclusion_rate": 0.026,
+        "mean_width": 0.4552664108654934,
+        "coverage_mc_se": 0.009929350431926557
+      },
+      "known_variance_oracle": {
+        "coverage": 0.95,
+        "positive_exclusion_rate": 0.024,
+        "mean_width": 0.3506090162306326,
+        "coverage_mc_se": 0.00974679434480897
+      }
+    },
+    {
+      "subjects": 5,
+      "repeats": 25,
+      "rho": 0.5,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.836,
+        "positive_exclusion_rate": 0.074,
+        "mean_width": 1.0492318875817495,
+        "coverage_mc_se": 0.0165592270351004
+      },
+      "student_t": {
+        "coverage": 0.942,
+        "positive_exclusion_rate": 0.032,
+        "mean_width": 1.7295241210299273,
+        "coverage_mc_se": 0.010453324829928518
+      },
+      "known_variance_oracle": {
+        "coverage": 0.96,
+        "positive_exclusion_rate": 0.018,
+        "mean_width": 1.2641387856595325,
+        "coverage_mc_se": 0.008763560920082661
+      }
+    },
+    {
+      "subjects": 5,
+      "repeats": 25,
+      "rho": 0.9,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.818,
+        "positive_exclusion_rate": 0.078,
+        "mean_width": 1.3829173978269387,
+        "coverage_mc_se": 0.017255491879398864
+      },
+      "student_t": {
+        "coverage": 0.932,
+        "positive_exclusion_rate": 0.024,
+        "mean_width": 2.2777658178963947,
+        "coverage_mc_se": 0.01125841907196565
+      },
+      "known_variance_oracle": {
+        "coverage": 0.944,
+        "positive_exclusion_rate": 0.026,
+        "mean_width": 1.6667762354695341,
+        "coverage_mc_se": 0.010282412168358165
+      }
+    },
+    {
+      "subjects": 10,
+      "repeats": 1,
+      "rho": 0.0,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.874,
+        "positive_exclusion_rate": 0.058,
+        "mean_width": 1.114832696362071,
+        "coverage_mc_se": 0.01484075469779081
+      },
+      "student_t": {
+        "coverage": 0.948,
+        "positive_exclusion_rate": 0.026,
+        "mean_width": 1.400828451138829,
+        "coverage_mc_se": 0.009929350431926557
+      },
+      "known_variance_oracle": {
+        "coverage": 0.944,
+        "positive_exclusion_rate": 0.022,
+        "mean_width": 1.2395900646091234,
+        "coverage_mc_se": 0.010282412168358165
+      }
+    },
+    {
+      "subjects": 10,
+      "repeats": 1,
+      "rho": 0.5,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.902,
+        "positive_exclusion_rate": 0.034,
+        "mean_width": 1.1217112969499445,
+        "coverage_mc_se": 0.013296315279053816
+      },
+      "student_t": {
+        "coverage": 0.95,
+        "positive_exclusion_rate": 0.016,
+        "mean_width": 1.410452567706953,
+        "coverage_mc_se": 0.00974679434480897
+      },
+      "known_variance_oracle": {
+        "coverage": 0.938,
+        "positive_exclusion_rate": 0.022,
+        "mean_width": 1.2395900646091234,
+        "coverage_mc_se": 0.010784804124322337
+      }
+    },
+    {
+      "subjects": 10,
+      "repeats": 1,
+      "rho": 0.9,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.908,
+        "positive_exclusion_rate": 0.044,
+        "mean_width": 1.106870589055914,
+        "coverage_mc_se": 0.012925633446759966
+      },
+      "student_t": {
+        "coverage": 0.966,
+        "positive_exclusion_rate": 0.02,
+        "mean_width": 1.383392182523539,
+        "coverage_mc_se": 0.008104813384649892
+      },
+      "known_variance_oracle": {
+        "coverage": 0.956,
+        "positive_exclusion_rate": 0.018,
+        "mean_width": 1.2395900646091234,
+        "coverage_mc_se": 0.009172131704244116
+      }
+    },
+    {
+      "subjects": 10,
+      "repeats": 25,
+      "rho": 0.0,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.902,
+        "positive_exclusion_rate": 0.058,
+        "mean_width": 0.22108950645813952,
+        "coverage_mc_se": 0.013296315279053816
+      },
+      "student_t": {
+        "coverage": 0.948,
+        "positive_exclusion_rate": 0.034,
+        "mean_width": 0.27624363482261177,
+        "coverage_mc_se": 0.009929350431926557
+      },
+      "known_variance_oracle": {
+        "coverage": 0.954,
+        "positive_exclusion_rate": 0.028,
+        "mean_width": 0.24791801292182467,
+        "coverage_mc_se": 0.009368457717255283
+      }
+    },
+    {
+      "subjects": 10,
+      "repeats": 25,
+      "rho": 0.5,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.886,
+        "positive_exclusion_rate": 0.048,
+        "mean_width": 0.7766007797801954,
+        "coverage_mc_se": 0.014212951839783317
+      },
+      "student_t": {
+        "coverage": 0.936,
+        "positive_exclusion_rate": 0.034,
+        "mean_width": 0.9720646850280259,
+        "coverage_mc_se": 0.01094568408095172
+      },
+      "known_variance_oracle": {
+        "coverage": 0.938,
+        "positive_exclusion_rate": 0.032,
+        "mean_width": 0.8938811077007827,
+        "coverage_mc_se": 0.010784804124322337
+      }
+    },
+    {
+      "subjects": 10,
+      "repeats": 25,
+      "rho": 0.9,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.916,
+        "positive_exclusion_rate": 0.038,
+        "mean_width": 1.0554290456545055,
+        "coverage_mc_se": 0.012405160216619531
+      },
+      "student_t": {
+        "coverage": 0.958,
+        "positive_exclusion_rate": 0.024,
+        "mean_width": 1.3235429198327542,
+        "coverage_mc_se": 0.00897061870775924
+      },
+      "known_variance_oracle": {
+        "coverage": 0.956,
+        "positive_exclusion_rate": 0.022,
+        "mean_width": 1.1785887788210936,
+        "coverage_mc_se": 0.009172131704244116
+      }
+    },
+    {
+      "subjects": 20,
+      "repeats": 1,
+      "rho": 0.0,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.928,
+        "positive_exclusion_rate": 0.032,
+        "mean_width": 0.8233132251478887,
+        "coverage_mc_se": 0.0115599307956406
+      },
+      "student_t": {
+        "coverage": 0.954,
+        "positive_exclusion_rate": 0.022,
+        "mean_width": 0.9311037620744376,
+        "coverage_mc_se": 0.009368457717255283
+      },
+      "known_variance_oracle": {
+        "coverage": 0.952,
+        "positive_exclusion_rate": 0.02,
+        "mean_width": 0.8765225405765816,
+        "coverage_mc_se": 0.009559916317625384
+      }
+    },
+    {
+      "subjects": 20,
+      "repeats": 1,
+      "rho": 0.5,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.9,
+        "positive_exclusion_rate": 0.056,
+        "mean_width": 0.8238619218490573,
+        "coverage_mc_se": 0.013416407864998736
+      },
+      "student_t": {
+        "coverage": 0.948,
+        "positive_exclusion_rate": 0.028,
+        "mean_width": 0.9266989425439349,
+        "coverage_mc_se": 0.009929350431926557
+      },
+      "known_variance_oracle": {
+        "coverage": 0.944,
+        "positive_exclusion_rate": 0.028,
+        "mean_width": 0.8765225405765816,
+        "coverage_mc_se": 0.010282412168358165
+      }
+    },
+    {
+      "subjects": 20,
+      "repeats": 1,
+      "rho": 0.9,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.934,
+        "positive_exclusion_rate": 0.032,
+        "mean_width": 0.8266521695543797,
+        "coverage_mc_se": 0.01110351295761841
+      },
+      "student_t": {
+        "coverage": 0.952,
+        "positive_exclusion_rate": 0.026,
+        "mean_width": 0.9267220658288831,
+        "coverage_mc_se": 0.009559916317625384
+      },
+      "known_variance_oracle": {
+        "coverage": 0.944,
+        "positive_exclusion_rate": 0.034,
+        "mean_width": 0.8765225405765816,
+        "coverage_mc_se": 0.010282412168358165
+      }
+    },
+    {
+      "subjects": 20,
+      "repeats": 25,
+      "rho": 0.0,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.91,
+        "positive_exclusion_rate": 0.052,
+        "mean_width": 0.1640633514007072,
+        "coverage_mc_se": 0.012798437404620923
+      },
+      "student_t": {
+        "coverage": 0.938,
+        "positive_exclusion_rate": 0.032,
+        "mean_width": 0.18384359963096425,
+        "coverage_mc_se": 0.010784804124322337
+      },
+      "known_variance_oracle": {
+        "coverage": 0.944,
+        "positive_exclusion_rate": 0.034,
+        "mean_width": 0.1753045081153163,
+        "coverage_mc_se": 0.010282412168358165
+      }
+    },
+    {
+      "subjects": 20,
+      "repeats": 25,
+      "rho": 0.5,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.924,
+        "positive_exclusion_rate": 0.032,
+        "mean_width": 0.5892966846437566,
+        "coverage_mc_se": 0.01185107590052481
+      },
+      "student_t": {
+        "coverage": 0.952,
+        "positive_exclusion_rate": 0.022,
+        "mean_width": 0.6633370443075427,
+        "coverage_mc_se": 0.009559916317625384
+      },
+      "known_variance_oracle": {
+        "coverage": 0.96,
+        "positive_exclusion_rate": 0.018,
+        "mean_width": 0.6320693928297663,
+        "coverage_mc_se": 0.008763560920082661
+      }
+    },
+    {
+      "subjects": 20,
+      "repeats": 25,
+      "rho": 0.9,
+      "true_gap": 0.0,
+      "mc_panels": 500,
+      "cluster": {
+        "coverage": 0.942,
+        "positive_exclusion_rate": 0.02,
+        "mean_width": 0.776553638844959,
+        "coverage_mc_se": 0.010453324829928518
+      },
+      "student_t": {
+        "coverage": 0.966,
+        "positive_exclusion_rate": 0.012,
+        "mean_width": 0.8727447779193908,
+        "coverage_mc_se": 0.008104813384649892
+      },
+      "known_variance_oracle": {
+        "coverage": 0.96,
+        "positive_exclusion_rate": 0.014,
+        "mean_width": 0.8333881177347671,
+        "coverage_mc_se": 0.008763560920082661
+      }
+    }
+  ],
+  "cell_count": 24,
+  "panels": 12000,
+  "intervals": 36000,
+  "runtime_seconds": 4.688217225000699,
+  "useful_win": false
+}
