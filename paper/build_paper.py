@@ -620,6 +620,8 @@ import paper_biological_units
 paper_biological_units.add(P)
 import paper_transfer_estimand
 paper_transfer_estimand.add(P)
+import paper_hierarchical_precision
+paper_hierarchical_precision.add(P)
 
 import paper_expansion
 paper_expansion.add(P)

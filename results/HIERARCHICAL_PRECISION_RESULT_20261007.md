@@ -1,0 +1,7 @@
+# Frozen hierarchical precision result
+Protocol/code committed9f2eb2f before scores.72cells,100MCpanels/cell,199bootstrapdraws/panel;7,200panels/14,400intervals,2.97696seconds. Single-thread120s/256MBcap. No biological data/model fits. useful_win=False.
+
+At25repeats/rho.9/delta0, naivecoverage(n4,5,10,20)=.31,.27,.32,.31; cluster=.81,.87,.87,.90. Naivepositiveexclusion=.33,.24,.29,.35; cluster=.12,.03,.07,.05. Cluster not nominal95%. Allcell nullclustercoverage .74-.98; alternative .72-.96. Negativecontrolrho0/repeats25: n4naive1.00vscluster.84; n5 .89vs.81. This does not imply any method universally superior or sufficientn20.
+Alternative delta.25/rho.9/repeats25 cluster positiveexclusion .30,.21,.20,.23, naive .65,.53,.69,.86. Low sample MonteCarlo count yields noisy nonmonotonic cells; inflated detection alone is not a benefit when null coverage fails. No outcome-dependent grid/model change, no repeat variants.
+
+Scope: normal equal-repeat known paired gaps, fixed cluster/row percentilebootstrap. Independent normals at rho0 justify row information in that special model. Cluster smalln undercoverage persists. No composition/time dynamics/unequal rows/missingness/modelrefit/clinical power/novel method/discovery. Complete artifact hierarchical_precision_20261007.json retained and grid validated. Manuscript selected illustrative slice plus completegrid ranges/negativecontrols, no hidden cells.
