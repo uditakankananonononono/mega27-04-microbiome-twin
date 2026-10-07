@@ -17,3 +17,8 @@ Sources inspected:
 - Workbook https://ndownloader.figshare.com/files/28907155
 
 The metadata pattern correction follows a recorded parsing failure, not a changed outcome criterion. All aggregate flags are in results/gurry_exvivo_ID_census_20261007.json. Biological effects, power, predictive gains and useful-win status were not evaluated.
+
+## Push-gate incident and diagnosis
+The initial full-suite run before publication failed in the existing archived-table test because its unchanged live source URL read timed out after35seconds. A command sequence accidentally continued to push despite the nonzero pytest exit. This process failure was reported immediately; no rollback or force push was made. The parent-version script is byte-identical on that path, and its exact assertions pass on a subsequent run against unchanged data. A current full-suite rerun passes487tests/1skip. This evidence identifies a transient network read failure rather than a Gurry metadata regression, but the failed run is not erased.
+
+A permanent scripts/verified_push.py wrapper now runs the fresh full suite, blocks all git actions on a nonzero suite exit, rejects dirty/unreadable trees, performs at most one push and checks exact remote HEAD readback. Offline fixtures assert that failed tests and dirty state never reach a push and that a mismatched remote cannot be reported verified. Future pushes use this wrapper, not a semicolon chain. A temporary parent-source copy initially resolved its ROOT under/tmp and failed to find the manifest; correcting ROOT to the unchanged repository enabled the parent-version check. That diagnostic-path error is not a scientific rerun.
