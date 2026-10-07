@@ -41,7 +41,7 @@ P.p("Three claim levels are kept separate throughout. Prediction asks whether a 
     "falsification discipline - not any single model, null, or benchmark re-run.")
 P.p("The paper's hierarchy: the primary contribution is the predictive audit framework (does a twin beat "
     "ecological priors, and when). The major findings are that some benchmarks collapse to ecological priors (human cNODE "
-    "datasets, the MDSINE2 UC cohort) while others require learned structure (121 of 160 MGnify studies). The secondary "
+    "datasets, the MDSINE2 UC cohort) while the archived within-table procedure detects predictive interaction-model gains in 121 of 160 MGnify tables. Those tables have not been certified as independent external biological studies, and the gains do not identify causal interactions. The secondary "
     "exploration is the biological-discovery programme, which mostly fails replication and is reported as such.")
 
 P.h("2. Problem statements and notation")
@@ -74,16 +74,15 @@ P.p("with O the training subjects, trajectories linearly interpolated onto the h
 P.equation("W = sum_k sgn(d_k) R_k,   d_k = RMSE^ours_k - RMSE^other_k")
 P.p("and bootstrap intervals for the null's median use 5000 resamples of the leave-one-out error vector:")
 P.equation("CI_95 = [ Q_0.025, Q_0.975 ] of { median( e*_b ) }_{b=1..5000},   e*_b ~ resample(e)")
-P.h("2.3 Why the detection-conditional metric favours population priors", 2)
+P.h("2.3 Conditional-loss target and its explanatory limit", 2)
 P.p("Write the loss restricted to detected timepoints as E[(y - y-hat)^2 | detected]. The minimiser over predictors that do not see the "
     "held-out trajectory is the conditional mean E[y | detected, t, i], which is exactly what mu_i(t) estimates from the training subjects. "
     "A dynamical model trained on all timepoints, or simulating extinctions, may predict low abundance where the truth happens to be "
-    "detected, and pays heavily for it; its errors where the truth is undetected are never scored. This is a structural bias of the "
-    "metric in favour of detection-conditional averaging, which we state as:")
+    "detected, and pays heavily for it; its errors where the truth is undetected are never scored. This conditional-loss identity describes an appropriate target for the mean; it does not establish that detection-only scoring explains the observed model ranking. The later all-timepoint diagnostic falsified that scoring-only explanation. The identity is:")
 P.equation("argmin_{f} E[ (Y - f(i,t))^2 | Y > L ] = E[ Y | Y > L, i, t ]  (for predictors f independent of the held-out trajectory)")
 
 P.h("3. Data")
-P.p("All data are public, unmodified, and fetched by accession. Table 1 is the dataset manifest. We count 169 distinct primary accession-level datasets: the nine below plus 160 MGnify studies (Appendix A). The datasets ledger also records secondary trait and literature reference tables; these are not independent cohorts.")
+P.p("Original benchmark inputs appear in Table 1, with 160 archived MGnify tables listed in Appendix A. The former count of 169 items combines six cNODE matrices, two mouse cohorts, one derivative Source Data comparison and 160 MGnify records. It is an inventory count, not 169 independent primary biological datasets: the Source Data comparison derives from the mouse benchmark, and source-family independence remains unresolved for the archive. The later measured SCFA development deposit is described separately. Source data are public, while the local analysis performs the explicitly described normalization, filtering and aggregation. Secondary trait and literature reference tables are not independent cohorts.")
 P.table(["#", "dataset", "source / accession", "n", "use"], [
     [1, "Ocean", "github.com/yixueyang/cNODE (Michel-Mata 2022)", 269, "cNODE benchmark"],
     [2, "Drosophila gut", "same", B["Drosophila_Gut"]["n"], "cNODE benchmark"],
@@ -681,11 +680,11 @@ P.table(["tool", "kind", "gate"], TL[["tool", "kind", "gate"]].values.tolist(),
         f"Tools ledger: {len(TL)} entries, {int((TL.gate == 'counts').sum())} counting toward the gate after excluding infrastructure.")
 
 P.h("9. Reproducibility")
-P.p("Blind reproduction log (2026-09-26): fresh git clone of the repository into an empty directory, then a single command "
+P.p("Historical blind reproduction snapshot (2026-09-26, before subsequent manuscript expansion): fresh git clone of the repository into an empty directory, then a single command "
     "(python3 paper/build_paper.py) regenerated the paper end to end from the committed result files: 22 equations, 27 "
-    "tables, 3 figures, matching the working-tree build; the extracted full text of the two DOCX files is byte-identical "
+    "tables, 3 figures, matching that date's working-tree build, not the current expanded draft; the extracted full text of the two DOCX files is byte-identical "
     "(SHA-256 48b40311c162cefd7c13650dbe7260aa). The DOCX container bytes differ only by embedded timestamps.")
-P.p("Repository: github.com/uditakankananonononono/mega27-04-microbiome-twin (private). Commands: python run_bench.py <dataset> "
+P.p("Repository: github.com/uditakankananonononono/mega27-04-microbiome-twin (public). Commands: python run_bench.py <dataset> "
     "presence_mean,cnode,glv,graphtwin 10; python bench_mdsine2.py healthy|uc; python -m pytest -q; python paper/build_paper.py.")
 
 
