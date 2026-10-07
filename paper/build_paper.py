@@ -614,6 +614,8 @@ P.p("Ocean loses one of 53 calibration candidates and covers 51/55 scored "+
 
 import paper_scfa_checkpoint
 paper_scfa_checkpoint.add(P)
+import paper_operational_contract
+paper_operational_contract.add(P)
 
 import paper_expansion
 paper_expansion.add(P)

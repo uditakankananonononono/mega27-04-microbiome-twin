@@ -1,0 +1,8 @@
+# Oliver SCFA source: NOT ADMITTED in this bounded attempt
+Primary https://pmc.ncbi.nlm.nih.gov/articles/PMC8546969/ links https://github.com/aoliver44/Fiber-Analysis and PRJNA647720. Article and PMC supplementary content explicitly CC BY 4.0; no explicit repository data reuse terms recovered. Live GitHub repository license field null; complete master tree inventory has no license/terms member. README inspected only. The inventory identifies two 130,084-byte similarly named GC-FID workbooks, metadata and SCFA scripts. No workbook or sample rows opened: article license is not assumed to cover separate GitHub deposit. Stop on unresolved specific reuse scope; no author emails.
+
+Primary identifies 18 people in SCFA analysis (149 analytical samples), different from 20 sequencing participants; technical duplicates and repeated specimens must not be independent people. Abstract/results call assay GC-MS while extraction/instrument methods describe GC-FID, so assay identity cannot be chosen for compatibility without further source support. Standard panel six acids, no observed complete calibration/quantitation-unit mapping to yogurt's eight acids. Different two-week high-fiber whole-food diet, not four-week yogurt/oat treatment. Thus rights, specimen-to-person join, analytic-repeat aggregation, units, assay and task transfer remain unresolved. Published summaries exposed during retrieval, viewed development lead only. No biological outcomes downloaded or fitted.
+
+Inventory: https://api.github.com/repos/aoliver44/Fiber-Analysis/git/trees/master?recursive=1
+Repo metadata: https://api.github.com/repos/aoliver44/Fiber-Analysis
+README: https://api.github.com/repos/aoliver44/Fiber-Analysis/readme
