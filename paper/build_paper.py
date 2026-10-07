@@ -624,6 +624,8 @@ import paper_hierarchical_precision
 paper_hierarchical_precision.add(P)
 import paper_hierarchical_reference
 paper_hierarchical_reference.add(P)
+import paper_resistant_starch_admission
+paper_resistant_starch_admission.add(P)
 
 import paper_expansion
 paper_expansion.add(P)
@@ -713,6 +715,8 @@ for r in [
 for reference in [
     "Thriene K, Stanislas V, et al. Impact of Yogurt and Rolled Oats Consumption on the Gut Microbiome: A Randomized Crossover Study Displaying Individual Responses and General Resilience. Journal of Nutrition 2026;156(4):101408. doi:10.1016/j.tjnut.2026.101408. https://pmc.ncbi.nlm.nih.gov/articles/PMC13084677/",
     "SCFA data and analytical report, yogurt and rolled oats intervention. Zenodo record 15363886, CC BY 4.0. https://zenodo.org/records/15363886",
+    "Baxter NT, et al. Dynamics of Human Gut Microbiota and Short-Chain Fatty Acids in Response to Dietary Interventions with Three Fermentable Fibers. mBio 2019;10:e02566-18. https://journals.asm.org/doi/10.1128/mbio.02566-18",
+    "Venkataraman A, et al. Variable responses of human microbiomes to dietary supplementation with resistant starch. Microbiome 2016. https://pmc.ncbi.nlm.nih.gov/articles/PMC4928258/",
     "Hagan T, et al. Antibiotics-driven gut microbiome perturbation alters immunity to vaccines in humans. Cell 2019. https://pmc.ncbi.nlm.nih.gov/articles/PMC6750738/",
     "Palleja A, et al. Recovery of gut microbiota of healthy adults following antibiotic exposure. Nature Microbiology 2018. https://www.nature.com/articles/s41564-018-0257-9",
     "Raymond F, et al. The initial state of the human gut microbiome determines its reshaping by antibiotics. ISME Journal 2016;10(3):707-720 (online September 11, 2015). doi:10.1038/ismej.2015.148. https://pmc.ncbi.nlm.nih.gov/articles/PMC4817689/",
