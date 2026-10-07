@@ -1,0 +1,8 @@
+# Frozen outcome-blind Hagan 2019 admission
+2026-10-07. Frozen before this unit's source fetch, profile inspection, or scoring.
+
+Candidate: Hagan 2019 antibiotic/influenza-vaccination cohort, original paper https://pmc.ncbi.nlm.nih.gov/articles/PMC6750738/ and PRJNA505336 / SRP168524. Prior secondary metadata inspection exists (264 rows, 33 subject labels, two phases), so this is exposed design metadata, not certified untouched validation. Publication findings are prior art.
+
+Inspect original methods, data availability, supplementary inventory and author repository metadata. Require all: directly retrievable processed taxonomic abundance; unambiguous phase/subject/sample/day/arm mapping; exact antibiotic dose/course and vaccination timing; assay/taxonomy/units; original data reuse terms; accession/source-family mirror check against archived audits. Never infer course windows from index numbers or combine trial phases into independent studies. Vaccination is a co-intervention; admit only for an estimand supported by exact timing, not isolated antibiotic causality by default.
+
+Only metadata and schema/header reads are allowed in this unit. Do not inspect abundance cells, published effect sizes for tuning, download raw sequencing, fit models, or use paid resources. Report each criterion PASS/FAIL/UNVERIFIED with exact observed URLs. A failed retrieval means unavailable in this attempt, not absent forever. Any scoring protocol must be frozen separately after source admission. This screen credits no benchmark beat, perturbation validation, discovery, reliability, or replication.
