@@ -1,0 +1,49 @@
+{
+  "source": "https://www.ebi.ac.uk/ena/browser/api/xml/search?result=sample&query=study_accession%3D%22PRJNA428736%22&limit=0",
+  "byte_count": 6123886,
+  "sample_count": 1201,
+  "unique_sample_accessions": 1201,
+  "duplicate_sample_accessions": 0,
+  "subject_keys": 175,
+  "missing_metadata_counts": {},
+  "phase_counts": {
+    "before": 601,
+    "during": 600
+  },
+  "arm_counts": {
+    "himaize": 312,
+    "accessible": 250,
+    "inulin": 367,
+    "potato": 272
+  },
+  "semester_counts": {
+    "wint17": 509,
+    "fall16": 254,
+    "wint16": 153,
+    "fall15": 285
+  },
+  "collection_year_counts": {
+    "2017": 509,
+    "2016": 407,
+    "2015": 285
+  },
+  "outcome_present_counts": {
+    "acetate": 1201,
+    "propionate": 1201,
+    "butyrate": 1201,
+    "total SCFA": 1201
+  },
+  "outcome_numeric_parseable_counts": {
+    "acetate": 1188,
+    "propionate": 1058,
+    "butyrate": 1167,
+    "total SCFA": 1030
+  },
+  "subjects_with_both_phases_ge1": 175,
+  "subjects_with_both_phases_ge3": 143,
+  "subjects_multiple_arms": 0,
+  "subjects_multiple_semesters": 0,
+  "seconds": 37.854,
+  "independent_validation": false,
+  "outcomes_retained": false
+}
