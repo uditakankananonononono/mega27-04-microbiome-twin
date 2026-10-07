@@ -74,3 +74,6 @@ Harris PRJEB25634 source denominator/timing correction (2026-09-27): original ht
 
 ## Hagan primary deposit follow-up, 2026-10-07
 Frozen admission commit 8b5d283; see `results/HAGAN_SOURCE_ADMISSION_NOTE_20261007.md`. Primary course/assay verified, but no processed taxonomic table or exact table-to-subject/day/phase/arm join retrieved. Public ImmPort custom-assay/template inventory checked; official manifest requires authentication (401), no saved login. No files or abundance outcomes downloaded. NOT ADMITTED in this attempt, not proof of permanent absence. Publication-level exposed, not certified untouched.
+
+## Palleja processed-mirror admission, 2026-10-07
+Frozen protocol a1c4560; see `results/PALLEJA_SOURCE_ADMISSION_NOTE_20261007.md`. Primary Table S2 has 57 samples/12 donors and educational mirror 57 headers, but eight primary opt suffixes are missing from the mirror. Clinical predecessor says stool precedes named visit by one day and records an additional doxycycline course for one participant. Author 103-MB processed archive download hit approved 90-second cap; no extraction, partial deleted. Data terms, provenance and exact time/course join remain open. NOT ADMITTED; source-family publication and practical examples exposed, never untouched.
