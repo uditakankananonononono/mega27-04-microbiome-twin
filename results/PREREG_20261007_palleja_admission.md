@@ -1,0 +1,6 @@
+# Frozen outcome-blind Palleja 2018 processed-mirror admission
+2026-10-07. Freeze before mirror inventory or table inspection. Prior secondary ENA metadata and publication/practical overview are exposed; not certified untouched.
+
+Candidate primary https://www.nature.com/articles/s41564-018-0257-9 ; PRJEB20800 / ERP022986. Educational mirror https://github.com/liampshaw/ID-microbiome-practical . Require retrievable processed table, exact primary-to-mirror subject/sample/day linkage, oral dose/course, assay/taxonomy/units, specific reuse terms, source-family mirror independence from archived studies. Inspect repository file metadata and script declarations but no embedded abundance values or scored effects. If a file contains values, inspect only its header/schema under a separate bounded header reader. Do not assume practical day labels or file license establish primary-source identity/rights.
+
+No model runs, outcome scoring, raw read downloads, paid resources or large speculative downloads. Admission criteria are conjunctive; any unverifiable load-bearing gate means NOT ADMITTED in this attempt. Final biological/model estimand requires a separate frozen protocol after admission. Reading primary publication necessarily exposes its prior-art findings; those cannot become novelty or untouched outcomes.
