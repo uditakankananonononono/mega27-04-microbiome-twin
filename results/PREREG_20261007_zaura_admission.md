@@ -1,0 +1,4 @@
+# Frozen Zaura 2015 primary processed-data admission follow-up
+2026-10-07. Before new source/supplement retrieval or table opening. Prior October 1 publication/inventory exposure exists, no verified processed profile download or score; not untouched.
+
+Source https://pmc.ncbi.nlm.nih.gov/articles/PMC4659469/ . Check exact author processed-table inventory and source-specific terms, dose/course/collection windows, subject/material/arm/time join and assay/taxonomy/units. Do not combine oral/fecal material or 16S/shotgun without physical/material matching evidence. Antibiotic arm and center may covary; primary randomization details matter. Require all load-bearing gates for admission. Metadata/schema only, no values, models, raw reads or paid resources. Bounded small supplement retrieval allowed; concrete parent plan before large work. Published results are prior art. Admission alone credits no external benchmark, perturbation result, discovery or replication.
