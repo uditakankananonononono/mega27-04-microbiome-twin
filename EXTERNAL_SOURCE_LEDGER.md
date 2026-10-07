@@ -88,3 +88,6 @@ Primary/supplement inventory rechecked under 4d8a859. No full subject-level proc
 
 ## Controlled diet / explicitly licensed SCFA route, 2026-10-07
 Frozen admission 56943ab; first-period forecast f8a2d63. Yogurt 2026 GitHub taxonomic values remain unopened with reuse scope unresolved; metadata inspected, so not untouched. Zenodo 15363886 SCFA explicitly CC BY 4.0: 462 samples/8 measured analytes, 110 subjects x4 main phases +22 QC duplicates. Collection-date inconsistencies preserved; first-period fixed window and assay validity leave 84 subjects. Fixed donor-held-out ridge improves aggregate error 12.07% vs persistence, 12.94% vs arm mean, 9.43% vs nearest three, but frozen useful_win=False (<10% against nearest three). No alternate fits, external replication, taxonomic/top-tool/causal/clinical claim. See admission and result notes plus aggregate receipts.
+
+## MISO independent-diet candidate, 2026-10-07
+Frozen ebd5647; primary and 253-KB deposit inventory/README inspected. Zenodo license other-open without specific terms, no archive license member, GitHub license null. No outcome rows opened. 21-person seven-day homogeneous diet differs from yogurt/oats SCFA task; no same-task replication. NOT ADMITTED; public sources only, no author email.
