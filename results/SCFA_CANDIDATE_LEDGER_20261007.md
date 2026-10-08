@@ -20,3 +20,6 @@ Realistic alternatives: re-scope to the already measured within-source yogurt/oa
 
 ## Hunt stop
 Next candidate Wastyk also failed admission. Per parent direction, stop the hunt and await user decision on purpose-only author clarification versus an honest re-scoped claim; no unilateral headline change or email draft/send. Package: results/WASTYK_SCFA_SOURCE_ADMISSION_20261007.md.
+
+## October 8 single fresh-source pass
+Parent reopened exactly one candidate while the approved Wastyk reuse-terms email was watched. Centella fiber deposit, Mendeley 63yv9sw254.1, passes explicit CC BY 4.0 deposit rights and descriptive fecal GC-TOFMS documentation. It is NOT ADMITTED UNDER RESOURCE/ACCESS CAP: sole stool ZIP is 6.51 GB; one exact bounded suffix-range request returned HTTP 403 rather than 206 Content-Range, with body unread. Person/visit/arm, concentrations/units, QC population and lineage remain unverified. No outcomes, archive members or fits were opened. See CENTELLA_SCFA_SOURCE_ADMISSION_20261008.md. Pass closed without a second candidate. Count now eight in-vivo full-admission failures (including this resource/access failure), plus one ex-vivo parked candidate; not nine negative biological experiments.

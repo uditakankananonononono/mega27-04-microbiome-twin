@@ -1,0 +1,15 @@
+# Centella fiber fecal-SCFA deposit: bounded source admission
+
+Decision: **NOT ADMITTED UNDER RESOURCE/ACCESS CAP**, not a negative biological experiment. One new candidate was examined in the approved October 8 pass. No substitute candidate followed it.
+
+Primary deposit: https://data.mendeley.com/datasets/63yv9sw254/1 . DOI 10.17632/63yv9sw254.1, version 1, published March 27, 2026. Title: Fiber-enriched Centella asiatica longitudinally suppresses proteolytic fermentation and reprograms microbe–metabolite networks. The live browser page explicitly labels the deposit CC BY 4.0. Its description states a randomized longitudinal trial in healthy adults with a fiber-enriched beverage. Causal/mechanistic statements are the deposit authors' claims and were not adopted as verified discovery or intervention efficacy.
+
+The page specifies fecal GC-TOFMS with a Pegasus BT system, FFAP column and ChromaTOF processing, acidified extraction, isotope-labeled internal standard and periodic pooled QC. This is assay documentation, not inspected concentration data, documented sample normalization or a verified study eligibility map.
+
+Live file inventory: CE_plasma.zip 40.1 MB; FA_plasma.zip 134 KB; SCFAs_fecal.zip 6.51 GB; Uremic_plasma.zip 126 MB. Entire deposit is shown as 6.66 GB. Other tissues were not substituted for fecal SCFAs. No additional manuscript/primary-study linkage was recovered before the resource gate failed.
+
+The page-observed stool download endpoint is https://data.mendeley.com/public-files/datasets/63yv9sw254/files/411edc72-5bce-4dc7-a75e-83ff698f6689/file_downloaded . Parent permitted metadata only and at most 256 KB of ZIP central-directory bytes if exact ranges were supported. One streamed request for bytes=-65536 returned HTTP 403, Content-Type text/html; charset=UTF-8, no 206 Content-Range. Response body was not read. No ZIP payload bytes were retained, no archive filenames extracted, no assay object opened or decompressed, and no fitting occurred. This specific route is unverifiable, not proof the deposit lacks data or that the browser cannot download it; full download was outside scope and not tried.
+
+Full gates remain unresolved: person/visit/arm dictionary and intervention horizon; source cohort/paper lineage and relation to prior screened sources; concentrations and units; analyte identity; missingness and below-detection handling; physical specimen/aliquot matching; assay validity and eligible paired population. Public CC BY rights alone do not pass these gates. No independent validation, useful win, taxonomic twin comparison or replicated discovery is claimed.
+
+Three complementary search queries were issued once. Other returned leads were triage only, not admitted or pursued. Previously screened Reading1477/509, Oliver, Baxter, Holmes, Gill, Wastyk and ex-vivo Gurry were excluded from a new-candidate count. The ongoing Wastyk clarification watch remains independent and active. No follow-up email or heavy-resource plan is implied by this report.
