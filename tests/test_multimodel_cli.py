@@ -42,3 +42,14 @@ def test_existing_selection_preserved(tmp_path):
     v,t,s=fixtures(tmp_path);s.write_text('KEEP')
     assert main(['freeze-comparator',str(v),'--candidate','twin','--out',str(s)])==2
     assert s.read_text()=='KEEP'
+
+
+def test_compare_stdout_never_echoes_family_labels(tmp_path,capsys):
+    v,t,s=fixtures(tmp_path)
+    data=json.loads(t.read_text());data['families']=['PRIVATE_FAMILY_A','PRIVATE_FAMILY_B'];t.write_text(json.dumps(data))
+    assert main(['freeze-comparator',str(v),'--candidate','twin','--out',str(s)])==0
+    capsys.readouterr()
+    assert main(['compare-models',str(t),'--selection',str(s),'--n-boot','100'])==0
+    text=capsys.readouterr().out
+    assert 'PRIVATE_FAMILY_' not in text and 'study_deltas' not in text
+    assert json.loads(text)['primary_selected_comparator_statistic']['delta_candidate_minus_baseline']==pytest.approx(-.2)

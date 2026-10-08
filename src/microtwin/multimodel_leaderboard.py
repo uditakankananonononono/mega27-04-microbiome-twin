@@ -119,6 +119,9 @@ def compare_frozen_models(selection, test_errors, test_families, *, n_boot=5000,
     for m in comparisons:
         comparisons[m]['p_holm'] = adj[m]
     primary = compare_by_study(vectors[candidate], vectors[selected], ids, n_boot=n_boot, seed=seed)
+    # The underlying legacy statistic exposes per-family deltas. The new
+    # aggregate report must not echo private submitted source-family labels.
+    primary = {k: v for k, v in primary.items() if k != 'study_deltas'}
     return {'primary_selected_comparator_statistic':primary,
             'status':'submitted_multimodel_statistics_only', 'n_test_rows':len(ids),
             'n_test_family_labels':n,'selected_comparator':selected,

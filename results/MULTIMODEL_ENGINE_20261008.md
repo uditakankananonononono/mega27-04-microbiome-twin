@@ -15,3 +15,6 @@ Measured-panel route: targeted Wastyk reuse clarification remains preferred to r
 
 ## Executable walkthrough
 The `freeze-comparator` and `compare-models` CLI commands now expose the two-stage API with bounded JSON input, exclusive selection output, unchanged-input checks and test-input hash output. A copy-ready example in `examples/multimodel/README.md` explicitly distinguishes synthetic statistics from biological evidence. End-to-end tests cover retained validation choice, refusal of modified input schema, family overlap, model dropping, malformed/oversized/symbolic inputs and preserved existing selection. Loss values must be numeric, not implicitly coerced boolean/string values. No source-family labels or row-level errors appear in the comparison stdout.
+
+## 15:21 privacy regression correction
+Inspection found that the nested legacy paired statistic still included its `study_deltas` mapping, echoing submitted family labels despite the aggregate-output promise. The new multi-model report now removes that mapping without changing numeric deltas, intervals, legacy API or archived results. An actual CLI stdout regression test checks private family tokens cannot appear at any nesting depth. No biological run or scientific claim changed.
