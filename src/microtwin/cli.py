@@ -323,6 +323,29 @@ def cmd_multimodel(a):
         return 2
 
 
+def cmd_prediction_losses(a):
+    from pathlib import Path
+    from .prediction_losses import paired_prediction_losses
+    try:
+        mapping=Path(a.models)
+        if not mapping.is_file() or mapping.is_symlink() or mapping.stat().st_size>100000:
+            raise ValueError('regular model-file JSON mapping required, maximum 100 KB')
+        raw=mapping.read_bytes();models=json.loads(raw)
+        if not isinstance(models,dict) or any(not isinstance(v,str) or not v for v in models.values()):
+            raise ValueError('model names must map to local file path strings')
+        result=paired_prediction_losses(a.truth,models,a.labels)
+        if mapping.read_bytes()!=raw:raise ValueError('model mapping changed during evaluation')
+        dest=Path(a.out)
+        if dest.exists() or dest.is_symlink() or dest.suffix!='.json' or not dest.parent.is_dir():
+            raise ValueError('new private JSON output path required')
+        with dest.open('x') as handle:json.dump(result,handle,indent=2)
+        print(json.dumps(result['provenance'],indent=2))
+        return 0
+    except (ValueError,TypeError,OSError) as e:
+        print('prediction loss computation refused: '+str(e),file=sys.stderr)
+        return 2
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="microtwin")
     sp = ap.add_subparsers(dest="cmd", required=True)
@@ -398,6 +421,9 @@ def main(argv=None):
     cm.add_argument('losses');cm.add_argument('--selection',required=True)
     cm.add_argument('--n-boot',type=int,default=5000);cm.add_argument('--seed',type=int,default=0)
     cm.set_defaults(f=cmd_multimodel,command='compare-models')
+    pl=sp.add_parser('prediction-losses',help='compute local paired Bray-Curtis losses from supplied compositions, no model fitting')
+    pl.add_argument('truth');pl.add_argument('--models',required=True);pl.add_argument('--labels',required=True);pl.add_argument('--out',required=True)
+    pl.set_defaults(f=cmd_prediction_losses)
     a = ap.parse_args(argv); return a.f(a)
 
 
