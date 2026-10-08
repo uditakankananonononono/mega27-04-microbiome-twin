@@ -57,3 +57,14 @@ def test_primary_selected_interval_and_input_unchanged():
 def test_bootstrap_controls(n_boot,seed):
     with pytest.raises(ValueError):
         compare_frozen_models(selection(),{m:[.2,.2] for m in ['twin','prior','cnode']},['t1','t2'],n_boot=n_boot,seed=seed)
+
+
+@pytest.mark.parametrize('values',[[True,False],['0.1','0.2'],[None,.2]])
+def test_no_coerced_loss_types(values):
+    with pytest.raises(ValueError):
+        freeze_comparator({'twin':values,'prior':[.3,.3]},['v1','v2'],candidate='twin')
+
+
+def test_family_string_not_vector():
+    with pytest.raises(ValueError):
+        freeze_comparator({'twin':[.1,.2],'prior':[.3,.3]},'ab',candidate='twin')

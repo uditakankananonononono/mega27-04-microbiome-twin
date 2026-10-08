@@ -15,11 +15,16 @@ def _validated(errors, families):
         raise ValueError('at least two named model loss vectors required')
     if any(not isinstance(k, str) or not k or k != k.strip() for k in errors):
         raise ValueError('nonblank trimmed model names required')
+    if not isinstance(families, (list, tuple)):
+        raise ValueError('source-family list required')
     ids = list(families)
     if not ids or any(not isinstance(x, str) or not x or x != x.strip() for x in ids):
         raise ValueError('nonblank trimmed source-family labels required')
     vectors = {}
     for model, values in errors.items():
+        raw = np.asarray(values)
+        if not np.issubdtype(raw.dtype, np.number) or np.issubdtype(raw.dtype, np.bool_):
+            raise ValueError('numeric loss arrays required, not booleans or numeric strings')
         a = np.asarray(values, dtype=float)
         if a.shape != (len(ids),) or not np.isfinite(a).all() or (a < 0).any() or (a > 1).any():
             raise ValueError('aligned finite Bray-Curtis errors in [0,1] required for every model')

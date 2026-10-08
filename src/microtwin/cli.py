@@ -287,6 +287,42 @@ def cmd_export_benchmark(a):
     return 0
 
 
+def cmd_multimodel(a):
+    """Two-stage local loss comparison; never fits or admits data."""
+    from pathlib import Path
+    import hashlib
+    from .multimodel_leaderboard import freeze_comparator, compare_frozen_models
+    try:
+        files=[Path(a.losses)]
+        if a.command == 'compare-models': files.append(Path(a.selection))
+        if any(not p.is_file() or p.is_symlink() or p.stat().st_size > 1_000_000 for p in files):
+            raise ValueError('regular JSON inputs limited to 1 MB each required')
+        raw=[p.read_bytes() for p in files]
+        obj=json.loads(raw[0])
+        if not isinstance(obj,dict) or set(obj)!={'errors','families'} or not isinstance(obj['errors'],dict) or not isinstance(obj['families'],list):
+            raise ValueError('JSON requires exactly errors object and families list')
+        if len(obj['families'])>10000 or len(obj['errors'])>20:
+            raise ValueError('at most 10000 paired rows and 20 models allowed')
+        if a.command == 'freeze-comparator':
+            result=freeze_comparator(obj['errors'],obj['families'],candidate=a.candidate)
+        else:
+            result=compare_frozen_models(json.loads(raw[1]),obj['errors'],obj['families'],n_boot=a.n_boot,seed=a.seed)
+        if any(p.read_bytes()!=r for p,r in zip(files,raw)):
+            raise ValueError('inputs changed during comparison')
+        if a.command == 'freeze-comparator':
+            dest=Path(a.out)
+            if dest.suffix.lower()!='.json' or dest.exists() or dest.is_symlink() or not dest.parent.is_dir():
+                raise ValueError('selection needs new JSON path in existing directory')
+            with dest.open('x') as handle:json.dump(result,handle,indent=2)
+        else:
+            result['input_sha256']=[hashlib.sha256(r).hexdigest() for r in raw]
+        print(json.dumps(result,indent=2))
+        return 0
+    except (ValueError,TypeError,OSError,KeyError) as e:
+        print('multimodel comparison refused: '+str(e),file=sys.stderr)
+        return 2
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="microtwin")
     sp = ap.add_subparsers(dest="cmd", required=True)
@@ -355,6 +391,13 @@ def main(argv=None):
     vb.add_argument('--subject-map');vb.add_argument('--query-subject-map');vb.add_argument('--contracts',required=True);vb.add_argument('--prediction',required=True);vb.set_defaults(f=cmd_verify_bundle)
     mm=sp.add_parser('check-multimodal',help='exact submitted metadata alignment; not independent specimens or biology')
     mm.add_argument('records');mm.add_argument('--min-paired',type=int,default=20);mm.set_defaults(f=cmd_check_multimodal)
+    fs=sp.add_parser('freeze-comparator',help='choose non-candidate model using validation losses only; retain before test inspection')
+    fs.add_argument('losses');fs.add_argument('--candidate',required=True);fs.add_argument('--out',required=True)
+    fs.set_defaults(f=cmd_multimodel,command='freeze-comparator')
+    cm=sp.add_parser('compare-models',help='paired family statistics against frozen validation comparator; no certified win')
+    cm.add_argument('losses');cm.add_argument('--selection',required=True)
+    cm.add_argument('--n-boot',type=int,default=5000);cm.add_argument('--seed',type=int,default=0)
+    cm.set_defaults(f=cmd_multimodel,command='compare-models')
     a = ap.parse_args(argv); return a.f(a)
 
 
