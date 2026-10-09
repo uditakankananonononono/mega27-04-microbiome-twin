@@ -1,0 +1,57 @@
+{
+  "status": "not_admitted_documentation_gaps_no_fit",
+  "source_commit": "37f4c511c37d368383909c2c49b85fae7040e314",
+  "scfa_source_sha256": "73ba46725e125056a334f3b3dfa58d2740886a9e8fc1e72ad58770ca1a451fb2",
+  "raw_rows": 1314,
+  "raw_people": 38,
+  "raw_specimens": 150,
+  "stored_timepoints": [
+    1,
+    2,
+    6,
+    7
+  ],
+  "schema_columns": [
+    "Tube_ID",
+    "Participant",
+    "Timepoint",
+    "Group",
+    "Analyte",
+    "Result"
+  ],
+  "concentration_values_inspected": false,
+  "fitted": false,
+  "raw_redistributed": false,
+  "eight_scfa_panel": [
+    "2-Methylbutyric acid",
+    "Acetic acid",
+    "Butyric acid",
+    "Hexanoic acid",
+    "Isobutyric acid",
+    "Isovaleric acid",
+    "Propionic acid",
+    "Valeric acid"
+  ],
+  "other_analyte": "Lactic acid",
+  "metadata_duplicates": 0,
+  "author_code_population_filtered_people": 34,
+  "author_code_population_arm_counts": {
+    "Fermented": 18,
+    "Fiber": 16
+  },
+  "filtered_complete_scfa_specimens": 135,
+  "filtered_specimens": 135,
+  "gates": {
+    "research_use": "parent_accepts_written_clarification_sender_authorship_unverified",
+    "raw_redistribution": "not_permitted",
+    "person_specimen_mapping": "pass_internal_unique_not_independent_identity_certification",
+    "arm_mapping": "pass_diet_key_agrees",
+    "visit_mapping": "nominal_weeks_minus2_0_8_10_author_plot_code_no_dates",
+    "randomized_population": "author_code_filter_yields_34_not_published_final36_no_silent_equation",
+    "stool_assay": "Metabolon_absolute_quantitation_frozen_stool_primary_methods",
+    "units": "unresolved_no_unit_field_or_methods_unit",
+    "qc_censoring": "unresolved_no_LOQ_or_flags",
+    "source_lineage": "primary_linked_repository_viewed_development_not_untouched",
+    "compatible_four_week_transfer": "fails_nominal_eight_or_ten_week_targets"
+  }
+}
