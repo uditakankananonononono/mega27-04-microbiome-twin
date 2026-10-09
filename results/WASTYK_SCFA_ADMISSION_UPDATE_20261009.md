@@ -26,3 +26,18 @@ Sources observed:
 - https://raw.githubusercontent.com/SonnenburgLab/fiber-fermented-study/37f4c511c37d368383909c2c49b85fae7040e314/data/metadata/FeFiFo_demographics_by_participant.csv
 - https://raw.githubusercontent.com/SonnenburgLab/fiber-fermented-study/37f4c511c37d368383909c2c49b85fae7040e314/R/scfa/scfa_working.Rmd
 - https://pmc.ncbi.nlm.nih.gov/articles/instance/9020749/bin/NIHMS1722178-supplement-1.pdf (HTML returned, unverified)
+
+## Afternoon supplement hunt and approved clarification
+The publisher page exposed actual CDN links after its browser challenge cleared. Document S1 was retrieved as a real PDF, 246,350 bytes, SHA256 8b2d1b57949f6ccdff5f0e447e6a59bda837f7d45ae64ab7503ad4096cf5776f. All six pages text-inspected; decisive Table S2 on page 3 visually inspected. SCFA specimens are documented at weeks -2, 0, 8 and 10, 36 people per visit. This strengthens nominal schedule mapping, not actual individual intervals or RDS population identity. It confirms the lack of a four-week target rather than curing horizon compatibility.
+
+Table S4 workbook retrieved, 15,581 bytes, SHA256 44a5b26887dedb064f4c0fad2c3abf0624de382acd3beb9187963d801b601bc9. Inspected string labels only, not reported effects or concentration means: SCFA sheet labels baseline/end as Week -2 to Week 10, without units or QC/quantification-limit fields. Reading the file into memory is not a hidden holdout; the source remains viewed development context. Document S1 contains demographics, participant-count, nutrient and protein tables, not the missing SCFA units/QC dictionary. No concentration unit inferred from other analytes or generic vendor methods.
+
+PMC direct supplement continued returning HTML; EuropePMC supplementaryFiles returned an explicit not-open-access error rather than an archive. Those failed routes did not become successful evidence. Publisher source successfully resolved the supplement access gap, while scientific units/QC/population gates remain unresolved. Browser outcomes recorded; lease released. No fits.
+
+User-reviewed clarification was sent once as a plain-text reply in the existing thread. Verified SENT label and exact recipient/body readback. It asks for units/wet-or-dry normalization, QC/censor limits, visit dates and the intended population. Only the approved question text was sent, no data attachments. A scoped reply watch remains active for source documentation, not a standing email auto-send grant. No further follow-up email without exact review.
+
+Additional sources actually retrieved:
+- https://www.sciencedirect.com/science/article/pii/S0092867421007546
+- https://ars.els-cdn.com/content/image/1-s2.0-S0092867421007546-mmc1.pdf
+- https://ars.els-cdn.com/content/image/1-s2.0-S0092867421007546-mmc2.xlsx
+- https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9020749/supplementaryFiles (explicit unavailable error, not supplementary content)

@@ -46,12 +46,19 @@
     "raw_redistribution": "not_permitted",
     "person_specimen_mapping": "pass_internal_unique_not_independent_identity_certification",
     "arm_mapping": "pass_diet_key_agrees",
-    "visit_mapping": "nominal_weeks_minus2_0_8_10_author_plot_code_no_dates",
+    "visit_mapping": "nominal_weeks_minus2_0_8_10_author_code_plus_visually_verified_TableS2_no_individual_dates",
     "randomized_population": "author_code_filter_yields_34_not_published_final36_no_silent_equation",
     "stool_assay": "Metabolon_absolute_quantitation_frozen_stool_primary_methods",
     "units": "unresolved_no_unit_field_or_methods_unit",
     "qc_censoring": "unresolved_no_LOQ_or_flags",
     "source_lineage": "primary_linked_repository_viewed_development_not_untouched",
     "compatible_four_week_transfer": "fails_nominal_eight_or_ten_week_targets"
+  },
+  "supplement_hunt": {
+    "DocumentS1_sha256": "8b2d1b57949f6ccdff5f0e447e6a59bda837f7d45ae64ab7503ad4096cf5776f",
+    "TableS4_sha256": "44a5b26887dedb064f4c0fad2c3abf0624de382acd3beb9187963d801b601bc9",
+    "TableS2_scfa_count_each_visit": 36,
+    "units_qc_dictionary_found": false,
+    "fits": 0
   }
 }
