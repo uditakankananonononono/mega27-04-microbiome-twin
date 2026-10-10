@@ -291,6 +291,7 @@ def cmd_multimodel(a):
     """Two-stage local loss comparison; never fits or admits data."""
     from pathlib import Path
     import hashlib
+    from .assay_contract import parse_contract_json
     from .multimodel_leaderboard import freeze_comparator, compare_frozen_models
     try:
         files=[Path(a.losses)]
@@ -298,7 +299,7 @@ def cmd_multimodel(a):
         if any(not p.is_file() or p.is_symlink() or p.stat().st_size > 1_000_000 for p in files):
             raise ValueError('regular JSON inputs limited to 1 MB each required')
         raw=[p.read_bytes() for p in files]
-        obj=json.loads(raw[0])
+        obj=parse_contract_json(raw[0],label='benchmark JSON')
         if not isinstance(obj,dict) or set(obj)!={'errors','families'} or not isinstance(obj['errors'],dict) or not isinstance(obj['families'],list):
             raise ValueError('JSON requires exactly errors object and families list')
         if len(obj['families'])>10000 or len(obj['errors'])>20:
@@ -306,7 +307,7 @@ def cmd_multimodel(a):
         if a.command == 'freeze-comparator':
             result=freeze_comparator(obj['errors'],obj['families'],candidate=a.candidate)
         else:
-            result=compare_frozen_models(json.loads(raw[1]),obj['errors'],obj['families'],n_boot=a.n_boot,seed=a.seed)
+            result=compare_frozen_models(parse_contract_json(raw[1],label='selection JSON'),obj['errors'],obj['families'],n_boot=a.n_boot,seed=a.seed)
         if any(p.read_bytes()!=r for p,r in zip(files,raw)):
             raise ValueError('inputs changed during comparison')
         if a.command == 'freeze-comparator':
@@ -325,12 +326,13 @@ def cmd_multimodel(a):
 
 def cmd_prediction_losses(a):
     from pathlib import Path
+    from .assay_contract import parse_contract_json
     from .prediction_losses import paired_prediction_losses
     try:
         mapping=Path(a.models)
         if not mapping.is_file() or mapping.is_symlink() or mapping.stat().st_size>100000:
             raise ValueError('regular model-file JSON mapping required, maximum 100 KB')
-        raw=mapping.read_bytes();models=json.loads(raw)
+        raw=mapping.read_bytes();models=parse_contract_json(raw,label='model mapping JSON')
         if not isinstance(models,dict) or any(not isinstance(v,str) or not v for v in models.values()):
             raise ValueError('model names must map to local file path strings')
         result=paired_prediction_losses(a.truth,models,a.labels)

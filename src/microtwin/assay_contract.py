@@ -21,7 +21,7 @@ def assess_measurement_contract(train, query):
             'note':'Matching labels do not verify identities, rights, independence or external calibration. Different assays require a validated bridge; equal genus names do not establish equal measurements.'}
 
 
-def parse_contract_json(raw):
+def parse_contract_json(raw, *, label="contract JSON"):
     """Reject ambiguous JSON instead of choosing a duplicate field silently."""
     import json
     def unique_object(pairs):
@@ -34,4 +34,4 @@ def parse_contract_json(raw):
     try:
         return json.loads(raw, object_pairs_hook=unique_object)
     except (ValueError, UnicodeError, TypeError, RecursionError) as exc:
-        raise ValueError('contract JSON must be well-formed UTF-8 with unique fields') from exc
+        raise ValueError(f'{label} must be well-formed UTF-8 with unique fields') from exc

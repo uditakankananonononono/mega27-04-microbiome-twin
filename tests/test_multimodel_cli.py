@@ -53,3 +53,21 @@ def test_compare_stdout_never_echoes_family_labels(tmp_path,capsys):
     text=capsys.readouterr().out
     assert 'PRIVATE_FAMILY_' not in text and 'study_deltas' not in text
     assert json.loads(text)['primary_selected_comparator_statistic']['delta_candidate_minus_baseline']==pytest.approx(-.2)
+
+
+@pytest.mark.parametrize('stage',['validation','test','selection'])
+def test_duplicate_evidence_fields_fail_before_statistics(tmp_path,capsys,stage):
+    v,t,s=fixtures(tmp_path)
+    if stage=='validation':
+        v.write_text(v.read_text().replace('"twin": [0.3, 0.3]','"twin": [0.9, 0.9], "twin": [0.3, 0.3]'))
+        assert main(['freeze-comparator',str(v),'--candidate','twin','--out',str(s)])==2
+        assert not s.exists()
+    else:
+        assert main(['freeze-comparator',str(v),'--candidate','twin','--out',str(s)])==0
+        capsys.readouterr()
+        if stage=='test':t.write_text(t.read_text().replace('"twin": [0.1, 0.1]','"twin": [0.9, 0.9], "twin": [0.1, 0.1]'))
+        else:s.write_text(s.read_text().replace('"candidate": "twin"','"candidate": "PRIVATE_MODEL", "candidate": "twin"'))
+        assert main(['compare-models',str(t),'--selection',str(s)])==2
+    capture=capsys.readouterr()
+    assert 'unique fields' in capture.err and 'PRIVATE_MODEL' not in capture.err
+    assert not capture.out

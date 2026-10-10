@@ -95,3 +95,13 @@ def test_malformed_records_rejected_without_private_labels(tmp_path,role,kind):
         paired_prediction_losses(truth,{'a':a,'b':b},labels)
     assert str(error.value) in ('well-formed UTF-8 composition table required','well-formed UTF-8 label map required')
     assert 'PRIVATE' not in str(error.value)
+
+
+def test_duplicate_model_file_mapping_refused_without_output(tmp_path,capsys):
+    from microtwin.cli import main
+    mapping=tmp_path/'models.json';mapping.write_text('{"twin":"PRIVATE_PATH","twin":"other.csv","prior":"prior.csv"}')
+    out=tmp_path/'losses.json'
+    assert main(['prediction-losses',str(tmp_path/'truth.csv'),'--models',str(mapping),'--labels',str(tmp_path/'labels.csv'),'--out',str(out)])==2
+    text=capsys.readouterr().err
+    assert 'unique fields' in text and 'PRIVATE_PATH' not in text
+    assert not out.exists()
