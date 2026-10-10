@@ -7,7 +7,6 @@ proof. The radius is marginal under exchangeability, not personalized.
 from __future__ import annotations
 
 import hashlib
-import csv
 import json
 from pathlib import Path
 
@@ -17,6 +16,7 @@ from .conformal import bray_radius
 from .data import bray_curtis
 from .local_predict import _read_table, predict_local
 from .research_intake import inspect_local_matrix
+from .subject_partition import parse_subject_records
 
 
 def predict_with_radius(train_path, calibration_path, query_path, *, unit, source_id,
@@ -58,8 +58,7 @@ def predict_with_radius(train_path, calibration_path, query_path, *, unit, sourc
             if not file.is_file() or file.stat().st_size>50_000_000:
                 raise ValueError('missing or oversized subject map')
             data=file.read_bytes(); subject_hashes.append(hashlib.sha256(data).hexdigest())
-            with file.open(newline='') as handle:
-                rows=list(csv.reader(handle))
+            rows=parse_subject_records(data)
             if not rows or rows[0]!=['sample_id','subject_id'] or len(rows)!=len(ids)+1 or any(len(row)!=2 for row in rows[1:]):
                 raise ValueError('subject map needs exactly sample_id,subject_id and one row per sample')
             sample=[r[0] for r in rows[1:]]; subjects=[r[1] for r in rows[1:]]
