@@ -1,0 +1,48 @@
+{
+  "schema": "microtwin.admission-evidence.local-integrity.v1",
+  "roles": {
+    "proposal": {
+      "filename": "OMM12_OUTCOME_ADMISSION_PROPOSAL_20261010.md",
+      "sha256": "5d93b8ba12b17fbdc172370731c890d86b2bdc261ee12db52fd07957490b490a",
+      "bytes": 142
+    },
+    "closeout": {
+      "filename": "OMM12_DOCUMENTARY_CLOSEOUT_20261010.md",
+      "sha256": "0c6a65c6fc6cbf595a46bd234612b6c9faf293571d30e3feb9df0a40125ccca8",
+      "bytes": 133
+    },
+    "certificate": {
+      "filename": "omm12_quarantine_certificate_20261010.json",
+      "sha256": "7d8166e1bc8f39f8bae9db2412db2347c310d2f1a5bd8cf256b443b6cc0fb5be",
+      "bytes": 60795
+    },
+    "boundary_check": {
+      "filename": "omm12_platform_boundary_check_20261010.json",
+      "sha256": "523bff62141ba9be3aef7fb9958afda975fc339948e0f724a694a14e5eafdc61",
+      "bytes": 770
+    }
+  },
+  "boundary": {
+    "status": "boundary_consistent_not_authenticated",
+    "structural_C1": "ADMITTED_DOCUMENTARY_REPRESENTATION_COUNTS_ONLY",
+    "quantitative_C1": "NOT_ADMITTED_LOCKED",
+    "C2": "BLOCKED",
+    "C3": "NOT_PROPOSED",
+    "useful_win": "NOT_TESTED",
+    "source_family": "EXPOSED_CONTROLLED_CULTURE_DEVELOPMENT",
+    "zero_semantics": "UNRESOLVED",
+    "selected_rows": 222,
+    "manifest_cells": 2664,
+    "representation_counts": {
+      "AMBIGUOUS_ZERO": 2664,
+      "NUMERIC_REPRESENTATION_VALID": 0
+    },
+    "quantitative_admitted": false,
+    "eligible_untouched_holdout": false,
+    "can_auto_claim_win": false,
+    "note": "Counts describe representations only. Submitted status consistency does not authenticate permission, rights, calibration, biological pairing or source independence."
+  },
+  "quantitative_admission": false,
+  "source_outcome_access": false,
+  "note": "Unsigned local integrity only, not authenticity or scientific validity. Replacing both receipt and accepted files can evade hash comparison. No source workbook, ZIP, private quarantine, numerical admission or biological certification."
+}

@@ -1,0 +1,20 @@
+{
+  "status": "boundary_consistent_not_authenticated",
+  "structural_C1": "ADMITTED_DOCUMENTARY_REPRESENTATION_COUNTS_ONLY",
+  "quantitative_C1": "NOT_ADMITTED_LOCKED",
+  "C2": "BLOCKED",
+  "C3": "NOT_PROPOSED",
+  "useful_win": "NOT_TESTED",
+  "source_family": "EXPOSED_CONTROLLED_CULTURE_DEVELOPMENT",
+  "zero_semantics": "UNRESOLVED",
+  "selected_rows": 222,
+  "manifest_cells": 2664,
+  "representation_counts": {
+    "AMBIGUOUS_ZERO": 995,
+    "NUMERIC_REPRESENTATION_VALID": 1669
+  },
+  "quantitative_admitted": false,
+  "eligible_untouched_holdout": false,
+  "can_auto_claim_win": false,
+  "note": "Counts describe representations only. Submitted status consistency does not authenticate permission, rights, calibration, biological pairing or source independence."
+}

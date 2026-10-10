@@ -1,0 +1,43 @@
+{
+  "schema": "microtwin.comparator-capability.metadata.v1",
+  "task": "removal_response",
+  "output": "normalized_qPCR_disturbance",
+  "horizon": "day4",
+  "allowed_information": [
+    "preintervention_composition",
+    "strain_traits"
+  ],
+  "protocol_timing": "unknown",
+  "comparator_selection": "unknown",
+  "test_source_status": "exposed",
+  "models": [
+    {
+      "task": "removal_response",
+      "output": "normalized_qPCR_disturbance",
+      "horizon": "day4",
+      "input_information": [
+        "preintervention_composition",
+        "strain_traits"
+      ],
+      "capability": "unknown",
+      "adapter": "unknown",
+      "tuning_trials": 0,
+      "failure_policy": "retain_all",
+      "role": "candidate"
+    },
+    {
+      "task": "removal_response",
+      "output": "normalized_qPCR_disturbance",
+      "horizon": "day4",
+      "input_information": [
+        "preintervention_composition",
+        "strain_traits"
+      ],
+      "capability": "unknown",
+      "adapter": "unknown",
+      "tuning_trials": 0,
+      "failure_policy": "retain_all",
+      "role": "comparator"
+    }
+  ]
+}

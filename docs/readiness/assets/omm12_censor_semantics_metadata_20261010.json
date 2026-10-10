@@ -1,0 +1,9 @@
+{
+  "schema": "microtwin.censor-semantics.metadata.v1",
+  "unit": "normalized_16S_copies_per_ml",
+  "normalization": "definition_only",
+  "zero_interpretation": "unknown",
+  "missing_convention": "unknown",
+  "DTL_policy": "excluded",
+  "provenance_status": "definition_only"
+}

@@ -1,0 +1,203 @@
+{
+  "base_commit": "7306f477fbacf62158a2b3bfbf909b3e4c092e04",
+  "runtime_version": "314.0.7",
+  "total_bytes": 13846627,
+  "files": {
+    "style.css": {
+      "bytes": 1990,
+      "sha256": "f644278e79a94bbbbe9d9944403585caf0d8e05395b7ad4e3d8407850fa88d6b",
+      "origin": "web/readiness/style.css"
+    },
+    "index.html": {
+      "bytes": 3114,
+      "sha256": "f7518d2b1205df201b5e14b42aa8d63cdd2c899f84b65843bb0fe195e6d5db56",
+      "origin": "web/readiness/index.html"
+    },
+    "app.js": {
+      "bytes": 3927,
+      "sha256": "eff2c5b6f501160eeaf21f80f808cd1c7ef9c19d9827d95492962e14bc52ff83",
+      "origin": "web/readiness/app.js"
+    },
+    "synthetic/omm12_censor_semantics_metadata_20261010.json": {
+      "bytes": 290,
+      "sha256": "ee84491235260f28722a00d9b352ef0102dd84724ff0671c1f8a7076ffd18723",
+      "origin": "synthetic-test-fixture-not-source"
+    },
+    "synthetic/omm12_admission_evidence_receipt_20261010.json": {
+      "bytes": 2001,
+      "sha256": "52d775715b3aebb3cfb2155abe275826e0745d4ebc20be027d7186fa5d894d98",
+      "origin": "synthetic-test-fixture-not-source"
+    },
+    "synthetic/omm12_platform_boundary_check_20261010.json": {
+      "bytes": 770,
+      "sha256": "523bff62141ba9be3aef7fb9958afda975fc339948e0f724a694a14e5eafdc61",
+      "origin": "synthetic-test-fixture-not-source"
+    },
+    "synthetic/omm12_comparator_plan_metadata_20261010.json": {
+      "bytes": 902,
+      "sha256": "0ff79ff5ba027aee821ffe187db793ab29b7f639f788bf3e2b4022aaedeff526",
+      "origin": "synthetic-test-fixture-not-source"
+    },
+    "synthetic/readiness_inputs.json": {
+      "bytes": 429,
+      "sha256": "4477b73247eea931cc03b6d05a05d66389ae1ebcc29d7bffff5b65155d47dafa",
+      "origin": "synthetic-test-fixture-not-source"
+    },
+    "synthetic/OMM12_DOCUMENTARY_CLOSEOUT_20261010.md": {
+      "bytes": 133,
+      "sha256": "0c6a65c6fc6cbf595a46bd234612b6c9faf293571d30e3feb9df0a40125ccca8",
+      "origin": "synthetic-test-fixture-not-source"
+    },
+    "synthetic/OMM12_OUTCOME_ADMISSION_PROPOSAL_20261010.md": {
+      "bytes": 142,
+      "sha256": "5d93b8ba12b17fbdc172370731c890d86b2bdc261ee12db52fd07957490b490a",
+      "origin": "synthetic-test-fixture-not-source"
+    },
+    "synthetic/omm12_nested_design_metadata_20261010.json": {
+      "bytes": 12568,
+      "sha256": "5a8bd1505b97e846339a0b4aa78ff570bd397cf7ece3c24b08a96508e305a47b",
+      "origin": "synthetic-test-fixture-not-source"
+    },
+    "synthetic/omm12_quarantine_certificate_20261010.json": {
+      "bytes": 60795,
+      "sha256": "7d8166e1bc8f39f8bae9db2412db2347c310d2f1a5bd8cf256b443b6cc0fb5be",
+      "origin": "synthetic-test-fixture-not-source"
+    },
+    "synthetic/omm12_specimen_lineage_metadata_20261010.json": {
+      "bytes": 552,
+      "sha256": "d87683ad5dceafb3f811728233f5c3a78d100ab8e44aedd6df58a53c866d4eae",
+      "origin": "synthetic-test-fixture-not-source"
+    },
+    "assets/omm12_censor_semantics_metadata_20261010.json": {
+      "bytes": 278,
+      "sha256": "73e252ff6a810c35adbedc7ec8f7b79f0781fec2bb3a466ece858678e685331d",
+      "origin": "results/omm12_censor_semantics_metadata_20261010.json"
+    },
+    "assets/omm12_admission_evidence_receipt_20261010.json": {
+      "bytes": 2006,
+      "sha256": "9b7be46adf48a5eae6f4377cd30a6810bbfe1749783a2339854bb27e7a82f112",
+      "origin": "results/omm12_admission_evidence_receipt_20261010.json"
+    },
+    "assets/omm12_platform_boundary_check_20261010.json": {
+      "bytes": 772,
+      "sha256": "19641b9e55cad1cbfce70d7ec491400540ac23920a9c729106a03bc84482f758",
+      "origin": "results/omm12_platform_boundary_check_20261010.json"
+    },
+    "assets/omm12_comparator_plan_metadata_20261010.json": {
+      "bytes": 1104,
+      "sha256": "80b7679e5fbaf39eff5274ba56d073f0a1710bfefcdc98a9cf55d1e2d3b38ae2",
+      "origin": "results/omm12_comparator_plan_metadata_20261010.json"
+    },
+    "assets/readiness_inputs.json": {
+      "bytes": 464,
+      "sha256": "98dc23a7562f4a84f6a586181d9f90d63c54247175a91eef84a4bf53064d1761",
+      "origin": "results/readiness_inputs.json"
+    },
+    "assets/OMM12_DOCUMENTARY_CLOSEOUT_20261010.md": {
+      "bytes": 8746,
+      "sha256": "823be3eab825350c932c58124cdfafc73c90683245a69760768b70d599a353d2",
+      "origin": "results/OMM12_DOCUMENTARY_CLOSEOUT_20261010.md"
+    },
+    "assets/OMM12_OUTCOME_ADMISSION_PROPOSAL_20261010.md": {
+      "bytes": 12331,
+      "sha256": "ab1888002cf51be03ed6f47970daa5b0d3eba17f431e41d067955fbc80c94623",
+      "origin": "results/OMM12_OUTCOME_ADMISSION_PROPOSAL_20261010.md"
+    },
+    "assets/omm12_nested_design_metadata_20261010.json": {
+      "bytes": 72997,
+      "sha256": "f282fb3ca62fa07ae140207c1ce8f9e495d5bd1e38fb255918cfed89a8c8dd94",
+      "origin": "results/omm12_nested_design_metadata_20261010.json"
+    },
+    "assets/omm12_integrated_readiness_20261010.json": {
+      "bytes": 2162,
+      "sha256": "54e4bbd394ef6a539277924a5a972c45145103c7a7b03267530cad0eab0e5275",
+      "origin": "results/omm12_integrated_readiness_20261010.json"
+    },
+    "assets/omm12_quarantine_certificate_20261010.json": {
+      "bytes": 60800,
+      "sha256": "c23fe359a1b0dcc79180b495db2e770851c42a0d97a3e28feaf129280d91086d",
+      "origin": "results/omm12_quarantine_certificate_20261010.json"
+    },
+    "assets/omm12_specimen_lineage_metadata_20261010.json": {
+      "bytes": 18549,
+      "sha256": "c2aa09c4f9a3e2b8110edcf75f1064400bf6599c5d9ccc53d477c811cf3c8b99",
+      "origin": "results/omm12_specimen_lineage_metadata_20261010.json"
+    },
+    "python/microtwin/source_readiness.py": {
+      "bytes": 3273,
+      "sha256": "c398cb46f175c80137f18808b392c69e99f417417ca65ae7819fec8c065eab62",
+      "origin": "src/microtwin/source_readiness.py"
+    },
+    "python/microtwin/admission_evidence_bundle.py": {
+      "bytes": 3310,
+      "sha256": "a1bc8fa1a5486261cc9ffc5c196405c73b7a712cae2b52683956b006d5794dfa",
+      "origin": "src/microtwin/admission_evidence_bundle.py"
+    },
+    "python/microtwin/censor_contract.py": {
+      "bytes": 2879,
+      "sha256": "5084dae18e6ea859ece29d1f4b760d2a0509d3f82a18fd45ea449ca87289207d",
+      "origin": "src/microtwin/censor_contract.py"
+    },
+    "python/microtwin/nested_perturbation_design.py": {
+      "bytes": 5822,
+      "sha256": "8b915572c93cdec42e0f57b2445a6bbd07dcdaa5ae2159ab2764c074e76032f1",
+      "origin": "src/microtwin/nested_perturbation_design.py"
+    },
+    "python/microtwin/comparator_capability.py": {
+      "bytes": 4903,
+      "sha256": "504c4c5bfff1d4d20120b70b5d63c136f5a51a4e1894817827bc735f6ffe0dbc",
+      "origin": "src/microtwin/comparator_capability.py"
+    },
+    "python/microtwin/specimen_lineage.py": {
+      "bytes": 4285,
+      "sha256": "aac110f74def2da6c8de25d36e995280b66310761a543169dd420cf477ed5cf6",
+      "origin": "src/microtwin/specimen_lineage.py"
+    },
+    "python/microtwin/__init__.py": {
+      "bytes": 174,
+      "sha256": "84edde613d06fecfb8660d42115b83e1e53e17d24a8cb9050c4657823ac7b792",
+      "origin": "src/microtwin/__init__.py"
+    },
+    "python/microtwin/admission_boundary.py": {
+      "bytes": 4431,
+      "sha256": "2c848f47a2c84c7c28507ee8a399eebb86635d22ed5829933b15f2e88c6059d7",
+      "origin": "src/microtwin/admission_boundary.py"
+    },
+    "python/microtwin/admission_demo.py": {
+      "bytes": 1796,
+      "sha256": "a74ccc065eef3af98cdc031d851f41e01a28a02f86f269f77480c5db2218ed09",
+      "origin": "src/microtwin/admission_demo.py"
+    },
+    "runtime/pyodide.asm.mjs": {
+      "bytes": 1250344,
+      "sha256": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
+      "origin": "pinned-Pyodide-314.0.7"
+    },
+    "runtime/python_stdlib.zip": {
+      "bytes": 2545637,
+      "sha256": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a",
+      "origin": "pinned-Pyodide-314.0.7"
+    },
+    "runtime/LICENSE.pyodide": {
+      "bytes": 16725,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+      "origin": "pinned-Pyodide-314.0.7"
+    },
+    "runtime/pyodide-lock.json": {
+      "bytes": 119077,
+      "sha256": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010",
+      "origin": "pinned-Pyodide-314.0.7"
+    },
+    "runtime/pyodide.asm.wasm": {
+      "bytes": 9598218,
+      "sha256": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6",
+      "origin": "pinned-Pyodide-314.0.7"
+    },
+    "runtime/pyodide.mjs": {
+      "bytes": 17931,
+      "sha256": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109",
+      "origin": "pinned-Pyodide-314.0.7"
+    }
+  },
+  "note": "Unsigned byte identity only, not permission/scientific authenticity. Public metadata and synthetic fixtures only."
+}
