@@ -1,7 +1,7 @@
 {
-  "base_commit": "7306f477fbacf62158a2b3bfbf909b3e4c092e04",
+  "base_commit": "608c49c4b9611f933b7fb7acbe0e5619100aa4b8",
   "runtime_version": "314.0.7",
-  "total_bytes": 13846627,
+  "total_bytes": 13860720,
   "files": {
     "style.css": {
       "bytes": 1990,
@@ -173,6 +173,11 @@
       "sha256": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
       "origin": "pinned-Pyodide-314.0.7"
     },
+    "runtime/LICENSE.python": {
+      "bytes": 13804,
+      "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231",
+      "origin": "pinned-Pyodide-314.0.7"
+    },
     "runtime/python_stdlib.zip": {
       "bytes": 2545637,
       "sha256": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a",
@@ -186,6 +191,11 @@
     "runtime/pyodide-lock.json": {
       "bytes": 119077,
       "sha256": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010",
+      "origin": "pinned-Pyodide-314.0.7"
+    },
+    "runtime/SOURCE_NOTICE.txt": {
+      "bytes": 289,
+      "sha256": "b182eeb554c05c86379d9a593e43f3590b3977a34703a1dad393790ba4dacaf5",
       "origin": "pinned-Pyodide-314.0.7"
     },
     "runtime/pyodide.asm.wasm": {

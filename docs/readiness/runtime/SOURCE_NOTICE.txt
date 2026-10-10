@@ -1,0 +1,3 @@
+Unmodified Pyodide 314.0.7 core assets, MPL 2.0. Source: https://github.com/pyodide/pyodide/tree/314.0.7
+Vendored Python standard library, Python license: https://github.com/python/cpython
+This site does not load additional scientific wheels. Runtime hashes are in ../asset-manifest.json.

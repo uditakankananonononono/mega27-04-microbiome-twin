@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 PYTHON=['__init__.py','admission_boundary.py','admission_evidence_bundle.py','nested_perturbation_design.py','specimen_lineage.py','censor_contract.py','comparator_capability.py','source_readiness.py','admission_demo.py']
 ASSETS=['OMM12_OUTCOME_ADMISSION_PROPOSAL_20261010.md','OMM12_DOCUMENTARY_CLOSEOUT_20261010.md','omm12_quarantine_certificate_20261010.json','omm12_platform_boundary_check_20261010.json','omm12_admission_evidence_receipt_20261010.json','omm12_nested_design_metadata_20261010.json','omm12_specimen_lineage_metadata_20261010.json','omm12_censor_semantics_metadata_20261010.json','omm12_comparator_plan_metadata_20261010.json','omm12_integrated_readiness_20261010.json','readiness_inputs.json']
-RUNTIME=['pyodide.mjs','pyodide.asm.mjs','pyodide.asm.wasm','python_stdlib.zip','pyodide-lock.json','LICENSE.pyodide']
+RUNTIME=['pyodide.mjs','pyodide.asm.mjs','pyodide.asm.wasm','python_stdlib.zip','pyodide-lock.json','LICENSE.pyodide','LICENSE.python','SOURCE_NOTICE.txt']
 
 def build():
     from microtwin.admission_demo import create_demo
