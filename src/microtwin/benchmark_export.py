@@ -8,6 +8,7 @@ from pathlib import Path
 import pandas as pd
 from .interaction_score import heldout_scores
 from .reliability import reliability_report
+from .research_intake import _read_rectangular_text
 
 
 def export_paired_report(loss_file, partition_file, *, n_boot=2000, seed=0):
@@ -19,8 +20,8 @@ def export_paired_report(loss_file, partition_file, *, n_boot=2000, seed=0):
     if any(not p.is_file() or p.stat().st_size>10_000_000 for p in paths):
         raise ValueError('two existing CSV files required, at most 10 MB each')
     raw=[p.read_bytes() for p in paths]
-    losses=pd.read_csv(paths[0],dtype={'sample_id':str,'subject_id':str,'fold':str},keep_default_na=False)
-    parts=pd.read_csv(paths[1],dtype=str,keep_default_na=False)
+    losses=_read_rectangular_text(paths[0],delimiter=',',label='loss CSV')
+    parts=_read_rectangular_text(paths[1],delimiter=',',label='partition CSV')
     if set(losses.columns)!={'sample_id','subject_id','fold','prior_error','interaction_error'}:
         raise ValueError('loss CSV requires sample_id,subject_id,fold,prior_error,interaction_error')
     if set(parts.columns)!={'sample_id','subject_id','fold','partition'}:
@@ -44,6 +45,11 @@ def export_paired_report(loss_file, partition_file, *, n_boot=2000, seed=0):
     a=set(map(tuple,losses[['sample_id','subject_id','fold']].to_numpy()))
     b=set(map(tuple,test[['sample_id','subject_id','fold']].to_numpy()))
     if a!=b:raise ValueError('losses must exactly match outer-test manifest')
+    try:
+        for field in ('prior_error','interaction_error'):
+            losses[field]=pd.to_numeric(losses[field],errors='raise')
+    except (ValueError,TypeError) as exc:
+        raise ValueError('numeric loss entries required') from exc
     score=heldout_scores(losses.prior_error.to_numpy(),losses.interaction_error.to_numpy(),
                          ids=losses.sample_id.tolist(),groups=losses.subject_id.tolist(),n_boot=n_boot,seed=seed)
     components={}
