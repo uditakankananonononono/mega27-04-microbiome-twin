@@ -133,6 +133,17 @@ def cmd_predict_calibrated(a):
     return 0
 
 
+def cmd_specimen_lineage(a):
+    from .specimen_lineage import load_lineage
+    try:
+        report=load_lineage(a.records)
+    except ValueError:
+        print('specimen lineage metadata rejected',file=sys.stderr)
+        return 2
+    print(json.dumps(report,indent=2))
+    return 0 if report['status']=='METADATA_READY_FOR_MANUAL_LINEAGE_REVIEW' else 2
+
+
 def cmd_nested_design(a):
     from .nested_perturbation_design import load_nested_design
     try:
@@ -427,6 +438,9 @@ def main(argv=None):
     cc.add_argument('--unit',choices=('counts','relative_abundance','absolute_abundance'),required=True);cc.add_argument('--source-id',required=True)
     cc.add_argument('--processing-authorized',action='store_true');cc.add_argument('--subject-map');cc.add_argument('--calibration-subject-map');cc.add_argument('--query-subject-map')
     cc.add_argument('--alpha',type=float,default=.1);cc.add_argument('--out',required=True);cc.set_defaults(f=cmd_predict_calibrated)
+    sl=sp.add_parser('check-specimen-lineage',help='metadata-only subject/specimen/aliquot separation; no physical verification or admission')
+    sl.add_argument('records',help='strict specimen lineage JSON, maximum 2 MB')
+    sl.set_defaults(f=cmd_specimen_lineage)
     nd=sp.add_parser('check-nested-perturbation-design',help='metadata-only biological/technical unit and control-label coverage; never admission')
     nd.add_argument('records',help='strict nested design JSON, maximum 2 MB')
     nd.set_defaults(f=cmd_nested_design)
@@ -467,7 +481,7 @@ def main(argv=None):
     pl.add_argument('truth');pl.add_argument('--models',required=True);pl.add_argument('--labels',required=True);pl.add_argument('--out',required=True)
     pl.set_defaults(f=cmd_prediction_losses)
     a = ap.parse_args(argv)
-    if a.f not in (cmd_check_admission_boundary,cmd_admission_evidence,cmd_nested_design):
+    if a.f not in (cmd_check_admission_boundary,cmd_admission_evidence,cmd_nested_design,cmd_specimen_lineage):
         # Metadata reliability commands require the standard library only.
         global np,pd,audit
         import numpy as np

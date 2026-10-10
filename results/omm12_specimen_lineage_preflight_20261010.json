@@ -1,0 +1,22 @@
+{
+  "status": "BLOCKED",
+  "metadata_rows": 60,
+  "shared_subject_labels": 30,
+  "cross_modality_specimen_label_candidates": 0,
+  "submitted_verified_specimen_pairs": 0,
+  "technical_repeat_rows_not_additional_specimens": 0,
+  "unresolved_reasons": [
+    {
+      "reason": "LINEAGE_UNVERIFIED_OR_UNKNOWN",
+      "count": 60
+    },
+    {
+      "reason": "INSUFFICIENT_VERIFIED_LABEL_PAIRS",
+      "count": 1
+    }
+  ],
+  "physical_aliquot_source_verified": false,
+  "outcome_admitted": false,
+  "multimodal_validated": false,
+  "note": "Submitted verification is not authenticated physical lineage. Shared subject labels and technical rows are not paired specimens; no outcome, causal or clinical claim."
+}
