@@ -134,3 +134,12 @@ def test_subject_map_whitespace_cannot_hide_cross_partition_person(tmp_path):
     maps[2].write_text('sample_id,subject_id\nq1,"p,3"\n')
     _,report=predict_with_radius(tr,cal,q,**args)
     assert report['subject_partition_check']['status']=='exact_submitted_labels_disjoint'
+
+
+def test_calibration_route_rejects_ragged_query_before_predictions(tmp_path):
+    from microtwin.local_calibrated_predict import predict_with_radius
+    train=tmp_path/'train.tsv';train.write_text('sample_id\tA\nt1\t2\n')
+    cal=tmp_path/'cal.tsv';cal.write_text('sample_id\tA\nc1\t3\n')
+    query=tmp_path/'query.tsv';query.write_text('sample_id\tA\nPRIVATE_QUERY\t1\t1\n')
+    with pytest.raises(ValueError,match='local table must be a readable rectangular'):
+        predict_with_radius(train,cal,query,unit='counts',source_id='test',processing_authorized=True)

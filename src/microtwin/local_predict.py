@@ -5,14 +5,13 @@ an individual clinical twin. It neither exports data nor estimates uncertainty.
 """
 from __future__ import annotations
 
-import csv
 import hashlib
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-from .research_intake import inspect_local_matrix
+from .research_intake import inspect_local_matrix, _read_rectangular_text
 
 
 def _read_table(path):
@@ -20,11 +19,10 @@ def _read_table(path):
     if not path.is_file() or path.stat().st_size > 50_000_000 or path.suffix not in ('.csv', '.tsv'):
         raise ValueError('missing, oversized or unsupported local table (CSV/TSV, 50 MB maximum)')
     delimiter = ',' if path.suffix == '.csv' else '\t'
-    with path.open(newline='') as f:
-        hdr = next(csv.reader(f, delimiter=delimiter), [])
-    if len(hdr) != len(set(hdr)) or len(hdr) < 2 or hdr[0] != 'sample_id' or any(not x.strip() for x in hdr):
+    df = _read_rectangular_text(path, delimiter=delimiter, label='local table')
+    hdr = list(df.columns)
+    if len(hdr) < 2 or hdr[0] != 'sample_id' or any(not x.strip() for x in hdr):
         raise ValueError('sample_id first, then unique nonempty taxon names required')
-    df = pd.read_csv(path, sep=delimiter, dtype=str, keep_default_na=False)
     if df.empty or df.sample_id.map(str.strip).eq('').any() or df.sample_id.duplicated().any():
         raise ValueError('nonempty unique sample IDs required')
     if df.iloc[:, 1:].eq('').any().any():

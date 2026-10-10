@@ -121,3 +121,29 @@ def test_predict_detects_subject_map_change_during_inspection(tmp_path, monkeypa
     with pytest.raises(ValueError,match="subject map changed during inspection"):
         local_predict.predict_local(train,query,unit="counts",source_id="test",
                                     processing_authorized=True,subject_map=mapping)
+
+
+@pytest.mark.parametrize('text', [
+    'sample_id\tA\nSECRET_QUERY\t1\t1\n',
+    'sample_id\tA\tB\nSECRET_QUERY\t1\n',
+    'sample_id\tA\n"SECRET_QUERY\t1\n',
+])
+def test_predict_rejects_ragged_query_without_shifted_output(tmp_path, text):
+    train=tmp_path/'train.tsv';train.write_text('sample_id\tA\nt1\t2\n')
+    query=tmp_path/'query.tsv';query.write_text(text)
+    with pytest.raises(ValueError) as error:
+        predict_local(train,query,unit='counts',source_id='test',processing_authorized=True)
+    assert str(error.value)=='local table must be a readable rectangular text table with unique headers'
+    assert 'SECRET_QUERY' not in str(error.value)
+    out=tmp_path/'pred.csv'
+    with pytest.raises(SystemExit,match='rectangular text table'):
+        main(['predict',str(train),str(query),'--unit','counts','--source-id','test',
+              '--processing-authorized','--out',str(out)])
+    assert not out.exists()
+
+
+def test_valid_quoted_query_id_is_preserved(tmp_path):
+    train=tmp_path/'train.csv';train.write_text('sample_id,A\nt1,2\n')
+    query=tmp_path/'query.csv';query.write_text('sample_id,A\n"query, one",1\n')
+    pred,_=predict_local(train,query,unit='counts',source_id='test',processing_authorized=True)
+    assert pred.sample_id.tolist()==['query, one']
