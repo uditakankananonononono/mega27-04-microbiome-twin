@@ -1,0 +1,3284 @@
+{
+  "status": "DOCUMENTARY_CLOSEOUT_NOT_ADMITTED",
+  "outcome_access": false,
+  "lane_next_step": "PAUSE_FOR_OUTCOME_ADMISSION_PROPOSAL_REVIEW",
+  "primary_sources": {
+    "2023": "https://www.nature.com/articles/s41467-023-40372-0",
+    "2022": "https://www.nature.com/articles/s41396-021-01153-z"
+  },
+  "identity_crosswalk": [
+    {
+      "strain_token": "KB1",
+      "species_2022": "Enterococcus faecalis",
+      "DSM_2022": "DSM32036",
+      "DSM_2023": "DSM32036",
+      "status": "DSM_DOCUMENTARY_AGREEMENT"
+    },
+    {
+      "strain_token": "YL2",
+      "species_2022": "Bifidobacterium animalis",
+      "DSM_2022": "DSM26074",
+      "DSM_2023": "DSM26074",
+      "status": "DSM_DOCUMENTARY_AGREEMENT"
+    },
+    {
+      "strain_token": "KB18",
+      "species_2022": "Acutalibacter muris",
+      "DSM_2022": "DSM26090",
+      "DSM_2023": "DSM26090",
+      "status": "DSM_DOCUMENTARY_AGREEMENT"
+    },
+    {
+      "strain_token": "YL27",
+      "species_2022": "Muribaculum intestinale",
+      "DSM_2022": "DSM28989",
+      "DSM_2023": "DSM28989",
+      "status": "DSM_DOCUMENTARY_AGREEMENT"
+    },
+    {
+      "strain_token": "YL31",
+      "species_2022": "Flavonifractor plautii",
+      "DSM_2022": "DSM26117",
+      "DSM_2023": "DSM26117",
+      "status": "DSM_DOCUMENTARY_AGREEMENT"
+    },
+    {
+      "strain_token": "YL32",
+      "species_2022": "Enterocloster clostridioformis",
+      "DSM_2022": "DSM26114",
+      "DSM_2023": "DSM26114",
+      "status": "DSM_DOCUMENTARY_AGREEMENT"
+    },
+    {
+      "strain_token": "YL44",
+      "species_2022": "Akkermansia muciniphila",
+      "DSM_2022": "DSM26127",
+      "DSM_2023": "DSM26109",
+      "status": "CANDIDATE_CORRECTION_NOT_APPLIED"
+    },
+    {
+      "strain_token": "YL45",
+      "species_2022": "Turicimonas muris",
+      "DSM_2022": "DSM26109",
+      "DSM_2023": "DSM26109",
+      "status": "DSM_DOCUMENTARY_AGREEMENT"
+    },
+    {
+      "strain_token": "I46",
+      "species_2022": "Clostridium innocuum",
+      "DSM_2022": "DSM26113",
+      "DSM_2023": "DSM26113",
+      "status": "DSM_DOCUMENTARY_AGREEMENT"
+    },
+    {
+      "strain_token": "I48",
+      "species_2022": "Bacteroides caecimuris",
+      "DSM_2022": "DSM26085",
+      "DSM_2023": "DSM26085",
+      "status": "DSM_DOCUMENTARY_AGREEMENT"
+    },
+    {
+      "strain_token": "I49",
+      "species_2022": "Limosilactobacillus reuteri",
+      "DSM_2022": "DSM32035",
+      "DSM_2023": "DSM32035",
+      "status": "DSM_DOCUMENTARY_AGREEMENT"
+    },
+    {
+      "strain_token": "YL58",
+      "species_2022": "Blautia coccoides",
+      "DSM_2022": "DSM26115",
+      "DSM_2023": "DSM26115",
+      "status": "DSM_DOCUMENTARY_AGREEMENT"
+    }
+  ],
+  "control_pairs_syntax_only": [
+    {
+      "dropout_key": "OMM11-KB1_E3_AF_W1",
+      "control_key": "OMM12_E3_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E3_AF_W2",
+      "control_key": "OMM12_E3_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E3_AF_W3",
+      "control_key": "OMM12_E3_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E3_AF_W1",
+      "control_key": "OMM12_E3_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E3_AF_W2",
+      "control_key": "OMM12_E3_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E3_AF_W3",
+      "control_key": "OMM12_E3_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E3_AF_W1",
+      "control_key": "OMM12_E3_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E3_AF_W2",
+      "control_key": "OMM12_E3_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E3_AF_W3",
+      "control_key": "OMM12_E3_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E3_AF_W1",
+      "control_key": "OMM12_E3_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E3_AF_W2",
+      "control_key": "OMM12_E3_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E3_AF_W3",
+      "control_key": "OMM12_E3_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E3_AF_W1",
+      "control_key": "OMM12_E3_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E3_AF_W2",
+      "control_key": "OMM12_E3_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E3_AF_W3",
+      "control_key": "OMM12_E3_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E3_AF_W1",
+      "control_key": "OMM12_E3_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E3_AF_W2",
+      "control_key": "OMM12_E3_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E3_AF_W3",
+      "control_key": "OMM12_E3_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL44_E3_AF_W1",
+      "control_key": "OMM12_E3_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL44_E3_AF_W2",
+      "control_key": "OMM12_E3_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL44_E3_AF_W3",
+      "control_key": "OMM12_E3_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E3_AF_W1",
+      "control_key": "OMM12_E3_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E3_AF_W2",
+      "control_key": "OMM12_E3_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E3_AF_W3",
+      "control_key": "OMM12_E3_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E3_AF_W1",
+      "control_key": "OMM12_E3_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E3_AF_W2",
+      "control_key": "OMM12_E3_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E3_AF_W3",
+      "control_key": "OMM12_E3_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_E3_AF_W1",
+      "control_key": "OMM12_E3_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_E3_AF_W3",
+      "control_key": "OMM12_E3_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E3_AF_W1",
+      "control_key": "OMM12_E3_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E3_AF_W2",
+      "control_key": "OMM12_E3_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E3_AF_W3",
+      "control_key": "OMM12_E3_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E3_AF_W1",
+      "control_key": "OMM12_E3_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E3_AF_W2",
+      "control_key": "OMM12_E3_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E3_AF_W3",
+      "control_key": "OMM12_E3_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E1_AF_W1",
+      "control_key": "OMM12_E1_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E1_AF_W2",
+      "control_key": "OMM12_E1_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E1_AF_W3",
+      "control_key": "OMM12_E1_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E1_AF_W1",
+      "control_key": "OMM12_E1_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E1_AF_W2",
+      "control_key": "OMM12_E1_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E1_AF_W3",
+      "control_key": "OMM12_E1_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E1_AF_W1",
+      "control_key": "OMM12_E1_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E1_AF_W2",
+      "control_key": "OMM12_E1_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E1_AF_W3",
+      "control_key": "OMM12_E1_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E1_AF_W1",
+      "control_key": "OMM12_E1_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E1_AF_W2",
+      "control_key": "OMM12_E1_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E1_AF_W3",
+      "control_key": "OMM12_E1_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E1_AF_W1",
+      "control_key": "OMM12_E1_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E1_AF_W2",
+      "control_key": "OMM12_E1_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E1_AF_W3",
+      "control_key": "OMM12_E1_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E1_AF_W1",
+      "control_key": "OMM12_E1_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E1_AF_W2",
+      "control_key": "OMM12_E1_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL44_E1_AF_W1",
+      "control_key": "OMM12_E1_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL44_E1_AF_W2",
+      "control_key": "OMM12_E1_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL44_E1_AF_W3",
+      "control_key": "OMM12_E1_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E1_AF_W1",
+      "control_key": "OMM12_E1_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E1_AF_W2",
+      "control_key": "OMM12_E1_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E1_AF_W3",
+      "control_key": "OMM12_E1_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E1_AF_W1",
+      "control_key": "OMM12_E1_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E1_AF_W2",
+      "control_key": "OMM12_E1_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E1_AF_W3",
+      "control_key": "OMM12_E1_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_E1_AF_W1",
+      "control_key": "OMM12_E1_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_E1_AF_W2",
+      "control_key": "OMM12_E1_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E1_AF_W1",
+      "control_key": "OMM12_E1_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E1_AF_W2",
+      "control_key": "OMM12_E1_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E1_AF_W3",
+      "control_key": "OMM12_E1_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E1_AF_W1",
+      "control_key": "OMM12_E1_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E1_AF_W2",
+      "control_key": "OMM12_E1_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E1_AF_W3",
+      "control_key": "OMM12_E1_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E2_AF_W1",
+      "control_key": "OMM12_E2_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E2_AF_W2",
+      "control_key": "OMM12_E2_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E2_AF_W3",
+      "control_key": "OMM12_E2_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E2_AF_W1",
+      "control_key": "OMM12_E2_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E2_AF_W2",
+      "control_key": "OMM12_E2_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E2_AF_W3",
+      "control_key": "OMM12_E2_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E2_AF_W1",
+      "control_key": "OMM12_E2_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E2_AF_W2",
+      "control_key": "OMM12_E2_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E2_AF_W3",
+      "control_key": "OMM12_E2_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E2_AF_W1",
+      "control_key": "OMM12_E2_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E2_AF_W2",
+      "control_key": "OMM12_E2_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E2_AF_W3",
+      "control_key": "OMM12_E2_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E2_AF_W1",
+      "control_key": "OMM12_E2_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E2_AF_W2",
+      "control_key": "OMM12_E2_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E2_AF_W3",
+      "control_key": "OMM12_E2_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E2_AF_W1",
+      "control_key": "OMM12_E2_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E2_AF_W2",
+      "control_key": "OMM12_E2_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E2_AF_W3",
+      "control_key": "OMM12_E2_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL44_E2_AF_W1",
+      "control_key": "OMM12_E2_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL44_E2_AF_W2",
+      "control_key": "OMM12_E2_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL44_E2_AF_W3",
+      "control_key": "OMM12_E2_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E2_AF_W1",
+      "control_key": "OMM12_E2_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E2_AF_W2",
+      "control_key": "OMM12_E2_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E2_AF_W3",
+      "control_key": "OMM12_E2_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E2_AF_W1",
+      "control_key": "OMM12_E2_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E2_AF_W2",
+      "control_key": "OMM12_E2_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E2_AF_W3",
+      "control_key": "OMM12_E2_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_E2_AF_W1",
+      "control_key": "OMM12_E2_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_E2_AF_W2",
+      "control_key": "OMM12_E2_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_E2_AF_W3",
+      "control_key": "OMM12_E2_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E2_AF_W1",
+      "control_key": "OMM12_E2_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E2_AF_W2",
+      "control_key": "OMM12_E2_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E2_AF_W3",
+      "control_key": "OMM12_E2_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E2_AF_W1",
+      "control_key": "OMM12_E2_AF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E2_AF_W2",
+      "control_key": "OMM12_E2_AF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E2_AF_W3",
+      "control_key": "OMM12_E2_AF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E3_APF_W1",
+      "control_key": "OMM12_E3_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E3_APF_W3",
+      "control_key": "OMM12_E3_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E3_APF_W1",
+      "control_key": "OMM12_E3_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E3_APF_W2",
+      "control_key": "OMM12_E3_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E3_APF_W3",
+      "control_key": "OMM12_E3_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E3_APF_W1",
+      "control_key": "OMM12_E3_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E3_APF_W2",
+      "control_key": "OMM12_E3_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E3_APF_W3",
+      "control_key": "OMM12_E3_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E3_APF_W1",
+      "control_key": "OMM12_E3_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E3_APF_W2",
+      "control_key": "OMM12_E3_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E3_APF_W3",
+      "control_key": "OMM12_E3_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E3_APF_W1",
+      "control_key": "OMM12_E3_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E3_APF_W2",
+      "control_key": "OMM12_E3_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E3_APF_W3",
+      "control_key": "OMM12_E3_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E3_APF_W1",
+      "control_key": "OMM12_E3_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E3_APF_W2",
+      "control_key": "OMM12_E3_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E3_APF_W3",
+      "control_key": "OMM12_E3_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL44_E3_APF_W1",
+      "control_key": "OMM12_E3_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL44_E3_APF_W2",
+      "control_key": "OMM12_E3_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL44_E3_APF_W3",
+      "control_key": "OMM12_E3_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E3_APF_W1",
+      "control_key": "OMM12_E3_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E3_APF_W2",
+      "control_key": "OMM12_E3_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E3_APF_W3",
+      "control_key": "OMM12_E3_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E3_APF_W1",
+      "control_key": "OMM12_E3_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E3_APF_W2",
+      "control_key": "OMM12_E3_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E3_APF_W3",
+      "control_key": "OMM12_E3_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_E3_APF_W1",
+      "control_key": "OMM12_E3_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_E3_APF_W2",
+      "control_key": "OMM12_E3_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_E3_APF_W3",
+      "control_key": "OMM12_E3_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E3_APF_W1",
+      "control_key": "OMM12_E3_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E3_APF_W2",
+      "control_key": "OMM12_E3_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E3_APF_W3",
+      "control_key": "OMM12_E3_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E3_APF_W1",
+      "control_key": "OMM12_E3_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E3_APF_W2",
+      "control_key": "OMM12_E3_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E3_APF_W3",
+      "control_key": "OMM12_E3_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E1_APF_W1",
+      "control_key": "OMM12_E1_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E1_APF_W2",
+      "control_key": "OMM12_E1_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E1_APF_W3",
+      "control_key": "OMM12_E1_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E1_APF_W1",
+      "control_key": "OMM12_E1_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E1_APF_W2",
+      "control_key": "OMM12_E1_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E1_APF_W3",
+      "control_key": "OMM12_E1_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E1_APF_W1",
+      "control_key": "OMM12_E1_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E1_APF_W2",
+      "control_key": "OMM12_E1_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E1_APF_W3",
+      "control_key": "OMM12_E1_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E1_APF_W1",
+      "control_key": "OMM12_E1_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E1_APF_W2",
+      "control_key": "OMM12_E1_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E1_APF_W3",
+      "control_key": "OMM12_E1_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E1_APF_W1",
+      "control_key": "OMM12_E1_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E1_APF_W2",
+      "control_key": "OMM12_E1_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E1_APF_W3",
+      "control_key": "OMM12_E1_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E1_APF_W1",
+      "control_key": "OMM12_E1_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E1_APF_W2",
+      "control_key": "OMM12_E1_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E1_APF_W3",
+      "control_key": "OMM12_E1_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E1_APF_W1",
+      "control_key": "OMM12_E1_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E1_APF_W2",
+      "control_key": "OMM12_E1_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E1_APF_W3",
+      "control_key": "OMM12_E1_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E1_APF_W1",
+      "control_key": "OMM12_E1_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E1_APF_W2",
+      "control_key": "OMM12_E1_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E1_APF_W3",
+      "control_key": "OMM12_E1_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E1_APF_W1",
+      "control_key": "OMM12_E1_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E1_APF_W2",
+      "control_key": "OMM12_E1_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E1_APF_W3",
+      "control_key": "OMM12_E1_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E1_APF_W1",
+      "control_key": "OMM12_E1_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E1_APF_W2",
+      "control_key": "OMM12_E1_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E1_APF_W3",
+      "control_key": "OMM12_E1_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E2_APF_W1",
+      "control_key": "OMM12_E2_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E2_APF_W2",
+      "control_key": "OMM12_E2_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB1_E2_APF_W3",
+      "control_key": "OMM12_E2_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E2_APF_W1",
+      "control_key": "OMM12_E2_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E2_APF_W2",
+      "control_key": "OMM12_E2_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-KB18_E2_APF_W3",
+      "control_key": "OMM12_E2_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E2_APF_W1",
+      "control_key": "OMM12_E2_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E2_APF_W2",
+      "control_key": "OMM12_E2_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL2_E2_APF_W3",
+      "control_key": "OMM12_E2_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E2_APF_W1",
+      "control_key": "OMM12_E2_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E2_APF_W2",
+      "control_key": "OMM12_E2_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL27_E2_APF_W3",
+      "control_key": "OMM12_E2_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E2_APF_W1",
+      "control_key": "OMM12_E2_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL31_E2_APF_W3",
+      "control_key": "OMM12_E2_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E2_APF_W1",
+      "control_key": "OMM12_E2_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E2_APF_W2",
+      "control_key": "OMM12_E2_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL32_E2_APF_W3",
+      "control_key": "OMM12_E2_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL44_E2_APF_W1",
+      "control_key": "OMM12_E2_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL44_E2_APF_W2",
+      "control_key": "OMM12_E2_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL44_E2_APF_W3",
+      "control_key": "OMM12_E2_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E2_APF_W1",
+      "control_key": "OMM12_E2_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E2_APF_W2",
+      "control_key": "OMM12_E2_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL45_E2_APF_W3",
+      "control_key": "OMM12_E2_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E2_APF_W1",
+      "control_key": "OMM12_E2_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E2_APF_W2",
+      "control_key": "OMM12_E2_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I46_E2_APF_W3",
+      "control_key": "OMM12_E2_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_E2_APF_W1",
+      "control_key": "OMM12_E2_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_E2_APF_W2",
+      "control_key": "OMM12_E2_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_E2_APF_W3",
+      "control_key": "OMM12_E2_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E2_APF_W1",
+      "control_key": "OMM12_E2_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E2_APF_W2",
+      "control_key": "OMM12_E2_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I49_E2_APF_W3",
+      "control_key": "OMM12_E2_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E2_APF_W2",
+      "control_key": "OMM12_E2_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-YL58_E2_APF_W3",
+      "control_key": "OMM12_E2_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_S1new_APF_W1",
+      "control_key": "OMM12_S1new_APF_W1",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_S1new_APF_W2",
+      "control_key": "OMM12_S1new_APF_W2",
+      "status": "SYNTAX_MATCH_ONLY"
+    },
+    {
+      "dropout_key": "OMM11-I48_S1new_APF_W3",
+      "control_key": "OMM12_S1new_APF_W3",
+      "status": "SYNTAX_MATCH_ONLY"
+    }
+  ],
+  "mouse_sample_metadata": [
+    {
+      "source_cell": "A2",
+      "sample_key": "TV287_D20_Ce_2476_OMM12",
+      "mouse_id": "2476",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A3",
+      "sample_key": "TV287_D20_Ce_2477_OMM12",
+      "mouse_id": "2477",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A4",
+      "sample_key": "TV287_D20_Ce_2478_OMM12",
+      "mouse_id": "2478",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A5",
+      "sample_key": "TV287_D20_Ce_2479_OMM-KB1",
+      "mouse_id": "2479",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A6",
+      "sample_key": "TV287_D20_Ce_2480_OMM-KB1",
+      "mouse_id": "2480",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A7",
+      "sample_key": "TV287_D20_Ce_2481_OMM-KB1",
+      "mouse_id": "2481",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A8",
+      "sample_key": "TV287_D20_Ce_2482_OMM-KB1",
+      "mouse_id": "2482",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A9",
+      "sample_key": "TV287_D20_Ce_2484_OMM-I48",
+      "mouse_id": "2484",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A10",
+      "sample_key": "TV287_D20_Ce_2485_OMM-I48",
+      "mouse_id": "2485",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A11",
+      "sample_key": "TV287_D20_Ce_2486_OMM-I48",
+      "mouse_id": "2486",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A12",
+      "sample_key": "TV287_D20_Ce_2487_OMM-I48",
+      "mouse_id": "2487",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A13",
+      "sample_key": "TV287_D20_Co_2476_OMM12",
+      "mouse_id": "2476",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A14",
+      "sample_key": "TV287_D20_Co_2477_OMM12",
+      "mouse_id": "2477",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A15",
+      "sample_key": "TV287_D20_Co_2478_OMM12",
+      "mouse_id": "2478",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A16",
+      "sample_key": "TV287_D20_Co_2479_OMM-KB1",
+      "mouse_id": "2479",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A17",
+      "sample_key": "TV287_D20_Co_2481_OMM-KB1",
+      "mouse_id": "2481",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A18",
+      "sample_key": "TV287_D20_Co_2482_OMM-KB1",
+      "mouse_id": "2482",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A19",
+      "sample_key": "TV287_D20_Co_2484_OMM-I48",
+      "mouse_id": "2484",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A20",
+      "sample_key": "TV287_D20_Co_2485_OMM-I48",
+      "mouse_id": "2485",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A21",
+      "sample_key": "TV287_D20_Co_2486_OMM-I48",
+      "mouse_id": "2486",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A22",
+      "sample_key": "TV287_D20_Co_2487_OMM-I48",
+      "mouse_id": "2487",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A23",
+      "sample_key": "TV287_D20_F_2476_OMM12",
+      "mouse_id": "2476",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A24",
+      "sample_key": "TV287_D20_F_2477_OMM12",
+      "mouse_id": "2477",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A25",
+      "sample_key": "TV287_D20_F_2478_OMM12",
+      "mouse_id": "2478",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A26",
+      "sample_key": "TV287_D20_F_2479_OMM-KB1",
+      "mouse_id": "2479",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A27",
+      "sample_key": "TV287_D20_F_2480_OMM-KB1",
+      "mouse_id": "2480",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A28",
+      "sample_key": "TV287_D20_F_2481_OMM-KB1",
+      "mouse_id": "2481",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A29",
+      "sample_key": "TV287_D20_F_2482_OMM-KB1",
+      "mouse_id": "2482",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A30",
+      "sample_key": "TV287_D20_F_2483_OMM-I48",
+      "mouse_id": "2483",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A31",
+      "sample_key": "TV287_D20_F_2484_OMM-I48",
+      "mouse_id": "2484",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A32",
+      "sample_key": "TV287_D20_F_2485_OMM-I48",
+      "mouse_id": "2485",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A33",
+      "sample_key": "TV287_D20_F_2486_OMM-I48",
+      "mouse_id": "2486",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A34",
+      "sample_key": "TV287_D20_F_2487_OMM-I48",
+      "mouse_id": "2487",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A35",
+      "sample_key": "TV287_D20_Il_2476_OMM12",
+      "mouse_id": "2476",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A36",
+      "sample_key": "TV287_D20_Il_2477_OMM12",
+      "mouse_id": "2477",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A37",
+      "sample_key": "TV287_D20_Il_2478_OMM12",
+      "mouse_id": "2478",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A38",
+      "sample_key": "TV287_D20_Il_2479_OMM-KB1",
+      "mouse_id": "2479",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A39",
+      "sample_key": "TV287_D20_Il_2480_OMM-KB1",
+      "mouse_id": "2480",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A40",
+      "sample_key": "TV287_D20_Il_2481_OMM-KB1",
+      "mouse_id": "2481",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A41",
+      "sample_key": "TV287_D20_Il_2482_OMM-KB1",
+      "mouse_id": "2482",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A42",
+      "sample_key": "TV287_D20_Il_2483_OMM-I48",
+      "mouse_id": "2483",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A43",
+      "sample_key": "TV287_D20_Il_2484_OMM-I48",
+      "mouse_id": "2484",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A44",
+      "sample_key": "TV287_D20_Il_2485_OMM-I48",
+      "mouse_id": "2485",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A45",
+      "sample_key": "TV287_D20_Il_2486_OMM-I48",
+      "mouse_id": "2486",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A46",
+      "sample_key": "TV287_D20_Il_2487_OMM-I48",
+      "mouse_id": "2487",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A47",
+      "sample_key": "TV287_D20_Je_2476_OMM12",
+      "mouse_id": "2476",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A48",
+      "sample_key": "TV287_D20_Je_2477_OMM12",
+      "mouse_id": "2477",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A49",
+      "sample_key": "TV287_D20_Je_2478_OMM12",
+      "mouse_id": "2478",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A50",
+      "sample_key": "TV287_D20_Je_2479_OMM-KB1",
+      "mouse_id": "2479",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A51",
+      "sample_key": "TV287_D20_Je_2480_OMM-KB1",
+      "mouse_id": "2480",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A52",
+      "sample_key": "TV287_D20_Je_2481_OMM-KB1",
+      "mouse_id": "2481",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A53",
+      "sample_key": "TV287_D20_Je_2482_OMM-KB1",
+      "mouse_id": "2482",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A54",
+      "sample_key": "TV287_D20_Je_2483_OMM-I48",
+      "mouse_id": "2483",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A55",
+      "sample_key": "TV287_D20_Je_2484_OMM-I48",
+      "mouse_id": "2484",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A56",
+      "sample_key": "TV287_D20_Je_2485_OMM-I48",
+      "mouse_id": "2485",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A57",
+      "sample_key": "TV287_D20_Je_2486_OMM-I48",
+      "mouse_id": "2486",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A58",
+      "sample_key": "TV287_D20_Je_2487_OMM-I48",
+      "mouse_id": "2487",
+      "experiment": "TV287",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A59",
+      "sample_key": "TV293_D20_Ce_2541_OMM12",
+      "mouse_id": "2541",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A60",
+      "sample_key": "TV293_D20_Ce_2542_OMM12",
+      "mouse_id": "2542",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A61",
+      "sample_key": "TV293_D20_Ce_2543_OMM12",
+      "mouse_id": "2543",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A62",
+      "sample_key": "TV293_D20_Ce_2544_OMM12",
+      "mouse_id": "2544",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A63",
+      "sample_key": "TV293_D20_Ce_2545_OMM12",
+      "mouse_id": "2545",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A64",
+      "sample_key": "TV293_D20_Ce_2546_OMM12",
+      "mouse_id": "2546",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A65",
+      "sample_key": "TV293_D20_Ce_2547_OMM-KB1",
+      "mouse_id": "2547",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A66",
+      "sample_key": "TV293_D20_Ce_2548_OMM-KB1",
+      "mouse_id": "2548",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A67",
+      "sample_key": "TV293_D20_Ce_2549_OMM-KB1",
+      "mouse_id": "2549",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A68",
+      "sample_key": "TV293_D20_Ce_2550_OMM-KB1",
+      "mouse_id": "2550",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A69",
+      "sample_key": "TV293_D20_Ce_2551_OMM-I48",
+      "mouse_id": "2551",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A70",
+      "sample_key": "TV293_D20_Ce_2552_OMM-I48",
+      "mouse_id": "2552",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A71",
+      "sample_key": "TV293_D20_Ce_2553_OMM-I48",
+      "mouse_id": "2553",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A72",
+      "sample_key": "TV293_D20_Ce_2554_OMM-I48",
+      "mouse_id": "2554",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A73",
+      "sample_key": "TV293_D20_Ce_2555_OMM-I48",
+      "mouse_id": "2555",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A74",
+      "sample_key": "TV293_D20_Ce_2556_OMM-YL58",
+      "mouse_id": "2556",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A75",
+      "sample_key": "TV293_D20_Ce_2557_OMM-YL58",
+      "mouse_id": "2557",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A76",
+      "sample_key": "TV293_D20_Ce_2558_OMM-YL58",
+      "mouse_id": "2558",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A77",
+      "sample_key": "TV293_D20_Ce_2559_OMM-YL58",
+      "mouse_id": "2559",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A78",
+      "sample_key": "TV293_D20_Co_2541_OMM12",
+      "mouse_id": "2541",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A79",
+      "sample_key": "TV293_D20_Co_2542_OMM12",
+      "mouse_id": "2542",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A80",
+      "sample_key": "TV293_D20_Co_2543_OMM12",
+      "mouse_id": "2543",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A81",
+      "sample_key": "TV293_D20_Co_2544_OMM12",
+      "mouse_id": "2544",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A82",
+      "sample_key": "TV293_D20_Co_2545_OMM12",
+      "mouse_id": "2545",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A83",
+      "sample_key": "TV293_D20_Co_2548_OMM-KB1",
+      "mouse_id": "2548",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A84",
+      "sample_key": "TV293_D20_Co_2549_OMM-KB1",
+      "mouse_id": "2549",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A85",
+      "sample_key": "TV293_D20_Co_2550_OMM-KB1",
+      "mouse_id": "2550",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A86",
+      "sample_key": "TV293_D20_Co_2551_OMM-I48",
+      "mouse_id": "2551",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A87",
+      "sample_key": "TV293_D20_Co_2552_OMM-I48",
+      "mouse_id": "2552",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A88",
+      "sample_key": "TV293_D20_Co_2553_OMM-I48",
+      "mouse_id": "2553",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A89",
+      "sample_key": "TV293_D20_Co_2554_OMM-I48",
+      "mouse_id": "2554",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A90",
+      "sample_key": "TV293_D20_Co_2555_OMM-I48",
+      "mouse_id": "2555",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A91",
+      "sample_key": "TV293_D20_Co_2556_OMM-YL58",
+      "mouse_id": "2556",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A92",
+      "sample_key": "TV293_D20_Co_2557_OMM-YL58",
+      "mouse_id": "2557",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A93",
+      "sample_key": "TV293_D20_Co_2558_OMM-YL58",
+      "mouse_id": "2558",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A94",
+      "sample_key": "TV293_D20_Co_2559_OMM-YL58",
+      "mouse_id": "2559",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A95",
+      "sample_key": "TV293_D20_F_2541_OMM12",
+      "mouse_id": "2541",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A96",
+      "sample_key": "TV293_D20_F_2542_OMM12",
+      "mouse_id": "2542",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A97",
+      "sample_key": "TV293_D20_F_2543_OMM12",
+      "mouse_id": "2543",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A98",
+      "sample_key": "TV293_D20_F_2544_OMM12",
+      "mouse_id": "2544",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A99",
+      "sample_key": "TV293_D20_F_2545_OMM12",
+      "mouse_id": "2545",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A100",
+      "sample_key": "TV293_D20_F_2546_OMM-KB1",
+      "mouse_id": "2546",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A101",
+      "sample_key": "TV293_D20_F_2547_OMM-KB1",
+      "mouse_id": "2547",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A102",
+      "sample_key": "TV293_D20_F_2548_OMM-KB1",
+      "mouse_id": "2548",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A103",
+      "sample_key": "TV293_D20_F_2549_OMM-KB1",
+      "mouse_id": "2549",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A104",
+      "sample_key": "TV293_D20_F_2550_OMM-KB1",
+      "mouse_id": "2550",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A105",
+      "sample_key": "TV293_D20_F_2551_OMM-I48",
+      "mouse_id": "2551",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A106",
+      "sample_key": "TV293_D20_F_2552_OMM-I48",
+      "mouse_id": "2552",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A107",
+      "sample_key": "TV293_D20_F_2553_OMM-I48",
+      "mouse_id": "2553",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A108",
+      "sample_key": "TV293_D20_F_2554_OMM-I48",
+      "mouse_id": "2554",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A109",
+      "sample_key": "TV293_D20_F_2555_OMM-I48",
+      "mouse_id": "2555",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A110",
+      "sample_key": "TV293_D20_F_2556_OMM-YL58",
+      "mouse_id": "2556",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A111",
+      "sample_key": "TV293_D20_F_2557_OMM-YL58",
+      "mouse_id": "2557",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A112",
+      "sample_key": "TV293_D20_F_2558_OMM-YL58",
+      "mouse_id": "2558",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A113",
+      "sample_key": "TV293_D20_F_2559_OMM-YL58",
+      "mouse_id": "2559",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A114",
+      "sample_key": "TV293_D20_Il_2541_OMM12",
+      "mouse_id": "2541",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A115",
+      "sample_key": "TV293_D20_Il_2542_OMM12",
+      "mouse_id": "2542",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A116",
+      "sample_key": "TV293_D20_Il_2543_OMM12",
+      "mouse_id": "2543",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A117",
+      "sample_key": "TV293_D20_Il_2544_OMM12",
+      "mouse_id": "2544",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A118",
+      "sample_key": "TV293_D20_Il_2545_OMM12",
+      "mouse_id": "2545",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A119",
+      "sample_key": "TV293_D20_Il_2546_OMM-KB1",
+      "mouse_id": "2546",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A120",
+      "sample_key": "TV293_D20_Il_2547_OMM-KB1",
+      "mouse_id": "2547",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A121",
+      "sample_key": "TV293_D20_Il_2548_OMM-KB1",
+      "mouse_id": "2548",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A122",
+      "sample_key": "TV293_D20_Il_2549_OMM-KB1",
+      "mouse_id": "2549",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A123",
+      "sample_key": "TV293_D20_Il_2550_OMM-KB1",
+      "mouse_id": "2550",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A124",
+      "sample_key": "TV293_D20_Il_2551_OMM-I48",
+      "mouse_id": "2551",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A125",
+      "sample_key": "TV293_D20_Il_2552_OMM-I48",
+      "mouse_id": "2552",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A126",
+      "sample_key": "TV293_D20_Il_2553_OMM-I48",
+      "mouse_id": "2553",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A127",
+      "sample_key": "TV293_D20_Il_2554_OMM-I48",
+      "mouse_id": "2554",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A128",
+      "sample_key": "TV293_D20_Il_2555_OMM-I48",
+      "mouse_id": "2555",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A129",
+      "sample_key": "TV293_D20_Il_2556_OMM-YL58",
+      "mouse_id": "2556",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A130",
+      "sample_key": "TV293_D20_Il_2557_OMM-YL58",
+      "mouse_id": "2557",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A131",
+      "sample_key": "TV293_D20_Il_2558_OMM-YL58",
+      "mouse_id": "2558",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A132",
+      "sample_key": "TV293_D20_Il_2559_OMM-YL58",
+      "mouse_id": "2559",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A133",
+      "sample_key": "TV293_D20_Je_2541_OMM12",
+      "mouse_id": "2541",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A134",
+      "sample_key": "TV293_D20_Je_2542_OMM12",
+      "mouse_id": "2542",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A135",
+      "sample_key": "TV293_D20_Je_2543_OMM12",
+      "mouse_id": "2543",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A136",
+      "sample_key": "TV293_D20_Je_2544_OMM12",
+      "mouse_id": "2544",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A137",
+      "sample_key": "TV293_D20_Je_2545_OMM12",
+      "mouse_id": "2545",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM12"
+    },
+    {
+      "source_cell": "A138",
+      "sample_key": "TV293_D20_Je_2546_OMM-KB1",
+      "mouse_id": "2546",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A139",
+      "sample_key": "TV293_D20_Je_2547_OMM-KB1",
+      "mouse_id": "2547",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A140",
+      "sample_key": "TV293_D20_Je_2548_OMM-KB1",
+      "mouse_id": "2548",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A141",
+      "sample_key": "TV293_D20_Je_2549_OMM-KB1",
+      "mouse_id": "2549",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A142",
+      "sample_key": "TV293_D20_Je_2550_OMM-KB1",
+      "mouse_id": "2550",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-KB1"
+    },
+    {
+      "source_cell": "A143",
+      "sample_key": "TV293_D20_Je_2551_OMM-I48",
+      "mouse_id": "2551",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A144",
+      "sample_key": "TV293_D20_Je_2552_OMM-I48",
+      "mouse_id": "2552",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A145",
+      "sample_key": "TV293_D20_Je_2553_OMM-I48",
+      "mouse_id": "2553",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A146",
+      "sample_key": "TV293_D20_Je_2554_OMM-I48",
+      "mouse_id": "2554",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A147",
+      "sample_key": "TV293_D20_Je_2555_OMM-I48",
+      "mouse_id": "2555",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-I48"
+    },
+    {
+      "source_cell": "A148",
+      "sample_key": "TV293_D20_Je_2556_OMM-YL58",
+      "mouse_id": "2556",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A149",
+      "sample_key": "TV293_D20_Je_2557_OMM-YL58",
+      "mouse_id": "2557",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A150",
+      "sample_key": "TV293_D20_Je_2558_OMM-YL58",
+      "mouse_id": "2558",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A151",
+      "sample_key": "TV293_D20_Je_2559_OMM-YL58",
+      "mouse_id": "2559",
+      "experiment": "TV293",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A152",
+      "sample_key": "TV295_D20_Ce_2573_OMM-YL58",
+      "mouse_id": "2573",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A153",
+      "sample_key": "TV295_D20_Ce_2574_OMM-YL58",
+      "mouse_id": "2574",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A154",
+      "sample_key": "TV295_D20_Ce_2575_OMM-YL58",
+      "mouse_id": "2575",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A155",
+      "sample_key": "TV295_D20_Ce_2576_OMM-YL58",
+      "mouse_id": "2576",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A156",
+      "sample_key": "TV295_D20_Ce_2577_OMM-YL58",
+      "mouse_id": "2577",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A157",
+      "sample_key": "TV295_D20_Ce_2578_OMM-YL58",
+      "mouse_id": "2578",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Ce",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A158",
+      "sample_key": "TV295_D20_Co_2573_OMM-YL58",
+      "mouse_id": "2573",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A159",
+      "sample_key": "TV295_D20_Co_2574_OMM-YL58",
+      "mouse_id": "2574",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A160",
+      "sample_key": "TV295_D20_Co_2575_OMM-YL58",
+      "mouse_id": "2575",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A161",
+      "sample_key": "TV295_D20_Co_2576_OMM-YL58",
+      "mouse_id": "2576",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A162",
+      "sample_key": "TV295_D20_Co_2577_OMM-YL58",
+      "mouse_id": "2577",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A163",
+      "sample_key": "TV295_D20_Co_2578_OMM-YL58",
+      "mouse_id": "2578",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Co",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A164",
+      "sample_key": "TV295_D20_F_2573_OMM-YL58",
+      "mouse_id": "2573",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A165",
+      "sample_key": "TV295_D20_F_2574_OMM-YL58",
+      "mouse_id": "2574",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A166",
+      "sample_key": "TV295_D20_F_2575_OMM-YL58",
+      "mouse_id": "2575",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A167",
+      "sample_key": "TV295_D20_F_2576_OMM-YL58",
+      "mouse_id": "2576",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A168",
+      "sample_key": "TV295_D20_F_2577_OMM-YL58",
+      "mouse_id": "2577",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "F",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A169",
+      "sample_key": "TV295_D20_Il_2573_OMM-YL58",
+      "mouse_id": "2573",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A170",
+      "sample_key": "TV295_D20_Il_2574_OMM-YL58",
+      "mouse_id": "2574",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A171",
+      "sample_key": "TV295_D20_Il_2575_OMM-YL58",
+      "mouse_id": "2575",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A172",
+      "sample_key": "TV295_D20_Il_2576_OMM-YL58",
+      "mouse_id": "2576",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A173",
+      "sample_key": "TV295_D20_Il_2577_OMM-YL58",
+      "mouse_id": "2577",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A174",
+      "sample_key": "TV295_D20_Il_2578_OMM-YL58",
+      "mouse_id": "2578",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Il",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A175",
+      "sample_key": "TV295_D20_Je_2573_OMM-YL58",
+      "mouse_id": "2573",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A176",
+      "sample_key": "TV295_D20_Je_2574_OMM-YL58",
+      "mouse_id": "2574",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A177",
+      "sample_key": "TV295_D20_Je_2575_OMM-YL58",
+      "mouse_id": "2575",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A178",
+      "sample_key": "TV295_D20_Je_2576_OMM-YL58",
+      "mouse_id": "2576",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A179",
+      "sample_key": "TV295_D20_Je_2577_OMM-YL58",
+      "mouse_id": "2577",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-YL58"
+    },
+    {
+      "source_cell": "A180",
+      "sample_key": "TV295_D20_Je_2578_OMM-YL58",
+      "mouse_id": "2578",
+      "experiment": "TV295",
+      "day": "D20",
+      "region": "Je",
+      "condition": "OMM-YL58"
+    }
+  ],
+  "endpoint_mouse_metadata": {
+    "Tab11": [
+      [
+        2477,
+        "OMM12"
+      ],
+      [
+        2478,
+        "OMM12"
+      ],
+      [
+        2481,
+        "OMM11-KB1"
+      ],
+      [
+        2482,
+        "OMM11-KB1"
+      ],
+      [
+        2484,
+        "OMM11-I48"
+      ],
+      [
+        2486,
+        "OMM11-I48"
+      ],
+      [
+        2487,
+        "OMM11-I48"
+      ],
+      [
+        2541,
+        "OMM12"
+      ],
+      [
+        2544,
+        "OMM12"
+      ],
+      [
+        2545,
+        "OMM12"
+      ],
+      [
+        2546,
+        "OMM11-KB1"
+      ],
+      [
+        2549,
+        "OMM11-KB1"
+      ],
+      [
+        2550,
+        "OMM11-KB1"
+      ],
+      [
+        2553,
+        "OMM11-I48"
+      ],
+      [
+        2555,
+        "OMM11-I48"
+      ],
+      [
+        2556,
+        "OMM11-YL58"
+      ],
+      [
+        2558,
+        "OMM11-YL58"
+      ],
+      [
+        2575,
+        "OMM11-YL58"
+      ],
+      [
+        2576,
+        "OMM11-YL58"
+      ],
+      [
+        2578,
+        "OMM11-YL58"
+      ]
+    ],
+    "Tab16": [
+      [
+        2573,
+        "OMM11-YL58",
+        "w"
+      ],
+      [
+        2574,
+        "OMM11-YL58",
+        "w"
+      ],
+      [
+        2575,
+        "OMM11-YL58",
+        "w"
+      ],
+      [
+        2576,
+        "OMM11-YL58",
+        "m"
+      ],
+      [
+        2577,
+        "OMM11-YL58",
+        "m"
+      ],
+      [
+        2578,
+        "OMM11-YL58",
+        "m"
+      ],
+      [
+        2541,
+        "OMM12",
+        "m"
+      ],
+      [
+        2542,
+        "OMM12",
+        "m"
+      ],
+      [
+        2543,
+        "OMM12",
+        "m"
+      ],
+      [
+        2544,
+        "OMM12",
+        "m"
+      ],
+      [
+        2545,
+        "OMM12",
+        "m"
+      ],
+      [
+        2546,
+        "OMM-KB1",
+        "m"
+      ],
+      [
+        2547,
+        "OMM-KB1",
+        "m"
+      ],
+      [
+        2548,
+        "OMM-KB1",
+        "m"
+      ],
+      [
+        2549,
+        "OMM-KB1",
+        "m"
+      ],
+      [
+        2550,
+        "OMM-KB1",
+        "m"
+      ],
+      [
+        2551,
+        "OMM-I48",
+        "m"
+      ],
+      [
+        2552,
+        "OMM-I48",
+        "m"
+      ],
+      [
+        2553,
+        "OMM-I48",
+        "m"
+      ],
+      [
+        2554,
+        "OMM-I48",
+        "m"
+      ],
+      [
+        2555,
+        "OMM-I48",
+        "m"
+      ],
+      [
+        2556,
+        "OMM-YL58",
+        "w"
+      ],
+      [
+        2557,
+        "OMM-YL58",
+        "w"
+      ],
+      [
+        2558,
+        "OMM-YL58",
+        "w"
+      ],
+      [
+        2559,
+        "OMM-YL58",
+        "w"
+      ],
+      [
+        2476,
+        "OMM12",
+        "m"
+      ],
+      [
+        2477,
+        "OMM12",
+        "m"
+      ],
+      [
+        2478,
+        "OMM12",
+        "m"
+      ],
+      [
+        2479,
+        "OMM11-KB1",
+        "m"
+      ],
+      [
+        2480,
+        "OMM11-KB1",
+        "m"
+      ],
+      [
+        2481,
+        "OMM11-KB1",
+        "m"
+      ],
+      [
+        2482,
+        "OMM11-KB1",
+        "m"
+      ],
+      [
+        2483,
+        "OMM11-I48",
+        "f"
+      ],
+      [
+        2484,
+        "OMM11-I48",
+        "f"
+      ],
+      [
+        2485,
+        "OMM11-I48",
+        "f"
+      ],
+      [
+        2486,
+        "OMM11-I48",
+        "f"
+      ],
+      [
+        2487,
+        "OMM11-I48",
+        "f"
+      ]
+    ],
+    "Tab 17": [
+      [
+        2477,
+        "m",
+        "OMM12"
+      ],
+      [
+        2478,
+        "m",
+        "OMM12"
+      ],
+      [
+        2481,
+        "m",
+        "OMM11-KB1"
+      ],
+      [
+        2482,
+        "m",
+        "OMM11-KB1"
+      ],
+      [
+        2484,
+        "f",
+        "OMM11-I48"
+      ],
+      [
+        2486,
+        "f",
+        "OMM11-I48"
+      ],
+      [
+        2487,
+        "f",
+        "OMM11-I48"
+      ],
+      [
+        2541,
+        "m",
+        "OMM12"
+      ],
+      [
+        2544,
+        "m",
+        "OMM12"
+      ],
+      [
+        2545,
+        "m",
+        "OMM12"
+      ],
+      [
+        2546,
+        "m",
+        "OMM11-KB1"
+      ],
+      [
+        2549,
+        "m",
+        "OMM11-KB1"
+      ],
+      [
+        2550,
+        "m",
+        "OMM11-KB1"
+      ],
+      [
+        2553,
+        "m",
+        "OMM11-I48"
+      ],
+      [
+        2555,
+        "m",
+        "OMM11-I48"
+      ],
+      [
+        2556,
+        "f",
+        "OMM11-YL58"
+      ],
+      [
+        2558,
+        "f",
+        "OMM11-YL58"
+      ],
+      [
+        2575,
+        "f",
+        "OMM11-YL58"
+      ],
+      [
+        2576,
+        "m",
+        "OMM11-YL58"
+      ],
+      [
+        2578,
+        "m",
+        "OMM11-YL58"
+      ]
+    ],
+    "Tab 18": [
+      [
+        2675,
+        "m",
+        "OMM12"
+      ],
+      [
+        2676,
+        "m",
+        "OMM12"
+      ],
+      [
+        2677,
+        "m",
+        "OMM12"
+      ],
+      [
+        2678,
+        "m",
+        "OMM12"
+      ],
+      [
+        2679,
+        "m",
+        "OMM12"
+      ],
+      [
+        2680,
+        "m",
+        "OMM-YL58"
+      ],
+      [
+        2681,
+        "m",
+        "OMM-YL58"
+      ],
+      [
+        2682,
+        "m",
+        "OMM-YL58"
+      ],
+      [
+        2683,
+        "m",
+        "OMM-YL58"
+      ],
+      [
+        2684,
+        "m",
+        "OMM-YL58"
+      ]
+    ],
+    "Tab 19": [
+      [
+        2675,
+        "m",
+        "OMM12"
+      ],
+      [
+        2676,
+        "m",
+        "OMM12"
+      ],
+      [
+        2677,
+        "m",
+        "OMM12"
+      ],
+      [
+        2678,
+        "m",
+        "OMM12"
+      ],
+      [
+        2679,
+        "m",
+        "OMM12"
+      ],
+      [
+        2680,
+        "m",
+        "OMM11-YL58"
+      ],
+      [
+        2681,
+        "m",
+        "OMM11-YL58"
+      ],
+      [
+        2682,
+        "m",
+        "OMM11-YL58"
+      ],
+      [
+        2683,
+        "m",
+        "OMM11-YL58"
+      ],
+      [
+        2684,
+        "m",
+        "OMM11-YL58"
+      ]
+    ]
+  },
+  "unresolved_register": [
+    {
+      "id": "U1",
+      "status": "UNRESOLVED",
+      "gap": "E/S/S1new biological preparation semantics and cross-media matching",
+      "evidence": "Methods define independent inocula but do not map workbook tokens to preparation records."
+    },
+    {
+      "id": "U2",
+      "status": "UNRESOLVED",
+      "gap": "Missing wells and repeated-label provenance",
+      "evidence": "Nonuniform Tab1 well labels and repeated identifiers across Tab1/3/4; no per-key reason log."
+    },
+    {
+      "id": "U3",
+      "status": "UNRESOLVED",
+      "gap": "Cage assignment and individual age",
+      "evidence": "Methods give 2-6 mice/cage and ages 6-20 weeks, without cage-to-ID map."
+    },
+    {
+      "id": "U4",
+      "status": "UNRESOLVED",
+      "gap": "Randomization contradiction",
+      "evidence": "Mice says randomly assigned; Statistics says not randomized; MS injection order is a different layer."
+    },
+    {
+      "id": "U5",
+      "status": "UNRESOLVED",
+      "gap": "Exact older-source/deposit specimen overlap",
+      "evidence": "Same platform and cross-citation; 2022 SI HEAD timeout; no old outcomes opened."
+    },
+    {
+      "id": "U6",
+      "status": "UNRESOLVED",
+      "gap": "Strain correction and taxonomic aliases",
+      "evidence": "YL44 DSM26127 in 2022 vs DSM26109 in 2023; YL2 species wording differs; candidate not applied."
+    },
+    {
+      "id": "U7",
+      "status": "UNRESOLVED",
+      "gap": "Numeric DTL/calibration/censor encoding, assay units and QC flags",
+      "evidence": "Definitions/procedures found but thresholds/factors and chemical output unit dictionary unbound."
+    },
+    {
+      "id": "U8",
+      "status": "UNRESOLVED",
+      "gap": "Physical assay pairing and duplicated polysaccharide-row meaning",
+      "evidence": "Only 75/77 AA main keys syntactically overlap; S/E map absent; Tab12 24 keys twice each."
+    },
+    {
+      "id": "U9",
+      "status": "UNRESOLVED",
+      "gap": "Mouse 2546 treatment conflict",
+      "evidence": "TV293 Ce label OMM12; F/Il/Je labels OMM-KB1; no supported correction."
+    },
+    {
+      "id": "U10",
+      "status": "UNRESOLVED",
+      "gap": "Frozen outcome/aggregation/baseline/split/compute protocol",
+      "evidence": "Not commissioned; no outcomes admitted or fitted."
+    }
+  ]
+}
