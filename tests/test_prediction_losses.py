@@ -74,3 +74,24 @@ def test_input_change_detected(tmp_path,monkeypatch):
         return original(p,y)
     monkeypatch.setattr(module,'bray_curtis',mutate)
     with pytest.raises(ValueError,match='changed'):module.paired_prediction_losses(truth,paths,labels)
+
+
+@pytest.mark.parametrize('role',['truth','prediction','labels'])
+@pytest.mark.parametrize('kind',['unclosed','junk_after_quote','invalid_utf8'])
+def test_malformed_records_rejected_without_private_labels(tmp_path,role,kind):
+    from microtwin.prediction_losses import paired_prediction_losses
+    truth=tmp_path/'truth.csv';truth.write_text('sample_id,A\ns1,1\n')
+    a=tmp_path/'a.csv';a.write_text(truth.read_text())
+    b=tmp_path/'b.csv';b.write_text(truth.read_text())
+    labels=tmp_path/'labels.csv';labels.write_text('sample_id,subject_id,source_family\ns1,p1,f1\n')
+    dest={'truth':truth,'prediction':a,'labels':labels}[role]
+    if role=='labels':
+        prefix=b'sample_id,subject_id,source_family\ns1,p1,';value=b'PRIVATE_FAMILY'
+    else:
+        prefix=b'sample_id,A\ns1,';value=b'1'
+    tail={'unclosed':b'"'+value,'junk_after_quote':b'"'+value+b'"junk\n','invalid_utf8':b'\xff'+value+b'\n'}[kind]
+    dest.write_bytes(prefix+tail)
+    with pytest.raises(ValueError) as error:
+        paired_prediction_losses(truth,{'a':a,'b':b},labels)
+    assert str(error.value) in ('well-formed UTF-8 composition table required','well-formed UTF-8 label map required')
+    assert 'PRIVATE' not in str(error.value)

@@ -16,8 +16,8 @@ def _bytes(path):
 
 def _composition(raw,suffix):
     delimiter=',' if suffix=='.csv' else '\t'
-    try: rows=list(csv.reader(io.StringIO(raw.decode('utf-8')),delimiter=delimiter))
-    except UnicodeError as e:raise ValueError('UTF-8 table required') from e
+    try: rows=list(csv.reader(io.StringIO(raw.decode('utf-8')),delimiter=delimiter,strict=True))
+    except (UnicodeError,csv.Error) as e:raise ValueError('well-formed UTF-8 composition table required') from e
     if not rows or len(rows[0])<2 or rows[0][0]!='sample_id' or len(set(rows[0]))!=len(rows[0]):
         raise ValueError('sample_id followed by unique taxa required')
     if len(rows)<2 or len(rows)>10001 or len(rows[0])>1001:
@@ -47,8 +47,8 @@ def paired_prediction_losses(truth, predictions, labels):
         p,raw=_bytes(path);loaded[role]=raw;paths[role]=p;hashes[role]=hashlib.sha256(raw).hexdigest()
     ids,taxa,y=_composition(loaded['truth'],paths['truth'].suffix)
     if paths['labels'].suffix!='.csv':raise ValueError('label map must be CSV')
-    try:rows=list(csv.reader(io.StringIO(loaded['labels'].decode('utf-8'))))
-    except UnicodeError as e:raise ValueError('UTF-8 label map required') from e
+    try:rows=list(csv.reader(io.StringIO(loaded['labels'].decode('utf-8')),strict=True))
+    except (UnicodeError,csv.Error) as e:raise ValueError('well-formed UTF-8 label map required') from e
     if not rows or rows[0]!=['sample_id','subject_id','source_family'] or len(rows)!=len(ids)+1 or any(len(r)!=3 for r in rows[1:]):
         raise ValueError('exact sample_id,subject_id,source_family label map required')
     if [r[0] for r in rows[1:]]!=ids or any(not v or v!=v.strip() for r in rows[1:] for v in r):
