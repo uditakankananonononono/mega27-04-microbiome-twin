@@ -1,0 +1,80 @@
+{
+  "status": "BLOCKED",
+  "domains": {
+    "boundary": {
+      "status": "boundary_consistent_not_authenticated",
+      "blocking": false,
+      "reasons": []
+    },
+    "design": {
+      "status": "BLOCKED",
+      "blocking": true,
+      "reasons": [
+        {
+          "reason": "BIOLOGICAL_IDENTITIES_UNVERIFIED",
+          "count": 39
+        },
+        {
+          "reason": "INCOMPLETE_TECHNICAL_REPLICATION",
+          "count": 6
+        },
+        {
+          "reason": "UNMATCHED_OR_INCOMPLETE_CONTROL_PAIRS",
+          "count": 6
+        },
+        {
+          "reason": "INSUFFICIENT_COMPLETE_BIOLOGICAL_PAIRS",
+          "count": 7
+        }
+      ]
+    },
+    "lineage": {
+      "status": "BLOCKED",
+      "blocking": true,
+      "reasons": [
+        {
+          "reason": "LINEAGE_UNVERIFIED_OR_UNKNOWN",
+          "count": 60
+        },
+        {
+          "reason": "INSUFFICIENT_VERIFIED_LABEL_PAIRS",
+          "count": 1
+        }
+      ]
+    },
+    "semantics": {
+      "status": "ABSTAIN",
+      "blocking": true,
+      "reasons": [
+        "UNRESOLVED_NORMALIZATION",
+        "UNRESOLVED_ZERO_INTERPRETATION",
+        "UNRESOLVED_MISSING_CONVENTION",
+        "UNRESOLVED_PROVENANCE_STATUS"
+      ]
+    },
+    "fairness": {
+      "status": "BLOCKED",
+      "blocking": true,
+      "reasons": [
+        "ADAPTER_MISSING_OR_UNKNOWN",
+        "COMPARATOR_OR_CANDIDATE_CAPABILITY_UNSUPPORTED_OR_UNKNOWN",
+        "COMPARATOR_SELECTION_NOT_FROZEN_BEFORE_TEST",
+        "PROTOCOL_NOT_PROSPECTIVELY_FROZEN",
+        "TEST_SOURCE_EXPOSED_OR_UNKNOWN"
+      ]
+    },
+    "evidence_receipt": {
+      "status": "local_evidence_hashes_and_boundary_match",
+      "blocking": false,
+      "reasons": []
+    }
+  },
+  "quantitative_C1": "NOT_ADMITTED_LOCKED",
+  "C2": "BLOCKED",
+  "C3": "NOT_PROPOSED",
+  "useful_win": "NOT_TESTED",
+  "outcomes_consumed": false,
+  "scientific_goals_completed": false,
+  "auto_admission": false,
+  "note": "Public metadata consistency only. No authenticated source truth, scientific admission, discovery, benchmark win or clinical deployment. Manual review remains required even if every submitted domain is consistent."
+}

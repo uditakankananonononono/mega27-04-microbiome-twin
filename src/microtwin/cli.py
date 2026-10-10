@@ -133,6 +133,17 @@ def cmd_predict_calibrated(a):
     return 0
 
 
+def cmd_source_readiness(a):
+    from .source_readiness import packet
+    try:
+        report=packet(a.directory)
+    except ValueError:
+        print('source readiness metadata packet rejected',file=sys.stderr)
+        return 2
+    print(json.dumps(report,indent=2))
+    return 0 if report['status']=='DECLARATIONS_READY_FOR_MANUAL_REVIEW' else 2
+
+
 def cmd_comparator_capability(a):
     from .comparator_capability import load_comparators
     try:
@@ -460,6 +471,9 @@ def main(argv=None):
     cc.add_argument('--unit',choices=('counts','relative_abundance','absolute_abundance'),required=True);cc.add_argument('--source-id',required=True)
     cc.add_argument('--processing-authorized',action='store_true');cc.add_argument('--subject-map');cc.add_argument('--calibration-subject-map');cc.add_argument('--query-subject-map')
     cc.add_argument('--alpha',type=float,default=.1);cc.add_argument('--out',required=True);cc.set_defaults(f=cmd_predict_calibrated)
+    sr=sp.add_parser('source-readiness',help='six-check public metadata packet; never scientific admission')
+    sr.add_argument('directory',help='public metadata directory with readiness_inputs.json and allowlisted roles')
+    sr.set_defaults(f=cmd_source_readiness)
     cp=sp.add_parser('check-comparator-capability',help='metadata-only same-task/info/budget plan preflight; no scores or wins')
     cp.add_argument('plan',help='strict comparator metadata JSON, maximum 100 KB')
     cp.set_defaults(f=cmd_comparator_capability)
@@ -509,7 +523,7 @@ def main(argv=None):
     pl.add_argument('truth');pl.add_argument('--models',required=True);pl.add_argument('--labels',required=True);pl.add_argument('--out',required=True)
     pl.set_defaults(f=cmd_prediction_losses)
     a = ap.parse_args(argv)
-    if a.f not in (cmd_check_admission_boundary,cmd_admission_evidence,cmd_nested_design,cmd_specimen_lineage,cmd_censor_contract,cmd_comparator_capability):
+    if a.f not in (cmd_check_admission_boundary,cmd_admission_evidence,cmd_nested_design,cmd_specimen_lineage,cmd_censor_contract,cmd_comparator_capability,cmd_source_readiness):
         # Metadata reliability commands require the standard library only.
         global np,pd,audit
         import numpy as np
