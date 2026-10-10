@@ -32,3 +32,17 @@ def test_internal_split_accounting_and_hashes():
 def test_invalid_alpha_fails_with_validation_error(alpha):
     with pytest.raises(ValueError, match='alpha'):
         bray_radius([.2, .3], alpha)
+
+
+def test_metric_maximum_caps_accepted_roundoff():
+    result=bray_radius([1+5e-11],.5)
+    assert result['radius']==1.0 and result['vacuous'] is False
+    with pytest.raises(ValueError,match='within'):
+        bray_radius([1+2e-10],.5)
+
+
+@pytest.mark.parametrize('scores', [['PRIVATE_VALUE'], [10**1000], object()])
+def test_conversion_failure_fixed_private_safe_error(scores):
+    with pytest.raises(ValueError) as error:
+        bray_radius(scores)
+    assert str(error.value)=='finite numeric calibration errors required'
