@@ -1,0 +1,48 @@
+{
+  "schema": "microtwin.admission-evidence.local-integrity.v1",
+  "roles": {
+    "proposal": {
+      "filename": "OMM12_OUTCOME_ADMISSION_PROPOSAL_20261010.md",
+      "sha256": "ab1888002cf51be03ed6f47970daa5b0d3eba17f431e41d067955fbc80c94623",
+      "bytes": 12331
+    },
+    "closeout": {
+      "filename": "OMM12_DOCUMENTARY_CLOSEOUT_20261010.md",
+      "sha256": "823be3eab825350c932c58124cdfafc73c90683245a69760768b70d599a353d2",
+      "bytes": 8746
+    },
+    "certificate": {
+      "filename": "omm12_quarantine_certificate_20261010.json",
+      "sha256": "c23fe359a1b0dcc79180b495db2e770851c42a0d97a3e28feaf129280d91086d",
+      "bytes": 60800
+    },
+    "boundary_check": {
+      "filename": "omm12_platform_boundary_check_20261010.json",
+      "sha256": "19641b9e55cad1cbfce70d7ec491400540ac23920a9c729106a03bc84482f758",
+      "bytes": 772
+    }
+  },
+  "boundary": {
+    "status": "boundary_consistent_not_authenticated",
+    "structural_C1": "ADMITTED_DOCUMENTARY_REPRESENTATION_COUNTS_ONLY",
+    "quantitative_C1": "NOT_ADMITTED_LOCKED",
+    "C2": "BLOCKED",
+    "C3": "NOT_PROPOSED",
+    "useful_win": "NOT_TESTED",
+    "source_family": "EXPOSED_CONTROLLED_CULTURE_DEVELOPMENT",
+    "zero_semantics": "UNRESOLVED",
+    "selected_rows": 222,
+    "manifest_cells": 2664,
+    "representation_counts": {
+      "AMBIGUOUS_ZERO": 995,
+      "NUMERIC_REPRESENTATION_VALID": 1669
+    },
+    "quantitative_admitted": false,
+    "eligible_untouched_holdout": false,
+    "can_auto_claim_win": false,
+    "note": "Counts describe representations only. Submitted status consistency does not authenticate permission, rights, calibration, biological pairing or source independence."
+  },
+  "quantitative_admission": false,
+  "source_outcome_access": false,
+  "note": "Unsigned local integrity only, not authenticity or scientific validity. Replacing both receipt and accepted files can evade hash comparison. No source workbook, ZIP, private quarantine, numerical admission or biological certification."
+}

@@ -137,6 +137,17 @@ def cmd_predict_calibrated(a):
     return 0
 
 
+def cmd_admission_evidence(a):
+    from .admission_evidence_bundle import create_receipt,verify_receipt
+    try:
+        report=create_receipt(a.receipt) if a.create else verify_receipt(a.receipt)
+    except ValueError:
+        print('admission evidence bundle rejected',file=sys.stderr)
+        return 2
+    print(json.dumps(report,indent=2))
+    return 0
+
+
 def cmd_check_admission_boundary(a):
     from .admission_boundary import load_boundary
     try:
@@ -409,6 +420,10 @@ def main(argv=None):
     cc.add_argument('--unit',choices=('counts','relative_abundance','absolute_abundance'),required=True);cc.add_argument('--source-id',required=True)
     cc.add_argument('--processing-authorized',action='store_true');cc.add_argument('--subject-map');cc.add_argument('--calibration-subject-map');cc.add_argument('--query-subject-map')
     cc.add_argument('--alpha',type=float,default=.1);cc.add_argument('--out',required=True);cc.set_defaults(f=cmd_predict_calibrated)
+    for name,create in [('receipt-admission-evidence',True),('verify-admission-evidence',False)]:
+        ev=sp.add_parser(name,help='fixed four-public-artifact local hash receipt; not authenticity or admission')
+        ev.add_argument('receipt',help='new JSON receipt for creation, existing receipt for verification')
+        ev.set_defaults(f=cmd_admission_evidence,create=create)
     ab=sp.add_parser('check-admission-boundary',help='metadata-only OMM12 v1 status consistency; never quantitative admission or authority authentication')
     ab.add_argument('certificate',help='metadata certificate JSON, maximum 1 MB; never raw quarantine')
     ab.set_defaults(f=cmd_check_admission_boundary)
