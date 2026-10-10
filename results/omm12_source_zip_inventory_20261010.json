@@ -1,0 +1,33 @@
+{
+  "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-023-40372-0/MediaObjects/41467_2023_40372_MOESM3_ESM.zip",
+  "zip_bytes": 1195857,
+  "sha256": "45157de4fd55eacdaf662785d376b170f6d8711984d4ab777635f61fe7d6d81a",
+  "members": [
+    {
+      "path": "source-data_table_2_revision.xlsx",
+      "bytes": 1063232,
+      "compressed_bytes": 1049920,
+      "crc32": "eb33e188"
+    },
+    {
+      "path": "__MACOSX/._source-data_table_2_revision.xlsx",
+      "bytes": 244,
+      "compressed_bytes": 151,
+      "crc32": "6479a981"
+    },
+    {
+      "path": "source-data_table_1_revision.xlsx",
+      "bytes": 151236,
+      "compressed_bytes": 144681,
+      "crc32": "fabc469c"
+    },
+    {
+      "path": "__MACOSX/._source-data_table_1_revision.xlsx",
+      "bytes": 244,
+      "compressed_bytes": 151,
+      "crc32": "f56ba0ab"
+    }
+  ],
+  "uncompressed_bytes": 1214956,
+  "outcome_members_extracted": false
+}
