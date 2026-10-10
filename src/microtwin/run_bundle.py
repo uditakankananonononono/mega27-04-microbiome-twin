@@ -1,6 +1,7 @@
 """Local integrity receipts. Hash matching is not authenticity or scientific validation."""
 import hashlib,json
 from pathlib import Path
+from .assay_contract import parse_contract_json
 
 ROLES=('train','query','contracts','prediction')
 
@@ -26,7 +27,7 @@ def receipt(files,report):
 def verify(manifest,files):
     p=Path(manifest)
     if not p.is_file() or p.is_symlink() or p.stat().st_size>1_000_000:raise ValueError('missing or oversized receipt')
-    obj=json.loads(p.read_text())
+    obj=parse_contract_json(p.read_bytes(),label='receipt JSON')
     if not isinstance(obj,dict) or obj.get('schema')!='microtwin.local-integrity.v1':raise ValueError('unsupported receipt schema')
     if set(obj)!={'schema','files','run_report','clinical_use','external_validation','note'}:
         raise ValueError('receipt envelope fields must match schema exactly')

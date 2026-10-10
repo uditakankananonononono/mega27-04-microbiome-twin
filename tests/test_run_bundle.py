@@ -65,3 +65,17 @@ def test_receipt_unknown_field(tmp_path):
  args,t,q,c,o,m=run(tmp_path);assert main(args)==0
  obj=json.loads(m.read_text());obj['certificate']='yes';m.write_text(json.dumps(obj))
  assert main(['verify-bundle',str(m),'--train',str(t),'--query',str(q),'--contracts',str(c),'--prediction',str(o)])==2
+
+
+@pytest.mark.parametrize('field',['clinical_use','external_validation','schema','sha256'])
+def test_duplicate_receipt_fields_rejected(tmp_path,capsys,field):
+ args,t,q,c,o,m=run(tmp_path);assert main(args)==0
+ text=m.read_text()
+ needle=json.dumps(field)+': '
+ index=text.index(needle)+len(needle)
+ text=text[:index]+'"PRIVATE_CONTRADICTION", '+needle+text[index:]
+ m.write_text(text);capsys.readouterr()
+ assert main(['verify-bundle',str(m),'--train',str(t),'--query',str(q),'--contracts',str(c),'--prediction',str(o)])==2
+ capture=capsys.readouterr()
+ assert 'unique fields' in capture.err and 'PRIVATE_CONTRADICTION' not in capture.err
+ assert not capture.out
