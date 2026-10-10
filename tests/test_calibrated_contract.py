@@ -28,3 +28,28 @@ def test_strict_cli_pass(tmp_path,capsys):
 def test_legacy_explicit_unverified(tmp_path):
  t,c,q,f=inputs(tmp_path);_,r=predict_with_radius(t,c,q,unit='counts',source_id='toy',processing_authorized=True)
  assert r['measurement_contract_status']=='unverified_legacy_no_contract'
+
+
+@pytest.mark.parametrize('kind',['nested_duplicate','role_duplicate','malformed','invalid_utf8'])
+def test_ambiguous_contracts_fail_private_safe_without_output(tmp_path,kind,capsys):
+ t,c,q,f=inputs(tmp_path)
+ raw=f.read_bytes()
+ if kind=='nested_duplicate':raw=raw.replace(b'"assay": "16S"',b'"assay": "PRIVATE_ASSAY", "assay": "16S"',1)
+ elif kind=='role_duplicate':raw=raw[:-1]+b',"train":'+json.dumps(json.loads(raw)['train']).encode()+b'}'
+ elif kind=='malformed':raw=b'{"PRIVATE_FIELD":'
+ else:raw=b'{"PRIVATE_FIELD":"\xff"}'
+ f.write_bytes(raw)
+ with pytest.raises(ValueError) as error:
+  predict_with_radius(t,c,q,unit='counts',source_id='toy',processing_authorized=True,contracts=f)
+ assert str(error.value)=='contract JSON must be well-formed UTF-8 with unique fields'
+ assert 'PRIVATE' not in str(error.value)
+ for route,args in [('predict-checked',[str(t),str(q)]),('predict-calibrated-checked',[str(t),str(c),str(q)])]:
+  out=tmp_path/(route+'.csv')
+  argv=[route,*args,'--contracts',str(f),'--unit','counts','--source-id','toy','--processing-authorized','--out',str(out)]
+  if route=='predict-checked':
+   assert main(argv)==2
+   err=capsys.readouterr().err
+   assert 'well-formed UTF-8 with unique fields' in err and 'PRIVATE' not in err
+  else:
+   with pytest.raises(SystemExit,match='well-formed UTF-8 with unique fields'):main(argv)
+  assert not out.exists()

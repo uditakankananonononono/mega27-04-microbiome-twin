@@ -162,12 +162,12 @@ def cmd_screen_sources(a):
 def cmd_predict_checked(a):
     from pathlib import Path
     import hashlib
-    from .assay_contract import assess_measurement_contract
+    from .assay_contract import assess_measurement_contract, parse_contract_json
     try:
         path=Path(a.contracts)
         if not path.is_file() or path.stat().st_size>1_000_000:
             raise ValueError('missing or oversized contract JSON')
-        raw=path.read_bytes();obj=json.loads(raw)
+        raw=path.read_bytes();obj=parse_contract_json(raw)
         if not isinstance(obj,dict) or set(obj)!={'train','query'}:
             raise ValueError('contract JSON requires exactly train and query')
         check=assess_measurement_contract(obj['train'],obj['query'])
@@ -260,7 +260,7 @@ def cmd_check_multimodal(a):
 
 def cmd_check_assays(a):
     from pathlib import Path
-    from .assay_contract import assess_measurement_contract
+    from .assay_contract import assess_measurement_contract, parse_contract_json
     try:
         path=Path(a.contracts)
         if not path.is_file() or path.stat().st_size>1_000_000:

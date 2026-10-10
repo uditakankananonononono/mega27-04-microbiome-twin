@@ -17,6 +17,7 @@ from .data import bray_curtis
 from .local_predict import _read_table, predict_local
 from .research_intake import inspect_local_matrix
 from .subject_partition import parse_subject_records
+from .assay_contract import parse_contract_json
 
 
 def predict_with_radius(train_path, calibration_path, query_path, *, unit, source_id,
@@ -26,7 +27,7 @@ def predict_with_radius(train_path, calibration_path, query_path, *, unit, sourc
     if contracts is not None:
         path=Path(contracts)
         if not path.is_file() or path.stat().st_size>1_000_000:raise ValueError('missing or oversized contracts')
-        contract_raw=path.read_bytes();obj=json.loads(contract_raw)
+        contract_raw=path.read_bytes();obj=parse_contract_json(contract_raw)
         if not isinstance(obj,dict) or set(obj)!={'train','calibration','query'}:raise ValueError('exact train/calibration/query contracts required')
         from .assay_contract import assess_measurement_contract
         checks={role:assess_measurement_contract(obj['train'],obj[role]) for role in ('calibration','query')}
