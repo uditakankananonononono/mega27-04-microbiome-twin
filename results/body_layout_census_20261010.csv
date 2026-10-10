@@ -1,0 +1,65 @@
+pdf_page,class,note
+2,E,Introduction begins mid-page after excluded abstract
+3,P,Prose dominant; short formula and headings excluded
+4,M,Many displayed equations
+5,M,"Table, equations and headings"
+6,M,Two substantial tables
+7,M,"Table, equations and headings"
+8,M,Figure and table
+9,P,Small table; prose dominant
+10,P,Small continued table; prose dominant
+11,P,Prose dominant; minor headings excluded
+12,P,Prose dominant; minor headings excluded
+13,P,Prose dominant; minor headings excluded
+14,P,Prose dominant; minor headings excluded
+15,P,Prose dominant; minor headings excluded
+16,P,Prose dominant; minor headings excluded
+17,M,Table and caption; conservative mixed
+18,M,Table and caption
+19,M,Table and caption
+20,P,Prose dominant; minor headings excluded
+21,P,Prose dominant; minor headings excluded
+22,M,Large tables
+23,M,Table and figure
+24,E,Short body fragment; mostly whitespace
+25,M,Table/caption and headings
+26,M,Large table
+27,M,Large table and formulas
+28,M,Table and headings
+29,M,Table and displayed formula
+30,M,Two tables
+31,M,Table and headings
+32,M,Figure and tables
+33,M,Table and headings
+34,M,Table and headings
+35,P,Prose dominant; minor headings excluded
+36,M,Small table/caption; near cutoff conservatively mixed
+37,P,Prose dominant; minor headings excluded
+38,P,Prose dominant; minor headings excluded
+39,P,Prose dominant; minor headings excluded
+40,P,Prose dominant; minor headings excluded
+41,P,Prose dominant; minor headings excluded
+42,P,Prose dominant; minor headings excluded
+43,P,Prose dominant; minor headings excluded
+44,P,Prose dominant; minor headings excluded
+45,P,Prose dominant; minor headings excluded
+46,M,Table/caption; near cutoff conservatively mixed
+47,P,Prose dominant; minor headings excluded
+48,M,Table/caption; near cutoff conservatively mixed
+49,P,Prose dominant; minor headings excluded
+50,M,Table/caption
+51,P,Small table; prose dominant
+52,P,Prose dominant; minor headings excluded
+53,P,Short formula and heading; prose dominant
+54,M,Table/caption
+55,P,Heading and short equation; prose dominant
+56,M,Large table and formula
+57,E,Three tables; primarily excluded
+58,M,Table and equation
+59,M,Table and equation
+60,M,Table and two equations
+61,P,One displayed formula; prose dominant
+62,M,Table/caption; near cutoff conservatively mixed
+63,M,Large table and captions
+64,M,Multiple tables and captions
+65,E,Pre-appendix table; Appendix B begins partway down; no substantive prose before boundary

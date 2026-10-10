@@ -1,0 +1,26 @@
+{
+  "inspected_pdf_pages": [
+    1,
+    65
+  ],
+  "candidate_body_pages": [
+    2,
+    65
+  ],
+  "counts": {
+    "P": 28,
+    "M": 32,
+    "E": 4
+  },
+  "review": "all pages 1-65 rendered at 65 dpi and inspected directly; boundary and near-cutoff pages separately enlarged",
+  "page_rubric": "P: clearly >=75% available text area substantive prose; M: significant excluded content or uncertain cutoff; E: primarily excluded/boundary or whitespace",
+  "certified_50_body_pages": false,
+  "page_classes_are_full_text_equivalents": false,
+  "density_estimate_chars": 138530,
+  "density_equivalent_pages_2500": 55.41,
+  "density_equivalent_pages_3000": 46.18,
+  "artifact_sha256": {
+    "mega27-04-microbiome-twin-paper.pdf": "9f5926f858d75d1fce752f7c6fa1f3eb134590ed6d50f76808cfc93e17895ac3",
+    "mega27-04-microbiome-twin-paper.docx": "085f8ec53c28723faddf673263525e8243b6bf5ad027a9795ae5a6a2fe524228"
+  }
+}
