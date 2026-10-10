@@ -38,3 +38,35 @@ def test_subject_map_extras_and_missing_rejected(tmp_path):
     m=tmp_path/'g.csv';m.write_text('sample_id,subject_id\ns1,p1\ns3,p2\n')
     with pytest.raises(ValueError,match='subject map'):
         inspect_local_matrix(p,unit='counts',source_id='demo',processing_authorized=True,subject_map=m)
+
+
+@pytest.mark.parametrize('text', [
+    'sample_id\tA\ns1\t1\t99\ns2\t2\t88\n',
+    'sample_id\tA\tB\ns1\t1\n',
+    'sample_id\tA\ns1\t1\ns2\t2\tSECRET_LABEL\t3\n',
+    'sample_id\tA\n"SECRET_UNCLOSED\t1\n',
+])
+def test_ragged_or_malformed_matrix_fails_without_parser_details(tmp_path, text):
+    p=tmp_path/'private_path.tsv';p.write_text(text)
+    with pytest.raises(ValueError) as error:
+        inspect_local_matrix(p,unit='counts',source_id='demo',processing_authorized=True)
+    assert str(error.value)=='input must be a readable rectangular text table with unique headers'
+    assert 'SECRET' not in str(error.value) and str(p) not in str(error.value)
+
+
+@pytest.mark.parametrize('text', [
+    'sample_id,subject_id\ns1,p1,extra\ns2,p2,extra\n',
+    'sample_id,subject_id\ns1\ns2,p2\n',
+    'sample_id,subject_id\ns1,"SECRET_UNCLOSED\n',
+])
+def test_ragged_subject_map_rejected_before_index_inference(tmp_path, text):
+    p=tmp_path/'x.tsv';p.write_text('sample_id\tA\ns1\t1\ns2\t2\n')
+    m=tmp_path/'g.csv';m.write_text(text)
+    with pytest.raises(ValueError,match='subject map must be a readable rectangular'):
+        inspect_local_matrix(p,unit='counts',source_id='demo',processing_authorized=True,subject_map=m)
+
+
+def test_rectangular_intake_preserves_quoted_delimiters(tmp_path):
+    p=tmp_path/'x.csv';p.write_text('sample_id,"Taxon, A"\n"sample, one",1\n"sample, two",2\n')
+    result=inspect_local_matrix(p,unit='counts',source_id='demo',processing_authorized=True)
+    assert result['samples']==2 and result['taxa']==1
