@@ -133,6 +133,17 @@ def cmd_predict_calibrated(a):
     return 0
 
 
+def cmd_censor_contract(a):
+    from .censor_contract import load_censor_contract
+    try:
+        report=load_censor_contract(a.contract)
+    except ValueError:
+        print('censoring contract rejected',file=sys.stderr)
+        return 2
+    print(json.dumps(report,indent=2))
+    return 0 if report['status']=='SEMANTIC_DECLARATIONS_READY_FOR_MANUAL_REVIEW' else 2
+
+
 def cmd_specimen_lineage(a):
     from .specimen_lineage import load_lineage
     try:
@@ -438,6 +449,9 @@ def main(argv=None):
     cc.add_argument('--unit',choices=('counts','relative_abundance','absolute_abundance'),required=True);cc.add_argument('--source-id',required=True)
     cc.add_argument('--processing-authorized',action='store_true');cc.add_argument('--subject-map');cc.add_argument('--calibration-subject-map');cc.add_argument('--query-subject-map')
     cc.add_argument('--alpha',type=float,default=.1);cc.add_argument('--out',required=True);cc.set_defaults(f=cmd_predict_calibrated)
+    cs=sp.add_parser('check-censor-semantics',help='metadata-only zero/DTL/normalization declarations; never admission or conversion')
+    cs.add_argument('contract',help='strict semantic contract JSON, maximum 10 KB')
+    cs.set_defaults(f=cmd_censor_contract)
     sl=sp.add_parser('check-specimen-lineage',help='metadata-only subject/specimen/aliquot separation; no physical verification or admission')
     sl.add_argument('records',help='strict specimen lineage JSON, maximum 2 MB')
     sl.set_defaults(f=cmd_specimen_lineage)
@@ -481,7 +495,7 @@ def main(argv=None):
     pl.add_argument('truth');pl.add_argument('--models',required=True);pl.add_argument('--labels',required=True);pl.add_argument('--out',required=True)
     pl.set_defaults(f=cmd_prediction_losses)
     a = ap.parse_args(argv)
-    if a.f not in (cmd_check_admission_boundary,cmd_admission_evidence,cmd_nested_design,cmd_specimen_lineage):
+    if a.f not in (cmd_check_admission_boundary,cmd_admission_evidence,cmd_nested_design,cmd_specimen_lineage,cmd_censor_contract):
         # Metadata reliability commands require the standard library only.
         global np,pd,audit
         import numpy as np

@@ -1,0 +1,15 @@
+{
+  "status": "ABSTAIN",
+  "unresolved_or_blocking_reasons": [
+    "UNRESOLVED_NORMALIZATION",
+    "UNRESOLVED_ZERO_INTERPRETATION",
+    "UNRESOLVED_MISSING_CONVENTION",
+    "UNRESOLVED_PROVENANCE_STATUS"
+  ],
+  "quantitative_summary_eligible": false,
+  "effect_eligible": false,
+  "C1_admitted": false,
+  "values_consumed": false,
+  "conversion_or_imputation_performed": false,
+  "note": "Submitted semantic labels cannot authenticate evidence, calibration or rights. Ready declarations require source review; zero, censoring, exclusion and missingness are never converted into each other."
+}
