@@ -137,6 +137,17 @@ def cmd_predict_calibrated(a):
     return 0
 
 
+def cmd_check_admission_boundary(a):
+    from .admission_boundary import load_boundary
+    try:
+        report=load_boundary(a.certificate)
+    except ValueError:
+        print('admission boundary certificate rejected',file=sys.stderr)
+        return 2
+    print(json.dumps(report,indent=2))
+    return 0
+
+
 def cmd_screen_sources(a):
     """Local bounded metadata screen, never a cohort or rights certificate."""
     from pathlib import Path
@@ -398,6 +409,9 @@ def main(argv=None):
     cc.add_argument('--unit',choices=('counts','relative_abundance','absolute_abundance'),required=True);cc.add_argument('--source-id',required=True)
     cc.add_argument('--processing-authorized',action='store_true');cc.add_argument('--subject-map');cc.add_argument('--calibration-subject-map');cc.add_argument('--query-subject-map')
     cc.add_argument('--alpha',type=float,default=.1);cc.add_argument('--out',required=True);cc.set_defaults(f=cmd_predict_calibrated)
+    ab=sp.add_parser('check-admission-boundary',help='metadata-only OMM12 v1 status consistency; never quantitative admission or authority authentication')
+    ab.add_argument('certificate',help='metadata certificate JSON, maximum 1 MB; never raw quarantine')
+    ab.set_defaults(f=cmd_check_admission_boundary)
     sc = sp.add_parser('screen-sources', help='local metadata-only admission screen; never final benchmark eligibility')
     sc.add_argument('matrix', help='JSON object with n_studies and rows, at most 1 MB/1000 records')
     sc.set_defaults(f=cmd_screen_sources)
