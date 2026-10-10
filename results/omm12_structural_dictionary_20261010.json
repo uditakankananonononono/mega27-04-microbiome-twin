@@ -1,0 +1,3850 @@
+{
+  "status": "STRUCTURALLY_REVIEWED_NOT_ADMITTED",
+  "numeric_outcomes_extracted": false,
+  "source_zip_sha256": "45157de4fd55eacdaf662785d376b170f6d8711984d4ab777635f61fe7d6d81a",
+  "sources": [
+    "https://www.nature.com/articles/s41467-023-40372-0",
+    "https://www.nature.com/articles/s41396-021-01153-z"
+  ],
+  "sheets": [
+    {
+      "workbook": "source-data_table_2_revision.xlsx",
+      "sheet": "AF medium",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "ID"
+        },
+        {
+          "cell": "B1",
+          "text": "General.All.rtmed"
+        },
+        {
+          "cell": "C1",
+          "text": "General.All.mzmed"
+        },
+        {
+          "cell": "D1",
+          "text": "General.All.annot_ms1"
+        },
+        {
+          "cell": "E1",
+          "text": "mode"
+        },
+        {
+          "cell": "F1",
+          "text": "group"
+        },
+        {
+          "cell": "G1",
+          "text": "pvalue"
+        },
+        {
+          "cell": "H1",
+          "text": "meandiff"
+        }
+      ],
+      "rows": 8302,
+      "columns": 8
+    },
+    {
+      "workbook": "source-data_table_2_revision.xlsx",
+      "sheet": "APF medium",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "ID"
+        },
+        {
+          "cell": "B1",
+          "text": "General.All.rtmed"
+        },
+        {
+          "cell": "C1",
+          "text": "General.All.mzmed"
+        },
+        {
+          "cell": "D1",
+          "text": "General.All.annot_ms1"
+        },
+        {
+          "cell": "E1",
+          "text": "mode"
+        },
+        {
+          "cell": "F1",
+          "text": "OMM12"
+        },
+        {
+          "cell": "G1",
+          "text": "pvalue"
+        },
+        {
+          "cell": "H1",
+          "text": "meandiff"
+        }
+      ],
+      "rows": 10371,
+      "columns": 8
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Overview",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "table"
+        },
+        {
+          "cell": "B1",
+          "text": "data type"
+        },
+        {
+          "cell": "C1",
+          "text": "corresponding figure"
+        }
+      ],
+      "rows": 20,
+      "columns": 3
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab1",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "16Scorr"
+        },
+        {
+          "cell": "B1",
+          "text": "KB1"
+        },
+        {
+          "cell": "C1",
+          "text": "YL2"
+        },
+        {
+          "cell": "D1",
+          "text": "KB18"
+        },
+        {
+          "cell": "E1",
+          "text": "YL27"
+        },
+        {
+          "cell": "F1",
+          "text": "YL31"
+        },
+        {
+          "cell": "G1",
+          "text": "YL32"
+        },
+        {
+          "cell": "H1",
+          "text": "YL44"
+        },
+        {
+          "cell": "I1",
+          "text": "YL45"
+        },
+        {
+          "cell": "J1",
+          "text": "I46"
+        },
+        {
+          "cell": "K1",
+          "text": "I48"
+        },
+        {
+          "cell": "L1",
+          "text": "I49"
+        },
+        {
+          "cell": "M1",
+          "text": "YL58"
+        },
+        {
+          "cell": "N1",
+          "text": "sum"
+        }
+      ],
+      "rows": 229,
+      "columns": 14
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab2",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "16S corr"
+        },
+        {
+          "cell": "B1",
+          "text": "KB1"
+        },
+        {
+          "cell": "C1",
+          "text": "YL2"
+        },
+        {
+          "cell": "D1",
+          "text": "KB18"
+        },
+        {
+          "cell": "E1",
+          "text": "YL27"
+        },
+        {
+          "cell": "F1",
+          "text": "YL31"
+        },
+        {
+          "cell": "G1",
+          "text": "YL32"
+        },
+        {
+          "cell": "H1",
+          "text": "YL44"
+        },
+        {
+          "cell": "I1",
+          "text": "YL45"
+        },
+        {
+          "cell": "J1",
+          "text": "I46"
+        },
+        {
+          "cell": "K1",
+          "text": "I48"
+        },
+        {
+          "cell": "L1",
+          "text": "I49"
+        },
+        {
+          "cell": "M1",
+          "text": "YL58"
+        },
+        {
+          "cell": "N1",
+          "text": "sum"
+        }
+      ],
+      "rows": 65,
+      "columns": 14
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab3",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "16Scorr"
+        },
+        {
+          "cell": "B1",
+          "text": "KB1"
+        },
+        {
+          "cell": "C1",
+          "text": "YL2"
+        },
+        {
+          "cell": "D1",
+          "text": "KB18"
+        },
+        {
+          "cell": "E1",
+          "text": "YL27"
+        },
+        {
+          "cell": "F1",
+          "text": "YL31"
+        },
+        {
+          "cell": "G1",
+          "text": "YL32"
+        },
+        {
+          "cell": "H1",
+          "text": "YL44"
+        },
+        {
+          "cell": "I1",
+          "text": "YL45"
+        },
+        {
+          "cell": "J1",
+          "text": "I46"
+        },
+        {
+          "cell": "K1",
+          "text": "I48"
+        },
+        {
+          "cell": "L1",
+          "text": "I49"
+        },
+        {
+          "cell": "M1",
+          "text": "YL58"
+        },
+        {
+          "cell": "N1",
+          "text": "sum"
+        }
+      ],
+      "rows": 81,
+      "columns": 14
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab4",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "16S corr"
+        },
+        {
+          "cell": "B1",
+          "text": "KB1"
+        },
+        {
+          "cell": "C1",
+          "text": "YL2"
+        },
+        {
+          "cell": "D1",
+          "text": "KB18"
+        },
+        {
+          "cell": "E1",
+          "text": "YL27"
+        },
+        {
+          "cell": "F1",
+          "text": "YL31"
+        },
+        {
+          "cell": "G1",
+          "text": "YL32"
+        },
+        {
+          "cell": "H1",
+          "text": "YL44"
+        },
+        {
+          "cell": "I1",
+          "text": "YL45"
+        },
+        {
+          "cell": "J1",
+          "text": "I46"
+        },
+        {
+          "cell": "K1",
+          "text": "I48"
+        },
+        {
+          "cell": "L1",
+          "text": "I49"
+        },
+        {
+          "cell": "M1",
+          "text": "YL58"
+        },
+        {
+          "cell": "N1",
+          "text": "sum"
+        }
+      ],
+      "rows": 171,
+      "columns": 14
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab5",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "medium"
+        },
+        {
+          "cell": "B1",
+          "text": "probe"
+        },
+        {
+          "cell": "C1",
+          "text": "OMM11-I48"
+        },
+        {
+          "cell": "D1",
+          "text": "OMM11-KB1"
+        },
+        {
+          "cell": "E1",
+          "text": "OMM11-YL58"
+        }
+      ],
+      "rows": 61,
+      "columns": 5
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab6",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "sample"
+        },
+        {
+          "cell": "B1",
+          "text": "deltapH_1"
+        },
+        {
+          "cell": "C1",
+          "text": "deltapH_2"
+        },
+        {
+          "cell": "D1",
+          "text": "deltpH_3"
+        }
+      ],
+      "rows": 79,
+      "columns": 4
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab7",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "sample"
+        },
+        {
+          "cell": "B1",
+          "text": "deltapH_1"
+        },
+        {
+          "cell": "C1",
+          "text": "deltapH_2"
+        },
+        {
+          "cell": "D1",
+          "text": "deltpH_3"
+        }
+      ],
+      "rows": 7,
+      "columns": 4
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab8",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "sample"
+        },
+        {
+          "cell": "B1",
+          "text": "deltapH_1"
+        },
+        {
+          "cell": "C1",
+          "text": "deltapH_2"
+        },
+        {
+          "cell": "D1",
+          "text": "deltpH_3"
+        }
+      ],
+      "rows": 40,
+      "columns": 4
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab 9",
+      "header_labels": [
+        {
+          "cell": "B1",
+          "text": "Serine"
+        },
+        {
+          "cell": "C1",
+          "text": "Arginine"
+        },
+        {
+          "cell": "D1",
+          "text": "Glutamine"
+        },
+        {
+          "cell": "E1",
+          "text": "Glutamic acid"
+        },
+        {
+          "cell": "F1",
+          "text": "Histidine"
+        },
+        {
+          "cell": "G1",
+          "text": "Isoleucine/Leucine"
+        },
+        {
+          "cell": "H1",
+          "text": "Lysine"
+        },
+        {
+          "cell": "I1",
+          "text": "Methionine"
+        },
+        {
+          "cell": "J1",
+          "text": "Phenylalanine"
+        },
+        {
+          "cell": "K1",
+          "text": "Proline"
+        },
+        {
+          "cell": "L1",
+          "text": "Threonine"
+        },
+        {
+          "cell": "M1",
+          "text": "Tryptophane"
+        },
+        {
+          "cell": "N1",
+          "text": "Valine"
+        },
+        {
+          "cell": "O1",
+          "text": "Alanine"
+        },
+        {
+          "cell": "P1",
+          "text": "Tyrosine"
+        },
+        {
+          "cell": "Q1",
+          "text": "Aspartic acid"
+        },
+        {
+          "cell": "R1",
+          "text": "Asparagine"
+        }
+      ],
+      "rows": 93,
+      "columns": 18
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab10",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "sample"
+        },
+        {
+          "cell": "B1",
+          "text": "Acetic acid"
+        },
+        {
+          "cell": "C1",
+          "text": "Propionic acid"
+        },
+        {
+          "cell": "D1",
+          "text": "Butyric acid"
+        },
+        {
+          "cell": "E1",
+          "text": "Isobutyric acid"
+        },
+        {
+          "cell": "F1",
+          "text": "2-Methylbutyric acid"
+        },
+        {
+          "cell": "G1",
+          "text": "Isovaleric acid"
+        },
+        {
+          "cell": "H1",
+          "text": "Valeric acid"
+        },
+        {
+          "cell": "I1",
+          "text": "4-Methyl valeric acid"
+        },
+        {
+          "cell": "J1",
+          "text": "Lactic acid"
+        },
+        {
+          "cell": "K1",
+          "text": "Desaminotyrosine"
+        },
+        {
+          "cell": "L1",
+          "text": "Succinic acid"
+        }
+      ],
+      "rows": 92,
+      "columns": 12
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab11",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "colonization"
+        },
+        {
+          "cell": "B1",
+          "text": "mouse#"
+        },
+        {
+          "cell": "C1",
+          "text": "Acetic acid"
+        },
+        {
+          "cell": "D1",
+          "text": "Propionic acid"
+        },
+        {
+          "cell": "E1",
+          "text": "Butyric acid"
+        },
+        {
+          "cell": "F1",
+          "text": "Isobutyric acid"
+        },
+        {
+          "cell": "G1",
+          "text": "2-Methylbutyric acid"
+        },
+        {
+          "cell": "H1",
+          "text": "Isovaleric acid"
+        },
+        {
+          "cell": "I1",
+          "text": "Valeric acid"
+        },
+        {
+          "cell": "J1",
+          "text": "Lactic acid"
+        },
+        {
+          "cell": "K1",
+          "text": "Desaminotyrosine"
+        },
+        {
+          "cell": "L1",
+          "text": "Indolcarboxaldehyde"
+        }
+      ],
+      "rows": 24,
+      "columns": 12
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab 12",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "Samples"
+        },
+        {
+          "cell": "B1",
+          "text": "Xylan g/l"
+        },
+        {
+          "cell": "C1",
+          "text": "Inulin g/L"
+        }
+      ],
+      "rows": 49,
+      "columns": 3
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab13",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "absab_16Scorr"
+        },
+        {
+          "cell": "B1",
+          "text": "KB1"
+        },
+        {
+          "cell": "C1",
+          "text": "YL2"
+        },
+        {
+          "cell": "D1",
+          "text": "KB18"
+        },
+        {
+          "cell": "E1",
+          "text": "YL27"
+        },
+        {
+          "cell": "F1",
+          "text": "YL31"
+        },
+        {
+          "cell": "G1",
+          "text": "YL32"
+        },
+        {
+          "cell": "H1",
+          "text": "YL44"
+        },
+        {
+          "cell": "I1",
+          "text": "YL45"
+        },
+        {
+          "cell": "J1",
+          "text": "I46"
+        },
+        {
+          "cell": "K1",
+          "text": "I48"
+        },
+        {
+          "cell": "L1",
+          "text": "I49"
+        },
+        {
+          "cell": "M1",
+          "text": "YL58"
+        },
+        {
+          "cell": "N1",
+          "text": "sum"
+        }
+      ],
+      "rows": 180,
+      "columns": 14
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab14",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "relab_16Scorr"
+        },
+        {
+          "cell": "B1",
+          "text": "KB1"
+        },
+        {
+          "cell": "C1",
+          "text": "YL2"
+        },
+        {
+          "cell": "D1",
+          "text": "KB18"
+        },
+        {
+          "cell": "E1",
+          "text": "YL27"
+        },
+        {
+          "cell": "F1",
+          "text": "YL31"
+        },
+        {
+          "cell": "G1",
+          "text": "YL32"
+        },
+        {
+          "cell": "H1",
+          "text": "YL44"
+        },
+        {
+          "cell": "I1",
+          "text": "YL45"
+        },
+        {
+          "cell": "J1",
+          "text": "I46"
+        },
+        {
+          "cell": "K1",
+          "text": "I48"
+        },
+        {
+          "cell": "L1",
+          "text": "I49"
+        },
+        {
+          "cell": "M1",
+          "text": "YL58"
+        }
+      ],
+      "rows": 180,
+      "columns": 13
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab15",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "region"
+        },
+        {
+          "cell": "B1",
+          "text": "probe"
+        },
+        {
+          "cell": "C1",
+          "text": "OMM-I48"
+        },
+        {
+          "cell": "D1",
+          "text": "OMM-KB1"
+        },
+        {
+          "cell": "E1",
+          "text": "OMM-YL58"
+        }
+      ],
+      "rows": 61,
+      "columns": 5
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab16",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "mousenumber"
+        },
+        {
+          "cell": "B1",
+          "text": "colonization"
+        },
+        {
+          "cell": "C1",
+          "text": "sex"
+        },
+        {
+          "cell": "D1",
+          "text": "mouse weight [g]"
+        },
+        {
+          "cell": "E1",
+          "text": "cecum weight [g]"
+        },
+        {
+          "cell": "F1",
+          "text": "ratio in %"
+        }
+      ],
+      "rows": 38,
+      "columns": 6
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab 17",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "Mouse Number"
+        },
+        {
+          "cell": "B1",
+          "text": "Sex"
+        },
+        {
+          "cell": "C1",
+          "text": "Colonization"
+        },
+        {
+          "cell": "D1",
+          "text": "7-Ketolithocholic acid"
+        },
+        {
+          "cell": "E1",
+          "text": "a-Muricholic acid"
+        },
+        {
+          "cell": "F1",
+          "text": "b-Muricholic acid"
+        },
+        {
+          "cell": "G1",
+          "text": "Chenodeoxycholic acid"
+        },
+        {
+          "cell": "H1",
+          "text": "Cholenic acid-3,12-dio"
+        },
+        {
+          "cell": "I1",
+          "text": "Cholic acid"
+        },
+        {
+          "cell": "J1",
+          "text": "Deoxycholic acid"
+        },
+        {
+          "cell": "K1",
+          "text": "Glycochenodeoxycholic acid"
+        },
+        {
+          "cell": "L1",
+          "text": "Hyodeoxycholic acid"
+        },
+        {
+          "cell": "M1",
+          "text": "Lithocholic acid"
+        },
+        {
+          "cell": "N1",
+          "text": "Tauro-a-Muricholic acid"
+        },
+        {
+          "cell": "O1",
+          "text": "Taurochenodeoxycholic acid"
+        },
+        {
+          "cell": "P1",
+          "text": "Tauroursodeoxycholic acid"
+        },
+        {
+          "cell": "Q1",
+          "text": "Ursodeoxycholic acid"
+        },
+        {
+          "cell": "R1",
+          "text": "3-Dehydrocholic acid"
+        },
+        {
+          "cell": "S1",
+          "text": "6-Ketolithocholic acid"
+        },
+        {
+          "cell": "T1",
+          "text": "7-Dehydrocholic acid"
+        },
+        {
+          "cell": "U1",
+          "text": "7-Sulfocholic acid"
+        },
+        {
+          "cell": "V1",
+          "text": "Cholic acid-7ol-3one"
+        },
+        {
+          "cell": "W1",
+          "text": "Isolithocholic acid"
+        },
+        {
+          "cell": "X1",
+          "text": "Taurocholic acid"
+        },
+        {
+          "cell": "Y1",
+          "text": "Taurohyodeoxycholic acid"
+        },
+        {
+          "cell": "Z1",
+          "text": "Allocholic acid"
+        },
+        {
+          "cell": "AA1",
+          "text": "Ursocholic acid"
+        },
+        {
+          "cell": "AB1",
+          "text": "Dehydrolithocholic aci"
+        },
+        {
+          "cell": "AC1",
+          "text": "Glycohyocholic acid"
+        }
+      ],
+      "rows": 25,
+      "columns": 29
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab 18",
+      "header_labels": [
+        {
+          "cell": "A1",
+          "text": "mouse number"
+        },
+        {
+          "cell": "B1",
+          "text": "sex"
+        },
+        {
+          "cell": "C1",
+          "text": "colonization"
+        },
+        {
+          "cell": "D1",
+          "text": "Feces D0"
+        },
+        {
+          "cell": "E1",
+          "text": "Feces D7"
+        },
+        {
+          "cell": "F1",
+          "text": "Feces D14"
+        },
+        {
+          "cell": "G1",
+          "text": "Feces D20"
+        },
+        {
+          "cell": "H1",
+          "text": "Jejunum"
+        },
+        {
+          "cell": "I1",
+          "text": "Ileum"
+        },
+        {
+          "cell": "J1",
+          "text": "Cecum"
+        },
+        {
+          "cell": "K1",
+          "text": "Colon"
+        }
+      ],
+      "rows": 11,
+      "columns": 11
+    },
+    {
+      "workbook": "source-data_table_1_revision.xlsx",
+      "sheet": "Tab 19",
+      "header_labels": [
+        {
+          "cell": "A5",
+          "text": "Mouse number"
+        },
+        {
+          "cell": "B5",
+          "text": "Sex"
+        },
+        {
+          "cell": "C5",
+          "text": "Colonization"
+        },
+        {
+          "cell": "D5",
+          "text": "Edema"
+        },
+        {
+          "cell": "E5",
+          "text": "PMNs \u00f8"
+        },
+        {
+          "cell": "F5",
+          "text": "Goblet cells"
+        },
+        {
+          "cell": "G5",
+          "text": "Epithelium/ Regeneration"
+        },
+        {
+          "cell": "I5",
+          "text": "Liver"
+        },
+        {
+          "cell": "J5",
+          "text": "Sum Score"
+        }
+      ],
+      "rows": 25,
+      "columns": 10
+    }
+  ],
+  "main_screen_label_counts": [
+    {
+      "condition": "OMM11-I46",
+      "medium": "AF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-I46",
+      "medium": "APF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-I48",
+      "medium": "AF",
+      "row_labels": 7,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-I48",
+      "medium": "APF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E2",
+        "E3",
+        "S1new"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-I49",
+      "medium": "AF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-I49",
+      "medium": "APF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-KB1",
+      "medium": "AF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-KB1",
+      "medium": "APF",
+      "row_labels": 8,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-KB18",
+      "medium": "AF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-KB18",
+      "medium": "APF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-YL2",
+      "medium": "AF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-YL2",
+      "medium": "APF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-YL27",
+      "medium": "AF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-YL27",
+      "medium": "APF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-YL31",
+      "medium": "AF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-YL31",
+      "medium": "APF",
+      "row_labels": 8,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-YL32",
+      "medium": "AF",
+      "row_labels": 8,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-YL32",
+      "medium": "APF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-YL44",
+      "medium": "AF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-YL44",
+      "medium": "APF",
+      "row_labels": 6,
+      "batch_labels": [
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-YL45",
+      "medium": "AF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-YL45",
+      "medium": "APF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-YL58",
+      "medium": "AF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM11-YL58",
+      "medium": "APF",
+      "row_labels": 8,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM12",
+      "medium": "AF",
+      "row_labels": 9,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "condition": "OMM12",
+      "medium": "APF",
+      "row_labels": 12,
+      "batch_labels": [
+        "E1",
+        "E2",
+        "E3",
+        "S1new"
+      ],
+      "well_labels": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  ],
+  "replicate_groups": [
+    {
+      "sheet": "Tab1",
+      "groups": [
+        {
+          "condition": "OMM11-I46",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-I46",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-I48",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-I48",
+          "medium": "APF",
+          "experiment_labels": [
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-I49",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-I49",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-KB1",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-KB1",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-KB18",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-KB18",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL2",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL2",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL27",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL27",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL31",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL31",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL32",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL32",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL44",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL44",
+          "medium": "APF",
+          "experiment_labels": [
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL45",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL45",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL58",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL58",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM12",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM12",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        }
+      ],
+      "unparsed_labels": [
+        "OMM12_S1new_APF_W1",
+        "OMM12_S1new_APF_W2",
+        "OMM12_S1new_APF_W3",
+        "OMM11-I48_S1new_APF_W1",
+        "OMM11-I48_S1new_APF_W2",
+        "OMM11-I48_S1new_APF_W3"
+      ]
+    },
+    {
+      "sheet": "Tab2",
+      "groups": [
+        {
+          "condition": "OMM11-I48",
+          "medium": "APFmod",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "2": [
+              "1",
+              "2",
+              "3"
+            ],
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM12",
+          "medium": "APFmod",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        }
+      ],
+      "unparsed_labels": [
+        "OMM12_APF-Inulin_S1_W1",
+        "OMM12_APF-Inulin_S1_W2",
+        "OMM12_APF-Inulin_S1_W3",
+        "OMM12_APF-Inulin_S2_W1",
+        "OMM12_APF-Inulin_S2_W2",
+        "OMM12_APF-Inulin_S2_W3",
+        "OMM12_APF-Inulin_S3_W2",
+        "OMM12_APF-Xylan_S1_W1",
+        "OMM12_APF-Xylan_S1_W2",
+        "OMM12_APF-Xylan_S1_W3",
+        "OMM12_APF-Xylan_S2_W1",
+        "OMM12_APF-Xylan_S2_W2",
+        "OMM12_APF-Xylan_S2_W3",
+        "OMM12_APF-Xylan_S3_W1",
+        "OMM12_APF-Xylan_S3_W2",
+        "OMM12_APF-Xylan_S3_W3",
+        "OMM-I48_APF-Inulin_S1_W1",
+        "OMM-I48_APF-Inulin_S1_W2",
+        "OMM-I48_APF-Inulin_S1_W3",
+        "OMM-I48_APF-Inulin_S2_W1",
+        "OMM-I48_APF-Inulin_S2_W2",
+        "OMM-I48_APF-Inulin_S2_W3",
+        "OMM-I48_APF-Inulin_S3_W1",
+        "OMM-I48_APF-Inulin_S3_W2",
+        "OMM-I48_APF-Inulin_S3_W3",
+        "OMM-I48_APF-Xylan_S1_W1",
+        "OMM-I48_APF-Xylan_S1_W2",
+        "OMM-I48_APF-Xylan_S1_W3",
+        "OMM-I48_APF-Xylan_S2_W1",
+        "OMM-I48_APF-Xylan_S2_W2",
+        "OMM-I48_APF-Xylan_S2_W3",
+        "OMM-I48_APF-Xylan_S3_W1",
+        "OMM-I48_APF-Xylan_S3_W2",
+        "OMM-I48_APF-Xylan_S3_W3",
+        "OMM12_APFNaOH_S1_w1",
+        "OMM12_APFNaOH_S1_w2",
+        "OMM12_APFNaOH_S2_w1",
+        "OMM12_APFNaOH_S2_w2",
+        "OMM-I48_APFHCl_S1_w1",
+        "OMM-I48_APFHCl_S1_w2",
+        "OMM-I48_APFHCl_S1_w3",
+        "OMM-I48_APFHCl_S2_w1",
+        "OMM-I48_APFHCl_S2_w2",
+        "OMM-I48_APFHCl_S2_w3"
+      ]
+    },
+    {
+      "sheet": "Tab3",
+      "groups": [
+        {
+          "condition": "OMM11-KB1",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-KB1",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-KB1",
+          "medium": "GAM",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM12",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM12",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM12",
+          "medium": "GAM",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM12dL50",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ],
+            "3": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM12dL50",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ],
+            "3": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM12dL50",
+          "medium": "GAM",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ],
+            "3": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        }
+      ],
+      "unparsed_labels": []
+    },
+    {
+      "sheet": "Tab4",
+      "groups": [
+        {
+          "condition": "OMM11-I48",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-I48",
+          "medium": "APF",
+          "experiment_labels": [
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-I48",
+          "medium": "GAM",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-I48",
+          "medium": "TYG",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-I48",
+          "medium": "YCFA",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-KB1",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-KB1",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-KB1",
+          "medium": "GAM",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-KB1",
+          "medium": "TYG",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-KB1",
+          "medium": "YCFA",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL58",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL58",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL58",
+          "medium": "GAM",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL58",
+          "medium": "TYG",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM11-YL58",
+          "medium": "YCFA",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM12",
+          "medium": "AF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM12",
+          "medium": "APF",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM12",
+          "medium": "GAM",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM12",
+          "medium": "TYG",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        },
+        {
+          "condition": "OMM12",
+          "medium": "YCFA",
+          "experiment_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "wells_per_experiment": {
+            "3": [
+              "1",
+              "2",
+              "3"
+            ],
+            "1": [
+              "1",
+              "2",
+              "3"
+            ],
+            "2": [
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        }
+      ],
+      "unparsed_labels": []
+    },
+    {
+      "sheet": "Tab13",
+      "groups": [
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 3
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 3
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 3
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 3
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 3
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 3
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 6
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 3
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV295",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 6
+        },
+        {
+          "experiment": "TV295",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 6
+        },
+        {
+          "experiment": "TV295",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV295",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 6
+        },
+        {
+          "experiment": "TV295",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 6
+        }
+      ],
+      "unparsed_labels": []
+    },
+    {
+      "sheet": "Tab14",
+      "groups": [
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 3
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 3
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 3
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 3
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 3
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV287",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 3
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 6
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 3
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM-I48",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM-KB1",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 4
+        },
+        {
+          "experiment": "TV293",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM12",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV295",
+          "day": "D20",
+          "region": "Ce",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 6
+        },
+        {
+          "experiment": "TV295",
+          "day": "D20",
+          "region": "Co",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 6
+        },
+        {
+          "experiment": "TV295",
+          "day": "D20",
+          "region": "F",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 5
+        },
+        {
+          "experiment": "TV295",
+          "day": "D20",
+          "region": "Il",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 6
+        },
+        {
+          "experiment": "TV295",
+          "day": "D20",
+          "region": "Je",
+          "condition": "OMM-YL58",
+          "distinct_mouse_labels": 6
+        }
+      ],
+      "unparsed_labels": []
+    }
+  ],
+  "mouse_metadata_row_counts": {
+    "Tab11": 20,
+    "Tab16": 37,
+    "Tab 17": 20,
+    "Tab 18": 10,
+    "Tab 19": 10
+  },
+  "mouse_id_overlap": {
+    "SCFA_bile_acid": 20,
+    "LCN2_histology": 10,
+    "SCFA_weight": 20,
+    "bile_weight": 20,
+    "LCN2_weight": 0,
+    "histology_weight": 0
+  },
+  "admission_blockers": [
+    "S1new/E/S biological batch semantics",
+    "nonuniform missing row/well keys",
+    "exact strain identity reconciliation",
+    "endpoint units/DTL/censor and QC dictionaries",
+    "specimen/aliquot and control pairing",
+    "mouse cage and experiment nesting",
+    "randomization contradiction",
+    "OMM2022/deposit overlap",
+    "frozen outcomes/baselines/split/compute plan"
+  ],
+  "overview_map": [
+    {
+      "cell": "A1",
+      "text": "table"
+    },
+    {
+      "cell": "B1",
+      "text": "data type"
+    },
+    {
+      "cell": "C1",
+      "text": "corresponding figure"
+    },
+    {
+      "cell": "A2",
+      "text": "Tab1"
+    },
+    {
+      "cell": "B2",
+      "text": "absolute abundance, all communities in AF and APF medium"
+    },
+    {
+      "cell": "C2",
+      "text": "Fig. 1bcde,  Fig. S1A"
+    },
+    {
+      "cell": "A3",
+      "text": "Tab2"
+    },
+    {
+      "cell": "B3",
+      "text": "absolute abundance, selected communities in APFmod medium"
+    },
+    {
+      "cell": "C3",
+      "text": "Fig. 4b, Fig. S2, Fig. S9, Fig. S11"
+    },
+    {
+      "cell": "A4",
+      "text": "Tab3"
+    },
+    {
+      "cell": "B4",
+      "text": "absolute abundance, communities including E. faecalis KB1 enterocin muntant"
+    },
+    {
+      "cell": "C4",
+      "text": "Fig. 3a, Fig. S8"
+    },
+    {
+      "cell": "A5",
+      "text": "Tab4"
+    },
+    {
+      "cell": "B5",
+      "text": "absolute abundance, selected communities in additional media"
+    },
+    {
+      "cell": "C5",
+      "text": "Fig. 1b, Fig. S1A, Fig. S5"
+    },
+    {
+      "cell": "A6",
+      "text": "Tab5"
+    },
+    {
+      "cell": "B6",
+      "text": "abundance ratio (rabs) in vitro"
+    },
+    {
+      "cell": "C6",
+      "text": "Fig. 2e"
+    },
+    {
+      "cell": "A7",
+      "text": "Tab6"
+    },
+    {
+      "cell": "B7",
+      "text": "pH modification, communities in AF and APF medium"
+    },
+    {
+      "cell": "C7",
+      "text": "Fig. 2a"
+    },
+    {
+      "cell": "A8",
+      "text": "Tab7"
+    },
+    {
+      "cell": "B8",
+      "text": "pH modification, selected communities in APFmod medium"
+    },
+    {
+      "cell": "C8",
+      "text": "Fig. 4e"
+    },
+    {
+      "cell": "A9",
+      "text": "Tab8"
+    },
+    {
+      "cell": "B9",
+      "text": "pH modification, selected communities in additional media"
+    },
+    {
+      "cell": "C9",
+      "text": "Fig. S1B, Fig. S6"
+    },
+    {
+      "cell": "A10",
+      "text": "Tab 9"
+    },
+    {
+      "cell": "B10",
+      "text": "AA levels in vitro"
+    },
+    {
+      "cell": "C10",
+      "text": "Fig. 2cd"
+    },
+    {
+      "cell": "A11",
+      "text": "Tab10"
+    },
+    {
+      "cell": "B11",
+      "text": "SCFA levels in vitro"
+    },
+    {
+      "cell": "C11",
+      "text": "Fig. S3, Fig. S10"
+    },
+    {
+      "cell": "A12",
+      "text": "Tab11"
+    },
+    {
+      "cell": "B12",
+      "text": "SCFA levels in vivo"
+    },
+    {
+      "cell": "C12",
+      "text": "Fig. S15"
+    },
+    {
+      "cell": "A13",
+      "text": "Tab 12"
+    },
+    {
+      "cell": "B13",
+      "text": "Inulin and Xylan concentrations"
+    },
+    {
+      "cell": "C13",
+      "text": "Fig. 4cd"
+    },
+    {
+      "cell": "A14",
+      "text": "Tab13"
+    },
+    {
+      "cell": "B14",
+      "text": "absolute abundances, in vivo, different gut regions"
+    },
+    {
+      "cell": "C14",
+      "text": "Fig. 5ab, Fig. S13"
+    },
+    {
+      "cell": "A15",
+      "text": "Tab14"
+    },
+    {
+      "cell": "B15",
+      "text": "relative abundances, in vivo, different gut regions"
+    },
+    {
+      "cell": "C15",
+      "text": "Fig. S12"
+    },
+    {
+      "cell": "A16",
+      "text": "Tab15"
+    },
+    {
+      "cell": "B16",
+      "text": "abundance ratio (rabs) in vivo"
+    },
+    {
+      "cell": "C16",
+      "text": "Fig. 5c"
+    },
+    {
+      "cell": "A17",
+      "text": "Tab 16"
+    },
+    {
+      "cell": "B17",
+      "text": "cecal and mouse weights"
+    },
+    {
+      "cell": "C17",
+      "text": "Fig. 6a"
+    },
+    {
+      "cell": "A18",
+      "text": "Tab 17"
+    },
+    {
+      "cell": "B18",
+      "text": "bile acid concentrations cecum"
+    },
+    {
+      "cell": "C18",
+      "text": "Fig. S16"
+    },
+    {
+      "cell": "A19",
+      "text": "Tab 18"
+    },
+    {
+      "cell": "B19",
+      "text": "LCN2 levels cecum"
+    },
+    {
+      "cell": "C19",
+      "text": "Fig. 6c"
+    },
+    {
+      "cell": "A20",
+      "text": "Tab 19"
+    },
+    {
+      "cell": "B20",
+      "text": "histopathological score"
+    },
+    {
+      "cell": "C20",
+      "text": "Fig. 6b"
+    }
+  ],
+  "within_workbook_identifier_overlaps": {
+    "Tab1_Tab3": 35,
+    "Tab1_Tab4": 65,
+    "Tab13_Tab14": 179
+  },
+  "rights_review": {
+    "worksheet_strings": "no contrary note found",
+    "docProps_comments": "no contrary note found",
+    "embedded_media_objects_external_links": "none present",
+    "basis": "2023 publisher CC BY 4.0 subject to credited exclusions"
+  }
+}
