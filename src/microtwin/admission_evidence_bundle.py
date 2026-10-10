@@ -36,9 +36,11 @@ def parse(data):
     return json.loads(data,object_pairs_hook=pairs,parse_constant=lambda _:deny())
 
 
-def build_receipt():
+def build_receipt(evidence_dir=None):
     try:
-        paths={r:ROOT/'results'/n for r,n in FILES.items()}
+        base=Path(evidence_dir) if evidence_dir is not None else ROOT/'results'
+        if not base.is_dir() or any(x.is_symlink() for x in [base,*base.parents]):deny()
+        paths={r:base/n for r,n in FILES.items()}
         data={r:read_safe(p) for r,p in paths.items()}
         # Restrict document roles to recognized documentary structure, never raw JSON.
         for r,title in [('proposal','# OMM12 outcome-admission proposal v1,'),('closeout','# OMM12 documentary closeout,')]:
@@ -50,9 +52,9 @@ def build_receipt():
     except (OSError,ValueError,TypeError,UnicodeError,RecursionError):deny()
 
 
-def create_receipt(out):
+def create_receipt(out,*,evidence_dir=None):
     try:
-        obj=build_receipt();p=Path(out)
+        obj=build_receipt(evidence_dir);p=Path(out)
         if p.suffix!='.json' or p.exists() or p.is_symlink() or any(x.is_symlink() for x in p.parents):deny()
         # No document overwrite and no caller-selected input paths.
         with p.open('x') as f:json.dump(obj,f,indent=2);f.write('\n')
@@ -60,9 +62,9 @@ def create_receipt(out):
     except (OSError,ValueError,TypeError,UnicodeError,RecursionError):deny()
 
 
-def verify_receipt(path):
+def verify_receipt(path,*,evidence_dir=None):
     try:
         obj=parse(read_safe(path))
-        if obj!=build_receipt():deny()
+        if obj!=build_receipt(evidence_dir):deny()
         return {'status':'local_evidence_hashes_and_boundary_match','quantitative_admission':False,'source_outcome_access':False,'note':NOTE}
     except (OSError,ValueError,TypeError,UnicodeError,RecursionError):deny()

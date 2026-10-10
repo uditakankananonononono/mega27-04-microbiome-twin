@@ -45,8 +45,33 @@ def test_reject_attack_no_echo(root,attack):
     assert str(e.value)=='admission evidence bundle rejected'
 
 def test_cli_and_status_output_tamper(root,capsys):
-    p=root/'receipt.json';assert main(['receipt-admission-evidence',str(p)])==0
-    assert main(['verify-admission-evidence',str(p)])==0
+    p=root/'receipt.json';assert main(['receipt-admission-evidence',str(p),'--evidence-dir',str(root/'results')])==0
+    assert main(['verify-admission-evidence',str(p),'--evidence-dir',str(root/'results')])==0
     f=root/'results'/b.FILES['boundary_check'];f.write_text('{"secret":"PRIVATE-RAW"}')
-    assert main(['verify-admission-evidence',str(p)])==2
+    assert main(['verify-admission-evidence',str(p),'--evidence-dir',str(root/'results')])==2
     out=capsys.readouterr();assert 'PRIVATE-RAW' not in out.out+out.err
+
+def test_synthetic_demo_portable_explicit_directory(tmp_path):
+    from microtwin.admission_demo import create_demo
+    evidence=tmp_path/'evidence';create_demo(evidence)
+    receipt=tmp_path/'receipt.json'
+    b.create_receipt(receipt,evidence_dir=evidence)
+    assert b.verify_receipt(receipt,evidence_dir=evidence)['quantitative_admission'] is False
+    with pytest.raises(ValueError):create_demo(evidence)
+
+def test_metadata_path_no_scientific_dependency_imports(tmp_path):
+    import subprocess,sys
+    # -S disables site packages; explicitly expose source code only.
+    script='''import sys
+sys.path.insert(0,sys.argv[1])
+from microtwin.admission_demo import create_demo
+from microtwin.cli import main
+from pathlib import Path
+p=Path(sys.argv[2]);create_demo(p/'evidence')
+assert main(['check-admission-boundary',str(p/'evidence/omm12_quarantine_certificate_20261010.json')])==0
+assert main(['receipt-admission-evidence',str(p/'receipt.json'),'--evidence-dir',str(p/'evidence')])==0
+assert main(['verify-admission-evidence',str(p/'receipt.json'),'--evidence-dir',str(p/'evidence')])==0
+assert not any(m in sys.modules for m in ('numpy','pandas','scipy','torch','skbio'))
+'''
+    r=subprocess.run([sys.executable,'-S','-c',script,str(Path(__file__).resolve().parents[1]/'src'),str(tmp_path)],capture_output=True,text=True)
+    assert r.returncode==0,r.stderr

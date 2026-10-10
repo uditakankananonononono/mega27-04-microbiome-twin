@@ -5,8 +5,8 @@ A local metadata/documentary evidence receipt now binds four fixed public artifa
 ## Verified checkout commands
 
 ```sh
-PYTHONPATH=src python -m microtwin.cli receipt-admission-evidence results/omm12_admission_evidence_receipt_20261010.json
-PYTHONPATH=src python -m microtwin.cli verify-admission-evidence results/omm12_admission_evidence_receipt_20261010.json
+PYTHONPATH=src python -m microtwin.cli receipt-admission-evidence results/omm12_admission_evidence_receipt_20261010.json --evidence-dir results
+PYTHONPATH=src python -m microtwin.cli verify-admission-evidence results/omm12_admission_evidence_receipt_20261010.json --evidence-dir results
 ```
 
 Creation refuses existing output. Verification reports `local_evidence_hashes_and_boundary_match`, quantitative_admission=false and source_outcome_access=false. It hashes exact artifact bytes, reruns the strict metadata-only boundary validator on the certificate, and requires the boundary output to equal the recomputed metadata result. Input roles and filenames are fixed in code, not chosen by caller paths. The receipt embeds hashes/byte counts/status metadata, not document content or numerical cells.

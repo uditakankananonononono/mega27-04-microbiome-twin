@@ -13,10 +13,6 @@ from __future__ import annotations
 
 import argparse, json, sys
 
-import numpy as np
-import pandas as pd
-
-from .audit import audit
 
 
 def _load(path, samples_in_rows):
@@ -140,7 +136,7 @@ def cmd_predict_calibrated(a):
 def cmd_admission_evidence(a):
     from .admission_evidence_bundle import create_receipt,verify_receipt
     try:
-        report=create_receipt(a.receipt) if a.create else verify_receipt(a.receipt)
+        report=create_receipt(a.receipt,evidence_dir=a.evidence_dir) if a.create else verify_receipt(a.receipt,evidence_dir=a.evidence_dir)
     except ValueError:
         print('admission evidence bundle rejected',file=sys.stderr)
         return 2
@@ -423,6 +419,7 @@ def main(argv=None):
     for name,create in [('receipt-admission-evidence',True),('verify-admission-evidence',False)]:
         ev=sp.add_parser(name,help='fixed four-public-artifact local hash receipt; not authenticity or admission')
         ev.add_argument('receipt',help='new JSON receipt for creation, existing receipt for verification')
+        ev.add_argument('--evidence-dir',required=True,help='directory containing exactly named public evidence inputs; never source outcomes')
         ev.set_defaults(f=cmd_admission_evidence,create=create)
     ab=sp.add_parser('check-admission-boundary',help='metadata-only OMM12 v1 status consistency; never quantitative admission or authority authentication')
     ab.add_argument('certificate',help='metadata certificate JSON, maximum 1 MB; never raw quarantine')
@@ -455,7 +452,14 @@ def main(argv=None):
     pl=sp.add_parser('prediction-losses',help='compute local paired Bray-Curtis losses from supplied compositions, no model fitting')
     pl.add_argument('truth');pl.add_argument('--models',required=True);pl.add_argument('--labels',required=True);pl.add_argument('--out',required=True)
     pl.set_defaults(f=cmd_prediction_losses)
-    a = ap.parse_args(argv); return a.f(a)
+    a = ap.parse_args(argv)
+    if a.f not in (cmd_check_admission_boundary,cmd_admission_evidence):
+        # Metadata reliability commands require the standard library only.
+        global np,pd,audit
+        import numpy as np
+        import pandas as pd
+        from .audit import audit
+    return a.f(a)
 
 
 if __name__ == "__main__":
