@@ -1,0 +1,16 @@
+{
+  "status": "BLOCKED",
+  "model_count": 2,
+  "blockers": [
+    "ADAPTER_MISSING_OR_UNKNOWN",
+    "COMPARATOR_OR_CANDIDATE_CAPABILITY_UNSUPPORTED_OR_UNKNOWN",
+    "COMPARATOR_SELECTION_NOT_FROZEN_BEFORE_TEST",
+    "PROTOCOL_NOT_PROSPECTIVELY_FROZEN",
+    "TEST_SOURCE_EXPOSED_OR_UNKNOWN"
+  ],
+  "fairness_source_verified": false,
+  "losses_consumed": false,
+  "external_benchmark_eligible": false,
+  "win_certified": false,
+  "note": "Equal declared budgets/information and submitted capability flags require source review. Unsupported tasks cannot be scored as model failures. No losses, fit, holdout certification or win."
+}
