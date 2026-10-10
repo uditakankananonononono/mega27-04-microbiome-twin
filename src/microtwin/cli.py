@@ -133,6 +133,17 @@ def cmd_predict_calibrated(a):
     return 0
 
 
+def cmd_nested_design(a):
+    from .nested_perturbation_design import load_nested_design
+    try:
+        report=load_nested_design(a.records)
+    except ValueError:
+        print('nested perturbation metadata rejected',file=sys.stderr)
+        return 2
+    print(json.dumps(report,indent=2))
+    return 0 if report['status']=='METADATA_READY_FOR_MANUAL_DESIGN_REVIEW' else 2
+
+
 def cmd_admission_evidence(a):
     from .admission_evidence_bundle import create_receipt,verify_receipt
     try:
@@ -416,6 +427,9 @@ def main(argv=None):
     cc.add_argument('--unit',choices=('counts','relative_abundance','absolute_abundance'),required=True);cc.add_argument('--source-id',required=True)
     cc.add_argument('--processing-authorized',action='store_true');cc.add_argument('--subject-map');cc.add_argument('--calibration-subject-map');cc.add_argument('--query-subject-map')
     cc.add_argument('--alpha',type=float,default=.1);cc.add_argument('--out',required=True);cc.set_defaults(f=cmd_predict_calibrated)
+    nd=sp.add_parser('check-nested-perturbation-design',help='metadata-only biological/technical unit and control-label coverage; never admission')
+    nd.add_argument('records',help='strict nested design JSON, maximum 2 MB')
+    nd.set_defaults(f=cmd_nested_design)
     for name,create in [('receipt-admission-evidence',True),('verify-admission-evidence',False)]:
         ev=sp.add_parser(name,help='fixed four-public-artifact local hash receipt; not authenticity or admission')
         ev.add_argument('receipt',help='new JSON receipt for creation, existing receipt for verification')
@@ -453,7 +467,7 @@ def main(argv=None):
     pl.add_argument('truth');pl.add_argument('--models',required=True);pl.add_argument('--labels',required=True);pl.add_argument('--out',required=True)
     pl.set_defaults(f=cmd_prediction_losses)
     a = ap.parse_args(argv)
-    if a.f not in (cmd_check_admission_boundary,cmd_admission_evidence):
+    if a.f not in (cmd_check_admission_boundary,cmd_admission_evidence,cmd_nested_design):
         # Metadata reliability commands require the standard library only.
         global np,pd,audit
         import numpy as np

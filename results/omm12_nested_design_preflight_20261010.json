@@ -1,0 +1,59 @@
+{
+  "status": "BLOCKED",
+  "technical_record_count": 222,
+  "declared_biological_unit_count": 39,
+  "complete_label_pair_count": 64,
+  "unmatched_or_incomplete_pairs": 6,
+  "ambiguous_control_pairs": 0,
+  "expected_technical_units": 3,
+  "minimum_biological_pairs": 3,
+  "pair_coverage_counts": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "unresolved_reasons": [
+    {
+      "reason": "BIOLOGICAL_IDENTITIES_UNVERIFIED",
+      "count": 39
+    },
+    {
+      "reason": "INCOMPLETE_TECHNICAL_REPLICATION",
+      "count": 6
+    },
+    {
+      "reason": "UNMATCHED_OR_INCOMPLETE_CONTROL_PAIRS",
+      "count": 6
+    },
+    {
+      "reason": "INSUFFICIENT_COMPLETE_BIOLOGICAL_PAIRS",
+      "count": 7
+    }
+  ],
+  "biological_identity_source_verified": false,
+  "outcome_admitted": false,
+  "intervention_validated": false,
+  "eligible_untouched_holdout": false,
+  "note": "Counts are submitted design labels, not verified independent preparations or causal effects. Technical wells are not biological n. Metadata readiness still requires source evidence review; no outcome access or admission."
+}
