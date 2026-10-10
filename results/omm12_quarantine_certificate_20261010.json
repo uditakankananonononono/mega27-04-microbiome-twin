@@ -3782,7 +3782,7 @@
       ]
     }
   ],
-  "C1": "NOT_ADMITTED_PENDING_PARENT_REVIEW",
+  "C1": "STRUCTURAL_SUBSET_ADMITTED_QUANTITATIVE_NOT_ADMITTED",
   "C2": "BLOCKED",
   "C3": "NOT_PROPOSED",
   "useful_win": "NOT_TESTED",
@@ -3792,5 +3792,9 @@
   },
   "issues": [],
   "stage_B": "QUARANTINE_VALIDATED",
-  "quantitative_admission": "NOT_ADMITTED"
+  "quantitative_admission": "NOT_ADMITTED",
+  "structural_C1": "ADMITTED_DOCUMENTARY_REPRESENTATION_COUNTS_ONLY",
+  "quantitative_C1": "NOT_ADMITTED_LOCKED",
+  "zero_semantics": "UNRESOLVED",
+  "parent_decision_at": "2026-10-10T10:35:11+05:30"
 }

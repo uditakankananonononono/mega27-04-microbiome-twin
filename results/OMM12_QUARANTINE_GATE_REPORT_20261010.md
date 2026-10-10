@@ -1,6 +1,6 @@
 # OMM12 frozen-v1 quarantine audit gate report, October 10, 2026
 
-Status: STAGE A PASS, STAGE B QUARANTINE_VALIDATED; quantitative admission NOT_ADMITTED. C1 is NOT_ADMITTED_PENDING_PARENT_REVIEW, no self-admission. C2 BLOCKED, C3 NOT_PROPOSED, useful_win NOT_TESTED. This report returns the requested gate evidence for the parent's C1 decision.
+Status: STAGE A PASS, STAGE B QUARANTINE_VALIDATED; quantitative admission NOT_ADMITTED. Parent decision October 10 at 10:35:11 IST: structural C1 subset ADMITTED for documentary representation counts/manifest/integrity only; quantitative C1 NOT_ADMITTED, LOCKED. No self-admission. C2 BLOCKED, C3 NOT_PROPOSED, useful_win NOT_TESTED. This report records the requested gate evidence and the parent's restricted C1 decision.
 
 ## Executed scope
 Only Tab1 B:M in source-data_table_1_revision.xlsx, the 222 locked E1/E2/E3 AF/APF full/dropout labels, maximum 2,664 cells. Archive SHA256 verified: 45157de4fd55eacdaf662785d376b170f6d8711984d4ab777635f61fe7d6d81a. Headers `16Scorr`, twelve tokens, sum and A1:N229 dimension exactly match. Manifest generated and compared to the pre-outcome structural groups before endpoint access. No S1new, sum column, other worksheet/workbook outcomes, old-source outcomes or external downloads. No formulas evaluated. No fit, disturbance endpoint, distribution summary, effect ranking, hypothesis test or model input produced.
@@ -24,12 +24,12 @@ Only Tab1 B:M in source-data_table_1_revision.xlsx, the 222 locked E1/E2/E3 AF/A
 | Independent biological/control units | E labels compatible with methods, but no original preparation/control ledger; S1new excluded | UNRESOLVED; no independent n or removal-effect inference |
 | Source family | Already exposed documentary source; prior platform/deposit overlap unresolved | EXPOSED development; NEVER untouched holdout |
 
-A successful type validation cannot resolve censor/normalization semantics. Recommendation: do NOT admit C1 quantitative source-description at this point. Keep the permitted numeric cells QUARANTINE_VALIDATED only, with quantitative admission NOT_ADMITTED, unless the parent identifies adequate cited evidence for the missing quantitative semantics. If the parent allows only the integrity certificate, that is not numerical admission and closes no biology gate.
+A successful type validation cannot resolve censor/normalization semantics. Parent call: quantitative C1 source-description NOT_ADMITTED and locked. Structural C1 subset alone is ADMITTED: 222 locked row labels, twelve distinct strain tokens, 2,664-cell manifest coverage, representation-type counts (1,669 positive / 995 zero / zero errors) and hash/schema/rights integrity PASS. These are counts of representations, not measurements or quantitative distributions. No means, magnitudes, comparisons or zero interpretation may be published or computed. No biology gate closes.
 
 ## State and limits
 All ten documentary gaps remain as previously recorded. Mouse2546 treatment conflict, AA75/77 key mismatch and Tab12 duplicated labels were outside the permitted numerical scope and remain unresolved. No outcomes from those modalities opened. No outcome-dependent exclusions or version changes made. v1 remains frozen; any amendment goes back for review.
 
-Raw allowed-cell literals are held privately in an owner-restricted quarantine file, not committed or attached. The certificate contains metadata addresses/status counts only. No persistent durable storage guarantee is claimed for this private scratch artifact; rerun access or publication would need to remain within reviewed scope. Task stops with the gate evidence returned; parent owns C1 decision and any next action.
+Raw allowed-cell literals are held privately in an owner-restricted quarantine file, not committed or attached. The certificate contains metadata addresses/status counts only. No persistent durable storage guarantee is claimed for this private scratch artifact; rerun access or publication would need to remain within reviewed scope. Task stops with the restricted parent decision recorded; parent owns any next action.
 
 ## Sources
 - 2023 unit/normalization/DTL definitions and rights: https://www.nature.com/articles/s41467-023-40372-0
